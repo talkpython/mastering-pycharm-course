@@ -1,1 +1,1 @@
-# mastering-pycharm-course
+# Mastering PyCharm course
