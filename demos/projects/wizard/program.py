@@ -33,6 +33,7 @@ def print_header():
     print('-----------------------------------------------------------------------')
     print()
 
+
 def game_loop():
     creatures = [
         SmallAnimal('Toad', 1),
