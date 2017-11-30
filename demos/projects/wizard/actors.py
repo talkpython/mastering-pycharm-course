@@ -6,6 +6,9 @@ class Creature:
         self.name = name
         self.level = the_level
 
+        if self.level < 1:
+            raise ValueError("level")
+
     def __repr__(self):
         return "Creature: {} of level {}".format(
             self.name, self.level
@@ -44,6 +47,9 @@ class SmallAnimal(Creature):
 
 class Dragon(Creature):
     def __init__(self, name, level, scaliness, breaths_fire):
+        if self.level < 1:
+            raise ValueError("level")
+
         super().__init__(name, level)
         self.breaths_fire = breaths_fire
         self.scaliness = scaliness
