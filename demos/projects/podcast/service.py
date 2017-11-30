@@ -30,3 +30,7 @@ def download_info():
 
 def get_episode(show_id: int) -> Episode:
     return episode_data.get(show_id)
+
+
+def get_latest_show_id():
+    return max(episode_data.keys())

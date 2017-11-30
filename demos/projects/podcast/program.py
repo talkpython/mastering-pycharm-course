@@ -6,7 +6,7 @@ def main():
     show_header()
 
     service.download_info()
-
+    print("Working with total of {} episodes".format(service.get_latest_show_id()))
     display_results()
 
 
@@ -18,7 +18,7 @@ def show_header():
 def display_results():
 
     start = random.randint(90, 110)
-    end = random.randint(130, 140)
+    end = random.randint(130, service.get_latest_show_id()+1)
 
     for show_id in range(start, end):
         info = service.get_episode(show_id)
