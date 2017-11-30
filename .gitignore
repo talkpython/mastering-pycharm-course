@@ -99,3 +99,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+demos/projects/first_project/.idea/first_project.iml
+demos/projects/first_project/.idea/modules.xml
+demos/projects/podcast/.idea/misc.xml
+demos/projects/podcast/.idea/modules.xml
+demos/projects/podcast/.idea/podcast.iml
