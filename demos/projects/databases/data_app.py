@@ -1,11 +1,11 @@
 # noinspection PyPackageRequirements
 from models.album import Album
+# noinspection PyPackageRequirements
 from models.dbsession import DbSessionFactory
 
 
 def main():
     DbSessionFactory.global_init()
-
     list_albums()
 
 
