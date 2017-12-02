@@ -1,0 +1,23 @@
+<div metal:use-macro="load: layout.pt">
+    <div metal:fill-slot="content">
+
+        <div class="content">
+
+            <h1>Template demo code / html</h1>
+            <h2 tal:condition="show_odds">Showing odd numbers as well</h2>
+            <h2 tal:condition="not show_odds">Hiding odd numbers</h2>
+        </div>
+        <div>
+            <ul>
+                <div tal:repeat="n data" tal:omit-tag="True">
+                    <li tal:condition="n % 2 == 0 or show_odds">
+                    <blockquote>
+                        Next number is ${n}
+                    </blockquote>
+                    </li>
+                </div>
+            </ul>
+        </div>
+
+    </div>
+</div>
