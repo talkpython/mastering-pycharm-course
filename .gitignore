@@ -111,3 +111,4 @@ demos/projects/podcast/.idea/podcast.iml
 app.js
 demos/projects/web_clientside/webapp/.idea
 demo_overrides.css
+demos/projects/web_clientside/electron_test/electron-quick-start/node_modules
