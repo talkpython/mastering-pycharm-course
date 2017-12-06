@@ -37,7 +37,7 @@ nav{
 nav a{
     display:inline-block;
     padding: 18px 30px;
-    color:#fff !important;
+    color:#fff;
     font-weight:bold;
     font-size:16px;
     text-decoration:none !important;
