@@ -7,9 +7,18 @@ def get_records(text):
     return results
 
 
+__conn = None
+
+
 def create_connection():
+    global __conn
+
+    if __conn:
+        return __conn
+
     time.sleep(.250)
-    return {'connected': True}
+    __conn = {'connected': True}
+    return __conn
 
 
 def run_query(conn, text):
@@ -25,7 +34,7 @@ def run_query(conn, text):
 
 
 def read_row(conn):
-    time.sleep(.0001)  # todo: improve index!
+    time.sleep(.00001)  # todo: improve index!
     if conn.get('connected'):
         return {'col1': 'val1', 'col2': 'val2'}
 

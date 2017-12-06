@@ -1,3 +1,4 @@
+import functools
 import time
 import math
 
@@ -14,11 +15,27 @@ def compute_analytics(search, rows):
 
 def read_data(data):
     for _ in range(0, len(data)):
-        time.sleep(.002)
+        time.sleep(.0001)  # switch to NumPy
 
     return data
 
 
+def list_momento(func):
+    cache = {}
+
+    def wrapper_func(*lists):
+        key = "KEY: " + ",".join([str(l) for l in lists])
+
+        if key in cache:
+            return cache[key]
+
+        cache[key] = func(*lists)
+        return cache[key]
+
+    return wrapper_func
+
+
+@list_momento
 def learn(search_data, db_data):
     total = 0
     for ids, s in enumerate(search_data):

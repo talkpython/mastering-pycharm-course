@@ -1,8 +1,10 @@
+import functools
 from typing import List
 import urllib.parse
 import requests
 
 
+@functools.lru_cache()
 def search(text: str) -> List[str]:
     url = build_url(text)
     response = perform_search(url)

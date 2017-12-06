@@ -4,7 +4,8 @@ import services
 
 
 def main():
-    go()
+    for _ in range(1, 10):
+        go()
 
 
 def go():
