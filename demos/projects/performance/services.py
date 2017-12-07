@@ -6,6 +6,7 @@ import requests
 
 @functools.lru_cache()
 def search(text: str) -> List[str]:
+    # TODO: Evaluate whether to expire the cache...
     url = build_url(text)
     response = perform_search(url)
     results = convert_results(response)

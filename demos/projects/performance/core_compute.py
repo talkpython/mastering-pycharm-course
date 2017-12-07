@@ -24,7 +24,9 @@ def list_momento(func):
     cache = {}
 
     def wrapper_func(*lists):
+        # Use a hash rather than full text for key
         key = "KEY: " + ",".join([str(l) for l in lists])
+        key = hash(key)
 
         if key in cache:
             return cache[key]
