@@ -31,7 +31,7 @@ Then write some kind of print statement for the implementation (e.g. The wizard 
 
 Return to `program.py`. Notice how many PEP8 formatting warnings it has. Use reformat code to fix this!
 
-If you forgot the command sequence, use the search (upper right) and type `reformat code`. It should appear under the "actions" menu.
+If you forgot the command sequence, use the search (upper right) and type `reformat code`. It should appear under the "actions" section.
 
 ## Remove unused imports
 
@@ -41,6 +41,6 @@ Go to the top of `program.py`. You'll see some of the imports are unused. Put yo
 
 The bad wizard has no documentation. Put your cursor on `hero.attack` (the attack part) on line 57 in `program.py`. Use the menu **View > Quick Documentation** and notice it's lacking.
 
-Press **cmd/ctrl-b** (or **cmd/ctrl-click**) to navigate to attack. Type """<ENTER> to generate documentation.
+Press **cmd/ctrl-b** (or **cmd/ctrl-click**) to navigate to attack. Type """[ENTER] to generate documentation.
 
 Return to line 57 in `program.py` and see your improved docs.
