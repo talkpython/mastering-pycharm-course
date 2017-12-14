@@ -99,17 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
-demos/projects/first_project/.idea/first_project.iml
-demos/projects/first_project/.idea/modules.xml
-demos/projects/podcast/.idea/misc.xml
-demos/projects/podcast/.idea/modules.xml
-demos/projects/podcast/.idea/podcast.iml
 .idea/course.iml
 .idea/misc.xml
 .idea/modules.xml
 .idea/inspectionProfiles/Project_Default.xml
-app.js
-demos/projects/web_clientside/webapp/.idea
-demo_overrides.css
 demos/projects/web_clientside/electron_test/electron-quick-start/node_modules
-demos/projects/packages/.idea
+.idea
