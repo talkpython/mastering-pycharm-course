@@ -8,6 +8,8 @@ We are going to use a project (located in the same folder as this file) called `
 
 It has been contorted to have many problems or [code smells](https://en.wikipedia.org/wiki/Code_smell). We'll use refactoring to freshen this up.
 
+**Note**: Before you first run this app, you'll need to make sure you have `requests` installed via pip.
+
 ## Large method *smell*
 
 Look at `program.py` and notice this somewhat complex app is actually just one big method, yuck. We'll use several refactoring to fix this.
