@@ -25,6 +25,7 @@ While you're here, add a virtual environment named `.env` in `hilo`.
 Time to **write some code**.
 
 * Open this directory in PyCharm
+* Confirm with PyCharm that you want to add the git / vcs root when prompted
 * Create a file `game.py`, tell PyCharm it may add it and all subsequent files to git if asked.
 * Write a quick game that will generate the output below. You'll need a `while` loop, `random.randint()`, and some `if` and `print` lines.  
 * While writing this game, save often (cmd/ctrl-s).
