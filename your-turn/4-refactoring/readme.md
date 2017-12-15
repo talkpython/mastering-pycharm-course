@@ -6,7 +6,7 @@
 
 We are going to use a project (located in the same folder as this file) called `smelly_podcast` (as in code smells). This is code we used to download some things from Talk Python To Me.
 
-It has been contorted to have many problems or code smells. We'll use refactoring to freshen this up.
+It has been contorted to have many problems or [code smells](https://en.wikipedia.org/wiki/Code_smell). We'll use refactoring to freshen this up.
 
 ## Large method *smell*
 
