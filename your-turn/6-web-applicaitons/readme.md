@@ -59,15 +59,15 @@ to
 Now you have data delivered to `templates/mytemplate.pt`, let's render it. Find the section `<div class="content">` replace the contents inside with this:
 
 ```html
-	<div class="content">
-	    <h2>Orders</h2>
-	    <div tal:repeat="o orders">
-	        <div>
-	            <span style="font-weight: bold;">${o.name}</span>
-	            <span>${o.price}</span>
-	        </div>
+<div class="content">
+	<h2>Orders</h2>
+	<div tal:repeat="o orders">
+	    <div>
+	        <span style="font-weight: bold;">${o.name}</span>
+	        <span>${o.price}</span>
 	    </div>
 	</div>
+</div>
 ```
 
 Do not copy / paste this. Type it in to see how PyCharm helps you.
@@ -90,10 +90,12 @@ Note that this page is reused across pages because they start with this (e.g. `t
 ```html
 <div metal:use-macro="load: layout.pt">
     <div metal:fill-slot="content">
-	    </div>
 	</div>
+</div>
 ```
 
 Be sure to run and inspect your new site! It should look somewhat like this.
 
 ![First run](./resources/done.png)
+
+See a mistake in these instructions? Please [submit a new issue](https://github.com/mikeckennedy/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/mikeckennedy/mastering-pycharm-course/pulls).
