@@ -7,7 +7,7 @@
 3. View table diagrams
 4. See the Python + SQL integration in action 
 
-**Note**: We will be working with a project called `database_proj` (creative, I know!) in the same folder as this file. Primarily we only care about the `db/blue_yellow.sqlite` file. But you can run this program if you wish (but you must install the requirements first).
+**Note**: We will be working with a project called `database_proj` (creative, I know!) in the same folder as this file. Primarily we only care about the `db/blue_yellow.sqlite` file. You can run this program if you wish, but you must install the requirements first. That is not required however.
 
 ## An existing SQLite database in PyCharm
 
@@ -15,7 +15,7 @@ Open the project called `database_proj` in the same folder as this file. You may
 
 First, you'll add the SQLite data file `db/blue_yellow.sqlite` as a data source in PyCharm. Try dragging that file onto the database tab (when expanded).
 
-If that works, great! If not, hit the plus in that tab, choose data source, sqlite (denial). If you see any message about downloading database drivers do that first. Then you should be able to add the data file.
+If that works, great! If not, hit the plus in that tab, choose data source, sqlite (xenial). If you see any message about downloading database drivers do that first. Then you should be able to add the data file.
 
 Explore the data in this tab. Expand it, play with it, and so on. Feel free to add a new table or new index to an existing one. Do not change the schema if you want the program to run. ;)
 
