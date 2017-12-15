@@ -24,15 +24,15 @@ After each refactoring, run the program to make sure it still works!
 
 Next, make a method out of **"DOWNLOAD THE EPISODE DATA"**. Name it `download_data`.
 
-Next up, we have **"GET LATEST SHOW ID"**. We want a method that will return that value. So highlight the `max(episode_data.keys())` in the line:
+Next up, we have **"GET LATEST SHOW ID"**. We want a method that will return that value. So highlight just  `max(episode_data.keys())` in the line:
 
 ```latest_show_id = max(episode_data.keys())```
 
-Choose extract method again. Notice that this time, PyCharm Found another usage (duplicate code!) we can replace that with this method call too (automatically).
+Choose extract method again. Notice that this time, PyCharm found another usage (duplicate code!) we can replace that with this method call too (automatically).
 
 Choose a good name, like `get_latest_show_id`.
 
-Now find the single line annotated with **"GET EPISODE"**. Highlight this: `episode_data.get(show_id)` and refactor it to a method called `get_episode`.
+Now find the single line annotated with **"GET EPISODE"**. Highlight only this in the line: `episode_data.get(show_id)` and refactor it to a method called `get_episode`.
 
 Finally, notice the remaining section label **"DISPLAY RESULTS"**.
 
@@ -40,18 +40,18 @@ Highlight that and extract it to `display_results()`.
 
 Rerun your program (again, and again). It's still working right? OK then, carry on.
 
-## Move (to module) *smell*
+## Large module *smell*
 
 Our code is MUCH better already. But let's separate the usage of this functionality from it's implementation. We'll move the parts to do with downloading and parsing episodes to `service.py`.
 
-Let's move the data container and type first. Highlight these to lines and "move" them via refactoring to service.
+Let's move the data container and type first. Highlight these to lines and "move" them via refactoring to `service.py`.
 
 	Episode = namedtuple('Episode', 'title link pubdate show_id')
 	episode_data = {}  
 
 Open `service.py` and see that the lines have moved. Does your code still run?
 
-We need to move some of the methods. Namely, move these all to service. Before you do it one, by one. Inspect that you can move multiple things at once. Highlight one to move, choose move, and check the others off before agreeing to move them to `service.py`.
+We need to move some of the methods. Namely, move these all to service. Before you do it one, by one. Observe that you can move multiple things at once. Highlight one to move, choose move, and check the others off before agreeing to move them to `service.py`.
 
 * `get_episode`
 * `get_latest_show_id`
