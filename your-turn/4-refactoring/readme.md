@@ -84,3 +84,5 @@ Open `service.py`. Notice this line `dom.findall('channel/item')` appears multip
 Make a variable for it by highlighting either single expression, choose refactor > variable. Name it something like `items`. Choose 2 locations!
 
 Does your code still run? Then you're done. :)
+
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/mikeckennedy/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/mikeckennedy/mastering-pycharm-course/pulls).*

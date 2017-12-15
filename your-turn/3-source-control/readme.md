@@ -58,4 +58,6 @@ If you made a github repo, feel free to push your commit as well.
 
 Now let's see what's in **local history**.
 
-Right-click on game.py in the project. Choose **local history > show history**. Click around on the left of the local history window and you should see several versions of your file (regardless of whether they were committed to git).
+Right-click on `game.py` in the project. Choose **local history > show history**. Click around on the left of the local history window and you should see several versions of your file (regardless of whether they were committed to git).
+
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/mikeckennedy/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/mikeckennedy/mastering-pycharm-course/pulls).*

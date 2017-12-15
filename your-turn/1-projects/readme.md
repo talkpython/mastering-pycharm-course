@@ -55,3 +55,5 @@ You should also have no errors around this statement in the PyCharm editor.
 Run it and enjoy your wizard battle. Good luck with the dragon!
 
 ![Configured (no errors) and running](./resources/config-run.png)
+
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/mikeckennedy/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/mikeckennedy/mastering-pycharm-course/pulls).*
