@@ -62,10 +62,10 @@ Now you have data delivered to `templates/mytemplate.pt`, let's render it. Find 
 <div class="content">
 	<h2>Orders</h2>
 	<div tal:repeat="o orders">
-	    <div>
-	        <span style="font-weight: bold;">${o.name}</span>
-	        <span>${o.price}</span>
-	    </div>
+		<div>
+		    <span style="font-weight: bold;">${o.name}</span>
+		    <span>${o.price}</span>
+		</div>
 	</div>
 </div>
 ```
