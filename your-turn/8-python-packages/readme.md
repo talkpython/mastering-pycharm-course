@@ -2,9 +2,11 @@
 
 ## Objectives
 
-1. Create a new project (use a virtual env)
-2. b
-
+1. Create a project
+2. Make it a package
+3. Add a feature
+4. Include a setup
+5. Use the package
 
 ## Create a project
 
