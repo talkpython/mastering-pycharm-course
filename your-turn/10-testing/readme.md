@@ -18,3 +18,15 @@ To run the tests, you'll need to add a pytest run configuration. In the run conf
 Set the target to `path` with value `./tests.py`. Now run the tests and see they are failing.
 
 ![](./resources/failing.png)
+
+## Use code coverage
+
+Next run your tests with coverage. 
+
+![](./resources/cover.png)
+
+See that not much is covered. Open `tests.py` and start implementing tests. Run them with coverage after each one to see how things are improving.
+
+You're done when all tests pass and `core.py` has 100% code coverage.
+
+100% code coverage isn't always a goal (diminishing returns, etc) but it is this time.
