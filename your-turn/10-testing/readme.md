@@ -30,3 +30,5 @@ See that not much is covered. Open `tests.py` and start implementing tests. Run 
 You're done when all tests pass and `core.py` has 100% code coverage.
 
 100% code coverage isn't always a goal (diminishing returns, etc) but it is this time.
+
+![](./resources/success.png)
