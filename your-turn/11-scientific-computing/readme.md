@@ -22,7 +22,7 @@ We are going to import a few libraries in this file. Put this at the top of the 
 import matplotlib.pyplot as plt
 ```
 
-Next, **TYPE **this.
+Next, **TYPE** this.
 
 ```python
 import numpy as np
