@@ -1,7 +1,7 @@
-# Mastering PyCharm course
+# MOVED
 
-## Resources
+I've moved this repository over to @talkpython's organization.
 
-JetBrain's PyCharm cheat sheet
+[https://github.com/talkpython/mastering-pycharm-course](https://github.com/talkpython/mastering-pycharm-course)
 
-[PyCharm_Reference_Card.pdf](https://blog.jetbrains.com/pycharm/files/2010/07/PyCharm_Reference_Card.pdf)
+Enjoy the course!
