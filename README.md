@@ -1,5 +1,9 @@
 # Mastering PyCharm course
 
+[![](./readme_resources/mastering-pycharm-sm.jpg)](https://training.talkpython.fm/courses/details/mastering-pycharm-ide)
+
+[Visit course page](https://training.talkpython.fm/courses/details/mastering-pycharm-ide)
+
 ## Resources
 
 JetBrain's PyCharm cheat sheet
