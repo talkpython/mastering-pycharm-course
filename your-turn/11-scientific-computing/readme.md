@@ -127,3 +127,5 @@ Note that we don't need show() this time.
 Now you have a fancy Juypter notebook with a graph!
 
 ![](./resources/8-notebook.png)
+
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*
