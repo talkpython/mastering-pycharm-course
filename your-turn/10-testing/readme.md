@@ -2,7 +2,7 @@
 
 ## Objectives
 
-1. Configure purest tests
+1. Configure pytest tests
 2. Use code coverage to see how much test coverage you have
 
 ## Configure pytest tests
