@@ -45,4 +45,4 @@ Press **cmd/ctrl-b** (or **cmd/ctrl-click**) to navigate to attack. Type """[ENT
 
 Return to line 57 in `program.py` and see your improved docs.
 
-*See a mistake in these instructions? Please [submit a new issue](https://github.com/mikeckennedy/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/mikeckennedy/mastering-pycharm-course/pulls).*
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*

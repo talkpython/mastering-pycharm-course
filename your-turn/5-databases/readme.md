@@ -39,4 +39,4 @@ The final trick is for inline SQL in code. Type, do not paste, the following cod
 query = "SELECT * FROM Album WHERE has_preview AND year > 2001"
 ```
 
-*See a mistake in these instructions? Please [submit a new issue](https://github.com/mikeckennedy/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/mikeckennedy/mastering-pycharm-course/pulls).*
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*

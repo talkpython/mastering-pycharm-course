@@ -23,3 +23,5 @@ Use the various tools in PyCharm's reporting to answer: What the the three slowe
 ## Improve a few key methods performance  
 
 Now that you understand the performance, make changes to the code to improve the speed (there are a few TODO comments in the code). Use profiling to verify this is actually improving things and by how much.
+
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*

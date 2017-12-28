@@ -10,7 +10,7 @@
 
 We are going to create a very simple game and store it in source control.
 
-If you have a github account, feel free to create a repository named `hilo` there, clone it, and use it for this purpose. 
+If you have a GitHub account, feel free to create a repository named `hilo` there, clone it, and use it for this purpose. 
 
 If you don't want to make a public repo, then:
 
@@ -60,4 +60,4 @@ Now let's see what's in **local history**.
 
 Right-click on `game.py` in the project. Choose **local history > show history**. Click around on the left of the local history window and you should see several versions of your file (regardless of whether they were committed to git).
 
-*See a mistake in these instructions? Please [submit a new issue](https://github.com/mikeckennedy/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/mikeckennedy/mastering-pycharm-course/pulls).*
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*

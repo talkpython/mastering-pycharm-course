@@ -44,4 +44,4 @@ Our goal is to make the loop run one more time. In the variables window, set `o`
 [1, 1, 3, 5, 13, 21, 55, 89, 233, 377, 987, 999]
 ```
 
-*See a mistake in these instructions? Please [submit a new issue](https://github.com/mikeckennedy/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/mikeckennedy/mastering-pycharm-course/pulls).*
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*
