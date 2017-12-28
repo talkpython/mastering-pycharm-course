@@ -20,4 +20,4 @@ In that same dialog, press `Browse repositories`. Use the search field to explor
 
 ## Try 5 new ones
 
-Choose 5 plugins from the browse area and install them and see what they have to offer. Have fun. You can always disable or uninstall them later.
+Choose 5 plugins from the browse area and install them and see what they have to offer. Have fun. You can always disable or uninstall them later.
