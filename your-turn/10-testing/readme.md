@@ -32,3 +32,5 @@ You're done when all tests pass and `core.py` has 100% code coverage.
 100% code coverage isn't always a goal (diminishing returns, etc) but it is this time.
 
 ![](./resources/success.png)
+
+*See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*
