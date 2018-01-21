@@ -53,7 +53,7 @@ Let's move the data container and type first. Highlight these to lines and "move
 
 Open `service.py` and see that the lines have moved. Does your code still run?
 
-We need to move some of the methods. Namely, move these all to service. Before you do it one, by one. Observe that you can move multiple things at once. Highlight one to move, choose move, and check the others off before agreeing to move them to `service.py`.
+We need to move some of the methods. Namely, move these all to service. Before you do it one by one, observe that you can move multiple things at once. Highlight one to move, choose move, and check the others off before agreeing to move them to `service.py`.
 
 * `get_episode`
 * `get_latest_show_id`
