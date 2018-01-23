@@ -9,7 +9,7 @@
 
 To create a new project, use PyCharm's new project wizard. 
 
-Note that since the initial recording, PyCharm has changed the creation process to emphasis using virtual environments nested within the project folder.
+Note that since the initial recording, PyCharm has changed the creation process to emphasize using virtual environments nested within the project folder.
 
 Steps:
 
