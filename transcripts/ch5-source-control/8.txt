@@ -1,0 +1,36 @@
+00:01 One of the more advanced workflows in github or git in general
+00:05 but really github, is this thing called git flow.
+00:09 So the idea is we're going to go and create an issue,
+00:12 we're going to create a branch, a feature branch for that issue,
+00:16 we're going to do all our work in that feature branch,
+00:18 and then we're going to create a pull request
+00:22 from that feature branch back to the target branch,
+00:26 master or q&a whatever we're going towards;
+00:29 wait until somebody approves that, merges that in
+00:32 and then we'll close that corresponding issue.
+00:37 So here is a fake git flow,
+00:39 we've already created branch called python-jumpstart-course-demos-29
+00:44 because this corresponds to issue 29,
+00:46 not a great name but that's what it is,
+00:48 I definitely recommend putting the issue id as part of this.
+00:51 So, we've created this and we've made some changes,
+00:55 we've checked it in there
+00:57 and then we can click on create a pull request
+00:59 as part of that statement we can say this fixes issue 29,
+01:05 which then associates a link in github
+01:08 between this pull request and this branch
+01:11 back to that particular issue it is supposed to fix,
+01:14 you can see there's no conflict, so we should be able to merge it—
+01:17 we do, the pull request successfully merged and closed the pr,
+01:21 if we want, we could delete the branch or leave it, take your pick.
+01:25 Then finally, we can go over and we can close the issue 29
+01:29 that was associated with it, so that's really, really great.
+01:34 You can see below, mikeckennedy referenced this issue 11 seconds ago,
+01:38 that's because I put hash 29 in the pr description.
+01:41 This is a very common workflow, common in open source,
+01:45 it's common even within companies
+01:47 as a way to partition feature development within a team
+01:51 so maybe somebody is working on a feature or a bug
+01:54 and then they issue a pr basically back to themselves
+01:57 or to their team members to keep going.
+01:59 So let's see how this works in PyCharm.

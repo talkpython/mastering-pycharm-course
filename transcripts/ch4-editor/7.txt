@@ -1,0 +1,33 @@
+00:01 In Python, it's great that we have pep 8,
+00:04 it tells us how to format our code, how to name our variables and so on.
+00:07 However, we don't always follow it
+00:09 or more writing code, reorganizing code,
+00:12 sometimes we get it into a place where it doesn't quite line up.
+00:15 So if we hover over say this change address thing
+00:18 there's actually a few problems.
+00:20 First of all, pep 8 says we expected two blank lines
+00:23 from the find user by email function
+00:26 so it should have two more lines below;
+00:28 and according to our current conventions,
+00:30 we really should have something like change_lower case a address
+00:33 this is very much like Javascript style or Java style of function naming
+00:40 both for new email and for change address
+00:42 and it's not very Pythonic we should be using snake case after all.
+00:46 How do we fix this?
+00:48 Well, if we just hit CMD ALT L or CTRL ALT L
+00:53 or whatever the hotkey is for reformat code
+00:56 as we saw before this can change,
+00:58 but on Mac by default is CMD ALT L and I think CTRL alt L on the others
+01:02 it will reformat this and fix the pep 8 violations
+01:06 so you notice that it actually went and it said
+01:09 okay we'll put those two lines there for you
+01:11 and if there was like other spaces or other minor things
+01:13 they will all be automatically fixed.
+01:15 But a change address— well, if we're going to change address
+01:18 that actually might break other code and other modules
+01:22 or heck if this is a package that somebody uploads to PyPi,
+01:27 and then someone else downloads it,
+01:29 that could have like far ranging problems or knock on effect
+01:32 so it's not going to fix that automatically,
+01:34 but the refactoring would let us fix it at least within our project right away,
+01:38 but it will just give us a warning no autofix.

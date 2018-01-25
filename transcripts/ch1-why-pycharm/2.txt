@@ -1,0 +1,20 @@
+00:01 If this is the first course you've taken from me,
+00:03 you might be wondering who is this disembodied voice
+00:05 speaking to you through this microphone, through the screen here.
+00:08 Well, there I am, hi, my name is Michael, nice to meet you.
+00:11 You can find me on Twitter at @mkennedy
+00:13 and I'm super excited to be writing this course for you.
+00:17 I'm really excited about PyCharm, I've been using it for many years
+00:20 and I just think it's a great editor and I want to highlight all the ways
+00:25 in which it can make your life better as you write software.
+00:28 Some other things I've been up to,
+00:31 you might know about the Talk Python To Me podcast,
+00:33 this is the most popular Python podcast out there
+00:36 and I've been hosting this for a couple of years,
+00:38 talking to many of the experts including a couple of folks on the team
+00:40 that built PyCharm itself, so there is some interesting looks inside PyCharm
+00:45 and I'll try to share that information with you as well.
+00:47 And of course, I founded Talk Python Training
+00:50 which is probably where you're taking this course.
+00:52 So, nice to meet you, and I'm looking forward to sharing
+00:54 this whole course and PyCharm experience with you.

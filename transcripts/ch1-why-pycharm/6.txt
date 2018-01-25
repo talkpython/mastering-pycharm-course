@@ -1,0 +1,40 @@
+00:01 Something that is not immediately obvious,
+00:04 and I know a couple of people in fact, I think even myself when I first got started
+00:08 didn't realize exactly how the building blocks
+00:10 are all put together to make PyCharm.
+00:13 PyCharm is obviously a Python editor.
+00:15 But as I've hinted, it also does other things
+00:18 like the database tooling that I talked about,
+00:21 or the fact that it does TypeScript and Electron Js
+00:24 which is really doing Node and things like that.
+00:27 There's actually a bunch of other tools
+00:29 that are put together to make up PyCharm.
+00:32 So, across JetBrains, they have all these different IDEs,
+00:36 they have PyCharm, they have something called WebStorm
+00:39 which is for Javascript and HTML,
+00:41 they have something called AppCode
+00:43 which is for building IOS apps and things like Swift, and so on.
+00:47 But all of these IDEs are built upon this common platform called IntelliJ.
+00:52 IntelliJ originally comes from just the Java IDE,
+00:56 but it's very extensible and configurable
+00:59 and they've made it so it can be the foundation of all these different things,
+01:02 so anything that IntelliJ does pretty much is
+01:04 something that PyCharm or these other editors can do.
+01:07 But it also has WebStorm, so WebStorm is really awesome,
+01:12 my favorite straight Javascript, TypeScript editor
+01:15 if you're doing something like TypeScript, let's say AngularJs,
+01:21 Ionic, Cordova, something like that, it's a really great place to work
+01:26 or like I said, ElectronJs, something like that,
+01:29 it really understands Javascript, CSS, HTML super well,
+01:33 and in fact, the pro version of PyCharm has all the features of WebStorm in it.
+01:39 That's just part of what it does, it will do all the things that WebStorm does
+01:43 plus all the Python things.
+01:45 It also has this thing called DataGrip, as its foundation,
+01:48 so DataGrip is a standalone database IDE from JetBrains, on IntelliJ,
+01:55 this is all plugged in, all the database functionality comes from there.
+01:59 So when you think of PyCharm, you should really think of
+02:02 PyCharm the Python editor plus WebStorm plus DataGrip
+02:05 as this sort of holistic, full stack tool that you can use
+02:09 for anything to do with web development,
+02:12 but also just databases, or the data science tools that plug in as well,
+02:16 but you can think of WebStorm and DataGrip as a subset of PyCharm.

@@ -1,0 +1,51 @@
+00:01 We saw that we can use this find action
+00:04 either CMD shift A or CTRL shift A to put it in our platform
+00:07 so you hit that sequence of keys
+00:09 and you type a little bit of what you're looking for
+00:12 and it will even tell you like for example, refactor this is CTRL T.
+00:15 However, be aware that that CTRL T is based on the key mappings I chose
+00:21 when I installed PyCharm and ran it
+00:23 you can change these later under preferences
+00:26 but basically, these get set and you're sort of stuck with them
+00:30 so on Windows, you might have a different set of keystrokes
+00:33 and there's actually a nice cheat sheet you can see at the bottom
+00:36 bitly/pycharm-card you can get it there
+00:40 that'll show you the various default key bindings and commands
+00:43 and sort of helps you discover that, we talked about that earlier.
+00:46 But, we can actually go and change these key bindings here under preferences
+00:51 so under key map you can say what I have is Mac OS X 10.5 +
+00:56 and that will give you all those options
+00:58 here on the right you see that probably is like 5 or 6 pages of hotkey commands.
+01:03 I could choose Emacs if I was really into Emacs
+01:06 or if I came from Eclipse and I wanted to use that I could pick that.
+01:10 NetBeans, Visual Studio, like F5 would be run or debug
+01:14 in Visual Studio CTRL F5 would be run, things like that.
+01:17 There's actually some listed here that are off the screen.
+01:20 I show you this because one, it's cool to pick the one that you like
+01:23 so if you're .Net developer pick Visual Studio,
+01:26 if you are a Java developer maybe Eclipse is a good choice.
+01:29 I just chose the Mac OS X 10.5 + version
+01:35 because I just wanted to use whatever the default was for my OS.
+01:39 The other reason I show you this is
+01:41 you can change your hotkeys here
+01:44 so if you wanted to like cut up to line end, right now it's CTRL K
+01:47 and that's kind of Emacs or so, that's totally good
+01:50 but if you want it to be shift CTRL K
+01:53 you could come here and change that and make a custom key binding
+01:56 so that's pretty awesome as well.
+01:58 Finally, if you're into Vim, you saw there is an Emacs dropdown for the key binding,
+02:02 but no Vim, just go get IdeaVim,
+02:05 remember IntelliJ Idea the IntelliJ platform
+02:10 so IdeaVim is the foundational Vim key bindings
+02:14 for all the various JetBrains IDEs, so PyCharm, WebStorm, IntelliJ of course,
+02:21 and you can install this and you can have Vim bindings if that makes you happy.
+02:25 So this is made by JetBrains I think
+02:27 if you scroll down somewhere it says who makes it
+02:30 but yeah, you can install this and this will give you Vim bindings as well.
+02:33 Some of the few key strokes that you want to really remember all the time
+02:38 is how to run the active configuration
+02:40 so ctrl R on Mac, I think I said F5 or shift F10 on Windows and Linux
+02:47 select words, ALT shift arrow the whole thing is CTRL shift arrow I think
+02:56 go to definition is CMD B or CTRL B or the CMD click,
+02:58 there's so many more so be sure to check out the cheat sheet
+03:00 just to kind of know what's out there.

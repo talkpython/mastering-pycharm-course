@@ -1,0 +1,62 @@
+00:01 Before we get into the details of PyCharm,
+00:04 I want to dispel what I consider to be a myth— that IDEs are slow.
+00:07 Now, yes, Emacs does technically start faster than PyCharm
+00:13 or even maybe faster than Sublime Text,
+00:17 but it definitely starts faster than PyCharm.
+00:20 However, what are we optimizing for?
+00:23 What is the most important thing— how fast your program comes to life,
+00:27 or how fast you get your work done?
+00:30 In fact, I would say that working with an IDE as you'll see,
+00:33 actually lets you work much faster.
+00:36 So, while yeah, it might take a second longer to start,
+00:39 it's going to let you work a lot faster throughout the day
+00:42 and you're just going to start up PyCharm and just leave it going all day anyway,
+00:46 so once it's up and running, it doesn't really go any slower.
+00:49 All right, so I would say these IDS are actually faster and they make you faster,
+00:54 which is the most important thing you want to optimize for.
+00:57 You also might say, "Well these use a lot of battery,"
+01:00 because they take a lot of power, they're doing a lot of analysis
+01:02 and it runs out the battery or something like this.
+01:04 So let's go and actually look at these two things on my Mac here.
+01:08 Here's PyCharm, it's already been started
+01:11 but I don't have any projects open,
+01:14 here you can see this is a project I have previously worked on
+01:17 from my MongoDB course, it's just sitting there,
+01:19 it's been opened before, so this is like a recent file list,
+01:22 it just happens to be only one thing that I recently did
+01:25 on this profile here, in this PyCharm.
+01:27 Let's see how long it takes to open this,
+01:30 just thinking about timing like, "I want my editor be fast,"
+01:33 so let's how quick this is.
+01:35 Now, remember, I'm recording my screen
+01:37 which puts a serious hurting on the performance,
+01:39 so this probably is a little underspeed,
+01:41 but let's go ahead and it will be hard to hear the clicks, I'll count down for you.
+01:44 3, 2, 1 go.
+01:48 Oh, that was fast enough, what would you say
+01:51 like a 150 milliseconds or something like that?
+01:53 We'll do it one more time. 1, 2, 3, go.
+01:57 Yeah, so I wouldn't say I'd really worry too much about this dragging you down,
+02:01 that is super fast and yeah, it was actually already running
+02:04 if I were to quit it and start it from scratch,
+02:07 it'll take— who knows, 5 seconds, something like this.
+02:11 It feels like maybe 5 or 6, and then it's up and running.
+02:15 Like I said, that's 5 seconds in the beginning of the day
+02:18 and then you have— I don't know, the entire rest of the day,
+02:22 the 7 hours 59 minutes and 55 seconds to be super productive.
+02:27 So I would not worry too much about the time it takes to open one of these things.
+02:32 Now, if we go over and you look here,
+02:35 the other thing I want to talk to you about or show you really quick is
+02:38 PyCharm does do a lot of analysis and indexing and stuff,
+02:42 it's fine most the time, but if you're down to your last 10% percent of battery
+02:47 and you are on an airplane and you just don't want it to drag you down,
+02:50 you can come over here and actually type power mode
+02:53 you're going to see a ton of features as we go,
+02:56 but this one doesn't fit anywhere, so let's talk about it here;
+02:59 this power mode lets you actually turn off
+03:04 some of the real time analysis and intellisense type things
+03:08 that will make it use less energy.
+03:12 So if for some reason you need it to run in like a super wimpy environment,
+03:15 you could turn on power save mode and it should run more efficiently
+03:18 or if you're down to the last 10% of your battery
+03:21 you can flip this on and stretch it a little bit farther.

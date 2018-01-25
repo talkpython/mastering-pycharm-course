@@ -1,0 +1,48 @@
+00:01 Let's turn our attention to this get defensive roll method right here.
+00:05 So it's a super simple method, but it turns out that it's not entirely easy to debug
+00:10 and it's not also clear what this 3 means,
+00:13 and what is this— okay, if you have played enough Dungeon and Dragon
+00:17 that's a 12-sided dice right there,
+00:19 but what does it mean, right?
+00:21 It doesn't have to be entirely obvious, the only thing obvious is this level,
+00:24 so somehow your defensive roll is based on like
+00:27 a number times a random number times your level.
+00:29 So let's make this more explicit.
+00:31 First of all, something I like to do a lot if I am doing debugging is
+00:36 I would like to put a break point here
+00:38 and stop and see what value came back for the random int, I can't do that here,
+00:42 you can sort of determine it in reverse
+00:45 by doing some division, but that's not the same thing.
+00:47 So we can easily fix that by highlighting this,
+00:50 CRTL T for refactoring and say create a variable
+00:53 and we're just going to call it something stupid based on there,
+00:56 so let's call this roll, so that's what you roll,
+00:59 so now it's getting more obvious what's happening,
+01:02 the level times the roll of your 12 sided dice times 3— what the heck is that?
+01:06 We could do the same thing, we could come over here and say,
+01:10 I'm going to create a variable, this will be modifier,
+01:12 and that makes it more legible,
+01:16 maybe we want this modifier to be configurable as well from the outside,
+01:21 maybe under different circumstances a different modifier is used.
+01:24 Maybe we did this refactoring and it was kind of crummy
+01:27 so we can say, oh that wasn't great, we're actually making it less clear
+01:30 if we just had three times it would be more obvious.
+01:34 So we could do a refactoring in reverse and say
+01:36 inline and it says, we're going to inline this modifier back,
+01:40 this sort of the reverse type thing.
+01:43 Now down here again, let's suppose we're going to make this configurable,
+01:47 so I can say make this a parameter,
+01:49 and then it goes up there as i, equals 3
+01:54 so the default value in the signature doesn't really change,
+01:57 all the function, all the people calling to get defensive roll,
+02:01 will just use the default value,
+02:03 but it could be overwritten, so let's call this modifier.
+02:09 So now, this is pretty understandable, your defensive roll is the modifier,
+02:12 which by default is 3, times the roll, times the level,
+02:16 and I did that without typing a single character of code,
+02:21 I just did some CTR T action, technically, you could use the mouse,
+02:24 I named this, maybe that sort of counts,
+02:27 but you just saw I could totally use the tools.
+02:30 Now, this function is one line long, it's totally simple,
+02:33 but, imagine on a much larger, much more complicated situation,
+02:37 this would be really valuable.

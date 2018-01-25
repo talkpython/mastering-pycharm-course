@@ -1,0 +1,32 @@
+00:01 If you're new to Python, you might not realize
+00:03 there's actually many different versions and flavors of Python.
+00:06 So if you just say Python, you mean something called C Python
+00:11 and that's what you get if you go to Python.org and you download it
+00:15 or you just go to Linux and type Python, that's C Python.
+00:19 But there's actually a bunch of different runtimes
+00:21 and sometimes these are called interpreters
+00:23 but I don't like the term interpreters, because not all of them are interpreters
+00:26 some of them are JIT compilers.
+00:28 So runtimes is what I am going to say.
+00:30 We have the two sort of direct Python ones I would say,
+00:35 on the right here this snake is PyPy,
+00:38 and this is a JIT version of the Python runtime,
+00:43 implemented in Python, it's very meta
+00:45 hence the circle is eating itself, that sort of thing.
+00:48 In some circumstances, this can be much faster
+00:51 but it doesn't have as much coverage
+00:55 of all of the languages, all of the libraries and stuff that you might use
+00:58 especially some of the C based extensions and things like that,
+01:01 so you don't always want to just use PyPy
+01:03 but if you want to, you'll see that it is supported in PyCharm, which is cool.
+01:07 Same thing for Cython, we saw that on the feature page just a little bit ago
+01:10 and Cython is a way to take Python code and compile it down the machine instructions
+01:16 not even JIT compiled, just straight up like C compiled
+01:19 but it uses a kind of a flavor of Python
+01:22 and that is supported with Intellisense
+01:24 and language understanding and everything in PyCharm.
+01:26 Then we have the two plugin ones, Jython and IronPython
+01:31 and this is plugging into Java and .Net respectively, those are also supported.
+01:35 So regardless of how you want to run your Python code
+01:38 any of these are supported with language validation and things like that
+01:44 in PyCharm, which is pretty awesome.

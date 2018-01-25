@@ -1,0 +1,44 @@
+00:01 We've seen for large applications or large directory structures at least
+00:05 this concept of marking a directory as some sort of thing is really helpful,
+00:11 this is especially helpful in the web actually.
+00:14 So we go over here and we right click on the directory
+00:17 we say mark directory as, we get these 4 choices here
+00:19 so let's look at the 4 choices:
+00:22 the first one is sources roots,
+00:24 so this contains all the actual source code and files
+00:27 and PyCharm uses this as the point for resolving imports.
+00:30 We saw in our example that I tried to import some things from actors
+00:34 like the wizard and the dragon and stuff
+00:37 from the actors in that little silly game I created,
+00:39 and it said there's no actors, I went up to the top of this entire directory structure
+00:43 and said there's no module called actors,
+00:46 but it was right next to it right,
+00:48 so I said look this is actually where these files refer to each other
+00:50 by saying market as a sources root.
+00:53 We also have resource roots, this is for static things
+00:57 like style sheets and images and Javascript and so on,
+01:00 so this is actually super helpful for the web
+01:04 because when you create things like Pyramid Web Apps
+01:06 there's a whole structure that is not the exact same structure in the project
+01:11 as it maps to the website, and because of that
+01:15 PyCharm typically will tell you every single CSS file,
+01:18 every single Javascript file is not found,
+01:21 is not there and it won't help you with any sort of auto complete
+01:24 in your HTML or your templates.
+01:27 But, all you've got to do is right click and say mark it as a resource root,
+01:31 and everything falls into place, so that's really handy for the web.
+01:34 I don't really know how this would be used outside the web.
+01:38 Excluded roots, these are things that PyCharm will basically ignore saying
+01:42 don't look at this for trying to index stuff
+01:46 or try to read these files and understand them,
+01:51 so we did this for our virtual environment for example
+01:54 as well as my little transcript folder,
+01:56 those were just resources that were in the git project
+01:59 but had nothing to do with our program really.02:02 Finally, templates roots, this is just where you put
+02:06 your Jinja 2 or your Chameleon templates in your web app
+02:08 and when you create things like Pyramid web apps
+02:10 you'll see that it actually automatically
+02:13 marks the template folders as template folders
+02:16 you have don't to do anything there, but for some reason
+02:18 you've created one more by hand
+02:20 and you want to indicate like, here's the temple folder just use that.

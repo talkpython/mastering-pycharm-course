@@ -1,0 +1,74 @@
+00:01 One of the cool little tricks we saw earlier
+00:04 was that _ _name_ _=_ _main_ _
+00:06 sort of run convention that we saw
+00:09 so if you import a module its name is just the name of the module
+00:12 but if you execute a module its name is _ _main_ _, that's a convention
+00:16 and we saw that we could type main and get it just like that.
+00:19 And notice even where the caret is
+00:22 it's right where you should be typing to sort of do the stuff that happens.
+00:26 We have a bunch of these things
+00:28 so if I want to say enumerate over this small set of fibonacci numbers
+00:33 and I want to like print out the first number is this, the second number is that
+00:36 it's super easy I could say iter, and that would be basic iter,
+00:39 I could say itere for the enumerate.
+00:42 And boom, I num, and it proposes num, it knows this is iterable,
+00:47 and all those kind of stuff.
+00:49 I'll say it's a fib and this would be index
+00:51 but you could just stick with whatever it proposes.
+00:54 I could just do a little cool format thing.
+00:57
+01:05 And if we run this, notice it says run configuration, right click run—
+01:10 boom super, super quick,
+01:13 we have the first fibonacci number is 1, second is 1, third is 2, fourth is 3,
+01:22 it's hard to say that.
+01:25 These live temples are awesome
+01:27 how do we know which ones there are?
+01:29 Can we create others? I'll show you and yes.
+01:31 If we go down here to the editor, to live templates
+01:35 at the top, notice when in opens it should be like this probably
+01:38 there's a whole bunch and it tells you to expand them with tab
+01:41 and there's Python, there's Django, there's Flask
+01:44 there's even things like Javascript and Angular.
+01:46 You can come down here and you can see we've got
+01:49 actually not as many as I would hope
+01:51 but here is a super call, here are some properties
+01:53 with getter, setter, deleter, here is the main thing,
+01:56 here's that iter notice for index variable in iterable,
+02:01 and it automatically proposed nums
+02:03 because that was an iterable in scope, really, really cool.
+02:07 Now notice this is applicable to Python and Python classes, so this is important.
+02:12 You can also tell it to reformat the code there are a bunch of things.
+02:16 So let's add one, let's say hey, I want to be able to quickly have a wizard battle
+02:21 so I'm going to create a live template and this is going to be
+02:24 wiz is what I'm going to tie and this will be create a wizard battle
+02:30 and I've got some text copied here, can I indent it, I can
+02:37 so what this will do is quickly generate this wizard and some creatures
+02:41 so hey, they can battle, and let's say even format the code
+02:44 depending on where do we paste it.
+02:47 Now if I try to run this, it's not going to work, it will never show up
+02:50 and the reason is a little like warning down here
+02:52 it says you have to say I could just say it runs everywhere, probably not
+02:57 so I could come down here and just say
+02:59 it runs in Python class other that's all good.
+03:02 So now if we come down here and you want a Wizard battle,
+03:04 I type wi— wow and look, create a wizard battle, bam.
+03:08 Now of course, we got to import these things,
+03:11 import the small creature but notice a little lightning bulb
+03:14 hey, your code is broken but not for long.
+03:17 Now we could just come down here and say something like
+03:21 print hero battles whatever
+03:26 and we'll do a little format, maybe hero does an attack
+03:32 and remember we have beautiful help on what goes in there
+03:37 it that takes a creature,
+03:39 so let's just say it's going to have a creature of zero, the Toad
+03:42 so now if we run it, boom
+03:45 Gandolf attacks the Toad, the Wizard rolls 75, the toad one half boom,
+03:51 that is a pretty handily beating that the Wizard gave to that Toad,
+03:55 but what would you expect right, it's a Toad.
+03:58 So we can create these live templates
+04:00 this Wizard example that I told you about is silly
+04:02 but it shows you how to create them, set their contacts and so on.
+04:08 Definitely think about the patterns that you do over and over and over
+04:11 and if you could make those in a couple keystrokes
+04:14 and it just happens reliably,
+04:16 and you can even maybe share them across your team, that'd be awesome.

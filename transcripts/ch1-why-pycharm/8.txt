@@ -1,0 +1,38 @@
+00:01 If we go over to the PyCharm website and we hit download
+00:03 you'll see there's a choice presented to us straight away—
+00:06 do you want the Professional version which you have to pay for
+00:09 or do you want the 100% free and open source Community edition?
+00:12 Well, we probably want the Community edition,
+00:16 but maybe there's stuff in the Professional we might want, how do we know?
+00:20 It turns out, some of the things we cover in this course
+00:22 only exist in the Professional, for example,
+00:25 that stuff about WebStorm and DataGroup that's in the Professional,
+00:30 but if we go over to this page here,
+00:34 to jetbrains.com/pycharm/features/editions_comparison_matrix.html
+00:40 just google it, it'll come up,
+00:43 you can see it actually shows you what is in each,
+00:46 so this column is the free one, the Community one, this one is the paid one.
+00:49 So free actually has a ton of stuff, it has all that cool editors
+00:53 with the little fixer stuff I talked about, refactoring,
+00:56 that's the code inspection, source control, scientific tools,
+00:59 the debugger, all that is great,
+01:01 but here's the WebStorm right, and the WebStorm stuff,
+01:04 the web development, the various Python frameworks,
+01:07 now you can technically make Flask or Pyramid or Django
+01:10 work and run inside of there and you can edit in the Community edition,
+01:15 you can edit the Python files, but you can't edit all the templates and stuff
+01:19 and it's not quite the same experience.
+01:23 The Pro version is really what you need to do web development.
+01:26 They also have things like remote debugging capabilities,
+01:29 the DataGrip stuff, here are the DataGrip stuff that I talked about
+01:33 and of course, here are all the various frameworks
+01:36 that are supported only in the Pro edition,
+01:39 notice cool things like Cython, SQLAlchemy diagrams, or Docker,
+01:42 there is Docker over the top, and of course the web stuff over here,
+01:46 Javascript debugger, CSS, and REST clients and so on,
+01:51 but they do have some basic editing, the source control integration free,
+01:56 so you can decide whether it's useful for you to get the Pro version or not,
+02:01 what we're going to use in this course is absolutely the Pro edition
+02:05 and I would say probably about 30% of the features
+02:09 we're going to talk about are only available in the Pro edition
+02:12 and I'll try to remember to point those out as we go through them.

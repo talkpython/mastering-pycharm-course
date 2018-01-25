@@ -1,0 +1,59 @@
+00:02 We've seen that we can actually follow the git flow from within PyCharm.
+00:06 And what you have to do to make this happen
+00:09 is you actually have to go into the tools task section
+00:11 and configure the server.
+00:14 This is not really obvious at all,
+00:16 so you have to come down here and you have to say configure servers
+00:19 and unless you hit this plus, you're like what is this for anyway, task servers?
+00:22 But you can see this is actually four issue tracking
+00:24 and at the very bottom, we have github.
+00:27 So github is obviously where I like to do my work
+00:31 but wherever your company works— maybe you use YouTrack,
+00:34 maybe you use Jira, who knows.
+00:36 We configure that, and we put the host name, the host is github.com
+00:41 we put your username, put your repository name,
+00:45 and then you put your api token,
+00:47 remember this is sensitive, don't share that with anyone.
+00:49 So you can determine whether or not you want to see issues not assigned to you,
+00:54 you probably do, take your pick.
+00:57 I guess it depends how many issues you have.
+01:00 So, you can say that, show me the issues not assigned to me,
+01:03 and then, once you do that, this little default task thing appears
+01:08 next to the source control, that wasn't there before.
+01:11 Now, once we have this, we can click on it
+01:15 and pull the drop down and say open task
+01:19 and it will give us this thing to search and whatnot,
+01:22 but what is really cool is all of our github issues,
+01:25 and our github repo show up here,
+01:27 and notice, to the left of the python jumpstart 29 test issue
+01:30 there is a little github icon, little octocat thing.
+01:34 So we click on that, and it says okay, great, we're going to open this task,
+01:38 however you are going to basically configure your work space for it,
+01:42 so you can click your context,
+01:45 we can create a new branch,
+01:47 remember, in here I use my username/ the id of issue I am working on-
+01:52 some short description so that it's pretty easy to tell
+01:57 like here is a feature branch for this issue,
+02:00 I based it on master, that seemed like it made a lot of sense,
+02:02 and creating a change list for git—
+02:05 I don't know if that's required, depending on how you're working,
+02:08 I don't use change lists that much,
+02:10 but if that's helpful to you, go for it.
+02:12 Then, you do all your work, and when you're done,
+02:16 you come over here tool stats and say
+02:18 close active task and that will basically close it off and commit it and so on.
+02:21 So, come over here, say close active task,
+02:25 you can commit the changes, we can merge the branch,
+02:28 we can update the issue resolved, and check it in,
+02:30 and that will do the commit and push, all that.
+02:33 Now, if you're working in github,
+02:36 and you're doing the git flow stuff,
+02:38 I would recommend that you commit the changes— yes,
+02:41 merge branches— no, update issue— no.
+02:44 Instead, what you do after this is you go to the github repo right at the top,
+02:50 it should say there has been a new check in in another branch,
+02:53 would you like to do a pr, create a pr?
+02:56 Click yes, and take the rest of the flow through the github itself,
+02:59 but if your source control area, if you are just using straight git or something,
+03:05 doesn't support git flow and pull request,
+03:07 go ahead and do the rest right here.

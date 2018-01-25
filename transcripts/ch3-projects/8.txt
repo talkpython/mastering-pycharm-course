@@ -1,0 +1,68 @@
+00:03 So we've got our project open and we have it running,
+00:05 we've configured our sources route all these things
+00:07 and it's pretty much ready to go—
+00:09 but this may be is a new project to us,
+00:11 we don't really know where all the pieces are and how they fit together
+00:14 so let's look at some of the navigational elements within the editor.
+00:18 So we've seen that we can use our search everywhere
+00:21 and I could find things like run,
+00:24 you can see there's a run method in a couple of locations here,
+00:27 for example this run method, and there was a bunch of those,
+00:32 so what if I just want to go to this one, I want to see what that does.
+00:34 If you hold down command on Mac or control on Windows or Linux,
+00:39 everything here becomes a hotlink
+00:42 so these are all things that you can go and just jump to
+00:44 so I can go to printer header and just click on it and it takes us right there.
+00:48 Notice, that would be the navigate to declaration
+00:52 or even the command b it says
+00:54 so this little printer header just shows us like silly snake concept,
+00:59 so if we want to go to program guest.run command click again, there we are,
+01:03 if we want to see what the show commands is,
+01:05 now we're kind of done with the mouse we hit command b
+01:08 or it depends, there's a different function on Windows,
+01:11 so here we'll go here and it says control b
+01:13 but it really depends on the key mapping that you select when you get started.
+01:16 But we can navigate around these and it's really cool,
+01:19 we navigated within our class and within our little function here
+01:23 so maybe we want to go back and we want to go to that print header again
+01:26 and we're printing this out, and notice
+01:30 we're actually printing this out white green white,
+01:33 so we're printing like a green snake here
+01:35 so if you want to know that looks like
+01:39 just really quickly say copy this path, I'll run it over here in the new window
+01:44 oh yeah, we've got to have our virtual environment active
+01:51 so I'll just run it and here, right click run
+01:54 and you can see it's kind of this lime green
+01:57 it's not a great green that comes out there
+02:00 the little terminal down at the bottom, the colors are not always quite right
+02:03 but that's ok, we can x it out
+02:06 but you see we are getting this color here
+02:08 so where does this color come from—
+02:10 well it turns out at the top if you look, this is coming from Colorama
+02:13 and let's actually go to this white and see what that is.
+02:17 Look at that, so if we jump down here
+02:20 we can see that this is an Ansi foreground color code
+02:24 and those are what the codes actually are,
+02:26 you want to know what defines light and black Ex
+02:29 well that's whatever 90 is in the Ansi color codes.
+02:33 Okay, so we can navigate to anything,
+02:35 this is an external package that you saw PyCharm install as a dependency,
+02:39 we can also come over here and just navigate straight to print,
+02:42 there is the print definition granted, it's not super interesting
+02:46 because it's actually written in C and is imported as part of C Python,
+02:50 so not so much, but you can navigate into all the things up to the level of C
+02:56 not down into the C runtime, but that's ok.
+03:00 So one other navigational thing that we can do
+03:04 is maybe we want to know where this is called
+03:07 so we could navigate from it, by command b when we have the cursor on it
+03:12 or command clicking it, right click navigate to
+03:15 we can also go in the reverse,
+03:18 so I can come over here and say find the usages of this
+03:21 and it says oh well, this is used in these various locations down here
+03:25 it turns out this one is just used one time if you double click, it says right here.
+03:30 Not super interesting in this program,
+03:34 but it does show us where it's used and if it was used 20 times
+03:37 we would be able to explore throughout the whole program
+03:40 so you can see, we have our little basically turn your program
+03:43 into a set of hyperlinks to navigate through everything
+03:46 by holding command or just straight navigation through the hotkeys, it's amazing.

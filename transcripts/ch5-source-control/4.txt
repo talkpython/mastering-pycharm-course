@@ -1,0 +1,58 @@
+00:01 So we're back here in PyCharm with everything checked in
+00:05 notice they are white, our files are white
+00:07 that means that they are either ignored or they're up to date in git,
+00:11 and if we right click on them, you can see that we have git operations,
+00:15 so hey, they must be tracked by git.
+00:17 Okay, so this is all good,
+00:19 now let's just go fool around a little bit,
+00:21 like let's suppose we want to have a function,
+00:23 I'll do it down here, let's say def show header, I'll put this down here,
+00:29 and say show header, okay, that's cool
+00:33 and then this download info that's fine,
+00:36 maybe you want to make this a function as well,
+00:38 we could refactor it later, and when we talk about that we will
+00:40 but let's say display results,
+00:43 we'll run a little cleanup on it, this is all good.
+00:49 Okay, so we can come over here and notice a few things,
+00:55 again, our program file turned blue, that means there were some changes
+00:58 we could go and see how those are different, like view the history here
+01:03 we could actually right click and say git
+01:07 and say compare with that and see the actual changes we've made
+01:12 and this stuff is added down here and things like this.
+01:16 So that's all well and good, but if you look carefully,
+01:19 there's actually more going on, so notice right here,
+01:22 there's a green line, so what does that mean?
+01:26 If we click it, it says basically these green lines here
+01:31 show you what has changed in this source file
+01:34 compared to the git repository version
+01:38 so we can jump from change the change,
+01:41 we can revert it, roll it back or we could show the difference.
+01:44 So notice we're just showing the difference of this little bit,
+01:48 maybe this is a thousand line file, we're not seeing a thousand lines,
+01:51 we're just seeing this little bit that changed in that section.
+01:56 You come down here, same thing, show me the difference,
+01:59 look we used to say this, now we say—
+02:02 just the way it lined up it looks not that different, but it is kind of different.
+02:05 And we can even navigate, this is kind of useless in this little file here
+02:09 but shows the next deference, shows the previous difference.
+02:12 Down here, notice that we have another thing
+02:16 we basically deleted that line as far as it's concerned
+02:21 and it's just not a great diff comparison that really landed up there,
+02:24 but you can see these little arrows mean this section was deleted
+02:28 as far as like the diff is concerned.
+02:30 Now if we go over here and we commit these
+02:33 we don't have to push them to the repository,
+02:35 I'll move it over to the side,
+02:37 I'll call it factored into methods something like that,
+02:42 so I'm going to commit it not actually push it.
+02:45 Of course these changes are in our local git repo but not pushed yet
+02:51 so no one else will see them.
+02:53 So we can come over here to git and say git push.
+02:57 If you want to do that hotkey, shift CMD K.
+03:00 So we're going to push that one change in
+03:03 and— wait for it, now we push those change up to github
+03:09 and we actually have a nice factored version there.
+03:11 So, you can see this editor actually has a bunch of really cool features
+03:15 in that it will show you exactly what has changed
+03:19 by looking at the gutter or whatever they call it, thing on left there.
+03:24 So, super, super nice, the integration built in the editor.

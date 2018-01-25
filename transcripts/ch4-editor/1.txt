@@ -1,0 +1,12 @@
+00:01 It's time to talk about the editor.
+00:04 That's super important because what is PyCharm
+00:06 other than a super amazing and feature rich tool for writing code.
+00:12 Now, we're going to focus on writing Python code,
+00:14 actually this editor works awesome on Javascript and HTML and CSS
+00:19 and all sorts of other things.
+00:21 But mostly we're going to focus on Python
+00:23 because, well it's PyCharm, you guys are Python developers.
+00:26 You'll see that the editor in PyCharm is really rich
+00:29 and there's a ton of little subtle things that it does for us
+00:33 that are amazing, but not immediately obvious,
+00:36 so let's go discover them.

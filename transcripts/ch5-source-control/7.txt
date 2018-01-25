@@ -1,0 +1,74 @@
+00:01 Now you know how to use a proper source control system like git,
+00:04 it will be not super different for Mercurial or for Subversion or any of those other things.
+00:09 But— you don't always check in every change
+00:12 and sometimes you really would like better more fine grained accuracy
+00:19 for the changes that have happened to your files.
+00:21 Like, if you make a change and then you decide to throw that change away
+00:25 or you keep going and you end up breaking something
+00:28 you are like oh, I wish I had checked it in, like 30 minutes ago
+00:31 and then I could roll it back to there, but I got a roll it farther back
+00:35 because that's all the history that I have in my source control.
+00:38 Git solves this little bit with local check ins
+00:41 and you can have more fine grained,
+00:43 but still I contend that there are times when you are like
+00:45 I really wish I had a version of this, and you don't.
+00:48 So, PyCharm has this amazing thing called local history
+00:51 so independent of whether we were in a git repository
+00:55 or had any source control configured at all,
+00:58 local history is always active
+00:59 and you come down here and go to a particular file and view local history,
+01:03 there's not a whole lot to it,
+01:05 we could put a label or we could just show the history, watch this.
+01:08 Here is the life-cycle of this program.
+01:11 Back here, we had zero files
+01:16 and then we created this one file here, right,
+01:21 and then we made some changes,
+01:25 so if you click through, it just shows you
+01:28 all the various changes that happen, now it is starting to get interesting.
+01:32 l'll show you these files, how they've changed over time,
+01:36 these are identical, here is another one,
+01:39 okay, so basically you get the various changes that you've seen over time.
+01:45 Now, there's a bunch of changes that have actually nothing to do with this program.py
+01:49 so I'll just stay here, but this is really, really awesome
+01:53 we've got local tracking of any change,
+01:56 and also it shows you where we checked in the other changes.
+02:00 Let's go and make some more changes
+02:02 let's suppose first I'll put a label
+02:05 so this will be factored, saved, right
+02:09 you don't have to put labels but you can.
+02:11 So let's go over here and let's import random
+02:15 and let's go and say start=random.randint
+02:23 and we're going to start somewhere between 90 and 110
+02:28 and we're going to end by going to let's say 130 140
+02:39 so we'll come down here and instead we're going to say start
+02:42 and let me put a save, end
+02:45 and maybe let's put one line here again.
+02:50 So let's just run it and see what happens
+02:53 all right it looks like it went from
+02:56 way back 105 to 137 was what it came up with the end.
+03:00 So that seems totally reasonable.
+03:03 Now let's go back to this local history one more time.
+03:06 Now we can see some more meaningful changes
+03:08 so over here, we tagged it,
+03:10 notice when we do a commit it actually tags it automatically
+03:13 but over here we get that as well.
+03:16 Now you can see we factored, we sort of labeled and we saved it
+03:21 and we made one change we came down here like this
+03:25 and we said okay, we'll go and have this version
+03:29 and then, we can get this one, this is where we added that new line there,
+03:33 so you can see, we started out with no randomness
+03:38 and then we added that random,
+03:40 I think this def is the current one.
+03:43 So this is what it was before
+03:46 and then we go up here and then we added that new line down there.
+03:51 So things kind of moved around a little bit
+03:54 but this is really, really helpful, I would say at least one time,
+03:58 I badly lost some file that I thought was in source control
+04:02 and for some reason it wasn't, I deleted it and then I needed it back actually,
+04:07 it turns  out I was able to use local history to get it back exactly,
+04:10 so I don't use this often but when I do use it it's like really, really hopeful.
+04:15 It's also great if you're working in a project that doesn't have source control set up yet,
+04:19 this is kind of like your wimpy source control,
+04:22 super, super cool stuff, you can even do a little revert here.
+04:26 Okay, so local history— definitely, definitely check it out
+04:31 it's a parallel, independent version control that only lives in your project files.

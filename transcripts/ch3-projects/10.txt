@@ -1,0 +1,57 @@
+00:02 We've seen that PyCharm understands virtual environments
+00:04 in several ways and that's really excellent.
+00:09 Let's jump back over there and look at that in more detail.
+00:11 Here we are in our snake_bnb knock off thing,
+00:16 and if we go and look at the run configuration,
+00:20 you can see that we have set a project default interpreter
+00:24 to be a virtual environment contained within this project,
+00:29 remember at the beginning, we checked this out from github.
+00:31 We created this and then set it up
+00:34 and you can always tell what the default is
+00:37 by opening up this little terminal window
+00:39 and you'll see just like if you had done it in the terminal
+00:41 it's already activated the the . /env/bin/activate
+00:49 or /bin versus scripts in Windows
+00:52 but it's as if we'd already activated it
+00:55 and we can change that in run configuration up there
+00:59 but let's see how we set the default,
+01:02 if you don't know what it is you just set interpreter and it will go and find it,
+01:05 so we cancel that out so you can see that it's down here under project interpreter
+01:10 and notice, we have this visual GUI pip type thing
+01:15 so pip is for managing packages and there it is,
+01:18 and notice this one is actually up to date
+01:22 and there's sort of latest version of all the versions we have here
+01:25 because I just created it, but if I grab let's say this one,
+01:30 this is all the stuff basically in my standard library,
+01:34 and notice a bunch of them are out of date
+01:36 so for example Boto 3 is out of date and I can click here and update it
+01:40 if I want to find other stuff say I'm looking for more things about AWS,
+01:44 so I'm looking for the AWS CLI, actually I have no idea what that does
+01:48 but we can find all this things, there's AWS google auth,
+01:51 so acquire AWS STS credentials for AWS app single sign on
+01:57 very cool, you can go and check that out and you can install it
+02:00 and it would be just as if you had typed pip aws-google-auth install-that
+02:07 and you could even pin it to a particular version down here
+02:10 if you want say like the version 10
+02:13 so this is super nice, you can manage them, you can create new ones,
+02:17 I find this to be super helpful when I was brand new
+02:21 and I don't use it that much,
+02:23 now that I'm very experienced running pip on the command line
+02:26 and manage environments that way,
+02:28 but this is a really good way to get started
+02:30 and slowly probably move away from that,
+02:33 so we can upgrade things, we can even uninstall stuff
+02:36 if we don't want arrow anymore— hit the minus.
+02:39 So that's great, you can see that we can work with these existing environments,
+02:42 this one that we said is the default one or the other one,
+02:45 but we can also go and browse if you don't see it,
+02:47 add a remote one, or we can create a virtual environment.
+02:51 Now, I don't have it installed on this user profile
+02:55 notice it's my screen cast account, that's all cleaned up
+02:57 but on my main user account I also have Anaconda installed
+03:01 and if you have Anaconda installed
+03:04 you'll see it create a Conda environment as another option here.
+03:07 So if we want to create a new virtual environment
+03:10 we just come over here and check of all the options
+03:13 whether you want to inherit the global site packages and just add to it
+03:15 or make this totally isolated, it's your pick, I go with totally isolated.

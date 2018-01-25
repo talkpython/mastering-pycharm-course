@@ -1,0 +1,58 @@
+00:00 Let's return to our Wizard attack here
+00:02 notice there's no real documentation
+00:05 there's a few things inferred by PyCharm,
+00:07 and that's pretty sweet that it does that
+00:09 but what if we wanted real documentation
+00:11 like what does it return the bool for
+00:14 if it was successfully able to attack the Creature or if it defeated the Creature
+00:18 or you know what does that even mean right,
+00:21 so we would like to give it more information
+00:23 of what types of Creatures can it take and so on.
+00:26 So, let's go over there, CMD B be or you know go to definition,
+00:30 so we'll come over here and in Python
+00:33 the way we create documentation for a method
+00:36 is we put the doc string at the beginning
+00:39 and you say triple quote " " ", type some stuff and a certain format that describes it
+00:45 and then you put another triple quote " " ", and that string is what's called a doc string.
+00:51 Well watch what happens if I triple type quote, one, two, three
+00:56 that's cool it auto matches the closing quote;
+01:00 if I hit enter— boom, look at that, it tells me here is my parameter,
+01:04 here is a return value, so I'll say
+01:06 the attack method will all attack and potentially kill
+01:13 and the return value is going to be this bool
+01:21 and it's going to be true if Wizard wins, false if they are defeated.
+01:31 And then this Creature, this will be a Creature object
+01:38 which can fight another Creature,
+01:47 Creatures can attack each other in this thing.
+01:50 We could even come down here and say type Creature
+01:53 and say it's a Creature one can spell, you can say it like this right
+01:58 again spelling is hard.
+02:00 So we'll come over here and we'll even see this type so that's pretty cool as well.
+02:03 Now let's just switch back, over here
+02:06 and I'll hit F1 to put my help and it says here's the documentation,
+02:11 look, notice this part about well it needs to have these features, it's gone,
+02:15 it's like that's a Creature, straight up,
+02:17 your Wizard, it's a Creature, you fight and get a bool in.
+02:20 And it says the attack method will attack and potentially kill the Creature
+02:25 and here is the Creature, which happens to be a Creature
+02:30 we could see what to do with that in a second,
+02:33 creature object we can find another one
+02:36 and here the return value is true if the Wizard wins false if it's defeated
+02:39 so that little bit of help, remember what did I type,
+02:42 I basically came over here and typed triple quote enter,
+02:47 boom, and then just filled out the details, like so.
+02:50 And we get this nice Python style documentation
+02:55 and then we can view it over here and you can even navigate
+02:58 so like if the creature had a documentation, well it doesn't
+03:01 but you know, let's go and give the creature documentation.
+03:04 We'll say same thing triple quote, the base type for all combative Creatures
+03:12 something like that, now let's try this trick, one more time.
+03:16 Okay, here's our Creature, we click on this,
+03:19 boom, the base type for all combative Creatures.
+03:21 That's super nice, right, so you'll see
+03:23 both quickly we can discover the documentation for built-in standard library things
+03:28 like random.choice or string.format
+03:32 for external packages that have this defined or even within our own type
+03:36 and when we are doing with our own types
+03:39 PyCharm gives us tons of support
+03:41 on creating the right syntax for generating that documentation.

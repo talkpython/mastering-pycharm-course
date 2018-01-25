@@ -1,0 +1,40 @@
+00:01 Let's talk about discovering features for a second
+00:03 or discovering how to run a particular feature.
+00:05 So I'm going to show you the operating system level way
+00:10 which only works on Mac,
+00:12 and then I am going to show you the way that's built into PyCharm
+00:14 that just works on any version of PyCharm, so all the platforms.
+00:18 One of the things that's great about Mac OS,
+00:21 I've done ton of Windows and Linux as well and I like them both,
+00:26 but this feature is really fantastic,
+00:28 so you come up here into the help and you say
+00:31 I want to know how to— notice that this has little format error,
+00:35 this has a squiggly because of that space,
+00:37 we should, noticing these pep 8 violations,
+00:42 these formatting violations here as well
+00:44 and what we should do is format that code.
+00:46 But maybe I forgot how to do it like I don't know,
+00:49 somewhere maybe under code I don't know.
+00:52 So, that doesn't matter, you can just quickly come up here and type format,
+00:55 reformat rather, that doesn't search sub strings,
+00:58 and it shows you hey right here is what you do
+01:01 and actually CMD ALT L with my current key bindings is a way to do it.
+01:05 What if I want to know how to run, go over here and say run,
+01:09 there's a couple of options, this will just like randomly run stuff,
+01:12 this will run the program like the one you just saw.
+01:15 So, those are really cool ways inside a Mac OS,
+01:20 really for any reasonable application,
+01:23 I don't know how to save things— here is how I save things
+01:25 I want to go into power saving mode etc,
+01:28 but PyCharm itself has a way to do that as well,
+01:31 I can say CMD shift A or on the other platforms CTRL shift A I believe,
+01:36 you can come over here and you type things like reformat code
+01:39 and it will tell you it's under code formatting,
+01:42 actually, if I just hit enter, boom, all those problems go away, beautiful.
+01:46 What if I want to know how to run— I'll just run debug, there goes my code again;
+01:51 what if I want to take this and make it into a function,
+01:55 I could say I want to refactor this and I could turn into a method
+02:03 and it will tell me how to do that.
+02:06 We'll talk more about refactoring later, it's awesome
+02:08 but anything you want to do, CTRL shift A
+02:10 or CMD shift A, and a little bit of typing is all you need.

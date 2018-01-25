@@ -1,0 +1,43 @@
+00:02 Now this final refactoring technique I want to talk about
+00:05 is a little bit of an advanced feature
+00:09 and it's not entirely a perfect match for what we're doing here.
+00:12 So we just have a bunch of files hanging around in this wizard directory
+00:19 and it's just because of the working directory, they all find each other.
+00:23 If we had created actual package,
+00:26 we would have done things a little bit differently.
+00:29 Now, if you haven't created a package,
+00:31 what makes a thing a package is really super simple
+00:34 and Python uses this to behave differently,
+00:37 so if we had a file that was __init__.py and it was empty,
+00:42 I am going to say no for now, I don't really want to do it,
+00:47 this is sort of the main entry point to the package
+00:50 and it can be empty, it doesn't have to do anything,
+00:52 but the existence of this file in a directory
+00:56 is what defines a Python package
+00:58 and then you can put implementation details here.
+01:00 That's different than say a module
+01:03 and you get many different subfiles and whatnot.
+01:05 It is different than a module I say actors which contains creatures
+01:08 but it's just a single file, not a group.
+01:11 So, what we can do is we can say
+01:15 if we like I can convert actors into a package,
+01:19 So instead of being a single Python file,
+01:22 it's a directory with __init__
+01:24 and potentially many other files, all within that directory.
+01:29 So, watch this,
+01:32 so if we operate on a particular file
+01:36 rather than on parts of code or whatever,
+01:40 we could say convert to Python package because it's a module,
+01:44 and what it does is now it creates a folder called actors,
+01:47 the folder is the name of the module,
+01:49 and the __init__ can, it doesn't have to, but can contain the implementation.
+01:54 So you can see the actors.py is gone, the implementation is all put here
+02:00 but we could create a bunch of subfiles, import them here,
+02:03 break it apart and we probably
+02:05 should create a creature class, a wizard class and so on.
+02:08 So that's pretty awesome, if we decide we have this situation,
+02:13 we'd really just like a file, we could do it in reverse;
+02:16 go back from the directory with the __init__ and the content in there
+02:22 to just a simple single file actors.py,
+02:25 the editor on the right didn't change,
+02:27 but the name of the file and structure and what it means to Python did.

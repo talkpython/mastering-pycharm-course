@@ -1,0 +1,140 @@
+00:03 If you're new to PyCharm, this picture is probably super overwhelming,
+00:07 there's so many windows and so many things happening in those windows,
+00:12 kind of obscured in the middle, there some kind of editor
+00:15 that probably we know what it is, and there are all these project stuff,
+00:17 and if you were to right click on something in the project,
+00:20 it would fill the screen with options;
+00:22 down at the bottom we have 5 or 6 tool windows
+00:25 on the right we have database stuff, we have these configurations,
+00:28 and that doesn't even touch on things like using Vagrant
+00:31 to manage virtual machines, oh my goodness.
+00:34 So, there's just so many things to learn in order to be effective with PyCharm
+00:39 and IDEs in general, this is not specific to PyCharm,
+00:42 these tools that do tons of stuff, they're really hard to remember
+00:46 all the things that you can do with them
+00:48 and if you don't use them to full advantage,
+00:51 then they're not nearly as valuable to you as maybe just a simple editor,
+00:55 so you have to really commit to learning all of these little features
+01:00 at least let's say 80%. How do you do it?
+01:02 How do you go through and you learn all of these things?
+01:05 I'm going to give you a concrete set of techniques
+01:08 that more or less I use for myself and you can use as well.
+01:12 It comes down to— you need to discover what the features are
+01:16 and well done, you're taking this course,
+01:19 so you're going to discover a whole bunch of them.
+01:21 Even outside of this course, you need to discover what the features are
+01:25 and does that feature have a hotkey
+01:28 and under what context can use it, things like this.
+01:31 And then, more importantly, more challengingly,
+01:34 you need to recall actually, "Oh yeah, there was this feature,
+01:37 and it was awesome and here's the hockey,"
+01:40 like how do I remember to do that? You need to practice it.
+01:43 I'm going to propose a couple of things you can do, take it or leave it,
+01:46 but I think this will help you a lot.
+01:48 So, three things— there is going to be a cheat sheet that you can use,
+01:52 that has most of the common features as hotkeys,
+01:57 so you can figure out what those features are,
+02:00 how you want to use them and so on.
+02:02 Throughout this course, to help you understand
+02:05 the hotkeys I'm using while I'm using the tool
+02:07 I am going to use something called presentation assistant
+02:10 but presentation assistant is not just good for me, it's good for you,
+02:13 you'll see as you interact with PyCharm, it will tell you what that command was
+02:16 and what the hotkeys that would trigger it would be, which is really awesome,
+02:21 so you'll be able to use that to learn it throughout this course
+02:24 but it will always remind you as you interact with PyCharm,
+02:27 "Oh yeah, there is actually a keystroke I could do
+02:30 to do the thing, just click on it in the menu."
+02:32 And finally, it comes down to sticky notes.
+02:35 So discover really comes down to cheat sheet
+02:38 and a little bit of presentation assistant,
+02:40 I'd say presentation assistant more is in the recall, right
+02:42 you know there's a thing, you click on it,
+02:44 "Oh yeah, there's the command, there's a hotkey,"
+02:46 and then sticky note, so here's what I propose you do:
+02:49 I'll show you the cheap sheet in just a second,
+02:52 you go to the cheat sheet or you write down things from this course
+02:55 that you really want to try and you really want to make sure you learn
+02:57 and you get a stack of sticky notes, and you write down one action,
+03:01 one hotkey, one thing that you want to learn on a single sheet
+03:07 and you write down as many as you want, 20, 50, 100 whatever it is.
+03:10 And every week, you put one of those on your monitor,
+03:14 in the corner of your monitor.
+03:17 Today, I'm going to make sure I use this hot key,
+03:19 I use this technique when I am say running unit tests,
+03:23 or whatever it is that you're trying to practice.
+03:25 Maybe put a couple and pick one off every day, I don't know.
+03:28 But write them now and put them up
+03:30 and make a concerted effort to practice and practice and practice.
+03:35 If you just do it for a few days it will totally stick,
+03:37 especially with things like presentation assistant to bring it back.
+03:40 So let's go see this cheat sheet.
+03:42 First of all, we have a github repository for the course,
+03:44 here it is github.com/mikeckennedy/mastering-pycharm-course
+03:49 and it will probably look different, because throughout this course
+03:52 I'm going to put everything I write and all the things I dig up for you,
+03:55 I'm going to put them in here, for you.
+03:58 So there will be more stuff by the time I get through recording this course,
+04:02 but right now, we go to the beginning you can see on the readme
+04:05 there's a JetBrains PyCharm cheat sheet and they call it a reference card.
+04:09 If we click this, you can see there is tons of stuff here
+04:16 so notice that there's a Windows and Linux version
+04:21 and there is a Mac version, pick your version,
+04:24 but they're just basically the corresponding hotkeys for that OS.
+04:28 There's a bunch of stuff to do with editing,
+04:31 like show completion, show the auto complete window when it's not there
+04:33 so control space, we'll use that a ton.
+04:36 Command p, show the parameters,
+04:39 I'm in a method and I forgot what the arguments are,
+04:42 hit command p and it will tell you exactly what goes where
+04:44 and what type they are and so on.
+04:46 All of these are amazing features, we'll talk about them
+04:49 but you've got to somehow remember these,
+04:51 there are tons, I don't know how many are here
+04:54 but there is probably at least 50 maybe 80 of them, I'm not sure
+04:58 but there's a lot of things here.
+05:00 So what I'm proposing is you write one of these down,
+05:02 you pick these off and you basically put them on a sticky note
+05:05 and put them up on your monitor
+05:07 and you make a concerted effort to use that for a couple of days,
+05:11 throw that sticky sheet away, get the next one and just keep going with it.
+05:15 Eventually, they will all totally stick.
+05:17 This is really good for the discovery on what you can do,
+05:20 "Oh look, there's a hotkey to show the parameter info,
+05:23 cool, maybe I'll start trying to play with that."
+05:25 The other thing is— this presentation assistant,
+05:29 so let's come back here to snake_bnb, it doesn't really matter
+05:32 and we'll just go down here, let's go here.
+05:35 Up here into the code window, there's a reformat code
+05:38 and it does technically have the command here,
+05:41 alright, but if I click reformat code, notice down here
+05:44 reformat code here's the hotkey on Mac and here it is on Windows.
+05:47 Also, you'll see me just hit the hotkey and it will show reformat code
+05:52 or maybe I want to go to the definition of let's say a booking,
+05:56 I could hit command b, how do I know—
+05:59 well, in the beginning, I would use something right click and
+06:03 let's see, there's go to over here go to declaration, I click this
+06:08 and oh, right here, presentation assistant is showing me.
+06:11 So this is the plugin you can get for PyCharm,
+06:13 I'll show you real quick where you can get it,
+06:16 we'll talk more about these at the end, but if you go over here to the settings,
+06:19 you just type plugins and you click this browse repositories,
+06:24 and you type presentation assistant, you'll find it right there,
+06:29 you can install it, it's free, easy to use.
+06:32 Basically it shows these pop-ups every time you do an action,
+06:35 whether you do it from here, which would show what the menu option is
+06:40 as well as what the hotkey is,
+06:44 so no matter whether you use the menu, a hotkey, a toolbar button
+06:47 it's always showing you what the name of that feature is
+06:50 and basically how to discover it, and what the hotkey,
+06:52 which is really important to be effective, what that is.
+06:56 So, definitely install the presentation assistant,
+06:58 I use it all the time, it's good for me,
+07:01 but it's also good for any time I am doing a presentation course,
+07:04 but I think it's actually good for learning.
+07:07 So back here, use the cheat sheet to discover what is available,
+07:10 use presentation assistant to help you recall
+07:13 that those features are there and what the hotkeys are
+07:15 and make some sticky notes for the things that really seem valuable to you
+07:18 and put it up and make a concerted effort to practice
+07:21 that thing that's on your monitor for that day or that week.

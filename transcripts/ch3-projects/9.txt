@@ -1,0 +1,17 @@
+00:01 So you've seen our editor is also
+00:04 a rich navigation surface really, so anything up here,
+00:08 like for example this purchase where we have our cursor,
+00:11 if we want to know where that is, what defines it, what files are in
+00:15 all we have to do is hit command b and out it comes,
+00:19 we can see look it was in data_types.py
+00:23 and it's this class defined exactly like this,
+00:26 so anything you want you can either come along
+00:29 and you can use the hotkey command b or control b
+00:32 or you can hold down control or command and then click with the mouse
+00:37 and just navigate to anything that doesn't restrict to your code either
+00:41 this could be in this case the code we wrote, this data types thing
+00:45 or it could be an external package
+00:47 or it could be something built into the standard library there,
+00:50 so you can navigate to almost anything
+00:52 and you want to really make use of this
+00:54 because it really helps you find the code, understand the code super quickly.

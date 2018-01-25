@@ -1,0 +1,25 @@
+00:01 We saw you can search everywhere,
+00:03 just by double clicking shift or double typing shift quickly,
+00:06 I found too quickly doesn't work, too slowly doesn't work,
+00:10 you'll figure out what the right speed for you is there,
+00:12 but basically double press shift and you'll get this dialogue
+00:15 which comes up at first if you type nothing with just your recent files
+00:20 which is as you saw, way cooler than maybe just a recent file
+00:24 it takes you exactly back to the way
+00:27 you were working on it which is super cool,
+00:29 but you're probably actually looking for something
+00:31 I do navigate the recent files quite a bit with that double shift
+00:34 but you're probably looking for something
+00:37 so you type like load if we're looking for that
+00:39 and you can see all the different places that load appears
+00:42 and if you double check the include non project items
+00:45 if you just check that with check box,
+00:47 you can see down into the symbols
+00:49 it's pulling things from like Json and Pickle and Marshall
+00:51 all the built-ins in Python, so it can look not just inside
+00:58 say your source files, but actually the packages and the standard library
+01:02 that you're using in your version of Python.
+01:05 So that will actually let you navigate
+01:07 to the internals of the libraries you depend upon, which is great
+01:10 and if you don't like the double shift thing,
+01:13 just click that icon and you'll get the same thing.

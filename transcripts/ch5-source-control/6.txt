@@ -1,0 +1,49 @@
+00:01 We've made some changes in source control, that was fun,
+00:04 but really, let's go through the work flow
+00:06 of creating another branch and checking it out.
+00:10 So, if we go down here, this is our branching area,
+00:13 and we click on it, we could go and create a new branch
+00:17 or we could check out by a particular tag or revision;
+00:20 but probably what we are going to work with is
+00:23 notice our local branch is here.
+00:25 Right now, we just have the original one,
+00:27 from when we created our first repository and checked it out on github,
+00:32 but since then, somebody— me, has gone over to our repository,
+00:35 I did this at the beginning of this chapter,
+00:38 and I just in github created another branch here.
+00:41 So when I did that, it shows up in this list
+00:44 and I could even favor it and whatnot.
+00:47 So let's suppose that I want to make some changes on this.
+00:53 We can go over here and we can check it out,
+00:55 if we click on it, it gives us a couple options,
+00:57 check it out as a new branch, and notice it's not local yet
+00:59 so that kind of has to create it locally first,
+01:02 so we'll call the same thing, so we don't go crazy;
+01:05 great, now we have kind of nothing in here,
+01:08 so let's go in add sample,
+01:12 we'll just print this is the other branch,
+01:16 I'll save this and let's go ahead and check that in.
+01:21 It looks good, other branch,
+01:24
+01:30 off it goes and notice over here, if I make this little bigger
+01:33 we're going to push from our local branch to our origin,
+01:36 same name, so let's do that.
+01:39 This should turn white up here, when it is done.
+01:46 We pushed it, now if we look back on github
+01:51 we go here and notice, somebody just did a check into this feature branch,
+01:55 so right now we're on master, you can see our demo projects,
+01:58 let's go in here, to the podcast that's the one we're playing with,
+02:02 notice these files, so let's switch to our other branch,
+02:05 and then there is sample, right.
+02:07 So we're making these changes exactly as you guys would expect.
+02:13 So we can come over here and switch between these branches
+02:16 if you want to go back, like okay, great let's just go back to the way it was,
+02:19 we're back, it has the option to restore, it's called a workspace
+02:24 and it will remember some of your settings
+02:26 but we're not going to mess with that,
+02:28 you can tell it to stop showing you that if you care.
+02:30 So now we're back to this code,
+02:32 so we can toggle between our branches like so.
+02:35 I can tell it don't show me that,
+02:40 so this lets you quickly, quickly see the branch you're working on
+02:46 and switch between it, so that's really, really cool.

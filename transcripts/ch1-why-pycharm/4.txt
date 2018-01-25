@@ -1,0 +1,120 @@
+00:02 Let's expand on this idea of why an IDE
+00:05 generally makes developers much more productive.
+00:10 I'm going to give you 12 reasons why I think that's the case.
+00:13 First of all, the entire project, all of the files and all of the different languages
+00:19 are brought together in an IDE like PyCharm.
+00:22 We could be working on a web application,
+00:25 it could have a Javascript file and in that Javascript file,
+00:28 there might be some functions or even classes
+00:30 that we're going to use in say a script block in our Chamelon templates,
+00:35 and PyCharm knows about all those different things,
+00:39 it can give you a completion, even re-factoring help
+00:42 across all these different languages, across hundreds of Python files,
+00:46 across different languages, it's really great.
+00:49 So this ability to understand the whole project, not just a single file,
+00:53 as not just keywords, but actually as an abstract syntax tree
+00:58 understanding the structure of all these different pieces of code
+01:00 and putting them together,
+01:03 this is super important and allows you to write small code
+01:05 and navigate between them, between different files
+01:08 instead of jamming everything into one huge Python file.
+01:12 That leads to really high developer productivity
+01:15 if you can navigate and understand code really well,
+01:20 you type something. and then boom,
+01:23 here's a list of all the things that it does
+01:25 even if it happens to be defined somewhere else
+01:28 or somewhere not entirely clear where it comes from
+01:30 that is super helpful, so you'll see the IDE really helps you write faster code
+01:35 by leading to better understanding of the structure of the code.
+01:39 I kind of touched on this little bit, but you'll have smaller files
+01:44 which means fewer merge conflicts
+01:48 it's easier to know like over here, the purpose of this file is
+01:52 to do this one or two things, not jam it all together,
+01:56 so I think the fact that we can navigate and understand
+01:59 across these files really well is super important.
+02:02 In PyCharm you have this concept of run configuration
+02:05 so for example, on the project that runs the training website
+02:09 it has, of course, a configuration that will run the Pyramid web application
+02:14 that starts up, that is the website.
+02:17 It also has unit tests, that it will run,
+02:20 it can do code coverage and things like that,
+02:22 that's another configuration that it knows about.
+02:25 There's a bunch of little utility scripts and stuff
+02:29 that do various things like back up data or transform data
+02:31 or things like this in the web application,
+02:35 and those have their own configurations,
+02:38 maybe with builtin command line arguments already passed to them
+02:41 so this ability to configure all of these different ways to run
+02:43 and analyze your code are really powerful.
+02:46 Because PyCharm understands the whole project,
+02:49 it can re-factor across a whole bunch of files
+02:53 and re-factor even things like docstrings and comments,
+02:56 if I rename a function and there's a comment that talks about the function name,
+02:59 I can have it rename that function name in the comment, that's really cool.
+03:03 Similarly, because it understands everything
+03:05 it gives you much more realistic and complete autocomplete or intellisense
+03:10 that is try to go call a function, it goes boom,
+03:13 here's what all the functions that are available say on this class,
+03:16 or for this given function, here's what the arguments are,
+03:20 this one takes a thing called URL and that's a string,
+03:24 it takes a date and that's a datetime, something like this.
+03:27 It has good understanding of virtual environments,
+03:30 so we can create a number of different virtual environments
+03:33 tie these to our run configurations
+03:36 and have clean, reproducible isolated applications
+03:40 every time we open up our project to make it go.
+03:44 There is a really nice package management UI
+03:47 so this is like pip, but there's also a UI version
+03:50 it shows you all the various versions of what you have,
+03:52 it will show you whether they're up to date or if there is an update for it,
+03:56 it'll let you search for things that are related to what you're doing.
+03:59 I find I don't use that that much these days,
+04:03 because I am pretty comfortable with pip and just finding things,
+04:06 but when I was new I found that really helpful
+04:09 still every now and then it's kind of nice to just go pull it up
+04:11 and search through what's available.
+04:13 One of the really great things with the PyCharm is
+04:15 that it has, there is probably an official term for it
+04:17 but I call these :helper fixes", it's a little light bulb that'll come up saying
+04:19 "You know, you called random.choice, but you didn't import random at the top,
+04:24 so your code is going to fail, but don't worry,
+04:27 I know that if I put import random at the top, then your code is going to run,
+04:32 so just hit a key stroke and I'll fix it for you."
+04:35 There is all these little fixes like this,
+04:37 like, "You're trying to call this function on a module, it doesn't exist,
+04:40 would you like me to write the function for you,
+04:42 and then you go fill out the details?"
+04:45 Or, "I see that you are using some external library in a file
+04:49 but it's not in your requirements.txt, shall I add it?"
+04:52 All these cool little "helper fixes" are super awesome
+04:55 even if you know what you're doing,
+04:57 the fact that you don't have to spend time thinking about it
+04:59 it's just a single keystroke as you type
+05:02 means you can stay in flow and keep on writing.
+05:04 All right, great, source code integration, right,
+05:07 get github and various other source control systems
+05:11 as we'll see when we get into that,
+05:13 this is really great if you don't want to leave your environment
+05:15 to just do source control you have a visual source control as we'll see,
+05:19 in the editor, in the project space all sorts of stuff.
+05:22 The database tooling is super cool in PyCharm,
+05:26 so it's really easy to understand various relational databases
+05:30 and if you're even working with something like SQLAlchemy
+05:33 that generates the database, there is still really great tools
+05:36 to help you understand and explore
+05:39 and even change the database once the table is being created.
+05:42 We talked about package support, this is the ability to create new packages
+05:48 to create the setup infrastructure or scaffolding
+05:51 so that you can install and register your package and things like that.
+05:55 And finally, the unit testing component is really great
+05:58 if you're doing unit tests or even integration tests
+06:01 you can write either pytest or a regular unit test tests for those
+06:06 and then run them in PyCharm and get things
+06:09 like code coverage and all sorts of stuff.
+06:12 There is tons and tons more, and that's what we are going to cover in this course
+06:15 it's all the things that I haven't even talked about yet, including these, of course.
+06:19 So, why wouldn't you want all of this stuff at your fingertips?
+06:22 I honestly don't know, I think you probably do,
+06:25 that's why you're in this PyCharm class
+06:27 and we're going to talk about how you make all of these things sing,
+06:31 and do exactly what you want and way more.

@@ -1,0 +1,15 @@
+00:01 Now, before we get into the "meat" of the content of this course,
+00:04 I just want to point something out there real quick, about my motivations —
+00:07 this is not an infomercial or any form of paid content,
+00:10 I mean, I love Billy Mays as much as the next guy, but that's not what this is.
+00:13 I just really think that PyCharm is the best editor right now,
+00:18 for Python developers, for writing Python code,
+00:21 and I want to make sure that everyone out there who wants to be
+00:25 is as successful with it as they possibly can be.
+00:28 There wasn't a great course like this,
+00:30 so I decided I am making one for you guys.
+00:33 Maybe in the end I will do some sort promotional thing with JetBrains
+00:36 to help spread the word, but this, it was just me on my own creating this
+00:40 because I think this is an awesome editor
+00:42 and I want to help you guys be successful with it.
+00:45 Now, let's get on to the main bit of this course.

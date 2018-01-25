@@ -1,0 +1,51 @@
+00:01 Let's review accessing source control, specifically git from PyCharm.
+00:05 We saw that we can go to the vcs, version control system menu up here
+00:09 and depending on whether you already are in a repository
+00:13 or you are going to create a repository,
+00:16 you're going to check out something from repository,
+00:18 this looks a little bit different but this is the view you'll see most of the time
+00:22 because most of the time you'll be working in an active project.
+00:25 So you can see all of these features, tons and tons of git features here,
+00:29 stashing, annotation, comparing things and resetting them and so on,
+00:34 even creating a pull request, which is pretty awesome.
+00:37 So you might go here, but most of the time,
+00:40 I think you will be using the toolbars and hotkeys in the editor.
+00:43 If you look inside the editor up at the top,
+00:48 remember we have that group of four source control operations
+00:51 and down at the bottom, we also have stuff about the branching.
+00:54 So up here, we have our group of four, and down at the bottom we got that.
+00:58 We can click update, so this will get us the latest from source control,
+01:01 this is basically a git pull
+01:03 Over here, we'll do a commit, so this is like a local commit
+01:08 with the option to push but you don't have to, so we can do those,
+01:11 you saw there all sorts of features about running analysis
+01:14 and clean up on the code as it goes in.
+01:16 You can compare the current open file against what is in version control,
+01:21 and you can even revert it back, like one click,
+01:24 oh that didn't work throw it away.
+01:27 So, that's really nice to have up there and in fact,
+01:30 you'll see there is another place where version is usually kept as well,
+01:34 so when we get to local history you'll see that it doesn't entirely throw it away,
+01:38 but it does throw away in your git repository.
+01:41 If we look at the bottom, then this down here, the branching operations,
+01:45 and we'll come back and look at that in more detail in a separate video.
+01:48 So if we click update, we'll get something that looks like this,
+01:51 we can merge, we can re rebase,
+01:53 we can just do whatever the branch default is, which typically I believe is merge.
+01:58 And if we want to make a cleanup on our files
+02:01 like we got some working files or something, we can stash those locally.
+02:05 You can also say just keep these, remember what I said here
+02:08 and don't ever show me this again, just do it.
+02:11 If we want to commit, all right we push the commit button,
+02:15 here you can see we've made one change
+02:17 and we're going to push it back,
+02:19 it lets us select the files to check in, send a commit message,
+02:22 down at the bottom it shows you a more meaningful diff this time
+02:24 because the last time it was a new file so what did you see, right,
+02:27 this time it shows us the actual diff,
+02:29 and then we talked about all of the operations in the right,
+02:32 check of the to-do's, or rearrange the code, things like that.
+02:37 Then you push commit and it gives you a little drop down
+02:41 potentially for a commit and push, which is typically what I do.
+02:44 By the time I am committing, I'm usually ready
+02:46 to just send it off to the repository remotely anyway.

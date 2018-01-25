@@ -1,0 +1,44 @@
+00:01 In PyCharm you can pull up what they call quick documentation,
+00:04 these little pop ups that document the various pieces you're working with
+00:07 and this works for built-in types in the standard library
+00:10 or types that we create.
+00:12 So here are heroes wizard that we created,
+00:14 it derives from creatures, you can see at the top,
+00:16 and it has this method attack, and PyCharm is pretty smart,
+00:19 it tells you what the requirements of the creature object are and so on,
+00:23 but not much more than that.
+00:26 So, this could be better, right.
+00:28 We should write some docs,
+00:30 so if we go over here and we type " " " and then hit enter
+00:34 you'll see that it's going to actually generate this skeleton piece
+00:37 of the various elements we're going to enter for our documentation.
+00:42 Notice, you've got to be careful
+00:44 there needs to be a blank line between the param and the summary description,
+00:47 that's not obvious for what you have here, but it has to do that
+00:51 and then you can put things like what is the parameter,
+00:53 what does it mean, what is the return value
+00:55 you can also do colon type creature colon and give it a type there
+00:59 and that even tells PyCharm and other things
+01:01 what type that object is meant to be.
+01:03 So now, we've filled it out like this,
+01:07 the commands the wizard to attack a creature
+01:09 and then the creatures the opponent to battle and what not, right,
+01:13 so this is like a different description of the same thing
+01:15 that we just did in our demo
+01:18 and like I said, you can even use this type which is not proposed by PyCharm,
+01:22 but this will help things understand the type hierarchies
+01:25 if one is in place or like if you expect an integer
+01:28 or you expect a creature, whatever.
+01:30 And now if we get a quick documentation for our hero's attack
+01:34 we get a much better list here,
+01:37 at the bottom it commands the wizard to attack,
+01:39 the creature, it's a creature from that typesetting,
+01:41 the opponent in the battle and so on.
+01:44 I don't document all my methods, I feel like sometimes they are so simple
+01:47 that adding the documentation makes it less readable,
+01:51 but certain times these sort of major functions
+01:53 within your application documentations option, it's really awesome,
+01:57 especially if you are writing a package for public consumption,
+02:00 definitely the publicly exposed methods should be documented,
+02:03 and PyCharm helps you do that.
+02:05 So, now we have excellent documentation for even our own types.

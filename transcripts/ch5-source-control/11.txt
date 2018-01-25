@@ -1,0 +1,26 @@
+00:01 The final little tidbit of source control that I want to touch on is github gist.
+00:06 So github gists are not proper repositories
+00:09 but they're sort of tracked and managed individual files
+00:12 that demonstrate something interesting.
+00:14 You can use these to show off something, to share a cool technique
+00:18 or even ask for help like create a github gist
+00:21 maybe refer to it in stack overflow or somewhere in a forum, right.
+00:26 So it's not the whole repository, it's just one file.
+00:30 So we can actually do that from within PyCharm,
+00:32 let's suppose this little downloading service is so amazing I want to share it,
+00:37 hint— it's not, but let's suppose we want to share this,
+00:41 we go over here we can go to the very bottom
+00:45 and say either open it on github,
+00:47 which is just to view it on github, or create a gist.
+00:49 So I can say this is an amazing Talk Python title downloader thing,
+00:57 you can make it anonymous or make it public, keep it private
+01:02 so leave that just the way to is, I don't really care.
+01:06 Wait a second and boom— see how amazing this is, this is really amazing.
+01:14 And down here you can see this is the code that we wrote
+01:17 and it just automatically created a github gist,
+01:19 I could say yeah, pretty darn amazing.
+01:23 So we can comment on it, just all the standard git stuff that you do.
+01:30 So we could even come down here and star it,
+01:34 we can create additional revisions if we make changes, all that kind of stuff.
+01:38 So if it wasn't mine I think I could even fork it.
+01:41 All right, so super simple thing, create a github gist, but, pretty cool.

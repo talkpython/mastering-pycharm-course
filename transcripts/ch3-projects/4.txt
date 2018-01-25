@@ -1,0 +1,32 @@
+00:01 You've seen how to create new projects and open existing ones.
+00:04 For the new ones, we just click the create new project
+00:07 icon or button thing here and you get a list,
+00:10 what do you want a pure Python basically empty project,
+00:14 do you want a Pyramid web app,
+00:16 do you want a Google App Engine configured app or whatever.
+00:22 You pick the type here and later you'll see
+00:24 that we can actually install NoJs as an option
+00:26 for things like ElectronJs and those as well.
+00:29 So this is actually extensible through a plugin thing
+00:33 that we'll talk about at the end,
+00:35 but for now, these are sort of the default out of the box options.
+00:37 Just give it a name, select your Python interpreter and hit create and off you go.
+00:41 If you want to load an existing project,
+00:44 you can either go to the file menu and say open directory,
+00:47 click that thing, it says 'open,
+00:51 or if you're on a Mac, you can drag this onto there and it will open it.
+00:56 And basically, that'll come in as the project root, it'll discover all the files,
+01:00 you saw there is already a git repository in place,
+01:03 either with the new or the existing, it'll import that as well
+01:08 and automatically integrate source control.
+01:11 We'll talk way more about source control later,
+01:13 but it automatically sort of gets setup for you,
+01:16 it at least prompts you to click a button to set it up.
+01:19 The one thing that we're not doing here in this picture
+01:22 is creating the virtual environment
+01:24 inside the existing directory before we open it,
+01:27 so I'll show you how that goes in a later concept,
+01:29 but that's the way I like to get started,
+01:32 because every one of my applications has its own virtual directory
+01:35 so it's totally isolated with the right naming conventions
+01:39 that happens automatically in PyCharm.

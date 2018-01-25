@@ -1,0 +1,51 @@
+00:02 When we're in the editor, you can see a lot of cool features
+00:05 around basically the project structure and the editor itself.
+00:09 So, on the left over here in the Wizard battle
+00:11 you can see we have a bunch of different colors
+00:14 we have a new file which is green, it's created and basically staged in git
+00:18 so a git add but not in git commit, yet done on it
+00:22 actors is just up to date,
+00:24 we have this red one that is not added and not tracked
+00:28 it's just an untracked file lying around
+00:31 and then the blue one is the one we have open,
+00:33 this one has actually been changed so that's pretty cool,
+00:36 you also see the colors up here in the various navigation bars
+00:39 and you see them in code, right there.
+00:44 Notice that this first line, the one on line 77
+00:50 is like— I guess blue, I don't know what color is going to come out
+00:53 after all the video processing, but to me it's like a light blue
+00:55 and that means that line is changed, it's not a new line
+00:59 whereas the 81 to 85, those are totally new lines.
+01:05 So here is a new function whereas the one you've defeated all the creatures
+01:09 that actually changed a little bit, and we'll look into that next.
+01:12 So if we zoom in on that section
+01:15 notice we can click here on this little segment,
+01:19 this little in the gutter to say here's something that's changed
+01:22 and when we do, we get a diff, immediately there's a diff for the changed lines
+01:27 for the new lines there's nothing to say other than, hey this is new.
+01:30 So look here in this first line, it has what is actually current in the source
+01:36 but it highlights two exclamation marks,
+01:39 and then what's below where it says, "You defeated all the creatures, well done!"
+01:44 single exclamation mark, that's what the original was,
+01:48 and I wanted to add some enthusiasm
+01:50 so I added two more exclamation marks
+01:52 and that's what the change in this particular line was
+01:54 so you actually get a little inline diff which is really, really beautiful.
+01:57 Now, if we click in this section and this little toolbar thing
+02:02 you can see we can navigate the diff with the up and down arrows,
+02:06 take me to the next change, the previous change.
+02:08 If we click here, it will roll-back this change,
+02:11 so basically the top line will be replaced by the line in the red box
+02:16 because that's the original.
+02:18 We can open up the diff window, here it is actually not needed
+02:22 but if this was a more significant change
+02:24 or we wanted to look at the file as a whole— totally we could do that.
+02:28 Here we can actually copy the original
+02:30 so maybe we want to leave the code as it is
+02:32 but we want to copy the original and play with it somehow,
+02:35 not just to a straight rollback.
+02:37 I think this is an amazing feature,
+02:39 and you can avoid a lot of the actual source control diff merging type stuff
+02:43 and just use this little gutter thing and just open it up right here
+02:47 and look at the code and how it has changed,
+02:49 as you're going through it.

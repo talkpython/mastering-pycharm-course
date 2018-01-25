@@ -1,0 +1,14 @@
+00:01 One of the really nice features is
+00:03 you can use PyCharm no matter what operating system you use.
+00:06 If you use Windows, if you use Mac, if you use Ubuntu or some form of Linux,
+00:10 you can use PyCharm and it behaves more or less exactly the same way,
+00:15 the key bindings might be slightly different,
+00:17 command on Mac versus control on Windows or Linux, something like that,
+00:21 but generally, they're exactly the same.
+00:24 If you're working on teams, where different people have different platforms,
+00:28 or you just want to use it on both the platforms,
+00:32 it's cross-platform so you don't have to worry,
+00:35 you don't have to say, "Well, Visual Studio might be cool,
+00:39 but it only runs on Windows, so we're all getting Windows,"
+00:42 you don't have to do that kind of thing with PyCharm,
+00:44 which is very much in the Python ethos of running everywhere.

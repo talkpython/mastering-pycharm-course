@@ -1,0 +1,53 @@
+00:01 The code formatting fixes that we saw before,
+00:03 those were actually based on the coding style
+00:06 that we told PyCharm to follow,
+00:08 and chances are they were the default,
+00:11 but not everybody follows the default,
+00:13 and normally that's not really a big thing
+00:15 unless you're working in a team and you have version control
+00:19 and you both reformat a file,
+00:22 what are you going to get— you're going to at best get
+00:25 this file is changed, this line is changed, it was indented,
+00:28 this line is changed, it was unintended,
+00:30 this line is changed, it was indented, back and forth like the fighting
+00:33 every time somebody reformats a file,
+00:35 every difference in that formatting style is going to surface
+00:39 and show up as a difference.
+00:40 And in a worst-case scenario, these are going to be merge conflicts.
+00:45 This can be a super pain in the rear if you are working in a team.
+00:49 Luckily there is a fix for that,
+00:51 so if we go to preferences, go to code style
+00:54 and we'll just focus on PyCharm but notice
+00:56 we could do this for Haml or Javascript or whatever.
+00:58 Notice across the top, there are 6 tabs up there
+01:04 and each tab has a ton of options
+01:07 like for method call arguments, where do you align them if it's multi-line and so on.
+01:12 You can go through and you can configure all of these
+01:15 or you could import or export a file, so this is really cool
+01:19 so you could basically configure everyone on the team say,
+01:22 this is the style we're going to use, you configure it here,
+01:24 export it, everyone imports it.
+01:26 However, that's great, if you are on a single team
+01:29 like say work machine and we're only writing code against our one project;
+01:34 what if you are multiple teams, with different styles,
+01:36 what if you're contributing to an open source project that has one style
+01:39 and you're also working on your project at work
+01:42 which is a different style like that's a super pain, right.
+01:47 You can also fix that.
+01:49 Over here, you can say you can set up some styles
+01:52 and copy it to a project or export it to a file,
+01:55 so I could export this to a file and share with my team
+01:59 and give it a name and you could pick the style
+02:02 and things like that that's really great.
+02:04 You can also say for this particular project
+02:07 store the formatting settings in source control,
+02:10 so there'll be a hidden .idea folder with a few files that talk about the project,
+02:15 and one of those can describe things like
+02:19 what is the formatting style around method arguments
+02:22 so you can actually store the settings for the format inside the project
+02:26 so you open up different projects, run CMD alt L, reformat the file
+02:30 that might mean different things based on that particular projects style choices
+02:35 so here's a couple of things you can do
+02:37 in terms of helping team members end up on the same style page
+02:43 because as I outlined in the beginning,
+02:45 if you don't that makes version control a real pain.

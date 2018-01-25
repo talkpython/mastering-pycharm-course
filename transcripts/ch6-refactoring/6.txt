@@ -1,0 +1,39 @@
+00:01 Now let's go through our code again here,
+00:04 we've got our little main, it's going to print the headers and the game loop
+00:07 and now the real meat of this thing is the game loop.
+00:11 So let's suppose that for some reason we would like to take this method
+00:15 and put it into a separate module called like game core or something like that.
+00:21 So we can highlight this over here,
+00:24 and we'll say refactor move,
+00:29 this is great, we're going to move it from program.py and the Wizard
+00:33 to another module— what do you want to call it, let's call it game core, like this.
+00:39 And if we hit go, it's going to say we will create some dunder inits for you,
+00:46 it's treating this as if this was creating like a subpackage,
+00:52 we're not going to do that, so we can get rid of these,
+00:55 because they're not part of this, so packages make sense.
+00:59 But notice over here in game core, we now have game loop
+01:02 and we're creating our wizard, like so,
+01:05 it's trying to do this, but I don't think that's going to work
+01:10 because over here we're importing game loop
+01:13 and this is going to create an infinite loop,
+01:16 so it should have just really taken this with it.
+01:19 Okay, I think everything is good,
+01:21 It's not quite pep 8— there we go,
+01:25 so if we look at our program down here,
+01:27 we should have this and game loop— where does game loop come from now,
+01:32 it comes from game core, right,
+01:34 so now we've got just this one dedicated module
+01:36 for working with the game loop, and I think I kind of like that,
+01:39 let's run it again make sure everything hangs together.
+01:42 Awesome, a Tiger of level 12 has appeared, let's attack it.
+01:47 We've handily triumphed over it, how about the Frog,
+01:51 there's a Bat, let's fight that—
+01:54 ah yes, we've triumphed over it,
+01:57 that Dragon, it's a little more tricky,
+01:59 oh we have been defeated, the Wizard must rest.
+02:04 Okay, so it looks like our refactoring, all of this refractoring we've done,
+02:08 is truly a refactoring, in that we've changed our code,
+02:12 it has quite a bit of different structure than when I started this chapter,
+02:15 and yet, from the outside, it's indistinguishable
+02:18 in how it behaves and it runs and so on.
+02:21 That's awesome, that's refactoring.

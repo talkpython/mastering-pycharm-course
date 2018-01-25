@@ -1,0 +1,37 @@
+00:01 Here we are in our program, basically In our game loop
+00:04 and there's a few things I don't really like about it.
+00:06 One, notice up here, we're creating our creatures and then we have our player
+00:10 and down through here, our player is doing in attack,
+00:13 and then we have information, like output from the player.
+00:17 But, I'd like to call this hero, so we know exactly who this is,
+00:21 this is the hero of the game, not just player.
+00:24 So what we can do is we could go to the refactor menu
+00:27 or I like the hotkey, just CTRL T,
+00:30 say rename, and now I could just put hero
+00:35 and as you type it's just going to change everything.
+00:38 So it works like this, when you are renaming parameters
+00:41 and local variables and stuff,
+00:43 but let's bring in something else.
+00:45 Over here we have an attack method on the wizard class,
+00:47 let's suppose we want to rename that,
+00:50 and it could be used in a hundred locations across 20 files,
+00:53 it wouldn't matter, it would totally work.
+00:56 So same thing CTRL T, rename and let's call this fight,
+00:58 so the idea is the hero is going to fight the active creature.
+01:03 Now, this is pretty cool, you can search in comments and strings
+01:07 so this would fix like docstrings
+01:10 and also you could search in like within strings that are just output.
+01:14 So hit refactor and it pops up this little preview thing,
+01:18 it says hey we're going to refactor this thing
+01:21 and this is where it is used, it will say if hero fight is what is going to happen
+01:26 you would see as many locations,
+01:28 up here also we have attack is coming from the creature to rename,
+01:30 and here's one of its usages, so we hit do it,
+01:32 It also changed here, but also, now we have a wizard.fight,
+01:37 if we run it, it should work just the same,
+01:40 the Wizard has handily triumphed over the Bat, how exciting.
+01:44 Okay so the Wizard is doing good,
+01:47 our code is hanging together even across these multiple files,
+01:49 and I want to emphasize, this is not find and replace, that's not super cool,
+01:54 tech search this is abstract syntax tree understanding the entire project,
+01:57 that's super cool.

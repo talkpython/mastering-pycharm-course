@@ -1,0 +1,107 @@
+00:01 Hello and welcome to Mastering PyCharm.
+00:03 In this course, we're going to look at all the different features
+00:06 of one of the very best Python IDEs— PyCharm,
+00:10 and see how you can make the most of this super powerful editor.
+00:14 Let's jump right into what we're going to cover.
+00:16 First thing we are going to talk about is
+00:19 why do we want to use an IDE, what value does some large,
+00:22 heavyweight application like PyCharm bring and why would we want to use it.
+00:26 You'll see there's many reasons and you'll definitely want to use
+00:29 many of the features that are there,
+00:31 but let's talk about the various types of editors we can use
+00:34 and what the trade-offs are there.
+00:37 When we're working with PyCharm,
+00:39 we're focused on this idea called projects,
+00:42 this is like a group of Python files and associated other
+00:45 static and data files that all work together,
+00:47 there's many of the features in PyCharm that work at this level.
+00:51 We're going to start by focusing on
+00:53 creating new projects and working with all the files
+00:56 and you'll see there's a bunch of configuration switches
+00:59 we can set to make it be a little more effective.
+01:02 Then we're going to jump right into
+01:04 what I would say is the star of the show— the editor.
+01:07 If you're writing code you need an editor,
+01:09 you want to be typing and manipulating text,
+01:11 of course, the editor has to be awesome,
+01:14 we're going to focus on all the cool features that the PyCharm editor offers.
+01:18 We'll see that source control in particular, git and subversion
+01:22 are really deeply integrated into PyCharm,
+01:24 there's all sorts of powerful things we can do
+01:26 including actual github integration,
+01:29 not just git but github integration into github issues and things like that.
+01:32 We were going to focus on source control
+01:34 and the features right inside the IDE that we can use
+01:38 for git and github and things like that.
+01:41 We're going to see that PyCharm is great at refactoring
+01:44 this is changing our code to restructure it
+01:47 to maybe be structured in a different way, to use a slightly different algorithm,
+01:52 but not actually changing the behavior of the code;
+01:55 we'll see there are many powerful techniques
+01:58 in PyCharm that you can use to do this
+02:01 and because it understands all of your files at once, it can safely do this,
+02:06 it will even do this out in doc strings and things like that,
+02:09 so we'll see how the tools that are working that's really quite amazing.
+02:12 There is some really interesting database tooling
+02:15 and database integration in PyCharm,
+02:18 so you'll be able to interact with databases,
+02:21 SQLite, MySQL, whatever, you can connect
+02:25 all the different types of databases, these relational databases
+02:28 and edit the data, edit the schemes and things like that,
+02:32 and you'll even see that there's one really amazing feature
+02:35 that makes its way back into the editor
+02:37 when you're working with SQL strings in your Python code.
+02:41 PyCharm is great at building web applications,
+02:44 typically, this would be something like Django or Pyramid,
+02:49 or Flask or something like that, but it also builds other types of web things,
+02:52 it has a full Javascript editor and environment in there,
+02:57 it could do TypeScript or CoffeeScript,
+03:00 it could even do things like Electron js, so lots of really cool stuff in here.
+03:04 Then we'll talk about all the both
+03:07 server side and client side features, on the web in PyCharm.
+03:10 You will see that it has a great visual debugger
+03:13 so we are going to look at all the different features
+03:15 that we can use to debug and understand our application
+03:17 including some really powerful breakpoint operations
+03:20 that typically editors don't have.
+03:23 In Python, we use the concept of packaging
+03:26 to bundle up and share and reuse our libraries,
+03:30 we'll see that PyCharm has a ton of features
+03:32 to make and understand these packages,
+03:35 so it understands the file structure of packages, how to do automatic imports,
+03:38 they also do things like automatically generate you a setup.py
+03:42 so people can install and configure your package and not just copy the files over;
+03:46 so all sorts of good stuff there, we'll talk about that.
+03:49 Profiling is really important if you want to understand how your code is running,
+03:54 if your application is slow and you want it to go faster,
+03:57 you really shouldn't guess, you'll see that it's easy to look at code
+04:03 and think that this is the slow part and that's the fast part
+04:05 but sometimes that's just not the case, and our intuition is often bad
+04:08 and so we use tooling, profiling in particular, to understand the performance,
+04:13 you will see that PyCharm has some really great built-in visual types of tools
+04:18 for us to basically understand the performance of our app.
+04:22 It has great built-in test runners for PyTest,
+04:25 for the built-in unit test and a number of others that we're going to see,
+04:30 so if you are doing any sort of unit testing or integration testing,
+04:33 that's built in and we'll explore some of the really cool features,
+04:36 like for example, there is one feature you can turn on for auto test running
+04:40 and so if it knows that you are changing certain parts of your code
+04:44 it will automatically re-run the test, just as you type in the background
+04:49 and tell you basically, on the side continuously,
+04:52 "Your code is good" or, "Your code is bad."
+04:54 We'll see how to do that and a bunch of other cool stuff in the testing realm.
+04:59 They've integrated Jupyter notebooks and a special data science view
+05:02 with really cool documentation and all sorts of stuff to help you explore your data,
+05:06 we're going to talk about the data science tools
+05:09 and how those appear in PyCharm.
+05:12 There is a couple of additional tools that don't really land
+05:15 in any of these other categories that I have defined here,
+05:17 so I just made a "Here is the stuff that didn't fit in any of the boxes I created"
+05:21 I threw this at the end, additional tools,
+05:24 so there's a few other really cool, handy things that don't really
+05:27 classify themselves as fitting in with the others, so we'll talk about those.
+05:30 Last but not least, there's hundreds of plugins
+05:33 that you can get for PyCharm to make it do other things,
+05:36 like for example do you want it to have like Vim key bindings—
+05:39 great, go get the Vim plugin and plug it in
+05:42 and you've got Vim bindings for your editor, things like that.

@@ -1,0 +1,52 @@
+00:01 As you've seen so far, in order to actually execute our programs,
+00:04 make them go, run them with Python
+00:06 we have to create what's called a run configuration.
+00:08 You know you have a run configuration
+00:10 when you see it up here in the top right of PyCharm
+00:13 it's got a little name, the play and debug buttons
+00:16 are not great out there, green and ready to go.
+00:20 If you have it like this, you're good to go
+00:23 but how do you get one in the first place?
+00:25 Well, there's a couple of options,
+00:27 first, we could pull down that drop down and we could choose edit configuration
+00:30 and when we edit, we can have the chance to cut a new one
+00:32 or we can go and pick some existing ones,
+00:34 so here's what we have say on Talk Python To Me,
+00:37 here's the Talk Python web app, which we can run, this is a Pyramid app,
+00:40 and then we have three other utility libraries,
+00:43 a choose random subscriber— sometimes I do giveaways
+00:46 and people who are friends of the show,
+00:49 I'll randomly pick out their email address and give them something
+00:52 like some kind of software license or something like that.
+00:55 Maybe test the sponsorship slots, sometimes those change
+00:58 and they are kind of hard to tell in the database of what goes where,
+01:01 and so this lets me verify like if I reorganize things, they don't break.
+01:04 And I moved from S3 to Digital Ocean
+01:07 as the cloud backing store for the podcast data,
+01:10 so these are some things I created along the way
+01:13 and we also have two particular unit tests
+01:15 one that runs all of them, and one that runs just a subset.
+01:18 So most of these were gotten by just right clicking on the file that I wanted to run
+01:23 and say choose random subscriber,
+01:26 run that and this will create that choose random subscriber run configuration
+01:30 we could also you could see debug it, profile it, things like that
+01:34 we'll talk more about debugging and profiling later,
+01:36 but these run configurations are really powerful
+01:39 you can configure lots of details about them,
+01:42 I think you should definitely leverage them, right
+01:45 make sure that you create as many as you need
+01:48 and that you really take advantage of them
+01:50 because they will be super helpful.
+01:52 If we go and edit one, here you can see like Talk Python web for example
+01:55 you can see the source points to a config file
+01:59 that is a development.ini, this is the Pyramid Web App convention,
+02:04 this is sort of the local non-production version
+02:07 so maybe it has like a local database connections instead of production,
+02:10 authenticated remote server database connections and things like that.
+02:14 We pick an interpreter, we pick a working directory
+02:17 and you can even do things like
+02:20 at the bottom it says, before launch activate this tool window,
+02:23 so if you wanted to say run like a gulp task
+02:25 or you enter before you're even allowed to run your app
+02:29 or you've got to do something else to prepare it to run
+02:32 you can add a bunch of little tools right at the bottom.

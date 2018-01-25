@@ -1,0 +1,105 @@
+00:01 Let's start by creating a new project.
+00:04 Now, I would normally just open a PyCharm and create the project
+00:08 but I want to make sure that you have everything that we're doing in this course
+00:12 so remember, our github repository over here,
+00:15 I'm going to clone this really quick just to take you through the whole life cycle
+00:20 so we'll come over here, we'll go to our desktop
+00:23 and we're going to clone this using the git command.
+00:26 We could do this with PyCharm
+00:28 but you'll see there's one piece that maybe gets missed
+00:31 that I really like to do when we're getting started,
+00:33 but I'll show you where you could clone this from PyCharm directly.
+00:38 We'll say git clone this, and I'll just call this course,
+00:43 and I'll put it on the desktop.
+00:46 Okay, so you can see that appeared over here,
+00:50 now we're going to create a folder in here called demos
+00:55 and in the demos folder, this will be projects, so this is the project section.
+00:59 So here is where I want to work, let's go over to PyCharm
+01:03 and you can see when you're in PyCharm
+01:05 it has the projects that you previously worked with,
+01:08 this one is from the MongoDB course,
+01:10 and we're going to create a new project.
+01:12 Now, I'll do it this way first here, but in general,
+01:16 I actually do a few steps on the command line before we get going
+01:19 which I'll do in the next section here.
+01:22 So we can start a brand new project
+01:25 and we can come over here and say we're going to browse to it
+01:28 and I want it in this location, in the demos, in the projects
+01:34 and maybe we want to make a subdirectory here
+01:36 because we might have more than just one.
+01:38 So I'll call this first project.
+01:41 Now notice, it's proposing that we use some kind of Python interpreter,
+01:45 obviously that is required, but it turns out there are a lot of options,
+01:49 here's a bunch of virtual environments that no longer are valid
+01:52 I have to go back and clean that up,
+01:54 I could even go over here and I could say
+01:56 add a local alternative version that could be Python 3.6 that we have here
+02:01 or it could be like PyPy, something like that,
+02:03 I could even add a remote one over ssh or create a new virtual environment.
+02:08 I'll just go with this one for now, the system default one
+02:13 and this is going to create just a basic Python project,
+02:17 it will be empty, we'll create files and so on.
+02:19 If you want more structure, something that is not empty
+02:21 we could go with Django, if we click here you'll see
+02:24 it will actually give you all the settings to set up
+02:27 the various templating languages and things like that,
+02:30 or Flask, Pyramid, one of my favorites, you can pick
+02:34 all the things that you might do from say
+02:37 the cookiecutter template that comes from there,
+02:39 there's a bunch of sort of frontend things down here as well, also Web2py.
+02:42 But, we want to do this one, so let's say create
+02:45 and notice it's going to run down here just for a second
+02:49 and index all of the Python files in our main Python environment,
+02:55 it also says, "Hey look, this is some kind of git repository,
+02:59 would you like to add it?"
+03:02 basically tell this project to understand the version control settings
+03:06 that it found in the file structure, so yeah, we definitely want that.
+03:10 So over here, we have no files in our projects,
+03:13 and these external libraries, these are the various things installed in Python
+03:17 this basically lets you look into the selected Python environment here.
+03:23 So we're not going to worry about that right,
+03:26 we can just basically ignore the external libraries.
+03:28 We'll come up here and we'll say new,
+03:32 and you can pick a whole bunch of different things here,
+03:34 it could be an HTML file, it could be TypeScript
+03:37 but we're going to go with Python.
+03:40 In Python it will be, "Hello," maybe do a quick little, "Hello world,"
+03:43 and notice, right away because we said yes
+03:46 to understanding or incorporating that git hierarchy that it found,
+03:50 it says we're going to automatically add this file,
+03:52 do a git add on that file to our project.
+03:56 You could say yes or no, I'll just say yeah, you always do that, that's fine,
+04:00 and notice over here, that means it's green,
+04:03 because it's now staged but not committed in git
+04:06 so I'll just print, "Hello world," we'll talk about the editor a lot,
+04:11 we're going to spend a whole chapter on that,
+04:14 but for now, I really just want to focus on the files here,
+04:17 if we had some other file just add some other file, other file, like that,
+04:21 we could have a method, just print out something,
+04:27 this is the other method, we'll come back to play with that in a little bit.
+04:32 Notice, as I discussed in introduction,
+04:35 down here we have the presentation assistant,
+04:38 so mostly you'll see me working with hotkeys not menu items,
+04:42 but that'll tell you what the hotkey was
+04:45 as well as what the menu item would have been.
+04:48 Okay, so now we have this project and we're pretty much ready to go,
+04:51 we should be able to run it or something somehow.
+04:54 But if you look over here, this whole little area
+04:56 about running and debugging and testing and whatnot
+04:59 it's all grayed out, it has no idea what to do with these files.
+05:02 So the next thing that we need to do is
+05:04 we need to say which of these files to run,
+05:07 how to run it, what command line arguments to pass and so on.
+05:10 So the way you do that is you right click on one,
+05:12 you create what's called a run configuration
+05:14 by picking one of these options down in this little area here,
+05:17 so we'll say run, and it immediately runs down here,
+05:22 it runs with the selected version of Python that we had
+05:25 and it ran the file that is here in my desktop
+05:30 and just here is the output, it said, "Hello world,"
+05:34 or whatever it is that the script does,
+05:38 and once you've done that, there's now what's called a run configuration
+05:41 that lives up here and we can run it over and over,
+05:44 we can run it with hotkeys, control r on Mac,
+05:47 we can even debug into it, run it with coverage all those sorts of things.
+05:51 So, that's how you create new projects in PyCharm.

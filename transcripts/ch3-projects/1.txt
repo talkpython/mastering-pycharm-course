@@ -1,0 +1,16 @@
+00:01 Now that we've talked about by PyCharm a little bit
+00:04 and why you want it, things like that, and you've got it all set up,
+00:07 it's time to start using PyCharm to do some really cool stuff.
+00:10 We're going to start by focusing on projects.
+00:13 We're going to cover many things as you saw in this course,
+00:16 but one of the central ones is this concept of a project,
+00:20 loading a set of files, piecing them together, working with the relationships,
+00:25 doing things like navigating from one file
+00:28 via definition of a method call say into another,
+00:31 or setting up the project structure so that if I'm running a web application
+00:37 it will give me say auto completion for the static files
+00:41 even if the static files are not really the root of the project folder
+00:45 but root of the web, the conceptual web app, things like that.
+00:50 So we're going to focus on the really important parts of the project
+00:54 which mostly means how do we put a bunch of files together
+00:57 and navigate them and run them.

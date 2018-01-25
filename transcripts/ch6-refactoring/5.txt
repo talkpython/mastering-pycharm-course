@@ -1,0 +1,39 @@
+00:01 Let's look through our little application here, it's quite simple, we have our main,
+00:04 it prints out the header it prints out the game loop,
+00:07 but the header part, it's kind of hard to see,
+00:09 it's this cool dragon thing that I added, just some ascii art.
+00:12 but maybe we could make this a little more maintainable
+00:17 because this is kind of a problem, like I'd like to put this aside
+00:20 and just say okay, give me the text that is a little dragon picture, all right.
+00:25 So what we can do is we can come over here and highlight this
+00:30 and we can say I'd like to extract, it could be a variable,
+00:35 I guess it could be a parameter or a field, but let's say constant.
+00:39 Now, in Python, constants are really conventions,
+00:42 there's no language mechanism to make a variable technically constant,
+00:47 so the convention is to make the name of the variable all upper case,
+00:53 so when we say extract constant, we get something like this,
+00:57 and let's scroll up if we can without messing this up and see what happens.
+01:00 So we put it up at the top, there's this thing called S,
+01:04 and look, here's our string, so we'll go back down here
+01:07 and we'll call this dragon text and of course, up here it's naming it dragon text.
+01:11 So now if we look at our print header,
+01:14 okay we print out a new line, dashes, dragon text, dashes,
+01:19 we could even make that a constant,
+01:21 so if we change it, it changes only one,
+01:24 truly it's just using these two places like two lines 30 and 32
+01:28 so let's not worry about it.
+01:30 But it's really cool how we can extract these constants,
+01:33 we could do the same for here, we could make a constant
+01:35 and if we replace, notice it will find all usages of it
+01:42 maybe we want to tie this to the dragon or wizard,
+01:45 maybe we don't, because it's not related, this time it is not,
+01:48 so we'll say the level where did it get that from?
+01:52 Let's call this starting hero level, make it nice and explicit,
+01:58 where did it get the level from?
+02:00 It's got it up here, it got it right from there, that's pretty awesome, right?
+02:06 So I just go in some random number it's like
+02:09 hey this number here represents the parameter
+02:12 being passed to the thing called the level, so let's guess that, that's pretty sweet.
+02:16 So we can use this extract constant thing
+02:19 and these typically go at the top of the file
+02:21 so right here we can configure a few things at the top and then play our game.

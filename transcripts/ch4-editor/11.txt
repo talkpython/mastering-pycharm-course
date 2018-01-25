@@ -1,0 +1,53 @@
+00:00 Here we are back in this Wizard game
+00:02 that we got came from the Jumpstart course,
+00:05 we talked about where that comes from a few times.
+00:07 Now, suppose I want to have a Hero attack a Creature,
+00:11 so in our little world, a Hero is one of these Wizards,
+00:14 the Creature, active Creature is a thing like a Small Animal
+00:19 or a Dragon or another Evil Wizard things like this, right
+00:22 this object hierarchy we just looked at in the previous video
+00:26 it's one of those things.
+00:28 Now, how do I know what to pass here?
+00:31 Remember, I can take CMD or CTRL P
+00:33 and it'll actually tell you what the arguments are.
+00:36 Now in Python you always have this self-argument
+00:38 but you never pass it on instant object
+00:41 so self is a Wizard that's cool, here is a Wizard we know that.
+00:44 But it says there's this Creature and Creature is just the name of the type.
+00:49 However, look what else it's showing us,
+00:51 it's showing us name and get defensive roll,
+00:54 so Python has this concept of duck typing,
+00:58 if it acts like a duck and walks like a duck— it is a duck.
+01:00 Here what we're saying is we don't really care if it derives from Creature
+01:03 as long as it has a name and a get defensive roll
+01:06 that corresponds to how we plan to use it,
+01:08 you can pass anything that kind of does that in here.
+01:11 So this is really cool, so CTRL CMD P great.
+01:14 Maybe there's some more help,
+01:16 so we can come over here and we can view the quick documentation,
+01:19 F1 on Mac bindings, we can go over here
+01:22 it's the quick documentation, whatever that is,
+01:25 so F1, in my example may be something else for you,
+01:29 and it comes up and says here's the documentation for attack
+01:32 it takes a self parameter again, you ignore that
+01:34 that's like this in other languages,
+01:37 and it takes a Creature and again, it says the same thing basically what we said,
+01:41 it says here's the type, it looks like it takes this creature thing
+01:45 and it returns a bool true or false right, and that's pretty standard.
+01:49 But we could do better if there was actual documentation
+01:51 for example, random.choice this is built-in, this has documentations
+01:56 we pull that up it says ok well here's the deal
+01:59 this is going to choose a random element from a non empty sequence
+02:03 by the way, that's important, it's an exception
+02:06 if the sequence is empty it has no elements,
+02:09 but you can notice here it actually gives you the intellisense
+02:13 or the documentation you're going to need
+02:16 an links over to Python 3.6 implementation,
+02:19 let's see another one over here and say format—
+02:22 notice it takes all these things,
+02:25 there's all these different ways in which you can use it
+02:27 and it's going to return a formatted string
+02:30 using the curly brace substitution like string format does.
+02:33 Okay, so that's also really cool.
+02:36 However, what if we want this, well, we'll see in a minute
+02:40 that we can actually give this better documentation as well.

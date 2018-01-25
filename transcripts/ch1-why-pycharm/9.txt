@@ -1,0 +1,14 @@
+00:01 Now the Community edition of PyCharm is 100% open source
+00:04 so over here at the JetBrains organization in github
+00:07 you can see IntelliJ-community/tree/master/python
+00:11 they have all the stuff up here, all the community editions,
+00:14 but down here, this is PyCharm, this is community edition of PyCharm,
+00:18 so if for some reason if it being open source
+00:22 is something that you really care about,
+00:24 and you really want to make sure this is like a feature or the editor you are using
+00:28 for the most part that's the case here, right,
+00:30 so we've got this and even has instructions on how to check it out
+00:34 and build and run it things like that,
+00:36 I've never tried, I have no interest in building this thing,
+00:38 maybe I'd build a plugin but I wouldn't build the whole thing from scratch,
+00:41 but nonetheless, here it is, in case you want to check it out.

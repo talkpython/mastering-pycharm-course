@@ -1,0 +1,56 @@
+00:01 Of course, there's entire spectrum of editors.
+00:04 On one hand, we have things like Emacs or Vim that are super fast to start,
+00:09 they can run anywhere because they'll run in a terminal
+00:12 or a command prompt, something like this,
+00:15 and you can use them if you're ssh-ed into a server, you can use them wherever,
+00:19 and these are powerful editors, but they're very much focused on,
+00:24 "I'm going to edit a single file," and while they are powerful
+00:28 and people who are really master of these things
+00:31 can make them sing— they are not as powerful as PyCharm,
+00:35 they do not bring all the tooling together in one place
+00:38 and understand all of the project,
+00:41 all the different files and pieces fitting together.
+00:44 For example, if I was working on an HTML file or an HTML template
+00:48 that was rendered to a Jinja 2 or Chameleon template,
+00:52 rendering static files that were also being passed
+00:57 like some sort of model data from like a web framework,
+01:01 it's unlikely that Emacs is going to be able to understand
+01:05 the static file structure, the CSS files, the Javascript files
+01:09 the data being passed from the web server, all those sorts of things.
+01:12 It doesn't have a totally great understanding
+01:15 and it's really focused on editing a single file which does lead
+01:18 to certain types of programming styles
+01:21 and an organization for Python projects
+01:24 namely putting a lot of code into a single file.
+01:27 Somewhere in the middle of the spectrum
+01:29 I would put things like Sublime Text and Atom
+01:32 and to maybe a little lesser degree Visual Studio Code
+01:35 these are the more lightweight editors but they are GUIs,
+01:39 as you can see this is a Mac application,
+01:41 this Sublime Text right here, but of course it runs on other platforms as well,
+01:45 but this is a GUI application right,
+01:48 you wouldn't run this on the server when you are ssh-ed in.
+01:51 So, there are limitations to using it, but it does understand more files,
+01:54 it does have this little folder thing on the left,
+01:57 there is lots of plugins, it does a lot of cool things and it's nice,
+02:02 I would say this is a little more heavyweight than things like Emacs,
+02:05 a little more restricted in where it runs
+02:07 but not as holistically understanding of what you're up to as an IDE.
+02:12 Speaking of which, there's PyCharm,
+02:14 and it's one of the various IDEs that we can use for Python.
+02:19 It understands a lots of stuff about our code,
+02:22 you can see we've got our project structure,
+02:24 it has a little runner down here, up in the top right it has the database.
+02:28 Now this app doesn't actually talk to the database
+02:30 but if it did, it would have a database view,
+02:33 I could generate UML diagrams from my data,
+02:36 or I could have a query window with auto completion pop-up.
+02:42 It's more heavyweight, it takes more to start, more to install and things like that,
+02:46 but it's definitely worth in my opinion.
+02:50 What we should be optimizing for is programmer productivity,
+02:54 not rapidness of tools or efficiency of memory or something silly like that
+02:58 when memory is cheap and our computers are fast.
+03:01 So, I would say you should want to think about
+03:03 where PyCharm lands on the spectrum
+03:06 and I would put it at the far right, on the IDE of big heavyweight tool
+03:09 but I think it's also a big, powerful tool that is worth it.

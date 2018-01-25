@@ -1,0 +1,263 @@
+00:02 Now let's begin exploring the editor,
+00:04 and I think the right way to go about this is
+00:06 to just write a simple little program and talk about all the features
+00:09 that are immediately obvious and stand out for us.
+00:12 We're going to go create little application
+00:15 that will go and download information about the Talk Python To Me podcast
+00:18 and say what the titles of the recent episodes are and things like that.
+00:22 We're going to do this and then there will be some features
+00:25 that they don't expose themselves
+00:28 because what we're building is not sufficiently complicated
+00:31 so we are going to jump around, open some other projects later.
+00:33 But let's get started exploring the editor by— well, editing with it, right.
+00:37 Let's go over here and I'll open up the terminal,
+00:41 and I'm going to cd into this directory here,
+00:45 this is the github repo that we're working with,
+00:47 and we could go to PyCharm say new project,
+00:50 but with the virtual environments I do find it a little easier
+00:52 to just follow the convention, so we can do a make dir,
+00:55 cd into the podcast, and then we can create our virtual environment like so.
+01:01 And that little console trick or terminal trick there helps us get going.
+01:07 Remember you've got to say open directory on Mac or Linux,
+01:09 but here we can drag it on Mac OS,
+01:12 so we're going to register that git repository because I want to make sure
+01:15 you get this code checked in and you can play with it.
+01:18 Here is our virtual environment,
+01:20 let's click here and make sure that it's up and running,
+01:23 yeah, if we ask which Python— that looks right to me.
+01:26 We'll go over here and we'll create a couple of files,
+01:30 I'll call this program, and I am going to create one over here
+01:37 called service or something like that, for downloading all the data.
+01:41 Okay, so up here, let's define the main method, and we'll do something like
+01:48 "Hello, welcome to the Talk Python info download," or something like that.
+01:57 It wouldn't be much work to actually edit this
+02:00 to have it download the mp3 or ogg files
+02:03 but, why don't I just do this, and let's say
+02:06 we're going to call some functions from this service over here.
+02:10 So let's go write a function.
+02:13 Let's say this, download info
+02:17
+02:20 and we're going to write some function here,
+02:23 and then maybe we'll give it the ability to get some information,
+02:26 give it something a little bit richer.
+02:29 I'll pass it and I'll have def get_episode
+02:34 and we'll have a number of the episode,
+02:38 I'll call it show_id, or something like that,
+02:41 and then we're going to come down here and we'll just do nothing like that.
+02:46 Imagine I would like to call this function,
+02:51 so I am going to try to call download,
+02:54 it's going to store the information somewhere,
+02:56 and then, we'll be able to get information back
+02:59 like hey, give me the info about this particular episode,
+03:02 now I probably would have the download, just give you all the info
+03:05 but, I am trying to create a little bit of state here
+03:07 something we could make slightly more interesting.
+03:10 So, I can come over here and I can say download info,
+03:13 and it doesn't look like anything is happening, does it.
+03:17 But, notice there is a little squiggly, if I go here,
+03:21 a lightning bulb will show up, and if I hit alt enter, it gives me all sorts of stuff;
+03:26 I could import download info, like this, and if I hit that,
+03:30 it's going to actually do the right thing to put it up at the top here.
+03:34 Okay, so that's pretty cool, and again,
+03:38 we can navigate back and forth as we saw it.
+03:40 Also, notice over here, this doesn't have squiggles any more,
+03:43 this one, not here, but on this part it does seem this parameter show_id is not used.
+03:51 This is super helpful in discovering bugs, because maybe this is like
+03:54 is the user admin yes or no, and the function is supposed to check
+03:59 whether you're an admin before you can do certain things,
+04:02 if you see these squiggles, they are like, wow, we're not checking,
+04:05 we're not using this admin feature, this could be a problem.
+04:07 So that's a really cool feature,
+04:10 you can see obviously that there is a syntax highlighting
+04:13 there are various other things,
+04:16 notice here there is a pep 8 no new line, so we can fix that.
+04:20 Now we can go and download this info,
+04:23 I kind of prefer, let's do this— for the look at these things like so,
+04:27 so we can come down here and I can say service.
+04:31 and you get immediate intellisense, right,
+04:33 download or auto complete, download info and show info,
+04:39 so let's suppose we're going to download this information,
+04:41 and then we want to get just some details about various episodes,
+04:46 so let's say for show id in a range,
+04:49 let's say 100 to 130, good enough, those will definitely exist.
+04:57 We can go over here and we'll say info=service,
+05:02 notice, really nice intelisense there as well,
+05:06 we'll get info and we'll have the show id like this,
+05:09 alright, so this is coming along pretty well,
+05:13 let's go and we'll focus on this download thing,
+05:16 so we can again command click and just navigate over there,
+05:19 that's a small app we can find it right, but in something larger,
+05:22 command click go over here.
+05:25 So, what do we need to do,
+05:27 well, we need to go and actually download something from the website,
+05:31 from talkpython.fm, what we're going to use is
+05:34 if we go over here to talkpython.fm/rss it's going to pull up a bunch of info,
+05:40 and Firefox tries to be a little too clever for us,
+05:43 so I am not going to worry about that.
+05:46 We'll go over here and we'll say something like url= that,
+05:50 and then we want to use Requests right,
+05:53 who wouldn't want to use Requests?
+05:55 We'll say resp=requests.get,
+06:00 now, what's wrong with this code—
+06:03 well, in a virtual environment, if we come down here and we say pip list,
+06:06 there is no Requests, right,
+06:09 by the way, pip install-- upgrade setup tools,
+06:16 so that's a good idea, this is like 10 major versions out of date.
+06:23 Anyway, not required but always worthwhile.
+06:25 So notice that PyCharm knows there is a problem here
+06:28 and actually it knows we're not using url,
+06:30 but if we pass it there, that's happy.
+06:32 So what's the problem here, what is Requests, we have no idea,
+06:35 so we'll say import requests, but it was found somewhere else,
+06:37 so that doesn't work.
+06:39 Now up here, when it's used like this,
+06:41 it says, maybe you should install the package, it doesn't exist,
+06:43 notice down here, what's it doing, it's installing Requests, great.
+06:47 Now, if I had a requirements.txt it would actually also propose we put it there,
+06:53 but we are not going to do that for the moment.
+06:55 Okay, so this is working, we can say response.raise_for_status,
+07:00 if for some reason it doesn't work, it should work, but if it doesn't,
+07:03 now what we need to do is we need to go and load this up into an xml dom.
+07:09 So how do we do that?
+07:12 We use this thing called ElementTree,
+07:14 and we can import this from xml.ElementTree, like so,
+07:18 and we'll say fromstring, so resp.text is going to be the raw rss text,
+07:27 and then down here we'll have the dom,
+07:30 so we can do whatever we want with this,
+07:32 we can start to loop over this and pull items out,
+07:37 so the first thing that we need to do is come in here and say items,
+07:41 and we're going to do some kind of selectron,
+07:44 so we'll say dom.findall('channel/item')
+07:48 if you actually look at the rss it's an xml feed, and it has an rss root
+07:52 but you don't say when you're doing searches,
+07:55 but then there is a channel which contains many items.
+07:58 So let's just print out the length of items,
+08:01 just to see that this thing is working.
+08:04 Now, if I run this, it's probably not going to do
+08:09 what you would maybe thing it's going to do, so we'll say run—
+08:12 nothing, darn it. Why is nothing happening—
+08:17 it's because we didn't call main, Python, as you probably know,
+08:20 it's not like if you have a static main void it's just going to get called,
+08:23 so what we do is we use this convention,
+08:26 we say if_ _name_ _== '_ _main_ _ '
+08:37 then we'll call main, and that is going to work, with little formatting, just fine.
+08:40 And because these little expressions are very common,
+08:44 PyCharm actually has what are called live templates,
+08:47 so if I type main, the top one there is the function I wrote,
+08:50 but notice the bottom, if I hit tab while that is selected,
+08:54 it's going to write that same code for us,
+08:56 and I'll just go ahead and call whatever function I named it here.
+08:59 So these are live templates, and there is a bunch of them,
+09:02 you can create your own, I'll show you how to do that in a little bit.
+09:04 Okay, so we're getting closer, let's run this,
+09:07 it's thinking, wow, it found a 140 episodes,
+09:10 you've got to love a good zero based podcast.
+09:13 Okay, so that's awesome, we found a 140 episodes,
+09:17 it looks like it's sort of working, let's go over here now,
+09:21 we do need to store this information somewhere,
+09:25 and we probably want to convert it, so let's go over here and we'll say
+09:28 from collections import named tuple
+09:34 and down here we'll have episode
+09:38 it's going to be a named tuple of— give it the name of the type
+09:41 and then, what's it going to have—
+09:44 it's going to have a title, a link and a pub date.
+09:49 And let's also give it a show id.
+09:52 Alright, so this is nice, let's just put this as count,
+09:59 or episode count maybe, so it didn't conflict, so we have our episode count
+10:06 and we're going to load up for each one of these things into there,
+10:11 so we'll do like this, let's say we'll have a episode data,
+10:16 just a list, actually let's make it a dictionary, that will be even more fun.
+10:20 All right, so we'll come through here
+10:23 and what we need to do is loop over every one of the items,
+10:25 so a for item in items,
+10:29 this is going to give us our little tiny xml element
+10:32 and then we can do things like this,
+10:34 we can say episode= create one of these
+10:38 now, what are we going to do— check this out,
+10:41 PyCharm knows about named tuples, and before I move the mouse
+10:45 it went in there and any time you're sitting in a method,
+10:48 you're like what do I pass to it, you hit command or control P
+10:51 and it will tell you check out how awesome that is,
+10:54 that comes from defining this named tuple right there,
+10:56 it gives us this, so perfect let's do it,
+11:00 let's say item.find and we'll give it the title and then text,
+11:06 so that's a little xml query thing we'll do item.find
+11:10 what's next, what are we looking for here,
+11:12 we're looking for a link, so this will be the link,
+11:25 pub date text and then we need to convert that into a date
+11:27 we'll just leave it as text, but in a real app we'd convert that to a daytime;
+11:31 and then finally, I want to put the item here,
+11:36 so let's do this, say idx for index and we'll do an enumerate on this,
+11:40 I'm sure there's some kind of xml query I can do to get the show number out
+11:46 and that's what I'd do in a real app, but I am just kind of feeling lazy
+11:49 so let's just say episode count - index
+11:52 because these are the newest or highest number first.
+11:57 We'll do that, and then we'll just say
+12:00 episode_data[episode.show_id]= episode
+12:05 it's not append because it's a dictionary.
+12:13
+12:19 Now we can go down here and write this really quick
+12:22 so we'll go over here to episode data
+12:26 and we'll say turn episode_data.get(show_id)
+12:32 that way if it's not there it will just give you none rather than crashing,
+12:35 maybe that's what we decide we want.
+12:38 Let's go over here and just see that it works,
+12:41 I'll just say print something like this where we print out the number
+12:47 and then the title, so info.
+12:50 now look at this, no help, how frustrating
+12:54 so I know this is show_id but I'm going to show you the fix in a second
+12:57 let's just see that it works info.title, now let's give this a run.
+13:00 Boom, now it turns out that title on the show number these are all together
+13:07 so we got them in that order, but then we ask for them in the other;
+13:13 now it looks like I'm off by one with my number,
+13:17 oh yeah, yeah, yeah let's go back to this here,
+13:21 let's just subtract one that should work for us.
+13:24 Here we go, 129, number 129, okay,
+13:29 so we've got our various pieces back
+13:31 and we're using over here our non half-closed range
+13:36 so we only get it at the 129 not 130, but this is working.
+13:39 So the final thing I want to show you here in this little demo
+13:45 is this part right here, so I got this back
+13:48 service.get_episode, that was cool
+13:52 and then I did this and I got nothing,
+13:55 in fact, even inside of service, this if I say dot— nothing,
+14:01 PyCharm doesn't know what this is.14:03 So let's add type annotations to this for example,
+14:06 so I'm going to say: and the type this is an int,
+14:09 and it returns an episode, not a list.
+14:15 So if we come over here and we do this now, dot, ta-da,
+14:19 look at that show_id, link, pubdate
+14:22 so with just the tiniest little nudge
+14:24 we can tell PyCharm what comes back from here
+14:28 and actually it's because the dictionary is kind of—who knows what it holds,
+14:31 once we get the data back from here,
+14:34 we could pass this from function to function to function
+14:37 and PyCharm would still know hey that's an episode
+14:39 because I know where it came from and I know that it started out an episode
+14:41 and it's not changing, you never reassigned it.
+14:45 So we'll see that we can use these type hints in really powerful ways
+14:48 you could also use them in the docstring style
+14:50 but if you're using Python 3.6 or 3.5 really
+14:54 take advantage of these, because they're awesome.
+14:58 I think that wraps up our little demo for downloading some stuff here
+15:01 you can see that we can lift out what the various episodes were
+15:05 except for if I go over here, one other cool little feature
+15:09 when this crash, as I was fiddling around with intellisense
+15:12 and left it in a broken state, two things—
+15:15 one, I don't have to save, there's not really a clear save button all the time
+15:20 you can go over here and there's probably a save somewhere,
+15:23 but it automatically saves, and when I run it,
+15:25 all the files are saved, that's awesome.
+15:27 Also, when I was away and I ran and something went wrong
+15:31 and it shows me right here, here's where the problem is,
+15:35 you click it, it takes you straight to it and then highlights it, so that's cool,
+15:38 I just need to put that away because I was fiddling with it.
+15:41 Awesome, there we get a little info like I said,
+15:44 you can expand what we're doing here,
+15:47 in terms of pulling the data out of the rss feed
+15:51 and you could have like the mp3 or you could pull out the show id
+15:56 there's a place actually where there's an extension to the rss feed for podcast feeds
+16:00 that actually includes the episode number and things like that.
+16:04 All right, so pretty amazing I hope you think,
+16:07 and that's just scratching the surface,
+16:09 we're going to look at a whole bunch more things
+16:11 that we can do with the PyCharm editor.

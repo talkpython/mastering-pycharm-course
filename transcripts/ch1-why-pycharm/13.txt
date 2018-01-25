@@ -1,0 +1,12 @@
+00:01 One final thing— drop over right now to github,
+00:04 at github.com/mikeckennedy/mastering-pycharm-course
+00:08 and star and fork this.
+00:11 By the time you see this, it should have all the content from the course,
+00:14 including some hands on exercises that you can try to help reinforce through learning.
+00:19 We'll talk about those throughout the course, as we get to each chapter,
+00:22 but make sure that you go over here, star and fork this so that you have it,
+00:26 to use as a resource and a reference for yourself, after the course is over.
+00:31 Alright, so you should have everything that I refer to,
+00:34 or that I build for you during this course, right here,
+00:38 and I encourage you to practice along,
+00:41 when we get to the sections that are hands on.

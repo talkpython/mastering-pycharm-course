@@ -1,0 +1,25 @@
+00:01 One of the really important things to do
+00:03 before you start changing code is understand where and how it's used
+00:06 and sometimes you're just trying to decide
+00:08 is this used at all— it doesn't look like this is used
+00:13 but I don't really want to delete it because what if it is?
+00:15 So we can use find usages to answer both those questions and more,
+00:21 so we can come down here and say right click
+00:24 on this function get defensive roll and click find usages
+00:26 and we get this sort of fine dialogue at the bottom
+00:30 and it says oh well, the get defensive roll is used in a bunch of places,
+00:34 the dragon uses it, the small animal uses it the wizard uses it within its attack
+00:37 both for itself and for the creature that it is battling with.
+00:43 So then you can quickly understand where this function is used,
+00:46 how it's used, if you're going to change the signature
+00:49 or just want to know who is actually calling this function
+00:53 find usages, because PyCharm understands
+00:56 potentially hundreds of Python files and packages
+01:00 used across your entire project,
+01:03 this is much better than just hoping
+01:06 or maybe doing a search for get defensive roll as a string,
+01:10 because it understands the abstract syntax tree
+01:13 and it literally knows where is being used
+01:16 it's not just doing like a fancy find in text sort of thing,
+01:21 it's actually understanding the way the code is working together
+01:24 and then it navigates that abstract syntax tree.
