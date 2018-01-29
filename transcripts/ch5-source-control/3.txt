@@ -30,7 +30,7 @@
 01:41 If we look at the bottom, then this down here, the branching operations,
 01:45 and we'll come back and look at that in more detail in a separate video.
 01:48 So if we click update, we'll get something that looks like this,
-01:51 we can merge, we can re rebase,
+01:51 we can merge, we can rebase,
 01:53 we can just do whatever the branch default is, which typically I believe is merge.
 01:58 And if we want to make a cleanup on our files
 02:01 like we got some working files or something, we can stash those locally.

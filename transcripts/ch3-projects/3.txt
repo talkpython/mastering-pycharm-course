@@ -38,7 +38,7 @@
 02:10 how you can set the environment,
 02:12 you can do that internally from some of the settings
 02:14 after you open up the project, we'll talk about that later,
-02:17 but for now, let's see sort of what I think is the best work flow here.
+02:17 but for now, let's see sort of what I think is the best workflow here.
 02:20 So I just checked this out from git,
 02:22 git will not have the virtual environment with it
 02:25 virtual environments are tied to your machine,
@@ -92,7 +92,7 @@
 05:14 And so when I say import actors it goes to the top
 05:16 and it looks for like an actor's thing up here, obviously, there is none.
 05:20 So what we can do for each one of these is
-05:23 we can go here and say mark this as a sources route
+05:23 we can go here and say mark this as a sources root
 05:27 say basically this is the relative path that Python is going to use
 05:33 when we run it and so that's what PyCharm should use
 05:39 to analyze things like this from actors, notice that error went away.

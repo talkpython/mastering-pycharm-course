@@ -34,7 +34,7 @@
 01:52 it didn't exist so where did I create it—
 01:55 so I did it in the main root, not the one down here, so let's go and add that.
 01:59 So we come over here to preferences,
-02:02 on Mac you always say command, (coma)
+02:02 on Mac you always say Command + comma
 02:05 pretty much any app and it will take you there,
 02:08 we can just come down here to project, way down here,
 02:12 go to projects interpreter, and see it's using the main one
@@ -76,11 +76,11 @@
 04:30 So now we have this project,
 04:32 we want to navigate around, it understands all the pieces.
 04:35 The first thing you might be doing is like maybe we know
-04:39 somewhere over here, maybe there's something called book cage
-04:44 and we know there's a method called book cage
+04:39 somewhere over here, maybe there's something called book_cage
+04:44 and we know there's a method called book_cage
 04:48 but is it in infrastructure, is it in services,
 04:54 I can't remember where it was,
-04:56 so let's suppose we're trying to find a method called book cage.
+04:56 so let's suppose we're trying to find a method called book_cage.
 04:59 So what we can do is, there's little search thing up here you can click,
 05:03 but I never click that, what I do is I hit double shift
 05:07 and this is super helpful, the first thing you see are recent files, so Mongo setup,
@@ -103,23 +103,23 @@
 06:16 but it actually remembers the state of the files,
 06:20 where you were, what you had selected,
 06:22 it really takes you back to where you started.
-06:25 That's great, but we were looking for something called book cage,
+06:25 That's great, but we were looking for something called book_cage,
 06:28 so if I just type book, you can see there's some classes
 06:31 there's a booking class, this is a thing we stored in MongoDB,
 06:34 this is the file that contains the booking class, here it shows you just the files,
-06:41 there's some symbols, and look at that, book a cage,
+06:41 there's some symbols, and look at that, book_a_cage,
 06:45 this is the guest version, this is like the low level data version,
 06:49 this is how I can get the book into my cage and so on,
 06:53 then there's even actions, look at that, how do I create a bookmark
 06:57 or these are literally menu options in PyCharm.
-07:00 Alright, it looks like book cage that's the one I was looking for,
+07:00 Alright, it looks like book_cage that's the one I was looking for,
 07:03 bam, I can navigate to it just like that.
 07:06 So this search everywhere is really helpful,
 07:09 it works for Python, but it also works for text files, CSVs, Javascript, you name it,
 07:17 CSS, it doesn't matter so I can come over here and say Colorama,
 07:25 and it will take me into there.
 07:27 Notice that I can include non-project items as well
-07:30 and it will look inside, it's looking inside the pill package in Python,
+07:30 and it will look inside, it's looking inside the PIL package in Python,
 07:38 so you can even search the standard library that way,
 07:41 I could look for dict for example in built in, we can go straight to dict.
 07:45 Now, you don't get too many details because this is just

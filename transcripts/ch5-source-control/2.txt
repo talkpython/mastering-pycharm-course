@@ -2,13 +2,13 @@
 00:06 let's just look at our github repository here, mastering pycharm course,
 00:10 we've already talked about where this lives,
 00:12 but you'll notice that there's really nothing going on here
-00:15 like a little logo, I put the course image and I've updated the read me apparently
+00:15 like a little while ago, I put the course image and I've updated the read me apparently
 00:19 but nothing has been committed
 00:22 and also notice that there are two branches
 00:24 like imagine, this is just to sort of pretend,
 00:26 I'm doing some sort of feature branch thing
 00:28 so I've got this feature branch one
-00:31 and maybe I'll issue a pull poor request back to the main master branch.
+00:31 and maybe I'll issue a pull request back to the main master branch.
 00:36 What we want to do is we are going to go back to the code that we already wrote
 00:40 and when I first did that, we did the editor stuff and the project stuff
 00:44 what I did is I created a folder called "demos" in here
@@ -18,7 +18,7 @@
 00:57 so I could run this and it will tell us what the items are
 01:01 basically available on Talk Python right now.
 01:04 So you can see that we're getting,
-01:08 I guess we are getting the 0 to 129,
+01:08 I guess we are getting the 0 to 
 01:14 129th one down here, we're not getting all of them.
 01:17 Here in program, we're only showing this little bit.
 01:19 You can see this is working fine, but it has not been checked into source control

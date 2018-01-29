@@ -1,4 +1,4 @@
-00:01 When you're working with a large Python files,
+00:01 When you're working with large Python files,
 00:03 sometimes it's nice to peek ahead and see what's out there,
 00:06 what's at a certain level, maybe there's little error
 00:09 and you are like, wow what is down there

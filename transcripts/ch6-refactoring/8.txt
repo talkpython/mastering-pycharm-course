@@ -45,7 +45,7 @@
 02:20 So we can put in different direction
 02:23 and copy the representation method to all the things that derive from it.
 02:28 We can extract a variable, we've played with this get defensive role,
-02:32 we saw random.randint (1, 12) maybe wasn't so obvious,
+02:32 we saw random.randint(1,12) maybe wasn't so obvious,
 02:36 so we could call this roll value,
 02:39 and that was just to highlight that bit of code
 02:42 and choose extract variable, that was great.
@@ -58,7 +58,7 @@
 02:59 We can extract not just variables, but a constant as well,
 03:04 if we want to extract the roll that we have in the bottom,
 03:07 maybe we want to come up with a roll once and just keep it constant
-03:12 so we could do that and we could THE ROLL at the top,
+03:12 so we could do that and we could get THE_ROLL at the top,
 03:14 now, granted that makes no real sense,
 03:17 but I am just showing you we could highlight this bit and extract it as a constant.
 03:21 We can also do extract parameters, like we have the 7 here,

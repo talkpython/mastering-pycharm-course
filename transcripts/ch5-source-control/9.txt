@@ -62,7 +62,7 @@
 03:37 So let's go down here, and the reason that we don't really know the ending,
 03:42 is if we look at this api in this thing
 03:45 there's really only two functions,
-03:47 there's download and then there's get an episode,
+03:47 there's download and then there's get_an_episode,
 03:49 give it the id and you get it back, maybe.
 03:52 So, notice that here's a dictionary and it contains the keys the episode id
 03:59 so let's say get count, or let's say get latest show id
@@ -93,7 +93,7 @@
 05:40 Okay, let's do it.
 05:43
 05:49 So we've deleted the branch, we've merged it into master,
-05:52 notice were back on master here, go over here refresh
+05:52 notice we're back on master here, go over here refresh
 05:59 the issue state is now closed,
 06:04 and do we have a closed pr? No.
 06:07
@@ -102,7 +102,7 @@
 06:17 we've got this change that happened just a minute ago,
 06:22 let's go look and see if it actually made the change here.
 06:26
-06:29 It looks like it did not, so all we have left is this sort of random git so check that in,
+06:29 It looks like it did not, so all we have left is this sort of "random gets" so check that in,
 06:33 so over here we just have the two functions
 06:35 we have download and get episode
 06:38 so we're missing or get link

@@ -34,11 +34,12 @@
 01:51 so we did this for our virtual environment for example
 01:54 as well as my little transcript folder,
 01:56 those were just resources that were in the git project
-01:59 but had nothing to do with our program really.02:02 Finally, templates roots, this is just where you put
+01:59 but had nothing to do with our program really.
+02:02 Finally, templates roots, this is just where you put
 02:06 your Jinja 2 or your Chameleon templates in your web app
 02:08 and when you create things like Pyramid web apps
 02:10 you'll see that it actually automatically
 02:13 marks the template folders as template folders
 02:16 you have don't to do anything there, but for some reason
 02:18 you've created one more by hand
-02:20 and you want to indicate like, here's the temple folder just use that.
+02:20 and you want to indicate like, here's the template folder just use that.

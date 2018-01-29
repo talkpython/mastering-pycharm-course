@@ -45,7 +45,7 @@
 02:26 So let me introduce you to the idea of code smells,
 02:29 so a code smell is a problem with code
 02:33 that is not technically not working, right
-02:37 you can look at some method and you go aah,
+02:37 you can look at some method and you go ugh,
 02:39 you kind of turn up your nose at it and you go, "That's not so great",
 02:42 but it's working, it's working code.
 02:45 There are different things that might make you turn up your nose at particular code

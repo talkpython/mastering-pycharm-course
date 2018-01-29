@@ -12,12 +12,12 @@
 00:34 If you hold down command on Mac or control on Windows or Linux,
 00:39 everything here becomes a hotlink
 00:42 so these are all things that you can go and just jump to
-00:44 so I can go to printer header and just click on it and it takes us right there.
+00:44 so I can go to print_header and just click on it and it takes us right there.
 00:48 Notice, that would be the navigate to declaration
 00:52 or even the command b it says
 00:54 so this little printer header just shows us like silly snake concept,
 00:59 so if we want to go to program guest.run command click again, there we are,
-01:03 if we want to see what the show commands is,
+01:03 if we want to see what the show_commands is,
 01:05 now we're kind of done with the mouse we hit command b
 01:08 or it depends, there's a different function on Windows,
 01:11 so here we'll go here and it says control b
@@ -28,7 +28,7 @@
 01:26 and we're printing this out, and notice
 01:30 we're actually printing this out white green white,
 01:33 so we're printing like a green snake here
-01:35 so if you want to know that looks like
+01:35 so if you want to know what that looks like
 01:39 just really quickly say copy this path, I'll run it over here in the new window
 01:44 oh yeah, we've got to have our virtual environment active
 01:51 so I'll just run it and here, right click run

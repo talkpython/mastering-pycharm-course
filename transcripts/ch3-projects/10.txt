@@ -10,7 +10,7 @@
 00:34 and you can always tell what the default is
 00:37 by opening up this little terminal window
 00:39 and you'll see just like if you had done it in the terminal
-00:41 it's already activated the the . /env/bin/activate
+00:41 it's already activated the . /env/bin/activate
 00:49 or /bin versus scripts in Windows
 00:52 but it's as if we'd already activated it
 00:55 and we can change that in run configuration up there

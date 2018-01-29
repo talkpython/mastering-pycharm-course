@@ -12,16 +12,16 @@
 00:37 but I can fix it for you and I can do that most of the time automatically
 00:42 if you just agree to it, so what's happening here?
 00:45 Well, we have this data access library
-00:47 but it doesn't have a change address function
+00:47 but it doesn't have a change_address function
 00:51 but we're creating this, we're writing this bit of code
-00:56 this is the first time we're ever going to need to change address function
+00:56 this is the first time we're ever going to need to change_address function
 00:59 and we're just about to switch over to data and write it.
 01:03 But we want to kind of sketch out our use case of it here
 01:05 and then we are going to go write it.
 01:07 The thing is, you don't have to switch over to data and write it,
 01:10 PyCharm will do that for you.
 01:12 So if we hit alt enter, you'll see it will pull up a list and it says
-01:16 hey how bout I create a function called change address in the modular data
+01:16 hey how bout I create a function called change_address in the modular data
 01:21 and it would actually have first parameter called user
 01:25 and the second parameter, like parameter 2 or something
 01:28 because it has no idea what that string means
@@ -68,7 +68,7 @@
 03:44 And if you say yes then it will propose to fix that.
 03:47 It has all sorts of things around package maintenance,
 03:50 one example is if I have a package that it's using a dependent package
-03:55 like one package is using say Request or SQLAlchemy,
+03:55 like one package is using say Requests or SQLAlchemy,
 03:58 it will propose to put those inside of the requirements.txt
 04:04 if it doesn't find them in there, stuff like that.
 04:06 Tons and tons more, you'll see these pop up all over the place
@@ -84,7 +84,7 @@
 04:38 Whereas when you're an expert, like
 04:41 yes you could go track down the requirements.txt file
 04:43 and write SQLALchemy in there
-04:47 or you could just hit all enter and keep coding
+04:47 or you could just hit alt enter and keep coding
 04:49 and not have to worry about that and stay in flow.
 04:52 So I think this is a great feature for all levels
 04:55 but it offers different things to different levels.
