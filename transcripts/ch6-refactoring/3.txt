@@ -1,4 +1,4 @@
-00:01 Here we are in our program, basically In our game loop
+00:01 Here we are in our program, basically in our game loop
 00:04 and there's a few things I don't really like about it.
 00:06 One, notice up here, we're creating our creatures and then we have our player
 00:10 and down through here, our player is doing in attack,

@@ -2,7 +2,7 @@
 00:04 and I think the right way to go about this is
 00:06 to just write a simple little program and talk about all the features
 00:09 that are immediately obvious and stand out for us.
-00:12 We're going to go create little application
+00:12 We're going to go create a little application
 00:15 that will go and download information about the Talk Python To Me podcast
 00:18 and say what the titles of the recent episodes are and things like that.
 00:22 We're going to do this and then there will be some features
@@ -29,9 +29,9 @@
 01:30 I'll call this program, and I am going to create one over here
 01:37 called service or something like that, for downloading all the data.
 01:41 Okay, so up here, let's define the main method, and we'll do something like
-01:48 "Hello, welcome to the Talk Python info download," or something like that.
+01:48 "Hello, welcome to the Talk Python info downloader," or something like that.
 01:57 It wouldn't be much work to actually edit this
-02:00 to have it download the mp3 or ogg files
+02:00 to have it download the MP3 or AAC files
 02:03 but, why don't I just do this, and let's say
 02:06 we're going to call some functions from this service over here.
 02:10 So let's go write a function.
@@ -55,7 +55,7 @@
 03:10 So, I can come over here and I can say download info,
 03:13 and it doesn't look like anything is happening, does it.
 03:17 But, notice there is a little squiggly, if I go here,
-03:21 a lightning bulb will show up, and if I hit alt enter, it gives me all sorts of stuff;
+03:21 a lightning bolt will show up, and if I hit alt enter, it gives me all sorts of stuff;
 03:26 I could import download info, like this, and if I hit that,
 03:30 it's going to actually do the right thing to put it up at the top here.
 03:34 Okay, so that's pretty cool, and again,
@@ -139,7 +139,7 @@
 08:17 it's because we didn't call main, Python, as you probably know,
 08:20 it's not like if you have a static main void it's just going to get called,
 08:23 so what we do is we use this convention,
-08:26 we say if_ _name_ _== '_ _main_ _ '
+08:26 we say if __name__ == '__main__'
 08:37 then we'll call main, and that is going to work, with little formatting, just fine.
 08:40 And because these little expressions are very common,
 08:44 PyCharm actually has what are called live templates,
@@ -185,7 +185,7 @@
 11:10 what's next, what are we looking for here,
 11:12 we're looking for a link, so this will be the link,
 11:25 pub date text and then we need to convert that into a date
-11:27 we'll just leave it as text, but in a real app we'd convert that to a daytime;
+11:27 we'll just leave it as text, but in a real app we'd convert that to a datetime;
 11:31 and then finally, I want to put the item here,
 11:36 so let's do this, say idx for index and we'll do an enumerate on this,
 11:40 I'm sure there's some kind of xml query I can do to get the show number out
@@ -221,7 +221,8 @@
 13:48 service.get_episode, that was cool
 13:52 and then I did this and I got nothing,
 13:55 in fact, even inside of service, this if I say dot— nothing,
-14:01 PyCharm doesn't know what this is.14:03 So let's add type annotations to this for example,
+14:01 PyCharm doesn't know what this is.
+14:03 So let's add type annotations to this for example,
 14:06 so I'm going to say: and the type this is an int,
 14:09 and it returns an episode, not a list.
 14:15 So if we come over here and we do this now, dot, ta-da,
@@ -241,7 +242,7 @@
 14:58 I think that wraps up our little demo for downloading some stuff here
 15:01 you can see that we can lift out what the various episodes were
 15:05 except for if I go over here, one other cool little feature
-15:09 when this crash, as I was fiddling around with intellisense
+15:09 when this crashed, as I was fiddling around with intellisense
 15:12 and left it in a broken state, two things—
 15:15 one, I don't have to save, there's not really a clear save button all the time
 15:20 you can go over here and there's probably a save somewhere,

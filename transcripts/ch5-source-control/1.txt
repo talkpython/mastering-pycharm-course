@@ -18,7 +18,7 @@
 00:56 so git is deeply supported in PyCharm,
 00:59 but we also have Subversion, if you want to go back to the year 2000,
 01:03 you could definitely use some Subversion.
-01:06 The Mercurial, they have CVS,
+01:06 They have Mercurial, they have CVS,
 01:09 you maybe haven't used that unless you've been around for a while,
 01:12 but in the 1990's that was quite popular.
 01:14 They also have support for Perforce,

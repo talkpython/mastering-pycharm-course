@@ -8,7 +8,7 @@
 00:28 there might be some functions or even classes
 00:30 that we're going to use in say a script block in our Chamelon templates,
 00:35 and PyCharm knows about all those different things,
-00:39 it can give you a completion, even re-factoring help
+00:39 it can give you completion, even re-factoring help
 00:42 across all these different languages, across hundreds of Python files,
 00:46 across different languages, it's really great.
 00:49 So this ability to understand the whole project, not just a single file,
@@ -20,7 +20,7 @@
 01:08 instead of jamming everything into one huge Python file.
 01:12 That leads to really high developer productivity
 01:15 if you can navigate and understand code really well,
-01:20 you type something. and then boom,
+01:20 you type "something." and then boom,
 01:23 here's a list of all the things that it does
 01:25 even if it happens to be defined somewhere else
 01:28 or somewhere not entirely clear where it comes from
@@ -75,7 +75,7 @@
 04:11 and search through what's available.
 04:13 One of the really great things with the PyCharm is
 04:15 that it has, there is probably an official term for it
-04:17 but I call these :helper fixes", it's a little light bulb that'll come up saying
+04:17 but I call these "helper fixes," it's a little light bulb that'll come up saying
 04:19 "You know, you called random.choice, but you didn't import random at the top,
 04:24 so your code is going to fail, but don't worry,
 04:27 I know that if I put import random at the top, then your code is going to run,

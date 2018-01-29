@@ -15,9 +15,9 @@
 00:57 and let's scroll up if we can without messing this up and see what happens.
 01:00 So we put it up at the top, there's this thing called S,
 01:04 and look, here's our string, so we'll go back down here
-01:07 and we'll call this dragon text and of course, up here it's naming it dragon text.
+01:07 and we'll call this DRAGON_TEXT and of course, up here it's naming it DRAGON_TEXT.
 01:11 So now if we look at our print header,
-01:14 okay we print out a new line, dashes, dragon text, dashes,
+01:14 okay we print out a new line, dashes, DRAGON_TEXT, dashes,
 01:19 we could even make that a constant,
 01:21 so if we change it, it changes only one,
 01:24 truly it's just using these two places like two lines 30 and 32

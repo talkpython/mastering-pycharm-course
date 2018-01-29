@@ -3,7 +3,7 @@
 00:08 so these requirements are often here
 00:10 for complex applications that require many dependencies
 00:13 or maybe it's some kind of package itself that has dependencies
-00:17 like let's say Requests, you're working on the Request package directly
+00:17 like let's say Requests, you're working on the Requests package directly
 00:22 or you've even created Pyramid web application
 00:25 which each web app is itself a package that has a bunch of dependencies.
 00:29 When you open one of these in PyCharm,
@@ -12,7 +12,7 @@
 00:38 In this case you can see that they're not
 00:41 whatever interpreter we have set up to run
 00:44 you can't really tell from this window,
-00:47 PyCharm can say Request, BeautifulSoup and Colorama are not satisfied
+00:47 PyCharm can say Requests, BeautifulSoup and Colorama are not satisfied
 00:52 so how does it know what these requirements are?
 00:54 Well, if you open up the requirements.txt
 00:57 you can see those are the three that are listed right there

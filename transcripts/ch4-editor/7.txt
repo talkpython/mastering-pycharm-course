@@ -9,7 +9,7 @@
 00:23 from the find user by email function
 00:26 so it should have two more lines below;
 00:28 and according to our current conventions,
-00:30 we really should have something like change_lower case a address
+00:30 we really should have something like change (lowercase a) address
 00:33 this is very much like Javascript style or Java style of function naming
 00:40 both for new email and for change address
 00:42 and it's not very Pythonic we should be using snake case after all.

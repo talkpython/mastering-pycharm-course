@@ -1,5 +1,5 @@
 00:01 Now you saw in the beginning
-00:04 when we opened our existing project for that snake bnb
+00:04 when we opened our existing project for that snake_bnb
 00:06 I went and I created a virtual environment on the command line
 00:10 using Python 3 venv command.
 00:14 And so there's conventions

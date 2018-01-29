@@ -19,7 +19,8 @@
 01:00 Here you can see the path in the preferences
 01:03 so you can go over here to the color scheme say Python
 01:06 and change the color of decorators
-01:09 or change the colors of strings or operators and all these things.01:13 All you've got to do is like here we click decorator
+01:09 or change the colors of strings or operators and all these things.
+01:13 All you've got to do is like here we click decorator
 01:15 and on the right where it says foreground it has some sort of yellow color
 01:18 you click that color and a color we look comes up, and you can pick it,
 01:22 or you can either take the sort of global definition,
@@ -42,14 +43,14 @@
 02:18 code that you picked up but you don't really know super well, things like that,
 02:22 even learning the standard library really well
 02:24 because you get great auto complete on all of those things.
-02:27 Here we have a wizard named Gandolf bubble 75 we created him,
+02:27 Here we have a wizard named Gandolf, level 75, we created him,
 02:31 we want to do some stuff, so we say hero.
 02:34 and right away we can see the wizard class defines an attack method
 02:37 the wizard class derives from creature
 02:40 which has a get defensive role a name and a level,
 02:43 so we could work with that as well.
 02:45 If we want to go way down to the Python data model
-02:48 heck we could go and work with a _ _dict_ _
+02:48 heck we could go and work with a __dict__
 02:50 that actually comes from object which is the base class of creature.
 02:53 So over on the right you can see the source
 02:57 of actually where that method or that property or field is coming from.

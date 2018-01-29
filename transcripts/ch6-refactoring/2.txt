@@ -36,7 +36,7 @@
 02:03 actually it'll do this for many different types, Javascript, Python, html and so on.
 02:09 So we're going to use Python, and you can anonymize certain things like
 02:13 look for the same structure but ignore the details
-02:17 of say like a string in a number
+02:17 of say like a string and a number
 02:19 but if you're taking a string and a number to it
 02:23 and then doing something else, then it's always the same that sort of series,
 02:26 if I were to check this that would signal as a duplicate.

@@ -2,8 +2,8 @@
 00:04 these little pop ups that document the various pieces you're working with
 00:07 and this works for built-in types in the standard library
 00:10 or types that we create.
-00:12 So here are heroes wizard that we created,
-00:14 it derives from creatures, you can see at the top,
+00:12 So here our hero is a wizard that we created,
+00:14 it derives from Creature, you can see at the top,
 00:16 and it has this method attack, and PyCharm is pretty smart,
 00:19 it tells you what the requirements of the creature object are and so on,
 00:23 but not much more than that.

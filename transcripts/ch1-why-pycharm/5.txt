@@ -12,7 +12,7 @@
 00:39 it's going to let you work a lot faster throughout the day
 00:42 and you're just going to start up PyCharm and just leave it going all day anyway,
 00:46 so once it's up and running, it doesn't really go any slower.
-00:49 All right, so I would say these IDS are actually faster and they make you faster,
+00:49 All right, so I would say these IDEs are actually faster and they make you faster,
 00:54 which is the most important thing you want to optimize for.
 00:57 You also might say, "Well these use a lot of battery,"
 01:00 because they take a lot of power, they're doing a lot of analysis

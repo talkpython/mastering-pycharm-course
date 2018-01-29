@@ -8,7 +8,7 @@
 00:18 or you know what does that even mean right,
 00:21 so we would like to give it more information
 00:23 of what types of Creatures can it take and so on.
-00:26 So, let's go over there, CMD B be or you know go to definition,
+00:26 So, let's go over there, CMD B or you know go to definition,
 00:30 so we'll come over here and in Python
 00:33 the way we create documentation for a method
 00:36 is we put the doc string at the beginning
@@ -18,7 +18,7 @@
 00:56 that's cool it auto matches the closing quote;
 01:00 if I hit enter— boom, look at that, it tells me here is my parameter,
 01:04 here is a return value, so I'll say
-01:06 the attack method will all attack and potentially kill
+01:06 the attack method will attack and potentially kill
 01:13 and the return value is going to be this bool
 01:21 and it's going to be true if Wizard wins, false if they are defeated.
 01:31 And then this Creature, this will be a Creature object
@@ -32,7 +32,7 @@
 02:06 and I'll hit F1 to put my help and it says here's the documentation,
 02:11 look, notice this part about well it needs to have these features, it's gone,
 02:15 it's like that's a Creature, straight up,
-02:17 your Wizard, it's a Creature, you fight and get a bool in.
+02:17 you're a Wizard, it's a Creature, you fight and get a boolean.
 02:20 And it says the attack method will attack and potentially kill the Creature
 02:25 and here is the Creature, which happens to be a Creature
 02:30 we could see what to do with that in a second,
