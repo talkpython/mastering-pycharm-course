@@ -1,0 +1,41 @@
+00:02 Have you created a Python package before?
+00:05 Well, you're going to now,
+00:07 because we're going to create a new Python package
+00:09 and use the PyCharm tools to make it installable
+00:13 and it gets the right structure, all those kinds of things.
+00:15 Over here, we're going to start from just blank,
+00:19 so you don't need to check out any code for this one,
+00:22 but what we're going to do is we're going to create a new project,
+00:24 we're going to make it into a package,
+00:27 not just a random Python project,
+00:29 we're going to add a silly little feature to it
+00:32 so you can run some code and play with it,
+00:35 we will create a setup file so that other people can install
+00:37 say from PyPi or other places your package;
+00:40 and finally, we're going to use that one by creating a virtual environment,
+00:44 running our set up to test that there
+00:47 and then importing the package to make sure it works.
+00:49 So you get a little background on what packaging in Python is
+00:52 we're going to come over here and see
+00:55 how you can use the PyCharm tools to make it a package,
+00:57 add a feature, it's just a simple little calculator app
+01:01 that lets you create like an add and subtract method
+01:05 so really, really simple, we're not going too far down into anything advanced here,
+01:10 the code is not what's important, it's the package.
+01:12 So we're going to call it Calcy, our little simple calculator,
+01:15 hopefully, that doesn't conflict with anything you have installed,
+01:18 I tried to name it something that probably doesn't exist.
+01:20 And you see that you can import it, use its math, submodule and add function.
+01:26 They want to create a setup package,
+01:28 beware that PyCharm may go overboard
+01:33 with all the virtual environment packages in there
+01:35 so just you have to clean that out, that's kind of unfortunate it does that
+01:39 maybe it will stop by the time you take this class, but right now it does it,
+01:42 and you'll see how to activate it
+01:44 notice the steps on Windows are slightly different than they are on Mac and Llinux,
+01:49 we're going to run the setup
+01:52 and make sure you go somewhere else on your file system
+01:55 not the working folder because it'll just pick up the package right there
+01:59 so then we're going to run the Python repl,
+02:01 and just interact with it like you saw before.
+02:04 Alright, so go and create a calculator package.

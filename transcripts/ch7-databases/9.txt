@@ -1,0 +1,27 @@
+00:01 Databases are really front and center in PyCharm.
+00:05 We saw we can add existing databases to our database explorer
+00:09 and use all sorts of cool tools against it
+00:12 and even have those schemas work with the editor itself.
+00:16 So it's your turn to play with databases in PyCharm.
+00:20 Over here on github under 5-databases
+00:24 you'll see there's some steps to go through here.
+00:27 First thing I am going to do is open an existing project
+00:29 which is database project, same folder right there
+00:32 and then open this up and it will come with a folder and a SQLite file
+00:36 so we're going to start by opening this SQLite database in PyCharm
+00:41 so we can explore it, and one of the important things that's going to happen here
+00:46 is you may configure the drivers to actually understand SQLite for later projects,
+00:50 once and for all on your machine, so that's cool.
+00:53 We're going to open up this existing project and explore it
+00:56 we're going to write some queries against it,
+00:58 to find some interesting tracks,
+01:00 this is like an album store with artist, album, tracks, users and so on
+01:05 and we're going to also use the diagram tools
+01:08 to understand how things like track and album,
+01:11 what they look like and how they are related to each other.
+01:14 And finally, you're going to see the really amazing feature
+01:17 of when you have SQL embedded within strings in Python files
+01:20 how you get both SQL language and database schema autocompletion
+01:25 which is just amazing.
+01:28 Alright, so get out there and play with this example
+01:30 and enjoy the database stuff.

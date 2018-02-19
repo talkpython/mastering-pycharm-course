@@ -1,0 +1,50 @@
+00:03 It's time to build some web applications with Python and PyCharm
+00:06 and this is super important because I feel Python's biggest strength,
+00:12 one of its most important areas is web development.
+00:15 The other being probably data science,
+00:18 but certainly, if you look at the different things people do with Python,
+00:21 some of the most major applications
+00:24 have been built on the web with Python,
+00:27 think of things like Instagram, Dropbox, YouTube,
+00:31 YouTube does several million requests per second using Python,
+00:35 so these are some major applications
+00:37 and Python's web support is varied and powerful
+00:40 and you'll see that PyCharm supports many of these things.
+00:43 So let's again look at how that happens,
+00:46 remember our pyramid of what PyCharm is really built of,
+00:49 if we're talking about the various parts of the web development,
+00:54 it actually involves two of these components.
+00:56 The server side framework stuff is all done through PyCharm itself
+01:01 that's the Python back end bits.
+01:03 The client side parts, the html, the templates, the CSS
+01:07 those are done through WebStorm.
+01:10 Now of course, when we're building Python based web apps
+01:12 especially data driven server side focused ones,
+01:15 the application is built out of many of these pieces right,
+01:20 that's one of the challenges of the web,
+01:23 you've got to learn all these different languages and technologies
+01:25 and you know— put them together.
+01:28 We're going to split this presentation into two parts
+01:31 server side and client side,
+01:33 so on the server side, we're going to talk about creating new server side projects
+01:36 how do we create a new Pyramid or Flask app,
+01:39 how do we load existing projects into PyCharm,
+01:43 so if we go to the internet and download some Pyramid web app for example
+01:50 which can be somewhat complex to set up,
+01:52 how do we get that imported correctly;
+01:55 we'll talk about the html template editors,
+01:57 this is like Chameleon or Jinja 2 and so on.
+02:00 Another one of the things that's important around both Pyramid and Django is
+02:05 they have tooling to kind of control them a little bit, especially Django,
+02:09 so in Pyramid, you have a setup.py
+02:11 that registers the web application as a package
+02:15 and we'll see that PyCharm has support for that,
+02:18 and in Django, there's a manage.py that does a lot of work
+02:22 for constructing your application and it's also supported in PyCharm.
+02:26 We'll see that when you create a Python web app in PyCharm,
+02:31 could be a little bit better if we leverage
+02:34 some of our mark directory stuff, we will talk about that,
+02:37 and finally, some web applications require you to run little tasks
+02:40 before like gulp or something like that, web pack,
+02:46 we'll see how you can leverage the parts of PyCharm
+02:49 to automatically make that happen before you run the app.

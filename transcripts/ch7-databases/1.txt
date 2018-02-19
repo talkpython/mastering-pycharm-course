@@ -1,0 +1,33 @@
+00:01 We've come to our database section
+00:03 and almost all major applications use databases and they generate tons of data
+00:07 and working with it is really, really important.
+00:11 It can be the difference between that
+00:13 super slow laggy type of experience or super fast and crisp,
+00:17 so we're going to see what PyCharm has to offer in the realm of databases.
+00:21 It's quite a bit.
+00:23 First let's ask the question— why is working with relational data hard?
+00:27 Well, there's a couple of reasons,
+00:29 but one of the primary reasons is actually broken or suboptimal tools.
+00:34 We don't often have great, especially visual tools
+00:38 to help us explore and interact and modify even the schema of our databases,
+00:46 so yes, sometimes there are tools for this,
+00:49 but typically it's some specialized database tool if it even exists
+00:54 that we need to use, it's not built right into our editor
+00:58 and you'll see some really amazing stuff that can happen
+01:00 because the data tools are integrated with our editing tools.
+01:05 Well, it's also hard because migrations
+01:08 have changing the schema after you put data in the database in production,
+01:12 yeah that's hard,
+01:15 and object/ relational mismatches,
+01:16 so yeah, working with relational data can be harder than maybe it should be
+01:21 but those last two, those are just the nature of relational databases
+01:24 so we're going to focus on the tools that PyCharm has
+01:28 that can really level up your experience of working with data.
+01:32 Remember this Pyramid here,
+01:34 we've got IntelliJ, WebStorm, DataGrip and PyCharm
+01:36 and PyCharm is sort of the Python tools plus all these other things.
+01:41 In this chapter what we're going to focus on really lives right here,
+01:45 everything is going to come from DataGrip
+01:48 except for the final little feature that we're going to talk about,
+01:52 which is pretty awesome, it has to do with Python plus DataGrip
+01:55 but pretty much everything else is kind of a DataGrip type feature.

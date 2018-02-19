@@ -1,0 +1,70 @@
+00:01 Now that we have an understanding of our data from the visualizations,
+00:04 let's talk about querying it, let's focus just on the album, pick any real table.
+00:08 So we saw that we can expand it and see what it's made of,
+00:13 we could right click and say jump to console
+00:16 so this is going to open up a way in which we can
+00:19 run queries against any of the tables
+00:21 so let's write a real simple one, select * from, hit space, watch this
+00:26 I love it, so that album, we got track
+00:30 and it also gives us like group by and whatnot
+00:33 we're going to say select * from album
+00:36 and that's probably what you want to do to just see the data
+00:38 but maybe you'll ask, some way you want to order it
+00:40 so you could say order by, or you could say where, name, now look at this,
+00:46 this is auto completion inside the table schema, that's pretty awesome
+00:50 we could say name is LIKE, it's like a substring search snake
+00:57 one of the albums has snake in its name, so let's go and run this
+01:01 and down here, you can see we get our one output Year of The Snake
+01:05 because the name has snake in it.
+01:07 Now, let's take away this, this where clause,
+01:10 because while it's great, it doesn't show us all the data.
+01:12 Here you can see we get just all the pieces
+01:15 and is really cool at the top like hey look prices index
+01:19 you can tell that right from the column right there
+01:22 this sort of visual tells you whether you are going to do a query
+01:26 based on an index or you are going to do it just—
+01:29 has preview there is no index, so that might be super slow if you had lots of data,
+01:33 it didn't really matter if you have like two records.
+01:36 Now we can also use this to modify data
+01:38 but it's not 100% obvious like let's change the price here
+01:42 run it again, see the price is 9.99
+01:45 we come over here and let's say we want this to be 19.99
+01:48 so I double clicked it and I hit enter, awesome, let's run it again,
+01:51 it's 9.99 again, what's wrong with this thing, it's broken.
+01:55 Not really. So you can edit this data, we can go down here like check has preview,
+02:00 things like that, but unless we push this button,
+02:04 save changes back to the database, nothing's going to happen;
+02:08 but if I do, notice little grayness and whatnot of those elements went away,
+02:15 run it again now that changes are sticking.
+02:17 That's pretty awesome isn't it?
+02:20 Come over here you can actually see what's running
+02:24 select * like, so you can see these down here,
+02:28 that pretty cool this little output there, we've got to change this,
+02:31 now the final thing to look at over here on the right,
+02:33 this is actually pretty powerful, so see this tab here
+02:37 so we get tab separated, what does this mean,
+02:40 there's all these different things we can get out of here,
+02:43 I could get comma separated values sort of export this as that,
+02:48 I could go over here and actually say, I would like the sql statements
+02:54 that will insert these records into the database, check this out.
+02:58 Now to make anything interesting happen, we have to press this button
+03:02 and you could save it to a file probably you will do that a lot,
+03:05 but I'm just going to do the clipboard.
+03:08 Now I'll just dump those up here, like so
+03:12 and notice, insert into album id such and such, such and such
+03:17 values— what they are, right
+03:22 this actually generates the statements that we would need
+03:26 if we wanted to take that data and reinsert it into another database,
+03:29 what else over here, we have updates, we have html table,
+03:33 all sorts of cool stuff that we can do.
+03:36 Now, the DDL is data definition/ description language,
+03:40 if we click this, it's actually going to show us
+03:43 the sql script that we would need to run to recreate exactly what this table is
+03:48 so what the columns are, what types they are,
+03:51 whether they are nullable, whether they are primary keys,
+03:54 as well as the uniqueness constraints and indexes and all that stuff.
+03:59 So if you want to generate it, DDL, that's a pretty awesome feature as well,
+04:04 so you can really do a lot of stuff with scripts over here
+04:07 and also if we wanted to do comma separated values
+04:09 we could do that to a clipboard and just put it like so,
+04:13 now we have csv version rather than insert version of the data.

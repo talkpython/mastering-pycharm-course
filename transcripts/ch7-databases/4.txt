@@ -1,0 +1,51 @@
+00:01 There are a lot of things we could focus on first
+00:03 as we start to explore the data— querying it, modifying it and so on.
+00:06 But let's start by trying to understand the data
+00:10 and a picture is really often worth a thousand words or something like that,
+00:15 so you'll see that we can actually do some pretty cool things.
+00:19 I could come over here and right click on track and say show me a diagram,
+00:24 or I could do better, I could actually click on a group of schemas
+00:28 or the whole database and say show me the diagram,
+00:31 and I get two options, one is a straight of visualization,
+00:34 another is what's called a visualization pop up
+00:36 let's do the straight normal visualization first.
+00:39 Look at this, how awesome is that?
+00:42 So I told you that is this foreign key from album id over to id
+00:46 and look, there it is, visually.
+00:49 We got SQLite in this master here, we don't really need that,
+00:52 I'll take that off of our diagram we put these up next to each other,
+00:56 it's kind of funky the way that maps over,
+00:59 but nonetheless, we can see this relationship
+01:01 and it's not a huge deal in this kind of simple little thing
+01:04 but if this was really complicated, this would be very helpful for us
+01:08 understanding how things relate,
+01:10 what the relationships are that we can navigate and things like that.
+01:13 It actually helps a lot that we have SQLAlchemy
+01:16 because we can come over here and look at this as well
+01:18 and it will tell us a little bit about— well, it will tell us a lot
+01:21 but you know, only one table at a time,
+01:24 it will tell us a lot about what's in here,
+01:27 but even so, seeing the big picture is really, really nice
+01:30 and so these diagrams I think they're great.
+01:32 Now, this is the sort of tabbed version,
+01:35 so sometimes you don't want to necessarily open up another tab
+01:38 and have a little file, so you can just do
+01:41 like a quick little peak if you will with this pop up,
+01:43 and here we have just this little quick pop up to remind you
+01:46 what the relationship of these things are.
+01:48 It's kind of hard to wrap your mind around it
+01:51 like if this was actually complicated there might be 50 tables
+01:53 you have to imagine this is complicated,
+01:56 but you saw when we did show us all these, this little pop up
+01:59 we got everything, including the little master
+02:03 maybe we want to just focus our attention
+02:06 on the relationships between just a few classes right,
+02:08 again, this is so simple, it didn't really matter
+02:11 but if you had many, you could focus on three or four tables
+02:14 which seems pretty reasonable,
+02:16 highlight them and say show us the diagram,
+02:18 and now only those tables are included in the diagram.
+02:21 This is really sweet, I love this feature
+02:23 it's really nice for both documenting and sharing the schema
+02:26 that you're using your data models with other developers
+02:29 and maybe in some form of documentation.

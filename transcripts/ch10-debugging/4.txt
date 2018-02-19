@@ -1,0 +1,80 @@
+00:01 Let's review some of the concepts that we covered during this debugging section.
+00:04 Over here we have our debuggers,
+00:08 hit some breakpoint on line ten of program.py
+00:11 and you can see all the variables,
+00:13 the special variables as well as the ones that are active in this function
+00:18 or in this overall module,
+00:21 so we've got our data, we've got our fibs generator
+00:24 our odd fibs generator and our o going through the loop
+00:27 and it looks like we're going through on the number 21 right now
+00:31 and we hit a breakpoint right there for some reason,
+00:35 so really, really nice and we could also see this in the editor
+00:39 so I almost never use this bottom window
+00:41 unless I'm trying to expand out of the list or something complicated,
+00:45 I just look up here, like on line 4 it shows you what data 1, 1, 3, 5, 13, 21
+00:51 if you look over on line 9 you know what o is, it's 55
+00:54 it's really awesome that PyCharm puts these values into the editor
+01:00 and the color is meaningful as well
+01:02 so green is kind of green-bluish, it hasn't really changed
+01:06 and then it turns orange when it has changed
+01:09 for example on line nine it's 55 because that was new.
+01:13 So here we can see the data lists, down here we can see the generators
+01:17 and here we can see our loop variable o
+01:20 which are the odd fibonacci number.
+01:23 Sometimes you want to override the values of a program
+01:26 it can be really tough to test every little condition
+01:29 like if I'm in a web app and I'm logged in
+01:31 and I am logged in as a regular user but I want to see what happens
+01:34 if I was actually an admin in a particular situation,
+01:37 I could go to my user account or the active user account and say
+01:41 set the value of is admin to true.
+01:44 Notice up here that we have the current value of o is 55
+01:50 what if we wanted to test it when it was 72 instead of 55
+01:53 we click set value, right click down in this little variables thing, click set value
+01:58 and then if we entered 72 instead of having the 55 there
+02:01 the program runs as if the value was 72.
+02:04
+02:08 We also watch expressions, not just variables
+02:12 variables are usually what you want to see
+02:14 but sometimes you want to do some processing with that variable
+02:18 or call the function or compare one thing against another,
+02:22 so you can put those in here as well,
+02:25 you just hit that little plus green thing right there with the glasses
+02:28 and then you type in the expression and then that will stay there
+02:30 even across the debug sessions, which is great.
+02:33 We have breakpoints, you can set breakpoints
+02:36 just by clicking here in this little gutter area,
+02:39 that toggles them on and off, that's pretty straightforward
+02:43 you run your code and it just stops when it hits one of the breakpoints,
+02:46 that's super nice already.
+02:48 We can also make these conditional,
+02:51 if you right click on an existing breakpoint
+02:53 you can check whether it's enabled,
+02:56 you can come down and actually set a condition
+02:59 here we only want to break on this breakpoint
+03:01 when our loop variable is greater than 100.
+03:04 And if you click more you get even more options
+03:06 the ability to say log to the console or remove it once it's hit, things like that.
+03:13 And once you've set this, notice right here there's a little question mark
+03:18 so it doesn't quite look like every other breakpoint
+03:22 maybe it could have a little more difference
+03:24 maybe it could have like a bigger color difference or something
+03:27 but that's what the question mark means,
+03:29 it means it's a conditional break point.
+03:31 Also if you check under the more options,
+03:35 log message when the breakpoint is hit, you get something like this
+03:38 and you can see those interleaved throughout your program
+03:41 and they even become a little hyperlink things
+03:43 you can take and get back to your code.
+03:45 Last thing, you may notice this warning here
+03:48 debugger speedups using Cython not found;
+03:51 now, you probably won't find it these days,
+03:55 PyCharm just released version 2017.3
+04:01 and with that, they actually ship these binaries for Windows and for Mac
+04:07 so if you're using Windows or Mac and a newer version of PyCharm
+04:10 you probably already have these high-speed alternative debugger speedups,
+04:15 I think you might still see this on Linux though
+04:17 and if that happens, you just highlight the stuff in the quotes
+04:20 it says run Python this— just copy that and run it
+04:24 and then this message will go away
+04:26 and your debugging experience will be a lot faster.

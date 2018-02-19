@@ -1,0 +1,55 @@
+00:02 We have our blue_yellow.sqlite database over here
+00:06 and notice, it has a little database icon on it ,
+00:09 it has nothing to do with the extension,
+00:12 that has to do with PyCharm looking at it and going,
+00:14 oh that's a SQLite file, so that's pretty awesome,
+00:17 if I create another one and just call it .sqlite
+00:19 you'd see it would just be like a square white file icon.
+00:22 So over here on the right, we have this thing
+00:25 that maybe has been tempting us to pull it out and it says database,
+00:29 this looks pretty awesome, we can create a new data source
+00:32 CMD N, we can click here, we can say data source,
+00:34 we could import it from a url, but check this out
+00:38 I was playing with it so it went to the top,
+00:41 but normally it would be near the bottom,
+00:43 so we've got Amazon Redshift or Azure, there is SQL server stuff,
+00:48 we've got, I think that's Excel, I am not sure I have never played with that,
+00:53 MySQL, Oracle, PostgreSQL, SQL server,
+00:58 Microsoft SQL server this maybe the better choice,
+01:01 I actually haven't tried both these and compared them,
+01:03 so there is a lot of options but we're going to choose SQLite.
+01:07 Now, when this comes up, you might have, right now it says driver,
+01:11 SQLite serial, and that might be cool, but it's very possible that it says
+01:16 no drivers, click to download driver,
+01:18 or maybe it's down here, it says no driver, click and download drivers,
+01:22 I've had that happen before, things don't really work
+01:24 unless you kind of click that and it just downloads and installs super easy
+01:27 but you've got to make sure you open up this dialogue and check that.
+01:31 So once that's done, once you have the driver in place,
+01:34 you could sort of skip all that, like I said,
+01:37 assuming you've already downloaded the driver at some point on your machine,
+01:40 we can come over here and we can drop this over here
+01:45 and you wait a second, it gets a little number,
+01:48 that means it's good, it understands stuff that's in there.
+01:50 We have one schema, we can open that up and look,
+01:52 we have our main and we have our album, we have our track
+01:55 this is the first edition of this database, first version of this database,
+01:59 and it only has albums and tracks,
+02:01 the farther that you go in the course it gets more and more complex
+02:03 with users and password resets and purchases,
+02:06 but this is going to be plenty good for us, we can expand this out ,
+02:11 and here, you can see this is the database representation
+02:15 of what SQLAlchemy generated;
+02:18 remember I said the name had a uniqueness constraint and an index,
+02:20 that's that little yellow thing, these are indexes,
+02:23 I think the little dot means unique down here, it's just the yellow, it's index,
+02:30 here are some things that are neither index nor unique
+02:33 and you can see down here these are the actual indexes and so on,
+02:36 and this one primary key, there is a little baby key
+02:40 so we can go and look at track as well,
+02:43 here's album id, there is a foreign key relationship, that's blue
+02:45 here's a primary key, that's yellow and so on.
+02:48 So this is pretty awesome and you can see that we've added this database here
+02:52 and we can go and do a bunch of stuff at it,
+02:54 we can view it in diagrams to try to understand it,
+02:58 we can edit it, we can query it, all sorts of stuff.

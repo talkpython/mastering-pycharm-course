@@ -1,0 +1,55 @@
+00:02 Now let's look at static files here.
+00:05 Notice there's a static file section and this is a Pyramid convention
+00:09 but what I'm going to show you with static files
+00:11 has to do with basically all the web frameworks.
+00:14 The first thing is if you look over here
+00:18 we are using bootstrap, but we're using it off the cdn.
+00:24 And I would kind of like to use a local version
+00:27 so let's go over here and copy this path so we can get to it very easily,
+00:34 cd there, and now we have this, let's make some directories,
+00:39 let's have one for css, one for Javascript
+00:43 and we'd put things in there, I guess we'd have one for images,
+00:47 just I'd prefer to put things together like this.
+00:50 Now, the other thing I want to do is
+00:52 let's use npm to install bootstrap locally,
+00:55 so npm install bootstrap.
+00:59 Okay, now if we look we have our node modules,
+01:04 there's bootstrap, there's the distribution, there's this let's say copy.
+01:09 Now, if we say copy relative path, that almost works for us
+01:13 let's go over here and paste it, see what we get.
+01:18 Notice it takes a little more than we wanted but that's pretty good.
+01:21 So there's our local file and we do get
+01:23 really cool things around, intellisense related to css,
+01:26 so if I have say a hyperlink, and we'll just put # for now
+01:30 this hyperlink represents like some kind of button looking thing
+01:33 so I can have a class and the class could be btn
+01:36 notice all that stuff comes from our bootstrap
+01:40 so I could say btn and btn- primary
+01:43 so we get all this great intellisense or autocomplete there
+01:48 and we could also have, let's go and add a new style sheet
+01:52 this will be ours, and we'll just have buttons list
+02:00 and we'll have that as a class.
+02:03 We'll just have, background is green,
+02:06 I have no idea what we are going to do with this.
+02:08 But if we go over here now, have back in our template
+02:13 we also have buttons list.
+02:17 So we have really awesome support for css, but one problem here,
+02:23 also by the way, notice we had great Intellisense inside our css file as well
+02:27 but one other problem, notice this,
+02:29 if I hover here, it says cannot resolve directory static,
+02:32 and if I go over here and I type /static I get zero help node modules,
+02:38 like if I didn't copy that I would never have gotten that right
+02:41 without just traversing the tree on the left.
+02:45 So we go to the top of the website and we mark it at a resource route here
+02:50 and that tells PyCharm when you're looking for static files
+02:55 this is kind of forward slash and then there's static and so on,
+03:00 and this is the way our web app maps, so this is perfect
+03:02 so we say /static/node when we actually want to load this up.
+03:06 So now, notice first of all, the error is gone
+03:08 and we should be able to recreate this super easy now
+03:11 /static/node_modules/bootstrap, what's in bootstrap
+03:17 is there a dist, there is, /dist/css/bootstrap.min.css, how about that
+03:24 and let's just make sure everything looks good still.
+03:27 Boom! This is all a bootstrap,
+03:31 like this little style here for the block quote with a bar
+03:36 that bootstrap, so it is still completely working, how cool is that.

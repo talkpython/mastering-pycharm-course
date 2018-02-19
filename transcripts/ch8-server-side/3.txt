@@ -1,0 +1,125 @@
+00:02 When we created our web project,
+00:04 you saw that we could choose all the main Python based page templates.
+00:08 In this case, I chose Chameleon
+00:11 because I think it's the cleanest, web friendliest version,
+00:14 we could have chosen Jinja 2 or the Django templates and so on
+00:18 and PyCharm has support for all of these,
+00:20 and whether this support lives in PyCharm directly or Web Storm,
+00:24 there is probably some sort of blend there
+00:27 but let's go and work with these templates just a little bit.
+00:30 So if we just change the thing that we're returning from here,
+00:34 let's make this interesting, we can live project for now,
+00:37 let's return some data, just some fake values,
+00:41 we'll return some titular numbers, I'm not sure what they mean,
+00:45 pretty much random, right.
+00:48 So we will return those and what else are we going to return,
+00:52 so over here, what else, let's return one more thing,
+00:55 I'll call this show odds, it's true.
+01:00 Okay, so now we're returning three pieces of information,
+01:04 so let's go look at how we can use these in the template.
+01:07 So each template language, we're going to look in this one,
+01:10 each template language Jinja 2, Chameleon and so on
+01:13 have their own way of working,
+01:15 but you'll see PyCharm actually understands these.
+01:18 So let's go clean that up,
+01:21 and in this content section let's just say
+01:23 put an h1 template demo code, html code,
+01:32 and then down here, let's say we would like to have another h2
+01:38 and we'll say showing odd numbers as well.
+01:42 Now, we want this to be visible only if show odds is true, right,
+01:49 but if it's false, we're going to hide it.
+01:52 So, like I said, the different template languages have different ways of doing it
+01:54 but PyCharm supports them,
+01:57 so for example in Chameleon, we have the template attribute language tal
+02:00 so we can come over here and type tal, and notice that,
+02:02 we have all the options, tal repeat, tal condition and so on,
+02:05 and what we're looking for is a condition
+02:07 and the condition were testing is show odds is true.
+02:10 Maybe we could even do not show odds, we'll say hiding odd numbers.
+02:15 So then let's go down here and we'll do another div
+02:19 and we'll have ul and li and notice we format this,
+02:26 I'll show you something really awesome here in a second,
+02:29 but let's suppose that we want to put a number here, that particular number,
+02:34 so we have to loop over this set
+02:36 and for each one of them we want to put a number,
+02:39 so we can go over here and say tal:repeat, n data,
+02:46 so down here we can just put n, next number is n
+02:53 so watch this, let's run it,
+02:58 we run it just in case Python side changes
+03:02 boom, look at that, showing odd numbers as well, how cool is that?
+03:10 So let's go to change this real quick, suppose this is data driven
+03:13 get this back from the database and this comes back false this time.
+03:16 Now we run it, hiding odd numbers, well not so much
+03:22 let's go down here and we'll do this tal:condition n % 2
+03:32 let's say show odds or n % 2 = 0
+03:39
+03:51 so now we're up here, I guess that's not quite where we wanted
+03:54 let's put this, let's do it like this, we'll put a div
+03:58 and within the div, we'll put the li now,
+04:00 I know you're probably thinking,
+04:03 you know what, you are not allowed to have a div here and I know that
+04:06 so I'll show you how we'll fix that, just a second.
+04:09 So we'll come over here and we'll do the repeat here
+04:11 but we'll just say omit tag is true, okay, now let's try it.
+04:15 Boom, look at that, we're hiding the odd numbers,
+04:18 we're only seeing the evens
+04:21 and if we go back to our database here to our app here
+04:28 and we say, you know actually this time show me those numbers
+04:32 and we wait, run it again, here we go, showing odd numbers as well.
+04:37 So you can see that we were able to use
+04:39 over here the temple language really nicely
+04:42 and we technically don't need this little span but that's okay.
+04:45 So we are able to use the tal: type of tags for Chameleon
+04:51 but like I said, you can use a different template of language
+04:53 it will also support those features,
+04:56 just you don't have the bracket percent type stuff from say Jinja.
+05:03 Okay, little format, now the last thing while we're here I want to talk about,
+05:09 there's a couple of things we did
+05:12 that could have been smoother, that could have been better
+05:14 one is, suppose I want to change this to a block quote,
+05:17 I have no idea why I would do that,
+05:19 but let's imagine I wanted this to be a block quote,
+05:22 in a lot of editors you have to go, you type here,
+05:24 I go over here and I go ok, I type here and I would say block quote
+05:29 and I would go down here and have to remember to make that a block quote
+05:32 but as you just saw if I work with this,
+05:35 the ending tag is always in sync,
+05:39 so if I want that a block quote, it's a block quote
+05:42 and the html is always in sync, it is not there's some huge tag structure
+05:47 and way down, somewhere you forgot to change
+05:51 the /span to /block quote, so things don't work
+05:55 PyCharm's got our back.
+05:57 Let's just run that really quick, see what we get.
+05:59 Beautiful— no it's not, but it took our change.
+06:02 Now, notice also down here, we have navigation
+06:04 if I want to go to the ul here I can go back to the li
+06:07 if I want to see what div is containing that or maybe the parent div
+06:10 I can go back to my block quote and keep working.
+06:14 Now this page is pretty small,
+06:16 maybe the other one would be a little more compelling
+06:18 so if I am say down here, I could see what is this template thing,
+06:23 oh that's right, there is the container, then there's the link
+06:26 yeah that's the one I was on.
+06:28 So this navigation is super, super helpful.
+06:31 And finally if I have something like this
+06:33 where I know I want to have a row with links,
+06:36 with the ul with three items I could type this out super painfully,
+06:40 and I could put the class and I could put the links
+06:42 but— hold on to your hats folks.
+06:45 PyCharm has this thing called zen coding,
+06:48 let's check that out really quick while we're in here.
+06:51 And I can say div, and that's going to create the div,
+06:54 I could hit tab and it'll create the div
+06:57 but in css the way you talk about classes is you say .class name
+07:00 so I could .row and it will create a div with a class row.
+07:04 However, we can go farther, we can say
+07:07 and I want that div contains another dive that has the class links
+07:13 and now if I hit tab, we get that.
+07:16 And I could go farther and say I want a ul
+07:18 and within the ul, I want the li and I want it three times,
+07:22 watch what happens when I hit tab now.
+07:24 Boom, it even navigates me through the pieces,
+07:27 part one enter, no, part two, no help, enter and so on.
+07:33 So this zen coding little thing, let me go back so you can see it,
+07:37 where you sort of express the css statement of a structure,
+07:42 a big hierarchy of html and then hit tab to expand it— fabulous.

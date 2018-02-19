@@ -1,0 +1,27 @@
+00:01 When you're debugging your code
+00:04 it's really important to have great tools to visualize
+00:07 and understand exactly what's happening
+00:09 and view the entire state of your app
+00:11 and we saw the PyCharm debugger is pretty top-notch of that.
+00:14 So let's go take an existing application
+00:17 and use debugging to understand its workflow.
+00:19 So over here in 7-debugging,
+00:22 we've got math tricks which is an existing little application that we're going to use
+00:28 we come down here into the core,
+00:30 this is the part we're going to try to understand
+00:32 and what we have is we have two generator methods, this yield keywords
+00:35 and generator methods are kind of weird
+00:37 you can think of them as restartable or pause and resume these methods
+00:43 so really, really cool in the way they work, really efficient
+00:46 but also kind of funky to understand,
+00:48 so what we are going to do is we're going to come down here
+00:51 and open up this project, open this in PyCharm,
+00:55 and we're going to run it just to make sure everything is hanging together
+00:59 you should see something like this,
+01:01 so we're going to play with breakpoints,
+01:03 we're going to use the visual debugger to step through and understanding the code flow
+01:06 and we're going to even alter the way the application runs
+01:10 by changing some of its state,
+01:12 which makes it go down different paths in the if block and things like that.
+01:15 So, open up this project, these math tricks
+01:18 and play with the debugger and see how it all works.

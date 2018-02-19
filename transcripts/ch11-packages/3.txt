@@ -1,0 +1,117 @@
+00:02 We've seen how PyCharm helps us work with existing packages
+00:05 when we played with Requests.
+00:07 But what about creating new packages?
+00:10 Now, over here I've created this folder for Requests
+00:13 I didn't put it in the source control
+00:15 because all I did was clone the get repository
+00:18 but this one we want to keep,
+00:20 so notice I have a package folder in a lower down environment here
+00:25 and I guess we could even go and say we don't want to look at it ,
+00:29 but one problem that you run into is the tooling I'm going to try to show you—
+00:34 doesn't work because PyCharm discovers that this is a package
+00:39 and it's like, well I don't need to do the create package stuff
+00:42 because hey, you already have a package
+00:44 even though I really want to create another package here.
+00:47 So in order to make this work,
+00:49 what we're going to do is open that directory by itself,
+00:51 here we have it, put it on PyCharm and off it goes.
+00:55 Okay, so let's create an application
+00:57 that's going to use a package we're going to create
+00:59 and let's create the package itself,
+01:01 so what actually defines a Python package in its true essence?
+01:05 Not very much to be honest, it is a directory that has __init__
+01:09 so let's say we're going to have the package
+01:12 so what do we get, we got a directory with a __init__.py in it and it's empty.
+01:18 We can put our implementation here
+01:20 or we can put it separate, you take your pick
+01:23 so we could define something external and import it here
+01:30 and the stuff that we imported would be in the package
+01:33 or we could just define it here
+01:35 for this simple thing I'm just going to define it in the __init__
+01:37 and what we're going to have is also itself quite simple,
+01:40 we're going to have a calculator, a calculator class
+01:43 and the calculator class is going to have a couple of features,
+01:46 have the ability to add and turn X plus Y
+01:52 and let's also have a subtract.
+01:57
+02:02 Now we actually wanted to have this class so we can play with it
+02:05 but PyCharm is saying this could be static
+02:07 and let's just say you know what—
+02:10 for this one I don't care if these could be static,
+02:12 I want them to be instances just for the heck of it.
+02:15 Okay, so this is great, we have this package
+02:17 but in practice, it's not enough
+02:20 we need to install the package, how do you install the package?
+02:22 You have a setup.py, so let's go and create that now
+02:27 so we have this selected, we can go tools
+02:29 and actually say not run but create a setup.py
+02:33 so this package is going to be called the_package
+02:38 and it's going to be version 0.0.1, something like that,
+02:43 url is going to be http://the_package
+02:46 and the license will be MIT
+02:48 I'll put me in here and my email address.
+02:55 Description, amazing package,
+02:58 all right so if you've done a bunch of setup.py stuff
+03:01 you maybe recognize these pieces and where they go
+03:04 but when I click ok, what I get is a setup.py
+03:08 now, one thing that's annoying probably at some point this will go away
+03:11 PyCharm will notice, this .env is actually not a source of packages
+03:17 it technically contains many Python packages
+03:20 but as you can see these are all just crappy built in ones,
+03:24 so let's clean this up,
+03:26 the idea is PyCharm is trying to find all the sub packages and list them
+03:29 so we could have like the package and then down here
+03:33 we could have a new package advanced or whatever
+03:39 and then down here, we might say we have the package.advanced
+03:46 I was trying to help us with that.
+03:53 Okay great so this is super cool, right
+03:54 it looks like we should be able to run this,
+03:56 let's go down to the Python console here,
+03:58 I think the fact that it's added this
+04:02 is probably going to not let us have this fail, I'd like to have this fail.
+04:06 But I think it's going to work, look at that
+04:10 we could say c = the_package.calculator, like that,
+04:16 c.add (7, 11)
+04:20 18, our package works, it's amazing.
+04:23 Okay, so let's go and see how we can work with this
+04:27 let's go create one more app, this app is going to consume this as well,
+04:31 I'll call this the_app, all right,
+04:34 and Python file called package_app
+04:41 here we'll say import the_package
+04:45 and we'll just do a little print using the package
+04:51
+04:54 we'll do the same thing
+04:57
+05:02 all right, it looks like it may be working let's try to run it and see what happens,
+05:06 I think it probably will work— yeey, it works.
+05:08 However, that's only because PyCharm has altered the path to include this
+05:12 so let's go over here and let's copy this path, and do it this way
+05:20 so let's cd over here
+05:22 actually, go back really quick and activate our virtual environment
+05:27 and then we can go to the_app
+05:30 alright, here we are, if we just say Python package,
+05:35 no module or package, why—
+05:36 because we haven't run the setup.py, let's go back,
+05:41 there, now we have the setup.py maybe that belongs in there, I don't know,
+05:49 I haven't really organized this as well as I should
+05:51 but just to give you guys the sense what we're working with here,
+05:53 if we run setup.py and we say develop
+05:56 it did work pretty well, let's go over to setup
+06:00 okay great they're using setup tools
+06:03 the old version of PyCharm used to use distutils,
+06:06 which didn't have the develop version.
+06:11 Okay, great so this worked very well
+06:13 now if we go back to our, the_app here
+06:20 remember we ran this before and it failed
+06:23 what about now— of course it works
+06:25 because we installed the package that we just created in PyCharm.
+06:29 So what did we do— again, you would never jam this together like this
+06:34 but we have our package we created, we gave it the __init__
+06:37 and we even have our sub package, if we really cared about that,
+06:41 and then we created the setup.py
+06:44 by using the details, basically the tools here
+06:47 now it goes to run,
+06:50
+06:53 and then we ran it, right here, like so,
+07:00 and that installed it into our virtual environment,
+07:02 and then we can of course run our app, using the package.

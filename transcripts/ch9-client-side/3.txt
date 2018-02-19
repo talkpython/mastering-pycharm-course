@@ -1,0 +1,93 @@
+00:01 One of the projects that I am interested in in building some things with,
+00:04 is this one called Ionic.
+00:07 So this is really, really sweet,
+00:10 it builds basically native IOS and native android applications
+00:13 but using Javascript, html and css.
+00:16 It has little widgets that look and adapt to the various OSs,
+00:20 that look like IOS widgets and look like android widgets and so on.
+00:23 Now, in order to use this, it's based on Angular 2 and TypeScript
+00:28 along with Javascript and html 5,
+00:31 I think that's probably largely because Angular 2 itself is based on TypeScript
+00:34 but I have to play with this more to really understand why that is,
+00:38 but if I want to work with TypeScript,
+00:41 TypeScript is a super set of Javascript,
+00:44 think of it as like what C++ is to C.
+00:47 So the idea what TypeScript is
+00:49 that you start out with basically the TypeScript language
+00:51 and then you compile it down, you transpile it, if you will
+00:56 down into Javascript which then runs on all the platforms.
+00:58 So let's see how this works in PyCharm.
+01:02 So we can go over here and let's just suppose
+01:05 we're tired of our home js being written in Javascript,
+01:12 we're going to write it in TypeScript, you also see this CoffeeScript,
+01:15 but if you look at the popularity of the TypeScript versus CoffeeScript,
+01:18 TypeScript is way more popular.
+01:21 So we'll just call this app, and notice right away,
+01:24 it says do you want to compile TypeScript to Javascript,
+01:27 notice also if you look over here, there's no little chevrony thing
+01:31 we have that you can expand this, just the TypeScript, I'll say okay, great;
+01:37 now let's go write something,
+01:40 let's define a class and we get TypeScript intellisense,
+01:43 that's cool, I'll call this person,
+01:47 and let's come down here and define a constructor
+01:49 which is a thing you do in TypeScript
+01:52 and I can come and create some public elements, some public properties
+01:57 just by taking them here as public arguments,
+02:01 that's the way it works in TypeScript,
+02:03 so let's have name, which is a string, public age, which is an int
+02:10 sorry, this had number in Javascript, we can go like this;
+02:14 now that actually defines a class with two properties, name and age,
+02:21 if we save this, notice right away that this little chevron is here,
+02:25 and if we expand it, we have an app.js, and we actually open it,
+02:31 you can see that we define a person which an IIFE,
+02:36 the result of this IIFE, an immediately invoked function over here
+02:40 and it defines a function, which takes two parameters,
+02:44 this is the constructor and then we're returning this thing
+02:47 and then that defines the type,
+02:50 that's the way you do classes in base Javascript,
+02:53 and you can actually control what level of Javascript the compiler compiles against.
+02:57 So this is pretty cool, we could come back over to our html
+03:01 and let's include our little app.js in the right location, like so
+03:07 and go over to our site and let's just do this,
+03:09 we'll say let p = Person, and right there we got that,
+03:16 and we could give it say a name, which is Tom and the age is 11,
+03:22 and then over here we could log out p. and what have we got,
+03:28 p.name is p.age years old,
+03:39 and you probably want some plus action going on right here,
+03:44 maybe put that back to var, I think the level of Javascript is not set that high
+03:48 it's probably set to a much older version of Javascript where let was not supported,
+03:53 we can change that in the second.
+03:55 But now, we should be able to create this object and run it,
+03:59 of course, we're running the wrong one,
+04:01 let's go back over here and view this in the browser,
+04:05 view the console, p is not defined,
+04:09 I made a minor mistake here, it's all the Python's fault, I blame them.
+04:14 So, of course in Javascript we need new when invoking these things,
+04:18 so let's go over here and reload this, here you go,
+04:21 now we have Tom is 11 years old.
+04:24 And so what happened here is we can write our code in TypeScript
+04:27 and maybe you can tall I don't write a ton of TypeScript
+04:30 but you know, I dabble in just enough when I need it.
+04:33 And you'll write the TypeScript, just every save that we do
+04:37 automatically compiles this output here
+04:40 and then we're able to consume it over here,
+04:44 as long as you don't forget the new.
+04:48 Now, the other thing I want to look at really quick is
+04:51 we didn't get any help with things like let and constant and so on
+04:53 and that's because the level of ECMAscript we're targeting,
+04:57 we can come over here and say we're targeting ECMAscript 6,
+05:01 this is the shiny new one and this only runs in the newer browsers
+05:04 and we can come over here and apply this
+05:07 and now we should be able to do things like define let
+05:11 so what I tried to write before, p= new person, Jake and he is 14,
+05:20 now notice, PyCharm is now saying—
+05:23 you know, you should be more specific than var
+05:26 and we can actually come over here
+05:29 and change this to a const if it is not changed or to a let,
+05:32 so we can change that to a const, and change that one to a let.
+05:42 So, make sure you change your Javascript,
+05:46 you can even enable a file watcher
+05:49 to transpile this to an older version of Javascript if you need to,
+05:53 but if you look over here in our modern browser
+05:56 that should totally still work, and it does,
+05:58 so no need to change it for using modern browsers, so I am going to say no.

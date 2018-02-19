@@ -1,0 +1,50 @@
+00:01 Let's review some of the concepts that you saw
+00:04 while we were working with packages in our demo.
+00:07 So we saw that we can load existing packages
+00:10 here we're using requests.cookies
+00:13 and it's easy for us to just open up requests
+00:17 PyCharm knows that this is a package,
+00:19 it knows that when it imports stuff it has to say requests. for the various things
+00:23 so it's really good at working with packages
+00:26 that maybe you got off of github or wherever.
+00:30 So this is nice, one of the things we need to do
+00:33 actually to be able to leverage that package,
+00:36 to run it and import it into say our program for getting some kind of package,
+00:41 trying to use it and see how it works, and making changes
+00:45 maybe eventually with the goal of doing a PR
+00:47 back to the original package owner or something like that
+00:49 is you have to install it, or more importantly set it up in development mode
+00:53 so you can do that by just going tools run setup task
+00:57 down here you get all of the options
+00:59 if you type develop then it'll go and install all the dependencies
+01:04 and register requests locally, so that at least that virtual environment
+01:10 knows to go back in local right here to run this local copy of Requests.
+01:14 Now on the other hand, we might want to create a new package from scratch
+01:19 not work with someone else's,
+01:21 so we can come down here and say new python package
+01:24 and this honestly doesn't do very much for you
+01:26 it creates a directory with a __init__
+01:28 so this works for packages or subpackages
+01:31 you could just create a directory
+01:33 and put a Python file name __init__ in there if you want
+01:35 but this I guess saves you a step in,
+01:38 it sort of follows the convention a little bit more closely.
+01:40 So these packages are not particularly useful
+01:43 if you can't install them to use them elsewhere
+01:45 so we can go and create a setup.py
+01:47 and you can just go to tools create setup.py
+01:51 this doesn't work if you already have a setup.py anywhere in your project
+01:54 so just be aware of that.
+01:56 Look at this dialogue, it asks you all the pertinent questions
+01:59 what is the name, what's the version, what's the license and so on and so on,
+02:02 I hit OK and then boom— out pops a setup method ready to go and a setup.py.
+02:10 Now traditionally PyCharm has used distutils.core
+02:14 to get setup and just recently they switch to the setup tools version
+02:19 and that's important because the older versions don't have the develop option
+02:23 so python setup.py develop, that didn't use to work,
+02:27 just by pressing the button as long as you're using 2017.3 or above though
+02:32 it looks like everything is golden.
+02:35 If for some reason you don't have that,
+02:37 you can just alter the import statement at the top
+02:40 and then you are ready to roll, your new package is ready to be set up
+02:44 and used or tested or whatever you want to do with it.

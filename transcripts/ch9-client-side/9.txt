@@ -1,0 +1,35 @@
+00:01 Python is a premier language for building web applications.
+00:06 Many of the best web apps in the world are written in Python
+00:10 and of course, PyCharm is really amazing in all the ways,
+00:15 it brings the various web technologies
+00:17 which can feel quite scattered and random and disconnected,
+00:20 how it brings it all together seamlessly.
+00:23 In this turn, in this exercise, you're going to get out
+00:28 and create a web application that is sort of fake data driven
+00:31 and play around with the html, the server side bits and so on.
+00:35 We're not going to do too much with things like TypeScript or Angular JS
+00:38 because it's not a Javascript class,
+00:41 but you saw that all those features are there as well.
+00:44 It's over on github 6-web-applications over here,
+00:49
+00:52 just go to your turn here and make sure that you pick the web applications.
+00:57 Come down here and you'll see that we're going to create
+01:00 a basic, Pyramid based web app,
+01:02 you can create whatever one you want, but in this example we're going to use Pyramid.
+01:05 We're going to implement a view method
+01:07 we're going to take some data from that view,
+01:09 pass it to a template, render the template
+01:11 and change the overall look and feel of the site.
+01:14 So there's some steps that guide you through this
+01:16 some pictures how it's supposed to look, so initially, it looks like this,
+01:19 because this is what a blank Pyramid starter project looks like,
+01:22 we're going to create some data here that we can get
+01:26 and we'll call it fake_data.py because it's not a real database
+01:30 but it's kind of a stand in for a data access layer.
+01:33 And we're going to define a view method that returns this data
+01:35 and then finally down here at the end,
+01:38 we're going to set it up so that it renders these items into our application.
+01:44 We are also going to change the overall look and feel of the site
+01:47 by adding a little @talkpython, whatever social media you want down there
+01:51 that's going to be applied across the entire site, not just this one page.
+01:55 So follow the steps and have fun playing with web apps and PyCharm.

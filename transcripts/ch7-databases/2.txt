@@ -1,0 +1,38 @@
+00:01 Now, in order to make working with the database tools interesting
+00:04 and have real data, I created this simple little application that we can play with,
+00:09 some of which I copied from a previous class, some of which I wrote from scratch.
+00:13 So, if you look here, we've got our main method
+00:18 it sort of sets up some data access stuff and then it calls list albums,
+00:22 and notice, this may look familiar to you, this is a SQLAlchemy statement
+00:27 so we're creating a database session
+00:30 and we're creating a query based on the album class
+00:34 which is a model mapped into the database,
+00:38 and we're getting everything, we'll just order
+00:40 by the name descending, reverse alphabetical
+00:43 and then we're just looping over them
+00:45 and we're actually traversing a foreign key relationship over to a track table here,
+00:50 we're not actually pulling back the tracks, but we are doing a length on them.
+00:54 So first, let's run this, you can see, nothing super exciting,
+00:57 there are two albums in our database,
+00:59 the Year of The Snake, which has five tracks
+01:02 and Digital Age Boys and Girls, six tracks.
+01:04 Okay, so this actually comes from my Python for Entrepreneurs class,
+01:08 The Blue Yellow Rockets app is a thing we built,
+01:11 so let's just look super quick, we're using SQLALchemy,
+01:14 there is nothing in the tooling that really matters around SQLAlchemy
+01:17 we're just happy to be playing with it through there.
+01:20 So over here we have an album class
+01:23 which derives from SQLAlchemy base, it's mapped to the table album
+01:25 and it has a bunch columns, and interestingly,
+01:28 we've got indexes and uniqueness constraints
+01:32 and things like that, like the name is indexed and it has to be unique.
+01:36 Similarly over here, we've got our albums
+01:40 and there's a foreign key relationship from the album id back to the albums id.
+01:45 Alright, so that generated this database over here
+01:49 you can see we're basically connecting to SQLite
+01:54 and we could connect to lots of different databases as we'll see,
+01:58 but connecting the SQLight means there's really no server for you to set up
+02:01 so it's as easy as it can be to play this demo.
+02:04 With that in place, what we're going to do really is
+02:07 explore the data that was created by this application in this little database
+02:12 and we'll do that in the next couple of sections.

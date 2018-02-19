@@ -1,0 +1,74 @@
+00:02 It's time to focus on the debugging capabilities of PyCharm.
+00:05 One of the things I really like about PyCharm is its visual debugging
+00:10 and they really make a lot of things about discovering
+00:15 how your code is running, it's super easy
+00:19 and I feel like this in particular is one of the places
+00:22 where the other editors badly fall down,
+00:24 you end up just doing a bunch of print statements
+00:27 or you end up in some command line debugger
+00:30 which let me tell you, is not the same type of thing.
+00:33 So, let's get into it, let's take a simple little application
+00:36 that's not entirely obvious what it's doing
+00:39 and debug it and play with it using PyCharm.
+00:42 So to get started, what we're going to do is
+00:45 you just go up, we have our run configuration
+00:47 and a little play button we've been using
+00:49 this time we're going to use debug button for debugging.
+00:52 So that's pretty straightforward and when you run it, it opens up this console
+00:55 in the commands there's a bunch of little buttons down here
+00:57 you need to get familiar with, so we'll go through them real quick
+01:00 and then we'll do an example of going through this.
+01:03 So first of all, you can click this button to say
+01:05 show me where, which file on what line we're running at right now.
+01:10 You might have stepped in a few lines
+01:12 and then moved all around trying to figure out what's happening
+01:14 and this is like take me back to where we are,
+01:17 what are we doing again, oh yes we're doing this.
+01:19 Down here this is to step over,
+01:21 so if you're in a function and you want to just go down line by line,
+01:25 this is the button for you,
+01:27 but if you're in a function and you're like
+01:29 I need to go inside this other function that's being called here,
+01:32 then you click step into.
+01:35 Now step into will step into anything,
+01:37 it'll step into packages that you've installed from PyPi,
+01:40 and step into even standard library stuff potentially.
+01:43 Sometimes you don't want to go into other people's code
+01:46 you want to just go into your code
+01:48 so you click this step into my code button
+01:51 and it will only go into the stuff that you've written
+01:53 not the external pieces which is really nice.
+01:55 Sometimes you might have to force that
+01:58 so you can use this button if it's there.
+02:01 Now, when you're inside of a function,
+02:03 maybe you've stepped into it, and you are like
+02:05 I'm kind of done here but I want to go up a level and see what's happening
+02:09 so you just sort of bail out of one level and go up clicking this step out;
+02:14 and then this other one is really nice, this run the cursor
+02:17 so if you're like alright, these five lines are great
+02:19 but I want to go check this out,
+02:22 you put your cursor on that line you just say run to here
+02:24 and then you continue debugging, that's great.
+02:27 And sometimes you want a little scratch pad to just say
+02:29 is this thing greater than that other thing,
+02:31 if I call this and compare with that it will return true
+02:34 so you can use this evaluate expression,
+02:36 it's like a little calculator type thing that pops up,
+02:39 you can type whatever you want in there.
+02:41 Notice, we are over here and there's two other green buttons
+02:44 you've got to be careful about which green button you press,
+02:47 this one means completely throw away all your work,
+02:51 all of your steps and start over.
+02:54 This one means keep going, stop this, and just run it again.
+02:59 So you want to be really careful to press the resume one if that's what you want
+03:02 or the start over one, it's not so big if you missed that one
+03:06 but if you mean to keep going and you hit that start over button
+03:09 or even the play button in the upper right,
+03:11 that's going to throw away all your work,
+03:13 so be careful about which one you pick here.
+03:15 Finally, before we get started
+03:17 there is the debugger tab and there's the console tab in this debug window down here,
+03:21 so before we were looking at the debugger side
+03:24 but if there is any program output or if it asks us any questions
+03:28 like type this in, or choose this option
+03:30 you have to come over this console window to see that.
