@@ -13,7 +13,7 @@ Let's start exploring some of my favorite editor features in one shot. Autocompl
 
 Open the project called `bad_wizard` (same folder as this file).  Creating a virtual environment in `bad_wizard` before opening it is encouraged but not technically required.
 
-There is a lot wrong with bad wizard, but don't mess with the warnings yet. Instead, on line 43 in file `program.py`, type 
+There is a lot wrong with bad wizard, but don't mess with the warnings yet. Instead, on line 43 in the file `program.py`, type 
 
     hero.
 
