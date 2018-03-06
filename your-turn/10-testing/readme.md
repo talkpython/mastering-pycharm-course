@@ -15,7 +15,7 @@ To run the tests, you'll need to add a pytest run configuration. In the run conf
 
 ![](./resources/add.png)
 
-Set the target to `path` with value `./tests.py`. Now run the tests and see they are failing.
+Set the target to `path` with value `./yourtable/tests.py`. Now run the tests and see they are failing.
 
 ![](./resources/failing.png)
 
