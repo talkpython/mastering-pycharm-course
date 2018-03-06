@@ -36,7 +36,7 @@ For this section:
 
 ## Make it a package
 
-Use PyCharm's "create package" feature to create the package implementation itself. Name it **`calky`** as in calculator.
+Use PyCharm's "create package" feature to create the package implementation itself. Name it **`calcy`** as in calculator.
 
 ![Python package](./resources/new-package.png)
 
@@ -52,7 +52,7 @@ To make importing it easier, add this line to `__init__.py`:
 from calcy import math
 ```
 
-That means you can consume it by typing `import calky` then calling `calky.math.add(7, 11)`.
+That means you can consume it by typing `import calcy` then calling `calcy.math.add(7, 11)`.
 
 Use the Python Console in PyCharm to test this (it adds the necessary path adjustments to run the package):
 
