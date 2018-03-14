@@ -3,10 +3,10 @@
 00:08 We can go clone this thing and then go in there
 00:10 and we just install and run.
 00:14 Let's go over to PyCharm first and create a place to do that.
-00:19 I'll have this electron test or something like that,
+00:19 I'll have this electron_test or something like that,
 00:29 so we copy this path, it will be really easy to get there, like so.
 00:34 Now, what it says we need to do is we need to clone the repo
-00:39 so that's going to download the various bits of html, so we don't have to type it,
+00:39 so that's going to download the various bits of HTML, so we don't have to type it,
 00:45 we'll go into the little quick start which is here
 00:49 and we'll see that we have an index and a main.
 00:51 The last thing we have to do is
@@ -21,8 +21,8 @@
 01:21 So here we now have our Node modules and all of this
 01:27 and we can actually set this up to run inside of PyCharm
 01:31 so we can edit it, we can use all the cool stuff
-01:35 with TypeScript and Less and whatever else you want to use to work with it.
-01:40 The first thing we've got to do is make sure that we have the Node plug in installed,
+01:35 with TypeScript and LESS and whatever else you want to use to work with it.
+01:40 The first thing we've got to do is make sure that we have the Node plug-in installed,
 01:45 so if you go to plug ins and then you see that you have Node—
 01:48 it turns out we don't have Node, so let's go browse for Node
 01:53 and we want this one, the Node JS, okay
@@ -57,13 +57,13 @@
 04:01 Alright, so not the easiest thing in the world,
 04:04 but we've got our Electron selected, we've got the right working directory,
 04:08 now, what happens if I run this, wait for it,
-04:12 I am, there it is, let's just make some changes
+04:12 bam, there it is, let's just make some changes
 04:14 to see that this is actually doing a thing.
 04:18 Electron is fun, we could do something like this,
 04:28 all right, so we made this little proclamation that hey Electron is fun
 04:33 let's run it again, notice that right there, how cool is this?
 04:38 So we are doing full on Electron JS inside of PyCharm,
-04:42 so just leveraging the fact that really this is Web Storm plus PyCharm, it's a super set.
+04:42 so just leveraging the fact that really this is WebStorm plus PyCharm, it's a super set.
 04:50 So, super cool, I definitely think playing with Electron JS is fun,
 04:53 but like I said, I do wish there was a Python equivalent
 04:56 that really was as polished as Electron JS.

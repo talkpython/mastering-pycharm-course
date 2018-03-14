@@ -1,30 +1,31 @@
 00:03 Now let's look at one of these Javascript frameworks
 00:05 and see how we get even better support in PyCharm.
-00:08 So here we have Angular Js and this is one of the more popular ones,
-00:11 I showed you the ionic example and of course,
-00:14 that's based on Angular so that's pretty cool. 00:16 And over here is a little tutorial
-00:18 on working with Angular Js like these little things here,
-00:22 and you can go and edit the html and the css to make this happen.
+00:08 So here we have Angular JS and this is one of the more popular ones,
+00:11 I showed you the Ionic example and of course,
+00:14 that's based on Angular so that's pretty cool. 
+00:16 And over here is a little tutorial
+00:18 on working with Angular JS like these little things here,
+00:22 and you can go and edit the HTML and the CSS to make this happen.
 00:26 So let's look over here, I do a little reformat,
-00:29 we've got a link to Angular, this is Angular one,
+00:29 we've got a link to Angular, this is Angular 1.0,
 00:34 it doesn't really matter, the way it works is all basically the same.
 00:39 So we come down here, we have our code here
 00:43 first thing we've got to do is we've got to go here and say
 00:46 this is an ng app, let's put that away there, like so.
 00:52 So we'll say this is our app and then down here
-00:55 we're going to have things like ng clicks, so if I type ng
-00:58 you can see I've got bind, app, class, cloak,
+00:55 we're going to have things like ng-click, so if I type ng
+00:58 you can see I've got -bind, -app, -class, -cloak,
 01:02 all the various things that you would do
-01:04 and now we have actual Angular Js help not just html, css and Javascript,
+01:04 and now we have actual Angular JS help not just HTML, CSS and Javascript,
 01:10 but support for all that, let's have a look here.
 01:13 One more time in our browser,
 01:16 and see what we've created or copy and paste, take your pick.
 01:20 So it looks pretty good so far, if we click around
-01:22 you can see our little Angular Js app is working,
+01:22 you can see our little Angular JS app is working,
 01:24 granted it doesn't do very much, but it's quite easy to build
-01:29 as you can see with all the support for the Angular Js features
-01:33 and I find this really helpful because I don't do Angular Js so much
-01:36 so I am like is it ng bind, is it bind colon,
+01:29 as you can see with all the support for the Angular JS features
+01:33 and I find this really helpful because I don't do Angular JS so much
+01:36 so I am like is it ng-bind, is it bind colon,
 01:40 how do you do conditionals in here, and all this kind of stuff,
 01:44 controllers, routing, all the things you do in Angular,
 01:47 it's really nice to be able to just leverage the intellisense that is built in here.

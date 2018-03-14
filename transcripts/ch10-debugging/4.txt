@@ -10,7 +10,7 @@
 00:31 and we hit a breakpoint right there for some reason,
 00:35 so really, really nice and we could also see this in the editor
 00:39 so I almost never use this bottom window
-00:41 unless I'm trying to expand out of the list or something complicated,
+00:41 unless I'm trying to expand out a list or something complicated,
 00:45 I just look up here, like on line 4 it shows you what data 1, 1, 3, 5, 13, 21
 00:51 if you look over on line 9 you know what o is, it's 55
 00:54 it's really awesome that PyCharm puts these values into the editor
@@ -20,7 +20,7 @@
 01:09 for example on line nine it's 55 because that was new.
 01:13 So here we can see the data lists, down here we can see the generators
 01:17 and here we can see our loop variable o
-01:20 which are the odd fibonacci number.
+01:20 which is our odd fibonacci number.
 01:23 Sometimes you want to override the values of a program
 01:26 it can be really tough to test every little condition
 01:29 like if I'm in a web app and I'm logged in

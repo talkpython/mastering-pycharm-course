@@ -1,13 +1,13 @@
 00:01 The final operation we want to work with here
 00:03 is to possibly change the schema,
-00:05 what if we need to add a column, on or add an index or something like that,
+00:05 what if we need to add a column, or add an index or something like that,
 00:08 we can go over here and right click and say modify column for existing ones
 00:13 here we could change stuff about it like it could become unique
-00:16 or autoincremeting, or something like that
+00:16 or autoincrementing, or something like that
 00:20 we could also go to the keys, go to the indexes
 00:24 and say we want to add an index on whatever, right
 00:29 go in here and add those things.
-00:32 So we can't edit it on the column by column
+00:32 So we can edit it on the column by column
 00:37 or probably it makes more sense to modify the table like so,
 00:40 so we come over here and basically it was
 00:43 as if we had double clicked one of these things

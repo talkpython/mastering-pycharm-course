@@ -27,7 +27,7 @@
 01:40 so I could say btn and btn- primary
 01:43 so we get all this great intellisense or autocomplete there
 01:48 and we could also have, let's go and add a new style sheet
-01:52 this will be ours, and we'll just have buttons list
+01:52 this will be ours, and we'll just have buttons-list
 02:00 and we'll have that as a class.
 02:03 We'll just have, background is green,
 02:06 I have no idea what we are going to do with this.
@@ -50,6 +50,6 @@
 03:11 /static/node_modules/bootstrap, what's in bootstrap
 03:17 is there a dist, there is, /dist/css/bootstrap.min.css, how about that
 03:24 and let's just make sure everything looks good still.
-03:27 Boom! This is all a bootstrap,
+03:27 Boom! This is all bootstrap,
 03:31 like this little style here for the block quote with a bar
-03:36 that bootstrap, so it is still completely working, how cool is that.
+03:36 that's bootstrap, so it is still completely working, how cool is that.

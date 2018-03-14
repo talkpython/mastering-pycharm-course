@@ -1,7 +1,7 @@
 00:02 It's time to focus on the debugging capabilities of PyCharm.
 00:05 One of the things I really like about PyCharm is its visual debugging
 00:10 and they really make a lot of things about discovering
-00:15 how your code is running, it's super easy
+00:15 how your code is running super super easy
 00:19 and I feel like this in particular is one of the places
 00:22 where the other editors badly fall down,
 00:24 you end up just doing a bunch of print statements
@@ -27,8 +27,8 @@
 01:19 Down here this is to step over,
 01:21 so if you're in a function and you want to just go down line by line,
 01:25 this is the button for you,
-01:27 but if you're in a function and you're like
-01:29 I need to go inside this other function that's being called here,
+01:27 but if you're in a function and you're like,
+01:29 "I need to go inside this other function that's being called here,"
 01:32 then you click step into.
 01:35 Now step into will step into anything,
 01:37 it'll step into packages that you've installed from PyPi,

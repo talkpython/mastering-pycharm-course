@@ -1,8 +1,8 @@
 00:02 Packages play a central role in Python.
 00:05 One of the main powers that Python has
-00:09 is that you can go to PyPi and find among the 120,000+ packages
+00:09 is that you can go to PyPI and find among the 120,000+ packages
 00:15 something to do almost anything,
-00:18 you want to reach inside mp3 files and change their tags and album art,
+00:18 you want to reach inside MP3 files and change their tags and album art,
 00:22 fine there's totally a couple options to do that,
 00:25 you name it, there's a good chance that it's out there.
 00:27 So either you want to consume and work with one of these packages

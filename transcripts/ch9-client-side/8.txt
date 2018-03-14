@@ -1,14 +1,14 @@
 00:01 Let's review some of the core things that we learned
-00:04 about working with client side, Javascript and html
+00:04 about working with client side, Javascript and HTML
 00:07 and projects in general with PyCharm.
 00:10 So we can come over here and say create a new project
-00:13 if we're doing a pure client side html thing,
+00:13 if we're doing a pure client side HTML thing,
 00:16 chances are you've created like a Pyramid or Django or Flask app
 00:20 and then you're working with these features in there,
 00:22 but you can't come over and create an Angular CLI app
-00:25 a traditional Angular JS app foundation, html 5,
+00:25 a traditional Angular JS app foundation, HTML 5,
 00:29 Node, as we saw, this is the server side express web framework
-00:35 and this even have this option requires the Node JS plug in
+00:35 and this even have this option requires the Node JS plug-in
 00:39 that we installed during the demos previously.
 00:42 We also have the various React ones, Twitter Bootstrap
 00:45 and even the Web Starter Kit.
@@ -36,31 +36,31 @@
 01:54 And if you open up the TypeScript file
 01:58 you can also open up the Javascript file side by side
 02:01 and look at those and see what you're actually getting on the Javascript side.
-02:06 PyCharm support for the various Javascript front end frameworks,
-02:09 here you can see Vue JS, so vue if, vue for, vue once,
+02:06 PyCharm has support for the various Javascript front end frameworks,
+02:09 here you can see Vue JS, so vue-if, vue-for, vue-once,
 02:14 in our demo, we actually worked with Angular JS
 02:17 so many of the popular frameworks are supported
-02:20 you may have to go get a plug in for it,
+02:20 you may have to go get a plug-in for it,
 02:22 but you should get pretty good intellisense there.
-02:24 We saw that Less like TypeScript is supported
-02:28 so we can work in Less which is I think a nicer style of doing css
+02:24 We saw that LESS like TypeScript is supported
+02:28 so we can work in LESS which is I think a nicer style of doing CSS
 02:33 and then once we do this, of course we get
 02:36 do you want to enable the file watcher, yes, of course you do
 02:40 and when you do, you get just like before,
-02:43 you have the Less and you get the transpiled css file over here on the right,
-02:47 and the Less maybe is a little more verbose at least in this example,
+02:43 you have the LESS and you get the transpiled CSS file over here on the right,
+02:47 and the LESS maybe is a little more verbose at least in this example,
 02:52 but it is definitely more maintainable especially for large projects.
-02:55 Now, for that to work, you have to npm install Less,
-02:59 remember, Less is not the command, it's Less C
-03:02 so you want to definitely make sure that you don't put Less there, but Less C
-03:07 and if you don't have Less C, you probably need to npm install Less,
+02:55 Now, for that to work, you have to npm install LESS,
+02:59 remember, LESS is not the command, it's LESS C
+03:02 so you want to definitely make sure that you don't put "less" there, but "lessc"
+03:07 and if you don't have lessc, you probably need to npm install LESS,
 03:10 but once you do that everything compiles
-03:13 and you get this transpiled css that is based on the Less file,
-03:17 edit the Less, include the css in your html.
+03:13 and you get this transpiled CSS that is based on the LESS file,
+03:17 edit the LESS, include the CSS in your HTML.
 03:21 Finally, we can even add Electron support with just the tiniest bit of work
-03:26 once you have that Node JS plug in
+03:26 once you have that Node JS plug-in
 03:28 then if we want to do Electron JS to build desktop apps, that's totally easy,
-03:32 so make sure you have the Node JS plugin installed
+03:32 so make sure you have the Node JS plug-in installed
 03:35 and then you can figure it annoyingly by going to the hidden bin folder
 03:40 and this is not a field where it says Node interpreter
 03:43 you can't type in that, you have to browse to that.

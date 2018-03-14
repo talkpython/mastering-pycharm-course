@@ -6,7 +6,7 @@
 00:17 PyCharm knows that this is a package,
 00:19 it knows that when it imports stuff it has to say requests. for the various things
 00:23 so it's really good at working with packages
-00:26 that maybe you got off of github or wherever.
+00:26 that maybe you got off of GitHub or wherever.
 00:30 So this is nice, one of the things we need to do
 00:33 actually to be able to leverage that package,
 00:36 to run it and import it into say our program for getting some kind of package,
@@ -14,7 +14,7 @@
 00:45 maybe eventually with the goal of doing a PR
 00:47 back to the original package owner or something like that
 00:49 is you have to install it, or more importantly set it up in development mode
-00:53 so you can do that by just going tools run setup task
+00:53 so you can do that by just going to tools run setup task
 00:57 down here you get all of the options
 00:59 if you type develop then it'll go and install all the dependencies
 01:04 and register requests locally, so that at least that virtual environment
@@ -27,8 +27,8 @@
 01:28 so this works for packages or subpackages
 01:31 you could just create a directory
 01:33 and put a Python file name __init__ in there if you want
-01:35 but this I guess saves you a step in,
-01:38 it sort of follows the convention a little bit more closely.
+01:35 but this I guess saves you a step,
+01:38 and it sort of follows the convention a little bit more closely.
 01:40 So these packages are not particularly useful
 01:43 if you can't install them to use them elsewhere
 01:45 so we can go and create a setup.py

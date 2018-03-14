@@ -20,7 +20,7 @@
 01:09 and I wish there was a better way to copy a path
 01:12 but I don't know maybe there is that I just don't know, but let's copy that.
 01:18 So we're going to put this over here
-01:22 and we're going to say let's have a first Pyramid
+01:22 and we're going to say let's have first_pyramid
 01:27 now notice, PyCharm actually updated middle of this class,
 01:36 which is awesome, that means you guys get to see a slightly newer version
 01:38 but they added one really awesome feature
@@ -74,7 +74,7 @@
 04:37 Success!
 04:39 Look at that, we have our web app going,
 04:42 everything looks good and we even have our little debug toolbar extras
-04:45 that got added in with things like more requests,
+04:45 that got added in with things like our requests,
 04:53 with our performance analysis and stuff
 04:55 and by the way, 1 millisecond response time,
 04:59 our processing time, it's pretty awesome.
@@ -110,7 +110,7 @@
 06:32 that way if it's running and you rerun it, it'll just automatically restart,
 06:35 so if we rerun it, it's running, and if I try to run it again,
 06:38 it will say we're going to restart that,
-06:40 and I just say yeah, I always do that.
+06:40 and I just say yeah, always do that.
 06:42 So this is definitely the way to do it for the web
 06:45 and now we have our demo project, this is being passed,
 06:47 there is a little glitch in the template thing that came out, no big deal;

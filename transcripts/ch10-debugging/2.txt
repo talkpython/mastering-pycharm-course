@@ -4,7 +4,7 @@
 00:09 you don't want to make it too complicated but not too simplistic as well.
 00:13 So what we're going to run is program
 00:15 and I have a run configuration for that up here
-00:18 and it imports some things from math tricks
+00:18 and it imports some things from math_tricks
 00:20 and one of the math tricks we can do is
 00:22 give me all the fibonacci numbers.
 00:24 The other math trick is I can take any sequence of numbers
@@ -37,7 +37,7 @@
 02:01 okay that's right, we're right here,
 02:03 and you can see the call stack not super interesting
 02:05 because all of this stuff down here,
-02:07 this is all just Python start up here is our code.
+02:07 this is all just Python start up -- here is our code.
 02:10 We also have our variables, like we have our data here
 02:13 and you can see that we have our list and it's empty for the moment
 02:17 and we also have things like the various special stuff

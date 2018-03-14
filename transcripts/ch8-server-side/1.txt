@@ -45,6 +45,6 @@
 02:31 could be a little bit better if we leverage
 02:34 some of our mark directory stuff, we will talk about that,
 02:37 and finally, some web applications require you to run little tasks
-02:40 before like gulp or something like that, web pack,
+02:40 before like gulp or something like that, webpack,
 02:46 we'll see how you can leverage the parts of PyCharm
 02:49 to automatically make that happen before you run the app.

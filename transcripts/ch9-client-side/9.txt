@@ -1,12 +1,12 @@
 00:01 Python is a premier language for building web applications.
 00:06 Many of the best web apps in the world are written in Python
-00:10 and of course, PyCharm is really amazing in all the ways,
-00:15 it brings the various web technologies
+00:10 and of course, PyCharm is really amazing in all the ways
+00:15 it brings the various web technologies,
 00:17 which can feel quite scattered and random and disconnected,
 00:20 how it brings it all together seamlessly.
 00:23 In this turn, in this exercise, you're going to get out
 00:28 and create a web application that is sort of fake data driven
-00:31 and play around with the html, the server side bits and so on.
+00:31 and play around with the HTML, the server side bits and so on.
 00:35 We're not going to do too much with things like TypeScript or Angular JS
 00:38 because it's not a Javascript class,
 00:41 but you saw that all those features are there as well.
