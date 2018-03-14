@@ -12,7 +12,7 @@
 00:38 but maybe you'll ask, some way you want to order it
 00:40 so you could say order by, or you could say where, name, now look at this,
 00:46 this is auto completion inside the table schema, that's pretty awesome
-00:50 we could say name is LIKE, it's like a substring search snake
+00:50 we could say name is LIKE --it's like a substring search-- snake
 00:57 one of the albums has snake in its name, so let's go and run this
 01:01 and down here, you can see we get our one output Year of The Snake
 01:05 because the name has snake in it.
@@ -57,7 +57,7 @@
 03:26 if we wanted to take that data and reinsert it into another database,
 03:29 what else over here, we have updates, we have html table,
 03:33 all sorts of cool stuff that we can do.
-03:36 Now, the DDL is data definition/ description language,
+03:36 Now, the DDL is data definition/description language,
 03:40 if we click this, it's actually going to show us
 03:43 the sql script that we would need to run to recreate exactly what this table is
 03:48 so what the columns are, what types they are,

@@ -15,10 +15,10 @@
 00:54 that we need to use, it's not built right into our editor
 00:58 and you'll see some really amazing stuff that can happen
 01:00 because the data tools are integrated with our editing tools.
-01:05 Well, it's also hard because migrations
-01:08 have changing the schema after you put data in the database in production,
+01:05 Well, I'd say it's also hard because migrations
+01:08 you know, changing the schema after you put data in the database in production,
 01:12 yeah that's hard,
-01:15 and object/ relational mismatches,
+01:15 and object/relational mismatches,
 01:16 so yeah, working with relational data can be harder than maybe it should be
 01:21 but those last two, those are just the nature of relational databases
 01:24 so we're going to focus on the tools that PyCharm has

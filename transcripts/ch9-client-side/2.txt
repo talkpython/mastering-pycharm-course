@@ -1,7 +1,7 @@
-00:01 Now let's play around with some of the html and Javascript features here.
+00:01 Now let's play around with some of the HTML and Javascript features here.
 00:05 Notice in the web clients side I have made a web app
 00:08 because we're also going to have a Node JS thing over here
-00:11 so let's go and open this, we can say open this in the browser default
+00:11 so let's go and open this, we can say open this in the browser, default,
 00:15 and here we just have our default test bed
 00:18 and what we need is we just want to see the console
 00:20 we're going to go down there and see the output,
@@ -15,12 +15,12 @@
 00:41 So it's really nice that we have this dead code detection
 00:44 but let's go ahead and call that, notice auto complete as you would expect there
 00:47 and we're going to come over here and let's just
-00:51 person = Jeff and then I'm not going to do a console.log person the name right
+00:51 person = "Jeff" and then I'm not going to do a console.log the person's name, right?
 00:58 we could even do something like nice to meet you, like so.
 01:05 Now there's something we're doing wrong here, can you catch it?
 01:08 Obviously there is something wrong with person but what is it?
 01:11 I guess it depends how much Javascript you write,
-01:13 but is it made person in here global?
+01:13 but is it that we made person in here global.
 01:16 And we need to run this of course,
 01:18 I haven't put the link in to pull in the Javascript
 01:21 so we can do that quickly like so
@@ -40,11 +40,11 @@
 02:11 The other thing to keep on your mind I guess
 02:13 let's just add one more Javascript file here
 02:16 let's call this home.js and over here we can actually do some other stuff
-02:22 let's say define another function, register action,
-02:27 action name something like that
+02:22 let's say define another function, registerAction,
+02:27 actionName, something like that
 02:30
-02:32 so over here and then let's just add a register action really quick,
-02:35 load or something, remember in this place we had a run at load
+02:32 so go over here and then let's just add a registerAction really quick,
+02:35 load or something, remember in this place we had a runAtLoad
 02:41 so again we have run at load talks about where it comes from
 02:45 and all those types of things,
 02:47 it even has help with modules and dependencies and things like that
@@ -56,8 +56,8 @@
 03:01 you have the refactoring all the things that you guys would expect.
 03:04 So we come over here and refactor
 03:06 actually let's refactor this one, it's more interesting across
-03:10 so we can come over here and say run at load but once
-03:14 go back here, load but once, it's beautiful.
+03:10 so we can come over here and say runAtLoadButOnce
+03:14 go back here, runAtLoadButOnce, it's beautiful.
 03:19 Okay, so the Javascript tools are really great
-03:23 we've already saw a lot of the html and css stuff on the server side
+03:23 we already saw a lot of the HTML and CSS stuff on the server side
 03:26 but of course, it's the same story here.

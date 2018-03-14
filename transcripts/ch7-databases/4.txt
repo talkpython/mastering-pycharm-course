@@ -6,7 +6,7 @@
 00:19 I could come over here and right click on track and say show me a diagram,
 00:24 or I could do better, I could actually click on a group of schemas
 00:28 or the whole database and say show me the diagram,
-00:31 and I get two options, one is a straight of visualization,
+00:31 and I get two options, one is a straight up visualization,
 00:34 another is what's called a visualization pop up
 00:36 let's do the straight normal visualization first.
 00:39 Look at this, how awesome is that?

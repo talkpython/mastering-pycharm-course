@@ -1,12 +1,12 @@
-00:01 One of the projects that I am interested in in building some things with,
+00:01 One of the projects that I am interested in building some things with,
 00:04 is this one called Ionic.
 00:07 So this is really, really sweet,
-00:10 it builds basically native IOS and native android applications
-00:13 but using Javascript, html and css.
+00:10 it builds basically native iOS and native Android applications
+00:13 but using Javascript, HTML and CSS.
 00:16 It has little widgets that look and adapt to the various OSs,
-00:20 that look like IOS widgets and look like android widgets and so on.
+00:20 that look like IOS widgets and look like Android widgets and so on.
 00:23 Now, in order to use this, it's based on Angular 2 and TypeScript
-00:28 along with Javascript and html 5,
+00:28 along with Javascript and HTML 5,
 00:31 I think that's probably largely because Angular 2 itself is based on TypeScript
 00:34 but I have to play with this more to really understand why that is,
 00:38 but if I want to work with TypeScript,
@@ -46,7 +46,7 @@
 02:47 and then that defines the type,
 02:50 that's the way you do classes in base Javascript,
 02:53 and you can actually control what level of Javascript the compiler compiles against.
-02:57 So this is pretty cool, we could come back over to our html
+02:57 So this is pretty cool, we could come back over to our HTML
 03:01 and let's include our little app.js in the right location, like so
 03:07 and go over to our site and let's just do this,
 03:09 we'll say let p = Person, and right there we got that,
@@ -73,7 +73,7 @@
 04:40 and then we're able to consume it over here,
 04:44 as long as you don't forget the new.
 04:48 Now, the other thing I want to look at really quick is
-04:51 we didn't get any help with things like let and constant and so on
+04:51 we didn't get any help with things like let and const and so on
 04:53 and that's because the level of ECMAscript we're targeting,
 04:57 we can come over here and say we're targeting ECMAscript 6,
 05:01 this is the shiny new one and this only runs in the newer browsers

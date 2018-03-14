@@ -10,9 +10,9 @@
 00:34 and just to paste out some information, and this is an Electron JS app
 00:41 it looks just like standard Mac OS app here,
 00:45 and it looks like a Windows app over there.
-00:47 Another one is Postman great for api
-00:49 so over here we could hit the rss feed for Talk Python,
+00:47 Another one is Postman, great for APIs.
+00:49 So over here we could hit the RSS feed for Talk Python,
 00:53 what do we get— wait for it to download
-00:56 here you can see that's the rss feed right.
+00:56 here you can see that's the RSS feed, right.
 01:00 So these are all Electron JS apps,
 01:03 so let's see how we might use this in PyCharm.

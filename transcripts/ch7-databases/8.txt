@@ -59,7 +59,7 @@
 03:07 or sql inserts or whatever it was that you last selected
 03:10 so these are all the different export types,
 03:14 so csv is pretty common, notice there are some Javascript specific ones
-03:18 or groovy closure, I don't really do anything with those
+03:18 or groovy, closure, I don't really do anything with those
 03:22 but if that's useful to you, you can definitely work with those as well.
 03:26 Now under DDL, we can say show me the data description language
 03:32 to actually generate this table,

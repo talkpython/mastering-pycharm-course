@@ -62,8 +62,8 @@
 03:26 the idea is PyCharm is trying to find all the sub packages and list them
 03:29 so we could have like the package and then down here
 03:33 we could have a new package advanced or whatever
-03:39 and then down here, we might say we have the package.advanced
-03:46 I was trying to help us with that.
+03:39 and then down here, we might say we have the_package.advanced
+03:46 It was trying to help us with that, but obviously it was a little overzealous
 03:53 Okay great so this is super cool, right
 03:54 it looks like we should be able to run this,
 03:56 let's go down to the Python console here,

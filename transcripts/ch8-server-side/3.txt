@@ -8,9 +8,9 @@
 00:24 there is probably some sort of blend there
 00:27 but let's go and work with these templates just a little bit.
 00:30 So if we just change the thing that we're returning from here,
-00:34 let's make this interesting, we can live project for now,
+00:34 let's make this interesting, we can leave project for now,
 00:37 let's return some data, just some fake values,
-00:41 we'll return some titular numbers, I'm not sure what they mean,
+00:41 we'll return some particular numbers, I'm not sure what they mean,
 00:45 pretty much random, right.
 00:48 So we will return those and what else are we going to return,
 00:52 so over here, what else, let's return one more thing,
@@ -18,7 +18,7 @@
 01:00 Okay, so now we're returning three pieces of information,
 01:04 so let's go look at how we can use these in the template.
 01:07 So each template language, we're going to look in this one,
-01:10 each template language Jinja 2, Chameleon and so on
+01:10 each template language (Jinja 2, Chameleon, and so on)
 01:13 have their own way of working,
 01:15 but you'll see PyCharm actually understands these.
 01:18 So let's go clean that up,
@@ -26,7 +26,7 @@
 01:23 put an h1 template demo code, html code,
 01:32 and then down here, let's say we would like to have another h2
 01:38 and we'll say showing odd numbers as well.
-01:42 Now, we want this to be visible only if show odds is true, right,
+01:42 Now, we want this to be visible only if show_odds is true, right,
 01:49 but if it's false, we're going to hide it.
 01:52 So, like I said, the different template languages have different ways of doing it
 01:54 but PyCharm supports them,
@@ -34,8 +34,8 @@
 02:00 so we can come over here and type tal, and notice that,
 02:02 we have all the options, tal repeat, tal condition and so on,
 02:05 and what we're looking for is a condition
-02:07 and the condition were testing is show odds is true.
-02:10 Maybe we could even do not show odds, we'll say hiding odd numbers.
+02:07 and the condition were testing is show_odds is true.
+02:10 Maybe we could even do not show_odds, we'll say hiding odd numbers.
 02:15 So then let's go down here and we'll do another div
 02:19 and we'll have ul and li and notice we format this,
 02:26 I'll show you something really awesome here in a second,
@@ -51,7 +51,7 @@
 03:13 get this back from the database and this comes back false this time.
 03:16 Now we run it, hiding odd numbers, well not so much
 03:22 let's go down here and we'll do this tal:condition n % 2
-03:32 let's say show odds or n % 2 = 0
+03:32 let's say show_odds or n % 2 = 0
 03:39
 03:51 so now we're up here, I guess that's not quite where we wanted
 03:54 let's put this, let's do it like this, we'll put a div

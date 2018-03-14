@@ -44,7 +44,7 @@
 02:48 our_var, no, it has no our_var.
 02:52 This is the Requests package from the system
 02:56 what we want to do is we want to build a work in Python
-03:00 and in our little Python app, this is just the repl,
+03:00 and in our little Python app, this is just the REPL,
 03:04 but just as well it could have been I ran my app right here in this environment.
 03:08 So what I need to do to make this one the one that I'm working on
 03:13 but for this virtual environment is

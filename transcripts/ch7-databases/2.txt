@@ -2,7 +2,7 @@
 00:04 and have real data, I created this simple little application that we can play with,
 00:09 some of which I copied from a previous class, some of which I wrote from scratch.
 00:13 So, if you look here, we've got our main method
-00:18 it sort of sets up some data access stuff and then it calls list albums,
+00:18 it sort of sets up some data access stuff and then it calls list_albums,
 00:22 and notice, this may look familiar to you, this is a SQLAlchemy statement
 00:27 so we're creating a database session
 00:30 and we're creating a query based on the album class
@@ -27,11 +27,11 @@
 01:28 we've got indexes and uniqueness constraints
 01:32 and things like that, like the name is indexed and it has to be unique.
 01:36 Similarly over here, we've got our albums
-01:40 and there's a foreign key relationship from the album id back to the albums id.
+01:40 and there's a foreign key relationship from the album id back to the album's id.
 01:45 Alright, so that generated this database over here
 01:49 you can see we're basically connecting to SQLite
 01:54 and we could connect to lots of different databases as we'll see,
-01:58 but connecting the SQLight means there's really no server for you to set up
+01:58 but connecting to SQLight means there's really no server for you to set up
 02:01 so it's as easy as it can be to play this demo.
 02:04 With that in place, what we're going to do really is
 02:07 explore the data that was created by this application in this little database

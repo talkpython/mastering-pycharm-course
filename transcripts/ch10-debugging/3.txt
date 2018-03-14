@@ -16,7 +16,7 @@
 00:57 So there's a couple of things we can do
 01:00 we can come down here, first of all we can add special watches right
 01:04 we can say well I'm interested when o is greater than 500,
-01:09 it's true, so let's start over and is it greater than 500, no
+01:09 it's true, so let's start over and is it greater than 500? no
 01:16 run, run, run, right, obviously this is easy for you looking
 01:21 but there could be much more complicated things you're testing
 01:24 this thing equals that, this set is contained in that set right
@@ -33,13 +33,13 @@
 02:02 let's say log a message here, something like that,
 02:05 we could say stop, there's all sorts of features we can do here
 02:08 so now if we just restart or debug, wait for a second,
-02:13 bam, it tops exactly when the first time o is greater than 500
+02:13 bam, it stops exactly when the first time o is greater than 500
 02:18 it will save you a ton of time
 02:21 and by the way, it even logged that breakpoint reached
 02:25 we could even put out a little better message or something
 02:27 but click right here it takes you right back,
 02:29 not super interesting because we were there
-02:32 but for a way click here takes you right back.
+02:32 but far away, click here takes you right back.
 02:34 Notice the icon right here, there's a little question mark
 02:37 because this isn't always a breakpoint it's a conditional breakpoint.
 02:41 So these conditional breakpoints I don't find I use them that often
