@@ -1,0 +1,58 @@
+00:01 Code coverage goes hand in hand with unit testing,
+00:05 one validates the other, it's great to have unit test,
+00:08 but to say your test passed, well that only has meaning
+00:11 if you have significant code coverage on your application.
+00:14 So we saw that code coverage is a measure
+00:17 used to describe the degree where the source code of the program
+00:20 is tested by a particular set of tests.
+00:23 To do this in PyCharm, it's super easy
+00:26 there's a little button right there.
+00:28 So you can just click that or sometimes depending on how your tests are set up
+00:32 you can right click and say run this with coverage.
+00:35 So this is really great, and then you get some output,
+00:40 however, the first time you try it on a particular project,
+00:43 it might not work, it might not have coverage.py installed
+00:48 so that's super easy to do, pip install coverage.py
+00:51 or just click that little button and a little hyperlink right there,
+00:55 and it will install it for you.
+00:57 Then click the button again and you'll run it with coverage.
+01:00 That results in some code coverage results coming out,
+01:03 chances are very good that you'll have
+01:06 close to 100% coverage of your test,
+01:08 that doesn't tell you anything, that just means the tests were run,
+01:11 you want to look at the subject under test,
+01:13 so in this case the thing that is really important is core.py
+01:16 and notice it's 93% covered and we have two tests,
+01:20 these are the happy path tests,
+01:22 and what we didn't really cover in this particular stage here
+01:25 where we took the screenshot, is we didn't test the error handling
+01:28 so there's like 7% of error handling just not covered,
+01:32 mostly the error handling altogether set which represents 7%.
+01:35 But notice what we have on the right a kind of tabular view
+01:39 and then over in the projects,
+01:41 we also have the coverage right in the project view,
+01:44 that's really actually super cool,
+01:47 so we have 93% of lines covered here
+01:50 and you can see over there as well.
+01:53 However, the real value, one of the real cool features that makes it really useful
+01:58 is the results also show up in the editor,
+02:01 so here you can see this is greenish,
+02:04 I'm not sure what it comes out in the video after processing,
+02:07 but it's a slight, slight green, it's very subtle
+02:09 but that means that function, every bit of it
+02:12 was tested by our test, that's cool.
+02:15 However that part right here, that line 34
+02:19 that was not tested, neither was that.
+02:22 So it's telling us we need some more tests,
+02:26 so let's go write some more tests
+02:29 and basically if we write two more tests, as we did
+02:32 that test the attempt to book a table with the wrong id
+02:36 and attempt to double book the table,
+02:39 that'll run the two missing lines,
+02:41 we did that here and now we have 100% code coverage on our core stuff,
+02:45 that's pretty awesome, like I said,
+02:47 you don't have to have 100% code coverage
+02:49 but for the core essence of your app,
+02:51 you should probably have test for that
+02:54 and you can really determine what you need to do super easily with PyCharm
+02:58 and especially in the editor like this.

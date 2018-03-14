@@ -1,0 +1,36 @@
+00:01 The final little window feature thing to check out
+00:04 is project structure, or file structure.
+00:07 So over here in my project, we have just the file,
+00:10 notice I have opened up my Jumpstart course demos
+00:13 just because I need something more complicated
+00:15 than what we've written so far in this course, not much, but a little bit.
+00:19 So over here in this wizard battle,
+00:21 which we've played with before, we have our actors,
+00:24 so we can explore the file structure like this
+00:28 but this structure structure thing
+00:31 is for structure of the individual file that you have open,
+00:35 over here is program, you can see we have some methods here
+00:40 and over in actors, well we have some classes
+00:44 and we can either just have them in the order that they appear
+00:47 or we can have them alphabetically sorted, let's go with alphabetically,
+00:51 and by default it's all sort of collapsed here
+00:54 so we can expand this and see what is in creatures,
+00:57 do you want to go to the get defensive roll— boom, we're there,
+01:00 do you want to go to the level where it's defined, it's right there.
+01:02 Similar with small animal, get defensive roll, it's overwritten version, there it is.
+01:07 So this is all pretty cool, we can actually look at it in greater depth,
+01:12 if you want to look at all the inherited stuff,
+01:14 so there's creature, here is dragon,
+01:16 you could see the highlights or the colors are for the ones that it actually implements
+01:21 and then the gray is for the stuff that it comes from the base class,
+01:23 so for example, we are in dragon which gets its level from right there, from creature,
+01:29 so this can kind of help you look at some code and go
+01:32 okay, I think this thing has a level, where does it come from, right,
+01:35 this will help you somewhat, there are probably other ways just go into definition.
+01:39 So this is pretty cool, but you can see
+01:41 it takes all of the dunder methods as well
+01:43 which is pretty intense, so generally I would say turn that off.
+01:47 And not a whole lot more to it than this,
+01:49 but be sure to flip over here if you are trying to quickly navigate between files,
+01:52 or within a file that's fairly complicated like this one
+01:57 that has four classes that all derive from each other.

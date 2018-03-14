@@ -1,0 +1,36 @@
+00:00 Sometimes you want quick access to your shell
+00:03 and over here I could obviously open up terminal and I have my shell
+00:07 and I happen to run, you can see up here zsh
+00:10 I run oh my zsh which is really, really nice
+00:13 you can get it on ohmyz. sh really, really nice, my favorite by far.
+00:19 So it does things like if you're in git repo
+00:23 right here this is the one for our course
+00:25 you can see that it changes the prompt to adapt to get status and things like that,
+00:30 so really, really nice, it has great memory of what you've typed
+00:34 and sort of auto complete and so on.
+00:36 Now, when we're over in PyCharm there are times
+00:39 when we might want access to the terminal
+00:42 but just kind of like with the Python console
+00:45 we wanted sort of in our working directory
+00:47 with our virtual environment activated
+00:49 so if I wanted to actually work with this I actually come over here and go
+00:52 oh yeah what is this thing, let's see in here
+00:55 there's this, this, so maybe I can activate this
+00:59 and then go to the right directory and so on,
+01:01 I can easily recreate this, but I've got to know what I'm doing
+01:05 and sometimes you just want to quickly run a thing
+01:08 as if you had gotten into your proper environment and that's down here,
+01:11 so notice, automatically activates with our virtual environment
+01:16 and notice that it picks up your native shell
+01:19 so I'm using oh my zsh like I just said,
+01:22 and here it is right, you see it's actually down here
+01:24 and the last thing I typed was that,
+01:27 it has auto complete back to my normal things,
+01:30 so it's really, really nice, if you want to do
+01:32 something like pip install-r requirements
+01:36 that one, see it even auto completes through those,
+01:39 boom, and that sort of works against my environment that is my project right,
+01:43 we just ran that against that against that virtual environment,
+01:46 so really, really nice to just jump into the shell
+01:48 but the shell activated the way your program
+01:52 or your run configurations and your project would see it.

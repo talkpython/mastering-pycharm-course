@@ -1,0 +1,32 @@
+00:01 The next tool area window thing we want to look at is favorites,
+00:03 and that hides over here by default, I think.
+00:06 And this actually brings together three things that you might want to track.
+00:11 First of all, if you go to any of the files like say this core compute
+00:16 maybe we really want to keep access to that,
+00:19 so we could right click on it,
+00:21 we actually go over here, can we do it here— yes, add to favorites,
+00:24 and you could make either a new list like data access in my thing
+00:27 will just search your whole project, I'll throw it there.
+00:29 and now we have access to that,
+00:31 so let's suppose were over here, we care a lot about this testing
+00:36 so maybe we want to add that to our favorites and so on.
+00:39 So if you've got some big project, it's all collapsed right
+00:43 you can jump back and forth between these various places.
+00:46 The other thing that you might want to do
+00:48 is you might want to add some bookmarks,
+00:50 so over here, we got a bookmark and we can create a little bookmark
+00:55 right at that location, so these are the two tests
+00:59 let's say we want to bookmark the two tests
+01:01 that are sort of the negative case, checking for errors
+01:06 and then over here, we've got out two little bits, right
+01:09 we can just jump back and forth between those;
+01:12 and finally, if we have any break points,
+01:14 we're over here, we set a break point here, set a break point there,
+01:17 maybe another break point there, we can get to those as well,
+01:21 and notice this last one over here is a conditional one
+01:24 whereas these ones are normal.
+01:26 We could even edit it by right clicking,
+01:29 go and change all of its info, if you really wanted,
+01:32 it's very nice, the ability to sort of save stuff and navigate around here.
+01:38 Honestly I don't use it that much, maybe I should,
+01:40 actually I kind of like the bookmarks especially, quite a bit.

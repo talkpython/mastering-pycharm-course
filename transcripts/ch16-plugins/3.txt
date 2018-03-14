@@ -1,0 +1,81 @@
+00:01 You've seen the builtin plugins,
+00:03 let's go look at what we have for the external ones.
+00:06 So when you get to this list, this is really the the builtin ones plus the external ones,
+00:09 you come over here and see if there is some Jetbrains ones
+00:13 that maybe weren't there, like for example Handlebars and Mustache,
+00:16 these are ones made by Jetbrains or at least collaborated on by Jetbrains,
+00:22 but not necessarily shipping,
+00:26 whereas like this one, there's no install button, it's builtin.
+00:30 So that's cool, but the real good stuff is over here in just browse everything,
+00:35 so suppose we want better support for git ignores,
+00:39 so here is your git ignore, your Mercurial ignore, all that
+00:43 so we could install that and what do you get,
+00:45 you get things like syntax highlighting for ignore files,
+00:48 template and hide them in project views, all sorts of cool stuff,
+00:53 so we could install that, if we want.
+00:56 What else do we have that's in here that's pretty interesting,
+00:59 so there's just so many, I did sort of a rough counting by scrolling a little bit,
+01:05 look at how many things were on a page,
+01:07 how many pages I could guess out of the scrollbar,
+01:09 I guess there are about 1600 plugins here.
+01:13 So let's start with one that you've seen throughout the course,
+01:15 it's presentation assistant,
+01:18 this is really awesome when you're doing a presentation
+01:20 recorded like the one I'm doing or at a meetup or something,
+01:23 so whenever you do an action, as you know
+01:27 you've seen the little green stuff popping up down here over and over,
+01:30 and that's what does it, this presentation assistant thing, so that's pretty cool.
+01:35 I also find like I said, it's good for helping me learn what the keystrokes are
+01:40 if I click a toolbar button all that's what the name of the command is,
+01:43 the keystroke is such and such, so that's pretty cool.
+01:46 If you want to add additional languages, there's things like Rust,
+01:50 Rust is pretty awesome new language from Mozilla,
+01:54 so here is support for Rust as a separate language;
+01:58 we could have Dart, from google, here it's built by Jetbrains,
+02:04 the support for it and things like that, so all sorts of additional languages
+02:10 we can find if we just search for languages as a category
+02:14 so I got a bunch of different categories here.
+02:17 So what else do we have that we could work with, Apache Configs,
+02:19 a lot of this is sort of file structure,
+02:21 so bash files if you're going to work with you sh files or something like that.
+02:27 Coocoo, I've never even heard of the Coocoo language
+02:30 but I'm sure it's amazing, there is D support and so on.
+02:35 Okay, so if there's a language that you use that is not supported
+02:39 there's a reasonable chance that it's here.
+02:42 Another thing that you very well might want to look for is Javascript stuff
+02:47 and how will that show up here— let's just look in everything.
+02:52 We already saw there's AngularJS, but we could add like little live templates
+02:58 some other things you go check out the home page,
+03:01 see what is cool about this, apparently this is collaborated with Jetbrains,
+03:05 this must be the one that's builtin because I can't install it.
+03:08 I'm a big fan of a VueJS, and that's already installed,
+03:14 so VueJS I think is a nice simple frontend framework
+03:17 for some reason in this brand new version of PyCharm this stopped working,
+03:24 it worked in 2017.2.5 and then it went to 2017.3, it's not working,
+03:34 probably by the time you watch this video it's back to working,
+03:36 which is pretty awesome.
+03:39 We're going to do with TypeScript, there's some more generator stuff,
+03:42 so if you want to work with these Javascript frontends,
+03:46 Ionic, oh yeah Phone Gap, Cordova plugin, pretty sweet, it has Ionic support.
+03:53 If you're working on a project
+03:55 and your tooling PyCharm doesn't have support for it
+03:58 or WebStorm if you're using that,
+04:00 go over here and check these out, because there are a lot of good options.
+04:04 Another one to think about is, I know a lot of people like Vim mode,
+04:07 so you can come over here and enable the Vim key bindings
+04:11 and various other Vim behaviors,
+04:13 one that is pretty cool if you're going to do a lot of,
+04:17 obviously, you're going to do string manipulation,
+04:20 so this one is cool, because it lets you convert
+04:23 say from Javascript style to Python style,
+04:29 or to constants, you can get screaming snake case, versus snake case,
+04:37 maybe you have a variable, you want to make it a constant,
+04:39 so you would convert it from this to this, something like that,
+04:42 so a lot of string manipulation options here,
+04:46 so this is a pretty sweet one.
+04:48 Here is what you've got to do,
+04:50 when you start working on a project,
+04:52 or you're feeling sort of you need a break and you just want to look around,
+04:55 come, click browse repositories, put your cursor up there
+04:57 and just type around and look what's up here,
+05:00 there is really a bunch of cool stuff to add.

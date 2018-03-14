@@ -1,0 +1,81 @@
+00:01 The first assorted tool that I want to talk about
+00:03 has to do with keeping notes for yourself.
+00:06 There's lots of ways you can track what needs to be done with a program,
+00:09 you can have a github repository, and have an issue there on a particular thing
+00:14 or just some kind of issue tracking in general, Jira for example.
+00:18 You could have code comments and those maybe say
+00:21 hey sometimes you need to optimize this function
+00:24 or make sure we have the proper error handling here, things like that.
+00:27 But how do you know to go back to that
+00:30 and where should you go back to actually to get it.
+00:33 So check this out, if we come over here,
+00:36 let's go to the search, actually not the search one,
+00:39 let's go to one that has something more interesting,
+00:41 let's say over here, we want to have some kind of reminder,
+00:45 we could say for this, you know what, this is great
+00:48 what I want to do is remember to use a hash rather than full text for the key,
+00:56 so it's great and we could remember that
+00:58 and somebody comes in here and they are looking through
+01:00 and they find this and then are like,
+01:02 oh yeah look, here I'm supposed to remember to do this.
+01:05 But, on large projects that doesn't maybe work so well
+01:08 and also how do you know if you got them all.
+01:10 So I can come over here and type TODO, that's cool
+01:13 and then boom, that turns yellow, okay,
+01:16 so that's kind of cool, the yellow stands out
+01:18 and you are like here is something I really, really should do.
+01:21 So maybe we'll say key = hash (key)
+01:27 and now we've remembered to do that, something to this effect,
+01:31 but how do we find them all,
+01:33 if we're not on this page we don't know to go on and do that,
+01:35 so here we have this little to do thing,
+01:38 so down here in this section, we have two things that are to do's
+01:41 and check out the little color there,
+01:43 this one, we got to improve the index on our data access
+01:46 when we did this demo, we theoretically improved the index
+01:50 it made it a 100 times faster, 20 times faster,
+01:53 I can't remember what we did, something like that.
+01:55 And over here this is remember to use the hash,
+01:57 so this is really cool, we can jump around on and go to these things.
+02:00 So we can come here and we could say
+02:03 yeah, that was great, we improved the index and that one goes away,
+02:08 come over here and say, yeah I think we did this,
+02:10 let's run this again, just to make sure
+02:16 where is our performance one— make sure that still works
+02:19 it's pretty fast, it looks like my little hashing trick worked,
+02:24 it was not too much work, was it, I could have done that before
+02:27 but this little reminder was kind of nice.
+02:29 Now, these are great, except for sometimes
+02:32 you get other people's reminders, watch this,
+02:34 so check it out, we have 69 other reminders,
+02:38 really, I don't remember doing that much work,
+02:40 here's the eggs from our virtual environment
+02:43 and in here, these are all the reminders to do with this thing.
+02:48 So watch this, if we go over here and jump to the source on this one
+02:51 remember, we can set these directories as excluded
+02:58 and one of the things that happens when you exclude the directory,
+03:01 in addition to other things, is it no longer tracks the to do's in there,
+03:07 that's pretty cool, notice same thing for node
+03:09 down here in or less file, it doesn't have to be Python
+03:12 in our less file, we have a to do, but you know what,
+03:15 this bit right here, I am not really sure
+03:18 like we don't want to exclude bootstrap all together
+03:20 so it's kind of careful, we don't want to just go and do this
+03:23 because I'd love to get intellisense autocomplete for bootstrap and its Javascript,
+03:27 but this stuff, like this less here, we don't need it for that, do we,
+03:31 so let's exclude that, there we go, now we have zero to do's,
+03:39 so let's just go put one more in and collapse everything down for a sec,
+03:49
+03:53 maybe something like this, to do, evaluate whether to expire the cache,
+03:59 right, we probably need something different than just his wrapper,
+04:01 we could move the caching concept into our method and do it ourselves,
+04:06 but now we have another one and see right here,
+04:08 if we expand it out that's our final to do.
+04:11 So this to do thing, I find this to be actually really helpful,
+04:13 I don't think it really replaces issue tracking
+04:17 but it is pretty handy to put reminders in here
+04:20 just don't forget to follow up, like don't put a reminder like
+04:23 we should really check if the user is admin before we do this
+04:26 but I am just going to write it for now,
+04:28 if you forget that, that's going to be bad right,
+04:30 ok so to do's— pretty sweet.

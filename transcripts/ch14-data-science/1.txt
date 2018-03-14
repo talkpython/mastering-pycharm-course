@@ -1,0 +1,14 @@
+00:01 Our next topic is the scientific tooling
+00:05 and special features of PyCharm around the data science tools,
+00:09 so if you're working with things like NumPy, Pandas,
+00:13 machine learning, Jupyter notebooks,
+00:16 all of those things fall well in the realm of what we're talking about now,
+00:20 and you'll see that PyCharm has special support and debugging tools
+00:24 for these types of libraries.
+00:27 So the first thing you're going to notice
+00:30 when you start working with PyCharm doing data sciency things
+00:34 is some of the packages that are well known to be used in data science contexts
+00:39 like NumPy for example, PyCharm sees you importing one of these,
+00:44 it'll automatically say hey it looks like you're doing something data sciency,
+00:47 do you want to turn on scientific mode,
+00:50 and that will flip open into a new mode, so let's go explore that now.

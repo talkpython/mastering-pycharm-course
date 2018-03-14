@@ -1,0 +1,22 @@
+00:01 The next assorted tool we've been using a lot actually,
+00:03 it's kind of unavoidable to get much done, and that's the run window.
+00:06 So down here we have the title run window
+00:08 and if you have a run configuration you can just run it and it pops up,
+00:11 so not too much to say about the run window.
+00:14 You can do input into it, like this is input
+00:17 and it has nice green coloring to indicate, you know what that is
+00:21 we go down here put a 1 to choose Thai food,
+00:24 then we want a book the number 3,
+00:27 great, you've already booked it and here is our book and reservation.
+00:30 So we've seen that, that's pretty cool
+00:31 there's things like line wrap, scroll the end right,
+00:35 so you can tag this and pin it down
+00:37 so it will keep scrolling to the end, things like this.
+00:41 That didn't really love that, did it,
+00:42 but it did scroll along with it that's great.
+00:44 But, of course, really central, the way you run stuff down here
+00:47 is click this button and of course, you can rerun it over here,
+00:51 you can even pause the output, I don't think that stops the application
+00:54 but maybe pauses the stuff from shooting by,
+00:57 so you can go check it out and this will fully stop the program,
+01:00 just like a CTRL C basically.

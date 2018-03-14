@@ -1,0 +1,52 @@
+00:01 The next one that we're going to talk about is the Python repl.
+00:03 So that's what happens when you go over here and you type Python,
+00:06 hopefully Python 3, this thing over here,
+00:10 this read print evaluate, print loop over here that we can run
+00:14 and it's great that we can go to the shell and run this,
+00:17 but it'd be nice if we had a way to work with the Python repl
+00:22 that knew about our project, that knew about our settings,
+00:24 our virtual environment, all that kind of stuff.
+00:27 Well, that's what's called the Python console and it's pretty sweet
+00:30 and this is like a brand new thing over here on the right actually
+00:33 so there's a couple of things to notice,
+00:35 first, it's explicitly calling out that we're working in our sort of root folder up here,
+00:42 so that's been added, that's great
+00:44 and it's also running our virtual environment,
+00:48 this is the one that we put in the beginning.
+00:51 So this is really great, and look at this,
+00:53 it even remembers what I was doing before, so let's play around a little bit,
+00:56 if I say var = some value, notice over on the right
+01:00 we have var = some value, and we could even change it
+01:05 this is basically the debugger, this could be some other value
+01:09 and then now here we say var, and you can bet it's this.
+01:13 So that's pretty cool, we have this kind of like live debugger view into the Python repl,
+01:18 in my opinion that's massively, massively better than just typing Python in the shell,
+01:24 so the other thing that we can do, because of this really
+01:28 is we can work with our project,
+01:31 it's also awesome that we have our virtual environment
+01:34 so we can come over here and say import and notice
+01:37 we can import course. oh actually I don't think we got that far
+01:42 we say demos.projects. and look here's our entire project
+01:47 what do you want to work with,
+01:49 let's work with the podcast one, down here,
+01:53 what do we have, we have the program and we have the service
+01:56 and we could say as svc, we can say svc. and look at that,
+02:01 this is all of the stuff that we get there
+02:04 so let's say download this, right,
+02:07 it's going out to Talk Python and downloading that,
+02:09 I could say get episode like this
+02:12 and let's put 122, I'm sure that will be around,
+02:15 bam, look at that, so we can jump right in and you get auto complete
+02:21 you get all of your project set up,
+02:24 you get it the same as you're running, the same virtual environments, all these things,
+02:28 and on top of that, we get this great debugger over here,
+02:32 if we open this, this is like the things that it finds,
+02:35 so here's the little service thing that we've created
+02:38 you can get things like the name and so on,
+02:40 so we come over here and look at our episode data,
+02:43 and look, there's all the upsides, pretty sweet way to explore the shell here.
+02:48 I really like this, I find that I use it some of the time
+02:53 when I kind of want to test something out
+02:55 and I know I need my database connection and my models
+02:57 and I just need my environment but also want the repl.
+03:01 Here you go, this is how you do it.

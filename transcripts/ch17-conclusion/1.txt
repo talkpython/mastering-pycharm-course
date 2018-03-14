@@ -1,0 +1,114 @@
+00:02 Look at that, it's the finish line!
+00:04 You've done it, you've finished this course.
+00:06 I hope you really learned a lot,
+00:08 because you now possess many of PyCharm's superpowers.
+00:12 All of these amazing things that PyCharm does,
+00:15 you've now seen in action, you have these hands-on your turns to try them.
+00:21 So, let's go and review what you've learned.
+00:24 We began looking at the concept of IDEs in general,
+00:28 we talked about the spectrum of editors and the value that IDEs bring.
+00:32 We talked a little bit about are they fast and what you define as fast,
+00:37 is that literally the launch speed of the application
+00:40 or how fast you write code, what you're optimizing for, things like that.
+00:43 We began our actual exploration of PyCharm
+00:46 by focusing on working with projects, large and small,
+00:51 we checked out some very complicated,
+00:55 nested directory structure that required some arrangements
+00:58 using the Jumpstart demo code and things like that.
+01:02 We saw that there's a ton of really powerful navigation features
+01:06 around navigating across files in your project,
+01:09 finding usages, go to declaration and things like that.
+01:12 So you really start with the projects, right,
+01:15 that's where you're going to create your files and write your code.
+01:18 Writing code, well that's the editor
+01:20 and we saw the editor has a whole bunch of amazing features
+01:22 and we honestly just touched on some of them,
+01:25 we can't really be exhaustive here, we'd just go on and on,
+01:27 but he editor is really powerful, great syntax highlighting,
+01:30 code formatting, code completion,
+01:34 documentation generation and all kinds of stuff.
+01:37 So the editor really, really great and of course,
+01:40 front and center in PyCharm is —
+01:42 We worked with source control and we focused on git and github,
+01:45 we saw that many source control systems are supported here
+01:49 but of course, git is sort of the source control de jour,
+01:53 so that's what we were playing with.
+01:55 And, we saw that we can do branching,
+01:58 we can see even inside the editor the changes
+02:01 that are not committed to source control,
+02:05 so we have green bars for code that's new,
+02:08 we have bluish bars for code that has changed, things like that.
+02:11 Refactoring is a really powerful technique,
+02:16 but you need a proper editor and the thing that understands
+02:19 the abstract syntax tree of all your files
+02:22 to make this work reliably and safely.
+02:24 Remember, refactoring is not just change your code to find and replace,
+02:29 it actually understands how your code is used and changes it.
+02:33 In this section we saw really awesome refactoring tools just around Python,
+02:38 but later when we got to the web, we saw actually that applies to Javascript
+02:41 and other things that are supported within PyCharm as well.
+02:44 The relational database support in PyCharm is really unrivaled,
+02:50 it's so amazing, the tooling that you get just for exploring the data is great,
+02:55 the tooling that brings the schema of your database
+02:58 back into your Python code for those embedded SQL strings,
+03:02 that just blows my mind, and continues to delight me every time I see it.
+03:07 Python is a premiere language for writing web applications,
+03:12 we talked about YouTube and Instagram,
+03:15 and all these other amazing places,
+03:17 and we broke our discussion of the web into two parts,
+03:20 server side code, Pyramid, Flask, Django, that type of things,
+03:23 with the page templates, and support for project structure
+03:26 like setup.py in Pyramid or manage.py in Django,
+03:29 and there are all sorts of great support that we covered here.
+03:33 We also talked about css, html, Javascript,
+03:36 and in Javascript frontend frameworks on the client side as well;
+03:40 we talked about less, saas, TypeScript,
+03:43 so many things on the web side that you get.
+03:46 And remember that somewhat comes from PyCharm
+03:49 and that somewhat comes from WebStrom
+03:51 which is a subset or embedded within PyCharm.
+03:55 The debugging, the visual debugging is really powerful and awesome,
+03:59 and it's honestly one of the reasons
+04:02 I come back and back to working with PyCharm.
+04:05 One of the other is the really great autocomplete and support around that as well,
+04:10 those are probably my two favorite, most amazing things that PyCharm does.
+04:14 In Python, packaging is really important,
+04:16 but it's a little bit tricky if you haven't done it a lot before,
+04:19 and we saw there is a lot of support, both directly in creating new packages
+04:23 and actually in the refactoring for converting two and from packages.
+04:28 When you want your code to go fast,
+04:31 sometimes it's really hard to use your intuition to know
+04:34 where it's slow, where it's fast,
+04:37 I've tried to take a guess at this before and failed many times,
+04:40 so you need tools to visualize how your code is running,
+04:43 where it actually is fast and when you make a change,
+04:45 what does that change do.
+04:48 So the profiling tools, the visual profiling tools in PyCharm
+04:50 are pretty straightforward and simple, but really powerful
+04:53 and I definitely encourage you to use them when it makes sense.
+04:58 Unit testing is really important,
+05:01 it's extra important when you're working with dynamic languages like Python,
+05:04 and we saw PyCharm supports the whole breadth of testing options in Python,
+05:11 the builtin unittest, obviously, but PyTest, Tox and a bunch of other things, really great.
+05:17 If you are a data scientist, PyCharm has this special data science mode
+05:22 it has the science view, it has its special debugging for regular Python code,
+05:26 as well as it has builtin support, and help for Jupyter notebooks.
+05:31 There are some things that didn't really fit into what we talked about so far,
+05:37 like the terminal window or various other little windows and tools,
+05:43 so we threw a few in here, the Python console, stuff like that.
+05:47 We saw that if the things that we've talked about so far
+05:51 are not doing what you want, and you want something more,
+05:54 there is a whole bunch of plugins that you can get for PyCharm and add them on,
+05:59 you want Vim mode, go get a plugin for that.
+06:01 You want NodeJS support, go get a plugin for that.
+06:04 One that I use is Nginx for working with Nginx configuration files,
+06:09 that's really nice that you get some help there when you're working with those things,
+06:13 so tons and tons of plugins, and really great that those are out there.
+06:17 Look at all these things you've learned,
+06:20 and honestly, we really didn't cover everything,
+06:23 there is actually a bunch of other features that I left out of this course,
+06:27 just for the sake of time and focus and so on.
+06:30 These are your superpowers, you can now go and apply all of them
+06:35 at the same time within one tool against your project,
+06:38 and let me tell you, you can go build something awesome,
+06:41 so get out there and do it.

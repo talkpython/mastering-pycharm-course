@@ -1,0 +1,94 @@
+00:01 You've seen the profiler in action
+00:03 and you've seen our technique for making our fake little set of functions faster
+00:08 so let's go back and talk about some of the concepts that we saw.
+00:11 So we can go to the run menu and choose profile our program here
+00:18 or we could go up and just press this to profile it,
+00:22 so there's also a way in the project to do it,
+00:26 so there's a lot of ways to start profiling our run configuration
+00:29 and like I said, this can be a unit test,
+00:31 this can be a proper program like the one we did,
+00:34 it could be a web app, whatever,
+00:36 any run configuration you should be able to just profile it.
+00:39 Now, you run it and it runs down here, like this
+00:43 notice it's starting the C profiler
+00:46 and then after it runs, it pops open with the stats,
+00:50 by default it opens in own time
+00:55 and I think that's really not the right place to be
+00:57 you want cumulative time and sort of work your way down
+01:00 so go and sort by the time ms not own time, right here.
+01:05 Notice that compute analytics was probably the worst thing
+01:10 that we are in control of, it's called 9 times,
+01:13 it took 7.6 seconds, that's really a problem.
+01:18 So we should probably go look at that and analyze it.
+01:22 We also have learn, we also have read data,
+01:26 those are the different parts that we've written that look especially bad,
+01:29 time.sleep we didn't write that, I can't do anything about it
+01:33 maybe we could call it fewer times or with a smaller value,
+01:36 okay we also have get records
+01:38 and so these are the places we should probably be looking
+01:41 and that's what our analysis here is telling us,
+01:45 probably starting with compute analytics.
+01:48 We're also creating the connection
+01:51 and you might think well there's nothing you can do
+01:53 to make talking to a database faster
+01:56 you have to open the connection to talk to it
+01:58 but you could implement connection pooling
+02:00 or at least make sure what you're doing
+02:02 is leveraging the built in connection pooling of your database provider.
+02:06 While the statistics are cool, I think the graphical version is much better
+02:11 so here we can dig into the individual functions,
+02:14 we have program, we have main, we have we go
+02:16 and after go it gets interesting,
+02:19 those are the three heavyweight things that go does
+02:21 and that's really all the program is doing.
+02:24 So search is the least bad of the three options
+02:27 compute analytics is the worst.
+02:30 So the way to read this is we start here in program.py
+02:35 it calls main, from main that calls go
+02:38 and from go we call this one, and then this one, and then this one
+02:42 so we're calling these functions sort of in this order
+02:45 so you can follow the flow until you get to a point like
+02:47 okay, this looks bad and like something we can optimize.
+02:50 And remember, color matters, so we've got green for search
+02:55 it's pretty fast, relative to the other things
+02:59 we've got orange for compute analytics,
+03:02 and we've got red for main,
+03:04 so this is a percent of time and you can actually see the percent there,
+03:07 like search is 3.4%, compute analytics is 70% and main is 96%
+03:13 so it's kind of a gradient from green to red with a little yellow in the middle,
+03:19 relative to everything else it is probably fast enough.
+03:23 Compute analytics, this could be faster, right,
+03:27 but the color is kind of telling you it's not the worst you've seen
+03:30 but it could be better, this is low right,
+03:32 this is pretty much as bad as it gets from this particular program.
+03:35 We could also navigate so we could right click in the tabular version
+03:39 and say navigate the source or actually jump over to the call graph
+03:44 so if you click on the show call graph, it will take you over here
+03:48 but if you go to that one right click you could only navigate to the source,
+03:53 so there's not this bi-directional take me to the graph, take me to the table.
+03:57 So here we can navigate down to the source and see what's actually going on.
+04:02 So those are the techniques and tooling that we use,
+04:06 I want to leave you with one quick warning though
+04:09 be aware of the effects of profilers
+04:12 so profilers and their friends, the debugger,
+04:15 these can have non obvious effects
+04:18 so you might have two functions, one which is called one time
+04:23 and one is called a 100 thousand times
+04:26 and without the profiler, maybe they're the same amount of time, exactly
+04:30 but because the profiler is in the way and collecting data about every call
+04:34 the one that's called a 100 thousand times looks way worse in the profiler
+04:37 than the other which just goes down to the system
+04:41 and the profiler is not doing much
+04:43 so you can think of these as having a little bit of quantum mechanics effects
+04:46 kind of Heisenberg uncertainty principle
+04:49 the more precisely you measure it,
+04:51 you might actually be changing how it's behaving.
+04:55 While C profiler is pretty good
+04:58 and the debugger with the Cython speed ups are pretty good,
+05:02 just keep in mind that this is not exactly the real runtime behavior,
+05:07 this is the runtime behavior while it's being deeply observed.
+05:10 Okay it's still super, super helpful to help track down these issues
+05:16 and it's more important to look at the differences across time I'd say
+05:19 than it is to look at the exact dummers and say
+05:23 well now it is a tiny bit faster,
+05:25 it could be just the profiler is affecting it.

@@ -1,0 +1,28 @@
+00:01 We have a new chapter, a new folder, unit testing
+00:04 so down here we have this application called program
+00:07 and let's go quickly create a run configuration for it,
+00:10
+00:12 and it's got to have a name, something better than just program
+00:17 so let's call it program testing,
+00:21 so down here if we run this program testing
+00:24 you'll see that it asks you for your dinner reservation,
+00:26 think like super simple open table type thing,
+00:30 so it says what kind of dinner are you in the mood for,
+00:32 I'm open for Thai right now,
+00:34 all right there's two seats at Thai Roses and one at Siam Thai
+00:37 let's take the one at Siam Thai.
+00:40 So great, it's booked, now we can ask again
+00:43 what else is available, oh there's just these two
+00:46 and if we keep booking them, you'll see eventually
+00:48 if we go and say what's there for Thai,
+00:52 oops, no tables for that food type, try another,
+00:55 so we've sort of booked out of Thai and we go Seaburgers,
+00:59 we got Skyline and Little Big Burger, and things like that;
+01:02 our goal is to take this application and put some unit tests in place
+01:05 in reality you probably should have built them up together
+01:08 but just for the sake of keeping things short during this class
+01:11 I don't want you to have to watch me write this whole little app and its core functionality
+01:15 in fact, we're pretty much going to just test the behaviors around here
+01:19 this sort of simulates the database but it's not really,
+01:23 ok so that's the app we're going to test
+01:26 and we're going to do this with PyTest and PyCharm.

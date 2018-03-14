@@ -1,0 +1,25 @@
+00:01 It's time to focus on the plugins and there are so many things
+00:05 that we can add to by PyCharm to make it do awesome stuff,
+00:08 maybe you wanted to support Vim key bindings and it doesn't,
+00:12 well just go to the plugins and add them,
+00:14 you want to work with NodeJS, we saw that was a plugin,
+00:16 you can do that, or ElectronJS, all sorts of stuff,
+00:19 and we'll see there are a bunch,
+00:21 we'll survey some of the ones I think are notable
+00:23 and look and explore how you might add third party or external ones.
+00:29 Plugins are things we can add to PyCharm,
+00:32 over here in the settings slash or angle bracket whatever plugins
+00:36 and there's a bunch of them built in and you need to be a little careful here
+00:40 because the ones that come with PyCharm,
+00:42 these are the ones that basically support the features of PyCharm,
+00:46 so for example, we have cvs integration,
+00:49 maybe you don't care about that but right above it, css
+00:52 you might care about css support and if you uncheck it,
+00:55 you won't be able to get any help with css files anymore.
+00:58 So be a little careful in that much of this stuff
+01:01 is actually the functionality of PyCharm itself,
+01:04 but then you'll see we can turn them on and off
+01:07 and we can also add new ones and maybe the most exciting thing there is
+01:11 that we could just go get a ton of other cool things
+01:13 that were not built in and bring them in.
+01:16 So let's go do some playing around with these.

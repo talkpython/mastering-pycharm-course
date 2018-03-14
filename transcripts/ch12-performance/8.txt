@@ -1,0 +1,29 @@
+00:02 Just like visual debugging is important for understanding how your code works,
+00:05 if you try to understand its performance
+00:07 visual tools here also are really, really important,
+00:10 let's go and play with the visual tools for understanding performance in PyCharm.
+00:15 Over here on github under 9-performance
+00:18 we already have a little application here, performance app
+00:22 so this is similar to the one you just saw in the demo, it's related to this chapter
+00:27 so we're going to come down here
+00:29 and we're going to use the tools to understand the app's existing performance
+00:32 and then improve it in a few key areas
+00:35 so we're going to go and open up this project,
+00:39 now if you create a virtual environment or you just do it on your main system,
+00:43 be aware you need Requests installed for it to work
+00:45 because one of its features is it goes out and makes a call to a web service,
+00:49 so notice here, we'll use the profile program
+00:52 this only gets set up once you create a run configuration
+00:55 so right click on programs, they run and then you can profile it.
+00:58 So first thing we're going to do is answer a couple of questions,
+01:02 what are the three slowest methods and why,
+01:05 and then what is making them slow
+01:08 and then you go through, there's a few to do's in the code
+01:12 that says here's a section that could be improved, theoretically,
+01:15 it's got a time.sleep type thing and say
+01:18 well what if we use NumPy, maybe that makes it 20 times faster,
+01:22 so make that number 20 times smaller
+01:24 or what if we add an index, make it a 100 times smaller,
+01:27 so you can follow a couple of these steps here,
+01:29 keep running the performance tools to see what the changes and effects are
+01:33 and we'll make this program faster.

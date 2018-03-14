@@ -1,0 +1,46 @@
+00:02 The data science tools are fun to play with
+00:04 because we get to draw cool pictures,
+00:06 so in this your turn, you'll get to create some cool looking crafts like this
+00:10 and draw them in PyCharm, both directly within PyCharm
+00:14 and by using PyCharm's embedded Jupyter notebooks.
+00:19 Go down, you can see your steps are here,
+00:22 so we're going to start up by using PyCharm's data science mode
+00:26 and if we just start working with the data science libraries
+00:28 we saw it will actually suggest and adapt to that directly,
+00:32 we'll draw some cool graphs and then we'll do the same thing
+00:35 but this time we'll redo it again but in Jupyter notebooks
+00:38 and there are a few minor changes to make things work the way you might want.
+00:41 So we'll start out aiming to draw this picture
+00:44 we're going to use Pandas, Matplotlib and so on,
+00:47 so create a new project, we're going to write this import up here
+00:51 and then we're going to important NumPy and once we do that
+00:54 it says, oh, NumPy science, you want to be scientific
+00:57 and go into scientific mode, yes, you do, click that.
+01:00 So then we're going to add this remaining imports,
+01:03 we're going to write some code here
+01:05 to create like a three dimensional parabola,
+01:08 sort of inverted quadratic equation type thing
+01:10 and we're going to put it here,
+01:13 you might get a warning about arange, don't worry it should be working,
+01:18 PyCharm just doesn't detect that correctly for whatever reason
+01:20 you want to create a surface and show it and it should look like this in PyCharm,
+01:24 you also get a warning about this color map coolwave, also, it's fine.
+01:28 So you get this working, this is really cool, over here in this science view,
+01:32 now we're going to do the same thing in Jupyter notebooks,
+01:35 so we're going to create a new Jupyter notebook,
+01:37 and the code is slightly different, you want to tell Matplotlib to render inline
+01:41 you have to do a few steps to actually install and set up Jupyter notebooks,
+01:45 so that's pretty interesting,
+01:48 there's a few things we got to do here,
+01:50 notice there is this fix button you have to click,
+01:52 it is going to do some work, it's going to eventually be ready to run
+01:55 once you click run, you'll be able to use this url,
+01:58 you don't actually have to click it though, you just go and rerun,
+02:02 there's a little button that's hiding right here, a little green button,
+02:06 you just click that again, it will automatically connect, that's awesome .
+02:09 And then you'll go and write the rest of the code
+02:12 you don't have to do the service.show this time
+02:15 because Jupyter knows about it already
+02:17 and down here embedded within our Jupyter notebook
+02:19 is basically the same output, it's pretty cool.
+02:22 So, have fun drawing pretty pictures with PyCharm.

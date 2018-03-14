@@ -1,0 +1,8 @@
+00:00 Here is a reminder to not forget the source code.
+00:03 We built a ton of projects and example code in this course,
+00:07 and I want to make sure you take it with you, so, be sure to jump over to
+00:11 github.com/talkpython/mastering-pycharm-course
+00:15 and star this and consider forking it,
+00:18 at least clone it so that you have it locally.
+00:21 So I want to make sure that this is a resource for you,
+00:24 so star and fork it and don't forget.

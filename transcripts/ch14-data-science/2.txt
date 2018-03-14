@@ -1,0 +1,109 @@
+00:01 Over here in our set of demos, let's go create another project
+00:04 that we're going to call something like science or whatever, science mode
+00:10 and right from the start let's you say sources root.
+00:13 We're going to create some new explore Python file
+00:18 called explorer.py, because we're going to explore some data here.
+00:22 Now, we're in what I guess is regular development mode,
+00:27 I don't know, something like that, so we're going to come over here
+00:29 and we're going to try to work with some of the data science tools,
+00:31 we're going to work with NumPy, we're going to work with Matplotlib,
+00:35 and we're going to generate some cool graphs,
+00:38 now we're not going to use real data,
+00:40 we're just going to randomly generate data and plot it
+00:42 but if you care about the data science tools
+00:44 you probably have data and you can just pass that right in there.
+00:47 So let's start by typing import NumPy
+00:51 and now there's a couple of things going on here,
+00:54 one you can see the pop up, PyCharm says
+00:56 looks like you're using data since mode,
+00:58 awesome let's switch to it, so let's do that.
+01:01 Now we switch to this data since mode and that's pretty cool,
+01:06 however, the documentation isn't amazing,
+01:09 and this is red, why is it red, because we've not installed NumPy
+01:12 in our virtual environment down here, if we do a pip list, no NumPy, okay.
+01:18 So we can use a code intention and say install this
+01:22 and of course it'll install it to our virtual environment
+01:28 and I closed that, didn't I, here we go, it was like that,
+01:31 all right great, so that works,
+01:33 now we should be better off with the documentation
+01:36 notice, now it's coming down, so it says module NumPy,
+01:39 it works with all these things, here is how you get going right,
+01:42 go to the NumPy home page and so on, so that's pretty cool.
+01:46 What else is it telling us, it says
+01:48 you should probably put NumPy in your requirements, yeah we should,
+01:50 and finally it is saying you're not using NumPy,
+01:53 but that is just because we're still writing code,
+01:55 so let's say as in p. this is standard data science stuff
+01:59 and then we'll import Matplotlib
+02:05 now, also not found, use code intention,
+02:08 install that into our virtual environment, wait a moment,
+02:11 awesome, now let's install it, we can see we have our documentation here
+02:15 what we actually want to work with is Pyplot, we'll import that as plt,
+02:23 so we're going to plot some random dots
+02:26 and let's say we want 50 random dots,
+02:29 we're going to have an X is going to be in np random,
+02:32 notice over here on the right we have all of the features of NumPy random,
+02:36 we can do random.random, random.bytes and so on,
+02:40 so we'll do random.random of N
+02:45 so what does random.random do, let's see.
+02:49 It returns us random floats in a half open interval zero to one,
+02:53 perfect, that's exactly what we want
+02:55 and we also want one for Y so we're going to do X and Y
+02:58 and let's do some colors, and then we're going to compute an area
+03:04 we use np.pi, multiply that by 15 times np.random, random of n again
+03:14 okay, great so we've got that done
+03:18 now let's go with our plot over here in plt
+03:21 and notice we're now getting documentation for Pyplot, all really cool
+03:26 you could do this, by the way, outside of data science mode, right
+03:28 you could do this for anything in Python.
+03:31 So we want to create a scatter plot of X, Y,
+03:38
+03:42 make it nice and pretty, so this is cool,
+03:47 now we can say plt.show, we're going to show this
+03:50 and finally, let's just do an input waiting for exit.
+03:55
+03:58 So this is all good, you already saw that this is pretty neat
+04:01 down here we have our little special variables
+04:03 we could play around with this console down here, that'd be great
+04:07 maybe we don't need to see all this right now,
+04:11 I'm going to run our code, what is this warning about
+04:14 added the requirements, sure we should,
+04:16 okay, so we should be able to run this and see something pretty cool happen
+04:22 we have this data science view but there's nothing over there,
+04:25 however, if we run it in the debugger
+04:27 and we stop somewhere for example, let's try that
+04:31 we are totally running the wrong thing.
+04:36 Here we go, let's come down here and we're waiting for input
+04:42 and notice that we've already got this graph,
+04:46 that's pretty cool right, right in here we have this graph that we can play with
+04:50 we also have some data, so we have our plots
+04:53 that these graph, and bunches of them pile up here, and we have data
+04:58 so that's not so interesting, why,
+05:00 because I ran this, I didn't debug it
+05:03 let's actually press the debug button.
+05:06 Now we'll come down here, I'll squeeze this back so it fits
+05:09 and notice this stuff down here, these NumPy arrays,
+05:13 so X, Y colors area and so on,
+05:16 see these are nd arrays,
+05:18 now we can open them up and look at them like this,
+05:22 or in PyCharm we can say view as an array
+05:25 and up here, we get the area or view as array,
+05:28 now there's single dimension, so it's not super interesting
+05:30 but they could be multidimensional right,
+05:32 so really, really nice, you can see that debugger has special features
+05:37 we have our special SciView with the plot
+05:41 that we have here and the data and so on,
+05:44 we can turn on the little grid lines and whatnot.
+05:47 I don't think it really affects this particular plot,
+05:49 but you can see really, really nice stuff here.
+05:52 Now this is the standard, just write a Python script and go with it,
+05:58 how would this work if we ran this outside, here
+06:03
+06:09 let's go here and activate our virtual environment
+06:13 and then let's say Python 3 this, we run it,
+06:22 and now what do you get, you get your little figures running outside
+06:26 and of course, any print commands or output there would go here,
+06:29 so this is pretty nice, those extra windows are kind of bundled up
+06:33 and kept there for you, and you see they even persist across runs,
+06:36 we could get rid of that one,
+06:38 but as we run it over and over you'll see it here.

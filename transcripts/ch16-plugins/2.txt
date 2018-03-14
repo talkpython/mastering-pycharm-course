@@ -1,0 +1,40 @@
+00:01 Let's go and have a look at these plugins.
+00:03 You can hit command comma on basically any Mac app to get to the settings
+00:06 or you just go PyCharm preferences
+00:09 I think it's called settings in Linux for or reason.
+00:11 Anyway, go over here to the plugins section
+00:14 and notice there's a bunch of cool stuff already installed
+00:17 and I have only installed one or two additional things.
+00:21 First of all, notice I have disabled things that I don't care about,
+00:25 I never will do cvs again, for a long time
+00:29 back in the mid 1990's I guess I used use cvs
+00:33 but I have no intention to using that again.
+00:35 Gherkin, no, GNU text, no, Haml, no,
+00:39 so I went and I turned some of these off,
+00:41 I think that makes PyCharm start a little bit quicker,
+00:43 I don't really know but it seems like if I know I'm never going to use them,
+00:47 I might as well turn them off. So let's look at some things that are here.
+00:51 Now, one of the questions you might ask is
+00:53 is this a built in thing that came with PyCharm,
+00:56 or is this some kind of third party thing.
+00:58 So over here, notice how there's not much information or hyperlinks
+01:02 that means this probably just came with PyCharm when you installed it.
+01:06 Similarly, CoffeeScript, there's no like
+01:09 this is run by Joe and here's his getup repo, these are all builtin things, right,
+01:13 so let me try to find something l've added that wasn't builtin.
+01:17 NodeJS, but you can see the vendor was Jetbrains, so it wasn't builtin
+01:21 but it was built by Jetbrains really for WebStorm and I added that.
+01:25 Nginx is a thing I added so this looks pretty active over here
+01:29 and you can see this is actually done by Max,
+01:32 thank you Max I'm really glad that you built this.
+01:35 So we'll talk about this one in a bit.
+01:37 So that's pretty much your clue on is this a builtin thing or is it external, right,
+01:41 if it's here, it doesn't have an uninstall button and it has no like external repo,
+01:46 here this one I can uninstall, not just disable, and it has a repo.
+01:50 Okay, let's see what else is builtin that we might want to talk about,
+01:54 so you've got the profiler stuff,
+01:57 you've got Docker, you've got a nice rest client,
+02:00 we haven't really talked about that in this course, but it's pretty cool,
+02:05 Vagrant and so on, Yaml, a lot of really cool support
+02:08 but like I said, I actually turned these off like so I have no Saas,
+02:12 unlike Less, so we'll go with that, and maybe if I need it, I will turn it back on.

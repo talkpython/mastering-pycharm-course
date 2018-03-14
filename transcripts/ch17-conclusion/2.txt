@@ -1,0 +1,49 @@
+00:01 Remember at the beginning we talked about how to learn the features of an IDE.
+00:05 And if you see a picture, if you open your screen and you see this here
+00:10 you may think, oh amazing, look at all what this does
+00:12 or you may be like oh my gosh, I just want to edit some code,
+00:15 how do I work with all this stuff.
+00:18 So you really need to learn the features of the IDE
+00:20 to make every one of these things be a benefit
+00:23 and not just a distraction at best.
+00:25 So let's review the technique that I talked about.
+00:28 Now, when I introduced it, it was maybe abstract
+00:32 but we've seen so many features that you probably want to use,
+00:35 how are you going to remember them?
+00:38 Well, remember I said you should first discover what those features are,
+00:41 and that to a large degree is what the purpose of this course is,
+00:46 it takes you through all the features, it shows them in action
+00:49 it shows you the true benefit and the particular times to employ those.
+00:54 We kind of solved the discover problem,
+00:57 obviously there's more to discover, but you've got a bunch of that
+01:00 now you need to remember them, which is tricky,
+01:03 and you need to practice them.
+01:05 So I had this plan for how you could do that.
+01:07 There's the cheat sheet that you download from the beginning of the course,
+01:12 then you can install presentation assistant,
+01:16 which I hope you did, that's one of the plugins
+01:19 and that will tell you every time you work with a menu item
+01:21 or you do something it will tell you what the name of the feature is
+01:24 it will tell you what is the hotkey is,
+01:27 which I think is really important to learn the hotkeys of everything,
+01:30 and then get yourself a set of sticky notes
+01:32 or a piece of paper cut up into small pieces,
+01:35 write down the things that you're like I really like this from this course
+01:39 and I want to make sure I make it part of my daily routine,
+01:41 and put one of those sticky notes on your monitor
+01:45 and try to make use of that every time it makes sense,
+01:48 maybe one of them is refactor to a method or refactor this,
+01:51 maybe one of these is just to use conditional break points or something like that,
+01:57 you could write down 50 of these things
+02:00 and put one on your monitor until you've used it enough
+02:03 you feel like yeah, that's totally going to stick.
+02:05 So these three things I think can really help,
+02:07 hopefully this course has helped as well.
+02:10 Do make a concerted effort to find all the features you care about
+02:15 and find a way to make them part of your daily routine,
+02:17 at first it might seem overwhelming,
+02:19 there will be a bunch of things you have to learn,
+02:21 but in the end, you'll really have many more super powers,
+02:25 I described this at the beginning of this section,
+02:28 you'll have these powers and ways to work with your code
+02:32 that maybe you didn't have before.

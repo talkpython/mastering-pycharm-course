@@ -1,0 +1,106 @@
+00:02 We saw this program is not especially fast,
+00:04 how long it takes maybe five seconds or something like that
+00:08 and we would like it to be faster, if that is at all possible.
+00:12 So what we're going to do is we're going to use the profiling tools
+00:17 to ask where time is spent
+00:20 and if we want to just profile the entire application
+00:22 that's probably the easiest thing to do,
+00:24 we can go over here and push this button,
+00:28 to me this looks a little bit like a cd, but it's like a speedometer type thing
+00:33 so once you have a run configuration
+00:35 this can be for unit tests or for regular apps, or web apps even,
+00:40 what you can do is click here to run that with profiling, so let's do it.
+00:44
+00:48 So it started the c profiler which is probably the better of the two profilers,
+00:53 it did what it does and then it saved a snapshot here
+00:56 based on the project name and then it exited
+00:59 and immediately what came up is this statistics page here,
+01:03 so if we look at the statistics,
+01:06 what we have is the number of times the function was called
+01:09 so for example, this raising something to a power was called 600 thousand times
+01:14 that's pretty intense, right, this is probably our machine learning thing
+01:18 in terms of time though, that didn't take that long,
+01:21 120 milliseconds, that is some time.
+01:25 There's some other things going on here,
+01:28 learn was called one time but it took half a second,
+01:30 let see our socket, connect took a little while, but it's only 4% of the time
+01:35 so you can go on here and sort of, I would say sort these
+01:39 and then go and find where that's interesting,
+01:41 so own time, this means only this function spent this time
+01:45 not the things it calls, I find this to be super helpful sometimes
+01:49 but usually what I'd like to know is how long does it take for this function to run
+01:54 not how long just inside that level in the call stack,
+01:57 how long did it run that is this one.
+02:01 So program.py took 1.6 seconds,
+02:04 main took that long, okay, we called go
+02:08 and that's really all that main was doing, it was calling go.
+02:11 So here we have compute analytics, we had three things
+02:15 we were doing a search, we were doing get records
+02:19 and we were doing a compute analytics
+02:21 so it looks like this analytics thing is the slowest
+02:23 and then, we have learn over here
+02:27 and down here we have get records I think that's what we were calling it
+02:31 so you can sort of see the relative breakdown
+02:34 and this is really helpful, we can do things like let's say I would like
+02:37 if you just double click it I guess, I meant to click once
+02:41 but if you click once you can say navigate the source
+02:43 and it'll take you right to that function,
+02:46 okay this one is probably the worst one that we control
+02:48 actually well, this one is.
+02:52 It's spending almost all of its time in learn down here, which is where we were.
+02:57 So we can think about how we might be able to make this better
+03:00 we could think about the algorithm here
+03:03 now that's one way to look at it, and this is okay
+03:07 but I don't really like it that much,
+03:09 I guess it depends on how complex things are.
+03:11 The other thing you can look at is the call graph
+03:13 and the call graph is awesome, this does not look awesome, does it?
+03:17 So let's try to zoom in a little bit
+03:19 so we can get something more meaningful, so if we come down here
+03:22 there's a bunch of junk that's going to be in here
+03:24 that has nothing to do with us
+03:26 so like here you can see this is all the load module start up time from Python
+03:29 we can't make that any faster that's C Python,
+03:32 that is what it is, if you want that to be faster
+03:34 you need to use PyPy or Cython or some other runtime,
+03:39 maybe you could somehow pre-compile, get some pyc files
+03:45 but that's generally out of our control,
+03:47 this though, program calling main, calling go, calling these three functions,
+03:52 this is where it's interesting.
+03:54 Notice the colors, this is red, this is like as bad as it gets
+03:58 and this is slightly less bad, just slightly
+04:01 because something else is happening and the start up
+04:04 and then this is among these three, not too bad so it's lighter green,
+04:08 this is yellow because it's maybe
+04:10 3 times as bad as the other stuff on that level, and so on
+04:14 so we can go through and actually see what's happening,
+04:16 like this one is actually going out and calling get on request
+04:20 which is going over the socket,
+04:22 this one is calling learn and read data
+04:25 and those are both pretty bad it turns out;
+04:28 and this one's calling get records and the real slow part of get records is
+04:32 creating the connection here,
+04:34 actually I think I remember, I wanted this to be a little bit slower
+04:37 so let me go over here, we can navigate the source
+04:40 and let's make actually this part which we'll talk about in a second a little slower
+04:44 so one more profile thing here with the call graph
+04:51 it always looks easy like that so we'll just zoom it
+04:54
+04:58 it's time it rearrange itself a little bit, here we go
+05:04 so now we're spending some time on read query
+05:06 and get row as well as connecting,
+05:09 so these all kind of have their own issues
+05:11 so how are we going to fix it?
+05:14 Well, we can go through and optimize,
+05:16 let's say I would start with the worst thing,
+05:19 is there a way to optimize this for example,
+05:21 is there a way to optimize that,
+05:24 so I think we'll just start here, this is the slowest thing that we have control of,
+05:27 this is slow but it's only slow because it's just literally calling these, right
+05:31 and you can see right here its own time is zero milliseconds, but total it's that.
+05:36 Similarly, here these are calling things that are slow.
+05:39 Alright, so the goal is, armed with this information
+05:42 and having this loaded up here, let's say this is going to be the starting point
+05:48 we'll have this one and we could make some changes
+05:50 and we'll have another one of these show up
+05:53 and we can do a quick comparison and see how things are working.

@@ -1,0 +1,13 @@
+00:01 So you've spent quite a while with PyCharm to get this far in the course,
+00:05 and you might be interested in a little bit of the backstory,
+00:08 where did it come from, who were the people behind creating PyCharm.
+00:12 I want to highlight an episode of the Talk Python To Me podcast
+00:16 that I recorded with Dmitry Trofimov.
+00:19 So Dmitry is one of the core developers on the PyCharm team,
+00:23 and back in November 11, 2015, so a little bit ago, but still relevant,
+00:29 I interviewed him about PyCharm, his work there
+00:33 and the internal workings of PyCharm,
+00:36 there is actually a ton of interesting stuff here,
+00:38 so if you feel like spending an hour
+00:40 with me and Dmitry just chatting about PyCharm,
+00:43 well, head over to talkpython.fm/36 and check it out.

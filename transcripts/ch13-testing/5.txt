@@ -1,0 +1,68 @@
+00:01 We've tested what I call the happy path
+00:03 or the successful types of things,
+00:05 we tested that yes there are tables, yes you can book a table,
+00:08 let's test the other side of things.
+00:11 The first test we want to write is that you cannot book a non-existent table,
+00:15 so what do we mean by that,
+00:18 well over here we tried to book this table
+00:21 and we got this book back, and we don't really care about what comes back,
+00:27 this is going to be a string that's supposed to go in here
+00:30 and we're going to say not an ID,
+00:33 so when we pass not an ID, what we'd like to see is that this is an error,
+00:39
+00:43 so what should happen here, well there should be an exception I think,
+00:47 it could raise an error or it could just return none,
+00:51 I'd kind of vote for raising an error, but let's see what happens.
+00:54 Look at that, entity not found error, that sounds pretty awesome
+00:59 so we tried to say we're going to get a table
+01:02 but it said if there's no table we're going to raise this
+01:05 there's no table with this id, and sure enough, that's what we got,
+01:08 that's actually good, that means this is working
+01:10 we tried to book a non-existent table, we got an error
+01:13 but we need to indicate that, we need to tell pytest this is the intent
+01:18 so over here we'll use a context manager
+01:21 we'll say with pytest raises and then we give it the exception type
+01:29 so core. ENFE, entity not found error
+01:32 also notice right here I typed ENFE
+01:35 just hitting the cap letters of this and it pulls up entity not found error
+01:39 and you can even see it highlights it,
+01:41 this is a really great trick for typing out long words, long type shortly.
+01:45 And then we say, within that context block
+01:49 we're going to try to call his function
+01:51 and let's suppose for a minute it does not raise this,
+01:54 I'll just have it do nothing for a sec, and if we run this,
+02:00 well, I guess we weren't really able to get that other one to work, were we,
+02:05 I've got to say pass, let's just do this, we're not going to test that
+02:11 so over here we got an error because it did not raise the right kind of exception
+02:17 we got an attribute error and then somewhere up here
+02:20 we were expecting an entity not found error, so we got the wrong type,
+02:25 so you'll see that we're testing this and if we do raise that error now
+02:29 yeey, everything works.
+02:31 Okay, very last thing, there's one other similar test that we want to do
+02:36
+02:38 and that is you cannot book a booked table,
+02:43 so let's go over here and we'll get all the tables
+02:46 and we're going to book one and then we'll try to book it a second time.
+02:50 So we'll get all the tables, give us the first one
+02:53 we'll book it by that id, I guess we don't really need this
+02:57 maybe we could just inline this
+03:01 I am not sure if this is better or worse,
+03:04 but here it is booked, so this one is already booked
+03:07 now we're going to come down here and try to do this again
+03:13 try to book the same one twice, so this should work out not so well
+03:18 in fact, let's pick a different one,
+03:22 I'm a little concerned that up here we're not resetting this
+03:25 and that we might have already booked that one,
+03:27 so we'll pick that one and this one as well
+03:31 okay let's see if we got it working— we do not, what went wrong?
+03:36 Nothing went wrong, it worked, table unavailable, error
+03:39 however, why did our test crash?
+03:42 Because we're searching or we're looking for an entity not found there,
+03:47 and we want table unavailable, now we should be all good.
+03:50 Great, our tests are working,
+03:52 so hopefully that gives you a good sense of how to write and use these tests,
+03:55 we now have a pretty solid application,
+03:58 now let's take a moment and kind of step back here,
+04:01 step back and close a few of these things
+04:04 we're going to come with them out so that we're not actually running as much
+04:08 you'll see why in the next lecture.

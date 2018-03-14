@@ -1,0 +1,37 @@
+00:01 We saw when working with libraries like NumPy
+00:04 that are typically used in data science,
+00:06 PyCharm detects this and suggests that it goes
+00:09 into what is called scientific mode,
+00:11 and in scientific mode, we have the couple of tool windows that rearrange themselves
+00:16 and you can always get to this under the menu system
+00:19 but it's nice that PyCharm suggests it.
+00:22 Over here we have our main editor,
+00:24 we have our code documentation and this really only worked
+00:28 when you actually have the library fully installed,
+00:31 remember we had a virtual environment,
+00:33 NumPy was not installed, we had to use our code intention to install it,
+00:35 then it started working, and then down at the bottom, we have this Python console.
+00:41 Now notice, this is an IPython console here
+00:44 and when I did the demo, for some reason, it was just a standard Python console,
+00:49 I couldn't get the IPython console to come back,
+00:52 I'm pretty sure the intention is always to be an interactive IPython console,
+00:56 who knows, I'm not sure why it didn't come up for me
+01:00 when I was doing the demo for you.
+01:01 So, it's really nice that these tools come up like this
+01:04 and when we write our code, we'll see that we have another area called the SciView,
+01:10 so we have the documentation, but we also have this SciView.
+01:14 Now, any sort of graph that is going to be shown will appear here,
+01:19 when you run it, whether you're debugging or you're not debugging,
+01:23 so we saw that when we call plot.show
+01:25 normally that's a separate window per plot that just pops up
+01:29 but if you do it inside PyCharm in this data science mode
+01:33 it will actually just here in this SciView over here, so that's pretty cool.
+01:38 Now if we actually debug it and stop here in a break point, we get some more options,
+01:44 so if you look down here at the bottom in the variables, in the debugger
+01:48 the things that are certain types of data science
+01:52 variables like nd arrays from NumPy actually have this view as array,
+01:57 so if you click on the view as array, over here on the right
+02:01 you'll see you have this nice visualization.
+02:03 Now this is not super exciting because it's one dimensional
+02:06 but it could be two dimensional or more over here on the right,
+02:11 so it's pretty cool that this option is available while you're debugging as well.

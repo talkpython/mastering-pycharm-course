@@ -1,0 +1,33 @@
+00:02 Unit testing is important for reliable code
+00:05 and PyCharm has support for most of the ways
+00:08 that we do testing in Python, let's try pytest.
+00:11 Over here we have a starter project,
+00:15 in the beginning it doesn't really have any tests
+00:18 but it does have at least some working code
+00:22 that you can write some tests for,
+00:24 so over here, we're going to do a couple of things
+00:27 first we're going to configure the pytest test
+00:30 which is not super obvious on how to do in PyCharm until you've seen it,
+00:33 and then we want to use code coverage to see how well we're doing,
+00:36 realize we need some more tests, write a few more tests,
+00:39 realize now we have great code coverage.
+00:42 So we'll start out by opening up your table
+00:44 create a virtual environment in it, open it in PyCharm, standard stuff,
+00:48 so we need to add a run configuration for the tests
+00:51 and so you need to go edit the written configuration,
+00:55 drop down, pull down, hit edit, go over here and add a new Python test
+00:59 pytest option, it talks about the settings to use to get it to work,
+01:03 when you run it you'll see, stuff is not so much working
+01:06 and they're all failing,
+01:09 now, that's okay that it's failing, for now,
+01:11 let's just run it with code coverage and see how much code
+01:15 we're even trying to run with our faulty test.
+01:18 So we're going to come over here and run the test with coverage
+01:20 you may have to click the little button
+01:22 to install coverage.py into your virtual environment
+01:25 and then what you're going to do is you're going to start implementing the tests
+01:30 and you'll see in the test code,
+01:32 there's some little notes on how to do that what you need to do,
+01:35 once you get all the tests to pass
+01:38 and core.py has on 100% code coverage, you are done,
+01:41 you should see some awesome like this, all green at the end.

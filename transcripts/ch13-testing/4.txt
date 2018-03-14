@@ -1,0 +1,108 @@
+00:02 So we wrote this test and we can run it
+00:04 and guess what, it passes because we're asserting true,
+00:07 but yeah, that's not really that interesting,
+00:09 let's write some actual test.
+00:12 So remember, we're going to work on our core bit over here
+00:15 and it does things like pull back a table,
+00:18 you find available tables, given a choice
+00:21 and this is like a numerical value that corresponds to
+00:24 say like Thai food or burgers or whatever,
+00:27 so we're going to write some tests
+00:29 and the first one that we want to write is that there are tables available at all
+00:34 in the beginning when the app starts, for some food category,
+00:41 so let's name the test that, test_there_are_tables_available,
+00:50 nobody is going to have to call this so let's make it descriptive,
+00:53 so let's come up here and create a choice,
+00:56 we'll say our choice is going to be one and be super explicit about this,
+00:59 we'll say one tables, these are the tables corresponding to choice or category one,
+01:04 so we'll say core.find available tables and we'll give it choice
+01:09 and then we just need to do as assert that there are one tables
+01:13 that is that the length of these tables is greater than zero
+01:16 so maybe we could be a little more explicit I guess
+01:19 because who knows really what comes back here,
+01:21 maybe a query or something, so len maybe makes it a little more obvious.
+01:24 Now let's go down here and one of the principles of testing
+01:29 is that basically we want to see the test fail first
+01:34 so let's just do a quick return nothing and run our test,
+01:38 we failed, we got zero where we expected it to be greater than zero,
+01:45 right here we asserted the value of that, now it being false,
+01:51 it is zero which is false and so on.
+01:54 So let's get that little trick away, this is not a real database
+01:59 it's coming out of memory but just to keep it simple.
+02:02 Now we should see our test.
+02:04 Pass, awesome, so you can see all the output here that we get from pytest
+02:08 and we have our test there, let's go write another test.
+02:13 The next thing that we want to test is that we can actually book a table,
+02:18 not just that they exist, but that we can book them
+02:20
+02:25 so we'll test that table can be booked,
+02:28 and let's go and get the tables,
+02:31 so we'll say tables = core.all_tables
+02:35 that's just going to be something to start with
+02:38 and then what we want to do is say come over here
+02:41 and get a single table or selected table or whatever
+02:44 is going to be a table of zero
+02:47 we've already asserted that there are some so this should be okay.
+02:51 So here's the table that we're going to work with
+02:54 and then let's say we're going to go book it
+02:59 so we'll book a table.table_id
+03:03 so then all we're going to do is that assert that the booked one,
+03:09 well we could assert that the thing is there and that it is booked,
+03:15 so we have a table that we got back, it is booked
+03:18 and maybe the final thing we'll assert
+03:21 that booked.table_id == table.table_id
+03:28 the one that we booked is actually the same one
+03:31 it might not necessarily be the same pointer, but it is the same one
+03:34 it looks like we're working with some funky offset here
+03:37 so let's fix that, there we go,
+03:40 okay, so that seems like a reasonable test, let's run it.
+03:43 Boom, it passed, let's suppose for some reason it didn't pass
+03:48 we should put not equal here— boom it fails,
+03:52 so we can look at this test run over here a little bit
+03:55 we have a few things that we can do,
+03:57 notice you already have the time in milliseconds which is pretty awesome
+04:00 you can sort alphabetically, we can sort by the slowest to fastest
+04:05 you can collapse these down like this, or you can expand them out,
+04:08 so if we had it like this we could just go say look at different modules,
+04:12 we could come over here and run only the failed test, pretty cool,
+04:17 so we could rerun them again a bunch of times by clicking this,
+04:21 or we could run just the failed ones and notice this one is failed
+04:24 so of course, we go and fix it
+04:28 it's failed because we did sort of bad test,
+04:32 we run that and now it's fixed.
+04:34 That goes away, there's no more ones to run, but we can run them all,
+04:37 there's one other thing here that is pretty interesting,
+04:42 here we go run them all up there,
+04:44 notice this, auto test, watch this
+04:50 I probably need to leave that up for that to have any sort of meaning
+04:53 but maybe make it smaller,
+04:56 so let's go over here, to our core
+04:59 and let's say we're trying to do an optimization
+05:01 or a non-optimization, I don't know
+05:04 let's define a method called test
+05:08 and it takes a t for table or just a table
+05:13 and in here, it is just going to do this, we could say test t
+05:17 now this is insane to write, we're not going to say this,
+05:20 like this is not how it would be
+05:23 but watch what happens, notice when I save that,
+05:27 it reran the test, it reran it right away,
+05:31 and like oh yeah this is supposed to be table
+05:33 so we could go back and put a t like this,
+05:36 hit save, wait a couple of seconds and now the tests are running again
+05:40 and it refactored this and say okay I wanted to say table here, that's cool,
+05:44 wait a second and so as you work on your program,
+05:47 the tests are just continuously running,
+05:49 I'm not sure I would really like to work this way,
+05:51 I feel like it would stress me out a little bit too much
+05:53 to just have this constantly like running,
+05:55 but it is pretty cool to basically have this green here meaning
+05:59 your program is okay and it's just a continuous light of status right,
+06:05 that's pretty awesome, let's unravel this because this is silly
+06:07 but it give a little thing to write some extra code there,
+06:10 all right, so those are the two— it's still running, isn't it, let's stop it.
+06:17 So those are the two sort of straightforward tests,
+06:19 that there are tables and that we can book them,
+06:22 those are the main thing that we can do.
+06:24 We're going to come back and look
+06:26 at a slightly different variation for testing error conditions,
+06:29 which is also important in code.

@@ -1,0 +1,51 @@
+00:01 That's good, now let's focus on this get records thing.
+00:04 You'll see there's this read data, there's this read row and so on,
+00:08 let's go down here to this run query, and it turns out read row is slow
+00:12 to create connection maybe, we could use connection pooling
+00:15 that's a possibility, we could think about how that might work,
+00:19 but let's go over here, we'd have to simulate this
+00:23 in a real database app it would actually automatically do that
+00:26 so let's go check this one out.
+00:28 Now, let's suppose we've looked at this read row business
+00:32 and you can see I'm just faking this for our little demo
+00:34 we learned that there was actually no index on this database
+00:40 on this particular query that we're running and there's a lot of data,
+00:44 so the difference between having a large amount of data within index and not
+00:50 can easily be a thousand times faster,
+00:52 so let's suppose we go over to the database
+00:54 and we're like, we're going to put an index and make it a hundred times faster,
+00:58 so we improved it by adding an index,
+01:02 so we're going to go run this again and see how we're doing,
+01:06
+01:09 I don't want regular to run, I want profile to run
+01:12
+01:15 I got our answers, let's zoom in again and see what we got going on
+01:20 so now we look get records is actually still slow
+01:23 but it's really about creating this connection
+01:27 and this whole part about reading the rows,
+01:30 like literally fell off the map
+01:33 because it was under some sort of threshold,
+01:35 let's go back and actually imagine
+01:37 we could do some sort of connection pooling
+01:41 again this is just fake, like I said,
+01:43 real database connections, systems like SQLAlchemy would take care of this
+01:46 but let's just go say this and let's imagine that we could say
+01:53
+01:59 if we have it, we're just going to return the connection
+02:01 otherwise we have to create it, and we'll set the connection to that
+02:05 and then we'll return the connection.
+02:08 This is what connection,
+02:11 at least some sort of shared connection would look like,
+02:14 connection pooling will have a set we could get from
+02:17 but let's see how this works, I think we probably got our get records
+02:19 just completely flying now,
+02:23 all right put that over here, have a look at the call graph
+02:27 so down here we call get records nine times
+02:29 we call get connection and it only takes that time that it took for one of them
+02:33 and then that was it, it took a while to create the first connection
+02:37 but no matter how many times we call it
+02:40 now it's going to be open and it's going to be flying
+02:42 so these things are really going pretty well
+02:44 and this one is looking worse and worse compared to its friends,
+02:47 it's red right, so let's go and work on this one
+02:50 and then we'll see what else we can do.

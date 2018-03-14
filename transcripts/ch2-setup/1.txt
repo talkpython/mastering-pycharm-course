@@ -1,0 +1,84 @@
+00:02 Let's talk about setting up PyCharm on your operating system.
+00:06 Now there's going to be three of these videos,
+00:09 one for MacOS, one for Windows and one for Linux.
+00:11 Unless you're just curious, you don't have to watch them all,
+00:14 just skip to the one that is your operating system and then go with that.
+00:17 So we'll start with Mac, I'm going to use a Mac
+00:19 for this course, for my demos and so on,
+00:22 but you can use whatever you want,
+00:24 PyCharm works on all three operating systems.
+00:27 So we're going to go and download the necessary version of PyCharm
+00:31 and the necessary version of Python, so let's go do it.
+00:35 First you want to make sure you have Python,
+00:38 now on Mac you can always go over here and type Python-V
+00:44 and you'll have Python 2, it is shipped with that
+00:46 but it doesn't usually have Python 3.
+00:48 Now I've already installed it, so you can check
+00:51 to see whether you have it by typing that, I have 3.6.4, it is great.
+00:54 If you don't, you want to download it,
+00:56 so there's two options, one straightforward
+00:58 you come over here, you make sure you download
+01:00 whatever the latest version of Python 3 is,
+01:02 this course is based on Python 3, if you have only Python 2,
+01:04 a lot of the code is not going to work or it is going to be a little bit different.
+01:08 PyCharm supports it but this course is not focused on it.
+01:12 So this is one way, another way that is really nice is to use Homebrew,
+01:16 so Homebrew is a really sweet package manager for the Mac,
+01:20 now you run a Ruby command to get it set up, and it's based on Ruby
+01:23 but you don't really care, Ruby comes with Mac so it's all fine.
+01:26 And then once you get it set up, you just brew install Python 3
+01:30 and then when you work with it, just like you saw me type
+01:33 Python 3 will launch the Homebrew installed Python 3 interpreter.
+01:37 So that's pretty cool, you can definitely get Python that way.
+01:40 But you're going to need to install Python 3 if you don't have it,
+01:43 you saw the command to check to see if you do,
+01:45 it's just Python 3-V, see what you get.
+01:49
+01:52 Next step, we want to get PyCharm.
+01:55 You can go and just download it right here,
+01:57 I would recommend getting the professional edition
+02:01 you can get the community edition,
+02:03 but a lot of the features we talk about, they're not there,
+02:05 the web tools, the Javascript tools, the server side tools,
+02:09 the database tools, those are all in here
+02:12 so you're going to want the pro version
+02:15 there's a free trial, you can get it, or you can pay a few bucks,
+02:17 maybe you already have it.
+02:20 So if you have this, that's great, this is one way to do it.
+02:22 Notice down here it says get the Toolbox app to download it,
+02:26 alright, so if we just download it this way,
+02:28 it's totally simple, you just run this installer, drag this baby over and run it,
+02:34 so that's about as easy as it gets, right.
+02:36 The other thing though is, let's talk about this Toolbox app,
+02:41 so this is pretty cool, if you're going to buy more than one thing from Jetbrains,
+02:46 if you want access to more tools,
+02:49 there's a way to sort of subscribe to all of their tools,
+02:52 so I believe the way you get that is maybe just /toolbox
+02:56
+03:00 and then yeah, you just say get toolbox.
+03:02 And there's like a yearly subscription type thing, similar
+03:05 it's a little more than PyCharm but not terribly more, let's see what it costs.
+03:09 If we pay yearly it's going to be 249 for first year
+03:13 and then, basically onward it's like 200 and 150.
+03:19 That's nice, this is how I do it
+03:21 because I use a lot of the various tools from Jetbrains,
+03:23 so if you have that, let's check this out,
+03:26 so over here, you have this thing running, this is the little Toolbox app
+03:29 and it just has all the tools there for you,
+03:32 so for example apparently there's an update for PyCharm,
+03:35 and I could tell it to do this automatically, just always keep them up to date,
+03:38 maybe I want to do something else,
+03:40 maybe I am considering writing some swift code
+03:43 and also I have app code, so if you have licenses for all of these things,
+03:46 like down here this WebStorm will reference WebStorm
+03:49 this will reference DataGrip which is right there,
+03:52 you just click this and wait for a few moments, and it'll just be installed.
+03:55 So I'm not going to wait for that to finish,
+04:00 but maybe we'll see some notification along the way.
+04:02 You can either install PyCharm directly
+04:05 or install the Toolbox and get it that way, take your pick.
+04:07 Once you have those two things done,
+04:10 that's really all you need for this class,
+04:12 I can't think of anything else that we use that you are going to need
+04:15 so do those two things, get Python 3, get PyCharm pro up and running
+04:20 and you'll be ready to take this course.

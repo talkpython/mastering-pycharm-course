@@ -1,0 +1,30 @@
+00:02 We've written our code, we've debugged our code and it's working,
+00:06 but maybe it's not going as fast as we would like,
+00:09 maybe that website that we imagine being ultra responsive
+00:12 actually takes about a second and a half to render most of the pages,
+00:17 that would be really unfortunate.
+00:20 How do we go about fixing this problem?
+00:22 Well, the first step in fixing these performance problems
+00:26 is to ask the question where are you spending your time,
+00:29 what is slow and what is fast.
+00:32 And then you can use your programming skills,
+00:34 thinking about algorithms and other types of things for making it fast.
+00:38 So we're going to talk about PyCharm's profiling tools here.
+00:42 It's really important to keep in mind that our intuition often fails us
+00:48 when we're guessing or thinking about performance,
+00:52 I've had this happen over and over in my career,
+00:55 I think okay, this part is going to be super fast and this part is going to be super slow,
+01:00 so if it's slow let's try to optimize think about why that's slow.
+01:03 And then I went and measured it, and in fact, no,
+01:06 that part was blazing fast, what was I doing.
+01:09 There's a couple of examples I can think of that that was just so far out of whack
+01:14 that a quick measurement showed me where the real performance problems were
+01:17 and those were actually way easier to fix
+01:19 because I often feel like hey, this is complicated
+01:22 this is probably the part that's slow.
+01:25 So if you could find a simple thing to make fast
+01:28 that actually makes a whole app fast, even better.
+01:31 So the main takeaway here is our intuition is going to fail us
+01:34 when guessing about where code is slow,
+01:37 and the profiling tools will tell you for sure, within some degree,
+01:41 how fast each part is, and lets you reason with data rather than guesses.

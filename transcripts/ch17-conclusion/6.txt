@@ -1,0 +1,10 @@
+00:01 Finally, thank you for taking my course,
+00:03 I really enjoyed writing it for you, I hope you've learned a ton
+00:06 and really appreciate everything that you've gotten out of it.
+00:10 Feel free to follow me on Twitter over at @mkennedy
+00:13 check out the podcast at talkpython.fm
+00:16 and I hope to see you online, or a conference somewhere around the world.
+00:20 If you enjoyed this course, please consider recommending this course
+00:24 or any of my other courses to the people that you work with
+00:27 or your friends and colleagues.
+00:29 Thanks and goodbye.

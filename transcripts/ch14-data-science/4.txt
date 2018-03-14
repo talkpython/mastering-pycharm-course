@@ -1,0 +1,75 @@
+00:01 Writing code like this was really fun
+00:03 and this is certainly important in data science,
+00:05 but one of the premier tool sets that people use these days
+00:09 when they're doing data science of course, is Jupyter notebooks,
+00:12 and we'll see that PyCharm has special support for Jupyter notebooks as well.
+00:16 So let's take the same bit of code
+00:19 and redeploy it, revision it as a Jupyter notebook,
+00:23 we'll come over here, right click and say new jupyter notebook
+00:27 and I'll just call this explore as well,
+00:29 and now we have right in line here a Jupyter notebook
+00:34 and we can have different things, like we could have a heading,
+00:38 saying this is our data exploration, great.
+00:46 Now we can go and try to run it, and that works
+00:50 but let's go and do some code.
+00:52 We're going to work with basically the same code here
+00:57 so let's come over here and do our imports,
+01:03 and try to run that,
+01:05 now, something maybe somewhat unexpected happens,
+01:08 it says, okay, well where is the url for your running notebook server
+01:12 and you're like wait, running notebook server— come on what's going on here,
+01:15 I don't have a notebook server, I'm trying to get started with Jupyter.
+01:18 So if you actually cancel this, it will go and propose
+01:23 that the system set up and start a Jupyter notebook server for you, so let's cancel this,
+01:30 it says couldn't connect do you want to try to run it.
+01:32 Now remember, down here
+01:37 we don't have Jupyter install
+01:40 we do have some of the data science, but we don't have Jupyter,
+01:43 so we'll go over here and let's do it one more time and click this
+01:48 and it'll try to basically install it for us,
+01:51 so it says we're going to run like this,
+01:54 oh except for that we can't because it's not installed,
+01:57 so you get fixed, watch this little part down here,
+02:00 my window is being small for recording, it's hard to see,
+02:03 but there you go, installing Jupyter.
+02:05
+02:09 So it's all fixed, you can see it's done,
+02:12 I would actually like for this little fix warning thing to go away when that happens,
+02:16 but it didn't at the moment, so we'll just hit run,
+02:20 and then everything is up and running.
+02:22 Now, we could use this, right, we could use this
+02:25 but in fact, we can just put this section away and hit play again
+02:28
+02:32 and guess what, it looks like it works,
+02:34 like we could try print Hello Jupyter,
+02:40 it is working again, all right.
+02:43 Now, let's take our code over here,
+02:45 let's work on our data bit, using a few little blocks here, run that
+02:52 so now we have our data all loaded up and we can do that,
+02:57
+03:02 and over here, notice something happened
+03:04 we have our science view, and it just popped up the same graph over here
+03:08 so let's go and actually make a change to say,
+03:11 no in Jupyter, what we typically want is
+03:14 we want our data shown in the notebook,
+03:18 so let's go back to the top and
+03:21 we're going to use command is directed to Jupyter, not to Python
+03:25 we can use Matplotlib inline,
+03:29 now it decided it has to reindex something
+03:32 so this went gray for a second hold on.
+03:34 Okay, so run that again, run that again,
+03:37 now if we run our plot, boom, right there inline, how cool is that?
+03:43 In fact, I don't even think we need this show anymore, let's see,
+03:46
+03:51 we don't need it, but we don't want to output that where that pointer is.
+03:57 Okay so here is our same bit of code that we wrote over here,
+04:00 but now we've written it in a Jupyter notebook style
+04:04 and we've used the Matplotlib inline
+04:07 to make it render here instead of pop up separately, pretty cool huh?
+04:12 So if you're using Jupyter notebooks
+04:14 this is how you do it, there's a few steps,
+04:17 you sort of try it, it doesn't work, you hit a button to fix it
+04:19 or you cancel on that and hit the button to fix it,
+04:21 so it's a little bit of a back and forth, but it's really easy once you get it set up,
+04:24 an it's even easier because it's already installed,
+04:27 so very, very cool, the support they have here for this as well.

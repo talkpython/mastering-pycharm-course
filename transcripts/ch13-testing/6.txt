@@ -1,0 +1,93 @@
+00:01 So we have some tests for our little application here
+00:03 and granted it's really small so that's pretty easy to do.
+00:06 Do we have enough tests?
+00:08 Are we testing the important parts?
+00:11 Are we ignoring the unimportant parts,
+00:13 also important for your sanity and actually getting stuff done?
+00:17 But are we covering what we need to cover?
+00:20 Well, if somebody came to me and said,
+00:22 I have this project and it's really amazing
+00:25 because it has unit tests and it has 1000 unit tests,
+00:26 it's really great how much testing we're doing,
+00:29 that's a pretty vacuous statement,
+00:31 it doesn't really tell me a whole lot what you're doing,
+00:34 yes, you have a lot of tests, that's probably good,
+00:36 they may be poorly factored or whatever,
+00:38 but how does it actually address covering the important parts?
+00:41 It's been a ton a time like mocking out logging
+00:44 and testing that logging works, like who cares, it's kind of useless,
+00:47 you should be focusing on the core thing that your application does.
+00:51 In this case, we should be focusing on booking tables
+00:53 and all the validation and data access around that
+00:56 to make sure that's super solid,
+00:58 so then when we do get to our program
+01:00 and consume this core library, it's ready to roll.
+01:03 So the way you answer that question is with code coverage
+01:07 and the idea is we run our tests,
+01:08 the system is going to watch what other code is executed
+01:13 while our tests are running, and then give us some kind of report
+01:17 and even better than that,
+01:19 so watch this, we can go over here and run this test
+01:21 but instead of just running it like this, with debugging,
+01:24 we can run it with coverage.
+01:26 We try to run in it, it said no, no, not so much,
+01:31 you need to install coverage.py or enable use bundled coverage,
+01:37 I am going to install this.
+01:39 So it's installing that into our virtual environment
+01:43 and in just a moment we should be ready to roll,
+01:46 click the button again, test run, just like before
+01:50 however, it takes a little bit longer as there is a report here
+01:54 so come in here, project and unit testing,
+02:01 now we have some interesting stuff,
+02:03 so notice we're not covering,
+02:06 not interacting with program.py at all from our tests
+02:09 and that's probably okay,
+02:11 test everything, that is kind of not meaningful
+02:13 but core, this is what's important,
+02:16 this is the thing under tests, the subjects of test
+02:18 we can export this stuff out and so on.
+02:20 Notice over here in the left how awesome this is
+02:23 like granted this stuff isn't run because I jammed all these projects together
+02:26 but in a real project, these numbers would tell you meaningful stuff
+02:29 about how your test addressed covering your project, that is super, super cool
+02:35 so this is great, this is greater I think that is better,
+02:39 now final bit of goodness I think is probably the best,
+02:43 check this out, if I go over here,
+02:45 it might be hard to see but notice the color
+02:48 we have blank on the blank lines, we have green, we have red
+02:54 so we click this, this line was hit,
+02:56 we click this, I have red, this line was not hit,
+03:01 right so this line here, not run.
+03:04 So you can actually click here and navigate between the various places
+03:09 and see what was hit and what was not hit,
+03:12 but the important part is I can look at this code file in the editor
+03:15 and just like github, it tells me these are the areas
+03:18 that you still need to work on testing.
+03:21 We are testing the book a table,
+03:24 and we're testing this stuff, that's all good,
+03:26 and we're even testing these if statements,
+03:28 but we're not testing the failure condition,
+03:31 so we're not passing in in this case a poor or missing table id,
+03:35 in this case, we're not passing in a booked one,
+03:38 let's go undo one of our tests here, let's do the non-existing one,
+03:43 rerun it again with coverage,
+03:47 port being generated, and down here,
+03:51 if you look this is now 96% instead of 93%, that's an improvement,
+03:55 and if we look, now this line down here right there line 40 has turned green
+04:02 because we now tested that error condition,
+04:05 actually sorry, no, line 34, we tested that error condition,
+04:09 still we haven't tried this booked one,
+04:11 so we'll go and uncomment this,
+04:13 this is the test that tests the failure case of trying to book a booked table,
+04:18 which is exactly what we're doing on line 36 and 37.
+04:22 So we'll run it again with coverage, wait,
+04:26 now how are we doing, we're up to 100% coverage on our core,
+04:32 that's pretty awesome, all green, everything is good.
+04:36 Now I don't want to leave you with the sense
+04:39 that I think you should have 100% coverage on everything,
+04:41 there is definitely a point of marginal return,
+04:43 the Pareto principle, that 80-20 rule of there is some core essence of your app
+04:48 and that should really be tested and you are kind of wasting your time
+04:50 with a lot of the supporting bit around the edges,
+04:54 but it's really nice that we are testing the core functionality of our app
+04:58 and PyCharm makes it super easy to discover and work with getting that done.

@@ -1,0 +1,68 @@
+00:02 So we got our information about the performance here
+00:05 none of these are acceptable speeds
+00:09 300 milliseconds or above this is probably the worst,
+00:12 but let's go ahead and start with this one in terms of trying to optimize this.
+00:16 So here we are going to talkpython.fm,
+00:20 and we're doing this query and we'll get it back
+00:22 and there's really very little to do over here
+00:26 you'll see under search, this is zero milliseconds,
+00:31
+00:34 the time actually is way, way, way down here
+00:40 but it's in this whole create connection send output
+00:43 it's down on the network layer,
+00:46 there's nothing that we're doing here that we're going to actually make faster.
+00:52 So let's think about how we can optimize this.
+00:55 One of the things we could do,
+00:57 let's suppose we're going to call this over and over
+01:00 let's suppose we're going to go over here,
+01:02 I want to call this ten times or something,
+01:06 because optimizing it once, there's not a whole lot we can do here
+01:09 but if we say this code is actually called a bunch of times
+01:15 like it's in a web app, the web app starts up and gets going,
+01:18 something like that might make sense to think about what we're about to do,
+01:21 so I run it without any optimizations
+01:25 you can see it's doing its thing, okay, great.
+01:29 So we go back over here to our services
+01:32 one of the things that's really easy is we could say
+01:35 let's just cash the output,
+01:38 how often does the content on talkpython.fm change;
+01:41 a couple times a week you, if we open our app, do some work and close it
+01:46 it is probably safe to just take the results.
+01:49 So one of the things we can do is we can use this thing called functools,
+01:53 so we can say import functools
+01:56 and in here there's a caching decorator, momento type thing
+02:00 and what it will do is, if it sees an argument it will record the results
+02:05 and if it sees that argument again, it's just going to say
+02:08 hey I already know the answer to this question, it is whatever, right,
+02:12 whatever it saw from the last time.
+02:13 So we can come here and say lru_cashe,
+02:17 so we'll come down here and we'll set the lru cashe
+02:22 and this is going to basically remember any search strings
+02:25 and if it sees the same search, it's going to say the same answer,
+02:28 and so we could search for many things
+02:30 and it would give us the different corresponding answers,
+02:32 but if it ever sees a repeated search, it's going to just give back the same answer.
+02:37 So let's go ahead and run this again, notice that one was slower,
+02:42 but now notice, there's basically no lag when we hit to the search section,
+02:46 the other stuff is still slow, but search it's blazing.
+02:49 So that's really cool, we're going to try
+02:52 to make use of this idea of caching as an optimization
+02:54 partly because we're not really doing interesting stuff
+02:57 so we kind of got to make up some examples,
+02:59 but this is really quite cool.
+03:01 One caveat is the stuff that goes in the perimeter list here must be hashable,
+03:06 strings are hashable, so this works.
+03:08 Okay, so that actually made this really fast,
+03:11 let's run this again and just see,
+03:13
+03:17 of course we did it, ten times as much, but that's ok
+03:20 we can still look at the call graph and just zoom in and see what's going on over here,
+03:25 so down here we have our search,
+03:28 it was only called one time and it did take 280 milliseconds,
+03:31 we can't really make it faster
+03:33 unless we actually were to go and start saving that to disk
+03:36 but even though these were called 9 times that one was called once
+03:39 because we asked for the same search information over and over,
+03:43 so once it got warmed up, it goes really, really fast
+03:47 so I think that's about as good as it's going to get
+03:49 unless I get my network faster right now.

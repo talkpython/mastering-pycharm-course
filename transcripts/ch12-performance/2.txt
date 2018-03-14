@@ -1,0 +1,55 @@
+00:02 Let's look at this new little application I've imported and written
+00:05 for talking about performance and profiling.
+00:08 So this is not anything practical in any real sense of an application
+00:12 but it does do a variety of different things
+00:15 which may or may not seem slow.
+00:18 So here we are in this program and I've set up a run profile
+00:21 let's call it program(perf) to disambiguate
+00:26 from all the other programs we have
+00:28 and in here, for now it runs this function once,
+00:30 we might run it a bunch of times later
+00:33 and what it is, is you give it a string, usually a single word and you say
+00:38 okay, I want to go and search a website using an http api, get some results back,
+00:44 I want to go to the database and do some searches
+00:48 sort of searching for this keyword here,
+00:51 and then I'd also like to go and do some sort of
+00:55 fake machine learning type thing here that's a computationaly intensive
+00:59 and we're going to print out all the time that that takes,
+01:03 like I, said this is not entirely fake, but it is somewhat useless.
+01:08 So the things we're doing here don't make a lot of sense really,
+01:11 it's just for us to do different things
+01:13 where you might think about what part is fast, what part is slow.
+01:17 So in this search part here, this really does go to a url and it builds up the url,
+01:22 and it performs a search and then it converts the results back into objects.
+01:27 Down here it actually is searching the transcripts
+01:30 all the content on talkpython.fm
+01:34 so when we say profiling, it will give us back the thing that had to do with profiling,
+01:38 if we said and anvil, give us the stuff about anvil web apps and things like this.
+01:43 So that's really cool and it goes and it performs the search with requests,
+01:47 converts the results back,
+01:49 basically gets the description for each episode that matches.
+01:53 And then, let's go to data access I think that one runs next
+01:57 we're going to create a database connection
+02:00 and we're going to omit the details for a minute on that,
+02:03 we're going to run a query based on this text sort of, kind of, not really,
+02:08 and then we're going to just loop over
+02:10 imagine 100 records came back
+02:12 we're going to pretend to read those rows back from the database
+02:14 and add them here and they we'll return that data.
+02:17 And the details about reading rows, we're not talking about it yet.
+02:21 And finally, here we're going to compute the analytics
+02:25 so we're going to read some data and then do some more stuff here,
+02:28 and then we're going to go and say given these two pieces of data
+02:32 let's go and do some machine learning
+02:37 that come up with the answer, some kind of index here.
+02:39 We're going to try to figure out what parts of these methods I'm not showing you,
+02:43 which ones are slow and which ones are fast,
+02:46 how often we're calling them, things like that.
+02:49 So I'll go and run this and then we'll turn on the profiling tools after.
+02:52 You can see it takes a second to that first part
+02:55 and then the db business is kind of fast
+02:58 and then here I came up with this big long number
+03:00 right here in this learning thing, I'll run it one more time,
+03:06 you can see they are kind of similar
+03:08 the overall operations, the the three operations
+03:10 but inside the various things they do, not so evenly split.

@@ -1,0 +1,21 @@
+00:02 Unit testing and testing in general
+00:06 certainly weren't the pillars of software development
+00:08 and often distinguishes amateur from professional developers,
+00:12 so we're going to see that PyCharm has some really fabulous
+00:16 and deep integration with unit testing and related functionality,
+00:21 things like code coverage and whatnot.
+00:23 Now before we get started, I want to lead off with two quick thoughts
+00:27 one from Steve McConnell who wrote Code Complete,
+00:30 "The problem with quick and dirty is
+00:33 that the dirty remains long after the quick has been forgotten,"
+00:37 and an anonymous quote similar to this,
+00:39 "The bitterness of poor quality remains
+00:41 long after the sweetness of meeting the schedule that has been forgotten."
+00:45 So testing is all about building reliable code, making sure it meets the spec,
+00:50 it helps us know when we're done and don't over design it
+00:53 and it helps us provide meaning and import to the continuous integration build,
+01:00 honestly in Python what does it really mean for your code to build anyway
+01:04 not very much, so in order to really test Python
+01:09 or any other dynamic language you really need to exercise it,
+01:12 and the way you exercise Python in an automated build is through unit test
+01:18 so testing is important and we're going to see how PyCharm can do that for us.

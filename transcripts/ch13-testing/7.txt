@@ -1,0 +1,49 @@
+00:01 Let's review some of the testing concepts that we covered in this chapter .
+00:04 So we started out writing tests and in our example we use pytest
+00:09 we could have used any of the variety of supported testing frameworks
+00:13 and here we have two tests,
+00:15 notice the long method names, these are descriptions
+00:17 not meant to be really used, so make them descriptive,
+00:20 and these are testing the happy path,
+00:23 later in our example you saw us actually test the assertions and errors as well.
+00:30 Okay, so we're going to write this code but how do we run it?
+00:33 Well, PyCharm has some great options for running our tests
+00:37 if it's the unit test kind you can actually just right click on the file
+00:42 and say run tests in this thing, it will detect that
+00:44 but for the others, we need to go and create a run configuration
+00:48 so over here you'll say go to Python tests
+00:50 and I'd like to run say pytest, so choose the options there and set that up.
+00:55 Notice also sort of there is a meta testing framework called Tox
+00:59 and we can use Tox to test different versions of Python and whatnot
+01:03 so this kind of is also in the realm of Python testing
+01:06 but maybe not, instead of but more along with something like pytest.
+01:12 Once we run our tests, you'll see down here we get some nice output,
+01:15 we get a little hierarchy of the tests that are passed and the tests that failed
+01:18 and if we zoom in on this a bit,
+01:21 we look at the various options we have down here
+01:23 so obviously we can run the test
+01:25 clicking this little run button and the one in the top right
+01:28 they do the same thing if the test can run configuration is the active run configuration
+01:35 you can also hit CRTL R or whatever your key binding to run your project is.
+01:39 Here we can hide or show the passing test,
+01:44 if you have thousands and thousands of tests and only a few are failing
+01:48 you want to zero in on that, so you can toggle that,
+01:51 here you can toggle ignored test,
+01:53 down here, this is really nice, similar to the if I have a 1000 tests
+01:58 but only a few of them are failing and I want to deal with them,
+02:01 this button is really nice because they will only run the tests that failed the last time,
+02:05 so maybe you're running your code, there's some little bit that keeps crashing
+02:08 so you can run it this way until there's no more failed ones
+02:11 and then just run it again one more time to make sure everything is golden.
+02:14 We also have autorun, this is pretty sweet
+02:17 if you have a really nice test coverage and the tests are fast,
+02:20 this will basically continually run your tests,
+02:24 any time you make any changes to the code
+02:27 either under test or the test code itself
+02:30 it will just run in the background constantly
+02:32 and just let you know the status of your application,
+02:35 basically as your type, which is really pretty awesome.
+02:39 Down here you can import and export results
+02:42 and so if you want to save these for some reason
+02:45 or pull them in and analyze them,
+02:47 that's pretty cool, you can do that here.

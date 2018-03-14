@@ -1,0 +1,59 @@
+00:02 Are you using Windows for this course?
+00:06 Well, let's get you set up so you're ready to follow along and do all the exercises.
+00:11 The first thing you're going to need to do
+00:13 is make sure that you have Python installed.
+00:16 Now, Windows doesn't come with Python,
+00:19 if you're taking this course, it's about Python, you may already have it,
+00:22 but if you don't, you absolutely have to download it,
+00:25 and this course is based on Python 3,
+00:27 so make sure you have Python 3 installed as well.
+00:32 You might have Python 2, but that's probably not good enough,
+00:35 I'm sure it's not good enough.
+00:37 So you can check, come over here in your command prompt
+00:39 and you can type something like python-V
+00:43 or you can ask where Python, that also might give you a hint,
+00:47 okay, so that's Python 3.6
+00:50 and then somewhere below that, we have Python 3.5,
+00:54 so apparently I have those two versions of Python on my system,
+00:57 I haven't installed Python 2.7.
+01:00 So you want to make sure that you have Python and that it's at least 3.5 let's say,
+01:04 I don't think it needs to be higher than 3.5 for anything we do in this course,
+01:08 but you know, if you don't have 3.6, go and install it,
+01:11 you notice that this is a slightly bit out of date,
+01:14 maybe I'll install the update after this as well, there is as we saw right here 3.6.4.
+01:19 So that's Python, how about PyCharm?
+01:21 Well, in order to get PyCharm,
+01:25 we can just go to jetbrains.com/pycharm and download it
+01:28 and that's the most obvious thing, but it might not be the best thing,
+01:31 let's go through this path and just see real quick.
+01:33 So we go to download and there's actually a choice of two types
+01:37 you have to make sure you use the professional edition,
+01:39 things like the web development tools, the database tools,
+01:42 some various other things that we're going to be using,
+01:45 they don't exist in the community edition,
+01:47 so you can get the free trial for the pro version, whatever
+01:51 but go and download that and when you do,
+01:53 you'll see that it's just a standard msi installer,
+01:58 just next, next, next, yes, next through it and you'll be all good,
+02:02 I'm not going to do that, I already have it installed,
+02:05 but also notice down here, it says get the Toolbox app to download updates
+02:08 so the Toolbox app is pretty sweet and this is what I've started using
+02:12 so what it is, is you can buy a subscription to many of the Jetbrains tools
+02:16 and this Toolbox app will let you manage it,
+02:19 I've already downloaded and installed it and it's right here.
+02:21 So notice that I have a couple of things installed,
+02:25 I have PyCharm professional and I have resharper for Visual Studio
+02:29 also installed for the times I got to do some C sharp
+02:32 so down here maybe I need to use DataGrip
+02:34 or I want to go and use, we'll talk a lot about WebStorm in this course
+02:39 maybe I want to install WebStorm, so I can just click install
+02:42 and it will automatically install it, set it up to be registered to me, things like that.
+02:46 So I actually really like this, you can even set it to auto update your app,
+02:50 just in the background, so you always have the latest version.
+02:53 If you want to get more than one of the Jetbrains tools,
+02:56 I'd take it with the Toolbox, otherwise maybe just install it directly.
+03:01
+03:03 Do Python first, make sure you have Python 3,
+03:05 run the installer for PyCharm, you will be ready to go
+03:07 there's nothing else in this course that you need in order to take it,
+03:11 just Python 3 and PyCharm.

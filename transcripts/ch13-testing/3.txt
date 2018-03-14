@@ -1,0 +1,51 @@
+00:00 Before we actually write our test,
+00:02 let's just get everything kind of put together in place,
+00:04 so over here I'm going to add a Python file
+00:07 I'm going to call this something super exciting like tests, like this
+00:12 and in here we're going to be using pytest.
+00:16 Alright, so we're going to import pytest,
+00:19 now pytest does not come with Python, it's external
+00:23 so it's over here in the requirements.txt
+00:25 and so you want to make sure that you install that for this to work,
+00:29 so we're going to have pytest and we're also going to import core
+00:34 and notice this is the root here, so that's going to work,
+00:38 this file is looking up for that one, so that's the source root, this should work,
+00:43 and down here the way we work with pytest is we just define a method
+00:47 it has the word test and then other, it has some stuff in it
+00:51 and then we can just assert,
+00:54 we can assert true, we can assert false, whatever
+00:57 so, we're going to just make sure that we can run this
+01:02 now if this was based on unit tests if this is a class called tests
+01:06 deriving from unittest.TestCase I believe
+01:10 then I could come over here and right click in PyCharm
+01:13 and say run unit tests in here
+01:16 I don't think it's going to do what we're looking for here,
+01:19 not so much is it, so we can't run it that way
+01:22 however, let's go and fix this, let's get rid of that one
+01:26 and we'll stay I would like to add a Python test run
+01:29 and notice all the different options,
+01:31 Twisted Trial, unit tests that's one I was talking about, pytest, okay great
+01:36 and what are we going to run, we are going to run a particular file
+01:39 sadly we have to browse all over the place
+01:42 I do wish that would remember its location
+01:46 let us select this, that seems wrong doesn't it,
+01:49 let's do it this way, copy path and enter path.
+01:55
+01:58 There should be no more arguments
+02:00 we're going to use the same virtual environment
+02:02 and let's use the same working directory just in case,
+02:06 oh yeah, and name, let's call this table test,
+02:12 try again, look, now we have the test runner,
+02:17 so we have all the tests are passed
+02:19 and we can expand those out and we can see here is this module called test
+02:25 it had one successful dot, and here is our other
+02:27 and if there was output from it, you would see that down here.
+02:30 So we haven't actually done any testing yet
+02:32 but we have the infrastructure here and we can rerun those tests
+02:36 and we can right click and say run just this one
+02:38 or profile just that one or check the concurrency diagram
+02:41 or run it with coverage, all sorts of cool stuff
+02:45 even just jump to the source which is
+02:47 hey no surprise right there, it's the one we wrote.
+02:50 So now everything in place, we're going to actually write
+02:53 some test methods involving our actual application.

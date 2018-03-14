@@ -1,0 +1,31 @@
+00:01 So we've seen that we can explore data in Jupyter netbooks
+00:03 right inside PyCharm as well,
+00:05 so create a new Jupyter notebook and you can just start typing,
+00:08 here we have just a standard Python variable being declared,
+00:12 if you want you can pip install Jupyter within your environment preemptively
+00:18 or as we saw, when you try to run it,
+00:20 PyCharm will open up a dialogue and suggest to fix it for us.
+00:23 So if we try to run it, even if Jupyter is installed it probably is not running at first,
+00:29 so it'll say couldn't connect, do you want to run it,
+00:32 you click yes and it will pop up that dialogue
+00:34 you either just press run, or you have to say fix it by installing Jupyter
+00:38 and then run, that's cool, so just click right here.
+00:41 Once it is running, this url you can actually use in your web browser
+00:46 to get back to the Jupyter notebook and interact with it,
+00:49 but if you want to just run it within PyCharm,
+00:53 you actually don't have to use the url, just minimize this window and hit run again
+00:58 so the little play button right in the middle
+01:02 and now it'll just discover that that server is running inside itself
+01:05 and connect back to it, and that's pretty cool.
+01:07 So here we have a message, some imports
+01:10 basically the same code that we wrote,
+01:12 this is just a Jupyter notebook right here.
+01:14 And right now we have the plot showing over on the right
+01:17 and if you want to have it inline, remember use that percent in Matplotlib inline.
+01:24 So we write our code, and then the stuff shows over in the data science view as well.
+01:29 We can even do other things, if you're familiar with Jupyter notebooks you know this
+01:33 we can do for example markdown right here,
+01:36 why, because you can, right,
+01:39 Jupyter notebooks are not just code,
+01:42 but they are sort of reports around exploring code and data
+01:45 which is why people love them.

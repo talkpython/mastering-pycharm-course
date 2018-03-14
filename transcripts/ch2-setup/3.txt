@@ -1,0 +1,80 @@
+00:02 Let's get your Linux machine all set up and ready to go.
+00:05 We're going to need to do two things,
+00:07 install Python or verify or update the version and install PyCharm.
+00:12
+00:15 Over here on python.org,  you'll see that the latest version is 3.6.4
+00:19 and as long you have 16.10 or higher
+00:24 you should have a pretty recent version,
+00:26 I think even 16.04 is pretty good.
+00:29 So you come over here and see what version you have,
+00:31 we can say python3- V we have 3.6.3
+00:35 that's the latest you can get on this, I think this is 17.10, I'm sure that it is.
+00:40 So this is pretty much the latest we're going to get
+00:43 even though over here we have a slightly later version,
+00:45 this is what ships and that's more than good enough for this course.
+00:48 If for some reason you have an old version,
+00:50 I'd say anything 3.5 or higher is totally good,
+00:53 you could do a sudo apt update
+00:57 and then see if there is something here for Python,
+01:01
+01:03 so you see like Python 3 update options here, go ahead and do that,
+01:07 obviously updating your system is a good thing
+01:09 but we should have Python stuff already set up and ready to go,
+01:14 and Python 3 is what we're using for the course
+01:16 so you going to want to have that.
+01:19 Now, what about PyCharm—
+01:21 let's go over here, there are two options for installing PyCharm,
+01:23 one option is we can come over here and we can go straight to the PyCharm page
+01:28 and download it, this is one option
+01:31 and notice right away you're hit with a choice for
+01:34 something we can either download the pro version or the community edition.
+01:39 Now, community edition is great for a lot of things
+01:42 and much what you'll see will work there
+01:44 but many notable features will not exist, the database tooling,
+01:47 the web tooling and a number of other ones are going to be missing,
+01:51 so I really recommend you get the professional edition for this course.
+01:55 So that works pretty well, but let's try something a little bit slicker,
+01:59 if you're going to have more than one app from Jetbrains
+02:03 like say WebStorm and PyCharm,
+02:05 you can subscribe to their entire set of tools, like 20 different applications,
+02:10 you can get this thing called the Toolbox app
+02:13 even if you are just using PyCharm, you can use the Toolbox app
+02:16 so go and download this and I just did a minute ago, so here it is.
+02:20 So we can go open this up and let's just put it somewhere and get it going,
+02:24 so over here, let's make a folder bin and let's extract this thing into it.
+02:34
+02:38 So we have this thing called Jetbrains Toolbox and let's go over here,
+02:42
+02:47 we need to make this executable, see it's green, not executable,
+02:50 so we want to change mood a + x
+02:57 and then once we do that, we can just run it,
+03:00
+03:03 this comes up and says you want to allow it to send us things like that
+03:07 and over here it says what do you want install,
+03:10 let's install either PyCharm community, PyCharm professional or both,
+03:13 we just hit this, it is going to go download it, install it, I'll give it a second to finish,
+03:19 there you have it, PyCharm professional 2017.3.2 is installed and we can run it.
+03:27 So this thing should be ready to go
+03:29 and notice over here once you work with some projects
+03:32 you'll have actually interesting history that you can just quickly go from.
+03:37 One other thing to notice if you go to the settings here
+03:40 is we can have it automatically update itself and I am logged in as me,
+03:45 so this will give me access to all my licenses
+03:47 so you'll have to go ahead and log in potentially the first time when you run this.
+03:52 Okay, so that's all good, we can now run PyCharm and see what we get.
+03:56
+03:58 There you go, it looks like it's opening this last project that I worked with,
+04:02 not super exciting, it was just some random thing that I played with,
+04:06 but here it is, right, this untitled thing that was in the recent projects history.
+04:11 The last thing to note, under settings, this will automatically run that log in,
+04:19 if we reboot, it should be back and keeping our PyCharm nice and up to date.
+04:24 So we already checked if we had the right version of Python
+04:29 which comes with most modern Ubuntus,
+04:31 and we use the Toolbox app to install and manage PyCharm.
+04:34 Let's see if we can get to it— here it is, perfect,
+04:39 you might even want to pin that to your favorites once you have it running.
+04:43
+04:48 Here it stays right there close and active for us, we can just get right back to it.
+04:53 This Linux machine is ready to take this course,
+04:57 you don't need anything other than Python 3 and PyCharm,
+05:01 we got those two set up, we're ready to go.

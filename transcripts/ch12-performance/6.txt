@@ -1,0 +1,115 @@
+00:01 There are actually two operations and they're both kind of slow
+00:03 read data and learn are both slow.
+00:05 this one is processing some, this is all in our minds,
+00:09 this is processing some data
+00:12 and it turns out that it's accessing a bunch of complex arrays and stuff in memory
+00:17 and it's just a little bit too slow.
+00:19 So what if we were say to switch to NumPy and make this much faster,
+00:24 we could speed that up by a factor of 20, so change that, okay.
+00:30 If we do that this read data part will get a lot faster.
+00:34 The other problem is this learn here
+00:38 so let's just do another profile real quick,
+00:40 make sure our change was positive,
+00:43
+00:45 go to our call graph, zoom in, move around a bit,
+00:49 here we are, this is actually much, much faster
+00:52 it was spending a lot of time, I think it was about 4 seconds over here
+00:58 now it's 160 milliseconds, so yeey, NumPy,
+01:02 you've got to imagine we actually did something there,
+01:04 but now this learn is also slow.
+01:06 Now suppose this is the machine learning algorithm
+01:08 and we cannot change this math, it must go like this
+01:11 now there's always something that you can do differently,
+01:14 but let's suppose this has to be this way,
+01:17 so maybe we could do our little trick, we could say functools.lru_cache like this
+01:23 import that at the top, this is going to make it so much faster
+01:27 because it turns out we're actually giving it a lot of the same data,
+01:30 bam, unhashable type list,
+01:35 so maybe we can't use lru,
+01:38 all right, so we could basically mirror what this is doing
+01:41 and we could create a decorator that actually tries to model this
+01:47 but it is specifically built for hashing lists and these types of data.
+01:52 Okay so how do we do that?
+01:55 Well, we're going to define a decorator, let's call it list_momento
+02:02
+02:04 and what it's going to take is it's going to take a function
+02:08 and it's going to later return a wrapper func
+02:14 so the idea is, what we do is we create a function,
+02:18 it will be effectively past learn,
+02:23 we're going to define inside here a wrapper function
+02:27 that at some point is going to return calling the function itself
+02:34 and this function, let's suppose it takes a bunch of lists,
+02:41 I guess we could do it like this,
+02:44
+02:46 it only accepts lists and it passes those lists on.
+02:49 We could do something like that, kind of, sort of, generally
+02:53 and let's just run this and see if we still get the same answer.
+02:56 Hey look, we're getting numbers down at the bottom, great.
+02:59 So it's working, that's pretty cool
+03:02
+03:05 but what's going on here,
+03:08 we're not getting any faster, I don't think, unless I miswrote this,
+03:12
+03:17 yeah, look at this compute analytics, it's still in learn, it's doing its thing
+03:21 it's not any faster just because we wrapped it in this.
+03:24 However, we are very, very close
+03:28 so the last thing we need to do is let's define over here,
+03:31 actually we can define it in here a cache,
+03:34 and what we'd like to do is put into this dictionary
+03:37 say every time we see the results coming in,
+03:41 or the arguments coming in the same
+03:43 we'd like to capture the results, send them out.
+03:46 So we can come up and define a key that we're going to use for this
+03:50 and it's going to be maybe a comma separated
+03:55 what we can do is we can just take the string representation of the lists
+04:00 and let's just print out the key really quick,
+04:03 so we can see what's going on, yeey, update,
+04:05 yeah, so we've got to convert that, all right,
+04:11 so we'll say stir of l or l in that, alright.
+04:17
+04:24 It's a little hard to see, so here we'll have key like this
+04:27 and now if I run it you should see, there we go.
+04:30 Okay, so the key is just taking the two strings
+04:33 which is the set of descriptions and some data records
+04:36 and it's going like this, but this is hashable, all right.
+04:40 So what we could do is we could actually
+04:42 either compute the hash or just store the key,
+04:46 for now I'm just going to store the key,
+04:48 in reality you probably want to hash it
+04:50 because this is tons of data, you really just need a hash, take the hash.
+04:54 So this is cool, we'll say this, we'll say if key in cache return cache of key,
+05:01 that's the super fast version,
+05:05 but if we've never seen this input,
+05:07 we're going to go over here and say cache key equals that
+05:15
+05:19 and then we'll actually return this,
+05:21 so watch how fast this runs now,
+05:24 bam, done, super, super fast, I'll update you later markdown.
+05:30 So over here, we're able to define this momento just like we had the lru cache,
+05:35 but we built it around lists those are not hashable,
+05:38 ours exactly knows what to do with lists,
+05:41 it converts them to strings and then hashes that, theoretically.
+05:44 So let's run this one more time, see how have we done,
+05:46 I think we might be finished.
+05:49 All right, so much, much better
+05:51 come down here and do a quick zoom and look at this,
+05:55 we've got our time down, we were at like 12 seconds,
+06:01 oh we still have one more to go,
+06:04 actually I'm not sure we can get much faster,
+06:06 this learn here we'll have to see,
+06:09 this learn actually is quite a complicated algorithm like you can see
+06:12 600 thousand raising numbers to power and stuff, so that's pretty insane,
+06:18 but notice because of our lru thing, our list momento decorator we built,
+06:23 this is actually only called one time ever,
+06:25 because it turns out we're sending in the same data most of the time, all the time.
+06:29 So the wrap function that we wrote,
+06:32 that was called 9 times but it almost spent no time there, right,
+06:38 one time it has to call this, the rest it just uses dictionaries those fly.
+06:42 So we've gotten this down significantly faster,
+06:45 it's 1 second, you might remember it was like one and a half seconds before
+06:49 but we're calling it 10 times, 9 times as many times
+06:52 so we got it roughly let's say 10 or 11 times faster,
+06:57 and we did that by looking specifically at the output from the profiler
+07:01 and finding the worst-case scenario, fixing that,
+07:04 going to the what is the new worst-case but better than before scenario
+07:08 and just working our way through this program.
