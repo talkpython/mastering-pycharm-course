@@ -1,10 +1,13 @@
 # Your turn: Performance
 
+## Version warning
+
+This chapter requires PyCharm Professional to complete as indicated. Please see the [chart for version breakdown](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide#editions) in the public course page.
+
 ## Objectives
 
 1. Understand an existing app's performance
 2. Improve a few key methods performance  
-
 
 ## Understand an existing app's performance
 

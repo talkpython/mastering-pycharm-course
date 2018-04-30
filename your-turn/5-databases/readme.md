@@ -1,5 +1,9 @@
 # Your turn: Databases
 
+## Version warning
+
+This chapter requires PyCharm Professional to complete as indicated. Please see the [chart for version breakdown](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide#editions) in the public course page.
+
 ## Objectives
 
 1. Open an existing SQLite database in PyCharm
