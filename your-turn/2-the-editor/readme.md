@@ -39,10 +39,10 @@ Go to the top of `program.py`. You'll see some of the imports are unused. Put yo
 
 ## Add documentation to a method
 
-The bad wizard has no documentation. Put your cursor on `hero.attack` (the attack part) on line 57 in `program.py`. Use the menu **View > Quick Documentation** and notice it's lacking.
+The bad wizard has no documentation. Put your cursor on `hero.attack` (the attack part) on line 58 in `program.py`. Use the menu **View > Quick Documentation** and notice it's lacking.
 
 Press **cmd/ctrl-b** (or **cmd/ctrl-click**) to navigate to attack. Type """[ENTER] to generate documentation.
 
-Return to line 57 in `program.py` and see your improved docs.
+Return to line 58 in `program.py` and see your improved docs.
 
 *See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*
