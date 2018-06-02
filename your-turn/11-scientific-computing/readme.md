@@ -16,7 +16,7 @@ Create a new project with a dedicated virtual environment. We are going to first
 
 Create a new file python and run it to make a run configuration for it. So far, standard PyCharm.
 
-Now we want to draw this graph. We'll use `pandas` and `matplotlib` to do so.
+Now we want to draw this graph. We'll use `numpy` and `matplotlib` to do so.
 
 ![](./resources/1-graph.png)
 
