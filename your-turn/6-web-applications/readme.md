@@ -48,7 +48,7 @@ def get_orders():
 
 Now let's use it in the view.
 
-Call this method from `views.py`. Add an entry to the dictionary being returned in that method. Call the value 'orders' and set the value to the result of this method.
+Call this method from `my_view` in `views.py`. Add the return value of `get_orders` to the dictionary being returned from `my_view` with a key of 'orders'.
 
 While you are here, tell PyCharm you don't care that `request` is not used. Change this:
 
