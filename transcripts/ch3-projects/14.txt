@@ -1,0 +1,36 @@
+00:01 You've seen how PyCharm worked with projects, now it's your turn.
+00:05 It's your turn to open PyCharm, play around with it
+00:08 and explore some of the features around projects
+00:11 and you can just go and open any old project and play with it
+00:15 but I actually have a set of hands-on instructions
+00:18 for you to follow if you'd like.
+00:20 So over here on the github repository under tree master your turn 01 projects
+00:26 we have some specific things for you guys to do
+00:30 to make sure that you remember and practice the various things around projects.
+00:34 Let's explore them.
+00:37 So this is your first hands-on exercise.
+00:39 Let's go over here to the repository
+00:42 notice, there's a your turn section here
+00:44 and there's a your turn for almost every single chapter in this course.
+00:50 So let's go over here and look at projects and see what we got going on.
+00:54 So for projects, we have two things we're going to do
+00:56 open up a new project or create a project
+00:59 and add some code to it and run it
+01:01 and then we're going to open a somewhat complicated existing project
+01:04 configure it in PyCharm and then run it as well.
+01:08 So you can just follow the steps, it should be pretty straightforward.
+01:12 So we're going to go create a sort of a hello world
+01:14 and make sure that you use the virtual environment
+01:16 feature in Python, 2017.3 or greater.
+01:21 This is nice, you get to play with this
+01:23 and we'll come down here and you also get to
+01:25 open up the jumpstart course demos
+01:28 and play with the wizard class here, the wizard game
+01:31 and one of the things to make sure that is the goal of this part
+01:35 is to not just make sure that you run it with a virtual environment,
+01:37 but also that this line 4 here has no squigglies, no errors.
+01:41 So you'll see how to do that as you go through
+01:43 and if you find any sort of mistake in these instructions,
+01:47 you can submit an issue or a PR to fix them.
+01:50 I've tested it out, hopefully it's all working well for you,
+01:52 so go out there, take a few moments and try PyCharm here.

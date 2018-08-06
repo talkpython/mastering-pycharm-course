@@ -1,0 +1,32 @@
+00:01 Refactoring is a place where PyCharm really shines.
+00:05 You can see it actually working much better than most editors.
+00:09 Here is a chance to take some existing bad code
+00:12 and apply the refactoring tools to make it what I would consider better.
+00:16 So, let's look at the steps we're going to go through on github.
+00:21 Over here on github, your turn 4, there is a couple of things,
+00:25 we have our read me with the instructions,
+00:27 and we have the smelly podcast
+00:29 as in it has many code smells within it.
+00:31 So smelly podcast is what you are going to work on
+00:34 to take and transform into a better version
+00:36 if for some reason you want to see
+00:39 what the expected result was supposed to be
+00:41 here is the expected final version,
+00:43 but obviously, don't start with that, there will be nothing to refactor.
+00:46 So we'll come down here and we're going to open up that project
+00:49 and use some of the code smells to guide us on how to fix it.
+00:53 So we're going to use the large method smell here,
+00:56 the large method, and some of the refactoring tools around that
+01:00 and we're going to use what I am calling the large module
+01:03 Kent Beck and Martin Fowler and those guys
+01:06 were in object oriented world where they talked about large classes,
+01:09 but I think PyCharm probably has a large module smell concept as well.
+01:13 And then, this thing that I am naming variable absence
+01:16 where we just have these really complicated expressions like this
+01:19 we had some variables but names, we wouldn't know what that means.
+01:23 So you're going to use the refactoring tools on that as well.
+01:26 And once you're done with this,
+01:28 I think you'll see you have a much nicer bit of code
+01:30 and you can do this with really doing nothing
+01:32 but deriving the tools that run the refactoring
+01:35 you won't actually have to write really any code at all.

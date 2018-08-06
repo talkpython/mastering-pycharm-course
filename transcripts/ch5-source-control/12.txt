@@ -1,0 +1,40 @@
+00:02 Source control in PyCharm is really comprehensive
+00:05 and for git that can mean it's kind of overwhelming
+00:07 the first time you see it I suspect
+00:10 unless you're really experienced with git.
+00:12 So here's your chance to explore in a hands-on way how to work with git
+00:16 and other features around source control from within PyCharm.
+00:21 So over here on GitHub under your turn 3 source control
+00:26 we have basically two things that you're going to do
+00:28 one, you're going to use git source control from within PyCharm.
+00:31 You're also going to use local history.
+00:34 So local history as we saw lets you work basically in your own file system
+00:39 as if you had a little bit of source control
+00:41 obviously, it's not shared even for you across machines.
+00:45 So the first thing that we're going to do is actually build a game
+00:49 that we can call hilo or guess that number game or something.
+00:51 And so it's going to do something like this.
+00:53 Hey guess a number between 1 and 100.
+00:56 50, it's too low, 75 too high and you kind of use the binary search here
+01:00 and narrow in on looks like it was 66 this time.
+01:03 You're supposed to write this game,
+01:05 create a project that gives you some steps on how to do it
+01:08 and create this game, use the random module
+01:12 to basically come up with random numbers.
+01:15 If you really need some help, over in the Jumpstart course under apps 02
+01:20 and here there's steps under you try and there's a final one,
+01:23 which basically is this working code,
+01:25 but I thought it might be fun for you to write really simple game here
+01:28 and then check it into source control.
+01:30 Okay, so this talks about how you put this into github up at the beginning
+01:35 we start out with some code from github here, things like that
+01:40 or how you just simply create a local git repository.
+01:43 You actually don't check in anywhere,
+01:45 but it would work effectively the same you just can't push.
+01:48 So you play around, write that code
+01:50 and you play around with source control here according to steps
+01:53 and then later on, you get to play with the local history
+01:56 which may or may not have some of the same saves
+01:58 as you had in your source control,
+02:01 but it'll probably have more depending on how you worked with the code.
+02:05 All right, so get out there and try that source control.

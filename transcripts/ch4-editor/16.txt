@@ -1,0 +1,30 @@
+00:01 You've seen what the editor can do.
+00:03 Now, it's your turn to play with the editor
+00:05 and try some of the more advanced features that we covered.
+00:09 This is not going to cover everything,
+00:11 but it's going to give you a few examples
+00:13 of what I think are some of the major and most important
+00:15 and most helpful features in the PyCharm editor.
+00:19 So let's jump over to github and have a look.
+00:22 So here in your turn 2 the editor,
+00:25 we have some steps that you can follow along
+00:27 and I encourage you to play with other aspects of the editor
+00:31 as well open projects that you might have worked on
+00:34 with other editors and so on.
+00:36 But, if you follow these steps you will see some of the cool features in action.
+00:39 Now, notice over here we have a project folder called bad wizard,
+00:43 so you're going to start working with this bad wizard code right away
+00:46 and first step is to go and open this up
+00:48 so you've got to make sure you clone this repository so you have it,
+00:52 and then, we're going to play with autocomplete a little bit,
+00:55 so over here you have this hero, you can say hero.
+00:57 I'll show you a bunch of options,
+00:59 one of the things it doesn't have is a wake up method
+01:01 so you're going to use the code intentions
+01:03 and automatic code generation tooling
+01:06 to generate this wake up method here.
+01:08 We're also going to clean up the code according to pep 8,
+01:11 remove some of the unused imports and document some of our functions.
+01:15 So follow along here and you'll have a good understanding
+01:19 of some of the cooler features
+01:21 especially the code intentions and code formatting.
