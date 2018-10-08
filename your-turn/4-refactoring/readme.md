@@ -46,7 +46,7 @@ Rerun your program (again, and again). It's still working right? OK then, carry 
 
 Our code is MUCH better already. But let's separate the usage of this functionality from it's implementation. We'll move the parts to do with downloading and parsing episodes to `service.py`.
 
-Let's move the data container and type first. Highlight these to lines and "move" them via refactoring to `service.py`.
+Let's move the data container and type first. Highlight these two lines and "move" them via refactoring to `service.py`.
 
 	Episode = namedtuple('Episode', 'title link pubdate show_id')
 	episode_data = {}  
