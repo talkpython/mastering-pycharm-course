@@ -27,7 +27,7 @@ def run_query(conn, text):
 
 
 def read_row(conn):
-    time.sleep(.001)  # TODO: Improved index, i.e. shorting thiis!
+    time.sleep(.001)  # TODO: Improved index, i.e. shorting this!
     if conn.get('connected'):
         return {'col1': 'val1', 'col2': 'val2'}
 
