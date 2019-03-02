@@ -105,3 +105,6 @@ ENV/
 .idea/inspectionProfiles/Project_Default.xml
 demos/projects/web_clientside/electron_test/electron-quick-start/node_modules
 .idea
+extra_samples/profiling/neg.txt
+extra_samples/profiling/pos.txt
+extra_samples/profiling/stop.txt
