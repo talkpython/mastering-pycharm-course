@@ -1,6 +1,6 @@
 import pytest
 
-from parser import parse
+from numparser import parse
 
 
 def test_basic():
