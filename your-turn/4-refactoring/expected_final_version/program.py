@@ -1,6 +1,4 @@
-import random
-
-from service import get_episode, get_latest_show_id, download_data
+from service import get_episode, get_latest_show_id, download_data, get_min_show_id
 
 
 def main():
@@ -17,9 +15,9 @@ def main():
 
 def display_results():
     # DISPLAY RESULTS
-    start = random.randint(90, 110)
-    latest_id = get_latest_show_id()
-    end = random.randint(130, latest_id + 1)
+    start = get_min_show_id()
+    end = get_latest_show_id()
+
     for show_id in range(start, end):
         info = get_episode(show_id)
         print("{}. {}".format(info.show_id, info.title))
