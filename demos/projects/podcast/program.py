@@ -1,5 +1,4 @@
 import service
-import random
 
 
 def main():
@@ -16,9 +15,12 @@ def show_header():
 
 
 def display_results():
-
-    start = random.randint(90, 110)
-    end = random.randint(130, service.get_latest_show_id()+1)
+    # This is updated since the video recording.
+    # We had to trim back the episode list so I changed
+    # this code to use the moving numbers from the RSS feed
+    # as they change over time.
+    start = service.get_min_show_id()
+    end = service.get_latest_show_id() + 1
 
     for show_id in range(start, end):
         info = service.get_episode(show_id)
