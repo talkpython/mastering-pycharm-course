@@ -32,7 +32,7 @@ Now that you have the project created, PyCharm will suggest to "Install the proj
 
 ## Implement a view method
 
-Let's add a little structure. Create a file *next* to `views.py` called `fake_data.py`. Copy this method into that file:
+Let's add a little structure. Create a folder *next* to the views folder called `data`. In the `data` folder, create called `fake_data.py`. Copy this method into that file:
 
 ```python
 def get_orders():
