@@ -8,7 +8,7 @@
 
 JetBrain's PyCharm cheat sheet
 
-[PyCharm_Reference_Card.pdf](https://blog.jetbrains.com/pycharm/files/2010/07/PyCharm_Reference_Card.pdf)
+[PyCharm_Reference_Card.pdf](https://resources.jetbrains.com/storage/products/pycharm/docs/PyCharm_ReferenceCard.pdf)
 
 ## Course Summary
 
