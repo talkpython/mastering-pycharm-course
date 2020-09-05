@@ -6,9 +6,9 @@
 
 ## Resources
 
-JetBrain's PyCharm cheat sheet
-
-[PyCharm_Reference_Card.pdf](https://resources.jetbrains.com/storage/products/pycharm/docs/PyCharm_ReferenceCard.pdf)
+JetBrain's PyCharm Cheat Sheet
+- [Windows/Linux](https://resources.jetbrains.com/storage/products/pycharm/docs/PyCharm_ReferenceCard.pdf)
+- [macOS](https://resources.jetbrains.com/storage/products/pycharm/docs/PyCharm_ReferenceCard_mac.pdf)
 
 ## Course Summary
 
