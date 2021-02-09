@@ -33,3 +33,7 @@ def download_data():
             episode_count - idx - 1
         )
         episode_data[episode.show_id] = episode
+
+
+def get_min_show_id():
+    return min(episode_data.keys())

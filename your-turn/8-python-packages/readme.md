@@ -49,19 +49,21 @@ We'll add a couple of simple math methods to our calculator. Create another Pyth
 To make importing it easier, add this line to `__init__.py`:
 
 ```python
-from calcy import math
+from . import math
 ```
 
 That means you can consume it by typing `import calcy` then calling `calcy.math.add(7, 11)`.
 
-Use the Python Console in PyCharm to test this (it adds the necessary path adjustments to run the package):
+Use the Python Console in PyCharm to test this (it adds the necessary path adjustments to run the package). For example, when I run the Python console, I see this output prior to the `>>>` prompt.
 
 ```python
 import sys; print('Python %s on %s' % (sys.version, sys.platform))
-sys.path.extend(['/Users/mkennedy/Desktop/pak'])
+sys.path.extend(['/Users/mkennedy/Desktop/calcy_package'])
 ```
 
-Here's one way to test it:
+This is PyCharm automatically extending the Python path. You do **not** need to do anything to make this happen. It's just PyCharm making life easy on us.
+
+Now, in the console, here's one way to test it:
 
 ```python
 import calcy
@@ -69,11 +71,13 @@ calcy.math.add(7, 5)
 12
 ```
 
+In this special environment, it should work.
+
 ## Include a setup
 
 It's great you can run your code locally. But for real packages, you'll need to be able to install it for consumers. To do this, we need a `setup.py`. 
 
-Luckily, PyCharm has our back. Choose `Tools > Create setup.py` and fill in the dialog. Most values are somewhat irrelevant. But name the package `calcy`.
+Luckily, PyCharm has our back. First select the top-level folder in the project (the one which contains the `calcy` folder with `__init__.py`. Choose `Tools > Create setup.py` and fill in the dialog. Most values are somewhat irrelevant. But name the package `calcy`.
 
 PyCharm may go overboard and include a bunch of stuff in the virtual environment. Just cut that out but leave:
 
@@ -95,13 +99,13 @@ Windows
 .env/scripts/activate
 ```
 
-Now run `setup.py` **from the same directory** as it is in:
+Now run `setup.py` **from the same directory** as it is in as follows. The easiest way to do this is with Python's builtin terminal (make sure the env is activated):
 
 ```
 python3 setup.py develop
 ```
 
-Now change out of that folder to somewhere else. Run Python 3 and try to import and use it:
+Now, in the terminal, change out of that folder to somewhere else. Run Python 3 and try to import and use it:
 
 ```
 $ python3

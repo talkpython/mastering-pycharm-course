@@ -1,5 +1,5 @@
-from xml.etree import ElementTree
 from collections import namedtuple
+from xml.etree import ElementTree
 
 import requests
 
@@ -34,3 +34,7 @@ def get_episode(show_id: int) -> Episode:
 
 def get_latest_show_id():
     return max(episode_data.keys())
+
+
+def get_min_show_id():
+    return min(episode_data.keys())

@@ -1,4 +1,3 @@
-import random
 from collections import namedtuple
 from xml.etree import ElementTree
 
@@ -34,13 +33,13 @@ def main():
 
     # GET LATEST SHOW ID
     latest_show_id = max(episode_data.keys())
+    oldest_show_id = min(episode_data.keys())
 
     print("Working with total of {} episodes".format(latest_show_id))
 
     # DISPLAY RESULTS
-    start = random.randint(90, 110)
-    latest_id = max(episode_data.keys())
-    end = random.randint(130, latest_id + 1)
+    start = oldest_show_id
+    end = latest_show_id + 1
 
     for show_id in range(start, end):
         # GET EPISODE

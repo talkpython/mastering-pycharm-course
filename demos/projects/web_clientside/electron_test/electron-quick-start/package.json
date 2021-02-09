@@ -17,9 +17,11 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.8.8"
+    "electron": "^9.4.0"
   },
   "dependencies": {
-    "npm": "^6.4.1"
+    "mem": "^6.0.1",
+    "minimist": "^1.2.5",
+    "npm": "^6.14.2"
   }
 }
