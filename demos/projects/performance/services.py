@@ -9,17 +9,14 @@ def search(text: str) -> List[str]:
     # TODO: Evaluate whether to expire the cache...
     url = build_url(text)
     response = perform_search(url)
-    results = convert_results(response)
-
-    return results
+    return convert_results(response)
 
 
 def build_url(text):
     # format is http://search.talkpython.fm/api/search?q=SEARCH
 
     encoded = urllib.parse.urlencode({'q': text})
-    url = 'http://search.talkpython.fm/api/search?{}'.format(encoded)
-    return url
+    return f'https://search.talkpython.fm/api/search?{encoded}'
 
 
 def perform_search(url):
