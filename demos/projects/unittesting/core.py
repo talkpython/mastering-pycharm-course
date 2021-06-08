@@ -52,7 +52,7 @@ def _id():
     return str(uuid.uuid4())
 
 
-tables= [
+tables = [
     Table(_id(), "Thai Roses", 1),
     Table(_id(), "Thai Roses", 1),
 
