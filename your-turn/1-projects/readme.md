@@ -9,17 +9,16 @@
 
 To create a new project, use PyCharm's new project wizard. 
 
-Note that since the initial recording, PyCharm has changed the creation process to emphasize using virtual environments nested within the project folder.
-
 Steps:
 
 1. Open PyCharm
 2. Create a new project
 3. Name it first_project and use a virtual environment (see image below)
-4. Add a hello.py
-5. Print *hello world*
-6. Run within PyCharm
-7. Verify that the virtual environment's version of Python was used (see image)
+4. Uncheck "create main.py script"
+5. Add a hello.py
+6. Print *hello world*
+7. Run within PyCharm (right-click `hello.py` and choose run)
+8. Verify that the virtual environment's version of Python was used (see image)
 
 ![Create project with venv](./resources/virtualenv.png)
 
