@@ -15,7 +15,7 @@ def download_info():
 
     dom = ElementTree.fromstring(resp.text)
 
-    items = dom.findall('channel/item')
+    items = dom.findall('channel/items')
     episode_count = len(items)
 
     for idx, item in enumerate(items):
@@ -33,8 +33,12 @@ def get_episode(show_id: int) -> Episode:
 
 
 def get_latest_show_id():
+    if not episode_data:
+        return 0
     return max(episode_data.keys())
 
 
 def get_min_show_id():
+    if not episode_data:
+        return 0
     return min(episode_data.keys())
