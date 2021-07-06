@@ -1,10 +1,11 @@
 from collections import namedtuple
+from typing import Optional, Dict
 from xml.etree import ElementTree
 
 import requests
 
 Episode = namedtuple('Episode', 'title, link, date, id')
-episodes = {}
+episodes: Dict[int, Episode] = {}
 
 
 def download_info():
@@ -27,4 +28,14 @@ def download_info():
 
         episodes[e.id] = e
 
-    print(episodes)
+
+def get_min_episode_id() -> int:
+    return min(episodes.keys())
+
+
+def get_max_episode_id() -> int:
+    return max(episodes.keys())
+
+
+def get_details(episode_id) -> Optional[Episode]:
+    return episodes.get(episode_id)
