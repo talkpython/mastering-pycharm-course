@@ -3,8 +3,8 @@ from xml.etree import ElementTree
 
 import requests
 
-Episode = namedtuple('Episode', 'title link pubdate show_id')
-episode_data = {}
+Episode = namedtuple('Episode', 'title, link, date, id')
+episodes = {}
 
 
 def download_info():
@@ -16,25 +16,15 @@ def download_info():
     dom = ElementTree.fromstring(resp.text)
 
     items = dom.findall('channel/item')
-    episode_count = len(items)
 
-    for idx, item in enumerate(items):
-        episode = Episode(
+    for idx, item in enumerate(items, start=0):
+        e = Episode(
             item.find('title').text,
             item.find('link').text,
             item.find('pubDate').text,
-            episode_count - idx - 1
+            len(items) - idx - 1
         )
-        episode_data[episode.show_id] = episode
 
+        episodes[e.id] = e
 
-def get_episode(show_id: int) -> Episode:
-    return episode_data.get(show_id)
-
-
-def get_latest_show_id():
-    return max(episode_data.keys())
-
-
-def get_min_show_id():
-    return min(episode_data.keys())
+    print(episodes)
