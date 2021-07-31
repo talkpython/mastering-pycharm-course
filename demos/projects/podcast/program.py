@@ -9,7 +9,7 @@ def main():
 
 def print_header():
     print("-----------------------------------")
-    print("         PODCAST DOWNLOADER")
+    print("  TALK PYTHON PODCAST DOWNLOADER")
     print("-----------------------------------")
 
 
