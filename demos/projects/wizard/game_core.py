@@ -3,7 +3,7 @@ import time
 
 from actors import SmallAnimal, Creature, Dragon, Wizard
 
-STARTING_HERO_LEVEL = 75
+STARTING_PLAYER_LEVEL = 75
 
 
 def game_loop():
@@ -15,8 +15,8 @@ def game_loop():
         Wizard('Evil Wizard', 1000)
     ]
 
-    hero = Wizard('Gandolf', STARTING_HERO_LEVEL)
-    print(f"REPR: {creatures[-2]}")
+    player = Wizard('Gandolf', STARTING_PLAYER_LEVEL)
+    # print(f"REPR: {creatures[-2]}")
 
     while True:
 
@@ -26,7 +26,7 @@ def game_loop():
 
         cmd = input('Do you [a]ttack, [r]unaway, or [l]ook around? ')
         if cmd == 'a':
-            if hero.fight(active_creature):
+            if player.fight(active_creature):
                 creatures.remove(active_creature)
             else:
                 print("The wizard runs and hides taking time to recover...")
@@ -35,7 +35,7 @@ def game_loop():
         elif cmd == 'r':
             print('The wizard has become unsure of his power and flees!!!')
         elif cmd == 'l':
-            print(f'The wizard {hero.name} takes in the surroundings and sees:')
+            print(f'The wizard {player.name} takes in the surroundings and sees:')
             for c in creatures:
                 print(f' * A {c.name} of level {c.level}')
         else:
