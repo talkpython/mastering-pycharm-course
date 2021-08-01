@@ -13,6 +13,9 @@ class Creature:
         roll = random.randint(1, 12)
         return modifier * roll * self.level
 
+    def __repr__(self):
+        return f"{type(self).__name__}: {self.name} of level {self.level}"
+
 
 class Wizard(Creature):
 
@@ -32,17 +35,11 @@ class Wizard(Creature):
             print("The wizard has been DEFEATED!!!")
             return False
 
-    def __repr__(self):
-        return f"Wizard: {self.name} of level {self.level}"
-
 
 class SmallAnimal(Creature):
     def get_defensive_roll(self):
         base_roll = super().get_defensive_roll()
         return base_roll / 2
-
-    def __repr__(self):
-        return f"SmallAnimal: {self.name} of level {self.level}"
 
 
 class Dragon(Creature):
@@ -62,6 +59,3 @@ class Dragon(Creature):
         scale_modifier = self.scaliness / 10
 
         return int(base_roll * fire_modifier * scale_modifier)
-
-    def __repr__(self):
-        return f"Dragon: {self.name} of level {self.level}"

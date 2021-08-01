@@ -16,6 +16,7 @@ def game_loop():
     ]
 
     hero = Wizard('Gandolf', STARTING_HERO_LEVEL)
+    print(f"REPR: {creatures[-2]}")
 
     while True:
 
