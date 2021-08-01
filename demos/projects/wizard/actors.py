@@ -13,37 +13,36 @@ class Creature:
         roll = random.randint(1, 12)
         return modifier * roll * self.level
 
-    def __repr__(self):
-        return "Creature: {} of level {}".format(
-            self.name, self.level
-        )
-
 
 class Wizard(Creature):
 
     def fight(self, creature):
-        print("The wizard {} attacks {}!".format(
-            self.name, creature.name
-        ))
+        print(f"The wizard {self.name} attacks {creature.name}!")
 
         my_roll = self.get_defensive_roll()
         creature_roll = creature.get_defensive_roll()
 
-        print("You roll {}...".format(my_roll))
-        print("{} rolls {}...".format(creature.name, creature_roll))
+        print(f"You roll {my_roll:,}...")
+        print(f"{creature.name} rolls {creature_roll:,}...")
 
         if my_roll >= creature_roll:
-            print("The wizard has handily triumphed over {}".format(creature.name))
+            print(f"The wizard has handily triumphed over {creature.name}")
             return True
         else:
             print("The wizard has been DEFEATED!!!")
             return False
+
+    def __repr__(self):
+        return f"Wizard: {self.name} of level {self.level}"
 
 
 class SmallAnimal(Creature):
     def get_defensive_roll(self):
         base_roll = super().get_defensive_roll()
         return base_roll / 2
+
+    def __repr__(self):
+        return f"SmallAnimal: {self.name} of level {self.level}"
 
 
 class Dragon(Creature):
@@ -53,15 +52,16 @@ class Dragon(Creature):
         self.breaths_fire = breaths_fire
         self.scaliness = scaliness
 
-    def get_defensive_roll(self):
-        base_roll = super().get_defensive_roll()
-        # fire_modifier = None
-        # if self.breaths_fire:
-        #     fire_modifier = 5
-        # else:
-        #     fire_modifier = 1
-        # fire_modifier = VALUE_IF_TRUE if SOME TEST else VALUE IF FALSE
-        fire_modifier = 5 if self.breaths_fire else 1
+    def get_defensive_roll(self, modifier=3):
+        base_roll = super().get_defensive_roll(modifier)
+        fire_modifier = None
+        if self.breaths_fire:
+            fire_modifier = 5
+        else:
+            fire_modifier = 1
         scale_modifier = self.scaliness / 10
 
-        return base_roll * fire_modifier * scale_modifier
+        return int(base_roll * fire_modifier * scale_modifier)
+
+    def __repr__(self):
+        return f"Dragon: {self.name} of level {self.level}"

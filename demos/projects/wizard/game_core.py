@@ -20,8 +20,7 @@ def game_loop():
     while True:
 
         active_creature = random.choice(creatures)
-        print('A {} of level {} has appear from a dark and foggy forest...'
-              .format(active_creature.name, active_creature.level))
+        print(f'A {active_creature.name} of level {active_creature.level} has appear from a dark and foggy forest...')
         print()
 
         cmd = input('Do you [a]ttack, [r]unaway, or [l]ook around? ')
@@ -35,10 +34,9 @@ def game_loop():
         elif cmd == 'r':
             print('The wizard has become unsure of his power and flees!!!')
         elif cmd == 'l':
-            print('The wizard {} takes in the surroundings and sees:'
-                  .format(hero.name))
+            print(f'The wizard {hero.name} takes in the surroundings and sees:')
             for c in creatures:
-                print(' * A {} of level {}'.format(c.name, c.level))
+                print(f' * A {c.name} of level {c.level}')
         else:
             print("OK, exiting game... bye!")
             break
