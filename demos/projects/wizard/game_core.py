@@ -1,7 +1,10 @@
 import random
 import time
 
-from actors import SmallAnimal, Creature, Dragon, Wizard
+from actors.creature_base import Creature
+from actors.small_animal import SmallAnimal
+from actors.dragon import Dragon
+from actors.wizard import Wizard
 
 STARTING_HERO_LEVEL = 75
 
