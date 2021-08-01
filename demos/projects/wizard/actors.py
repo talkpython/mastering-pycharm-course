@@ -9,17 +9,15 @@ class Creature:
         if self.level < 1:
             raise ValueError("level")
 
-    def get_defensive_roll(self, modifier=3):
-        roll = random.randint(1, 12)
-        return modifier * roll * self.level
+    def get_defensive_roll(self):
+        return 3 * random.randint(1, 12) * self.level
 
     def __repr__(self):
         return f"{type(self).__name__}: {self.name} of level {self.level}"
 
 
 class Wizard(Creature):
-
-    def attack(self, creature):
+    def fight(self, creature):
         print(f"The wizard {self.name} attacks {creature.name}!")
 
         my_roll = self.get_defensive_roll()
@@ -49,8 +47,8 @@ class Dragon(Creature):
         self.breaths_fire = breaths_fire
         self.scaliness = scaliness
 
-    def get_defensive_roll(self, modifier=3):
-        base_roll = super().get_defensive_roll(modifier)
+    def get_defensive_roll(self):
+        base_roll = super().get_defensive_roll()
         fire_modifier = None
         if self.breaths_fire:
             fire_modifier = 5
