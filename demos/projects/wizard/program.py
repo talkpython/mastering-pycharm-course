@@ -18,13 +18,16 @@ DRAGON_TEXT = '''
 
 
 def main():
+    show_header()
+    game_loop()
+
+
+def show_header():
     print()
     print('-----------------------------------------------------------------------')
     print(DRAGON_TEXT)
     print('-----------------------------------------------------------------------')
     print()
-
-    game_loop()
 
 
 if __name__ == '__main__':
