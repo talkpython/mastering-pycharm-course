@@ -19,7 +19,7 @@ class Creature:
 
 class Wizard(Creature):
 
-    def fight(self, creature):
+    def attack(self, creature):
         print(f"The wizard {self.name} attacks {creature.name}!")
 
         my_roll = self.get_defensive_roll()

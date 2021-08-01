@@ -26,7 +26,7 @@ def game_loop():
 
         cmd = input('Do you [a]ttack, [r]unaway, or [l]ook around? ')
         if cmd == 'a':
-            if player.fight(active_creature):
+            if player.attack(active_creature):
                 creatures.remove(active_creature)
             else:
                 print("The wizard runs and hides taking time to recover...")
