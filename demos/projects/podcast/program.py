@@ -1,5 +1,7 @@
 import service
 
+__VERSION__ = "2.1"
+
 
 def main():
     print_header()
@@ -8,9 +10,9 @@ def main():
 
 
 def print_header():
-    print("-----------------------------------")
-    print("         PODCAST DOWNLOADER")
-    print("-----------------------------------")
+    print("------------------------------------------")
+    print(f"  TALK PYTHON PODCAST DOWNLOADER v{__VERSION__}")
+    print("------------------------------------------")
 
 
 def show_titles():
@@ -18,8 +20,12 @@ def show_titles():
     end = service.get_max_episode_id()
 
     for episode_id in range(start, end + 1):
-        episode = service.get_details(episode_id)
-        print(f'{episode.id}. -> {episode.title}')
+        show_episode_details(episode_id)
+
+
+def show_episode_details(episode_id: int):
+    episode = service.get_details(episode_id)
+    print(f'{episode.id}. -> {episode.title}')
 
 
 if __name__ == '__main__':
