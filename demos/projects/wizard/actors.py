@@ -37,8 +37,8 @@ class Wizard(Creature):
 
 
 class SmallAnimal(Creature):
-    def get_defensive_roll(self):
-        base_roll = super().get_defensive_roll()
+    def get_defensive_roll(self, modifier=3):
+        base_roll = super().get_defensive_roll(modifier)
         return base_roll / 2
 
 
@@ -49,7 +49,7 @@ class Dragon(Creature):
         self.breaths_fire = breaths_fire
         self.scaliness = scaliness
 
-    def get_defensive_roll(self):
+    def get_defensive_roll(self, modifier=3):
         base_roll = super().get_defensive_roll()
         fire_modifier = None
         if self.breaths_fire:
