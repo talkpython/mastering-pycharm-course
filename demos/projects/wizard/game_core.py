@@ -10,13 +10,12 @@ STARTING_HERO_LEVEL = 75
 
 
 def game_loop():
-    creatures = [
-        SmallAnimal('Toad', 1),
-        Creature('Tiger', 12),
-        SmallAnimal('Bat', 3),
-        Dragon('Dragon', 50, 75, True),
-        Wizard('Evil Wizard', 1000)
-    ]
+    creatures = []
+    creatures.append(SmallAnimal('Toad', 1))
+    creatures.append(Creature('Tiger', 12))
+    creatures.append(SmallAnimal('Bat', 3))
+    creatures.append(Dragon('Dragon', 50, 75, True))
+    creatures.append(Wizard('Evil Wizard', 1000))
 
     hero = Wizard('Gandolf', STARTING_HERO_LEVEL)
     # print(f"REPR: {creatures[-2]}")

@@ -1,4 +1,4 @@
-from creature_base import Creature
+from actors.creature_base import Creature
 
 
 class Dragon(Creature):
