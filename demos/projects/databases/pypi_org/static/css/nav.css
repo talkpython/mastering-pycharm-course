@@ -1,0 +1,80 @@
+
+.navbar {
+    border-radius: 0px;
+    padding-bottom: 10px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #02377c;
+
+    color: white;
+}
+
+.navbar-inverse {
+    background-color: #0066aa;
+    border-color: #0067a3;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #024bbf;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    text-decoration: underline;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #eee;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+
+.navbar-brand img {
+    width: 65px;
+    margin-left: 60px;
+}
+
+.navbar-inverse .navbar-toggle {
+    margin-top: 20px;
+}
+
+.navbar-nav li {
+    margin-top: 20px;
+}
+
+#last_nav_link {
+    margin-right: 45px;
+}
+
+nav {
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    height: 85px;
+    background-color: #0073b7;
+}
+
+nav > a {
+    color: white;
+    margin-right: 10px;
+}
+
+.nav-expand-line {
+    height: 2px;
+    margin: 6px;
+    background-color: white;
+}
+
+#navbarSupportedContent {
+    background-color: #0066aa;
+    padding: 10px;
+}

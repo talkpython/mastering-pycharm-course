@@ -1,0 +1,140 @@
+{% extends "shared/_layout.html" %}
+
+{% block additional_css %}
+    <link rel="stylesheet" href="/static/css/package.css"/>
+{%  endblock %}
+
+{% block main_content %}
+
+    <div class="content details">
+
+        <div class="hero">
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-8">
+                    <h1>
+                        {{ package.id }} {{ latest_version }}
+                    </h1>
+
+                    <div class="install sub-hero">
+                        pip install
+                        {{ package.id }}{% if not is_latest %}<span>=={{ release_version }}</span>{% endif %}
+                    </div>
+                </div>
+
+                <div class="col-sm-2 active-release">
+                    {% if is_latest %}
+                        <div class="go-latest-button">
+                            Latest version
+                        </div>
+                    {% else %}
+                        <div class="go-older-button">
+                            <a href="/project/{{ package.id }}">
+                                Newer version available
+                            </a>
+                        </div>
+                    {% endif %}
+
+                    <div class="latest-release-date">
+                        Last release:
+                        {% if latest_release %}
+                            <span
+                            >{{ latest_release.created_date.date().isoformat() }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row pypi-stats">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                {{ package.summary }}
+            </div>
+        </div>
+
+        <div class="project-list container">
+            <div class="row">
+                <div class="col-sm-3 nav-sidebar-section">
+
+
+                    <h3>Navigation</h3>
+                    <a href="/project/{{ package.id }}">
+                        <i class="fa fa-align-left" aria-hidden="true"></i>
+                        Project description
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-history" aria-hidden="true"></i>
+                        Release history
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download files
+                    </a>
+                    <hr>
+
+
+                    <h3>Project links</h3>
+                    <a href="{{ package.home_page }}">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        Homepage
+                    </a>
+                    <hr>
+
+
+                    <h3>Statistics</h3>
+
+                    <p>View statistics for this project via
+                        <a class="link-inline" href="https://libraries.io/pypi/{{ package.id }}">Libraries.io</a>,
+                        or by using
+                        <a class="link-inline"
+                           href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/">Google
+                            BigQuery</a></p>
+                    <hr>
+
+
+                    <h3>Meta</h3>
+                    {% if package.license %}
+                        <div class="meta-topic">
+                            <span>License</span>: {{ package.license }}
+                        </div>
+                    {% endif %}
+                    {% if package.author_name %}
+                        <div class="meta-topic">
+                            <span>Author</span>: {{ package.author_name }}
+                        </div>
+                    {% endif %}
+                    <hr>
+
+
+                    <h3>Maintainers</h3>
+                    {% for m in maintainers %}
+                        <div class="maintainer">
+                            <img src="{{ m.profile_image_url }}" alt="">
+                            <a href="#">{{ m.name }}</a>
+                        </div>
+                    {% endfor %}
+                    <hr>
+                    <h3>License</h3>
+                    <div class="license">
+                        {{ package.license }}
+                    </div>
+
+                </div>
+                <div class="col-sm-7">
+
+                    <h2>Project description</h2>
+
+                    <pre>{{ package.description.strip() }}
+                        </pre>
+
+
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

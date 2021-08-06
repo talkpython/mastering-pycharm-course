@@ -1,0 +1,118 @@
+body {
+    color: #222;
+    margin: 0px;
+    padding: 0px;
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    background-color: #006dad;
+}
+
+.main_content {
+    background: #fff;
+    margin: 0px;
+    padding: 0px 0px 50px;
+}
+
+
+.hero {
+    background-color: #0073b7;
+    color: white;
+    font-size: 18px;
+
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.hero a {
+    color: white;
+    text-decoration: underline;
+}
+
+.hero-inner {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.pypi-stats {
+    padding: 10px 0;
+    background-color: #ececec;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
+    margin-bottom: 30px;
+}
+
+.pypi-stats .stat {
+    display: inline-block;
+    min-width: 170px;
+    padding: 10px;
+    font-size: 16px;
+    color: #003d61;
+}
+
+.project-list .subtitle {
+    font-style: italic;
+}
+
+.project-list h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.project-list .project {
+    border: 1px solid #d3d3d3;
+    padding: 10px;
+    background-color: #ececec;
+    min-height: 45px;
+    margin-top: 15px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.project-list .project .title {
+    font-size: 20px;
+}
+
+.project-list .project a {
+    color: #006dad;
+}
+
+.project-list .project .desc {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+footer {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: #2495f2;
+}
+
+.error-msg {
+    color: #b30000;
+}
+
+.page-core {
+    padding: 20px;
+}
