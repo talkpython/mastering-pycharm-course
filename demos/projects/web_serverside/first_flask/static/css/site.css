@@ -1,0 +1,14 @@
+
+.tweet {
+    margin: 20px;
+    padding: 10px
+}
+
+.tweet .text {
+    font-size: 25px;
+}
+
+.tweet .name {
+    font-weight: bold;
+    font-size: 18px;
+}
