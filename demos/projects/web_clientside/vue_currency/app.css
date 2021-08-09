@@ -1,0 +1,31 @@
+body {
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+#app {
+    padding: 50px;
+    margin: 25px;
+    width: auto;
+    background-color: #aed1ff;
+    border: 1px solid #6685ad;
+    border-radius: 10px;
+}
+
+span, option, input {
+    font-size: 25px;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input {
+    display: inline-block;
+    width: 375px;
+}
+
+.label {
+    display: inline-block;
+    width: 70px;
+}
