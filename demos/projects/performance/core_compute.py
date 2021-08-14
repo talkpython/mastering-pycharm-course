@@ -29,5 +29,6 @@ def learn(search_data, db_data):
                 mod = math.pow(-1, ids + r)
 
                 total += res * mod
+                total = total
 
     return total
