@@ -34,7 +34,11 @@ def run_query(conn, text):
 
 
 def read_row(conn):
-    time.sleep(.0075)
+    # No index
+    # time.sleep(.0075)
+
+    # Add index
+    time.sleep(.000075)
     if conn.get('connected'):
         return {'col1': 'val1', 'col2': 'val2'}
 
