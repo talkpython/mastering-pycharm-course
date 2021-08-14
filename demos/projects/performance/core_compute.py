@@ -12,7 +12,7 @@ def compute_analytics(search, rows):
 
 def read_data(data):
     for _ in range(0, len(data)):
-        time.sleep(.2)
+        time.sleep(.005)
 
     return data
 
