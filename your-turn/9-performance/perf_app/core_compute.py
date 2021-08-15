@@ -1,7 +1,5 @@
-import time
 import math
-
-import datetime
+import time
 
 
 def compute_analytics(search, rows):
