@@ -1,7 +1,7 @@
 import datetime
 import unittest.mock
 from flask import Response
-from tests.test_client import flask_app
+from tests.table_test import flask_app
 
 
 def test_package_details_success():

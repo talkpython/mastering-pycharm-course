@@ -1,6 +1,6 @@
 from flask import Response
 
-from tests.test_client import flask_app
+from tests.table_test import flask_app
 from pypi_org.views import home_views
 
 

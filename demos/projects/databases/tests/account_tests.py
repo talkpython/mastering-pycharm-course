@@ -2,7 +2,7 @@ from flask import Response
 
 from pypi_org.data.users import User
 from pypi_org.viewmodels.account.register_viewmodel import RegisterViewModel
-from tests.test_client import flask_app
+from tests.table_test import flask_app
 import unittest.mock
 
 

@@ -30,12 +30,6 @@ def find_available(choice: int) -> List[Table]:
 
 def book_table(table_id: str):
     table = find_table_by_id(table_id)
-    if not table:
-        raise EntityNotFoundError("No table with this id")
-
-    if table.is_booked:
-        raise TableUnavailableError("Table is booked")
-
     table.is_booked = True
     return table
 
@@ -49,16 +43,16 @@ def find_table_by_id(table_id: str) -> Optional[Table]:
 
 
 def _id():
-    return str(uuid.uuid4())
+    return str(uuid.uuid4()).split('-')[-1]
 
 
-tables= [
+tables = [
     Table(_id(), "Thai Roses", 1),
     Table(_id(), "Thai Roses", 1),
 
     Table(_id(), "Siam Thai", 1),
 
-    Table(_id(), "Skyline Burgers", 2),
+    Table(_id(), "Skyline Restaurant", 2),
 
     Table(_id(), "Little Big Burger", 2),
     Table(_id(), "Little Big Burger", 2),
