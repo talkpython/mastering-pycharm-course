@@ -30,6 +30,13 @@ def find_available(choice: int) -> List[Table]:
 
 def book_table(table_id: str):
     table = find_table_by_id(table_id)
+
+    if not table:
+        raise EntityNotFoundError()
+
+    if table.is_booked:
+        raise TableUnavailableError()
+
     table.is_booked = True
     return table
 

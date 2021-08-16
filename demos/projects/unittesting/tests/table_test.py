@@ -1,3 +1,5 @@
+import pytest
+
 from app import core
 
 
@@ -17,3 +19,16 @@ def test_table_can_be_booked():
     assert booked
     assert booked.is_booked
     assert booked.table_id == table.table_id
+
+
+def test_cannot_book_a_nonexistant_table():
+    with pytest.raises(core.EntityNotFoundError):
+        core.book_table("THIS IS NOT AN ID ;)")
+
+
+def test_cannot_book_a_booked_table():
+    table = [t for t in core.all_tables() if not t.is_booked][0]
+    core.book_table(table.table_id)
+
+    with pytest.raises(core.TableUnavailableError):
+        core.book_table(table.table_id)
