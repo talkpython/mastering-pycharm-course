@@ -4,16 +4,19 @@ import services
 
 
 def main():
-    for _ in range(1, 10):
-        go()
+    go()
 
 
 def go():
     text = 'profiling'
     results = services.search(text)
-    print('search: {}'.format(results))
+    print('Talk Python search results:')
+    for r in results:
+        print(r[:100].strip() + '...')
+
     records = data_access.get_records(text)
     print('db: {}'.format(len(records)))
+
     total = core_compute.compute_analytics(results, records)
     print("The total is: {:,}".format(total))
 

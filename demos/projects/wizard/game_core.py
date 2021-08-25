@@ -1,7 +1,10 @@
 import random
 import time
 
-from actors import SmallAnimal, Creature, Dragon, Wizard
+from actors.creature_base import Creature
+from actors.small_animal import SmallAnimal
+from actors.dragon import Dragon
+from actors.wizard import Wizard
 
 STARTING_HERO_LEVEL = 75
 
@@ -15,13 +18,23 @@ def game_loop():
         Wizard('Evil Wizard', 1000)
     ]
 
+    # A contrived sourcery example:
+
+    # levels = []
+    # for c in creatures:
+    #     levels.append(c.level)
+
+    # # converted to:
+
+    # levels = [c.level for c in creatures]
+
     hero = Wizard('Gandolf', STARTING_HERO_LEVEL)
+    # print(f"REPR: {creatures[-2]}")
 
     while True:
 
         active_creature = random.choice(creatures)
-        print('A {} of level {} has appear from a dark and foggy forest...'
-              .format(active_creature.name, active_creature.level))
+        print(f'A {active_creature.name} of level {active_creature.level} has appear from a dark and foggy forest...')
         print()
 
         cmd = input('Do you [a]ttack, [r]unaway, or [l]ook around? ')
@@ -35,10 +48,9 @@ def game_loop():
         elif cmd == 'r':
             print('The wizard has become unsure of his power and flees!!!')
         elif cmd == 'l':
-            print('The wizard {} takes in the surroundings and sees:'
-                  .format(hero.name))
+            print(f'The wizard {hero.name} takes in the surroundings and sees:')
             for c in creatures:
-                print(' * A {} of level {}'.format(c.name, c.level))
+                print(f' * A {c.name} of level {c.level}')
         else:
             print("OK, exiting game... bye!")
             break

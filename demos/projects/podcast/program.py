@@ -1,30 +1,31 @@
 import service
 
+__VERSION__ = "2.1"
+
 
 def main():
-    show_header()
-
+    print_header()
     service.download_info()
-    print("Working with total of {} episodes".format(service.get_latest_show_id()))
-    display_results()
+    show_titles()
 
 
-def show_header():
-    print("Welcome to the talk python info downloader.")
-    print()
+def print_header():
+    print("------------------------------------------")
+    print(f"  TALK PYTHON PODCAST DOWNLOADER v{__VERSION__}")
+    print("------------------------------------------")
 
 
-def display_results():
-    # This is updated since the video recording.
-    # We had to trim back the episode list so I changed
-    # this code to use the moving numbers from the RSS feed
-    # as they change over time.
-    start = service.get_min_show_id()
-    end = service.get_latest_show_id() + 1
+def show_titles():
+    start = service.get_min_episode_id()
+    end = service.get_max_episode_id()
 
-    for show_id in range(start, end):
-        info = service.get_episode(show_id)
-        print("{}. {}".format(info.show_id, info.title))
+    for episode_id in range(start, end + 1):
+        show_episode_details(episode_id)
+
+
+def show_episode_details(episode_id: int):
+    episode = service.get_details(episode_id)
+    print(f'{episode.id}. -> {episode.title}')
 
 
 if __name__ == '__main__':

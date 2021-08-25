@@ -18,11 +18,11 @@ DRAGON_TEXT = '''
 
 
 def main():
-    print_header()
+    show_header()
     game_loop()
 
 
-def print_header():
+def show_header():
     print()
     print('-----------------------------------------------------------------------')
     print(DRAGON_TEXT)

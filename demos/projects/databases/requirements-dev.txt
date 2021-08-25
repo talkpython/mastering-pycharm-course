@@ -1,0 +1,8 @@
+-r requirements.txt
+
+alembic
+
+pytest
+pytest-cov
+webtest
+pytest-clarity

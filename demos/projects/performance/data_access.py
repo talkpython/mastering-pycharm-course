@@ -3,7 +3,8 @@ import time
 
 def get_records(text):
     conn = create_connection()
-    return run_query(conn, text)
+    results = run_query(conn, text)
+    return results
 
 
 __conn = None
@@ -25,7 +26,7 @@ def run_query(conn, text):
         return []
 
     data = []
-    for _ in range(1, 100):
+    for r in range(1, 100):
         row = read_row(conn)
         data.append(row)
 
@@ -33,7 +34,11 @@ def run_query(conn, text):
 
 
 def read_row(conn):
-    time.sleep(.001)  # Improved index!
+    # No index
+    # time.sleep(.0075)
+
+    # Add index
+    time.sleep(.000075)
     if conn.get('connected'):
         return {'col1': 'val1', 'col2': 'val2'}
 

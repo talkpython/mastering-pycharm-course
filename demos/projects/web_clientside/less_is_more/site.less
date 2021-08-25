@@ -1,0 +1,26 @@
+@light_bg: #76f6d5;
+@darker_bg: @light_bg - #555;
+
+.items {
+
+  .item {
+    background: @light_bg;
+    border: 1px solid @darker_bg;
+    border-radius: 5px;
+
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+
+    h2 {
+      text-align: center;
+    }
+
+    .text {
+      color: @darker_bg;
+      text-align: center;
+    }
+  }
+
+}

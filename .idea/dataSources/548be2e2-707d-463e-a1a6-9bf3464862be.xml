@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="blue_yellow">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.17">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.23">
     <root id="1"/>
     <schema id="2" parent="1" name="main">
       <Current>1</Current>

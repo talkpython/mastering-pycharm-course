@@ -13,10 +13,10 @@ def search(text: str) -> List[str]:
 
 
 def build_url(text):
-    # format is http://search.talkpython.fm/api/search?q=SEARCH
+    # format is https://search.talkpython.fm/api/search?q=SEARCH
 
     encoded = urllib.parse.urlencode({'q': text})
-    url = 'http://search.talkpython.fm/api/search?{}'.format(encoded)
+    url = 'https://search.talkpython.fm/api/search?{}'.format(encoded)
     return url
 
 

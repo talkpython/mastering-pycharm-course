@@ -1,0 +1,8 @@
+werkzeug
+flask
+sqlalchemy
+
+progressbar2
+python-dateutil
+passlib
+

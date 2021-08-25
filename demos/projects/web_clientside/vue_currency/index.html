@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="app.css">
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+<div id="app">
+    <h1>Converter</h1>
+    <input type="number" v-model.number="amount" placeholder="Amount"/><br>
+    <br>
+    <span class="label">From:</span>
+    <select v-model="convert_from" style="width:300px;font-size:25px;">
+        <option v-for="(a, index) in currency_from" v-bind:value="a.name">{{a.desc}}</option>
+    </select><br>
+    <br>
+    <span class="label">To:</span>
+    <select v-model="convert_to" style="width:300px;font-size:25px;">
+        <option v-for="(a, index) in currency_from" v-bind:value="a.name">{{a.desc}}</option>
+    </select><br>
+    <span class="result"> {{amount}} {{convert_from}} is worth {{final_amount}} {{convert_to}}</span>
+</div>
+
+
+<script src="app.js"></script>
+
+
+</body>
+</html>

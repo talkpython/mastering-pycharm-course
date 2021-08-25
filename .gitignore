@@ -11,7 +11,6 @@ __pycache__/
 env/
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -109,3 +108,4 @@ extra_samples/profiling/neg.txt
 extra_samples/profiling/pos.txt
 extra_samples/profiling/stop.txt
 /extra_samples/autos/data/vehicles.csv
+demos/projects/packages/calc/dist
