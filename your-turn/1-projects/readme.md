@@ -39,7 +39,8 @@ If you don't _git_, that's OK. Just download and unzip it (click the `code` butt
 Open `python-jumpstart-course-demos` as a project in PyCharm. Just choose `File > Open` and browse to the file.
 If you're on macOS, you can also drag-and-drop the folder onto the PyCharm icon in the dock.
 
-
+PyCharm may show a warning that there is "No interpreter configured" for the project. If that's the case,
+click the interpreter section in the lower right, chose `Add interpreter`, then `New environment`.
 
 You will want to configure the wizard battle section to work correctly with the relative imports. Mark this directory as a **sources root**:
 
