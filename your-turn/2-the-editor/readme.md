@@ -11,17 +11,23 @@
 
 Let's start exploring some of my favorite editor features in one shot. Autocomplete & constructive code intentions.
 
-Open the project called `bad_wizard` (same folder as this file).  Creating a virtual environment in `bad_wizard` before opening it is encouraged but not technically required.
+Open the project called `bad_wizard` (same folder as this file).  Remember to create a virtual environment if 
+PyCharm indicates "No interpreter selected" using PyCharm's `Add interpreter...` feature.
 
-There is a lot wrong with bad wizard, but don't mess with the warnings yet. Instead, on line 43 in the file `program.py`, type 
+There is a lot wrong with `bad_wizard`, but don't mess with the warnings yet. 
+Instead, on line 43 in the file `program.py`, type 
 
+```python
     hero.
+```
 
-And observe the autocomplete. Pretty cool right?
+And observe the autocomplete, especially when hitting the period. Pretty cool right?
 
-Now let's add a method. Type this:
+Now let's add a method. Type this, ignoring that it doesn't appear in autocomplete - it will:
 
+```python
     hero.wake_up()
+```
 
 Notice that wake_up should have some warning about it not existing. Put your cursor on wake_up, press **alt-enter**, and choose "*Add method wake_up to Wizard class*".
 
