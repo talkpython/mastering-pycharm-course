@@ -30,15 +30,16 @@ In this section, you'll check out the Python Jumpstart by Building 10 Apps demo 
 
 [https://github.com/talkpython/python-jumpstart-course-demos](https://github.com/talkpython/python-jumpstart-course-demos)
 
+```shell
+$ git clone https://github.com/talkpython/python-jumpstart-course-demos
+```
+
 If you don't _git_, that's OK. Just download and unzip it (click the `code` button then download as zip).
 
-Before you open it with PyCharm, you'll want to create a virtual environment within it at the level you'll be opening the directory.
+Open `python-jumpstart-course-demos` as a project in PyCharm. Just choose `File > Open` and browse to the file.
+If you're on macOS, you can also drag-and-drop the folder onto the PyCharm icon in the dock.
 
-Change into the folder `python-jumpstart-course-demos`. Run the python 3 environment command (use `python.exe` on Windows):
 
-`python3 -m venv --copies .env`
-
-Then open `python-jumpstart-course-demos` as a project in PyCharm.
 
 You will want to configure the wizard battle section to work correctly with the relative imports. Mark this directory as a **sources root**:
 
