@@ -69,6 +69,8 @@ def attack(self, creature):
     # Implementation...
 ```
 
-Return to line 58 in `program.py` and see your improved docs.
+Return to line 58 in `program.py` and see your improved docs (through `quick documentation`).
 
-*See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*
+*See a mistake in these instructions? Please 
+[submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and 
+[submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*
