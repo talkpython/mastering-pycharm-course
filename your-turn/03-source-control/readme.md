@@ -35,7 +35,7 @@ Time to **write some code**:
 * Create a file named `game.py`. 
 * Tell PyCharm it may add `game.py` and all subsequent files to **git** if asked (i.e. "don't ask again").
 * Write a quick game that will generate the output below. You'll need a `while` loop, `random.randint()`, and some `if` and `print` statements.  
-* While writing this game, save often (cmd/ctrl-s) (this is important for [step 2](#local-history)).
+* While writing this game, save often (cmd/ctrl-s). This is important for [step 2](#local-history).
 
  **Sample game output**
  
@@ -57,9 +57,9 @@ Time to **write some code**:
     Got it: The number is 66
 ```
 
-Time to **check in your code**.
+Time to **check in your code**:
 
-Use the menu `Git > Commit` to commit your game.py file. Notice how the color of game.py changes from 
+Use the menu `Git > Commit` to commit your `game.py` file. Notice how the color of game.py changes from 
 green to white after committed. Choose a nice commit message.
 
 ## Local history
