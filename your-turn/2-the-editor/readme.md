@@ -29,23 +29,28 @@ Now let's add a method. Type this, ignoring that it doesn't appear in autocomple
     hero.wake_up()
 ```
 
-Notice that wake_up should have some warning about it not existing. Put your cursor on wake_up, press **alt-enter**, and choose "*Add method wake_up to Wizard class*".
+Notice that wake_up should have some warning about it not existing. Put your cursor on wake_up, 
+press **alt-enter**, and choose "*Add method wake_up() to class Wizard*".
 
-Then write some kind of print statement for the implementation (e.g. The wizard Gandolf awakens) based on the wizard's name.
+Then write some kind of print statement for the implementation (e.g. The wizard Gandolf awakens) 
+based on the wizard's name. Run the app again and see your method's output in the run window.
 
 ## Clean up code to match PEP8
 
 Return to `program.py`. Notice how many PEP8 formatting warnings it has. Use reformat code to fix this!
 
-If you forgot the command sequence, use the search (upper right) and type `reformat code`. It should appear under the "actions" section.
+If you forgot the command sequence, use the search (upper right) and type `reformat code`. 
+It should appear under the "actions" section. _Ah_, much better to look at now, isn't it?
 
 ## Remove unused imports
 
-Go to the top of `program.py`. You'll see some of the imports are unused. Put your cursor in that area. You should have a light bulb for a code intention. Choose "*Optimize imports*"
+Go to the top of `program.py`. You'll see some imports are unused. Put your cursor on one of the 
+unused imports (gray). You should have a light bulb for a code intention. Choose `Optimize imports`.
 
 ## Add documentation to a method
 
-The bad wizard has no documentation. Put your cursor on `hero.attack` (the attack part) on line 58 in `program.py`. Use the menu **View > Quick Documentation** and notice it's lacking.
+The bad wizard has no documentation. Put your cursor on `hero.attack` (the attack part) on line 58 in 
+`program.py`. Use the menu **View > Quick Documentation** and notice it's lacking.
 
 Press **cmd/ctrl-b** (or **cmd/ctrl-click**) to navigate to attack. Type """[ENTER] to generate documentation.
 
