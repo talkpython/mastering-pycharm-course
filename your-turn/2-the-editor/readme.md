@@ -52,7 +52,22 @@ unused imports (gray). You should have a light bulb for a code intention. Choose
 The bad wizard has no documentation. Put your cursor on `hero.attack` (the attack part) on line 58 in 
 `program.py`. Use the menu **View > Quick Documentation** and notice it's lacking.
 
-Press **cmd/ctrl-b** (or **cmd/ctrl-click**) to navigate to attack. Type """[ENTER] to generate documentation.
+Press **cmd/ctrl-b** (or **cmd/ctrl-click**) to navigate to attack. Then modify the function to have
+some sort of docstring describing its behavior. For example:
+
+```python
+def attack(self, creature):
+    """
+    Attacks the specified creature.
+
+    Parameters:
+    creature (Creature): The creature to battle.
+
+    Returns:
+    bool: True if the wizard is triumphant.
+    """
+    # Implementation...
+```
 
 Return to line 58 in `program.py` and see your improved docs.
 
