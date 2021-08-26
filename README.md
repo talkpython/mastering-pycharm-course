@@ -1,6 +1,6 @@
-# Mastering PyCharm course
+# Effective PyCharm course
 
-[![](./readme_resources/mastering-pycharm-sm.jpg)](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide)
+[![](./readme_resources/effective-pycharm2x.jpg)](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide)
 
 [Visit course page](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide)
 
@@ -12,7 +12,7 @@ JetBrain's PyCharm Cheat Sheet
 
 ## Course Summary
 
-PyCharm is the premier Python IDE (integrated development environment). You will be hard pressed to find an editor that gives a more holistic way to build Python applications. While powerful, IDEs can be daunting to learn with all their features. That's why this course shows you how they all work.
+PyCharm is the premier Python IDE (integrated development environment). You will be hard-pressed to find an editor that gives a more holistic way to build Python applications. While powerful, IDEs can be daunting to learn with all their features. That's why this course shows you how they all work.
 
 ## What's this course about and how is it different?
 
@@ -27,7 +27,7 @@ In this course, you will:
 * Use PyCharm's special data science mode
 * Refactor your Python code with confidence
 * Learn about code smells and duplicate code tooling
-* Access git, github, and use git flow
+* Access git, GitHub, and use git flow
 * Use the visual debugger to understand code flow and state
 * Make your code more reliable with unit testing and pytest
 * Create new Python packages
@@ -47,18 +47,10 @@ While exploring a topic interactively with demos and live code is very engaging,
 
 Here's an example of concepts reviewing the database tools within PyCharm.
 
-![](./readme_resources/pycharm-concept-example.png)
+![](./readme_resources/pycharm-concept-example.jpg)
 
 ## Hands-on exercises for almost every chapter
 
 Learning IDEs can be hard. There are just so many features. Unless you build that muscle memory with practice, most of them will be forgotten. Mastering PyCharm has hands-on exercises for almost every chapter of the course.
 
 These exercises range in length from 10 minutes to about 30 minutes each.
-
-Here is the your turn for the Refactoring chapter.
-
-## Is this course based on Python 3 or Python 2?
-
-Python 3, definitely.
-
-Check out the **[course page](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide)** for more details.
