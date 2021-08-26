@@ -17,8 +17,8 @@ Steps:
 4. Uncheck "create main.py script"
 5. Add a hello.py
 6. Print *hello world*
-7. Run within PyCharm (right-click `hello.py` and choose run)
-8. Verify that the virtual environment's version of Python was used (see image)
+7. Run within PyCharm (right-click on `hello.py` in the project window and choose `Run 'hello'`)
+8. Verify that the virtual environment's version of Python was used (see Python path in the second image below)
 
 ![Create project with venv](./resources/virtualenv.png)
 
@@ -26,11 +26,11 @@ Steps:
 
 ## Configure a complex project
 
-In this section, you'll checkout the Python Jumpstart by Building 10 Apps demo content. Just clone it from the repository here:
+In this section, you'll check out the Python Jumpstart by Building 10 Apps demo content. Just clone it from the repository here:
 
-https://github.com/mikeckennedy/python-jumpstart-course-demos
+[https://github.com/talkpython/python-jumpstart-course-demos](https://github.com/talkpython/python-jumpstart-course-demos)
 
-If you don't git, that's OK. Just download and unzip it.
+If you don't _git_, that's OK. Just download and unzip it (click the `code` button then download as zip).
 
 Before you open it with PyCharm, you'll want to create a virtual environment within it at the level you'll be opening the directory.
 
