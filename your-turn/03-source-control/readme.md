@@ -23,17 +23,17 @@ we won't go to that trouble here. We will just create a local **git** repository
 
 1. Simply create directory called `hilo` in the terminal / command prompt
 2. CD into `hilo`
-3. Create a local git repo by typing `git init`
+3. Create a local **git** repo by typing `git init`
 
-Now this `hilo` directory is now a local git repo (it has a hidden `.git` folder).
+This `hilo` directory is now a local **git** repo (it has a hidden `.git` folder).
 
-Time to **write some code**.
+Time to **write some code**:
 
 * Open this directory in PyCharm (it's empty but will constitute a new project)
 * If PyCharm creates a default `main.py`, just delete it
 * Confirm that PyCharm has detected the **git** / vcs root (see the default branch name in the lower right status bar fork icon)
 * Create a file named `game.py`. 
-* Tell PyCharm it may add it and all subsequent files to **git** if asked ("don't ask again").
+* Tell PyCharm it may add `game.py` and all subsequent files to **git** if asked (i.e. "don't ask again").
 * Write a quick game that will generate the output below. You'll need a `while` loop, `random.randint()`, and some `if` and `print` statements.  
 * While writing this game, save often (cmd/ctrl-s) (this is important for [step 2](#local-history)).
 
