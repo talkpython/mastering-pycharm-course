@@ -1,8 +1,8 @@
 # Mastering PyCharm course
 
-[![](./readme_resources/mastering-pycharm-sm.jpg)](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide)
+[![](./readme_resources/mastering-pycharm-sm.jpg)](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide-2017)
 
-[Visit course page](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide)
+[Visit course page](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide-2017)
 
 ## Resources
 
@@ -33,7 +33,7 @@ In this course, you will:
 * Create new Python packages
 * And lots more
 
-View the [full course outline](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide#course_outline).
+View the [full course outline](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide-2017#course_outline).
 
 ## Who is this course for?
 
@@ -61,4 +61,4 @@ Here is the your turn for the Refactoring chapter.
 
 Python 3, definitely.
 
-Check out the **[course page](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide)** for more details.
+Check out the **[course page](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide-2017)** for more details.
