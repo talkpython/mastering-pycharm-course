@@ -15,25 +15,27 @@ Our friends over at GitHub have created a nice
 [Installing git on any OS guide](https://github.com/git-guides/install-git). If you don't have git or are
 unsure whether you do, please check out the steps for your OS [over there](https://github.com/git-guides/install-git).
 
-## Keeping it local
+## Keeping it simple
 
-While most work like this will be done with a cloud source control service such as GitHub or BitBucket,
-we won't go to that trouble here. We will just create a local git repository using these steps:
+While most work like this will be done with a cloud source control services such as 
+[GitHub](https://github.com), [BitBucket](https://bitbucket.org/), or [GitLab](https://about.gitlab.com/),
+we won't go to that trouble here. We will just create a local **git** repository using these steps:
 
-1. Simply create directory called `hilo`
+1. Simply create directory called `hilo` in the terminal / command prompt
 2. CD into `hilo`
 3. Create a local git repo by typing `git init`
 
-Now this `hilo` directory has a local git repo (it has a hidden `.git` folder).
+Now this `hilo` directory is now a local git repo (it has a hidden `.git` folder).
 
 Time to **write some code**.
 
 * Open this directory in PyCharm (it's empty but will constitute a new project)
 * If PyCharm creates a default `main.py`, just delete it
 * Confirm that PyCharm has detected the **git** / vcs root (see the default branch name in the lower right status bar fork icon)
-* Create a file `game.py`, tell PyCharm it may add it and all subsequent files to **git** if asked ("don't ask again").
-* Write a quick game that will generate the output below. You'll need a `while` loop, `random.randint()`, and some `if` and `print` lines.  
-* While writing this game, save often (cmd/ctrl-s).
+* Create a file named `game.py`. 
+* Tell PyCharm it may add it and all subsequent files to **git** if asked ("don't ask again").
+* Write a quick game that will generate the output below. You'll need a `while` loop, `random.randint()`, and some `if` and `print` statements.  
+* While writing this game, save often (cmd/ctrl-s) (this is important for [step 2](#local-history)).
 
  **Sample game output**
  
