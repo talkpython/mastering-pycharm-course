@@ -48,7 +48,8 @@ You will want to configure the wizard battle section to work correctly with the 
 
 Then configure PyCharm to run `program.py` in that folder.
 
-You should also have no errors around this statement in the PyCharm editor.
+You should also have no errors around this statement in the PyCharm editor. This will indicate that the source root
+settings are configured correctly.
 
 	# program.py, line 4
 	from actors import Wizard, Creature, SmallAnimal, Dragon
