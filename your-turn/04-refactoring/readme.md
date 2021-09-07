@@ -51,6 +51,10 @@ Let's move the data container and type first. Highlight these two lines and "mov
 	Episode = namedtuple('Episode', 'title link pubdate show_id')
 	episode_data = {}  
 
+**Note**: If you have **not** opened just the `smelly_podcast` folder as the project root, you will need to market that folder as a sources root for that to work. It should look like this:
+
+![](./sources-root.png)
+
 Open `service.py` and see that the lines have moved. Does your code still run?
 
 We need to move some of the methods. Namely, move these all to service. Before you do it one by one, observe that you can move multiple things at once. Highlight one to move, choose move, and check the others off before agreeing to move them to `service.py`.
