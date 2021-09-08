@@ -15,7 +15,7 @@ This chapter requires PyCharm Professional to complete as indicated. Please see 
 
 ## An existing SQLite database in PyCharm
 
-Open the project called `database_proj` in the same folder as this file. You may want to create a virtual environment if you plan on running installing the requirements and runnign the app.
+Open the project called `database_proj` in the same folder as this file. You may want to create a virtual environment if you plan on running installing the requirements and running the app.
 
 First, you'll add the SQLite data file `db/blue_yellow.sqlite` as a data source in PyCharm. Try dragging that file onto the database tab (when expanded).
 
