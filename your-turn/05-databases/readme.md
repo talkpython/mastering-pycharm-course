@@ -15,17 +15,17 @@ This chapter requires PyCharm Professional to complete as indicated. Please see 
 
 ## An existing SQLite database in PyCharm
 
-Open the project called `database_proj` in the same folder as this file. You may want to create a virtual environment first.
+Open the project called `database_proj` in the same folder as this file. You may want to create a virtual environment if you plan on running installing the requirements and runnign the app.
 
 First, you'll add the SQLite data file `db/blue_yellow.sqlite` as a data source in PyCharm. Try dragging that file onto the database tab (when expanded).
 
-If that works, great! If not, hit the plus in that tab, choose data source, sqlite (xenial). If you see any message about downloading database drivers do that first. Then you should be able to add the data file.
+If that works, great! If not, hit the plus in that tab, choose data source, SQLite. If you see any message about downloading database drivers do that first. Then you should be able to add the data file.
 
-Explore the data in this tab. Expand it, play with it, and so on. Feel free to add a new table or new index to an existing one. Do not change the schema if you want the program to run. ;)
+Explore the data in this tab. Expand it, play with it, and so on. Feel free to add a new table or a new index to an existing table. Do not change the schema if you want the program to run. ;)
 
 ## Queries against existing data
 
-To run a query, let's find all tracks that have the word 'the' in the title. Right-click on a table and choose jump to console. Write the query in SQL with the help of auto complete. The key where clause here is: 
+To run a query, let's find all tracks that have the word 'the' in the title. Right-click on a table and choose `Jump to Query Console`. Write a `SELECT` in SQL with the help of auto complete. You want to query the Track table. The key where clause here is: 
 
 `name LIKE '%the%'`
 
@@ -37,7 +37,7 @@ Understanding relational tables is often best done via diagrams. Select `Track` 
 
 ## Python + SQL integration in action 
 
-The final trick is for inline SQL in code. Type, do not paste, the following code into the bottom of `data_app.py` and watch how the string first becomes SQL aware then even aware of your schema.
+The final trick is for SQL embedded in strings inside Python code. Type, do not paste, the following code into the bottom of `data_app.py` and watch how the string first becomes SQL aware then even aware of your schema.
 
 ```python
 query = "SELECT * FROM Album WHERE has_preview AND year > 2001"
