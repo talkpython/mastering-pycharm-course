@@ -69,6 +69,10 @@ def attack(self, creature):
     # Implementation...
 ```
 
+Note that you can configure PyCharm to use different formats for docstrings. The setting is in Preferences -> Tools -> Python Integrated Tools -> Docstrings -> Docstring format `[ ReStructured | Google | Numpy ... ]`:
+
+![](./choose-docstring-format.png)
+
 Return to line 58 in `program.py` and see your improved docs (through `quick documentation`).
 
 *See a mistake in these instructions? Please 
