@@ -14,8 +14,8 @@ Steps:
 1. Open PyCharm
 2. Create a new project
 3. Name it first_project and use a virtual environment (see image below)
-4. Uncheck "create main.py script"
-5. Add a hello.py
+4. Uncheck "Create a main.py welcome script"
+5. Add a `hello.py`
 6. Print *hello world*
 7. Run within PyCharm (right-click on `hello.py` in the project window and choose `Run 'hello'`)
 8. Verify that the virtual environment's version of Python was used (see Python path in the second image below)
@@ -34,21 +34,21 @@ In this section, you'll check out the Python Jumpstart by Building 10 Apps demo 
 $ git clone https://github.com/talkpython/python-jumpstart-course-demos
 ```
 
-If you don't _git_, that's OK. Just download and unzip it (click the `code` button then download as zip).
+If you don't _git_, that's OK. Just download and unzip it (click the `Code` button then download as zip).
 
-Open `python-jumpstart-course-demos` as a project in PyCharm. Just choose `File > Open` and browse to the file.
+Open `python-jumpstart-course-demos` as a project in PyCharm. Just choose `File > Open...` and browse to the file.
 If you're on macOS, you can also drag-and-drop the folder onto the PyCharm icon in the dock.
 
 PyCharm may show a warning that there is "No interpreter configured" for the project. If that's the case,
 click the interpreter section in the lower right, chose `Add interpreter`, then `New environment`.
 
-You will want to configure the wizard battle section to work correctly with the relative imports. Mark this directory as a **sources root**:
+You will want to configure the wizard battle section to work correctly with the relative imports. Mark this directory as a **Sources Root**:
 
 `./apps/07_wizard_battle/final/`
 
 Then configure PyCharm to run `program.py` in that folder.
 
-You should also have no errors around this statement in the PyCharm editor. This will indicate that the source root
+You should also have no errors around this statement in the PyCharm editor. This will indicate that the sources root
 settings are configured correctly.
 
 	# program.py, line 4
