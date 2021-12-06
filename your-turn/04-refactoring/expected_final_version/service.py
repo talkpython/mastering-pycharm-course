@@ -8,23 +8,25 @@ episode_data = {}
 
 
 def get_episode(show_id):
-    # GET EPISODE
-    return episode_data.get(show_id)
+    info = episode_data.get(show_id)
+    return info
 
 
-def get_latest_show_id():
-    # GET LATEST SHOW ID
-    return max(episode_data.keys())
+def get_show_id_range():
+    latest_show_id = max(episode_data.keys())
+    oldest_show_id = min(episode_data.keys())
+    return latest_show_id, oldest_show_id
 
 
-def download_data():
-    # DOWNLOAD THE EPISODE DATA
-    url = 'https://talkpython.fm/episodes/rss'
+def download_data(url):
     resp = requests.get(url)
     resp.raise_for_status()
     dom = ElementTree.fromstring(resp.text)
+
     items = dom.findall('channel/item')
+
     episode_count = len(items)
+
     for idx, item in enumerate(items):
         episode = Episode(
             item.find('title').text,
@@ -33,7 +35,3 @@ def download_data():
             episode_count - idx - 1
         )
         episode_data[episode.show_id] = episode
-
-
-def get_min_show_id():
-    return min(episode_data.keys())
