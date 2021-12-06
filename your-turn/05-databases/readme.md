@@ -29,7 +29,7 @@ To run a query, let's find all tracks that have the word 'the' in the title. Rig
 
 `name LIKE '%the%'`
 
-There should be 5 tracks that match.
+There should be 4 tracks that match.
 
 ## View table diagrams
 
