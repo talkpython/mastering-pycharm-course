@@ -11,7 +11,7 @@ This chapter requires PyCharm Professional to complete as indicated. Please see 
 3. Render data from view in the template
 4. Change the global site look and feel
 
-## A basic Flask web app
+## Creating a new Flask web app
 
 We are going to use PyCharm's tools to create a Flask web app.
 
@@ -48,7 +48,7 @@ Go ahead and run the app by pressing the green arrow in the screenshot above. Yo
 
 ![First run](./resources/first-run.png)
 
-## Implement a view method
+## Implement a data-driven view method
 
 Let's add a little structure. Create a top-level folder called `data`. In the `data` folder, create called `fake_data.py`. Copy this method into that file:
 
@@ -66,9 +66,11 @@ def get_orders():
 
 Now let's use it in the website.
 
-We're going to *replace* the `hello_world()` view method with one called `index()`. Traditionally, websites default file server has been `index.html` for urls such as `https://the_server.com/` so we'll mirror that in the Flask style.
+We're going to *replace* the `hello_world()` view method with one called `index()`. Traditionally, website's default file served has been `index.html` for urls such as `https://the_server.com/` where no file was specified. So we'll mirror that in the Flask style by naming our view method `index()`.
 
-Now, let's get the data from our simulated database (`fake_data.py`) into the view method. Import fake_data and use it to store the orders in a local variable:
+Additionally, let's get the data from our simulated database (`fake_data.py`) into the view method. Import `fake_data` and use it to store the orders in a local variable.
+
+The final view method should look like this:
 
 ```python
 @app.route('/')
@@ -80,11 +82,11 @@ def index():
 Go ahead and run the app again and request the home page just to make sure things are still hanging together.
 
 
-## Render data in the template
+## Render data in an HTML template
 
 Now you have the data ready to send along to the HTML side of things, let's create the Jinja template and render the orders there.
 
-Create a new HTML file: `templates/index.html` (this should use PyCharm's HTML template with a little structure). Now it's time to use Jinja's syntax to render the orders. Just do something simple like this:
+Create a new HTML file: `templates/index.html` (this should use PyCharm's HTML template with a little structure). Now it's time to use Jinja's syntax to render the orders. The Jinja code section for the orders should look something like this:
 
 ```html
 <!-- ... -->
@@ -101,7 +103,7 @@ Create a new HTML file: `templates/index.html` (this should use PyCharm's HTML t
 
 Do not copy / paste this. Type it in to see how PyCharm helps you with autocomplete and more.
 
-Finally, we'll jump back to our `index()` view method and render the template with the order data:
+Finally, we'll jump back to our `index()` view method and render the template with the order data using Flask's `flask.render_template()` method:
 
 ```python
 @app.route('/')
@@ -110,15 +112,17 @@ def index():
     return flask.render_template('index.html', orders=orders)
 ```
 
-With this code in place, you should have a nav icon to jump between the view method and template:
+With this code in place, you should now have a nav icon to jump between the view method and template:
 
 ![Nav icon](./resources/nav-icon.png)
 
-## The global site template
+## Global look and feel with a shared template
 
-Finally, let's see how we go about working across the site. Create a new HTML file that will hold the outer "shell" of our site with a common set of imports, styles, and so on. Create `templates/_layout.html`. I like the `_` prefix to indicate it's not a public page but a shared item.
+Finally, let's see how we go about having a common look-and-feel across the site. 
 
-Add something like this in there. Note the `block` keyword to allow us to use this across other pages. Also, we threw in some styles just to make the effect of the template more obvious. In real apps, you'd put that in a style sheet, but we want to keep this simpler if possible for this walk-through.
+Create a new HTML file that will hold the outer "shell" of our site with a common set of imports, styles, navigation, footers, and so on. Create `templates/_layout.html`. I like the `_` prefix to indicate it's not a public page but a shared item.
+
+Add HTML like below in there. Note the `block` keyword to allow us to use this across other pages. Also, we threw in some styles just to make the effect of the template more obvious. In real apps, you'd put that in a style sheet, but we want to keep this simpler if possible for this walk-through.
 
 ```html
 <!DOCTYPE html>
