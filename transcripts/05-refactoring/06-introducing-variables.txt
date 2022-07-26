@@ -1,0 +1,74 @@
+00:0.04 Highlight the value of this ability to create variables and other related items.
+00:5.39 I want to focus in on an incredibly simple little function here.
+00:8.98 Get defensive role. So when a creature is attacked either it's you as the wizard
+00:14.34 or something that is being attacked like a dragon or a small animal.
+00:19.04 There's going to be this call to get defensive role.
+00:21.84 If we look what's happening here it says well there's a three times a random number
+00:26.86 between one and 12 times your level.
+00:29.09 So your defensive ability has something to do with your level.
+00:32.64 And what is this? Random?
+00:34.73 Well remember this is like tension in the dragon.
+00:36.62 So that's a 12 sided die right there.
+00:38.18 So you're rolling your dice, you're multiplying that by your level and then there's some
+00:41.99 kind of three here. I think that might be like a modifier or something.
+00:47.14 Yeah so this is not entirely obvious what's happening.
+00:50.64 We'll see if we can actually do a lot to make it much much cleaner.
+00:54.84 Another thing that I like to do a lot is I would like to put a
+00:57.21 breakpoint here and see what the value of that role was.
+01:2.34 There's no real way to do it.
+01:3.39 You can do division like a divide by the level and by the three and then
+01:7.42 get the number back and figure out what it was.
+01:9.37 But that's not the same as just seeing the value in the Debugger.
+01:13.84 Let's create a variable for this.
+01:15.1 It'll give us a good name.
+01:16.93 So we don't need a comment and it will give us a variable that we can
+01:19.99 inspect in the Debugger and it will shorten this thing up.
+01:23.11 So what we can do is we can ctrl+t to re factor again and we
+01:27.06 can introduce a variable. Now it takes a guess as the return value of randint
+01:32.59 And so is it random?
+01:34.07 No this will be dice or die roll like that.
+01:39.94 What do we get when we rolled our 12 sided dice?
+01:41.81 We got this or value. This is so now it's getting to be clear what's
+01:46.36 happening. The defensive role is some number we're not sure about yet.
+01:50.71 Times the dice the dice roll times your level.
+01:54.12 That's pretty straightforward. Now let's say this is a modifier and maybe three is usually
+01:59.73 what we use but in certain circumstances we might want to even change it.
+02:3.36 So we'll create a variable for this as well and I is not ideal.
+02:6.14 So let's call it modifier and maybe even put it like this.
+02:11.22 So now we have a modifier times the die roll times the level that is so
+02:16.91 much clearer. Now remember this is a really small example,
+02:20.02 it was literally that one line of code but it's already getting more clear and if
+02:24.17 you apply these ideas at say the function level you grab three or four lines of
+02:28.21 code and you give it up function that has a name even better but naming these
+02:34.16 variables here already is making a big difference.
+02:37.14 Now I did say we want the modifier to be adjustable by default.
+02:41.38 I wanted to be three but I would like whoever calls this function to potentially some
+02:45.55 other circumstance, passing a different modifier.
+02:48.57 So what we have here. Well obviously that's not gonna work.
+02:51.58 So let's go and actually put this back so that will show us the anti create
+02:55.61 variable. We go over here,
+02:56.44 stay in line, PyCharm says we're going to put this into one location.
+03:0.84 There we go and now we're back.
+03:2.82 We have three times that I stroll times level.
+03:5.84 Now to make this configurable, let's make it a parameter to this function.
+03:10.75 So let's go here and we can say we want to introduce a parameter,
+03:14.54 not a perimeter object. That would be interesting.
+03:16.34 But there's just one thing. So this will do.
+03:18.94 And up here it says I  notice it gave it a default value.
+03:23.45 That means whoever whatever part of code is calling,
+03:26.16 get defensive role without passing a modifier because there's a default value,
+03:30.34 it will continue to work as is now if we want to pass a value,
+03:34.64 we can The name i is not ideal.
+03:36.7 So let's give it a modifier and then we have it.
+03:39.0 It's very clear what the mechanism,
+03:41.72 what the function for defensive role is.
+03:43.47 It's the modifier, times the dice roll,
+03:45.51 times your level. Boom. But we did that by introducing variables where we had
+03:50.19 just little computations and expressions, let's run this out by just seeing what happens if
+03:54.85 I hit the do bugger this time around and I go and attack whatever.
+04:0.94 Check this out. The dice roll was four.
+04:4.14 The modifier is three and my level Level right there, 75
+04:8.32 75. Awesome. So it also has enhanced the debugging experience because now I can
+04:13.57 see exactly all the pieces in play.
+04:16.47 We'll get to debugging more later,
+04:18.05 but it's definitely a benefit of this little change we made.

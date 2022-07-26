@@ -1,0 +1,19 @@
+00:0.14 Recall our IDE Pyramid here we have PyCharm at the top.
+00:4.24 But PyCharm also is built upon WebStorm and DataGrip.
+00:8.64 So as I was saying before,
+00:10.09 if you want to have a really first class 
+00:13.13 IDE for working with web applications,
+00:15.24 well, PyCharm is absolutely one of those because it has all the Web Storm
+00:19.36 features and WebStorm itself is one of the very best web 
+00:23.3 IDE's When we talk about the server side frameworks,
+00:27.44 when we talk about Flask and Django and Fast API and Pyramid and so on,
+00:32.74 we're going to be working with the features of PyCharm itself.
+00:36.12 Right? We're riding the back end server side python code and may be working with
+00:40.1 the templates and the way those things fit together at the same time.
+00:43.52 Those will have a lot of front end features.
+00:46.5 So client side web frameworks like Vue.js
+00:49.37 potentially obviously straight html or html in the form of jinja template or something.
+00:56.34 CSS, LESS, Typescript, Javascript, all of those things and all that support is coming
+01:1.46 from the WebStorm side of things here.
+01:3.99 So as we focus on the next two chapters,
+01:6.97 we're going to be kind of inter plane between these two parts of this IDE Pyramid..

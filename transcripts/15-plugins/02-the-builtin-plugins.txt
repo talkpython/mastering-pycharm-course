@@ -1,0 +1,50 @@
+00:0.04 Remember that Pyramid where I said we have intelliJ and then built upon intelliJ,
+00:4.92 we've got things like data lower and WebStorm and we have 
+PyCharm,
+00:9.44 all those things actually manifest themselves in terms of plug -ins.
+00:14.15 So let's do a quick exploration of some of the built in plug-ins.
+00:18.34 Now, if you go over here and say preferences on Mac,
+00:21.51 I think this is settings on Windows and Linux,
+00:24.24 we open that up. We can navigate down to the plug ins.
+00:26.64 But if you're on the start screen,
+00:27.94 you can just jump right here.
+00:30.94 We're going to focus on the installed ones so you can see these are categorized,
+00:34.81 here's downloaded. These are ones I've installed but then there's a whole bunch also noticed
+00:40.36 the name of the publisher. Then there's a bunch to have these words bundled here
+00:45.11 We have a bundled database tools.
+00:47.84 So if we look at that,
+00:48.87 this is Data Grip. Remember I said one of those building blocks was DataGrip
+00:52.44 is plugged into PyCharm. This is it.
+00:54.85 You want to take it out,
+00:55.72 you uncheck that and you basically lose all that support but you also lose those 
+01:1.7 UI's and menu UI's, which maybe it's good to have them out of your
+01:4.54 way. You want something clean.
+01:5.65 You say I'm never going to use this. Under deployment.
+01:8.7 We've got Docker, FTP. It has been since the nineties that I've used FTP deploy
+01:14.63 something so that's not of interest to me also Puppet and Vagrant.
+01:18.15 I don't really use so actually unchecked these because when you get into the UI.
+01:22.39 You will no longer have like that whole section on vagrant.
+01:25.93 Under tools will be gone if I uncheck this I left it checked so it looks
+01:29.69 default for everyone until now. But in general I like to disable the ones that
+01:33.78 I'm absolutely certain I'm not going to use.
+01:36.25 It cleans up the UI may be maybe not always maybe uses less memory
+01:40.74 We've got Docker, FDP deploy, Puppet and Vagrant.
+01:45.54 We've seen the html tools. Those are bundled.
+01:47.82 Those are fantastic. Some settings synchronization down here.
+01:51.86 We've got our web stuff like TSLint.
+01:53.82 and javascript and typescript work.
+01:56.84 That's all really important to me.
+01:58.2 The Javascript. The debugger looks great.
+02:0.74 Coffee script. I'm not a fan honestly it's you know,
+02:4.69 typescript seems much better if I'm gonna go with scripted transpired javascript,
+02:8.32 I'm definitely gonna typescript. So again I turn that one off and similarly down here
+02:12.09 we have some languages, we have style sheet stuff,
+02:16.63 template languages, 'Haml' not gonna be using Haml also we have some of the other
+02:21.78 source control and so on. So this is all the built and stuff you can
+02:25.21 decide what you want to leave on what you want to turn off but just being
+02:28.45 very very careful here if realized that these are those IDE.
+02:32.67 Building blocks like that right there.
+02:36.44 That is Data Grip. Down here in the html tools obviously we want to have html
+02:42.01 support the javascript stuff and so on.
+02:45.04 So there's a whole bunch of built in ones and you know,
+02:47.88 they're built in because they have this bundled word by them.

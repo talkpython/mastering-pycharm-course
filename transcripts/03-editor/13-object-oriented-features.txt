@@ -1,0 +1,41 @@
+00:0.04 Python is a great language, it has super support for object oriented programming but it's
+00:4.79 not always required when you are using object only the programming though.
+00:9.19 It's really cool that PyCharm has fantastic support for understanding the entire type.
+00:15.36 archy sometimes this is super obvious because it's just one file like we have here with
+00:20.73 a creature, wizard, small animal and dragon.
+00:23.3 But imagine we broke this apart.
+00:25.32 We have a file that contains the wizard and maybe one that contains a small animal
+00:29.02 and another one that contains different types of dragons.
+00:32.04 All of a sudden what piece applies where not super clear.
+00:36.48 We've got our creature based class and we were wizard and our small animal in our
+00:40.16 dragon, you can see the wizard adds an attack function but doesn't override anything.
+00:46.71 The small animal actually changes what get defensive role which it inherited from creature means.
+00:53.86 And the dragon also changed get defensive role,
+00:57.64 you can see all these little owes with up arrows and down arrows.
+01:2.44 These down arrows are meaning it's overridden and the red up arrows mean it's overriding in
+01:10.02 this location. So creature is overriding the Dunder wrapper special method.
+01:14.64 The small animal is overriding get defensive role.
+01:18.14 That's good information right? It's good to have these here like oh this is actually
+01:21.62 you know, we don't have virtual and override as keywords in python but you can
+01:25.23 kind of see that that's happening here but there's more to it if we actually hover
+01:29.64 over them on the left here,
+01:31.58 we hover over this, it'll say we're overriding This is the repr one can't really
+01:36.31 see it, can you says this overrides the repr method in object over here,
+01:42.67 if we hover over the dragon's get defensive role,
+01:45.33 it says it overrides the method in the creature class and if we go to the
+01:50.49 creature class we get something even cooler.
+01:53.34 It says this method, get defensive role is being overridden by two things that derive
+01:59.88 from you small animal and dragon.
+02:2.64 So in this sense, these things are very helpful about knowing how these pieces are
+02:6.85 working together. What thing is replacing the behavior of a base class,
+02:10.76 What thing is actually changing what it's getting from the particular class,
+02:15.28 you're focused on an example of a creature,
+02:17.13 the small animals, changing what that means.
+02:18.9 So be aware that as you work on it and if you actually click on it
+02:23.12 I give you click where it says override Method,
+02:25.8 an object, it'll jump you over to the base class.
+02:29.15 Dunder repr in this case here is where that code lives.
+02:32.9 And in the Dunder reprs actually implemented in c python.
+02:35.84 So you just get this stub thing,
+02:37.9 the built ins. But nonetheless,
+02:40.29 as we click around on those little spots, we actually navigate from base class, derive class so,on.

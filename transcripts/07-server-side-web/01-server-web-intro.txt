@@ -1,0 +1,28 @@
+00:2.84 Hello again, it's time to build some web applications in python and this is a
+00:9.26 really important aspect of python apps because I feel that web applications and web api are
+00:16.29 one of the true pillars of where many people are spending their time building applications and
+00:21.55 services with python. The other major one of course being data science and then there's
+00:26.45 a whole host of other things,
+00:27.62 but web applications are front and center in the python ecosystem and what we'll see is
+00:32.35 that PyCharm has fantastic support for what you're building regardless of whether you're building that
+00:36.89 in Django. If you're building that with Flask, Fast API or something else,
+00:41.84 it understands the templates and the relationships between your python view methods and the various templates
+00:47.15 It has auto complete for all the popular template languages that the python web frameworks
+00:52.29 use. So it's really, really good at working across these different types of web
+00:57.21 applications just to give you a couple of examples of python in the real world,
+01:2.19 instagram runs the largest deployment of Django applications out there many,
+01:7.21 many, many servers running Django code when you go and check out your pictures or
+01:13.25 flip through your feed, things like that.
+01:15.44 You might have also heard of this little site.
+01:16.98 It has stuff to do with video.
+01:18.35 It's called Youtube. Youtube is written in python and does one million requests per second
+01:24.53 with its python code. So python is super,
+01:27.97 super important in the web and PyCharm works on all the different aspects of your
+01:34.16 python web application. Remember don't let people tell you,
+01:37.77 I do web app stuff and I do things in javascript so I don't use 
+01:41.24 PyCharm. There are reasons you might choose other tools,
+01:44.36 but that is not it. PyCharm has fantastic support for all the different file
+01:48.99 formats that you're going to use in Web applications.
+01:52.12 So we're going to dive in and explore that in this chapter,
+01:55.23 we're gonna build a server side web application.
+01:57.93 It'll be a lot of fun.

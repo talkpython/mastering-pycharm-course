@@ -1,0 +1,27 @@
+00:2.94 We've talked a lot about why PyCharm is awesome and how to get it set
+00:6.67 up and why you should consider using it over many things.
+00:9.62 It's time to finally start using PyCharm and in this chapter we're going to focus
+00:14.33 on projects. This allows us to take a bunch of directories  full of assets
+00:19.71 and files and python scripts and all those things and treat it as one holistic application
+00:24.44 This could be a little terminal UI app that you just share for command line utility.
+00:30.45  It could be a web application,
+00:32.08 It could be some data analysis or some data science project.
+00:35.51 You're working on. The idea is that we want to take a bunch of files
+00:38.77 and understand them as a whole.
+00:41.27 So this means it not just being able to switch between the files but understanding the relationships
+00:46.31 like when I'm using this function here is imported from that other file and if I
+00:50.29 want to say refactor it and rename it,
+00:52.74 we need to make sure all the places throughout all the set of files.
+00:56.04 This application, it gets renamed,
+00:58.93 refactored automatically or I can ask whereas it is used if I try to do
+01:2.96 auto complete if I try to work with some part of one of the application in
+01:6.68 some other part PyCharm will understand that deeply and give us all sorts of hints and
+01:11.52 auto complete and even warnings if we're doing things wrong.
+01:14.94 So maybe this is even setting up a web application.
+01:17.79 So the way we can figure the project is slightly different than the file system itself
+01:23.02 So that PyCharm sees the files as the web application would see them,
+01:27.72 like, for example, '/static' is where the static files are kept,
+01:31.33 even if that's not a top level directory in the project.
+01:34.54 So PyCharm projects are a really important place to start and they're a really important part
+01:39.68 of how PyCharm works. It gives you this holistic understanding over just editing one
+01:46.43 file here and one file there and trying to keep in your mind how they connect together. Let's dive in.

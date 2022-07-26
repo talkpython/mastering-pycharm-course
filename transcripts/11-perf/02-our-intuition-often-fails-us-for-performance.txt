@@ -1,0 +1,18 @@
+00:0.04 As we get into this profiling topic,
+00:2.19 I want to really drive homeless idea that guessing and using your intuition for what part
+00:7.33 of your program is slow and what part is fast?
+00:10.54 It often fails us. In more than one time in my career.
+00:14.85 I've been working on some code and some program and it's really slow and like,
+00:19.0 wow, this is the little section I need to focus on because I'm sure this
+00:23.67 looks complicated. Seems like it's doing a lot.
+00:25.97 This must be the problem. And it turns out that was only 5% of the
+00:30.49 time. There was some other section I didn't even come aware of that was 95%
+00:34.76 of the time. And if I could have completely erased all the time spent on
+00:38.5 where I thought it was slow,
+00:39.45 it would have only made it 5% faster.
+00:41.45 It still would have been basically slow.
+00:44.04 So what we're going to learn in this chapter is how do we measure?
+00:47.22 We measure what our program is doing and where is spending its time.
+00:51.54 And then we can go with that more accurate information,
+00:55.14 dive in and start using our programming experience to make that bit of code faster.
+01:0.04 So before you just dive in and try to make something fast and optimize it and make it potentially complicated, remember measure and then work on it.

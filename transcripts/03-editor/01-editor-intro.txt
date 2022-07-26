@@ -1,0 +1,22 @@
+00:2.94 It's time to focus on the editor.
+00:4.92 This is the most important tool from any development environment that you want to work with
+00:10.84 and in PyCharm, it's no different.
+00:13.27 The editor is the most important place where you're going to spend almost all of your
+00:17.63 time. Everything else adds to this experience.
+00:20.24 As you can imagine. The editor and PyCharm is really good at working on
+00:24.0 python code. But what's not obvious is it's actually much,
+00:27.6 much more. I've heard people say,
+00:29.6 well I don't use PyCharm because I actually do a lot of stuff on the
+00:32.31 web and so I want to be able to work with other files like Javascript and
+00:35.26 html Well, guess what, As you'll learn,
+00:38.45 PyCharm has great support for Javascript, Typescript,
+00:43.03 Coffee script, CSS, LESS. You name it.
+00:46.42 Html the various templates, Jinja, Chameleon and Django and so on.
+00:51.34 So this editor, while primarily we're going to be using it for python because your
+00:54.99 python developers and this is a PyCharm course,
+00:57.74 it actually works on many, many things beyond just straight '.py' files.
+01:3.04 And you'll see that this editor,
+01:4.56 because of the projects that we already spoke about understands your code better than almost any
+01:9.58 other tool, as far as I know better than any other tool out there.
+01:13.44 But in PyCharm, the editor has many subtle benefits and aspects that are really
+01:19.16 powerful, so they're not always obvious and that's a big part of what this whole chapter is about. So lets go and discover all the amazing features.

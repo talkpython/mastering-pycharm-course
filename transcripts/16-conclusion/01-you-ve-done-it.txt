@@ -1,0 +1,65 @@
+00:1.14 That's it, the finish line here we are at the end of the course you
+00:4.38 have done it. You now possess many a PyCharms,
+00:8.07 superpowers and there are many of them aren't there?
+00:11.54 So many people use PyCharm and just treat it the same as you would a
+00:14.93 basic text editor but there's so much more to do so much more to offer And
+00:19.35 as you bring them together as you've seen,
+00:21.3 it just makes you much more effective as a python developer or data scientist.
+00:27.24 So let's review what you've learned.
+00:29.44 We started out talking about why 
+00:31.28 IDE's why use an application with all these features when you could just fire up
+00:36.11 Emacs or Vim. Well I think you've learned that lesson by now but there
+00:39.93 are so many things are going to fill the screen to answer that question.
+00:44.44 We saw that one of the main important things that PyCharm does is it understands
+00:48.69 the entire project, not a single python file but all of the files that make
+00:53.44 up the project as well as the installed packages and so on because of that you
+00:57.81 get so much more support and that support is more accurate like refactoring is not
+01:1.91 find and replace. Saw the editor is super,
+01:5.55 super powerful. It has nice code completion theme in Pep 8 Linting support.
+01:12.33 It has built in source control visualization,
+01:15.9 built in code coverage visualization,
+01:19.01 the code intentions to correct or improve your python code and much much more.
+01:24.24 The Source Control just gets better and better in PyCharm and now it's got deep
+01:28.36 integration with Git hub so you can review your pull requests and your issues and conversations
+01:33.45 and check them out nice and easy.
+01:35.07 So so many good things happening there.
+01:37.54 The Refactoring support is second to none.
+01:40.1 Starting with PyCharm itself. But then along with some of the add ins like
+01:43.4 socially and others we saw that we can do amazing refactories and quickly and safely
+01:49.02 move code. Rename code, extract variables inline variables,
+01:52.75 create methods, push them between hierarchies in classes,
+01:57.14 all those things and more. Very solid relational database support and even some Mongo DB support
+02:2.61 We saw that we can connect the data source and then do queries against it
+02:7.16 Look at the table, look at diagrams,
+02:9.37 all that good stuff. There's a full stack web engine back here.
+02:13.7 Remember people may tell you, oh I can't use PyCharm because I got to
+02:16.96 do javascript and CSS too Yeah,
+02:19.08  guess what here's one of the best editors for that because it embeds WebStorm
+02:23.44 Debugging is really, really good.
+02:24.92 My favorite feature of this, it shows the variables and their values and how they're
+02:29.33 changing in line on your code.
+02:31.74 So you don't have to go try to correlate these things between some watch window or
+02:35.12 something. You can just look right next to the variable and see whether it's changed
+02:38.77 what its value is and even change it right there,
+02:41.04 Packaging is an important part of taking python code and making it more shareable PyCharm
+02:46.1 is good at both working with existing packages and has support for creating new ones.
+02:50.94 We saw that, guessing where our code is slow and where's it's fast as humans
+02:54.03 We're not super good at that.
+02:55.83 But with the Profiling tools we can measure and see exactly where our code is,
+02:59.89 spending his time and then make it faster where it counts,
+03:4.14 reliable software is tested software and with the test runner and the support for debugging individual
+03:9.88 tests profiling via tests and code coverage and all that kind of stuff PyCharm makes testing
+03:14.96 easy. Scientific tools with the new data spell features coming over are really nice.
+03:21.37 If you want to work with Jupyter notebooks or individual python files in a data science
+03:25.01 way PyCharm and Data Spell.
+03:26.88 have awesome stuff to offer and it seems like we put a lot on the screen
+03:30.93 here but we're just touching the surface.
+03:32.4 There's a whole bunch of Additional little tools,
+03:34.64 things like say the enhanced python REPL or the terminal that pre configures itself that you
+03:39.83 can use to work with your applications big enough additional tools.
+03:45.27 If there is not one of the box that you like,
+03:47.06 go grab some of the plug in,
+03:48.27 search the marketplace, grab a key map,
+03:50.68 grab some other refactoring plug in or file format plug in and your IDE.
+03:55.34  Just got better. That's it,
+03:57.61 that is a ton of stuff that we have learned in this course. Hopefully enjoyed it.

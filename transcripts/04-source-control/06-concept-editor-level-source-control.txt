@@ -1,0 +1,42 @@
+00:0.04 Here's a quick review of how the code editor facilitates and helps us visualize changes around
+00:7.06 source control and version so we can see first of all that we have colors on
+00:11.64 the screen over in the project as well as up here in the tabs we have
+00:16.55 three different colors. We have blue.
+00:19.6 That means something was in source control already but it's been changed.
+00:23.3 We have the 4th color, the white one,
+00:25.93 which just means it's instant source control but no changes.
+00:29.93 settings.json is red because it's new and has not yet been even added to git
+00:36.24 the utils is green because it's been added but not committed yet.
+00:41.1 So it's new and not committed.
+00:43.2 Engine is blue because it's existing but not committed and then the settings is basically no
+00:49.23 version control is happening on it yet.
+00:51.0 We also over here in the gutter have a couple of colours we saw that.
+00:56.61 Blue means it's changed. Green means it's new.
+01:0.36 There's all sorts of stuff we can quickly take in about the state of the project
+01:3.47 how it is managed in source control and how it's changed since we last got
+01:8.65 a version by just looking at the colors right here.
+01:11.94 If we focus in on the editor itself and look at the gutter where we have
+01:16.58 the colours. If we click right here on that colored bar,
+01:19.9 we get a little in line dif a thing that allows us to both see what's
+01:24.34 changed and manage it. Like roll it back or change which change list it's associated
+01:29.7 with. So we had a run on sentence,
+01:31.84 the specified template folder must be a folder comma it's not.
+01:35.32 We decided that's better as two sentences.
+01:37.49 So we changed it and you can see those characters that changed are highlighted.
+01:42.31 Now we have period capital. I it's not so really need that.
+01:47.38 We can go and see exactly what's changed.
+01:51.84 If we click these arrows in this navigation section,
+01:54.74 it will take us from one change to the next and the next.
+01:58.26 This is really only helpful in large files where you don't see them all at once
+02:1.12 We click this turnaround arrow.
+02:3.99 That means roll back the changes.
+02:5.74 Remember we have this in the toolbar as well,
+02:7.75 but the toolbar rolls back the entire file or actually pulls up a dialog that allows
+02:12.23 us to roll back multiple files if we want this,
+02:14.53 just rolls back the one change here.
+02:17.22 We can open it in a diff window.
+02:19.05 Doesn't make sense here. It's extremely simple.
+02:21.23 But if you wanted to explore a larger,
+02:23.24 more complicated change, you could do that.
+02:25.34 You can copy the original. So the one sentence that's in the red box,
+02:29.9 not the final code. Lot of cool things we can do right inside the editor here.

@@ -1,0 +1,68 @@
+00:0.0 So we have our PR open on GitHub and we want to push those changes
+00:4.91 back into the working branch. Now of course I could do this in the browser and
+00:11.01 Git hub but it turns out recent versions of PyCharm have really cool support for
+00:15.53 this. One of the challenges of working with pull requests directly in GIT hub or
+00:20.39 directly in git is you have these potential changes which could be merged in and you
+00:25.59 would very likely want to say,
+00:27.42 well let me do that merge,
+00:29.3 have a look and explore the code and then decide do I actually want to accept
+00:34.69 the poor request or not? So if you go over here notice we have this
+00:38.59 poor request tab and we open it up,
+00:41.14 Check it out right there, fixes.
+00:42.8  48 ads version to the title and we double click that or hit that little
+00:47.47 arrow. It shows us all sorts of details about it.
+00:50.24 Here's the main comment. If there was a conversation which we didn't have,
+00:54.72 you would see that here. But these are the things like when I did that
+00:58.39 check in and tagged 48, it told me what's happening is the shaw of the
+01:3.18 check in would have the reviewer and the labels and so on and I could just
+01:7.6 flat reject this by closing the poor request or I could say merge.
+01:11.37 It were ready to accept it.
+01:13.44 One of the things I want to jump back real quick is I actually closed this
+01:16.39 uh close this issue. I'm gonna go thinking oh it should have closed it when
+01:20.38 we did that check in. It didn't do it because it wasn't going to the
+01:23.0 main branch. But here with this PR we might get it to be able to
+01:26.46 close. It's also not the default branch,
+01:28.13 I'm not 100% sure it'll close it,
+01:29.57 but let's let's see what happens when we do.
+01:32.14 So I'm going to say this looks good.
+01:33.42 Let's merge it. You put our comment here,
+01:36.31 I'm happy to just let that happen.
+01:38.64 Look at that, it's done.
+01:39.97 If we go back to the list,
+01:42.14 we hit refresh, it comes up and says it's out of date.
+01:44.73 We hit refresh and then it says there's none open,
+01:46.98 but we can go to closed and here's that one we just did with a whole
+01:51.18 bunch of others from various reasons throughout the life of this project.
+01:54.84 So very, very cool. Now,
+01:56.85 the real test is what happened over on GIT hub.
+01:59.94 You refresh it here, check it out right there is our merge change and again
+02:7.99 because this is not the default branch,
+02:9.59 I guess it didn't close it.
+02:10.6 I'll just close it again. There we go.
+02:12.86 We have our emerged pr and the final thing to realize is when we did that
+02:16.44 that pushed the important change of adding the version title to the title back into
+02:21.84 our code. So let's go to our project.
+02:23.29 Close this thing up. So if we try to update the project,
+02:26.37 I'll say no, no, it's already up to date when we merged it in
+02:28.91 PyCharm. It actually got us the new version into our ref branch.
+02:33.49 So it basically pulled this change down right there.
+02:36.32 That was part of the pull request.
+02:37.48 So it saves us a step of updating it to make sure our working branch.
+02:40.77 Is it consistent with the PR that we just added?
+02:43.84 Super cool. I don't think you notice the reason that I can see my details
+02:48.86 about these projects potentially if they're private and so on is if I go over here
+02:53.89 and I look for GIT hub under version control,
+02:58.82 you can see I've registered my github account Michael
+03:1.99 C Kennedy inside a PyCharm.
+03:4.32 So PyCharm has access to my private Git hub repos, my issues.
+03:9.37 It can make changes on my behalf.
+03:11.22 For example approving emerging a pull request on this repository.
+03:15.64 This is a public repository. You can read it but not everyone can merge pull
+03:19.21 requests. They can only view them or comment on them.
+03:22.83 Right? So you want to make sure that you go here and you add your
+03:25.86 account so log in to github with whatever.
+03:29.14 Right, We don't need that right now.
+03:30.05 But it will open up in the browser,
+03:31.36 you log in there. Tell it okay
+03:33.35 And then it'll pop back over here and you have access to your github private repos, 
+03:36:22 you have access to making changes like approving requests like what we diid

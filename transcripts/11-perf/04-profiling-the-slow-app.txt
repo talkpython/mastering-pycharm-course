@@ -1,0 +1,102 @@
+00:0.14 Now that you're familiar with this program,
+00:1.64 it's time to profile it. But one quick hang up here that I just got
+00:6.09 to tell you about. There was a bug in one part of the profile visualization
+00:11.17 that was in the latest version of PyCharm.
+00:12.98 Not the EAP but the actual shipping one.
+00:15.1 So I had to come back here and roll back to two 2021.1.3
+00:19.91 . I'm sure by the time you get this course it'll be fixed,
+00:22.86 it's already been addressed. The only reason I mentioned this is for whatever reason to
+00:27.24 lay out of my toolbar changed.
+00:29.24 So beware, it probably will be back over here for you.
+00:32.8 Now. What we want to do is we want to profile this.
+00:35.47 So you're familiar with running the program and you're familiar with debugging it.
+00:40.34 But if we go over here we can click this and say profile.
+00:43.72 So long as you have a run configuration,
+00:46.08 you can just press this button and it will run and use python's c profile to
+00:51.16 figure out where we're spending our time.
+00:52.97 Let's go. So they're ran like usual.
+01:2.04 But now we got this cool report,
+01:3.9 let's check it out over here.
+01:5.71 It shows you where you're spending your time and it uses this own time by default
+01:10.34 And what that means is if a function is being called by another function,
+01:15.68 how much time are you spending at that level of the call stack?
+01:19.37 It doesn't tell you how much time that function takes to run because if it calls
+01:23.75 other functions itself, it ignores the time that is down calling those other functions.
+01:28.44 I find this to be not a very helpful terms.
+01:31.11 So what I want to know is how long did the function take to run,
+01:34.69 including things that might have had to do while it was running.
+01:39.14 So that's this one here. So we're going to sort it by the top and
+01:42.65 now over here we've got the interesting things.
+01:44.87 We've got program, obviously this one took the longest because that's the start up.
+01:49.64 We've got main and we've got to go and then we started getting into the interesting
+01:53.8 things. So the pieces that we worked on is we have compute analytics.
+01:58.34 Remember up here we have search get records,
+02:3.24 we have compute analytics. So here's our computer analytics.
+02:6.77 That one is the slowest. We spent 3.3,
+02:10.25 seconds there And 68% of the time.
+02:14.64 We have our search where we spent 353 milliseconds,
+02:18.87 only 7% of the time and get records the database.
+02:22.16 One was the third where we spent 1.2 seconds or 23% of the time.
+02:27.54 So this is helpful. And you can even do cool things like let's go over
+02:30.87 to this function if I double click it,
+02:32.44 it takes us right there, which is fantastic.
+02:35.84 And if you right click you can navigate the source or show on call graph.
+02:40.51 Let's check out the call graph.
+02:41.55 This is actually probably the most useful as your first trying to understand what performance means
+02:47.12 See how useful and meaningful.
+02:51.16 No, wait, this is not very helpful.
+02:52.54 We gotta zoom in. Okay,
+02:53.9 let's zoom in and we'll go over here and I got to find your way to
+02:58.84 the bottom. So notice there's all this stuff around.
+03:3.38 Find and load and frames and what not that's not really relevant to us.
+03:8.75 We can't control that. That's just python starting up.
+03:11.74 So we want to start with when is our script running here?
+03:15.74 They wouldn't come over and see that We're going to run program and notice it's 4.9
+03:20.73 seconds or the total time, but 0% of its own time.
+03:24.47 Same for main and same for go.
+03:25.97 This is like basically just orchestrating these three functions.
+03:29.65 Right? And again, they don't take much of their own time either.
+03:32.39 They're just calling a bunch of things that themselves take time.
+03:35.74 Notice the colors, red means really slow,
+03:38.97 relatively speaking. Green means pretty fast,
+03:41.84 relatively speaking and we're still spending a second here,
+03:44.47 but it's still better than the five.
+03:48.54 And again, green. So what we can do is we can quickly get a
+03:51.74 look here and say, all right,
+03:52.73 well, where are we spending our time?
+03:54.95 What is slow? We should probably start right there.
+03:58.24 That one is the slowest. So if we could optimize that,
+04:1.61 it's going to have the biggest impact.
+04:3.74 For example, if we could make a search instant if somehow we could make ping
+04:8.91 time on the internet go away,
+04:10.51 if we could make the talk python server was turn instantly to us,
+04:14.84 what benefit would we have working on this function?
+04:18.14 353 milliseconds out of 4800. So we can go from 4.8 Down to 4.5 seconds
+04:26.5 So no matter how much we work on this function,
+04:30.44 it's not going to get faster than,
+04:32.46 you know, 7% faster. Right?
+04:34.34 So you really want to think about,
+04:35.97 you know, where can I spend my time and where is it meaningful to try
+04:39.19 to improve this? A lot of times people work on code and they say,
+04:42.46 well this could be faster if we do some crazy things do really optimize it.
+04:46.69 That makes the code harder to maintain and understand,
+04:49.3 but it will make it faster.
+04:50.71 Just remember You're only going to ever get 7.2% improvement here.
+04:55.84 So also think about maintenance, readability,
+04:58.56 all those kind of things. All right.
+05:0.82 So use this to kind of initially guide where you want to go and again we
+05:5.22 can click over here and navigate the source.
+05:7.32 Boom, that's probably what we should be working on first.
+05:11.84 Another thing to notice is, here's our result,
+05:14.75 this course 6 P stat that means it's the sixth time I ran it because I
+05:18.76 was fiddling around with the previous version when it had the bug,
+05:22.84 I'm gonna put that one on the left and when we run it again we've made
+05:27.4 no changes yet. But we will and when we run it and we make those
+05:30.71 changes we're going to get another one.
+05:32.94 So we'll be able to do things like come over here and say well let's sort
+05:35.89 this like that and sort this one like that and then we could just cycle between
+05:40.89 them. Right? That's uh that's one way we can kind of get a sense
+05:44.41 for how are we making improvements?
+05:45.99 How was it before? And how was it after?
+05:48.34 I'm going to make a point to leave this course 6p stat over here so that
+05:53.6 I can have it as a reference as we improve throughout this chapter.

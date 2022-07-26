@@ -1,0 +1,108 @@
+00:0.04 We saw the structure of the database with the diagrams but let's explore the data itself
+00:4.18 Now. Normally when we explore data with relational databases we would have some kind
+00:10.41 of select statement or something like that.
+00:12.74 The way we do that over.
+00:13.6 PyCharm is we have what's called a query console so we can right click
+00:18.38 on some part of the database tools and say jump to query console we'll say a
+00:22.16 new one. Get it nice and fresh.
+00:24.94 And here we can write things like select and notice we get auto complete for our
+00:29.98 SQL language. So select where order by and so on.
+00:34.44 Which is pretty awesome. What do you want to select?
+00:36.43 Let's say select star from and check that out.
+00:40.08 Here's our schema. You can see we've got packages,
+00:42.62 auditing, downloads, maintainers and so on.
+00:45.29 Let's do from packages. We could do a 'WHERE' clause.
+00:49.37 Right? That's pretty common. Wait space though we get auto complete into that table
+00:55.36 So here we can do things like where the id is whatever it is.
+00:59.55 The idea is actually the PyPI package name like requests or boto or something like
+01:6.03 that. We could do ordering based on creation date or something like that.
+01:12.22 All right so let's go over here and actually save where 
+01:14.67 ID. Is like and then we'll put 8% boto percent.
+01:18.71 This is like a anything that has that sub string there.
+01:21.94 We can run it and check that out.
+01:24.52 We have three packages in our database.
+01:27.68 That's pretty cool. Right over here we've got boto we've gotta boto three and we've
+01:32.53 got boto core with this down here we can kind of explore you know all
+01:37.37 the data it's obviously hard to see the super long description but what are you gonna
+01:41.21 do with paragraphs of text? But we can actually come in here and edit this
+01:47.38 section. So I could come down here and make this boto like that.
+01:52.81 For example if I wanted to you can also come over here and say that Michael
+01:58.85 created this package didn't but whatever notice something as I move around,
+02:4.36 notice how this is changing, this is like a blue type of thing and let's
+02:10.91 even change I'll leave the ideal because there's a relationship there but we can change other
+02:14.91 things as well and let's here this.
+02:16.46 I also wrote this one by the way awesome.
+02:19.64 You can see that this is actually keeping track of all the changes that we've added
+02:24.25 or made. And here you can even preview you can preview the pending changes.
+02:29.44 So check this out. We're going to say update packages set author named to Michael
+02:33.28 where the ideas boto update packages like those two changes where the name is,
+02:38.4 I'm sorry boto according the first one boto for the second one.
+02:41.44 How cool is that? But if we rerun this notice or we even refresh this
+02:47.46 down here you can sort of do it either way,
+02:49.94 notice the name is gone, the author is gone and so on.
+02:52.81 What happened. Well thing is not broken what we gotta do,
+02:56.86 we don't need a bigger editor.
+02:58.15 What we gotta do is we actually have to push these changes.
+03:0.56 So this thing showed us what the changes would be but they didn't commit to the
+03:4.47 database until we are ready. We push this.
+03:6.93 It will actually submit what you saw over in that  dialogue out there and now if
+03:11.66 we rerun our query notice all these things are sticking,
+03:15.27 how cool. Huh? So not only do you get the query ability up here
+03:19.87 with nice auto complete and so on.
+03:21.97 But you also get this really cool sort of like sell like transactional editor thing.
+03:28.34 Let's just get all the data for a minute here.
+03:32.14 There's all of it. What if I wanted to create this table but in a
+03:36.66 different database. Well we need to create what's called the data definition language DDL
+03:41.99 And over here it will actually show you what script you would have
+03:47.9 to run to create this packages table.
+03:50.03 So we would take this and run it on whatever relational database run.
+03:54.08 So create the ID. It's VARCHAR.
+03:55.89 not null. Primary key created day to day time.
+03:59.14 And then once the structure is made we can add the indexes to them.
+04:2.94 How cool is that? So we can use that with the DDL
+04:7.29 bit right there. We also might want to get this not the structure but
+04:11.45 we might want to get the data down here actually exported.
+04:14.73 Right? And if we want to get that data out,
+04:18.04 we can click here and there's all sorts of options.
+04:21.94 So check this out. We can come along and we could generate uh 
+04:25.34 CSV. File of this data.
+04:27.64 We could generate pipe separated or tab separated.
+04:30.48 We could create a script that will be the SQL in search to insert this data
+04:35.31 Let me do a different table here because the description makes us look really crazy
+04:41.27 Well here, we don't have such long data.
+04:46.23 So actually we could come over here and click on 
+04:48.25 CSV And then we have the ability to export or import this data
+04:52.39 Like we could import 
+04:53.83 CSV'sinto here,
+04:54.57 but let's go and hit this notice.
+04:57.57 Here's the CSV file that has all that data over here.
+05:0.04 We've got the primary key, we've got,
+05:2.04 what is this? The number of downloads,
+05:3.85 actual file and version information over here and even sort of bounce around.
+05:10.14 So here's the insert. So we would insert into releases with all these values.
+05:14.48 And then you can see just like there's your SQL insert statements,
+05:18.04 what this is, JSON there,
+05:20.23 you have it in JSON. So if you want to import or export this data
+05:24.91 it's incredibly easy in a ton of different formats.
+05:28.99 Right? Then you can of course copy to the clipboard,
+05:32.35 save it to a file or you don't do nothing with it.
+05:35.54 Here. You go, this query console is fantastic.
+05:38.25 There's all sorts of neat things and we're just touching on the surface.
+05:42.24 Another thing that's worth pointing out here,
+05:44.28 let's go and do a select from packages,
+05:48.54 notice as I hover over it.
+05:50.28 The auto complete shows me the definition.
+05:52.75 Crazy. Ok. But one other thing to notice here is you can sort by
+05:56.98 these things like we'd sort by date last updated.
+06:0.05 We could sort by summary. Doesn't really mean anything.
+06:3.14 Remember, as you look at the structure of this,
+06:7.29 the blue means there's an index in the grey means there's no index.
+06:10.4 Right? You actually see that here.
+06:12.55 So if I click this button are this column heading,
+06:16.74 it's going to order by this and it's going to do it quickly because there's an
+06:20.59 index and maybe if I had a ton of data actually trying to do that sort
+06:23.93 right, there would be really slow because there's no index.
+06:27.19 So you even get that kind of visibility into like if I'm sorted by these things
+06:30.85 you want to make sure that there's an index and so on.
+06:34.24 All right. Make sure you take advantage of this.
+06:36.59 There's all sorts of cool stuff going on right here.

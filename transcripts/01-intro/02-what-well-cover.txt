@@ -1,0 +1,136 @@
+00:0.04 Let's jump right in by talking about what we're going to cover during this course we
+00:3.54 have so many things we're going to focus on.
+00:5.96 We're gonna start with our very next topic right away after this by talking about why
+00:10.98 You would want to work with an Integrated Development Environment often shortened to IDE's.
+00:14.84  That's what PyCharm is.
+00:16.34 There are many of these out there.
+00:18.02 There's also more light lightweight editors and we're going to see the trade offs that you
+00:22.19 Might choose. We're also going to talk about how you go learning all the features
+00:25.94 Of a large piece of software like an IDE.
+00:28.5  Then we're going to focus on Projects. In Python
+00:32.0 So often we have a loose set of files that are contained in a directory or
+00:36.84 larger projects, multiple subdirectories and that structure and those file names mean things.
+00:42.8 They don't just organize the code but they actually control what could we write?
+00:47.61 What are the name spaces? Well the name spaces are the modules.
+00:50.85 The modules are simply the folder names and things like that.
+00:53.99 PyCharm has great support for working with code.
+00:57.24 Not just as a standalone Python file but to treat your entire collection of files as
+01:3.18 a single application. You often hear about people talk about what we're gonna use this
+01:7.53 Python script to do that thing.
+01:9.94 People don't talk about Scripting and PyCharm.
+01:12.56 I think more in terms of applications.
+01:14.73 Right. And that's projects are sort of the heart of this here.
+01:18.84 The part you're going to care the most about will be the editor and of course
+01:21.65 we would start there if we didn't really need to talk about projects first,
+01:25.24 the editor has so many features and so many things that it can do for us
+01:28.93 It can write code, it can find errors.
+01:31.84 It will highlight code and it will also integrate many of the other things that we're
+01:36.04 going to talk about later. Databases,
+01:38.27 Source Control, all kinds of stuff.
+01:39.68 So the editor is really going to be featured throughout the entire course but we're going
+01:43.32 to spend chapter just drilling into the cool features of the editor itself.
+01:49.24 Source Control is omnipresent in PyCharm.
+01:51.55 It has support for all the popular types of Source control SVN, Git and many
+01:57.07 many others. So when you work with your code,
+02:0.07 you'll see that in the editor we see things about the source control status of the
+02:4.96 code that we're working on. And it also has built in support for things like
+02:8.45 GIT Hub said Git also Git hub itself for example,
+02:12.28 working with issues in Git hub.
+02:13.91 Working with poor requests. You'll see that you can look and say here's the list
+02:17.48 of pull requests. Let me just click this button and try that pull request out
+02:21.76 as it would be if I integrated it in my editor.
+02:24.55 Rather than actually going to GitHub and doing all the steps to try out the
+02:27.7 PR. All sorts of cool Source Control Integration stuff.
+02:30.16 We're going to talk about it.
+02:30.9 There Refactoring is one of my favorite topics.
+02:33.05 People so often get hung up about writing software.
+02:36.07 Exactly right. And when you're getting started,
+02:39.02 you often don't know what is exactly right.
+02:41.18 You don't fully understand the problem space and all the little nuances until you're part way
+02:45.19 down the road. So instead of overthinking it and trying to plan out for all
+02:49.48 the possible eventualities, you just write your code,
+02:52.43 you get it working if it needs to change, you
+02:54.39 Re factor it. Often Refactoring might mean changing the code by hand and hoping
+02:59.58 you get it right. But with PyCharm,
+03:1.01 there are many, many tools that allow you to re factor it in a way
+03:4.22 that's completely safe not find in files and replace text but understand the abstract syntax tree
+03:10.34 and actually only change the symbols that are truly the same thing.
+03:13.93 Not just have the same text.
+03:15.74 Databases are a super important part of many many applications.
+03:19.05 And PyCharm has really cool support for it.
+03:21.66 You can create databases in here,
+03:24.32 you can connect to them do queries against them.
+03:27.24 The query console has auto complete and understands not just the SQL keywords,
+03:32.54 but even the schema of your tables and their relationships and create diagrams and understand the
+03:38.3 relationships between tables within our database.
+03:40.61 And there's even one really cool trick that brings many of those features actually to embedded
+03:45.61 SQL within your python code. So if you have a string in python that happens
+03:50.43 to be represented a database query,
+03:52.33 you'll see you get all kinds of support for that as well,
+03:54.9 which it's completely mind blowing. Python is a really important way to build web applications
+04:1.7 and PyCharm of course supports that.
+04:3.97 We have great older frameworks like Flask and Django as well as fancy new ones like
+04:9.19 FastAPI and others,
+04:11.09 PyCharm has amazing support for all of these frameworks and you'll see not just the
+04:15.32 Python side but the website as well.
+04:17.94 The HTML, the templates like Jinja or Django templates,
+04:22.84 the Javascript, you're gonna be using, the CSS that's used throughout those templates.
+04:26.4 All kinds of cool stuff for building server side.
+04:28.49 Web frameworks, all sorts of cool stuff for building service side web app,
+04:32.16 but it also has support for front end frameworks like Vue.Js and React and so
+04:36.81 on. If you're working on a single page app or something like that,
+04:39.96 you're going to get a ton of support in the javascript side,
+04:42.69 even though it's called PyCharm,
+04:44.14 it helps you a lot on the web in javascript in all those areas.
+04:48.54 One of the things I really like about an IDE is if something goes wrong,
+04:51.98 you can set a breakpoint and say debug this in my editor.
+04:55.66 You don't have to jump into some terminal and see things line by line or do
+04:59.0 a bunch of print statements. The debugging support PyCharm is top of the field
+05:2.69 there's really, really awesome support for quickly understanding what the state of your application
+05:7.75 is, and moving around and even changing it to explore different situations. While a group of
+05:13.89 files in a directory can represent an application.
+05:16.61 If you want to create a library,
+05:18.1 you distribute around over PyPI and other mechanisms,
+05:21.94 you really want to create what's called a Python Package.
+05:24.84 So these are the things that you PIP install.
+05:27.14 And PyCharm has special support for working with existing packages and creating new packages that
+05:32.63 you can put onto PyPI.
+05:34.14 When our code is slow, we could try to figure out what's wrong trying to
+05:37.77 make it faster, but usually the right thing to do is run a tool against
+05:41.19 it to see where it's spending its time and then go to the spot where it's
+05:45.64 spending all this time to make that one part fast.
+05:47.51 Our intuition is often wrong about where we need to spend our time and energy to
+05:51.93 improve the speed and the tool that we use for that is of course Profiling and
+05:56.27 PyCharm has really cool support for both feeding reports as well as visual representations of
+06:2.07 where our code is slow. If you want to write reliable software and especially if you're
+06:6.84 working in a team, you need to have Unit tests and PyCharm has amazing
+06:11.05 support for all the popular Unit test framework has built in Unit tests.
+06:15.36 It has PyTest and many others on top of that.
+06:18.68 It has a unified test runner that lets you do things like run a test run
+06:22.95 many tests run just the failed test and even just continually run the test against your
+06:27.36 app as you develop it. Very cool stuff.
+06:30.07 We're going to see in the testing chapter,
+06:32.54 If you are in the data science side of the world,
+06:34.52 you are very likely going to be working with Jupyter notebooks and the data science tools
+06:38.85 like 'Numpy' and 'pandas' and so on.
+06:40.61 We of course have Jupyter support in PyCharm.
+06:43.64 But there are other things, there's other support for you as well in PyCharm
+06:47.15 when you're working with a scientific tools like 'Numpy' and 'Pandas'.
+06:51.14 There's also a couple of other things that I don't know where they fit.
+06:54.3 They don't belong to any of these particular categories,
+06:56.37 but they're worth talking about and they're worth spending a little bit of time on.
+06:59.33 So we're gonna spend a final chapter here just doing like kind of a grab bag
+07:3.18 of awesome features and tools that you should know about that don't fit clearly into profiling
+07:8.07 or web or whatever. And finally we're going to see how to take Py Charm
+07:13.04 as it is an extended to be even more.
+07:15.46 There are many, many plug ins that we can add to PyCharm to make
+07:19.19 it exactly like we want. You wish it had Vim key bindings Well you can
+07:23.12 get the Vim plug in, you wish that it had AI- based refactoring
+07:27.03 support well, you can get a plug in for that.
+07:29.04 There's all kinds of cool things to extend the type of files that understands and other
+07:33.07 capabilities. We're gonna do a little quick survey of some of the cool plug ins
+07:36.79 that you can get for PyCharm.
+07:38.64 That's it. We're going to talk about so many things,
+07:40.89 There's so much to cover as you go through this course.
+07:43.58 I think you're going to really see how PyCharm can do more and more for
+07:46.8 you as you work on your Python apps.

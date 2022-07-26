@@ -1,0 +1,47 @@
+00:0.14 Let's review the high points of accessing source control from PyCharm no matter how you
+00:6.14 open a project, whether you check it out using the open from Vcs or you
+00:10.43 just open it from the file system like you normally would this automatically lights up the
+00:14.85 source control in PyCharm And if you're on a git repo it will switch to
+00:19.69 the git settings. If you're in subversion it'll do that and so on here.
+00:22.75 We have a Git repository and we have this main git action menu item here with
+00:29.15 the stuff at the top which is also in the toolbar and a whole bunch of
+00:31.75 other things and even special git hub details that we can work with like syncing or
+00:37.55 for or creating and pull requests and so on.
+00:40.64 So when we're in the editor we have a couple of places we can quickly access
+00:44.5 source control in addition to the hotkey's.
+00:47.14 So in the top here we have our pull bar that has the common actions.
+00:51.79 We have poll, we have commit a push and we have show history or show
+00:58.26 the log and then finally if we made some changes,
+01:1.37 we don't like the way it went.
+01:2.63 We can just roll one or more files back and if you have a bunch of
+01:6.12 changes across different files you get a dialogue to say actually only roll back these two
+01:10.71 files if you wish. So a lot of granularity there another aspect of source control
+01:16.1 and git especially as a branching.
+01:17.98 So down here at the bottom we have our branch operations.
+01:21.33 You can see it's on main currently if you click that,
+01:23.85 it'll pull up a whole bunch of options.
+01:25.72 Like if I want to merge one branch into another.
+01:27.76 I want to check out a certain branch or sync branches and even delete them if
+01:33.54 we want to update our project that is effectively do a git pull take all the
+01:37.36 changes from the server and bring them down.
+01:39.85 So we have the latest working copy we can hit update project and the first time
+01:44.97 you see this dialogue, do you want to merge incoming changes into your current branch
+01:48.13 or re base it? Another thing this will do,
+01:51.37 which we haven't really talked about yet because we haven't talked about branching is if there's
+01:55.49 new branches on the server, this will refresh the branch list and give you a
+02:0.49 list of new branches you might want to check out.
+02:3.0 So it doesn't just update code but it kind of updates the state of the repository
+02:7.84 entirely. Once you've made some changes,
+02:10.91 you're ready to push them back.
+02:12.74 So here's a file called engine.py We've made some more checks around the template
+02:18.0 folder apparently. And you can see we actually get a comparison of the changes that
+02:22.29 we're going to push in. So the one on the left is what's on the
+02:25.08 server and the one on the right is the changes we're going to make.
+02:28.84 Also notice there's a little check boxes in this list here.
+02:32.56 I can commit say the change online.
+02:35.1  26 without committing the change online 28 and keep that as a separate commit,
+02:40.43 which is pretty awesome. Also up on the top right notice that you can,
+02:45.56 before you commit automatically reformat code,
+02:48.41 rearrange code, optimized imports and do it.
+02:51.03 There's a big scroll bar there that is a whole bunch of things that you can
+02:54.03 check out. So there's a lot of power in this check in dialog right here

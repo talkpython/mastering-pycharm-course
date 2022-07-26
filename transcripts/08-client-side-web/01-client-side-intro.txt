@@ -1,0 +1,18 @@
+00:3.04 We've seen the server side capabilities of PyCharm and they are pretty awesome.
+00:7.18 But as I'm sure, you know,
+00:9.03 web apps are not just server side applications,
+00:12.57 there's all kinds of things that have to get exchanged with your browser.
+00:17.11 Maybe that's Javascript. Basic javascript,
+00:19.86 you might right. Or it could be something really advanced like a front end framework
+00:23.58 like Vue.js or React or so on.
+00:27.64 There's also styling, right? CSS files or the more complicated LESS or SASS or
+00:33.49 SASS files that are programming languages that transpile down to CSS right
+00:40.06 order to use those. You need to take those files you right and actually convert
+00:43.45 them to CSS another one in that category is definitely Typescript.
+00:47.7 Typescript is a great way to write javascript but it doesn't run in your browser.
+00:51.27 You need to take that and compile it down to ECMA script six or
+00:55.37 whatever It compiles too. We'll see that PyCharm actually has built in support for
+01:0.05 even doing those types of transportation steps as you edit your code.
+01:5.44 So if you're working on Front End frameworks,
+01:7.79 you want to do a lot of rich javascript,
+01:9.63 maybe some advanced CSS and put all these things together. That's what we are gonna focus in this chapter.

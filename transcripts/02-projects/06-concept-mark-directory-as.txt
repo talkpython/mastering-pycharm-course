@@ -1,0 +1,29 @@
+00:0.0 As our applications get more complicated.
+00:1.9 It's really important that we were able to point PyCharm in the right direction.
+00:6.84 And one of the main ways that we do that is with the 'Mark directory' as
+00:10.41 options. We saw that we can say some sections.
+00:13.28 This just happens to be included with the files but we don't want to think of
+00:17.11 it as part of the code of this project so we can exclude things in the
+00:21.0 web. We might want to carefully control how the static files that are mapped into
+00:26.73 the web directory. How those are found by PyCharm.
+00:29.38 So we get auto complete for things like CSS and javascript,
+00:32.52 which images, which is amazing.
+00:34.74 And if we want to treat a directory as a sub application within our project,
+00:39.81 we're going to go there and say mark this as a 'Sources root'.
+00:43.38 So all sorts of cool things we can do here to help PyCharm better understand
+00:47.9 a more complicated directory structure rather than just here's a folder with a file or two
+00:52.8 Now, if we dive into these we have Sources root.
+00:57.53 The official definition is these roots contain the actual source files and resources PyCharm uses
+01:3.0 the source roots as the starting point for resolving imports.
+01:6.13 We saw that when I said from shared UI import header helper,
+01:11.82 whatever I call it, UI helper.
+01:13.34 Those who had all squiggles under them because PyCharm knew that that relative directory structure
+01:18.37 didn't make sense until we told it about that.
+01:20.89 Sources root and then it did.
+01:23.34 The 'Resource roots' are for things like style sheets and CSS 'Excluded'
+01:28.68 Tell us by term to almost ignore them.
+01:31.11 Usually it won't go and index them and so on,
+01:34.32 but you can still go and find them.
+01:36.24 And then the template folder contains things like Jinja templates,
+01:40.02 Camelia templates, Django templates and so on.
+01:43.22 Those are your rich templates for your Web application.

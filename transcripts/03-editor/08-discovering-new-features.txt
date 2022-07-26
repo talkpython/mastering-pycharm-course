@@ -1,0 +1,44 @@
+00:0.04 Let's talk about discovering new features.
+00:2.43 We saw all these things we can do with this editor.
+00:5.84 And yet surely you've forgotten some of them.
+00:8.23 You're like, I don't remember how to do this or that.
+00:10.99 Notice there's all sorts of squiggles on the screen.
+00:13.16 Like here we have a pep 8 violation.
+00:15.33 We really should have two lines like right there,
+00:17.44 but we don't This should have a space between the equals there.
+00:21.36 This should be up adjacent to the parentheses.
+00:24.43 This is over indented. Making these under indented,
+00:28.35 which is not lined up. All these things are weird and what we need to
+00:31.5 do is reformat the code. I saw that Michael did some kind of thing that
+00:37.21 had a hotkey to do it.
+00:38.18 But how does that work? There's a couple of ways we can do this on
+00:42.0 Mac OS. You can use the operating system level.
+00:45.32 Like I can go up here and I can type a reformat and it will actually
+00:50.83 go and show me where that is in the menu and show me the hot key
+00:53.29 And you can see you can see things like,
+00:56.28 well, what else could I do?
+00:57.59 I could run I could go and run the program and so on.
+01:2.38 All right. But that only works on Mac.
+01:4.52 Let's use the PyCharm way.
+01:6.12 There's something similar to that built in.
+01:8.77 So, if we go over here and hit 'cmd+shift+A' or I believe it's
+01:12.2 ctrl+shift+A on the other platforms.
+01:15.0 I can come over and type of reformat lets spell.
+01:19.44 I notice right there it is.
+01:20.71 Reformat. Oh, that's right.
+01:21.97 It's 'cmd+alt+ L' or opt+cmd+L depending on how your keyboard reset,
+01:27.77 let's do that. There we go.
+01:29.75 So much better. All those issues are gone.
+01:32.44 I want to run just command shift day.
+01:33.88 A new type of run. Guess what?
+01:35.4 Let's run our program. Boom.
+01:37.32 There's all of our stuff downloaded.
+01:39.84 And again notice that we can see the hot keys,
+01:42.17 for example, 'ctrl+r' our reformat 'opt+cmd+L' for my current key bindings.
+01:49.64 The other thing to notice is this is just that search anywhere or search everywhere that
+01:54.26 we had before. But instead of having it focused on all its focused on actions
+02:1.97 so we can hit a single key and just type what we want to have happen
+02:5.55 rather than coming from hear clicking over there clicking there than typing it.
+02:9.93 Right But if you forget,
+02:11.16 you can always just click here and then here.
+02:13.34 So don't hesitate to use this. It will be incredibly helpful.

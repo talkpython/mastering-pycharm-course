@@ -1,0 +1,91 @@
+00:0.54 Let's do a high level flyover through the debugging tools real quickly before we actually start
+00:5.23 using them. So to start the debugger is very similar to running a program
+00:9.52 except for you click the bug instead of the play so you just create a run
+00:13.56 configuration. However you might go about doing that.
+00:16.43 We've seen a bunch of ways and then you can debug it by just pressing this
+00:20.84 debug thing. This works on regular programs but also works on web apps like with
+00:26.31 Flask run and it even works on Unit Tests.
+00:28.76 So super good way to get started here.
+00:32.54 Once the debugger starts, you'll have this whole section here down in the bottom
+00:35.81 especially if you hit a breakpoint.
+00:37.47 All the controls will light up right here.
+00:40.58 You can say where am I in my program?
+00:42.79 So maybe you've hit a breakpoint or your paused or something like that or even running
+00:47.14 and it might be stuck somewhere,
+00:48.63 you might have navigated all over different parts of your app or just forgotten where you
+00:52.54 are. You can click that button,
+00:53.8 it will show you exactly where execution is paused,
+00:57.54 this one will allow us to step over debugging.
+01:1.01 Think of step over is basically going line by line through a function or through execution
+01:5.75 There might be functions that are being called or classes,
+01:9.8 methods you're being called and so on.
+01:11.72 That themselves are running a bunch of steps but you're not interested in those.
+01:15.46 You just want to go one line by one line,
+01:17.63 by the next line through the current function you're in maybe following along with a return
+01:23.32 value but not going in any deeper than where you are.
+01:26.94 If you do want to see what happens in those steps,
+01:29.61 like for example, or in this wizard game here that we've seen previously,
+01:34.17 we have in a section where we call attack.
+01:36.55 What happens inside of attack? Well,
+01:39.6 the wizard is getting some sort of role and determine its role.
+01:43.25 But then also the creature is attacking is doing a defensive thing.
+01:46.17 If you want to dive down and see what's happening there you want.
+01:49.4 'Step into' here now, there's a drawback maybe a over specificity of 'step into' 
+01:56.38 'step into' will step into everything. So for example,
+01:59.32 if I'm trying to go through my code and my code happens to be calling requests
+02:3.44 to download some data and I press Step Into we're going inside requests.
+02:8.57 We're gonna be diving into the details of requests or even the standard library in some
+02:13.45 instances. So often 'step into' is too much.
+02:17.14 You really want to just look at your code,
+02:19.89 go through your details, but not the entire run times details.
+02:24.15 That might be too much in,
+02:25.63 like I said, almost always is.
+02:28.04 So a better button to press is this step into my code.
+02:31.02 So this if you were going through that diving into the details flow of your code
+02:36.61 and your code calls requests. Step into 'my code' would go to the next bit
+02:40.11 of your code, not actually into what request is doing.
+02:44.44 We can also do a step into 'forced' like going into a function call,
+02:50.49 going into a level of detail,
+02:52.66 You might be halfway through that and decide.
+02:54.86 You know what this is not the problem.
+02:56.61 I'm going to go back up and carry on from where we get the return value
+03:0.21 of this function you want 'step out' for that.
+03:3.44 Sometimes you just want to put your cursor on the line you're interested in and saying
+03:7.47 I don't really know how we get here,
+03:9.04 but just run to this place.
+03:10.66 So put your cursor somewhere and press run to cursor or you can even right click
+03:14.49 and say run to cursor finally.
+03:17.13 You might want to figure out what some comparison is or look at some details about
+03:23.4 your code. You can press this button,
+03:25.2 it opens a calculator type thing where you type arbitrary python expressions and it'll show you
+03:29.88 the values like is this string equal to that string or is this string a sub
+03:34.06 string of that thing? Or does that set contain this item,
+03:36.71 All those kinds of stuff you can quickly answer and throw away there if you want
+03:40.69 to ask those questions and remember it,
+03:42.37 you could put it down into the variable section below two more things.
+03:46.64 Sometimes you'll hit a breakpoint and you want to resume like okay,
+03:51.07 I've looked at the variables here,
+03:52.55 I want to keep going. Let it keep going and it's super likely you would
+03:56.99 want to press the first green button to just keep going.
+04:0.3 You might press this, that's not what you want to press,
+04:3.0 you'll be disappointed. This will completely close your program and start an entirely new debugging
+04:8.95 session from running the program from scratch.
+04:11.84 So you might want to do that.
+04:13.03 In that case press this button but very likely your intention is I'm at a breakpoint
+04:16.72 I just want to keep going,
+04:18.67 let that program keep working and we'll see where it goes from here.
+04:22.54 Don't press that button. You want this resume button down here.
+04:26.74 Finally, when you're in this view,
+04:28.46 if your program is taking input or creating output in the terms of print statements,
+04:33.11 warnings or things like that, that might go to a terminal,
+04:36.21 you won't see it here, you want the console.
+04:39.64 So in this exact same flow,
+04:41.43 we were building up messages down here at the bottom and this is our wizard game
+04:45.56 In order to get to that step,
+04:47.51 we had to tell the wizard to attack.
+04:50.34 So here you can see there's little green arrow question mark,
+04:53.13 there's more emphasis on where input is in the debugger type a.
+04:57.23 It does the thing and so on.
+04:59.74 So if you want to see what's coming out of the console or especially if it
+05:3.21 requires input, make sure to flip over to that tab.
+05:5.4 It's not super obvious that it might be stopped because you're there waiting for some sort of input.

@@ -1,0 +1,53 @@
+00:0.44 Let's talk about navigating around files one more time.
+00:3.39 There's all these different aspects that we like to explore and these tool windows are really
+00:6.44 really helpful for them over here.
+00:9.26 We've got episodes as a type,
+00:12.53 we've got episodes as a list or a dictionary of those types.
+00:16.06 We've got some of these functions here that we might want to navigate through and this
+00:21.08 file is pretty small, but maybe you want to get a quick overview just what
+00:25.61 is in this file, so we can come on down here to this structure,
+00:29.94 then we can quickly jump around like what,
+00:31.84 where is the max Id boom is right there,
+00:33.87 where is the episodes dictionary? That's right,
+00:35.96 there was episodes type right there,
+00:38.38 so this is a really cool way to go and navigate around through the file.
+00:43.44 This one is fairly simple, there's no classes,
+00:46.33 there's just a couple of methods,
+00:47.64 a couple of variables, so maybe you wouldn't really use it there.
+00:51.24 Remember that actors file. We had all the actors from the wizard,
+00:54.42 D&D. Game, we've got the wizard,
+00:56.41 the small animal, the dragon creature.
+00:59.6 This gets more interesting. So notice over here we have our classes and if we
+01:2.93 expand this out for these things,
+01:5.81 we can see as you just touch them.
+01:7.95 Here's the creature is the dragon that derives from creature in navigate around.
+01:13.24 We can also see here's where the level is defined right online,
+01:16.51 seven. It's hard to see where the cursor is.
+01:18.84 So when we click that it takes us there.
+01:20.61 When you click this takes us over the line.
+01:22.42 Six, so we can see immediately where is that field that belongs to that class
+01:26.85 live. Right? So down here we see that small creature is overriding get defensive
+01:32.41 role, click on that, we get small creatures defensive role,
+01:35.94 super super cool. Now with classes it might be interesting to just have this view
+01:41.27 So you know imagine we were in our own file,
+01:44.29 Act, I can open that up here if we have our dragon and its own
+01:50.99 file, right in this case we don't have any other thing.
+01:54.07 Then the structure only shows what the dragon itself defines its breath,
+01:58.97 fire, scariness and it's get defensive role but this button right here will show us
+02:4.66 the entire type hierarchy for this so check this out,
+02:9.32 look how cool this is. So dragon drives from creature creature drives from object.
+02:14.54 So these things are the items that come from dragon.
+02:18.02 But down here, this rapper,
+02:19.87 this comfortable creature in another file,
+02:22.57 This level comes from creature over there and then we can go further down into the
+02:26.71 hierarchy of like well where's Dunder dict define that's defined in the built in which is
+02:32.74 inside of just object so we can turn on for back in our dragon here we
+02:38.14 can turn on show us the type hierarchy as well.
+02:40.7 Sometimes because of all the magic methods of python data model there,
+02:45.72 this can be a little intense so don't sort alphabetically because you get sort of this
+02:50.11 you know my stuff and then the next level of hierarchy and then the next
+02:53.89 level, which is probably the right way you can sort of like this.
+02:57.34 But then that becomes, I don't know,
+02:59.0 that becomes tricky, so really,
+03:1.59 really useful way to understand type hierarchies,
+03:4.8 how files fit together and navigating large files honestly.

@@ -1,0 +1,89 @@
+00:0.04 One of the things I love about PyCharm is its deep integration with source control.
+00:3.92 It makes it feel so natural that you almost don't have to think about it.
+00:8.34 So let's start by getting a project from GitHub now.
+00:13.96 There is this button up here,
+00:15.22 Git code from source control and I could come over here and type something in,
+00:19.65 let's see the various options. Or I could even go over to mine,
+00:23.03 GitHub account and click here and give me a list of all the GitHub
+00:27.16 repose I have access to. And that's one thing I'd like to kind of start
+00:31.82 from a different perspective though I'd like to start from.
+00:34.32 Well let's just suppose you have a GitHub or some other kind of repository on
+00:39.2 your system. How do you work with it?
+00:41.74 So we're going to actually go over here to the GitHub repository and we're going
+00:44.75 to clone it. Now when you clone a repository,
+00:48.74 a lot of times you can come down here and copy this and it would show
+00:53.51 that you gotta put the little Git thing on the end the extension.
+00:57.64 But if you just copy the main repo name,
+00:59.67 actually that's sufficient. So I want to clone that over to this location.
+01:5.14 So I just made a folder,
+01:6.32 let's suppose that's where I put my projects that I'm working on.
+01:9.11 I'm gonna open up my terminal and I'm just going to type git clone this off
+01:17.11 it goes let's cd in there really quick notice my prompt knows which branch I'm
+01:23.21 on and all of those sorts of things,
+01:24.93 I actually want to work in the ref one for now.
+01:28.35 But when you get to the course I'm gonna swap it back to the main so
+01:31.97 you'll be fine. And so git check out by the way with oh my Z
+01:37.38 shell integration it actually gives you auto complete for the branch names.
+01:41.53 I love that. I want to open up this project we have here in 
+01:46.07 PyCharm and have it work with the source control.
+01:48.54 So like before what we could do is we could grab this and throw it into
+01:52.22 PyCharm and it will open up but I actually want to work with just a
+01:55.99 certain section. I just want to work with the podcast section.
+02:0.14 So what we're gonna do is I'm going to throw that in here and you'll see
+02:2.49 some really cool stuff. First of all,
+02:5.76 PyCharm realized that there is a 'requirements.txt' and when there's a requirements.txt
+02:10.82 that usually means you need a virtual environment.
+02:14.3 If you're going to install third party packages,
+02:16.2 you must be you really really should consider having a virtual environment dedicated to that project
+02:20.93 So PyCharm is now helpfully suggesting that I'll go and let it do that
+02:25.2 Now if we go over to our program here notice it says you're gonna need
+02:28.93 requests to run this. So let's go and let that install.
+02:32.14 So we've opened up our project but check this out.
+02:36.24 We also already have git integration.
+02:39.93 So we're on this ref branch,
+02:41.78 if you click down here this whole list,
+02:43.33 the branches and it knows which branch were on.
+02:46.5 Remember I checked out that ref branch started main went over to ref So because this
+02:53.71 file lives in the hierarchy of a Git hub repository,
+02:57.9 low or git repository locally. PyCharm automatically detected that an added source code integration
+03:3.82 For git how cool is that?
+03:7.24 So now that it knows how to do things,
+03:9.32 it knows that there is an active Git hub repo or get repo we have all
+03:13.88 of our source control commands in particular.
+03:16.07 This time it's a Git. If we opened up a subversion repository,
+03:20.5 well then it would give us subversion commands.
+03:22.83 So over here we've got things like update the project.
+03:25.7 Notice all of these have hot keys basically.
+03:28.54 So if we wanted to, you know,
+03:29.82 we had changes on the server,
+03:31.16 we could either click this button or command T and it will say we're gonna emerge
+03:35.88 changes into the current branch. Or we could re base it.
+03:39.24 Typically what I end up doing as I say,
+03:41.17 don't show this again and just leave it as the default.
+03:44.05 That's usually exactly what I want.
+03:47.24 And then I could commit changes.
+03:48.9 We don't have any changes yet,
+03:50.16 but if I did and we have a change,
+03:52.44 I could commit the change over here will show me details about that.
+03:56.64 I could push the changes remember git is a two stage system.
+04:0.7 I make changes but those changes build up locally in the repository and then when I'm
+04:5.26 ready, all of those changes get pushed up to git hub or whatever the server is.
+04:9.77  I can view the history of this file and here's all the different things
+04:14.3 that happened to it and so on.
+04:16.18 Very neat and I can't even revert it.
+04:18.73 Suppose I don't like this change that I put here,
+04:20.69 I say no, no, no,
+04:21.49 just go back to the way it was and I love that feature.
+04:24.89 I love it when I was exploring and going crazy and I'm like now that wasn't
+04:29.22 the way I wanted to go push that button.
+04:30.82 It goes right back to the last save point.
+04:32.82 Also if you look up here,
+04:34.17 there's a Git menu with even more options.
+04:36.92 So we could merge things, we could work with branches,
+04:40.12 we could check out the log,
+04:41.74 we can do all sorts of stuff over on GitHub.
+04:43.8 Like if I had forked repository,
+04:45.87 I could sync it back. I could create a pull request.
+04:48.48 I want to talk more about some of these things as we go.
+04:51.03 But there are a lot of features available to as soon as git repo that are
+04:55.42 not available directly right here. But the common ones you need right appear in source control toolbar.

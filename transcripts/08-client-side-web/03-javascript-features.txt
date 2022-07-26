@@ -1,0 +1,78 @@
+00:0.14 Next up let's do some basic Javascript.
+00:2.74 So over here we can create a Javascript file just call this 'site.js' and
+00:8.93 we'd like to create a function.
+00:10.41 We saw that PyCharm has awesome editor features for python code.
+00:15.32 Well, basically the same thing for Javascript.
+00:18.44 So we come over and create a function or if you wanna even go shorter and
+00:21.67 go down here and hit that.
+00:23.34 Give us a chance to name it will say run at startup and I have some
+00:29.48 parameters. Will be message. Perfect.
+00:33.57 So we'll just in this one will just get some sort of console notice,
+00:37.09 console dialog, all sorts of awesome auto complete running at startup.
+00:44.14 And we'll just put the message there.
+00:47.14 All looking good. Let's just go and run this Now.
+00:49.82 We'll say run at startup. This is the startup message.
+00:56.74 And let's also create a variable here.
+00:59.5 Let's create something like let's say a person's name or something like that.
+01:5.14 That person is going to be sarah and then we're going to print out the person's
+01:10.61 name plus some kind of message that goes over like this.
+01:14.74 So we should be able to see it.
+01:16.14 Notice there's some warnings were going to come back to that.
+01:19.14 I would like to run this javascript over on this page.
+01:23.36 So there we go. And let's even run that at the bottom.
+01:26.32 I typically like my javascript at the bottom.
+01:30.04 All right. So this should have actually already rerun it.
+01:33.4 Let's go look at the console here and see what's going on.
+01:38.84 We've got Sarah running at startup.
+01:41.01 This is the message of the startup.
+01:43.54 Super, cool. What if we wanted to know more about that?
+01:46.82 Let's put a breakpoint. What is the value of person?
+01:52.14 It's Sarah. What is the message?
+01:54.54 This is the startup message. This is actually a really big deal of folks.
+01:58.45 I don't know how often you've tried to debug inside of the dev tools of chrome
+02:3.03 It's not a huge treat to be honest.
+02:5.33 I don't find it to be very productive or helpful.
+02:8.44 This on the other hand, this is incredible,
+02:11.16 right? You've got all the details of,
+02:13.79 you know, you would want for a regular debugger but inside there.
+02:17.83 So debugging, Javascript delightful. Alright,
+02:22.02 let's put that away for a minute.
+02:23.46 We also have this error going on here,
+02:25.41 so we want to fix this.
+02:27.13 What is going on. The other thing we can notice over here one of these
+02:31.99 This is the one we have if we go to hear type person,
+02:34.66 look there's a person object, this is global.
+02:37.45 There's a global thing called Sarah person of the value Sarah,
+02:41.31 that's because we forgot to use var.
+02:43.66 Well, luckily PyCharm has our back,
+02:46.14 it says you really should be using something like var.
+02:49.07 But it was proposing to make it let all right.
+02:51.76 So let and const are new,
+02:54.05 Javascript, variable declaration rather than just var,
+02:58.64 for example, const is constant in this case a const would have been fine.
+03:3.05 All right, because the value is never changing.
+03:5.04 Let me put it back too far really quick.
+03:7.34 There might be some code that you have.
+03:9.44 That's ECMA script 5 where this is all there is and it works good.
+03:14.39 You don't want PyCharm to tell you,
+03:15.9 I want you to switch to the newer version of javascript when you need the old
+03:18.83 one. So we can actually come over here to language and framework java script and
+03:28.98 it will let you pick if you go back here to the previous version.
+03:32.15 Go away. Yes, it goes away because that was all you could do in
+03:36.02 that version of javascript. So you can decide which version of javascript that you want
+03:40.51 I'm going to go with the latest and in that case it will propose to
+03:44.12 automatically let us convert to let or const you can see a lot of the stuff
+03:48.23 you're really, really familiar with from the editor in python.
+03:51.81 Well, it's the same thing here.
+03:54.03 Let me do a quick commit on these things and notice we get all the same
+04:2.98 source control features, everything. Finally,
+04:6.33 let's actually rename this run at startup.
+04:9.23 Does a web page startup? I don't know.
+04:11.03 Not really. Maybe it loads.
+04:12.95 So rename this to run at page load and it says you're going to make a
+04:19.44 change. Yes, we want to do that.
+04:21.49 So even if this run at startup was used across multiple javascript files that refactor
+04:27.04 rename would have successfully renamed it in a safe way across all those things.
+04:33.52 Super, Super, Javascript editing environment.
+04:36.61 Why? Because this is basically WebStorm,
+04:39.35 and we're looking at it from this perspective.

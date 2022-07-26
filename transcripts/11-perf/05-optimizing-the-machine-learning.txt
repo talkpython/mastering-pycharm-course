@@ -1,0 +1,121 @@
+00:0.14 We're armed with the fact that compute analytics is the slowest thing and if we look
+00:5.23 just a little further down the line,
+00:7.44 we have learned, which is 3.9 or total 6.4% of the time and read data
+00:13.35 which is 61% of the time.
+00:16.14 Alright, so where should we focus?
+00:18.03 Let's go over to the function and we've got read data then we've got learn and
+00:25.88 read Yeah, this read data were doing twice actually,
+00:28.77 so we're going to need to really work on that.
+00:31.74 Let's go over here and jump in.
+00:33.4 Now notice again this is a little bit contrived but we're doing some in Python processing
+00:39.4 let's say of this, this code here,
+00:42.29 we're simulating that with this sleep.
+00:44.68 And it turns out that when you're doing lots of computational stuff in python,
+00:49.04 there's usually some library implemented in C or Cython or something like that.
+00:53.97 That's going to be way faster the world.
+00:56.55 Working with lists of data here.
+00:58.83 And what might make a lot more sense is to work with something like Numpy.
+01:2.94 So let's imagine the switch, we've done some testing,
+01:9.0 we switch over to the Numpy library which is written in C.
+01:12.24 This has very thin wrappers exposed to python And we gain 20 times performance on this
+01:19.17 processing of these arrays of numbers and things.
+01:22.94 We're going to simulate that by saying,
+01:24.89 you know what? We're no longer spending that much time that we're spending 1/20 or
+01:29.23 divide the two by that and we get this much.
+01:33.24 So that's how much time we've gained with this theoretical upgrade to Numpy,
+01:37.28 I don't really want to bring Numpy into the situation here.
+01:40.75 We could we could come up with something in python that actually gets 20 X but
+01:45.24 it just adds complexity. So use your imagination here.
+01:48.32 Right. Let's run it. See if it's any faster as the search.
+01:51.53 It's the dB boom, wow,
+01:53.23 that was a lot faster. Remember how much time we were spending over here and
+01:56.93 compute analytics and read data? Three point basically 3.0 seconds.
+02:1.48 Let's run the profiler again and see about it now.
+02:7.84 All right. We could do a quick flip over like this and look check it
+02:12.67 out. We got to go down a little bit.
+02:14.03 All the way down here is where our computer analytics went.
+02:16.82 So it's down to 473 milliseconds or 20%.
+02:22.04 We look at it in a call graph,
+02:23.09 which I really like to like to see it that way.
+02:25.91 Let's go over here. It switched from orange and spending that much time.
+02:32.29 three seconds from computer analytics to now.
+02:35.55 Just 165 milliseconds and read data.
+02:38.74 Let's imagine we can't do faster.
+02:40.01 Right? We switched to Numpy.
+02:41.62 We're doing the load. Boom,
+02:43.85 that's it. That's as fast as we can go.
+02:45.5 The other thing we could do over here is work on learn and this is actually
+02:49.75 pretty interesting. Let's jump in and check this out.
+02:53.84 Imagine this is the machine learning math that we're doing.
+02:57.47 Of course we'd really use something like tensorflow but here's some math that we're doing and
+03:1.44 imagine the math cannot change. We just have to do it.
+03:5.24 Well let's go back here and look at this in a little bit more detail.
+03:8.13 So learn, it turns out the thing that we're spending a lot of time in
+03:12.17 actually is this 'math.pow' We're doing that,
+03:16.65 wow something like 627,000 times, even though it only takes a little bit of time
+03:21.22 right there. But calling it turns out to take a lot of time
+03:24.24 I'm going to show you a really cool technique we can use to make that
+03:28.62 faster. Let's do something that doesn't seem like it will be better we're going to
+03:33.93 create a function that will call 'math.pow'.
+03:36.2 So we'll say 'def compute.pow' and it's going to take an X and Y.
+03:41.54 It's going to return math.pow of X and Y.
+03:45.94 Okay and instead of doing this right here,
+03:50.38 I'm gonna leave the commented one in here,
+03:52.02 I'm gonna say compute_pow of IDD.
+03:55.82  Seven not here,
+03:58.16 we're going to do the same thing,
+04:0.74 this is going to be compute pow like that.
+04:10.54 Okay, if I run it,
+04:11.62 chances are it's going to be slower because in addition to calling this a bunch of
+04:15.61 times, we're also adding the overhead of calling another function.
+04:18.61 Let's see though that we still get the same number.
+04:22.34 We do. We get this and if we profile it over here and compare real
+04:32.58 quick, it's important to compare as we go,
+04:35.86 which one is this? This is the learn function.
+04:38.41 So let's go look at the stats for learn 308 in the new one,
+04:45.44 420 see. There was some overhead.
+04:47.5 Can't make that better can we?
+04:48.62 We shouldn't do this. Ah but we can check this out.
+04:51.54 So it turns out that we have this IDD.
+04:54.45  Pass along as we loop over this.
+04:57.56 The I. D. D.
+04:58.15 Is the same. So that's going to be repeated.
+05:0.03 The seven is going to be repeated and some of the time these numbers will also
+05:4.44 turn out to be the same if we had the same inputs raising a number to
+05:10.09 the power is always going to give the same outputs.
+05:12.09 So what we can do is use this really cool library called 'funk tools' but we
+05:16.66 got to import funk tools. And on here there's a cache,
+05:20.12 something called an 'lru_cache( )'
+05:21.74 What is the lru cash do?
+05:22.5  This is going to take a function and if you pass it
+05:27.7 the same arguments more than once.
+05:30.37 The first time it's going to compute the result.
+05:32.34 But the second time in 3rd and 4th because I already saw those inputs,
+05:36.32 this is always going to give the same answer.
+05:38.16 Let's just return the pre computed saved value.
+05:41.94 So we're going to trade a little bit of memory consumption for time.
+05:45.64 Let's run this again. Make sure that we get the same number.
+05:49.64 We do the same number. Hard to tell at this point.
+05:52.78 We're getting down to the edges of whether it is faster,
+05:54.97 but let's run it one more time.
+06:0.44 All right. Let's let's see the final result here.
+06:3.29 Go down here to learn and look at that.
+06:7.94 Now it's 7.1%. Whereas before learned was 19%.
+06:12.95 So 420. Ydown to 217.
+06:17.47 So more than twice as fast.
+06:19.76 How cool is that? And all we had to do is realize what kind of
+06:23.11 doing this thing over and over.
+06:24.94 It is always going to give us the same answer so we can put a cache
+06:27.88 on that. So if we happen to see the same values,
+06:30.15 we don't have to re compute it over and over.
+06:32.66 Fantastic. All right, let's go back here to our final result and look at
+06:36.06 the call graph and see where we are with regard to this machine learning.
+06:40.26 But now we're in a good place with this computer analytics.
+06:43.47 It was by far the slowest part of the entire program,
+06:46.39 taking almost five seconds. And now we've gotten read data down nice and quick using
+06:51.4 our simulated numpy and we've got our learn down a bunch times more than twice as
+06:57.48 fast by using the 'lru cache'
+06:59.06  And notice over here,
+07:1.23 remember this was 600,000 times or something like that,
+07:4.23 or calling it only half as many times,
+07:6.5 and that's why it's twice as fast. Super cool right!!.

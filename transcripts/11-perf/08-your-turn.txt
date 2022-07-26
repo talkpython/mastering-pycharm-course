@@ -1,0 +1,13 @@
+00:0.14 You've seen me use profiling to make an application faster and understand its performance.
+00:5.08 It's your turn So in this chapter and your your turn for this chapter,
+00:10.66 you're going to take an existing app and understand its performance and then do a couple
+00:16.22 of steps to improve its performance,
+00:18.35 guided by the profiler. Also,
+00:21.18 one quick comment here, this one is one of the features that requires PyCharm
+00:25.7 Professional. So remember if you're using the Community Edition,
+00:30.47 you're going to have to just read through and watch this.
+00:32.88 It's not one of the features.
+00:33.95 It's one of the paid features.
+00:36.14 Go through. Open up the perf app in this section and be sure to you
+00:40.83 install requests because you're gonna need it to run it.
+00:43.25 All right. Have fun playing with a profiler.

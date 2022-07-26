@@ -1,0 +1,22 @@
+00:0.04 Let's review a couple of ideas of what we've covered.
+00:2.34 If we want to start a brand new project,
+00:4.82 Really easy way to do that is to go over to PyCharm and click on
+00:8.58 the new project button, It opens a dialog and gives us tons of options.
+00:12.2 You want a pure python project or maybe a Djngo, Flask, Pyramid or even a Scientific
+00:17.63 analysis python project. Each one has their own settings,
+00:21.54 but often they come with the ability to create a new virtual environment or to add
+00:25.69 an existing one. And you saw that we created a new virtual environment just like
+00:30.25 it's doing here. This list of project options is actually extensible.
+00:34.5 If we installed for example, the 'Node.js' plug in,
+00:37.67 we would have 'electron.js' and other types of node applications that we could create as well
+00:42.19 So you can add more through the hole plug in system will cover that at
+00:45.71 the end of the course. But this is what you get out of the box
+00:48.0 Now, if you have an existing project,
+00:50.87 you want to open, the most universal way would be to go file,
+00:54.79 then open and then browse over there.
+00:56.87 Or click the open button on the splash screen,
+01:0.24 which is basically the same thing.
+01:2.64 You can also go over here and hit open As the one I was talking about
+01:6.18 And if you're on a Mac,
+01:8.38 you can grab the folder of it and drag and drop it onto the app icon
+01:13.52 that will make it open it just the same way. Just little shortcut but it all basically the same process.

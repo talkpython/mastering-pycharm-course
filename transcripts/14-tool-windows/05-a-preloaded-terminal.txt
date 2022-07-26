@@ -1,0 +1,29 @@
+00:0.14 When you're doing programming, you absolutely have to work on the command line or the
+00:4.0 terminal. So let's suppose I want to do something with the course.
+00:7.58 So I've got to come over here and go to my desktop and go into the
+00:10.58 course and because I'm running a super cool shell.
+00:14.52 'Oh-My-Zshell', which I definitely recommend that you check this out.
+00:17.85 If you're on a project system,
+00:20.14 check that out. We get all sorts of cool stuff like highlighting the fact that
+00:24.44 we're in a Git repo and then we're on branch ref for the moment.
+00:28.54 But if I want to work with python stuff with this project,
+00:31.46 I need to make sure we activate this and now maybe I'm in the right location
+00:38.68 I got the right python activated and so on that was a few steps we
+00:45.2 can avoid those steps incredibly easy with one of the PyCharm Windows down here terminal
+00:49.86 So we go down here,
+00:51.89 we automatically end up in the same location which is the top level of our project
+00:56.1 We get the virtual environment activated.
+00:59.38 Let's see which python three. It's the exact one we want out of that virtual
+01:5.35 environment. We 'pip' list, we see all the things that are listed there and
+01:10.32 we even have our recent history just like you would have throughout your entire operating system
+01:14.52 So what were the last couple of pip commands,
+01:17.03 I ran pip list pip installed. Trust me pip install 'colorama'.
+01:21.74 What if we wanted to do an upgrade.
+01:23.72 Oh yeah, this is the kind of warning.
+01:25.7 We could fix that warning by running this and this is the full shell.
+01:29.46 Like you can ssh or you can tell that or you can do all kinds of
+01:33.51 things, basically anything you need to do in the terminal,
+01:35.66 or almost anything you need to do.
+01:37.77 You can do down here. So this is a really good way to do anything
+01:41.54 on the command line or terminal that happens to do with our code or project,
+01:46.69 the python environment, the packages and so on.

@@ -1,0 +1,81 @@
+00:0.14 Now that we have an idea of how to run pytest.
+00:2.74 Let's write the actual test for this project.
+00:5.64 We don't need that. We don't need that.
+00:7.12 We're gonna work with our core here and let's go create a new file table test
+00:12.88 singular, remember singular. So we're gonna start by testing what I call the
+00:19.24 happy path. The way we expect our software to work.
+00:22.05 So let's go over here and write a test something.
+00:25.14 There's basically two main scenarios that we would like to test here.
+00:28.95 One that there are tables available to be booked and then the other one is that
+00:34.24 given one of those tables? We could Okay,
+00:37.34 so let's go over here and right.
+00:39.01 The first one now naming these tests if you haven't done a lot of testing is
+00:43.25 interesting because the name of the test is different than regular function names.
+00:48.25 Regular function names need to be meaningful but also manageable because you're going to use them
+00:52.66 in your code testing function names will never be called by humans.
+00:57.72 They will only be called by pytest.
+00:59.53 So we can make them super descriptive.
+01:1.18 So how about tests there are tables available.
+01:7.34 That's gonna be our test name long for a regular function.
+01:10.08 Perfect for tests. The way this works is we're gonna go over here and say
+01:13.69 core and we can import that from 'app.core'.
+01:17.74 Given a choice of category. Remember we had like burgers thai food and so on
+01:22.07 Given a choice we would like to find the available tables but let's go over
+01:27.06 here one. I think that might be thai food.
+01:29.64 I'm not sure now. That might not be super clear.
+01:32.24 What does that one mean? So let's go over here and introduce a variable choice
+01:37.27 like that. Right? So we're gonna go over here and say tables order this
+01:42.11 and what do we want to assert just that there is a table associated at least
+01:46.5 one with category of food one.
+01:49.94 Now, that seems good. We can come down here and just doing a search
+01:52.48 remember, Python has a built in a certain thing.
+01:54.8 That's how py tests makes its statements.
+01:57.54 So one way we could do this so we could just assert tables.
+02:0.52 The truthiness of this list here.
+02:3.02 If we look at what comes back in a return as a list.
+02:6.25 So actually that would work. But let's be a little more explicit.
+02:10.64 What we're really trying to test is that there's one or more tables but we can
+02:14.24 say the length of tables is greater than or equal to one.
+02:18.94 All right, that's our first meaningful test.
+02:21.22 We're running all the tests in this folder.
+02:23.67 So let's run it again. There we go.
+02:27.05 Look at that. Are there are tables.
+02:29.74 Perfect. Now one of the ideas is you want to determine if we had written
+02:35.47 this code. Wow. We were actually developing this library.
+02:39.05 Maybe we would write the test then and do the test first.
+02:41.62 Even one of the things you want to actually verify if the test is actually checking
+02:45.16 the failure case if this work to work.
+02:47.84 If there were no tables, we would return an empty list.
+02:50.27 So let's make sure it fails.
+02:52.04 Yeah. Okay, looks like that one is failing this assertion greater zero greater than
+02:56.98 one. Not true. So it looks like our find available tables is working.
+03:2.44 What's the other happy path test here?
+03:5.03 It's table can be booked. That is our second test.
+03:9.93 This one's a little more interesting,
+03:11.61 a little bit more nuanced of what we need to test.
+03:14.08 So let's get a hold of all the tables and our core library has all tables
+03:20.04 And let's also make sure that none of these are books.
+03:23.0 So let's say 't for t' and all the tables if 't.is booked' not as booked
+03:31.34 like that. So this will give us all the tables that are not booked in
+03:35.4 case. For some reason we run another test and it happens to change the state
+03:39.23 of our little in memory database thing.
+03:40.76 We want to make sure we're just working at tables that can be booked.
+03:43.8 So the table that we want to book,
+03:45.32 let's call it table is going to be tables of zero.
+03:48.45 It will be the first one that's not booked.
+03:50.84 And then let's just try to book it and see what happens.
+03:52.8 So we'll go over here and say core. book table and we have a table.
+03:57.34 table_ id now let's just make some assertions about this first.
+04:2.33 Let's assert that there is a table we got back when we tried to book it
+04:6.31 For some reason we didn't get none back or whatever.
+04:10.04 Let's assert that the object we got back is booked,
+04:13.27 right, so that it's properly configured when we book it.
+04:16.19 Not just here's the table, but actually it is booked was set and that we
+04:20.5 want to make sure it's the same table.
+04:26.94 All right. That should do it.
+04:27.96 These three things. I think as a set of three properties about this will verify
+04:33.18 that Yes, we got a table that it was booked.
+04:35.66 It was the one that we wanted a book and so on.
+04:38.14 All right, run it perfect. Our tests are passing.
+04:42.66 I think we've got some great tests here are there are tables available and tables can
+04:47.48 be booked together. Really verify that our code is working well.

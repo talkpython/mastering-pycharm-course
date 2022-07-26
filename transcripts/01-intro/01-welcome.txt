@@ -1,0 +1,12 @@
+00:2.64 Hello and welcome to effective PyCharm.
+00:6.04 We're going to learn almost all of the features of one of the very best Python IDE's
+00:10.0  You're going to see how to be incredibly effective writing code,
+00:14.74 Creating Unit Tests, Packaging up your libraries and so much more. Are you brand new
+00:20.73 To PyCharm. We're going to get you up to speed quickly and if you
+00:24.92 need an experienced developer who's already used PyCharm quite a bit,
+00:28.94 You're gonna find, there's still so much to learn.
+00:31.72 Some of our students who have taken this course said that they,
+00:34.65 After taking it, realized they were only using 20% of the features and are now
+00:39.4 Way more effective. So if you want to get the most out of your primary
+00:43.67 Software development tool for building Python applications,
+00:47.14 This is a course for you.

@@ -1,0 +1,13 @@
+00:0.04 I pointed out that PyCharm community edition is open source.
+00:3.24 In fact, all the community editions across the different projects.
+00:6.84 Different IDE's at JetBrains are open source and they're all over here under intelliJ community.
+00:13.04 So if you want to check it out,
+00:14.27 You can go here just scroll down until you see python or right there and scroll
+00:19.19 through all the folders. Here's the PyCharm Community edition.
+00:22.46 It shows you how to build it and how to work with it.
+00:25.14 I personally have never had any reason to go in here and do anything with it
+00:28.99 whatsoever, but I do think it's kind of cool that the source code is here
+00:33.01 and you can go and build it and explore it.
+00:34.8 If you want to know how it works better,
+00:36.29 you want to fork it just to make sure that you have it just in case or
+00:40.38 if the idea of it being open source makes you more comfortable. Well here is the source code.

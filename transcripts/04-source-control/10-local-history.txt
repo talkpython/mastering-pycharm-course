@@ -1,0 +1,49 @@
+00:0.04 We've seen that the source control features and the Git and Github integration with PyCharm
+00:4.88 are fantastic. But there are times when it's not enough opinion on how you work
+00:10.34 Maybe you check in your code very frequently or maybe one of these people that
+00:13.79 works and gets things just right and then checks it in.
+00:17.03 You work on something for three or four hours and then great is ready.
+00:20.31 Let's do a check in. If you're that type of person,
+00:23.45 there's a good chance that you would want some kind of comparison some kind of rollback
+00:28.71 feature during that three hour period.
+00:31.54 Another scenario might be you just create a project that has no source control set up PR
+00:35.66 yet at all. But you would like some kind of source control features.
+00:38.83 Like I made some changes. Whoops,
+00:41.02 I need to go back to the way it was half an hour ago and don't
+00:43.96 really remember how that was. So you're in luck PyCharm has this thing called
+00:48.02 local history, which is a little bit like what git and source control does for
+00:52.35 you, but it has nothing to do with.
+00:54.06 And you check it in. It's just when you save the file and as you
+00:57.04 make changes to it, there's this huge long running list of it.
+01:0.24 So check this out if we right click we have our GIT,
+01:2.47 which is what we've been talking about the whole time.
+01:4.58 But if we go up one,
+01:6.64 we have local history, you can even label points in time just locally for yourself
+01:12.08 But let's just check out the history.
+01:14.64 So look at what we got going on here.
+01:16.43 I'll make this nice and big that we've got some changes that we made right there
+01:21.51 Right. This is some format change we made.
+01:25.84 There's some other small change where we remember we had to make these longer because they
+01:31.29 weren't long enough because here's the green bit where we added that on as part of
+01:34.77 those changes. And down here's a ton where we actually put the version on
+01:40.23 the end and you see the version up at the top,
+01:42.34 the variable the version and so on.
+01:44.93 So there's all these amazing little changes and check this out.
+01:47.66 We also have external changes that come from updating things from source control over here,
+01:53.95 we've got, we did a commit,
+01:55.55 you can see when we committed back to git hub.
+01:58.34 So you can actually check this part out here and say,
+02:0.52 okay, this lines up with that,
+02:2.02 checking on git hub and then there's a whole bunch of other changes that were not
+02:6.03 tracked by Github or anything else,
+02:7.52 but we have this really, really cool local history and here's even tracking it coming
+02:12.7 back from git how the changes we did as part of our feature branch,
+02:17.17 were merged back into our working branch,
+02:20.26 not the feature branch. So I strongly encourage you to use this and again,
+02:25.05 like I said, it's available to you,
+02:27.55 even if you don't have source control,
+02:29.77 even if your project has nothing to do with git or subversion or any of those
+02:33.0 things, you still have this available and you can do things like add a label
+02:37.67 to it. You can revert the changes back to here.
+02:40.52 It has a very strong source control field,
+02:43.44 really great to have this as a backup and a more fine grain history of what you have been doing.

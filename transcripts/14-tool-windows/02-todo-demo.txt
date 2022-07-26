@@ -1,0 +1,83 @@
+00:0.14 How do you keep track of the open work that you have to do on your
+00:3.72 program. For large feature, something you might create a feature branch for and you might
+00:8.69 have other people's input on you would probably create a GitHub issue or Ajira tracking
+00:14.36 issue or your track issue one of those types of things.
+00:17.52 But for smaller little things as you're building up,
+00:19.96 your program may be tiny little code issues that are part of a larger issue or
+00:24.2 whatever, it's very common to use code comments.
+00:27.25 So let's go down here and check out this program from the profiling section.
+00:32.04 There's a couple of things that we maybe want to do.
+00:34.25 Remember we talked about how we might optimize this if we were allowing more interactivity and
+00:39.07 running these searches more than once.
+00:41.11 So maybe we'll come over here and go remember to explore if we use,
+00:46.02 you know, more than one,
+00:47.25 run something like that. Okay,
+00:49.63 great. But there's a lot of source code over here and in this project,
+00:55.3 if I'm trying to find all the stuff that's still open and for me to do
+00:58.42 how do I find that?
+00:59.93 That's not very clear. So we can come back here and we can use a
+01:3.96 common way we could say 'todo' and check that out as soon as we say
+01:9.1 'todo' in PyCharm, it turns yellow.
+01:11.74 That's super. That means we get a nice visual reminder,
+01:15.6 you know, comments are kind of subdued to do is stand out as oh my
+01:18.93 gosh, something is on this page to be done here.
+01:20.86 Right. That only helps if you actually go and explore the code again,
+01:24.43 if we have many, many files as large projects do how do you find them
+01:28.1 Well that's the 'todo' window.
+01:30.74 So check this out down here in our 'todo' window.
+01:32.56 We can say I want to see the 'todo's in the current file,
+01:35.54 notice that the color both the color of the file to show that it is a
+01:39.03 modified from what it was in source control and then down here the highlighted todo
+01:44.34 and the line and column even.
+01:45.53 That's pretty cool. We could do it in the project notice there's a bunch so
+01:51.19 it's really handy to have things like this,
+01:53.02 like maybe over in this data access section down here remember we wanted to add an
+01:59.54 index. So if we have that down here,
+02:1.94 when we were looking through our 'todo's,
+02:4.64 go to our demos, let's go to the performance one,
+02:6.98 you can see all of those that we might want.
+02:10.05 And actually if, if we were in here we could say I want to,
+02:12.94 if that was all collapsed, we could collapse it or we could expand it all
+02:17.66 out real quick like this. That's pretty awesome and we can come in here and
+02:21.85 say, okay, um we're going to add that index and we're going to do
+02:26.92 that here, move our to do and soon as we remove our to do obviously
+02:32.16 as you would expect it removes it from the project.
+02:36.44 Now. That's super cool. And I definitely recommend that you may take advantage of
+02:41.52 this. Right? Don't try to put a whole bunch of 'todo's to
+02:44.48 manage large project work. Right?
+02:47.04 Those are feature branches. Those are issues and your issue tracker and so on.
+02:51.02 But as you're building it up like you know you want to maybe work on this
+02:54.33 part but then you want to be sure you remember to come back here,
+02:56.77 go ahead and make it super obvious by adding that as it to do one of
+03:0.68 the thing. I'm sure you noticed as I was flipping through here is there's a
+03:3.85 lot of 'todo's. There's a lot of stuff going down here over here in
+03:7.65 the your turn we can expand at the wrong one over here.
+03:11.66 We can expand that and those look like real issues.
+03:14.08 Right? This is actually from performance app that you worked with on the your turn
+03:17.72 section over there and we got some for testing and so on.
+03:21.04 But notice from the transcript right,
+03:23.57 this is the transcripts We decided to include those in the GitHub repo and over
+03:27.41 here we just said the word to do.
+03:29.64 That's cool. You don't care about that.
+03:31.77 Right? There is not something you need to do.
+03:34.04 So what we can do is we can go over to the transcripts folder mark directory
+03:38.17 as excluded and then notice we have a whole lot fewer to collapse that with a
+03:44.31 lot fewer. The transcripts section is gone here.
+03:47.17 Right if you were to do but over here there's still some problems.
+03:50.32 Check this out over in the virtual environment.
+03:53.45 Remember we were opening these at different levels.
+03:56.4 Sometimes I wanted to open the whole course set of demos and other times when we
+04:0.71 were working on say packages, it was important that the package was the top level
+04:4.4 of the project. So we open that separately.
+04:7.04 So in here you'll see like in PyTest or Olympic,
+04:10.69 they have some 'todo's left in their source code that got installed when we pip
+04:14.77 install them. That's not ideal.
+04:16.95 We don't want that. So notice also the color here.
+04:19.69 This is not orange so it's not ignored.
+04:22.56 We can come over here and jump to source by clicking this or just command down
+04:25.79 or whatever your hotkey on your platform is.
+04:28.34 We could exclude that one as well and there we go.
+04:32.94 Now. We got our project into a good space.
+04:35.11 We can expand them all out and kind of scroll through here and see what work
+04:38.88 is left to do. Alright,
+04:40.14 definitely be sure to take advantage of typing these keywords like to do and stuff and then use the 'todo' window to make sure that you have addressed them all

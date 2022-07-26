@@ -1,0 +1,11 @@
+00:0.0 Everything that you see me type during this course will be available in the Git Hub
+00:4.67 repository. I want you to take a moment,
+00:7.32 pause the video and just go over to this.
+00:9.58 You're all right here or in the course details page.
+00:12.77 You can just click the repo button and it will take you straight to it.
+00:15.43 Be sure to star and fork the repo.
+00:17.87 It should already have all the code that we've created during this course as well as
+00:22.58 things like that cheat sheet. Your turn exercises everything you need to participate in this
+00:27.71 course. Either to repeat what I have done or to go through the exercises and
+00:32.27 so on will be available over here on GitHub in the public so go grab
+00:36.61 it, start, fork it right now.

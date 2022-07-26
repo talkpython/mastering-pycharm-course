@@ -1,0 +1,17 @@
+00:0.04 There is a ton of code that we have created and many projects and applications that
+00:4.44 we've started from to explore these ideas.
+00:7.44 So don't forget the source code.
+00:9.64 How do you do that? Well,
+00:10.86 make sure you've cloned this to your computer or if you're not into Git just click
+00:14.92 the code button, that green thing and download it as a zip that should work
+00:18.39 just as well. But if you are into git hub over there and star and
+00:22.01 fork the repository that way you'll always have a copy of it no matter what and
+00:27.11 why are over there. Don't forget to do the your turns.
+00:30.64 I reminded you during each chapter that these your turns were available and give you an
+00:35.02 idea of what we were covering at the end of them.
+00:37.54 But if there's some you haven't finished or you got distracted,
+00:40.72 this is probably one of the best ways to reinforce the ideas from that section on
+00:45.95 that particular topic. So if there's some you haven't finished or you know,
+00:49.39 maybe it's been a while now you made it didn't the end of the course,
+00:52.8 you can go over there and do them again potentially.
+00:55.4 Make sure you take advantage of the your turns because they will really help reinforce and teach you exactly what's going on with PyCharm.

@@ -1,0 +1,57 @@
+00:0.0 Well now we've got our app startup looking a little bit nicer.
+00:3.17 Let's go look at the various classes that are involved.
+00:5.96 Remember we've got our creature wizard,
+00:8.06 the small animal, the dragon and so on.
+00:12.24 Now one of the things that we do when we run this program is we might
+00:17.14 Show Something Like This. A Tiger of the Level 12.
+00:20.64 And if we look around we'll see there's a total level one,
+00:23.9 a tiger, level 12, a bat of level three and so on.
+00:27.03 Where is that coming from? It's coming from this repr method.
+00:31.97 So here you can see is a dragon,
+00:35.26 such and such of level such and such.
+00:38.54 But what we'd like to do is actually solve a problem that is very common in
+00:43.24 code. And that's duplicate code.
+00:45.81 So notice the small animal says it's a small animal,
+00:49.64 such and such. Down here we have a dragon and it says basically the same
+00:54.04 thing. This bit right here is different.
+00:56.67 But other than that it's basically the same.
+00:59.59 Could we fix this? Sure,
+01:1.09 we could, we could come down here and we could just go to the type
+01:4.74 of self, this is going to be the dragon and we can sit come down
+01:10.27 here and go down __name like that and that's going to show exactly the same
+01:14.95 thing, say dragon in this case.
+01:17.78 But if that code will run inside of a small animal that would say small animal
+01:20.84 If it were run inside a wizard,
+01:22.31 it would say wizard. So maybe this duplicate code here is not really necessary.
+01:27.94 Let's go highlight this and we can re factor,
+01:32.24 what we want to do is we're gonna pull members up,
+01:35.33 pull up means go to the base class.
+01:37.03 We want to take this and just put it in the base class.
+01:39.64 So everything that derives from creature wizard,
+01:42.55 small animal, dragon and so on.
+01:44.13 They can get that and use it.
+01:47.14 So here I can choose what things to pull up,
+01:49.97 right? We could do multiple methods and so on.
+01:51.79 But this is the one we want and we could figure out where to put it
+01:54.87 There's only one object or one type in our type hierarchy here.
+01:58.92 So it's just going to go there to notice the reprr method is gone from
+02:4.32 the dragon and on the creature we now have this nice generic one that we wrote
+02:10.64 PyCharm is not going to make a big enough guess or assumption that we can just
+02:14.77 drop it from all of them.
+02:15.88 Right, But we know that this is going to actually be fine to take away
+02:19.15 this repr from all of these and now we'll be able to use them just from
+02:23.89 the base type here. Let's make sure we're using it exactly.
+02:29.76 We go over to the program when it starts up,
+02:33.79 let's go to a little game loop and here we'll just print rubber permanent.
+02:40.74 I'll say hero like this. He's a rapper.
+02:47.07 Wizard. Gandalf of Level 75.
+02:49.81 So it works perfectly for a wizard and you can imagine it's going to work just
+02:53.58 fine for the dragon and so on.
+02:56.34 All right. So if we were saying like creatures of -2,
+03:1.95 that should be the dragon. We go dragon just has the name dragon.
+03:6.14 So I guess it's duplicate here,
+03:7.94 But dragon dragon of level 50 were able to use this pull members up to take
+03:12.64 this function, this method from one of the derived classes and put it into the
+03:17.37 base class in a nice generic way that all the other objects in our type arching
+03:22.42 you can pick it up and run with and we were able to remove that
+03:25.39 code duplication throughout these different classes and that's a good thing.

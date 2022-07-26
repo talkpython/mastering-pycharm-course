@@ -1,0 +1,70 @@
+00:0.04 We've seen that PyCharm has many many refactoring is and it's really good,
+00:5.01 the ones that it does great.
+00:7.14 There's actually a couple of higher order ones that could be useful to us.
+00:12.14 There are some extensions and plugins for PyCharm.
+00:15.13 That might might be something you want to consider.
+00:17.54 So for example, here's Sourcery 'sourcery.ai'
+00:21.08 This is a plug in that has a free version and a paid version that you
+00:24.82 can add to PyCharm that will do more refactoring help in much the same
+00:29.24 way that you would expect. Right.
+00:30.82 These little code intentions with 'alt+enter' it's like that but it has sourcery refactoring suggestions
+00:35.91 as well. Let's take a look in our project.
+00:39.45 There's not too many errors and warnings going on.
+00:41.86 If you go through here, you don't see anything.
+00:44.24 But let's go over to this dragon.
+00:45.88 There's something interesting here when we were in this section with PyCharm,
+00:49.86 it did tell us that this was not needed,
+00:53.84 but it didn't have this yellow box here.
+00:57.54 Technically the reason this is not needed is python says,
+01:1.5 well you're gonna go this path and created or this path and created and then use
+01:5.09 it here. To me. I really like to have it declared for sure.
+01:9.34 What if we change this to an if else all of a sudden this becomes a
+01:12.81 potential run time error about that variable not being defined.
+01:16.84 So I like to do it this way,
+01:18.02 we had this warning, we can address that in a second but what we're going
+01:21.21 to see will actually take this away anyway,
+01:24.74 We're riding this out in a long hand four line type of thing here.
+01:30.14 Sourcery says, you know what?
+01:31.42 We could replace us with. Just an if expression instead of a statement,
+01:35.86 we could just replace it like this.
+01:38.54 'fire_modifier = 5' If breathes fire.
+01:41.55 Self published fire else one and now we don't need that.
+01:44.88 There's no conditional really. Fire modifiers always going to be defined.
+01:49.74 There's a bunch of things like this that are pretty neat.
+01:52.53 For example, let's look at another one that we can contrive here.
+01:57.94 Now let's suppose I was going to go over here and create something like a list
+02:2.48 of all the levels of the creatures.
+02:4.52 So we could say levels equals this.
+02:6.55 Now again, this is contrived.
+02:8.3 So I'm not saying it really makes sense in the context of our game,
+02:10.98 but just to show off some examples,
+02:12.53 we could say 'for_c in creatures' ' levels.append C.level'.
+02:19.34 All right, so that's all pretty good.
+02:21.02 But notice now Sourcery not PyCharm is suggesting that we can do better.
+02:26.74 All right, let me make a comment here so we can see it permanently if
+02:32.7 we go over here and says you know what?
+02:33.96 That could actually be a list comprehension,
+02:36.08 convert the loop into a list comprehension boom,
+02:39.22 there we go. So levels levels are.
+02:42.61 Now just see that level four,
+02:43.99 seeing creatures. So these are the higher order things that sorcery does that.
+02:47.92 PyCharm doesn't kind of, the more Pythonic type of things,
+02:52.64 let me show you one more conditional that I think is going to be pretty cool
+02:56.38 So over here we have our statement like this,
+03:1.44 what if we wanted to say is strong,
+03:4.74 it's going to be base role if base role is not none, else,
+03:15.44 not strong, something like that.
+03:19.29 Okay, actually we'll just do the test like if based role,
+03:23.74 so notice now we get this re factoring suggestion,
+03:26.9 well then we got to print out now this says we can simplify the expression using
+03:33.74 or so here we had an if condition if it's five,
+03:39.16 if this case else one, but check this out,
+03:41.84 we can just say is strong base roll or not strong,
+03:44.89 so we have not just converting,
+03:47.45 you know like a conditional over to an expression but even these non obvious simplifications like
+03:55.21 it's either base role or is this other one?
+03:56.99 You don't need this whole if expression so I personally like sorcery,
+04:1.26 I do use it some of the time but it's not a super strong,
+04:5.88 you must go and use it endorsement,
+04:7.58 this is more awareness, like hey look there's these other tools and if you really
+04:11.36 get into re factoring you can check them out, it will take you further.

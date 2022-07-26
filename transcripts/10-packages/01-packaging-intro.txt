@@ -1,0 +1,23 @@
+00:2.94 Working with PyCharm projects is completely natural at this point,
+00:6.27 we've been working with so many different applications and projects throughout this course up to this
+00:11.28 point, but if you really want to distribute an application as a cohesive library,
+00:17.04 taking a set of files and directories and just shipping them around.
+00:20.38 Well that's not gonna fly. You need packages. In Python,
+00:24.6 there's structured ways of bundling together the set of files that work together into a package
+00:30.85 that has a version and it could be managed often time by installing it off of
+00:35.39 PyPI. Over a PyPI we have over 300,000 packages at this point,
+00:41.12 it's truly one of the powers of the python ecosystem and everything up there is a
+00:47.37 package. Do you want to change the album art of a bunch of MP3
+00:51.39 files, there's a package for that.
+00:53.74 You want to apply computer vision to a video feed.
+00:56.66 There's a package for that too.
+00:58.19 Right? So whether you want to work on an existing open source project or some
+01:3.42 existing package, PyCharm has special support to allow you to take an existing package
+01:8.9 install it into development mode and explore it and change it and test it or
+01:14.52 maybe even better. You want to create your own package.
+01:17.64 You want to create something amazing for the world and make it 300,000 and one on
+01:21.85 PyPI.org. That would be fantastic.
+01:24.29 Hopefully you do. You're going to see that PyCharm has great tools to create
+01:27.86 packages and all the infrastructure needed in order for them to be uploaded,
+01:33.21 a PyPI to be version to be installed,
+01:35.38 all those kinds of things, so let's get into packaging.

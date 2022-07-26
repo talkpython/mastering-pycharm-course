@@ -1,0 +1,32 @@
+00:0.04 Here we are in the unit testing chapter of our source code.
+00:4.34 We have an app down here.
+00:5.93 You can see that the app has this program file and then it has some core
+00:9.85 data access logic about finding a table some types that represent our entities and some errors
+00:16.0 and all those kinds of things.
+00:17.64 So, we have this program here that uses this core library.
+00:23.84 The whole idea of the app is we like to do some kind of open table
+00:27.3 clone. I call it table buddies or something like that.
+00:30.84 And it says, hey, are you looking to go out to dinner?
+00:33.58 What type of food would you like?
+00:35.62 And then it will show you the restaurants.
+00:36.83 Let you book a table there.
+00:38.3 That's the idea of this app.
+00:39.94 Let's give it a run just to see what it's like.
+00:41.4 So here it is. It's running table open.
+00:43.89 All right, so we're going to see let's go and have some burgers.
+00:47.75 A couple of good places here in town.
+00:50.33 We have a little big burger.
+00:51.76 There's several locations there, but certainly the skyline restaurant,
+00:55.78 They've got good milkshakes. You should go for that one.
+00:57.66 So, we'll give that a shot.
+00:59.0 And boom, we booked a table at skyline.
+01:1.62 And then if we keep going,
+01:2.53 let's try to book some more of these year for burgers and let's keep going noticed
+01:7.64 only two tables. Now there's one table now we tried again says,
+01:11.77 well, sorry, there's no food for that.
+01:14.82 There's no tables for that food type.
+01:16.36 So we can't book it. All right.
+01:18.9 That's the idea of the application and we're not going to test this user interaction bit
+01:23.51 instead, what we're gonna do is we're going to go over and test this core
+01:27.76 library that does the data access,
+01:29.44 like find a table, book a table and so on.

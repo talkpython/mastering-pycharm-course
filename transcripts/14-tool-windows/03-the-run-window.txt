@@ -1,0 +1,45 @@
+00:0.94 The next little tool window I want to talk about is the run window and we
+00:3.89 don't even see it here at the bottom.
+00:5.24 But if we hit run then there we go,
+00:8.35 it's popped up here. So we're running our little wizard battle thing over here and
+00:13.08 you've seen this a bunch already.
+00:14.47 We've been running all the programs for many,
+00:16.68 many chapters. Now, you can see when you do input,
+00:19.55 when you do input in this part,
+00:20.95 you know? Colorize, it is green here in this case we could run away
+00:24.63 One thing you gotta do is make sure that your focus down there for this
+00:27.75 to work. There's a couple of things that we haven't really talked about.
+00:30.93 You can do word wrap in case text is really long,
+00:34.33 you can tell it to make sure to scroll to the end and automatically stick.
+00:37.87 So if you go up here,
+00:39.54 notice that went away and there could be tons of output.
+00:42.12 The scroll bar could be shooting by,
+00:43.86 but if you wanted to stick to the end and keep up,
+00:46.24 got to click that. Print it.
+00:48.44 Yeah, I don't know. That's maybe in 1990s feature.
+00:51.44 We can print it. You could clear obviously this will allow us to modify the
+00:57.32 run configuration. It's just a shortcut of going up here and clicking edit configuration and
+01:2.15 then clicking here, we'll rerun it.
+01:4.24 Same as clicking that right there.
+01:7.24 A few other things to point out that we haven't focused on.
+01:9.94 If I hit run again, notice it stopped the program and restarted it right?
+01:15.03 We had some output here, we might have looked around and if I had run
+01:19.24 it starts over if maybe I'm doing multiple runs at the same time,
+01:23.38 I'm doing processing or I want to have something run in the background and some other
+01:26.44 option I'm going to choose at the same time.
+01:29.54 We need to go over here and edit the configuration and say allow running in parallel
+01:33.79 So this will happen if I had another program.
+01:37.5 Let's see, Go Run the Podcast one.
+01:40.37 Here we go and run this.
+01:42.94 Notice now we have our two windows and we can rerun that one and interact with
+01:46.74 this one. But if you want to have the same one,
+01:48.65 run multiple times, let's go to the right configuration.
+01:54.54 We gotta go over here and say allow run in parallel.
+01:57.73 So then while this one is running now we can,
+02:0.03 you know, start another one now we got 2D and this going in
+02:3.44 two instances. So there's a lot of cool stuff.
+02:5.77 We can see, you can now see there's like two in case you close this
+02:8.81 window, you can see there's like two a little number 2 underneath those to tell
+02:12.48 you how many of them are running,
+02:13.69 You can say stop 1 or stop them all.
+02:15.9 All right. So a lot of cool stuff that you can do with the Run configurations in the 'Run' window.
