@@ -1,0 +1,99 @@
+00:0.04 Let's just take a couple minutes and review some of the server side concepts that we've
+00:4.1 seen for PyCharm and actually touch on a few more that we didn't really call
+00:7.54 that specifically in our demo we started by saying,
+00:10.57 let's create a new project, We'll click that new project button up in the top
+00:13.59 We could create Django, Flask,
+00:16.22 Google app engine, Pyramid or Web2Py pick on any one of these and you
+00:21.26 get to select the particular details.
+00:23.33 So for example, if we pick Django,
+00:25.31 we can decide whether or not to enable the Django admin.
+00:28.94 so, really quick and easy way to create these PyCharm has fantastic html support
+00:33.94 because it's built on WebStorm but it also has rich server side template support.
+00:39.6 So here for example, we're working in a html template that is a Chameleon template
+00:44.19 It's wrapping a larger common look and feel shared underscore layout dot pt file.
+00:50.2 We want to add a div that has some template attribute language,
+00:53.77 some tal code on it. Right.
+00:56.23 This is the way things work in chameleon so we say tal colon and boom,
+00:59.43 look at that. We get all the language features of chameleon.
+01:2.72 Super, Super cool. If you're going to create structured html that has especially repeated
+01:8.91 items, you can use zen coding.
+01:11.15 You just write basically CSS expression of what you wished existed.
+01:15.64 For example, here's a div that has a class menu contains a 'ul'.
+01:19.21  That has an id.
+01:20.1  menu list and within there there's five list items that are the class menu item
+01:27.24 who hit tab and boom it auto expands that and we even guides us through filling
+01:32.25 out the elements of our list items.
+01:34.94 Super, super, cool. So if you're going to create something that has the
+01:37.56 structure, you really know precisely where you're gonna get,
+01:41.24 take a moment before you just start writing it all out and remember that you can
+01:44.63 do this. Cool little zen,
+01:45.98 Coding expansion if you need to change a tag,
+01:49.33 especially on large files, it can be really air prone up on one section.
+01:53.83 You want to change say a div to a span,
+01:56.04 you gotta go down to the bottom and remember this was the closing div tag that
+02:1.6 matched the one that I changed and if you get it wrong,
+02:4.34 boom things are gonna crash. Not just your html will look bad but these server
+02:8.79 side templates will crash, they can't pars themselves and it's all sorts of badness.
+02:13.74 The PyCharm has a cool trick.
+02:15.33 You just type on the definition to change the tag name and guess what?
+02:19.64 It will change the corresponding closing one as well.
+02:22.81 So here if we go to the select 'div'.
+02:25.04 For the opening div type span and see the bottom slash div has changed our correspondent
+02:29.67 We updated to slash span.
+02:33.04 We also saw in great CSS support so if we bring in some CSS library or
+02:39.91 if we write our own and we go work with a class on the html side
+02:44.01 It will auto complete all of the classes and id's and stuff that we've worked
+02:48.84 with before and vice versa. If we define,
+02:52.77 we start using some class names or 
+02:55.29 'id'. names in html and then go work on the CSS side.
+02:58.99 It auto completes those as well and it looks like you're trying to use this tweet
+03:3.3 class that you define over in your template.
+03:5.71 So bi directionally we get awesome support for CSS Auto complete here's when we haven't touched
+03:11.59 on, although you may have noticed,
+03:13.35 check out this thing at the bottom.
+03:15.44 So here we are in a template,
+03:16.98 it's gonna div that has a class content.
+03:19.28 It's kind div inside there, that's a hero then a row and then a smaller
+03:23.68 column thing and then a sub hero.
+03:26.3 So if we put our cursor online,
+03:27.94 15 check out was here on the bottom.
+03:30.63 It shows us the hierarchy, it shows us that we're in the div to install
+03:35.78 dot sub hero which is contained in the small column of block size eight,
+03:41.64 which is in a row which is a hero and you can actually click on those
+03:44.87 especially helpful in a very large file.
+03:46.71 Like what is this hero thing.
+03:48.48 Again, you could click on 'div.hero' would jump you to line six and
+03:52.29 then you can click back onto the red piece that would take you back to where
+03:56.07 you are. So it will do that without actually moving your cursor and losing track
+03:59.2 but it lets you quickly explore the hierarchy of html.
+04:2.47 So don't forget about this. It's incredibly helpful on large and complicated html pages.
+04:8.24 We saw a static file support is fantastic,
+04:11.0 but only if we set it up correctly.
+04:13.56 So it got set up correctly in our flask app because we created it from scratch
+04:18.08 in PyCharm. But if that wasn't the case,
+04:20.72 you might need to indicate the PyCharm right here.
+04:24.32 This subdirectory actually corresponds to '/static'.
+04:27.74 So the way you do that is you go to the directory at the top in
+04:30.66 this case chapter eight 'Async',
+04:32.26 databases and we mark that as a resource root.
+04:36.08 Not static but the thing that contains static.
+04:39.84 When we do that, you can see the errors of the missing CSS pieces are
+04:43.88 gone and we get auto complete.
+04:46.14 Super cool. We could even go to definition with 'cmd+b' or command click or
+04:51.16 you know the control version on the other OS. Finally I did mention there's ways to
+04:56.28 run little tasks like bundling and minification and whatnot.
+05:0.84 So if you go to the run configuration for your web app and then scroll down
+05:5.36 often this is off the screen,
+05:6.59 there's a little before launch, hit the plus,
+05:8.73 check out what you get file watchers,
+05:11.23 grunt task, Gulp task, npm task compiling,
+05:14.27 Typescript. running something else, some other python code that you write launching a web
+05:20.55 browser, all sorts of stuff.
+05:21.94 So pretty much endless ways to prepare your web app to run before it actually opens
+05:28.3 and starts running the python code here and that's it for our service side features that
+05:32.11 we're going to cover. This is one powerful web application for building python web apps
+05:37.57 that involve all the various pieces that modern web apps do.
+05:41.89 I absolutely encourage you to check it out.
+05:43.73 This is the tool that we use to build,
+05:45.56 talk python training and all the API's powering it from the back end and it
+05:50.24 is a joy to you. So hopefully you can get as much out of it as we do.

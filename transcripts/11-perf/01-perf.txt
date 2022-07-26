@@ -1,0 +1,17 @@
+00:2.74 We've written our code, we've debugged it.
+00:4.87 It's working great, but it's a little bit slow.
+00:8.48 We imagine that that web application that were built was going to be ultra fast.
+00:13.62 Everyone would be so impressed. They just click around and it's like lightning.
+00:17.44 In fact it's like a second or two per page and it's just dragging on in
+00:21.86 super slow, disappointed. Right, wow.
+00:25.21 How do you fix it? We asked the question,
+00:27.7 where are you spending your time?
+00:29.39 What part is slow? What part is fast?
+00:32.84 Instead of just guessing we'll be able to laser focus in on the part of our
+00:37.42 application. That's actually the bottleneck once you find the problem.
+00:41.32 Well, it's up to you,
+00:41.99 is your programming skills to maybe use different algorithms or data structures to make it fast
+00:47.0 But to start to know where to apply your time and energy and make changes
+00:51.73 You need to know where it's slow.
+00:53.61 And so we're going to use the profiling tools in PyCharm to laser focus in
+00:58.28 exactly where our program is slow and make it faster by understanding just the few lines what we need to change.

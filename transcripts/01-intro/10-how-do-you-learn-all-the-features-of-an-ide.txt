@@ -1,0 +1,73 @@
+00:0.04 You're taking this course because you want to learn PyCharm,
+00:2.69 you want to be more efficient with it and you want to be able to use
+00:5.03 more of its features. How do you do that?
+00:8.02 If you look at this picture here and you're not already familiar with PyCharm,
+00:11.98 it's got to be overwhelming. Yes,
+00:14.84 I was scared back there in the background somewhere is something that looks like a familiar
+00:18.66 text editor, but the rest of it,
+00:20.57 wow, there's stuff everywhere. We've got this database exploration thing and the right.
+00:24.74 Also the scientific tools, the project settings on the left there,
+00:29.29 pretty straightforward. But if you right click on any of those things,
+00:31.87 the options that come up literally fill the screen, along the bottom
+00:36.01 We have seven or eight tool windows,
+00:38.92 the terminal, the python console,
+00:40.91 the run the GIT tools, all these kinds of things and that doesn't even touch
+00:45.43 on all the menu options. Like for example,
+00:47.16 here we're pulling up that we might want to do something like manage virtual machines for
+00:51.87 testing our code in vagrant or if we get to docker all these different kinds
+00:56.66 of things. Right? How do you go about learning these things?
+01:0.65 Making an effort to use the features,
+01:2.43 finding the ones that are relevant and so on.
+01:4.84 I'm going to give you some tips and tricks to help you along the way.
+01:9.04 It really comes down to how do you discover the features and congratulations you're in the
+01:13.56 right course for that. We're going to introduce all the features that I think are
+01:16.63 important or most of the features anyway,
+01:18.61 that'll be pretty straightforward if you just go through the course,
+01:21.05 but then you've got to recall and practice them,
+01:23.84 suggest a couple of ideas. If you go to the GitHub repo,
+01:26.68 which I will introduce in just a moment,
+01:28.77 there's a link to a cheat sheet for Mac Os and there's a link to a
+01:32.61 cheat sheet or common commands on Windows and Linux.
+01:37.24 I recommend that you get that and you keep it somewhere at least while you're new
+01:40.59 or you know, it'll still be in the repo later.
+01:42.8 So you go back and get it again.
+01:44.5 But this is a pdf that has all the hot keys and all the features so
+01:49.12 you can scan through that and say,
+01:50.38 oh look, it has this feature I didn't even know about,
+01:53.04 and here's a hotkey, There's a plug in for PyCharm called presentation assistant and
+01:58.47 it is super cool. I'll be using it during this course.
+02:1.54 The goal, the idea of it is to pop up a little temporary flashing dialogue
+02:7.14 thing at the bottom of PyCharm as you're interacting with it.
+02:10.65 So, if I was doing a demonstration and I highlight something and I want to
+02:13.6 re factor I could hit CTRL+T to refactor if I press control t along
+02:18.78 the bottom of PyCharm and it'll say refactor hotkey=CTRL+ T.
+02:23.64 So that's going to be helpful for you as you're watching during this course,
+02:26.94 you'll see that green little box at the bottom pop up like oh,
+02:30.49 that's the hotkey that Michael clicked.
+02:32.53 But it's also helpful for you.
+02:34.26 You'll see that if you click a menu item or a toolbar button,
+02:38.14 that thing will also pop up,
+02:39.5 tell you the name of the command and the hotkey that you could do.
+02:42.55 So maybe the first time you use something you've got to navigate through,
+02:45.5 maybe even the help to get to the menu to then run it.
+02:48.74 But if you have a presentation assistant installed,
+02:52.34 you'll see along the bottom. Oh,
+02:53.51 I could have just hit control T instead of going over to the re factor menu
+02:57.5 and then like refactor this and choose whatever you're gonna do.
+03:0.65 Okay, so that would be helpful.
+03:2.48 This presentation assistant would be helpful while you're watching the course,
+03:5.36 but I encourage you to install it as well,
+03:7.22 even if you never intend to do a presentation because it will highlight the features that
+03:12.14 you would otherwise find through menus and toolbars and show you how to do the hotkey
+03:16.5 version. Finally get some sticky notes or open your to do app or get a
+03:22.3 notebook and write down the things that you really want to use.
+03:25.73 You'll learn about certain things in unit testing or certain things in profiling or certain things
+03:29.78 in the editor and just write them down and say today,
+03:32.92 I'm going to work on using this feature of the editor.
+03:35.37 So whatever I'm doing. Maybe I'm working on some unit tests.
+03:38.42 I want to make sure I use this feature of the test runner and just do
+03:41.87 that each for a couple of days,
+03:43.5 strike through it or throw away the sticky note and put up a different one.
+03:46.74 This repeated practice of the things that you really care about it will help solidify them
+03:51.52 And if you do it for a few days it'll stick you.
+03:54.25 Remember those features, there will be permanent and part of your new tool set.

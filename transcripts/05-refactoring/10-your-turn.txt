@@ -1,0 +1,39 @@
+00:0.04 I hope you got a lot out of watching me do all sorts of cool re
+00:3.06 factoring it's really one of my favorite parts of PyCharm because it lets you write
+00:7.62 code without too much care for how it's put together or being really careful.
+00:12.42 And then, as you understand it better,
+00:14.39 just quickly apply these things that make it better Now,
+00:17.86 it's your turn to do some refactory.
+00:21.04 Remember that podcast app that we had,
+00:23.5 the one that would download and show the titles.
+00:25.44 Well, we're going to take that code again and I've contorted it to have some
+00:29.82 problems or code smells and you're gonna use re factory and to freshen it up,
+00:34.75 don't be at the top. You can see there's this smelly podcast,
+00:37.58 it's smelly because there's lots of code smells to make sure you run it before you
+00:41.76 get started, it's gonna need a virtual environment with requests installed.
+00:45.94 Now, there's a couple of code smells to pay attention,
+00:48.72 particularly to and I'm showing you where this is happening.
+00:52.07 So just go through all the notes here and follow along.
+00:55.08 The first one is a large or long method smell.
+00:58.84 This one is just piece function that's just got too much going on and needs to
+01:2.69 be broken into pieces. So take that run with it the next one.
+01:8.14 This is a little bit of a deviation from the traditional code smells.
+01:11.9 If you think back to the languages that Robert C martin and kept back in.
+01:16.19 Those folks who came up with code smells,
+01:18.29 the languages they were using were purely object oriented,
+01:20.81 basically small talk and C++.
+01:23.44 So over there, one of the code smells is a large class that has too
+01:27.69 much going on, but in python often classes that are just static.
+01:32.1 Well, those are basically modules,
+01:33.42 Right? So we have what I'm coming up with as a name here is a
+01:36.5 large module smell. So there's another one here where we might want to break our
+01:39.84 code up into smaller pieces across different files.
+01:44.14 And finally, there's something I'm calling variable absence.
+01:47.4 So we've got this result that looks like this.
+01:50.34 Well, what is this? We don't know.
+01:52.22 But if we could name each piece,
+01:53.39 maybe we could make a lot more sense out of it.
+01:55.74 So once you make all these refactoring,
+01:57.6 just verify that your code still runs and then it works the same as when you
+02:1.31 started. But of course it should be cleaner,
+02:3.88 easier to understand and easier to extend. Have fun.

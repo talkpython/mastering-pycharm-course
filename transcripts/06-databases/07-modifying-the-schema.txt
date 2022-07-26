@@ -1,0 +1,41 @@
+00:0.14 You just have to modify data.
+00:1.6 What if we want to modify the structure of the table itself.
+00:5.54 So we can come over here and actually work on these various things,
+00:9.31 we come over and say I'd like to modify the column and that will let us
+00:11.87 actually work on the last updated column.
+00:14.66 But generally you want to work at I guess at least the table level.
+00:18.72 So we'll come over here. It's a modified table and let's give it some room
+00:24.04 Here. You can see all of the columns that if I click on one I
+00:27.68 could do things like remove it here and so on.
+00:30.61 You can see the keys, the indexes and the foreign keys there are known for
+00:34.31 this table. We come over here and I could actually add one.
+00:37.69 I could say what we're gonna do is we're going to have a column called rating
+00:41.68 that's going to be an integer and it's a default value is 3.
+00:46.14 How cool is that? Look at what is below though here is the actual SQL
+00:52.68 DDL script that you need to run to make this change and I think
+00:57.6 that that is fantastic because these are the kinds of things I always forget.
+01:1.45 What's the altar table thing for changing the column name.
+01:5.46 If there's data there. You know,
+01:6.83 things like that get really complicated.
+01:9.04 Now I could push this button and it will happen directly or I could actually pull
+01:13.89 this down and just stay open in the editor like so and I'm not really sure
+01:19.01 that I want to run this yet.
+01:21.24 So here it is in the editor and I could decide or I could do some
+01:24.69 sort of transaction or I could match up a bunch of them so if we come
+01:27.79 over here highlight that and we run it got some output here and notice we ran
+01:33.65 this and it completed. That looks pretty good.
+01:37.24 You don't see it already did refresh.
+01:39.21 I was thinking it wouldn't refresh.
+01:40.58 There we go. Well here's our rating that we created so we could come over
+01:44.8 and run this again and now we should have our rating in here somewhere.
+01:51.81 Perfect. You see now all of our entries have a rating and their default value
+01:56.02 of three. Super cool. Huh?
+01:59.14 All right so let's go ahead and take that away again.
+02:0.74 We can come up we'll modify and then just hit the minus.
+02:6.44 Gonna do a whole bunch of work to safely remove that and then put everything back
+02:10.38 like it was. But notice right there our rating is now gone again.
+02:14.11 So if you need to modify the structure of one of these tables well there's a
+02:18.68 really cool way to do it.
+02:19.68 Just go here do it in the editor and then hit save.
+02:23.18 Either generate a DDL.
+02:24.92 Transformation script like we did the first time or just hit execute and make it happen right away.

@@ -1,0 +1,47 @@
+00:0.04 When we ran reformat file, what we were really doing is applying the default settings
+00:4.39 the default PyCharm formatting settings,
+00:7.74 those are probably fine for you,
+00:9.31 but they might not be, you know,
+00:10.64 maybe you're working on a team that has different conventions about how long a line should
+00:14.81 be before it wraps. How do you wrap parentheses and parameters around say a function
+00:21.63 call or something like that. So we can go over to the preferences,
+00:25.82 go to the editor, python or whatever other language you like.
+00:28.87 We've got SQL, we've got Javascript all the things,
+00:31.74 but right now we've got python selected and across the top.
+00:34.49 You can see that there are six different tabs.
+00:37.44 Right? How this huge along section is just unwrapping and races.
+00:41.64 You can go in here and check things off and on and you can work with
+00:45.6 them and control them as you see fit.
+00:47.99 Which is really, really awesome.
+00:49.57 So that will help you get going in terms of getting the code formatted the way
+00:53.73 you like. What if you're working on a team if the settings of one user
+00:58.09 and the settings of another user differ.
+01:0.04 This is going to be a super annoyance because what's going to happen is someone is
+01:4.95 going to say all right, I'm done writing code for this file,
+01:7.19 let's reformat it and check it into source control and the parentheses will move around and
+01:11.62 the commas will move around and whatnot.
+01:13.82 And then the other person checks it out and they work on it and they're like
+01:17.2 all right, I'm all done,
+01:18.29 let's clean it up. They re format it shifts all of those things back around
+01:22.04 They check it in and it looks like all these different lines have changed.
+01:25.64 They haven't if you're lucky, you'll just see them fighting back and forth highlighting many
+01:30.17 many meaningless changes. But if you're unlucky what that's going to actually be is
+01:34.95 a merge conflict. But we can export these settings and share them with our team
+01:40.47 and that's super helpful. So if we go over there and do this little gear
+01:44.14 drop down thing, we can export it,
+01:46.02 give it a name, then everyone can agree to load it up.
+01:50.29 So that's really nice. But what if you're working at home on an open source
+01:55.2 project that has its own coding styles?
+01:57.28 You're working on the same computer,
+01:59.1 but on a work project during the day that has different files,
+02:2.81 different settings. You don't want to be loading up that files config and then the
+02:6.87 other config and swapping back and forth.
+02:8.87 That's not going to be fun.
+02:10.54 So, notice that the top here says copy to project so we can actually store
+02:15.07 the settings on a per project basis.
+02:17.32 So what is in source control for the open source project can have common settings for
+02:22.32 everyone using PyCharm and then your work project can have its possibly different settings stored
+02:28.52 inside of its project, which will be really,
+02:30.95 really helpful for everyone picking it up and using it right that way they don't even
+02:35.64 need to export and import and remember to configure it,
+02:38.48 it'll just be part of the project.

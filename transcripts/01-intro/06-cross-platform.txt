@@ -1,0 +1,17 @@
+00:0.04 It's worth taking just a moment to point out that PyCharm is completely cross platform.
+00:4.15 It runs on Windows, Mac OS and on Linux,
+00:8.34 There's some really great IDE's for certain technologies like Visual Studio and C#,
+00:12.6 but that only runs on Windows.
+00:14.28 So if you want to use C# on say Mac,
+00:17.01 you've got to get an entirely different product called Visual Studio for Mac,
+00:20.94 then it's not even closely related to the same thing,
+00:23.48 even though it works in the same files,
+00:25.06 that's not the case in the PyCharm world,
+00:27.52 it's exactly the same application with exactly the same features across these platforms.
+00:33.13 And people have even done crazy things like try to get it run inside of Doker
+00:37.62 to try to get it to run on a raspberry pi.
+00:40.23 I think they've gotten both of those things going as well.
+00:42.63 So there's a lot of different platforms,
+00:44.13 although I don't really recommend running it directly on a raspberry pi.
+00:48.04 That flexibility that it has is pretty cool.
+00:50.09 So regardless of where you work or the different places you may end up working. PyCharm is gonna be very happy working there.

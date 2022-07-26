@@ -1,0 +1,22 @@
+00:0.04 We saw that. We can right click on a file and say 'run' But what
+00:3.32 exactly does that mean? There might be parameters we need to pass to that as
+00:7.24 a application. There might be working directories or other things that we need to change
+00:11.02 So we can go over to the run configurations in the top right here and
+00:15.83 modify those. So if we click on that little drop down,
+00:18.75 we can choose to either edit the application run or the test run in this particular
+00:24.33 application. Of course. These were originally created by clicking on the app and saying
+00:29.41 run this once it's created, we might want to go and control it.
+00:32.8 So we can say edit it will open up like this and it's even categorized.
+00:36.12 Here's the python applications versus the tests that are going to run in 'Py' tests.
+00:40.47 We can give it a new name.
+00:41.96 We can allow multiple ones of them to run at the same time.
+00:45.24 Change the parameters, Change the python interpreter,
+00:48.55 the interpreter options, all that kind of stuff.
+00:51.44 We could even control whether or not they're little tools and things that run before our
+00:56.61 application runs. So really nice way to configure this.
+01:0.52 If there's not a nice right click run operation,
+01:4.36 there's a plus in the top left here and then I'll let you do things like
+01:7.63 create a Flask app that we use Flask ground or create a pyramid app that will
+01:11.07 run the I&I files.
+01:12.58 The primary definition of how the apps is supposed to run.
+01:16.04 So all sorts of good things to further control how your app is going to run over a run configurations.

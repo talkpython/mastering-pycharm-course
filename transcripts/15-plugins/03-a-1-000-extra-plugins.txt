@@ -1,0 +1,67 @@
+00:0.44 Now you've seen PyCharm has many of its core features and functionality built in as these
+00:5.95 plug ins. You might have also noticed there's a search box for other things in
+00:11.07 a marketplace here, in fact there are many,
+00:14.15 many different plug ins. So for example,
+00:17.08 we go down here, you can see that Angular and AngularJS is built in
+00:20.44 But the other popular ones,
+00:23.04 like for example, Vue.Js aren't so we could see if there is a Vue
+00:27.15 Js, there's not, but PyCharms supposes suggests that we search in marketplace and
+00:33.97 over here, if we go and see now we have a Vue.js plug-in
+00:38.73 we can install this, you can go to the plug in homepage,
+00:42.14 see what's offered. Do be a little bit careful about these things in general.
+00:46.43 Not necessarily Vue.js misses code running from some other random person you're putting on
+00:51.34 your computer running in the context of a tool that is working with your source control
+00:55.72 and maybe even secrets and what not like API keys.
+00:58.68 But you know, this one clearly someone's made by Jetbrains should be totally fine.
+01:4.24 There's also a bunch of other Vue.js things down here.
+01:7.37 So you can see you scroll along,
+01:8.97 there's a bunch of cool tools here that you could work with.
+01:11.84 We saw before that we can go down here and type key map and then that
+01:17.03 will give us a whole bunch of different key maps.
+01:19.84 Remember if you are into using.
+01:22.57 Say Vim. We have IdeaVim that's actually more of a formal one,
+01:26.87 but then we have the key map for all these different things.
+01:29.77 So if you want a VS code key map,
+01:31.47 you want Mac os you want a net beans?
+01:33.93 It's been a while since I thought about net beans.
+01:35.84 X code, WriterEmacs, whatever it is you're interested in visual studio and so
+01:41.69 on. All right. So if you wanted that key map that is over here
+01:46.09 under the marketplace as well. One of the things I really like,
+01:50.15 and that's been super helpful for me when we're working on projects,
+01:54.35 there's often external tools we have to bring in.
+01:57.44 For example, when you're talking to talk python training the website you're actually talking to
+02:1.45 Nginx. Engine X is actually talking to a service Daemon running under system D
+02:8.47 and then the python code is running that you talked to.
+02:11.43 So as part of managing that whole infrastructure,
+02:14.44 we have to manage those tools as well.
+02:16.49 So for example, if you want to EngineX,
+02:18.45 you're gonna work with that. You should probably install well Nginx support
+02:23.94 So I recommend this one. I've had it for a long time.
+02:26.26 It's worked plenty well, ideas if you open up a .nginx file or
+02:31.02 whatever file type it is associated with the thing you're picking here,
+02:35.54 you'll get automatic understanding of the syntax,
+02:38.09 maybe auto complete support and so on.
+02:40.15 So instead of just working with an Engine X configuration file,
+02:43.43 you can get all sorts of awesome support.
+02:46.15 We're working with .nginx.
+02:50.04 If you're working with system D.
+02:51.7 The other part of that, for example the things that are run they're called units
+02:55.49 So here you can get Unit files,
+02:58.55 support for 'systemmd'. And again this is super helpful because instead of just working
+03:2.91 with a pure text it actually shows you the syntax and you know the story about
+03:7.41 syntax highlighting, Auto complete. This is a really useful one as well and I
+03:11.46 realized I didn't have it installed and might as well once you install these,
+03:14.69 you do have to restart the IDE.
+03:15.99 Usually for them to take effect.
+03:18.64 So that's it. I encourage you to have a look through what's installed over here
+03:21.9 So you can see the various things that are being put together.
+03:26.64 Turn off the ones you don't want.
+03:27.66 If that makes you happy then get them out of the UI.
+03:29.45  And then go over here and explore.
+03:32.45 And in fact that's the final,
+03:34.45 your turn is to go over here and just explore using search.
+03:38.99 And can also see there's featured a new and then you know top downloads.
+03:44.51 And you kind of explore through that section as well.
+03:47.34 You just go in here and explore and make PyCharm your own,
+03:50.73 find the IDE extensions and plug-ins that you really wish were there
+03:54.18 and realize you know how to make what you've already learned even better by extending with plug-ins. Have fun.

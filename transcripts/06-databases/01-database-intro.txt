@@ -1,0 +1,16 @@
+00:2.94 Hello again. Friends. Virtually all major applications work with data in some way or
+00:9.29 another. And primarily that means working with databases.
+00:12.81 Usually relational databases, but also sometimes no SQL databases.
+00:17.64 And having a really good database behind your application is literally often the difference between a
+00:24.51 slow and sluggish and painful and frustrating experience or an ultra crisp fast application when you
+00:32.06 work with talk python training, does the site feel slow or is it blazing fast
+00:35.73 One of the main things I've done to make that site fast is I have
+00:40.68 optimized the database queries over and over and over again.
+00:45.24 Yeah, there happens to be really good cacheing on the static assets.
+00:48.38 By the way, we're going to focus on databases and what you'll see is that
+00:53.17 PyCharm has fantastic support for working with relational databases and also even some built in
+00:58.95 support or plug-ins you can add that adds support for no SQL databases as well
+01:3.89 And I think the way that PyCharm works with these databases will absolutely exceed your
+01:9.22 expectations. There are things that it does,
+01:11.74 particularly within the python code that I think will blow your mind.
+01:15.38 So hopefully you're looking forward to it. I know Iam this is the real cool aspect of PyCharm.

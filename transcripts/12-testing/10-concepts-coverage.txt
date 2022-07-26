@@ -1,0 +1,39 @@
+00:0.14 Code coverage goes hand in hand with testing,
+00:2.49 it tells you do you just happen to have tests or are those tests actually testing
+00:7.49 what's important about your program and how much So the official definition code coverage is a
+00:13.2 measure used to describe the degree to which the source code of a program is executed
+00:18.17 when a particular test suite runs we saw that PyCharm has fantastic support built in
+00:24.31 for a code coverage. All you have to do is go to your test file
+00:28.02 or test folder. You want to run,
+00:30.14 go down a right click on it and you can expand this out and say run
+00:33.8 py test in test.py with coverage.
+00:37.54 Once you already have a run configuration,
+00:39.47 you can just go up here and click the shield icon to run the test with
+00:44.11 coverage again, remember pressing CTRL+R or whatever your run command hotkey is will not
+00:49.93 run it with coverage. So you need to press that button or use the hotkey
+00:52.76 specifically for that option. The first time you run it may give you a warning
+00:57.56 and say whoops you don't have coverage py or you should use the bundled one.
+01:1.19 So I feel like a safe option is just click enable bundled coverage unless you want
+01:5.32 to make sure that coverage is included in the requirements.txt
+01:8.43  for other people running again,
+01:11.89 it should work and you'll get to really cool things.
+01:14.49 You'll get kind of excel like view on the right big report showing you whatever level
+01:20.07 you are navigated into your project,
+01:22.26 what is covered. What is not covered,
+01:24.8 how much and so on but even better on the left is we have this super
+01:28.45 cool view into the project structure and hierarchically showing us well in the projects we got
+01:34.2 6% and unit testing we've got 66% encore.
+01:37.51 We got 93% as you dive down.
+01:39.99 So really, really nice. This is my favorite way to just get a quick
+01:43.3 view and then once you say want to see the details about what are the 7%
+01:47.15 of uncovered lines in core.py double click that.
+01:50.69 And you'll end up here in the editor on the left here you'll see green sections
+01:55.08 This is where our tests actually ran that code And possibly red sections like this
+02:0.51 one We had no test for trying to pass in a non existent table.
+02:5.3 So the air condition never ran and line 34 was never run so we might want
+02:10.46 to write more tests. Same thing for line 37.
+02:14.34 So if we write some more tests,
+02:15.61 the ones that check for the error conditions in particular right?
+02:19.07 The one that tries to book a non existent table or try to double book a
+02:22.28 table. We rerun it with code coverage notice on the left here,
+02:25.91 everything is good, totally green. Now we have got 100% code coverage on 'core.py'.

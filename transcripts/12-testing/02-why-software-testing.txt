@@ -1,0 +1,24 @@
+00:0.04 Let's set the stage with just a couple of thoughts about testing,
+00:3.48 software testing, unit testing integration tests and all those sorts of things.
+00:8.54 The first thought is a quote from Steve C. McConnell,
+00:11.73 he's the author of code complete.
+00:13.55 And he says the problem with quick and dirty is that the dirty remains long after
+00:18.34 the quick has been forgotten. Most software lives for a long time.
+00:22.48 And if it is built poorly it is unreliable.
+00:25.79 If you have no way to change it and verify that it's still working,
+00:29.49 you're going to end up in a bad place as that software grows.
+00:32.64 The next one is anonymous but similar.
+00:35.74 The bitterness of poor quality remains long after the sweetness of meeting the schedule has been
+00:41.14 forgotten. So it's really important for us to test our software.
+00:45.46 Sure. We might write little programs that are just utilities and just knock something out
+00:49.13 real quick and have no test at all.
+00:50.51 That's totally fine. But if you're working on a team building professional software that's going
+00:55.39 to live for a long time,
+00:57.06 it's really important that it has test and that you can verify it.
+01:1.13 Still working Another aspect that often is forgotten around testing and dynamic languages like python is
+01:8.3 we need something to exercise the code to even verify that it's right.
+01:13.16 A continuous integration. What does it mean to build python anyway,
+01:16.59 doesn't mean very much so even just to verify that the source code is still in
+01:21.47 a functioning state. We need something to exercise it and unit tests are the perfect
+01:26.01 thing to do that through continuous integration.
+01:28.09 So that's what this chapter is all about.

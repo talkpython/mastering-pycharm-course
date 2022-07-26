@@ -1,0 +1,82 @@
+00:0.04 Let's play around a little bit more with this template auto complete and template tooling in
+00:5.22 PyCharm. I'd like to have a little bit more interesting data than a random
+00:9.18 number. So I went over here to my twitter and I just saw well,
+00:14.08 Anthony shaw said, but what if I am the leader of an underground organization and
+00:18.31 Nick Mosh said he needs to get analysis,
+00:20.98 paralysis and Brian Okkins said some things and so on.
+00:24.84 So I took that data that very limited data and threw it into this JSON
+00:30.16 file. So what I want to do is take this and put it into our
+00:33.7 web page. So over here let's start by saying going to have another we div
+00:39.23 here and I wanted to just have something like your recent tweets.
+00:46.44 Not as in my tweets I've created but things I've seen.
+00:49.51 So we come over here and we'll just a little a tab we slash tweets and
+00:58.46 put this. And so if we run this we now have your recent tweets with
+01:2.43 no styling but there it is nothing found.
+01:6.05 So what we need to do is have something and show up for this.
+01:9.23 Right, let's go over here and we'll have something real similar.
+01:13.52 So we'll just 'cmd+d' that highlighted 'cmd+d' and say tweets all this tweets or
+01:20.61 whatever you want again when you come over here and this is going to be tweets
+01:28.04 right? This will be Yeah,
+01:42.0 so there's some structure we're going to load up this page and somehow we need to
+01:45.91 get that data from Json into something structured and then passed over here.
+01:51.74 All right. So we don't need to do this.
+01:53.07 We need to say tweets equals Well,
+01:56.69 notice I've created this file here.
+01:59.53 I'll call this recent tweets, create this file here and it's totally empty.
+02:3.61 But what I want to do is create a class that we can then load up
+02:7.33 a bunch of instances of those that matches something like this as a name and a
+02:12.5 text. So this will let us see something really cool here.
+02:14.87 Actually call this a tweet now.
+02:17.45 Watch this. So if I say def type underscore you can see all the Built
+02:23.17 in Special Magic Methods of Python and I Want This one.
+02:26.84 And what does it have? Well,
+02:28.06 it has a name which is string and it has text which is a string.
+02:33.44 Notice those are gray, something super cool in classes we can go over here and
+02:37.91 hit 'alt+enter' and it says, you know what that looks like a field that you're
+02:41.98 passing into a constructor. Maybe you want to hang on to it?
+02:44.49 Yes, please. Let's do that.
+02:46.69 Same for this one and that cool.
+02:49.64 Here we go. And let's also give this a static method here.
+02:54.34 Maybe a class method and it will be load given a file.
+02:59.24 Well, some sort of file.
+03:1.74 Well, just we don't need to pass any files.
+03:4.49 We'll just assume that that's the file name and it's going to return a list of
+03:10.04 itself here when you're in a class.
+03:13.99 You can't use the name so we can put this and the quotes and PyCharm will
+03:19.01 still know what it means. All right.
+03:21.7 So this is going to be super easy.
+03:23.07 We're gonna say with open the file is going to be remember where we're running from
+03:29.2 this directory. So some data slash tweet stream.
+03:36.74 Read it, coding is UTF-8
+03:42.94 Mhm. That's fine. And then we're going to get the data is going to
+03:46.45 be the JSON gonna import that that load.
+03:51.34 Then now we need to turn this remember what is this?
+03:56.29 This is a list of dictionaries or the keyword arguments match the argument there.
+04:4.64 So we can do something really cool here we can check this out.
+04:6.86 We can return a list comprehension of creating a tweet where we take the data for
+04:15.3 'd in_data' that each individual tweet or maybe t t better.
+04:23.34 No it doesn't quite work. Remember.
+04:24.76 This takes two things. But if we do a star star that's going to take
+04:29.64 that and make it a keyword argument of that value that make that a keyword argument
+04:33.39 with that value which is exactly what we need.
+04:36.84 So a little cleanup on the spacing and actually this should be good to go let's
+04:43.57 go back here. We've got our recent tweets and this will be tweet and we
+04:47.48 have our tweet class. I need to import our tweets.
+04:57.44 Yeah. All right. We got our class here?
+05:1.02 So we just come down to our class and say load and should return all these
+05:5.22 recent tweets And now we can just say the recent tweets are this We need to
+05:13.88 change this. So now we have some options.
+05:16.0 We can't control space and look we can choose we want this one and over here
+05:21.23 for just a moment. Let's just put out recent tweets.
+05:24.52 Look at the auto complete. So cool.
+05:26.37 All right. Run it again.
+05:28.24 So they're getting a four or four this time.
+05:30.25 Let's see what we get Data.
+05:32.45 Tweet data, tweet data tweet data tweet so Cool.
+05:36.25 All right. Well that's not very useful.
+05:37.43 But it's a good start. We've loaded up this data and granted it's really simple
+05:42.52 but it gives you this sense of like a multi tier system.
+05:45.86 Right? We've got our data it would be like the database data access layer that's
+05:50.08 like this load and here's our or a model type thing,
+05:53.82 pull that back to the server side and then we pass it over to our template
+05:58.54 Our template renders it as some kind of html gives it back to the browser, cool!!.

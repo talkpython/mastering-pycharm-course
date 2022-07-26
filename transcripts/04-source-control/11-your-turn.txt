@@ -1,0 +1,21 @@
+00:0.04 Now that you've seen me work with Source control and local history and so on.
+00:3.97 It's your turn. It's time to write some code and get hands on with the
+00:8.21 source control features and the local history features of PyCharm.
+00:11.63 So jump over to the github repository,
+00:14.05 go to the your turn section and then topic number 3.
+00:18.02 Source control. So the idea is we're gonna go and build a basic little high
+00:23.24 level game to create a local git repository,
+00:27.84 make sure you have get installed on your system and then we'll just type git init
+00:32.07  in a folder instead of connecting this back to it.
+00:34.58 Some kind of cloud place like GIT hub or git bucket or git lab.
+00:38.35 We're just going to create a local Git repository.
+00:40.94 And in here we're going to write some code.
+00:42.62 We're going to write this game that basically allows you to guess the number and uses
+00:46.74 was called the binary search algorithm,
+00:50.14 ideally you're going to use the binary search algorithm to play it.
+00:52.8 So I guess a number between 0 and 100 and 50 too low 75 too high.
+00:58.12 You just kind of find your way half between each little segment until you get it
+01:2.03 nailed. Right. Then you're going to check this into your local Git repository as
+01:6.63 well as play with local history.
+01:8.84 So get out there, play with this code,
+01:11.07 Make sure you try out. Do you remember it and you know exactly how it works.

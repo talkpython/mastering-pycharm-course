@@ -1,0 +1,57 @@
+00:0.04 If we want to understand the relationship between all the tables,
+00:3.63 we can look at our SQLAlchemy classes over here.
+00:6.1 And yeah, you can see there is a relationship from releases,
+00:9.33 to packages. That's a pretty limited view.
+00:12.11 You kinda gotta go through all these files and the more complicated that your database gets
+00:15.88 the harder it is to keep that all in your mind.
+00:18.72 Wouldn't it be cool if we had a picture?
+00:20.54 Well, let's make one So PyCharm is actually really good at creating pictures and
+00:25.5 graphs that show us how this works.
+00:27.15 So go over here to our tables and we right click,
+00:30.84 we go to this diagram and we can either see a visualization or a visualization pop
+00:34.9 up. The only difference one is like a separate window.
+00:38.08 The other one is a tab.
+00:39.02 So let's just look at this visualization here check that out.
+00:42.41 You can see all the tables,
+00:43.88 all their relationships. Again, you can even see where the indexes are,
+00:48.3 where the relationships are, where the foreign keys are.
+00:51.28 All the good stuff that you might want.
+00:53.54 Now, the layout might not be exactly what you're hoping for.
+00:56.48 For example, I don't really want SQLite Master ever.
+00:59.04 This is like something that SQLite uses to maintain itself.
+01:2.79 We can just highlight that and hit delete also let's put these sort of separate stand
+01:10.52 alone tables over here like this.
+01:13.04 And yeah, this looks all right.
+01:14.23 We can kind of move that over over like this or so and then we can
+01:18.49 say a round edges and it'll actually fix things up a little bit that allow us
+01:23.74 to put this here. Maybe do one more time,
+01:27.01 nope, didn't like that. Let's put this back.
+01:31.44 There we go. We've got things organized the way we like,
+01:34.12 we can say fit content, so it's a little bit bigger.
+01:37.74 Close it and if we come back and ask for the diagram again,
+01:41.74 remember how I put it so you can organize these things just like you like.
+01:45.39 So it's easy to understand and yeah,
+01:47.81 that's a really, really good.
+01:49.33 The next thing that we can do That you might want to focus on on a
+01:53.3 real complex database is if you had 50 or 100 tables,
+01:58.73 you don't want them all just piled on here.
+02:1.13 Maybe you're focused specifically on a certain use case.
+02:5.25 And for that we can come over and say,
+02:6.88 let's say we're focused on packages,
+02:9.44 releases and maintainers. You just highlight those right click generated diagram and now we have
+02:18.71 a new visualization that just has those pieces.
+02:22.3 Let's put this in the middle,
+02:23.7 put this on the side, it wants to put it like that,
+02:29.06 doesn't it? There we go.
+02:31.42 I got to organize but see how we can just focus on a little part of
+02:35.46 our application. And somehow we got users in here,
+02:38.82 I don't really even need users so we can just have a nice clean model here
+02:45.13 that shows us the relationship between packages releases and maintainers If you want to focus in
+02:51.24 on a subset of your database,
+02:53.2 this is, like I said,
+02:54.26 especially useful when you've got a ton of tables in real world applications that have been
+02:59.72 around for a long time, 50, 100 tables entirely possible.
+03:3.17 Right? So you don't want to try to understand it all at once.
+03:5.5 Take little pieces, little use cases and so on.
+03:9.14 So if you're working with databases,
+03:10.43 be sure to use the diagrams to visualize them and understand them better.

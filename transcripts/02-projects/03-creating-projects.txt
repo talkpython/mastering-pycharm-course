@@ -1,0 +1,139 @@
+00:0.34 so I could just go to PyCharm right here,
+00:3.4 see here's a couple of projects I've already had open and I could just click new
+00:7.07 project or I could even say get from Git Version Control but I want to have
+00:13.93 something come from Git and then work on different projects nested within their and that's not
+00:17.63 gonna work perfectly and I want to have a little bit of structure from the GitHub
+00:21.85 repository. So in general you might just start a new project or open from Git
+00:26.18 but we're going to go to the GitHub repository up here and we're gonna clone this
+00:30.94 onto the desktop. So over the desktop give it some clone cd calling it this
+00:38.15 whole long name, I'm just gonna call it 'course'.
+00:41.94 Perfect, perfect. And then here you can see we have our git: (master).
+00:46.55 I'm gonna actually use a different branch in just a moment every now and then people
+00:50.75 ask me how do you get this prompt?
+00:52.17 This is 'Oh-My-Zsh'(Z shell), absolutely not required but it is kind of handy now
+00:56.84 I don't want to work in this branch here so I'm gonna say 'git check out'.
+01:0.41 now. Normally would do this in PyCharm.
+01:1.83 I want to give you the fresh experience.
+01:3.77 So I got to get things set up to be this fresh experience. Now with 
+01:7.46 'Oh-My-Zsh' you can actually hit tab and it will give you all of the
+01:11.01 branches which is awesome, you're gonna just be working with the default branch but as
+01:15.12 I'm updating this course from the previous version.
+01:17.41 I don't want to break it while it's in flight and being created.
+01:20.73 So here we go. Now We can go over to our project folder here and
+01:25.92 notice we've got our demos, we've got projects and there's a bunch of cool stuff
+01:29.52 we're gonna be working on but we're at our first project and in here you can
+01:33.52 see it's effectively empty. So what we're gonna do is we're going to create a
+01:37.52 new project and PyCharm over there.
+01:39.84 We have new project and notice right away we got a bunch of options.
+01:43.74 It suggests maybe it should go here.
+01:45.49 I'm going to propose that maybe somewhere else would be better.
+01:49.04 So I'm gonna drag this folder over here so Mac os can find it, in this
+01:55.95 project here I'd like to create the project.
+01:58.77 That's great. And it's going to create what's called a virtual environment.
+02:2.26 You may be familiar with these if you're not,
+02:3.94 these are really important building blocks to keep our projects separated and clean the ideas instead
+02:10.0 of using the system python, with all the libraries that might be installed,
+02:13.1 we're gonna create basically a copy an isolated empty fresh version of python using a virtual
+02:19.07 environment that then when we install libraries to it's just dedicated to that project.
+02:23.86 So PyCharm is proposing to automatically do that for us and I'll say,
+02:27.74 great, you can do that if we actually had other interpreters,
+02:31.23 maybe we've already created one on the command line or something like that,
+02:34.17 we could browse to it and PyCharm would detect it.
+02:36.27 If it were there following certain conventions like '.ENV' or '.VENV',
+02:40.78 for the name. It would suggest that as well as an option,
+02:44.04 it's also proposing to create a main welcome script,
+02:46.39 which kind of says here's how you run PyCharm.
+02:49.68 We're not going to do that.
+02:50.44 We're going to start fresh. But you could leave that check if you wish.
+02:55.94 Your python is not the only option.
+02:57.25 We have Django, we have Flask, Pyramid,
+03:1.15 we have Scientific stuff. We even have some front and things like React and Angular
+03:4.7 but we're going to stick with our pure python here.
+03:7.77 All right? That should be it.
+03:9.03 We should be able to get going. To notice right away a couple of things.
+03:12.31 It's looking through all the installed libraries and python to figure out the auto complete and
+03:17.35 code corrections and things like that.
+03:19.19 So that takes a moment. But just the first time you open it down here
+03:22.57 you can see which virtual environment is running this is the interpreter.
+03:27.44 And you also see the GitHub branch that we checked out right there.
+03:30.98 That's all cool. And here's our virtual environment that got created and we're not gonna
+03:36.22 need our placeholder so we can go ahead and delete that here.
+03:39.26 We have our empty project. We might as well start by creating a file.
+03:42.76 So let's go over here and create something,
+03:45.51 we'll just call 'hello.py' notice if we go over to the project here,
+03:50.01 let's say new, There's all kinds of new files we can get,
+03:52.28 it's not just python, we could create Jupyter notebooks,
+03:55.14 we could create style sheets, we could create javascript files,
+03:58.86 all sorts of things. Even the funny Gherkin feature file,
+04:1.83 if you wish, we're gonna start by creating a python file and I'll just call
+04:7.01 this Hello because we're working in a directory that has a GIT repository somewhere above it
+04:15.4 is itself a GIT repository. PyCharm says,
+04:18.77 Hey, we can automatically add that to GitHub for you notice it's red over
+04:22.13 here. We're going to dive into the source control features.
+04:24.02 But I'll just so it doesn't bother us.
+04:25.69 I'll say sure you can go ahead and add those files.
+04:27.68 It turned green because now it's staged in Git but not yet committed.
+04:32.84 Okay, so in our Hello World file,
+04:35.19 you know the drill, we're going to do something like print.
+04:37.63 Hello World as we type it,
+04:41.61 all sorts of help. Very nice.
+04:43.94 Often the Hello World people perceive this as how do I create the most minimalistic type
+04:49.17 of application that I can, but that's not really the purpose of Hello World.
+04:53.56 The purpose of Hello World is to prove that the system is set up to run
+04:57.67 some kind of application in this case the python app.
+05:0.35 So it'll prove that our virtual environment set up and that we can,
+05:3.44 you know, click this button up here maybe somehow and make it run.
+05:7.39 So how are we going to do that?
+05:9.24 Well, we'd like to click this looks like a run thing you hover over.
+05:13.4 It says run but obviously it's great out.
+05:15.79 It's not going to do anything because we could have many python files.
+05:18.74 Open PyCharm doesn't know what to do with them.
+05:21.34 What we can do is we can right click over here and we can pick any
+05:24.97 of these options, run debug or even we could run with code coverage.
+05:28.68 We could profile it, we could do concurrency analysis.
+05:32.59 All that seems way overkill for Hello World.
+05:35.13 So we're just going to run it like this.
+05:38.24 Hello World. Perfect there. You have it.
+05:40.05 You can see that it ran our file here,
+05:43.14 way out at the end And it ran it using the Python,
+05:46.67 out of our virtual environment. That PyCharm created not the system one.
+05:51.44 And by the way, if you need to run outside of PyCharm,
+05:53.42 just copy that path. That whole thing there and drop into a command prompt or
+05:57.43 terminal and boom, off you go.
+06:0.04 All right. So now that we've run it,
+06:2.29 we've right, clicked and said run this is generated what's called a run configuration up
+06:6.03 here now says Hello, we can change the name.
+06:8.67 Now, I have a presentation assistant installed,
+06:11.0 which I mentioned before in the previous chapter.
+06:13.34 But if I click this, it's going to actually pop up this green box that
+06:17.19 says run Hello via CTRL+R on your current key map or if you're on windows
+06:22.27 or Linux, you can press 'shift + F10' depending on the key map you pick
+06:26.14 sometimes that's F5. So if I hit that hot key again you can see
+06:29.42 right here. It just keeps running it.
+06:31.14 But this is something you really want to pay attention to as we work with different
+06:34.78 parts of PyCharm, it will help you learn what the various commands are being
+06:39.88 called. And sometimes it's not entirely obvious.
+06:42.45 Sometimes, like if I say wanted to reformat this code here,
+06:46.47 I can go over to code and I could click reformat or I could just hit
+06:50.43 command 'ALT+L'. So sometimes I'll do something like this.
+06:53.57 You know what happened? Just look at the green box.
+06:56.21 That's what's going on there. One other thing to look at here is we don't
+07:0.5 need just the one file. Right.
+07:2.19 One of the beauties of PyCharm is it understands many many files.
+07:5.0 We could have another file and here we could have something like an other method.
+07:10.74 It takes some text and I'll print,
+07:17.04 print out whatever the other text is.
+07:19.06 Now there's a little squiggly here meaning that the formatting is a little bit off so
+07:22.99 we'll just let PyCharm fix it.
+07:24.79 So it doesn't look like there's some kind of air.
+07:27.04 All right. But of course what we're running is our Hello World app over there
+07:30.23 All right. Well, that's the quick introduction to getting started.
+07:34.64 Main takeaways. Virtual environment. Very important if you're in a GitHub repository or some
+07:41.04 other kind of source control, it likely will discover that and automatically integrate that we
+07:46.18 didn't do anything. This just happened automatically.
+07:49.44 When we want to run a file,
+07:51.55 we have to go over here and say first create some kind of run configuration so
+07:57.27 that we can then click here.
+07:58.46 Hit 'CTRL+R' to run it.
+08:0.84 That's it. We've written a program with PyCharm.
+08:4.14 Well, I would be too proud of this thing, but still pretty cool!!.

@@ -1,0 +1,54 @@
+00:0.0 We start working with these databases by adding a data source.
+00:2.93 So open up the database tab window here like the plus data source and then you
+00:9.16 saw there's a huge bunch of options and even under other there's some that are partially
+00:14.09 or have limited support or something to that effect.
+00:17.34 So what we did is we added our SQLite data source.
+00:21.04 The most important thing about doing this is that we have the right drivers downloaded.
+00:26.14 So down here you may need to click download drivers and set this up to work
+00:30.85 with the right one after that.
+00:32.56 You can drag and drop over the SQLite database or you can actually fill out the
+00:37.23 file name here using the plus browse over to it.
+00:40.44 You can test the connection and then add it everything's working.
+00:43.56 If everything works right, you should now have your database schema and all the details
+00:47.96 about it available here in the window.
+00:51.14 First thing you might want to do is look at the structure of the schema.
+00:54.68 What are the tables? How do they fit together?
+00:56.55 We can go to the diagrams and show the visualization gives us something like that.
+01:1.2 Remember you can manually delete things like the management admin section that you don't care about
+01:6.76 You can also delete other tables.
+01:9.31 You can even select certain tables to focus in on a certain scenario and just see
+01:14.01 the diagram for that. When you're working with the data,
+01:16.67 you're usually writing SQL queries but we can go and say jump to the console and
+01:22.05 then write things like select star from packages where and we get all sorts of Nice
+01:26.57 Auto complete. That helps us write our queries much faster and actually know that they're
+01:32.23 right. Right. Is it author name or just name?
+01:35.08 Well PyCharm will tell you once we run it,
+01:36.92 we get the outputs down here at the bottom and we get this excel grid type
+01:40.99 of thing where we can see the data,
+01:43.14 sort the results and even make changes to them.
+01:47.04 If we make a change, it doesn't actually go back into the database.
+01:50.34 It queues up here and is then eventually ready to go.
+01:53.6 We can either preview or push those changes back to the database.
+01:57.53 That button when it turns green.
+01:59.74 We can also use this section to do all sorts of stuff like create a script
+02:4.24 of inserts, SQL inserts here and copy it to a file or import a series
+02:9.94 of inserts and then run them against this database,
+02:12.61 create CSV files, all kinds of cool stuff.
+02:16.34 So if we expand this out we can see,
+02:18.34 we have the SQL inserts or the JSON are all kinds of things.
+02:21.86 If we want to actually create the structure of the database,
+02:24.91 we can click the DDL
+02:25.87  Button and it will open up this data definition language script that's going to
+02:30.84 actually generate the table. So if we wanted to say take this packages table and
+02:34.97 create it somewhere else on a new database.
+02:37.74 We do this, we want to modify the existing scheme out.
+02:41.63 We can right click on a column on a table,
+02:44.5 whatever and say modify schema. We get this visual editor that lets us make changes
+02:50.17 like adding a column or something and then we actually get the script that's going to
+02:54.38 run. And that is fantastic because you'll be able to see exactly what changes are
+02:58.05 really going to happen to your database.
+03:0.14 You can even save them to a script,
+03:1.89 share them with your DBA.
+03:3.28 Let them verify. Yes, this is actually what I want to happen.
+03:6.68 You're not going to break anything.
+03:8.1 In this case we're going to rename created underscore date to created.

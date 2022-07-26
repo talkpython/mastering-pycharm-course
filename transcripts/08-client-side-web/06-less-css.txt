@@ -1,0 +1,109 @@
+00:0.04 You know the scene sometimes LESS is more well with CSS it's a pretty painful experience
+00:7.45 when you're putting together a ton of CSS take over talk python training on the site
+00:12.33 there, we've got something like 5000 lines of CSS and boys.
+00:16.84 They're repeated stuff. I wish I didn't have to be in the CSS files.
+00:21.54 Why does it have to be there?
+00:22.54 Because we don't have things like variables and whatnot in CSS but with less and frameworks
+00:27.99 like that we do no less is super cool.
+00:32.04 Less lets us come and actually create variables,
+00:35.12 do math. If I were to have some items and put them one within the
+00:39.91 other and that would be like a nesting relationship and so on.
+00:43.47 But just like typescript, you can't use this.
+00:46.66 This is not CSS it's LESS you need to transpile.
+00:50.16 I'll it down to CSS just like our beautiful class became this crazy looking iffy in
+00:55.72 real javascript. Same deal here.
+00:58.54 So what we're gonna do is we're going to use {less} to style up some basic
+01:3.08 basic html. So we go over here and I've got this blink example and I'm
+01:7.59 gonna use my zen coding thing.
+01:9.32 What I want is a section called items in here.
+01:12.79 I want to have some divs that have the class item,
+01:16.22 let's actually have five of those inside those items.
+01:20.28 I would like H2 header and a div with a class text ready.
+01:25.0 123 go boom, done we've done it.
+01:28.39 We've written it. It's amazing.
+01:29.59 All right. Also call this first item and I'll just fill this out with a
+01:32.84 little bit of text. Fantastic,
+01:36.71 we've got our html put together no styling whatsoever.
+01:40.72 Let's see how amazing it works.
+01:41.94 It looks here. Not super amazing.
+01:44.45 Let's actually go and give it a header just so it has something like that.
+01:51.99 Here's our demo of less and then all these things,
+01:55.54 what I would like is to these for these to be in little tiny boxes and
+01:59.19 I would like them to be squares that bounce around.
+02:1.75 Wouldn't that be cool? Yes,
+02:3.04 it would. So we're going to go and create Less CSS or less style sheet
+02:8.92 type thing that compiles down to CSS now,
+02:12.58 you might have noticed over here and it says you have to install less to get
+02:18.53 the less C compiler. So make sure we've done that,
+02:23.04 PyCharm won't do that for us.
+02:24.65 It has tooling for it, but it needs to locate this compiler.
+02:28.64 So we're going to try to do this.
+02:31.44 I'm gonna do it with a little more global Less.
+02:34.15 There we go. We can just check that.
+02:36.9 We have let's see, Perfect.
+02:39.99 Looks like we do. So let's go and create our Less file and create 
+02:47.11  a file. I'll call this 'site.less' now says do you want to run file
+02:51.32 watchers which are basically things that will go and watch this.
+02:54.25 I'm gonna trust this project here and say yes,
+02:57.52 again, there's no little Chevron thing that we could do us to declare some variables
+03:3.18 Remember if we're back over here,
+03:7.24 we declare variables like @ pretty much CSS styles you want to say @,
+03:14.14 I have a  @light background looks pretty cool and let's just give it just say
+03:20.39 #fff for a second and then let's pull up the little color wheel and
+03:24.13 I want this to be some kind of like light blue with this light green here
+03:31.09 So this will be the light background color and maybe make it so it doesn't
+03:35.89 think it's misspelled, This will be darker background color and for the darker one we
+03:41.83 can make it well a little bit darker,
+03:43.79 something like this. What else do we want to do?
+03:46.52 We need to style all the items and then for each one of these,
+03:50.33 I want to give it a border in a background color.
+03:52.57 So let's do that standard CSS here,
+03:55.12 sort of so items but what's really cool about less is I can and hear say 
+04:2.0 .item let's get rid of this thing.
+04:4.01 There we go. And we will give this a color notice the auto complete now
+04:20.61 if we hit save check out,
+04:22.08 just like with typescript over here,
+04:23.73 we have the CSS version. Let's look at that and put them side by side
+04:30.84 notice items containing item and then it has the values here.
+04:36.74 Right, So I love this sort of nested organization because then I can just collapse
+04:41.03 it, that's all the stuff that applies to items globally.
+04:43.41 Not a whole bunch of things that item dot this items at that and so on
+04:46.68 So let's go and put this file up here and check it out.
+04:54.84 See what we got. There we go.
+04:58.28 That's a pretty good start, isn't it?
+05:0.61 We need to do just a little bit more so let's go back to our less
+05:4.49 and this thing is going to have a display right now,
+05:6.96 it's display block, which means it goes all the way across.
+05:10.52 But this will be inline block and then it's with will be 300 PX.
+05:19.94 That's looking good. We want to give it some margin and some padding.
+05:31.44 There we go. Really nice.
+05:33.7 Let's make a little wider. Alright,
+05:35.49 we're getting the rap. I think it doesn't need to be so large But that
+05:38.97 has a 200 maybe this is a 10.
+05:42.64 Here we go. It's starting to look nice,
+05:44.52 right? Maybe we want our H2 is to have their text centered but we
+05:48.7 want in here we could say H2 like this text align center notice now we've
+05:54.93 got this little bit right there,
+05:56.65 that's the CSS you right. There's this very,
+06:0.05 very cool. So I'm not really going to have to style this whole lot more
+06:4.04 I guess, but I guess maybe one other thing.
+06:7.14 Let's have the text also had over here.
+06:10.13 Remember we've got our div.txt down lets say dot text color of the text is
+06:18.54 going to be this light actually dark for background notice again,
+06:25.08 lets get put down here like that and we can also let's have it text align
+06:31.36 center but separately. Perfect. Now we can go back to our variables and say
+06:37.04 you know what? Which we could have this darker so guess what?
+06:39.96 We can make it whatever we want to make a change,
+06:42.51 you can see it run through there and there's our greenish text it's hard to see
+06:48.31 the green but yep in fact that is the green,
+06:51.17 you can see really, really cool stuff.
+06:52.45 We can do with our 'less' over here even organized a little bit,
+06:56.03 I love the nested the actual nested behaviors there that result in generating nested CSS later
+07:3.73 on the variables, all kinds of things.
+07:6.52 You can even do math I guess we could do something like it's going to be
+07:10.61 @light minus this is a darker color right there than that one.
+07:16.79 You can see those two colors really,
+07:18.63 really cool. I just love how less works.
+07:20.66 So if you're doing a lot of CSS and this more formal language of defining design
+07:27.94 appeals to you well you can absolutely have PyCharm help you with it,
+07:32.97 it has auto complete to understand the syntax, it has the transpilers everything you need.

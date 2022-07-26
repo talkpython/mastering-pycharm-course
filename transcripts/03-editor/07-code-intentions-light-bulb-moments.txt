@@ -1,0 +1,43 @@
+00:0.04 One of the powerful things that PyCharm does is it creates code for us.
+00:4.18 It guides us as we're creating new code.
+00:7.12 Even if we don't have that code written yet.
+00:9.46 We saw that it helps us work with existing packages and other libraries,
+00:13.21 but it also will help us create code in a really quick and efficient way.
+00:17.84 So for example, we're working with this data access layer.
+00:20.38 It has a find user by email that works great.
+00:22.93 But maybe we want to, once we find the user change the email now we
+00:27.61 can't just set it on the user object because we want to actually have that user
+00:31.58 saved back to the database or something like that sent over an API So we want
+00:35.84 to write a function for it.
+00:37.84 So we just write what we wish existed.
+00:40.4 Data dot change email and we pass in the arguments and we get this light bulb
+00:45.14 moment. So here you can see PyCharm is telling us,
+00:48.82 hey, hey, hey, this doesn't really exist.
+00:51.4 And if you run it it's going to crash or if you 'Alt' hit enter,
+00:55.41 I will actually create that code for you.
+00:57.25 So if we hit enter, we get this dropdown of options,
+01:0.54 we could ignore certain things. Could suppress this warning for others.
+01:4.88 But what we want in this case is to create the function change email.
+01:8.6 Not here, but in the 'data.py' module we hit okay boom,
+01:13.86 it takes us right over there and it navigates us through the elements that we've got
+01:16.76 to fill out, guessing that it's user and new address.
+01:20.54 Super, Super cool there so some of the things we can do with these code
+01:24.54 intentions is what we just described,
+01:26.16 creating something from a usage like a method or a class.
+01:30.54 You can do quick fixes as we saw with our service module in our opening demo
+01:34.63 we went to work with it,
+01:36.89 it existed but it wasn't imported so it wouldn't work.
+01:39.96 So PyCharm was happy to write import service at the top and even went further and
+01:44.61 said we will import and install other way around install and then import requests.
+01:50.44 It also do Micro-refactoring sometimes it sees things that can do slightly better and
+01:54.49 it's like you know, we could say for example remove the unneeded parentheses or change
+01:59.13 the way that the string formatting looks and so on.
+02:2.74 It will remove dead code like if there's a parameter that's not being used or variable
+02:7.09 that's not being used, it will help you with that.
+02:9.94 It checks for Pep 8 violations.
+02:12.46 Sometimes it'll fix it often. Just a reformat code will fix it but not always
+02:16.17 It'll look for performance issues,
+02:19.1 it'll find python 2 to 3 mismatches,
+02:21.42 package maintenance items and so on.
+02:23.93 So keep your eye out for those little lightbulb moments because that's PyCharms saying there's
+02:28.93 something going on that's not quite right and I can make it a lot better with minimal effort for you.

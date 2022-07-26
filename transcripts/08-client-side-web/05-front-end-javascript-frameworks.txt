@@ -1,0 +1,117 @@
+00:0.04 Well we wrote some very basic Javascript.
+00:2.14 What about the really rich front end frameworks?
+00:6.04 We've got Vue.js we've got React, React native, Angular all these things that we might
+00:12.39 go and use to create better front end single page application or spa apps.
+00:18.44 Maybe even progressive web apps that mostly work offline.
+00:21.72 No I'm a big fan of Vue and I'm going to show you some examples with
+00:25.3 that. But we also have angular and other things built into PyCharm very very
+00:30.41 quickly if you're not familiar vue,
+00:32.94 let me just give you the super high fly over.
+00:36.24 So the idea is you create one of these apps and the app targets some part
+00:41.99 or all of your page based on .
+00:43.87 'id' And then you can give it data like a message.
+00:47.49 It has some value and that will actually data bind here.
+00:50.43 So this is not like Flask or pyramid or something where it renders it once and
+00:55.0 then out it comes. They stay in sync.
+00:56.97 So if encode you change data.message or just app.message that will actually
+01:2.21 change what is happening on the page.
+01:5.54 We can also have methods like reverse message.
+01:8.73 We can have other types of things.
+01:11.27 Say where it's like a computer property just like python property.
+01:15.48 So here if I click this you'll see up here we're actually binding to the button
+01:19.84 click and how does this work?
+01:22.14 We have all of these different features like v-on-click do this thing.
+01:27.44 There's also ways to do greater bonding binding through what are called models.
+01:32.44 But down here we can say that the v-model is the message and it will just
+01:35.69 bind over to that and much more interesting and holistic ways.
+01:39.73 Okay, so this is the framework that we might theoretically let's say we want to
+01:44.62 use this to build our front end application.
+01:47.94 There's a lot of specific stuff for Vue Js.
+01:50.78 A lot of these sort of V dash commands and whatnot.
+01:54.54 Actually have a simple little example.
+01:56.19 I'd like to show you over here in PyCharm.
+02:0.24 Look it has a V model right here,
+02:2.4 it has V4 for a loop another v model here.
+02:6.19 It's doing just the text data binding and so on.
+02:10.74 Does it look good? What do you think?
+02:12.23 Attribute V model not allowed here.
+02:14.36 If I type v dash uh yuck,
+02:18.94 I'd hate to write vue in this thing or what I know.
+02:21.48 So there's two things we have to do in order to make sure that we can
+02:25.0 turn on better support for Vue Js in fact fantastic support.
+02:29.74 The first one is you need to get the plug in the Vue Js plug in
+02:33.58 go to the market place up here,
+02:35.86 search for Vue Js and enable it.
+02:38.44 So that happens. The other thing is down here says make sure you have Vue
+02:42.86 Js listed in your project dependencies in package.json
+02:45.99 What does that mean?
+02:49.65 Here's some frontend world for you.
+02:51.74 That is the way you specify the javascript requirements for your project using NPM.
+02:59.38 So what we're gonna do is we're gonna use Node.js and NPM nodes pip to
+03:3.77 install and register Vue Js here.
+03:5.98 I'm gonna go over here and open this specific spot in the terminal.
+03:12.74 What we're going to type is npm install.
+03:15.37 vue It used to be a Vue Js but now that's deprecated
+03:18.44 It's just vue. Okay, so now if we look here,
+03:23.05 we now have these files and some node modules,
+03:27.12 let's go have a look at that.
+03:29.54 And our package Json we're using vue.
+03:32.54  beautiful. And here we've got our vue,
+03:35.55 we've got our dist and then here's all the bits that we're going to need.
+03:39.44 So let's go over here and actually say we have a script node modules,
+03:47.64 vue dist vue.js. There we go now.
+03:55.02 Right away. The page looks better.
+03:57.21 Just look better. Remember all these things that were not allowed there now,
+04:0.68 not just allowed, but they even have this purple amount here.
+04:5.44 And if I go and type V-
+04:7.52 we now have V model V-bind V-on V-slot,
+04:11.28 all of these things that you would have to do to program the front end with
+04:15.25 vue.js. Fantastic. But it's way more than this.
+04:19.39 Watch this. If I hold down the navigate feature,
+04:24.04 this is over here. I showed you this app,
+04:27.83 we're defining data fields like this.
+04:30.58 These are purple, not just because they're in the quotes here,
+04:33.43 they're purple because over in the app side of things,
+04:36.87 we have our data piece and it has a name currency from from convert to an
+04:43.22 amount. So for example if I go over here and I take this way and
+04:47.52 I put them out to my error,
+04:50.54 What's wrong with it over on your app?
+04:52.5 Guess what? You don't have an app to this?
+04:55.36 Integration is super super impressive. So it actually knows that these are the fields that
+05:1.52 were allowed to work with and these are the computed properties.
+05:5.84 I'll go back and I'll type this away a little bit like oh yeah I want
+05:8.76 to bind the was an amount,
+05:10.82 the price, the final of the currency.
+05:13.16 I'm out there. It is bam that's the amount we want to buy into.
+05:18.04 Okay, so down here we're gonna loop over some stuff and what this does is
+05:21.1 it's going to basically take some amount of money,
+05:24.84 an input currency and output currency and tell you what the conversion is down here,
+05:29.59 we're including our app.js let's look at that real quick.
+05:32.34 So we've got our data which has name currency convert to and from an amount and
+05:38.3 the computer properties. And then any time any of these things that are involved in
+05:43.0 it changed. Well then we're going to re compute this property which is just kind
+05:47.62 of straightforward manuel. So if we're going to go from whatever we're converting from.
+05:52.58 Is that GDP, is that 
+05:54.37 USD. In the morning to convert say over €2.
+05:56.75 Well, here's how we compute it And then you go to the bottom or going
+05:59.95 to return that as a formatted number so that it doesn't have like 0 $1 or
+06:6.64 something weird like that. All right,
+06:8.9 well let's go and run it.
+06:9.72 See what we get here. We have it.
+06:12.59 We've got our amount, we've got our dollars.
+06:14.89 Look at this. It's already bound do this data right here founded those I want
+06:22.28 to go from USD to € and here's the calculation if I start putting values in here
+06:28.74 just as I up arrow or however that value changes.
+06:33.04 It's triggering that amount of change which triggers the computer property to be re computed.
+06:39.11 So yeah, vue.js is pretty awesome and that's how it works.
+06:42.17 But the takeaway is not so much this app,
+06:44.48 the takeaway is, wow, look at this integration.
+06:46.87 Like look at this that it knows that the stuff to find over in
+06:50.94 javascript in that data area is this right?
+06:54.51 These are all turning purple and that you get pretty good auto complete for the keywords
+06:58.6 and so on. So if you're working with something like this,
+07:1.62 it's really, really got fantastic support Also we've got similar things for Angular JS and
+07:8.23 other frameworks as well. If you're working with Vue or one of these front end
+07:12.8 frameworks be sure to learn how to set it up.
+07:15.44 So PyCharm works like this,
+07:17.41 it gives you all the support you need.

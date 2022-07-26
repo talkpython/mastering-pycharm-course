@@ -1,0 +1,50 @@
+00:0.04 One of the very first things you're sure to notice when you're working with PyCharm
+00:3.83 is it has great syntax highlighting.
+00:6.84 Here's an example from one of the jumpstart examples that we were playing with earlier,
+00:11.38 here's the game loop for that wizard app and notice we've got coloration for strings,
+00:16.57 for numbers, for key words like death and wild and true,
+00:22.34 all sorts of stuff jump out with color to help us understand our code really,
+00:27.17 really well. Of course it would be no surprise that this is highly customizable.
+00:32.76 First of off, there's a bunch of themes you can pick by default,
+00:37.23 maybe you have the Mac Os light theme or you've got a Windows theme.
+00:41.47 Notice it can sync with the OS,
+00:43.38 so like Mac OS will be light themed in the day and dark theme at night
+00:47.32 it can do that kind of stuff if you check that box,
+00:50.34 but if you choose another theme,
+00:53.28 the one that I'm using this course is called darcula.
+00:56.41 The darker one on the left,
+00:57.71 I just love the way that the lower contrast color is kind of let me sink
+01:2.39 into the code, It doesn't feel so bright and overwhelming.
+01:4.77 But if you want a bright white,
+01:6.8 you can choose the Mac Os light or your Os light as well and get these
+01:11.8 colors. So here's a coarse grained way to control what the syntax highlighting it looks
+01:16.11 like and the general colours overall.
+01:19.34 But if you go into your settings,
+01:21.31 you can create your own themes.
+01:23.13 Notice this one is called my darcula rather than dracula because I've changed how some
+01:28.6 of the things look now, notice on the left there's color scheme and you can
+01:33.1 change all the different languages. So here we've got version control colours,
+01:37.1 python colours, angular template colors,
+01:40.94 all kinds of things. And then once you go into a particular area like python
+01:45.64 you can go and select different areas.
+01:48.47 For example, class definition method calls keywords and so on and it shows you an
+01:53.21 example of the bottom and what's not obvious but it's really awesome is you can click
+01:57.94 those for example, if you click class it will automatically select keyword.
+02:2.59 If you click fu it'll reflect something like class definition,
+02:6.65 click on the string, it'll go and highlight that and then let you control it
+02:10.89 And then on the right,
+02:11.92 see where it says foreground. It has F1EC33,
+02:15.05 that yellow color. If you click the yellow color,
+02:17.65 a color wheel will come up and you can select it and customize it and see
+02:21.35 it change live below. So really,
+02:23.85 really nice to be able to fine tune this.
+02:26.34 One of the areas I find is if I'm doing like a conference presentation or something
+02:30.67 and one of the colors, especially sometimes the purples and reds don't show up well
+02:35.7 on the projector are over a cut down quality screen share and like on zoom or
+02:40.48 something. So you can change just those things so they come through a little bit
+02:45.05 better and then once you get these all configured,
+02:47.12 there's that gear in the top,
+02:48.72 right by where it says my darcula.
+02:51.04 If you click on that, you can export it and share it and save it
+02:54.38 and so on. You can go from just taking the default to choosing a theme
+02:58.72 to go in deep within and creating your own theme by tweaking an existing one like this.

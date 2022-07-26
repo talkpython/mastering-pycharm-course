@@ -1,0 +1,51 @@
+00:0.04 Before we actually dive into them.
+00:1.42 Let's just do a quick flyover of some of the server side features that we're gonna
+00:4.71 be focusing on in this chapter.
+00:7.24 We're going to create server side,
+00:9.33 server rendered web applications in python.
+00:12.65 This is Flask, Django Fast API pyramid and all those sorts of things where we
+00:17.87 write python code on a server.
+00:19.61 It generates all sorts of html responses,
+00:22.59 API's things like that.
+00:24.84 We'll see how you might load an existing web project.
+00:27.42 This might sound obvious like Michael.
+00:29.3 Haven't we already loaded some projects?
+00:31.35 Yes, yes, we have.
+00:33.3 What we did is we loaded up projects where we could go to the application in
+00:37.01 right click and say run. But the way you run up your pyramid app is
+00:40.57 not by running a file, it's by running a server pointed at a configuration file
+00:45.11 with some other settings. The way you run,
+00:47.29 Django might be different the way you want run Flask could be using Flask run instead
+00:52.31 of running a particular file. So we're going to see how you might load up
+00:55.33 some of these existing web projects and run them.
+00:59.54 We'll see PyCharm's, support for the popular html template in particular.
+01:4.29 We're going to talk about probably jinja and maybe evenChameleon. PyCharm also has built in
+01:10.4 support for managing the state of your web application.
+01:14.94 Some web frameworks like Flask don't have this idea.
+01:18.16 You just get them and you run them and off they go,
+01:20.51 they do their thing. But Django has this manage py which will let you create
+01:25.98 users or add apps or do all sorts of stuff.
+01:28.75 Pyramid has this setup.py that will allow you to register it so it can be
+01:33.4 run as a package and those sorts of things.
+01:36.32 So we're going to talk a little bit about the set up and manage features that
+01:40.54 PyCharm's supports for those frameworks.
+01:42.74 We've already talked about marking a directory as marketed as a source root marking it as
+01:48.32 a template folder. But this is the chapter where things like template folders and resource
+01:53.68 roots make particularly important impacts on our projects.
+01:57.88 So we'll see specifically how we can use the resource designation to get auto complete and
+02:3.95 other types of checks and validations around our static resources like CSS and Javascript as well
+02:10.32 as if we set up a template directory,
+02:12.55 correct, We'll get automatic navigation between say a view method and its underlying template in
+02:18.42 Flask. Oftentimes in web apps there's these little tools that have to run before you
+02:23.87 can actually launch and run your application.
+02:26.43 This might be web pack, it might be some NPM command.
+02:30.64 It could be some minification of some of your resources like your CSS.
+02:35.22 It could be a Typescript compiler,
+02:37.45 you know, who knows what?
+02:38.59 So there's all these little tasks and tools that might need to run to prepare our
+02:42.75 web app from the source files to what browsers actually want.
+02:46.34 We'll see how PyCharm has great support for a whole bunch of those.
+02:49.64 So here's a bunch of things.
+02:50.96 We're going to focus on for the server side features of PyCharm hold tight on
+02:55.23 the client side. That's the next chapter where we talk about how you might use
+02:58.45 Vue.js or other sorts of front end frameworks things like that.

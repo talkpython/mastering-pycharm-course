@@ -1,0 +1,145 @@
+00:0.04 We saw how in PyCharm to create a new project to create the virtual environment
+00:3.66 and get going. But most of the time what we're doing is working with existing
+00:8.86 projects that are completely set up.
+00:10.6 We create project and we might work on it for a year or more.
+00:13.96 Who knows? So if it's already in this list,
+00:16.45 well then that's easy. You click the button,
+00:18.21 it just pops right back open to the way it was.
+00:20.64 But if it's a new project that you haven't opened before,
+00:23.44 let's see how we get that set up.
+00:26.14 I want to start from some existing code that's a little richer and not fiddle around
+00:30.44 with actually trying to create some structure for you.
+00:33.28 We're just gonna work with an existing project and I'm gonna use the python for absolute
+00:37.29 beginners course repository for that. So let's go over here and again.
+00:41.98 I could open it from Git uh VCS for Get but I'll just start from the file
+00:47.72 system that's probably more likely how you're going to do it.
+00:50.34 Let's go to our desktop again.
+00:53.84 I was gonna clone this into the beginners directory and I'm not even going to create
+00:58.84 a virtual environment. Now, what's in here Anyway,
+01:1.47 let's open this up. So we've got code which these are all the applications that
+01:5.68 we wrote during that game. So here's a guessing the number of Eminem's in there
+01:9.23 Here's a rock paper scissors game over here,
+01:12.81 we have like a five or seven way rock paper scissors game some other things tic
+01:16.87 Tac toe. So I want to open this up,
+01:19.11 I would like to be able to go into these sections and run this bit or
+01:23.38 maybe jump over and run this and people to see all of those inside of
+01:26.67 PyCharm. So it's more complicated than just say loading up this directory with this one
+01:30.44 file because I'm on Mac, there's a little bit of a bonus that I get
+01:35.45 that other platforms don't get. I can drag and drop this right on top of
+01:41.54 the PyCharm dock icon and it will open it up.
+01:44.15 If I was running Windows I was running Linux,
+01:47.8 I would just hit open and then browse to that folder.
+01:49.87 But on Mac you can actually do a drag drop trick and I will open it
+01:53.4 up with a bit of a shortcut.
+01:55.64 Now first of all it opened up to read me that it found that the which
+01:59.67 is kind of cool. So you can see all the read me stuff that's in
+02:2.35 here. It also says we're not really sure what's going on.
+02:6.88 We took a guess and chose this Jump Start virtual environment And that's not the right
+02:12.65 one. So I'm gonna go over here and you can see interpreter settings.
+02:15.95 If I open this up that this isn't even valid.
+02:18.52 It's been deleted is long gone.
+02:20.74 So what I want to do is not use this broken one.
+02:23.85 I want to add an interpreter.
+02:25.56 We'll click add interpreter and it says we're going to create a new virtual environment for
+02:30.71 you. Perfect. That's exactly what I was hoping what happened.
+02:33.5 So it's going to be based on 39 and it's going to create it in a
+02:36.27 directory called  'venv'. Which is the common thing that you do in python
+02:40.63 If I had created one through some other mechanism through 'pipenv' or manually on
+02:46.98 the command line as part of my work flow.
+02:48.77 When I did a check out there,
+02:50.01 I could just click this and browse to it.
+02:51.72 But it's going to create a new one for so let's say okay there right now
+02:55.21 everything is looking better. You can see it's over here on the right virtual environment
+02:58.77 right there. Next up let's look at some of these applications.
+03:1.36 So if I have this interactive code thing here we can see we've got a guessing
+03:5.31 game. And if we want to run guessing game,
+03:7.11 we can just run this As we did before.
+03:10.06 And it says, how many Eminem's are in the jar?
+03:11.89 There are seven. Oh sorry,
+03:13.61 that's too low. There's 1000.
+03:14.86 Let's go 200. How about 50 below 75.
+03:18.26 Let's use some binary tree stuff on it,
+03:20.94 85. Wait, no, that was too high.
+03:24.53 I've been disqualified. You have to win this game in five rounds.
+03:27.44 Okay, so you can run this pretty straightforward because it's just this single file.
+03:33.04 Now let's go over to this Chapter6,
+03:35.68 organising code with functions and notice that we've actually got to parts of our applications.
+03:42.06 So we've got our rock paper scissors game here and there's this shared library sub module
+03:49.91 folder. Directory thing named Space.
+03:52.01 I guess you would call it over here and in there there's a UI helper that
+03:56.0 can show the header and here we're trying to show the header.
+03:59.54 If I was running all of this from right here,
+04:2.94 if that was the working directory for PyCharm and python,
+04:5.93 it would just run when I run this particular file.
+04:9.54 However, that's not the case.
+04:11.34 So when we're working with some more complex structure like this,
+04:14.87 we might need to tell PyCharm.
+04:16.62 Look this part, this subpart this right there,
+04:20.56 that chapter boulder represents its own dedicated application and these pieces are used within it.
+04:27.34 So what we can do is we can mark this directory as what's called a sources
+04:31.65 root. So we'll come down here and say Mark directory as sources root.
+04:35.54 And that effectively adds that directory to the python path.
+04:39.3 So when it looks for shared Libs,
+04:41.06 it's going to know well this is part of my path and here's a thing called
+04:43.93 shared Libs. I can go find a .
+04:45.56 UI helper in. So let's do that notice there's other things we can Mark as
+04:50.42 as we could exclude. Like for down here we have our solutions,
+04:54.2 we have some stuff for the read me.
+04:55.6 Here's a bunch of practice things and notice that PyCharm is warning about duplicated code
+05:2.04 in other places and probably that's actually copies of different variations of this app throughout this
+05:8.48 course. But it could be that it's in these other random areas and we can
+05:11.85 actually go over here and exclude those from PyCharms.
+05:14.8 Consideration of source code. Notice that's already happening for our virtual environment.
+05:18.96 That's why it's this orange. So we can go over here and mark these as
+05:21.27 excluded. So that will help.
+05:24.33 Like I said, I think there's still gonna be some reuses these other pieces
+05:28.28 later but it's fewer now. We can also do things like mark this as a
+05:33.72 resource root. So if I'm in a web app and I want to say 
+05:37.82 '/static/CSS/site.css' if that structure is at the top of this
+05:43.74 resource route, I'll get auto complete in all sorts of information inside of the html
+05:49.38 files. If I was in Flask or Django and I had a folder that contained
+05:54.28 the templates and then in my Django code,
+05:56.99 my Flask code, I said use this template.
+05:59.74 There's actually a link between the templates that get marked as the template folder and the
+06:5.03 stuff you're doing in python that'll help you navigate back and understand if they exist or
+06:9.3 if they're missing and give you all sorts of warnings.
+06:11.74 So there's a bunch of really cool things that you can do here,
+06:14.75 but probably the most important one to start is this sources route.
+06:18.44 So now I tell PyCharm that this is the application working space and we're gonna
+06:23.66 run this file and it's gonna look in shared Libs or a UI helper that can
+06:28.77 show a header. Alright, so notice the errors are gone.
+06:31.81 If I under this real quick here un market sources root,
+06:36.84 it has come back and it's like this is going to crash,
+06:38.94 it's not gonna work. But again,
+06:42.14 update the python path, we're good to go.
+06:44.06 We'd run it and there we go.
+06:47.12 Here's our little header, see what our little headers doing.
+06:50.81 It says Rock Paper scissor "Function Edition" in right there.
+06:54.34 And that's running this whole thing as a like a sub application.
+06:58.23 Super important. That's how we get started with existing projects.
+07:2.04 A couple of things. We created a new interpreter,
+07:5.47 we added a new virtual environment there.
+07:8.04 We came over here and we said we really want to treat just this section as
+07:11.64 its own inner application. So we mark that as the source route.
+07:16.26 These things, we don't want to be considered as part of our source code or
+07:19.57 for searching or indexing. So we excluded them.
+07:22.54 One other thing is we have a couple of things that we could run,
+07:25.71 you know, so I ran the guessing game and I went and did this and
+07:30.41 I ran the RPS and it did this might get a warning if you want to
+07:34.77 force to restart, which is fine.
+07:36.14 In this case that leads to the names up here,
+07:40.69 you might want to change us.
+07:41.63 We can hit edit. And this will we could call this rock paper scissor game
+07:46.07 and maybe give it some extra information like functions because there's other rock paper scissors scissors
+07:50.53 in here. And this could be the 'MM Guessinggame' like that.
+07:58.94 So now it's a little bit clear.
+08:0.27 Especially if you have the same file like 'app.py' over and over and over
+08:4.51 again. Which one is Which make sure you give it names.
+08:7.23 And then also notice only exit here.
+08:9.82 This is just beginners like over here,
+08:12.95 right click re factor rename. It will say directory or project.
+08:17.39 Project will say 'Beginners Demo Code'.
+08:23.04 Set up here now, but also more importantly,
+08:25.15 in your little list now, you have some little more descriptive beginner demo code still
+08:28.73 in the beginner's folder. All right.
+08:30.92 That's how we work with existing projects.

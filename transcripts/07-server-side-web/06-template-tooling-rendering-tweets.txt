@@ -1,0 +1,103 @@
+00:0.04 Well those tweets were kind of fun,
+00:2.53 we got them loaded up but remember what they looked like.
+00:4.74 They did not look very friendly.
+00:7.45 This is not what you want to see as a user of this website.
+00:11.54 So what we want to do is we actually want to loop over here and have
+00:15.2 maybe a little piece of html where the class will be something like there's a tweet
+00:19.67 and then for each tweet I want to work with it.
+00:21.82 But how do I specify that?
+00:23.3 Well let's do a little loop right in python we do loop.
+00:27.13 So in jinja, we do as well.
+00:28.76 The way we issue python like commands to the template as we say { %  notice
+00:34.13 that auto closes, which is super cool.
+00:36.66 We say for t in recent tweets,
+00:40.64 there's our auto complete and we always need to close these wish that wasn't the case
+00:44.27 but it's a need. It is turn down in here we're going to put something
+00:49.64 that has the class tweet and now in this loop we're going to have access to
+00:53.42 T So let's put a div I want to have a div with a class that
+00:59.51 has the value name or maybe they will put the text in the in the name
+01:3.61 second. So I want to have to be something like div and I'll say class
+01:7.63 equals text and I want to put the value here.
+01:12.54 So there's this really cool thing called zen coding or Emmett that PyCharm supports and
+01:17.49 these html templates. So I could just say div and put the cssselector.
+01:22.11 So I could say dot text and if I hit tab,
+01:25.89 look what that does create a div with the class set to text.
+01:29.14 Why? Because in CSS dot text means class.
+01:33.34 but I want to also have the idea being some id to do that.
+01:37.64 Now the id is set and it gets even more interesting.
+01:40.85 What if I wanted a div that contained a 'ul'.
+01:44.14 Right? This is immediate containment in CSS that had 'li' but five of them
+01:50.64 and those had message as their classes.
+01:54.3 Check this out bam. So I encourage you as you're writing html to take advantage
+02:0.01 of this sort of super fast creation using CSS selectors.
+02:4.54 I just want something simple like text.
+02:7.24 And then here we're going to say t dot oh my goodness,
+02:11.84 what is this? Look at that?
+02:13.76 It knows looping over recent tweets.
+02:16.05 Well what is recent tweets? Because of the type annotation I put here,
+02:22.04 it knows what's coming back and even though it's in quotes,
+02:25.17 it knows it's one of these.
+02:28.24 No, it knows that it has a name and a text.
+02:31.97 So we want text and I want something similar.
+02:34.61 So cmd+d name, this will be name.
+02:39.94 All right, that looks better.
+02:41.29 Let's run it and see what happens now.
+02:44.04 Like this fingers crossed. Boom,
+02:47.54 very, very neat. We're super close.
+02:50.62 We don't have a lot of style or anything.
+02:53.03 And let's go ahead and bring our CSS file in.
+02:56.74 Now we want to bring in this style sheet here.
+02:59.51 So what we can do is we can hit link and hit tab and then over
+03:3.7 here and say staticcss/site.css.
+03:10.44 Fantastic. So that will bring it in.
+03:11.98 But remember it's empty. If I go go over there and hit go to definition
+03:18.34 right? Or even hold down control or command to navigate,
+03:22.02 we can navigate into this very,
+03:25.4 very neat there. What do we want to do?
+03:27.39 We want to say that if we have a class tweet and then text,
+03:30.36 it looks like something. So we'll say tweet notice it knows the classes that we've
+03:35.18 already started using tweet. And then what else could we have?
+03:39.04 We could have our text First.
+03:42.56 Let's do a quick thing on tweet.
+03:43.88 Let's give it a little space.
+03:44.93 Will say margin is 20. Padding is 10.
+03:49.67 All right. I'll give us a little space from each of them.
+03:52.84 And then here we want the text to be kind of large.
+03:55.41 So we'll say font size. There's these little short abbreviations.
+03:59.22 What do you want 25 PX What wait bold and then something similar tweet but
+04:9.67 name actually let's make the name be bold but the font size to be 18 PX
+04:16.12 All right. Let's run it.
+04:19.37 See what happens quick on our tweets.
+04:23.1 One more time, fingers crossed bam.
+04:25.63 There they are. I got to tell you not still loving that formatting so much
+04:30.21 but it we're getting close.
+04:32.24 What's wrong with it? Well,
+04:33.23 we don't have very much going on in terms of like default text or fonts or
+04:38.85 anything like that. So one more quick thing.
+04:42.24 Yeah, let's just go over here and grab a really quick link over to bootstrap
+04:48.84 and if we throw a bootstrap at the top forward,
+04:51.73 our CSS like that, you know,
+04:55.6 all that stuff, but it's fine if it's there,
+04:58.04 go back, refresh, reload,
+05:3.64 refresh, it looks a tiny bit better.
+05:6.38 We could probably put like some italics on this,
+05:8.62 but you know, the point is not so much to make this look particularly amazing
+05:12.28 Maybe we want to wrap this in like a little 'em' or something like
+05:15.81 that. There you go. At least I think it's readable.
+05:19.51 So look, we built this cool little page and I hope you got a sense
+05:22.99 of like how many of the pieces of our web app are fitting together incredibly tightly
+05:27.91 So when I'm over here writing I get the Jinja help.
+05:34.6 But then I also, as I work with that,
+05:36.43 I get auto complete back into my python code for the type annotations.
+05:40.84 When I work with CSS here,
+05:44.44 it actually drives what I can do over what I get assisted with over in the
+05:49.26 CSS side and also works in the other direction.
+05:52.17 So if I were to go create a div and give it a class notice automatically
+06:0.84 suggests all the things that we've put in their super,
+06:4.04 super cool. So really, really great binding together of the python side and the
+06:9.39 website and all of these different,
+06:11.43 many moving parts and this just touches the surface.
+06:14.58 But remember when I said PyCharm,
+06:16.34 is it fantastic. Html Editor and Javascript Editor,
+06:20.38 CSS editor. This is a little bit of what I'm talking about,
+06:23.65 but of course, we'll see more as we go through the few next chapters.

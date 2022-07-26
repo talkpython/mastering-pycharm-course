@@ -1,0 +1,47 @@
+00:0.0 Let's review some of the core concepts we saw for client side development with PyCharm
+00:3.95 Html, Javascript and friends.
+00:7.74 We want to create a new project.
+00:8.74 We can actually hit the new project one and now we get a whole bunch of
+00:12.73 rich front end framework type of projects,
+00:15.5 Angular, Bootstrap, express html node, react, react native in vue as we saw you can start
+00:22.99 from those or you can just start adding files and bringing in pieces as we did
+00:26.76 We saw the javascript editor is first class just as much as PyCharm.
+00:33.28 Python editor is the integrated web storm.
+00:36.95 Javascript editor is fantastic. It has re factoring dead code detection and here we're seeing
+00:42.49 the code intentions whereas you know using var that's kind of old school use 'let' or
+00:47.44 'const' and we'll do that for you automatically.
+00:50.34 If you want to write better javascript you may well want to do this with typescript
+00:54.89 so we can write typescript and use it in a very nice way here.
+00:59.21 And of course this does not run in your browser,
+01:2.64 browsers don't support other languages than javascript.
+01:5.26 Don't get me started on that rant but they should,
+01:8.36 they don't, they don't support typescript.
+01:10.53 So what we have to do is transpile this into javascript.
+01:16.04 This may happen automatically depending on the version of PyCharm using what you've set before
+01:21.55 The current one that I'm working with does not.
+01:24.55 So at the bottom you can see it says typescript here and if you click on
+01:27.56 that it'll open up the typescript settings and then you can make sure that recompile on
+01:33.38 changes is checked as soon as you do that everything will be compiled and you'll have
+01:37.84 your Javascript ready to run, You know,
+01:40.47 have this Javascript file which is the much more messy tricky version to.
+01:45.01 Right than the typescript version and you can just include that Javascript file and basically forget
+01:50.39 that it exists but include it back into your HTML and you're good to go if
+01:55.57 you want to work with a rich front end framework like vue or Angular.
+01:59.39 There's great support. We saw the incredible support for vue.js
+02:2.85 how it has integration back into the model and auto complete for the model with
+02:8.85 inside the html and all kinds of neat things.
+02:12.14 I'm a big fan of 'less' and how it makes designing nested CSS style representations and
+02:18.63 variables within CSS much much better.
+02:22.14 So you can see here we're doing a little bit of less and we would like
+02:25.76 this to turn into something we could use in our browser again rather is only support
+02:29.89 CSS not other things we're going to transpile this as well.
+02:34.64 So we got this question about a file watcher,
+02:37.94 you want to enable file watchers and let them run in order for this to work
+02:41.23 We have to make sure that we've got 'less' installed.
+02:44.9 We do that through npm. See the command here at the bottom once we agree
+02:48.24 to that and we have 'less' available to PyCharm then we get our 'less' file
+02:53.28 compiled into the CSS version that we'd prefer not to write and notice.
+02:58.59 It even does cool things like include a source mapping mapping file so that when you
+03:3.7 go to the browser and it says,
+03:4.99 where is this style from that can actually relate back to the less file,
+03:9.78 not to the CSS file. So super, super neat there.

@@ -1,0 +1,10 @@
+00:0.04 As we conclude the first chapter of this course,
+00:2.89 let me just take a quick moment and introduce myself there I am.
+00:6.21 Hey Michael, you saw me at the beginning if you want to follow me on
+00:9.67 twitter or connect online, I'm @mkennedy over there on twitter.
+00:14.04 Do you check out the podcast?
+00:15.4 Talk python to me to do that and been running that for a long time as
+00:18.87 well as 'Python bytes' and I'm one of the principal authors and the founder of talk
+00:24.38 python training and many of these things that I'm telling you about have been built with
+00:28.6 PyCharm. So I'm really excited to share everything I've learned over the years with
+00:32.35 you. I hope you enjoy the course.

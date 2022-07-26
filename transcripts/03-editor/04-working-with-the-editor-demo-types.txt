@@ -1,0 +1,53 @@
+00:0.04 Things were going. So so well our app is coming along remember on the first part
+00:4.99 I told you how we didn't have to go to the documentation,
+00:7.32 we could just come in here and say 'cmd+p'.
+00:10.24 And it gives us information about what's supposed to go into this section and we get
+00:14.06 all the support. But I feel a little bit let down here.
+00:17.19 For example that is not the things on the episode.
+00:22.34 And even over here it's this episode id.
+00:24.1  But is that like a 
+00:25.53 UUID Is that an integer?
+00:27.64 Is it a string? What's that supposed to be?
+00:30.49 So what you'll see is that if we use type annotations type hence in python 
+00:35.89 PyCharm will leverage that information and flow it through the rest of our applications.
+00:40.44 So let's go down here and let's say that this is going to return what's it
+00:46.82 going to return? I want to turn an episode.
+00:50.04 Not quite right. We're going to come back to it but let's go over here
+00:52.31 and just do this again. Now this we're not declaring as an episode which we
+00:57.05 could we could do that and then go import this over here but we don't have
+01:2.53 to because this function returns an episode PyCharm is certain that that's an episode.
+01:8.15 So now let's go and hit dot yes look at that title id.
+01:11.57  Date link all the things that it needs to be an episode.
+01:18.84 So that's really fantastic. How is it?
+01:21.22 Not quite right technically we could ask for an episode that doesn't exist in which case
+01:27.7 this would be none. The type system in python says it can't be none unless
+01:33.08 you explicitly say it's none. So the way we do that in python,
+01:36.35 as we say optional from typing of this.
+01:40.84 So that's the more accurate thing.
+01:42.45 But still you'll see the exact same behaviors.
+01:46.14 Okay down here this is going to return an int not really using it but let's
+01:54.27 go out and just be complete here.
+01:58.04 This we go to the episodes like for example if I go episodes zero dot nothing
+02:6.24 let's make that better. This we can say is a dictionary a dict of an int
+02:15.49 and then an episode the key is an integer.
+02:18.54 The thing is an episode. Now if I go to hear and say dot look at that
+02:22.34 Fantastic. I'll say id
+02:24.95 Equals one something like that. If I were good in him put zero it says
+02:29.94 whoa, whoa, whoa you're trying to pass a string even though it's number like
+02:35.1 it's not a number, you're trying to pass a string using the wrong type of
+02:38.76 key. So it's not just that it gives us better.
+02:41.13 Auto complete. It gives us checking and validation as well.
+02:45.34 So this doesn't take a return anything.
+02:47.19 I think we've done our type information and now that we do of course we get
+02:51.14 all kinds of good stuff here we go down to the end and say dot you'll
+02:55.63 see integer integer integer it knows what it is.
+02:58.84 So whenever it makes sense. Whenever you can add this type information to your program
+03:4.54 because it's going to make working with your code much better.
+03:7.79 PyCharm will help you write new code by giving you better auto complete and it
+03:11.27 will help you catch errors by checking that the types match.
+03:15.24 But again, you don't have to write it everywhere through your code.
+03:18.23 Just put it on the sort of service boundary,
+03:20.04 data, access boundary pieces and then often that information flows through like automatically to there
+03:25.17 And to here, I'm a super big fan of using types like this to
+03:29.26 make your editor make PyCharm,
+03:31.13 better think about doing it for yourself.

@@ -1,0 +1,111 @@
+00:0.14 In order to begin exploring PyCharm's package features.
+00:3.02 Let's start by working with an existing package.
+00:6.24 So over here on the GitHub PSF,
+00:8.88 Git Hub organization, we have requests,
+00:10.85 one of the most popular python packages you've probably heard of it.
+00:14.64 Use it to go and make http requests instead of a browser using python.
+00:19.84 So let's go and actually get that installed on downloaded and set up on our system
+00:24.34 So we could theoretically work on it.
+00:26.26 So first of all, let's go to the desktop and we'll just get clone this
+00:29.06 Then we could open this way through PyCharm by open from source control but
+00:35.61 just kinda start this way, show a little more grassroots way.
+00:39.09 So I want to open up this,
+00:40.26 remember drag and drop on the PyCharm Mac os others open directory and browse to it.
+00:45.09  Here it is this is request and this is like the homepage that you
+00:50.38 would see for if you just went to the GitHub Repo,
+00:53.76 right, This is the Read me over here is the code.
+00:56.21 We don't need this. We go to request.
+00:58.39 Here's the actual code like here's where you have requests,
+01:2.54 general method and then the various specializations down here.
+01:6.29 Like give me the head, the post, that put, the patch, and so on.
+01:9.45 The first thing we need to do is make sure that we have a working PyCharm
+01:12.1 interpreter. We don't So I'm gonna create a new one here.
+01:18.84 Then PyCharm says there's some requirements for this package.
+01:22.34 Many packages themselves have requirements and when you pip install the package,
+01:26.44 you get the transitive closure of those dependencies and their dependencies and so on.
+01:30.84 So let's go over here and click install these.
+01:33.64 It turns out that PyCharm actually misses one for this package but it doesn't really
+01:37.01 matter because we're going to need to do some other stuff to work with it anyway
+01:40.64 so this can take a little moment.
+01:42.24 I'm gonna let it run and then we'll go from there.
+01:45.04 Success we've got it all installed now in order for us to work with us and
+01:49.3 have python believe that this package,
+01:52.76 this source code here. This is actually what we're supposed to work with.
+01:56.19 Not some other package that might be installed in some other way or to have this
+02:0.38 one set up. What we need to do.
+02:1.96 We need to go down here.
+02:3.2 There's a couple ways we can do it.
+02:4.35 One of them is we can say "python setup.py develop" that will basically install requests
+02:10.5 in place rather than copying it over to site packages which means as you edit these
+02:15.26 files will immediately pick up the changes which is exactly what you want while you're working
+02:19.25 on the package now, how do I know to do this?
+02:22.16 Maybe I don't PyCharm has some cool tricks or helpers up its sleeve here,
+02:26.57 go to tools here, notice there's a bunch of things but one of them is
+02:31.05 run a setup py task and check this out.
+02:34.22 We can do things like we could create a binary distribution like a wheel.
+02:39.18 If we wanted to push this to PyPI we could install it,
+02:42.93 we could register it, we could do all sorts of things but what we want
+02:46.07 is develop, install package in development mode.
+02:48.64 And we can also just type development.
+02:50.74 It asks us if there are any options,
+02:53.18 there are none. So we could go notice we're actually installing a couple other dependencies
+02:58.09 that for some reason are not listed in the setup py but are actually needed.
+03:2.34 There we go. We've got it all set up and installed and notice there's this
+03:6.9 "request.egg-info". This is what python uses to know about installed packages.
+03:12.31 And so it's gone right into the root directory so we can come down here into
+03:16.72 our little console and we can say import requests and which requested.
+03:21.94 We just get we got this one right here.
+03:24.17 Let's see how we might know that.
+03:25.68 So we come over and do a couple of things just to show you that this
+03:30.62 is the version we're working with.
+03:31.78 Let's just say print right at the top.
+03:33.76 You would never ever do this but we can make a print statement run during import
+03:37.44 So we could say running custom version of requests.
+03:43.34 Yeah. Now if we go down here and we make sure we have a fresh
+03:48.79 version we import request notice it says running custom version of requests.
+03:54.9 This is the one that we just made the changes to and you can see that
+03:57.91 they're getting added immediately. Well that's pretty fun.
+04:1.2 But let's go to the API down here and add something a little more
+04:4.81 fun. Let's say we're going to add a grab it method here.
+04:11.82 Real simple way to come over here and say I want to grab a URL
+04:15.32   data and print it out and return it if you want to return to
+04:18.51 his text. And what we're gonna do is we're gonna say response equals uh just
+04:23.79 get on a call to get this at the top of the function passed through the
+04:27.07 URL, make sure it worked raised for status,
+04:30.44 turn 'response.text'. I think of this as like a simplified way to just
+04:35.51 call it, grab text from the URL.
+04:39.13 Okay. And let's go to the top up here,
+04:43.6 make sure that this is getting imported.
+04:47.24 We don't make our grab it text export here,
+04:50.74 then we won't be able to use it as part of the package.
+04:53.44 All right now, we should be able to go and write some python code.
+04:57.72 That's gonna do this. Let's go over here to our desktop and in the request
+05:2.85 Remember on windows you don't do the dot And this is scripts not been why
+05:11.35 these have to be different. I don't know,
+05:14.04 I understand why the dot not why the bin is different.
+05:16.1 Okay, so let's go over here and we can say import requests.
+05:18.81 We gotta run python, we say import requests.
+05:22.94 There's our custom version of requests.
+05:25.06 Super cool. And let's say some call it html is going to be requests.grab_text
+05:32.33  Go get it from 'talkpython.fm'.
+05:40.94 Oh, it's taken a minute.
+05:41.91 That's a good sign. What is our text Huge.
+05:45.42 That's too much. Let's do a little just the 1st 250 characters.
+05:50.14 What do we get not enough to see the title?
+05:53.88 Let's do 500. Maybe we need more.
+05:56.82 But you can see we're getting the 'talk python to me' podcast details right off the
+06:1.24 website. How cool is that?
+06:2.98 So we're able to go get a package off source control,
+06:6.94 put it onto a machine, put it into development mode,
+06:11.44 add a feature to it, granted not a super important feature.
+06:14.43 Right? You can put these two things together to for yourself,
+06:18.04 grab text, give it to URL.
+06:20.33 Boom, Here comes the text back or an exception.
+06:22.97 If there's an error, we did this by creating a folder where the package lived
+06:27.82 then we created virtual environment and activated.
+06:31.24 Then we came over and we did tools run setup py task and then we're good
+06:37.02 to go, we just make changes.
+06:38.64 Tried, tried working with the code Probably what you would do is one of two
+06:42.53 things and practice as you would create a little example app that would consume it and
+06:47.3 then exercise it if you want to be fairly dynamic or like they have over here
+06:51.4 you would create some tests that you could run.

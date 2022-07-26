@@ -1,0 +1,16 @@
+00:2.84 It's time to focus on plug ins.
+00:4.56 These are extra pieces of functionality that you can add to  PyCharm to add new
+00:9.09 tool Windows, new editor capabilities,
+00:11.16 all sorts of things. There's just so many different things we can add really is
+00:16.46 sort of the paradox of choice.
+00:17.73 When you go exploring over there,
+00:19.84 you want to have VIM key bindings,
+00:21.49 There's a plug in for that.
+00:23.24 Do you want to have it act like visual studio coming from Windows development?
+00:27.82 You can go and grab the Visual studio key map from the plug ins.
+00:33.24 There's also support for things like Node.js or if you want to build a client
+00:37.5 side application to go along with,
+00:39.14 say a Fast API backend instead of services,
+00:42.33 you can get plug ins for electron.js.
+00:44.42 S. In this chapter, we're going to survey some of the ones I think
+00:48.0 are useful and then show you how to go explore and find more or whatever you're interested in.

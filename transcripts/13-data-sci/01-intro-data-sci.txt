@@ -1,0 +1,21 @@
+00:2.94 When you think about data science,
+00:4.32 it might feel like Jupyter notebooks have a lock on how data scientists work with code
+00:9.67 in python and libraries and visualizations and all that sort of stuff.
+00:14.04 As you'll see in this chapter,
+00:15.23 PyCharm has a lot to offer and that's not by asking you to move out
+00:20.59 of notebooks but in fact it has a really great support for running notebooks and even
+00:25.58 debugging and stepping through cells of a notebook.
+00:28.8 So if you've ever wondered what is wrong with this code,
+00:31.24 it seems right, why is it not working well if you run it in PyCharm
+00:34.5 you can actually set a breakpoint and step through and inspect the variables and
+00:38.44 see what's going on. You can also treat these notebooks as text files that have
+00:43.25 the cells just separated by comments basically in your text editor without actually rewriting them.
+00:50.15 Not saying well I'm going to convert this to a py file but I'm going to
+00:52.77 treat it like a file in a really nice editor but it stays as a notebook
+00:56.46 And finally you also see that PyCharm has a scientific view.
+01:1.61 So if it notices that you're working with things like Numpy and Pandas,
+01:5.05 it will suggest that it swaps the way the windows are looking at the various windows
+01:9.76 that are shown. So you can see things like as you run your code,
+01:13.94 what are the values of the variables and as you interact with the various data science
+01:18.03 methods, what is the documentation around what you can do with that method.
+01:22.24 So if you're into data science you're gonna have a lot of fun with this chapter

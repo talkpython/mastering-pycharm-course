@@ -1,0 +1,104 @@
+00:0.14 We have a whole variety of ways of viewing variable state.
+00:3.32 When we stop in the  debugger obviously down here in the bottom right,
+00:7.09 we've got the watch list of variables.
+00:10.14 So we've got our creatures and if it's something interesting like a list we can expand
+00:14.01 it out and see more details.
+00:15.57 We've got our command, we've got the active creature turns out to be a bat
+00:19.43 of level three right now. So while this is fine,
+00:22.32 it doesn't really show you in context what's happening,
+00:25.99 doesn't show you here this value.
+00:28.09 We accept it from. The user is an A right on the line where we
+00:32.06 did the input and so on.
+00:33.74 So up here we can see way more information.
+00:36.91 We can see that we have this great text.
+00:39.39 This is not a comment, this is something that debugger puts here says here is
+00:43.07 a hero And the text representation of that is a creature.
+00:47.21 Gandalf of level 75. And we saw that we can even highlight it and pull
+00:51.93 it down basically the same interaction we have in the watch window Over here we have
+00:56.29 the active creature, that's a bat of level three and the color is important.
+01:0.66 Remember the hero is great because that's the value has always had since we've recently looked
+01:6.29 at it, but this creature has turned orange and that means it's changed last time
+01:12.13 through the loop, it was something else.
+01:13.51 Who knows what a toad or a dragon or whatever it is in our little story
+01:17.8 here, But now it's become a creature a bat of level three.
+01:22.16 And so the fact that it changed,
+01:23.87 orange tells you not just what is its value,
+01:25.91 but that it has somehow been updated over here.
+01:29.92 You can see there's this input that we got from the user,
+01:32.35 what did they type for this particular run of the game loop?
+01:36.22 They typed A so they're going to be attacking,
+01:39.34 What's going to do it here?
+01:40.37 Oh, Gandalf of level 75 is going to be attacking a creature bat of level
+01:43.96 three super cool. The way we can put all this together,
+01:48.64 seeing the values is great. But sometimes you might want to change the situation here
+01:52.82 We've asked the user to input something.
+01:55.0 What do you want to do?
+01:55.8 Attack run away or look around.
+01:57.19 They said attack like oh, you know,
+01:59.72 we really should have typed run away because that's the scenario we're trying to test.
+02:4.74 Well let's just change it. There's all these situations and programs that are hard to
+02:10.1 come up with exactly the right situation.
+02:13.04 So you can use the debugger to change it.
+02:14.81 So if we go down to the command and the variable window and choose set value
+02:19.42 or even to the gray part that the debugger put in and pull it down and
+02:23.11 say set value, we can change it.
+02:25.08 What if we put in [r] if we set this value and change into [r] what
+02:30.11 happens even though it says in the console up here.
+02:32.77 What do you want to do?
+02:33.45 Attack or runaway or look around,
+02:34.85 we set attack, but then all of a sudden the wizard has become unsure of
+02:38.23 his power and flees  Why?
+02:40.34 Because we changed what happens. That's what happens if he were to run away.
+02:44.94 So very cool that we're able to sort of carefully control the flow for different situations
+02:50.07 to build up exactly what we want to test,
+02:54.14 It's pretty obvious you can watch variables,
+02:55.87 but you can also come over here and hit the plus and add a watch expression
+02:59.36 So I want to know any time.
+03:2.41 Is there an active creature whose level is greater than 15?
+03:6.45 Yes or no. We can watch that expression and you can put all sorts of
+03:10.8 interesting things like some database level call that says is the current user and admin yes
+03:16.73 or no. Right, That's not necessarily a property of the uh the current user
+03:20.55 object. Although maybe if it's not though you can still check that here in this
+03:25.78 evaluation watch area. So it's not just about watching variables,
+03:29.76 even though quite literally the title of the Windows variables really it's variables plus expressions.
+03:38.44 We saw the breakpoints are incredibly powerful here,
+03:41.24 we have two break points on our creature wizard game,
+03:44.64 we want to add a new one.
+03:45.55 You click in the gutter, Just the right of where the line numbers are,
+03:48.59 if you're showing them and that will create a default on off type of breakpoint is
+03:54.58 going to stop every time you hit it.
+03:56.74 We saw that if you right click on it though,
+03:58.31 you can actually change this to be something conditional.
+04:2.04 So imagine in this scenario we described before,
+04:4.45 I want to only hit the breakpoint if the user says R for run away.
+04:9.64 So the first bit of this test,
+04:11.19 if it's a else if it's it and or whatever,
+04:14.1 I'm going to put a breakpoint here and set the condition to 'cmd==r'
+04:18.55 right. Just a standard python conditional.
+04:21.64 If that ever evaluates to true,
+04:23.11 we stop. So then we'll skip over all the other cases that are not running
+04:27.13 away scenarios and not have to deal with jumping out of the debugger too much.
+04:32.08 Remember this gives you auto complete and you can do pretty advanced python right there.
+04:37.04 If you expand it, you can do even more like check the evaluate and log
+04:40.51 then print out some sort of computed message with details about what's happening every time
+04:46.66 the breakpoint hit. And if you uncheck suspend,
+04:49.42 that will basically become a breakpoint.
+04:51.03 That just logs out messages. Remember once you've got a conditional breakpoint,
+04:55.99 it has this little question mark by it.
+04:58.15 So normally it would just be a circle But now because that question mark,
+05:2.48 that means it's conditional. Be careful if you click on it without right clicking,
+05:7.31 you're just going to disable it.
+05:8.45 It will go away and well who knows what the condition was,
+05:11.45 but it's gone. So just be careful to not wipe these away unless you're sure
+05:15.53 you're done with them. Finally,
+05:17.69 if we turn this into a breakpoint that only logs messages,
+05:21.64 it turns yellow so you can see here we have suspend unchecked but evaluating log is
+05:27.51 turned on and we have this little F.
+05:29.0 String. The command is whatever they've typed the creature is the name of the active
+05:33.5 creature. And when we do this we get these little messages here like breakpoint reached
+05:38.05 The command is 'a' and the active creatures.
+05:41.4 The Tiger command is a active creature is a dragon and so on.
+05:46.44 Remember in my example I put like some stars or something to make it stand out
+05:49.91 because here without these boxes it's super hard to see what is the breakpoint and what
+05:54.8 is actually just program output around it.
+05:57.33 So be sure to add a little bit something to make these stand out.
