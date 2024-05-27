@@ -51,8 +51,8 @@ Then configure PyCharm to run `program.py` in that folder.
 You should also have no errors around this statement in the PyCharm editor. This will indicate that the sources root
 settings are configured correctly.
 
-	# program.py, line 4
-	from actors import Wizard, Creature, SmallAnimal, Dragon
+    # program.py, line 4
+    from actors import Wizard, Creature, SmallAnimal, Dragon
 
 Run it and enjoy your wizard battle. Good luck with the dragon!
 
