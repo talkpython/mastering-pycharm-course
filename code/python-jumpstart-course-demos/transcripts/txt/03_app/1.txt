@@ -1,0 +1,37 @@
+0:00 It's time for app number 3, 
+0:01 this time we are going to write an app that'll answer the question
+0:04 how long until your birthday. 
+0:07 So what exactly are we going to build? 
+0:09 We are going to build an app that looks like this
+0:11 it's going to have a little header 
+0:12 saying birthday app like all of our apps do,
+0:15 and then it's going to first ask a couple of questions of the user
+0:19 when were they born, 
+0:20 so ask the year, month and day, 
+0:23 and then pull those back, 
+0:25 those will come back as strings, 
+0:26 we'll convert those to numbers, 
+0:27 and use those numbers to actually come up with a date object, 
+0:32 that represents a particular time on the calendar, 
+0:34 and then we'll do a little math with that date, relative to today, 
+0:39 and we'll use that to answer the question how long is it until your birthday 
+0:44 and if you have already had your birthday 
+0:45 we'll say hey your birthday was so many days ago. 
+0:49 So again, that looks pretty straightforward, 
+0:50 but we are going to learn a lot.
+0:53 We are going to come back to working with functions 
+0:56 and organizing our code into small, reusable pieces of functionality 
+1:00 and in our previous example, 
+1:02 we saw that we worked with functions 
+1:03 but they were sort of the most basic, 
+1:06 they were just things you would call to have actions 
+1:08 and here we are going to have functions 
+1:10 that both take parameters 
+1:12 and so we can supply different values to them
+1:14 like a particular date and the return values, 
+1:17 the things like how many days from this particular date until now. 
+1:22 The other major thing we'll focus on 
+1:24 is dates and times and time spans, 
+1:27 so when you work with dates and times between dates, 
+1:30 in Python these are the 3 basic concepts
+1:33 that you'll see and they will be central to this app.

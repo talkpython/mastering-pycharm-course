@@ -1,0 +1,38 @@
+ 0:00 Let's take a moment and focus on this concept of classes versus objects. 
+0:04 If you are new to object oriented programming and this idea of classes,
+0:08 this can be a little bit tricky. 
+0:11 Recall, this is how we define a class, 
+0:13 we say class creature and it defines basically the blueprint. 
+0:17 Here is how we initialize it, and within that initialization here is the fields, 
+0:21 here is the other behaviors it has for example that it can walk around 
+0:25 and for creatures, there is only one creature class, 
+0:29 this is it, this is what a creature looks like in our program. 
+0:33 However, we can create many of these creatures, 
+0:36 here we are going to create a squirrel and its power, 
+0:40 you can see the parameter to the initialization method is power 
+0:43 so here we want to say creature (7), 
+0:46 we'recreating a squirrel with power 7 whatever that means 
+0:49 and then we are also creating a dragon which is more powerful, it has power 50, 
+0:53 so when we create the squirrel and the dragon, 
+0:56 these are objects, and objects are created via classes 
+1:00 but they each have their own pointer in memory 
+1:03 and that points to their own data. 
+1:06 So, this squirrel object it has its own power variable and its power is 7.
+1:10 Now it actually gets the implementation from walk, from the blueprint, 
+1:15 but we can call walk on this squirrel and we'll work with its data, 
+1:19 its power of 7 and so on.
+1:20 The dragon has another pointer, 
+1:23 somewhere else in the memory and it has its own copy of power, 
+1:26 so if we change the dragon's power 
+1:29 obviously it's unrelated to the creature so these are objects, 
+1:31 they are created from the class, from the blueprint of what defines a creature, 
+1:35 and then we can call squirrel.walk(), dragon.walk() 
+1:39 and they may have different behavior based on the power, 
+1:41 maybe if there is a lot of power it jumps around 
+1:44 if it doesn't have much it sort of scurries or something like this. 
+1:47 Once you get used to this idea of classes and objects 
+1:50 it's really straightforward and you'll have it down no problem, 
+1:53 but if this is new to you, make sure that you get this idea, 
+1:55 it's the core concept in object oriented programming 
+1:59 classes, inheritance in object oriented programming 
+2:01 play a really central role in Python.

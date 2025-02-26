@@ -1,0 +1,57 @@
+00:00 Here we are in our program again, and it looks like everything's fine
+00:03 if I go look for 'runner' we get some results,
+00:06 but remember, this is on the internet, so what happens if say or wi-fi is down,
+00:10 now let's try it again, if I come over here and I search for 'runner'
+00:15 this is the exact same thing, that's bad, look at this,
+00:18 connection error something to do with requests,
+00:22 could not connect to that url, things like this.
+00:26 Our app is fully crashing and notice, it exited with code 1,
+00:29 usually code zero is good, anything not zero- not good.
+00:33 All right, so something is going wrong here,
+00:35 and it's because when we go here and we do this line right there,
+00:39 we don't get access, we can't reach the url,
+00:42 I'm not sure which line it is but if it's 12 or 13,
+00:46 but check this out, if you click here, go and find some of your code
+00:51 and you click there it'll actually take you to the line,
+00:53 so it's actually line 12 not even the raise for status
+00:56 like it couldn't get to the point where it got a status, okay?
+00:59 So how do we convert this from crashing our app
+01:02 to just giving a message to the user like hey that didn't work.
+01:05 Let's go over here, and the way we're going to do this is
+01:08 we're going to use the exception handling in Python,
+01:11 now what we're going to do is
+01:13 we're going to go find all the code that we want to run
+01:15 and we're going to indent it, and we want to come up here
+01:17 and we're going to put it into what's called a try block,
+01:20 so we want to say try to run all of this code and if it doesn't,
+01:23 if there's some kind of error, we can print 'Yikes, that didn't work'.
+01:27 Ok let's run this again, and now the network is still off and I search for 'runner'
+01:32 'Yikes, that didn't work', search for 'boo' it didn't work,
+01:37 turn on the network—  and now, if I search for 'runner'
+01:42 hey, it's back, so our app is way more reliable,
+01:45 it's not fully crashing, it's just saying that didn't really work,
+01:49 you want to try again, something like this, right, until we decide to exit.
+01:53 So that's really cool, however, we're going to notice
+01:57 that there's some other interesting problems here,
+02:00 one of the things that could be wrong is that the network is down,
+02:04 it could be a problem where those service doesn't respond
+02:07 or we got bad data from the service, it could be other things,
+02:11 like for example watch this— so the network is on
+02:15 and if I search for 'runner', it's great, if I search for nothing,
+02:20 'Yikes, that didn't work', hmm I don't actually know why that didn't work,
+02:25 well, I do, but there's nothing clear, there's nothing obvious
+02:28 about why that didn't work and you have to know a little bit about the service
+02:31 to actually know why that didn't work.
+02:34 Even though the network is here, that also failed,
+02:36 but we're given exactly the same message back to the user
+02:38 and in fact, if you look over here in PyCharm,
+02:41 it says this is too broad of an exception clause,
+02:43 we're catching everything, in fact, we're even catching like control c
+02:47 trying to break out of the app and watch if I try to hit stop here—
+02:50 it's going to just get this weird like skeletal face and say 'Yikes that didn't work',
+02:57 you can't exit me basically, is what it is saying, I will live forever.
+03:02 So this is not really the best thing to be doing,
+03:05 we should be looking for both
+03:07 different types of errors and reporting different messages
+03:09 as well as not catching like exit application
+03:12 type of exceptions or messages as well.

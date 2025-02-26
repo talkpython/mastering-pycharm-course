@@ -1,0 +1,22 @@
+00:0.14 Hello and welcome to app number five.
+00:2.54 This time we're gonna build a weather client; an application that you run, and you can
+00:6.64 ask "what is the weather" in virtually any town in the world.
+00:10.94 Now, this is not a simulated weather client.
+00:13.57 It's not going to just give some random thing like "maybe it's gonna be cloudy and
+00:18.01 72". No, it's going to go out to the Internet and actually get the
+00:21.69 weather at that location. So we're going to do some really,
+00:24.92 really cool stuff. Let's see exactly what we're going to build.
+00:29.84 It's gonna look like this. It'll have a little header like all of our apps
+00:33.21 do, and it will say
+00:34.55 "enter your location" and you put in a city and a country, or just a city
+00:39.03 within the U.S., or a city and a state in the country
+00:42.71 U.S. However you want. Here,
+00:44.23 we're gonna say "I'd like to know the weather in Seattle" and right now, when
+00:48.12 I ran this, it said the weather in Seattle is 54.48 degrees Fahrenheit and the
+00:53.1 forecast is clouds, specifically scattered clouds.
+00:56.54 And then I asked for Stuttgart, Germany, Deutschland,
+00:59.84 the weather in Stuttgart, Germany
+01:1.45 is 47°F and overcast clouds.
+01:4.72 Cool, right? So this is what we're gonna build and you'll see,
+01:7.55 While it may sound complicated to go out actually to the Internet and get all this
+01:11.44 information with Python, it's gonna be awesome.

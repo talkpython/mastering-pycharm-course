@@ -1,0 +1,125 @@
+0:00 So let's jump into PyCharm and start building this game.
+0:03 Remember, our convention is that we are going to
+0:05 start out with the main thing we run called program,
+0:08 so our new Python file called program.py
+0:11 and our app, as the very first thing it had at the top a header
+0:15 so remember we'll do print
+0:17 and we had a bunch of dashes here.
+0:18 Now in PyCharm, if you want to duplicate a line
+0:22 or a selection or a set of lines,
+0:23 you can hit command D in OS X or in Windows or Linux control D.
+0:28 So I will hit command D a few times,
+0:30 it's a little bit of a shortcut.
+0:31 And then it said guess that number game, something like that,
+0:36 let's do some centering, and finally let's do a print,
+0:39 just to leave some space there at the end.
+0:42 Before we go any further, let's just run this really quick
+0:44 to make sure everything is working,
+0:46 again, there is no run configuration up here
+0:48 because this is a new project,
+0:49 so we'll right click and say run, 
+0:50 and then all right, a little header is working fine.
+0:54 Now, the next thing we need to do
+0:55 is come up with that random number
+0:58 and the number the computer guesses
+1:00 so I will create a variable called the number
+1:02 and now, somehow we need to... here come up
+1:05  with this random number
+1:07 and one of the great things about Python is
+1:08 it comes with all of these modules and libraries that we can use
+1:12 one of them is called the random library, or the random module
+1:15 Now, PyCharm is not happy,
+1:18 because we need to actually tell Python
+1:20 we intend to use a module that is not what is called the built in
+1:25 this is like an extra part of Python
+1:27 so we need to explicitly state I'd like to use this part of Python
+1:30 this works identical to whether it's something in Python
+1:33 with the standard Python implementation, 
+1:35 or something external, like some other library that you've gotten.
+1:40 So we are going to say import,
+1:41 and we just say random,
+1:43 and then we'll say "random."
+1:44 now we have a bunch of options, a little warning went away,
+1:47 the one we are interested in is randint
+1:49 we'll come over here and call randint
+1:52 and if we hover here for a moment or pause for a moment,
+1:55 it will say it takes two parameters a and b.
+1:58 Now, so I would guess that those are numbers,
+2:00 and I'm sure you would as well,
+2:02 and that they somehow specify the lower and upper bound
+2:05 that we are suppose to work with here
+2:06 but is this including those n points,
+2:10 somehow between these n points,
+2:12 and we can check the docs,
+2:13 but it turns out that this actually includes both n points
+2:16 so what we want is 0 to 100.
+2:18 Let me show you something that PyCharm can do for us
+2:21 that really is pretty amazing
+2:23 and one of the things I really like,
+2:25 imagine let's roll this back for a minute,
+2:27 imagine that we don't have this import going on,
+2:29 and we don't have this line,
+2:31 so here we are again and we want to say
+2:33 just like before the number is equal to random.
+2:36 Now PyCharm has a little red light bulb
+2:39 you can see there and it says,
+2:40 Hey, this is not right, but I am pretty sure I can fix it for you, automatically.
+2:46 So if I hit "alt enter", it will come up with the list of options to fix it,
+2:50 so I could actually just hit enter and it will say
+2:53 we are going to import random
+2:54 and there is a couple of ways we could do it
+2:56 but this top one is what we had done before,
+2:59 so I can just hit that,
+3:00 and you could see right at the top it added import, random,
+3:03 now I can type randint and off we go.
+3:05 So, a lot of times when you see an error like this,
+3:08 one of these red squiggles and this little light bulb in PyChram
+3:12 that means that there is some kind of auto fix
+3:14 it's going to propose for you and it is probably worth checking out.
+3:19 Ok, excellent, so we have our number guessed,
+3:22 our number between 0 and 100 inclusive,
+3:25 now the next thing to do is get some input from the user
+3:27 and we are going to just tell the user
+3:28 hey, enter a number between 0 and 100
+3:31 so I'll call this guess, and this is going to come back as text
+3:34 so I'll be very explicit and say guess text
+3:35 so we'll say input, just like before, guess a number
+3:43  so guess a number between 0 and 100
+3:44 and we'll just let the cursor stop right there, and we'll wait for that.
+3:48 Conceptually, the next thing that we are going to do
+3:50  is we want to compare the number against the guess text.
+3:53 Now, Python is not a very forgiving
+3:55 about a quality between numbers and strings,
+4:00 these don't really have anything to do with each other,
+4:02 so if we tried to just say print out whether the number
+4:05 was... let's say less than the guess text,
+4:07 if I try to run this you will see it'll actually crash,
+4:09 so if I put in 42, and it says you cannot sort between
+4:15 or compare the order of integers and strings together, right?.
+4:19 You can ask whether they are equal,
+4:21 they will never be equal, but you could ask that question,
+4:23 but you cannot do the type of comparisons that we need for this test
+4:27 So the next thing we need to do is
+4:29 actually take this guess text and convert it into an integer
+4:32 and we'll call that integer the guess
+4:34 so this is super easy, the int class is just built in
+4:37 and we can call it, initialize like this
+4:41 we can pass it some text
+4:43 and then what is going to come out is actually a guess
+4:45 so we could say really quickly print the guess text
+4:48 and you can actually ask for the type of these
+4:50 so let's print those two out
+4:51 and here we'll print the guess and the type of the guess
+4:55 so if we run this two, if I enter 42,
+4:58 you can see, the first line where was guess text is actually a string,
+5:02 "str" is the string class in Python
+5:04 we've actually converted successfully to 42
+5:06 it looks the same when you print it out
+5:09 but it's definitely not the same type in memory.
+5:13 All right, the next thing we need to do
+5:14 is write some conditional statements with if and else statements
+5:18 and some comparisons and so on
+5:20 in order to determine whether we have won the game
+5:23 the guess was too high, too low, that sort of thing
+5:25 this is one of our core concepts from this application
+5:28 so let's go dig into that.

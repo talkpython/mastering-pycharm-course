@@ -1,0 +1,46 @@
+
+.category.videos .video {
+    margin: 20px;
+    text-align: center;
+}
+
+.category.videos .video .author {
+    font-weight: bold;
+    color: black;
+}
+
+.category.videos .video .views {
+    font-size: .7em;
+    color: gray;
+}
+
+
+.container.videos {
+    padding-bottom: 20px;
+}
+
+.container.videos img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.listing {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.listing span.video div {
+    max-width: 500px;
+    margin-bottom: 30px;
+}

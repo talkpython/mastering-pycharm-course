@@ -1,0 +1,139 @@
+0:00 When I ran it, you can see it said compute days
+0:03 actually takes no arguments but two were given. 
+0:05 So, we are trying to pass these parameters 
+0:09 but we are not accepting them in the method, 
+0:10 and some languages like Javascript just ignore that 
+0:13 but Python, if you are going to pass parameters 
+0:16 you have to declare that you expect them in your method.
+0:20 There is actually a variety of ways to do that
+0:22 we can look at that in more detail later in the class
+0:24 but for now we are going to just take 
+0:25 what is called positional parameters 
+0:27 so we'll call this date1 and date2. 
+0:31 Ok, so date1 and date2, 
+0:32 we want the time between these two dates
+0:35 now there is a bit of a detail that we are going to run into
+0:37 so let's just do the sort of naive computation
+0:40 and then we'll go back and fix it.
+0:43 So what we are going to do is when you have a datetime object,
+0:46 not a date object but an actual datetime object,
+0:49 you can subtract one form the other, so I can say, like this, 
+0:54 I can say dt for change in time, 
+0:58 is date1 minus date2 
+1:01 and what we get back is what is called a time delta object, 
+1:04 and on here you have things like 
+1:06 how many hours or days or seconds 
+1:15 or things like that are in this time delta. 
+1:19 And the one we are going to work with 
+1:20 is actually a total seconds, ok
+1:24 now total seconds is going to tell us 
+1:26 how many seconds there are in this entire range, 
+1:29 so if this was like 3 days it would be something like 210 000 seconds, 
+1:35 however many seconds are in days, 
+1:38 as opposed to just seconds,
+1:40 which will only tell you sort of the seconds components
+1:43 if the answer was, it's been 3 days, 2 hours and 10 seconds, 
+1:48 seconds here would be 10. 
+1:50 Seconds over here would be like 200 000.
+1:53 So we can use this to actually compute 
+1:55 the number of days, almost, right, 
+1:58 there is going to be a one model fix, we've got to do, 
+2:00 but we can say this, we can say days equals 
+2:03 and then we just do super basic math, 
+2:05 so like 60 seconds in a minute,
+2:08 and there's 60 minutes in an hour 
+2:10 and there is 24 hours in a day. 
+2:12 We can just return the days. 
+2:14 So, let's go down here, 
+2:17 and we can print out our number of days 
+2:21 and let's get rid of this print. 
+2:24 Now, this is close, if we try to run it 
+2:26 obviously none is not going to work 
+2:28 so the question is how do we get the date right now? 
+2:31 So we go back to our lovely datetime module 
+2:34 and we go to our datetime class 
+2:36 and there is a nice little static class method called now. 
+2:40 So we can call now and it will give us 
+2:42 a datetime object exactly now. 
+2:45 So this is almost going to work, let's run it. 
+2:49 So let's say 1974, April 1st. 
+2:54 All right, so how many days between now and that date? 
+2:58 Negative 15 000 days. 
+3:01 Hm, I think we did something wrong here, 
+3:04 and technically, this method is doing exactly what we wanted, 
+3:08 however, maybe we didn't name it quite exactly right,
+3:13 what it really needs to do is 
+3:14 say assume that these dates are applying to the same year, 
+3:19 then how many days are between them, right, 
+3:21 that's really the question we are trying to answer,
+3:22 because we are not wondering how many days was it 
+3:25 since you were born, 
+3:26 we are just wondering how many days this year until your birthday.
+3:29 So we need to do something slightly different here. 
+3:32 Now the real problem is that these two dates 
+3:34 don't apply to the same year, 
+3:37 and it doesn't really matter if we say go back, 
+3:41 like let's assume that this one is from 1974 
+3:43 and this one is from 2016, 
+3:46 it doesn't really matter if we move that one up to 2016 or that one back,
+3:51 generally it would be the same,
+3:52 however, you do have to account for things like leap years 
+3:56 and some of these things that might make it be off by days,
+3:59 so it's important for us to know which one of these
+4:02 is this year and let's just update our methods here really quick.
+4:07 So I'll call this original date, and we'll call this now. 
+4:14 So let's go over here and update this, 
+4:16 so we'll say date1 = now, 
+4:20 date2 =... Now what we need to do is create a new date, 
+4:24 the same year as this year but the same 
+4:26 day and month as the original date, 
+4:29 so we'll say datetime.datetime 
+4:32 and here we can say the year and now.year 
+4:35 and then original date.month, original day.day. 
+4:39 Excellent, so now this should be
+4:43 working more like you'd expect. 
+4:45 Just do a quick format and run, 
+4:47 so 1974, April 5th, negative 34 days. 
+4:52 Ok, so it's like beginning of the March, 
+4:55 that makes perfect sense, 
+4:57 notice the negative and the direction 
+4:59 we are doing the computation 
+5:00 that means we are 34 days before our birthday, 
+5:04 so let's go down here and let's make 
+5:06 one quick change really quick, 
+5:08 let's turn this into an integer 
+5:10 so that throughout the whole day that it is your birthday is 0
+5:12 so we could just do that by passing this decimal, 
+5:16 this float to the integer here, 
+5:19 so now let's do it one more time, 
+5:21 1974, 4, 1, there you go, negative 30. 
+5:25 Excellent, so the last thing to do 
+5:27 would be get rid of this print statement, 
+5:29 and actually print out something interesting 
+5:32 based on this information, 
+5:33 so we are passing number of days, 
+5:35 the parameter names don't have to match argument names obviously,
+5:39 so we'll just do something really simple, 
+5:41 again in if statements, we'll say if days is less than 0, 
+5:45 that means your birthday is coming up,
+5:47 so we'll do a nice little print statement, 
+5:48 so we'll say print your birthday is in {days} like this 
+5:55 and we'll do a little format,
+5:57 and of course that is negative so we need to switch it 
+6:00 so let's proper from the users perspective, 
+6:02 so we'll just put a negation operation there 
+6:06 and then we can say else if- elif days > 0 
+6:10 say print you had your birthday already this year {} days ago.
+6:20 Format, days like this, and then if it's not greater,
+6:24 it's not less than, that means those two days were 
+6:27 the same days so we'll say else we'll say print, 
+6:31 happy birthday. 
+6:32 Right, let's test this out, 
+6:34 1974, April and say 1st, awesome, 
+6:39 your birthday is in 30 days. 
+6:41 Sounds right, let's run it again, 
+6:44 so 1974, let's say it was in January 15, 
+6:50 Oh you already had your birthday this year,
+6:51 it was 47 days ago. Great, 46 days ago, 
+6:54 and let's test it when it's exactly the day,
+6:59 yeey, it's my birthday, same date as today.

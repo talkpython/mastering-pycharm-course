@@ -1,0 +1,63 @@
+00:0.14 Now that we have our location in structured data,
+00:3.09 not just plain text, we're gonna be able to call our weather API.
+00:6.27 So let's say "data = call_weather_api" and we're gonna pass this
+00:12.26 location over. And as we've been doing,
+00:15.92 let's go over here and write this function. Well,
+00:18.76 we start out by having our URL, remember we go back
+00:23.18 to our example, it's gonna be "weather.talkpython.fm/api/weather" and then
+00:28.77 stuff up here. So let's go and work with it like this.
+00:32.84 So it's gonna be this base URL up to here and then city,
+00:36.25 what goes in here is going to be location dot.. Check out the named tuple,
+00:41.01 so cool! Now the state is tricky,
+00:43.48 so I'm gonna put the state to the side for a second here,
+00:46.47 and the country is going to be "location dot country" like that,
+00:53.39 and then the units, I'm gonna just hard code it to Imperial.
+00:56.96 You can hard code it to metric or if you want to pass metric or imperial and
+01:1.43 let the user decide how they like it,
+01:3.34 go for it. But to me I'm just gonna leave it like this because you
+01:6.38 gotta pick one, and I'll leave it like that.
+01:7.91 Alright, so now it gets a little bit interesting,
+01:10.34 because if they pass a state,
+01:12.62 we want to use it, but if they don't pass a state,
+01:14.59 same state equals blank, might throw off the API and freak it out.
+01:18.7 So what we want to do is we'll just do a little test, if location
+01:21.91 dot state, then we're going to say "url plus equals ampersand,
+01:27.04 make that an f-string as well, state equals state, like that. Location,
+01:32.48 not state. There we go.
+01:33.4 Okay, So if you pass a state through our structured data,
+01:37.12 we're going to tack it on with an ampersand.
+01:40.08 The order of the query string, these key value pieces,
+01:43.76 this whole thing is a query string,
+01:44.85 the order, the key value pairs in the query string, doesn't matter.
+01:48.21 So if it goes at the end with units in the middle,
+01:50.94 doesn't matter at all. Alright,
+01:52.15 so now let's just print out the URL, would call,
+01:56.8 and with PyCharm, here's a cool thing with f-strings:
+01:59.36 I can type curly brace, and notice the curly brace is still stringy,
+02:4.38 it's still green, it's not actually interpreted as anything,
+02:6.48 and there's no f at the front.
+02:7.78 But if I start to type of variable like
+02:11.22 URL, it's still not an f-string.
+02:13.3 But if I hit enter, it puts the f at the front and completes it.
+02:16.53 So that's pretty cool. Let's just, and I'll just say for now it's supposed to
+02:21.92 return something, so I'll say it returns
+02:23.32 "None". Functions always return None anyway,
+02:25.96 but whatever. Say "Portland, US",
+02:29.91 like that. The country and the state need to be
+02:33.02 two digits, or two characters. So check it out,
+02:35.94 we would call Portland, US with imperial units and let's click it,
+02:39.73 see what we get. Look at that.
+02:41.17 Broken clouds, 65 degrees. A wonderful fall day here in Oregon.
+02:46.49 Now let's call this again, but this time let's get Portland,
+02:50.75 Tennessee, actually, yeah sure,
+02:53.92 Portland, Tennessee. Like that and says,
+02:56.3 notice the state says TN at the end,
+02:59.34 and here we have Portland, US,
+03:1.21 Tennessee and the weather is 60 degrees.
+03:3.5 Looks like it's also nice. Little more clear skies,
+03:6.01 but not the same forecast to be clear.
+03:8.23 Cool, huh? This is great.
+03:10.77 We're actually structuring what we need to send over to the API perfectly.
+03:14.76 But now what? This "would call" needs to turn into
+03:18.09 "I actually went to the Internet and got data and understood what came back",
+03:21.47 but we're off to a great start.

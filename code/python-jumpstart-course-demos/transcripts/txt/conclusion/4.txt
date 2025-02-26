@@ -1,0 +1,16 @@
+0:00 This course was made possible by a Kickstarter project 
+0:03 that many of you have backed. 
+0:06 I'd like to take this moment to say thank you, thank you, thank you, 
+0:09 I really truly appreciate it.
+0:11 For a long time I have dreamed to starting a whole library of courses like this
+0:15 and making a difference for helping developers,
+0:18 learn more and become better programmers. 
+0:20 So those of you who contributed to the Kickstarter 
+0:23 you helped me take that step and I really do appreciate it. 
+0:26 There are few folks who contributed more than others, 
+0:29 and they backed a special contributing student level, 
+0:32 and I wanted to say especially thank you to them, 
+0:35 from Mike Herman at Real Python, Mat Makai Full Stack Python, 
+0:39 Mahmoud Hashemi my former guest on the Talk Python To Me podcast, 
+0:42 and everyone else. 
+0:45 Thank you so much for being part of this course and helping it happen.

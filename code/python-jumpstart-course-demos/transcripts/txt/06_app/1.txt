@@ -1,0 +1,30 @@
+0:00 Hello and welcome to app number 6. 
+0:03 We are calling this one The Cat Factory, 
+0:05 as in LOL Cats, it's going to be fun. 
+0:08 What exactly is a LOL Cat Factory?
+0:10 Well, it may be a bit of a strange title but it's going to look like this.
+0:14 So we are going to have our standard header
+0:16 and then I happen to know of a web service 
+0:19 that will give you a random LOL Cat
+0:21 it's very important service on the internet
+0:23 we are going to use it to return data, to our app. 
+0:26 Previously in the weather app 
+0:28 we had used Requests to make HTTP Requests against the weather site 
+0:32 and actually get the HTML's text. 
+0:34 But now we are going to work with binary data, and the cat pictures 
+0:38 and then we are going to write that to a binary file
+0:40 which is quite different than using text files.
+0:42 Finally, you can see at the bottom it says launching output folder and finder 
+0:45 so we are going to start a subprocess from our app 
+0:49 and if this returning on Windows, it would say launching output in explorer. 
+0:53 So what core concepts are we going to cover in this app? 
+0:57 Well, it's going to be a little bit shorter than the previous two marathon apps, 
+1:01 but we are going to come back and talk about HTTP clients again, 
+1:04 this time with binary data 
+1:07 and we said we are going to save those to binary files 
+1:09 and we are going to use sub-processes launching other applications
+1:13 from within ours to actually interact and display those pictures to the user. 
+1:17 We are also going to come back to this 
+1:19 OS independent file and folder management 
+1:22 and do a little bit more than we had been previously doing with our other apps. 
+1:26 All right, so let's get to it.

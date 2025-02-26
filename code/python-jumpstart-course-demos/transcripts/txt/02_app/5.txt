@@ -1,0 +1,63 @@
+0:00 A core concept of this application
+0:02 is to understand the shape of a Python program.
+0:05 So far, until very recently, 
+0:07 we've been just writing straight top to bottom code, 
+0:11 with no blocks, no functions, 
+0:14 no conditionals or loops 
+0:15 or anything that has to be disambiguated in that sense. 
+0:19 And now, what I want to focus on 
+0:21 is this concept of a shape of the Python program. 
+0:24 Everything you see on the screen that is in the square, 
+0:27 the gray square, the blue squares, the purple squares, 
+0:30 those are all separate code blocks, 
+0:32 sometimes called code suites in Python 
+0:35 that are executed in some particular manner. 
+0:37 The blue blocks are functions 
+0:39 that are executed when the functions are called, 
+0:41 the purple blocks are if or else blocks 
+0:44 that are executed depending on whether the argument is batch or something else. 
+0:48 The key thing that defines code blocks in Python
+0:52 which makes it quite unique in this regard, is white space. 
+0:56 Many C derived languages use curly braces, think of Javascript, 
+1:01 C#, Swift, those types of languages, they all use curly braces 
+1:06 and when you open the curly brace that begins a block of code, 
+1:09 and when you close curly brace that block code is now done. 
+1:12 It doesn't work this way in Python, 
+1:14 it's all about the indentation, 
+1:15 so you can see the gray block which is just the overall program 
+1:19 and we have two functions we are defining, 
+1:22 we have def main and we say colon, 
+1:25 and then we indent all the body of this function.
+1:28 And that body is made up of those two blocks in there, 
+1:31 there is two purple blocks sort of the if else statement. 
+1:34 Then we unindent and we define another run function
+1:36 the details don't matter, we say colon and indent again 
+1:39 and that's the body of the function for a run. 
+1:42 So you've already seen previously that editors like PyCharm 
+1:46 and other Python intelligent editors know about this shape, 
+1:50 they know about this code blocks 
+1:52 and if you type if something colon enter, 
+1:54 it will automatically indent and stay intended 
+1:57 until you unintend it manually. 
+1:59 While it might seem a little challenging to use spaces to define a structure, 
+2:04 it turns out the editors know all about it and make it super easy.
+2:08 One more comment I should add 
+2:09 while we are talking about indentation or white space, 
+2:12 tabs? tabs are not a good idea, in Python, 
+2:15 Python does not like tabs. 
+2:17 This white space should be actual the space character, not tabs, 
+2:23 now that doesn't mean that you don't press tab in your editor like in PyCharm
+2:26 if you hit tab it will indent but it actually just means
+2:29 it's going to insert four spaces for you 
+2:32 and many of the Python editors are like that. 
+2:35 So if you are coming to Python from another language 
+2:37 that does not use significant white space like C++ 
+2:41 or some of the C based languages 
+2:43 this could feel a little strange to you and it does take a week or so
+2:47 to really become super comfortable with this idea but once you do
+2:51 it's very natural and it's a lovely way to program 
+2:55 but I know that some of you out there you are thinking WOW!
+2:58 this is really different and to you I say 
+3:00 just give it a try, use a nice editor and you will start to love it right away. 
+3:05 if this feels totally natural and good to you, 
+3:07 well then you are going to love Python right from the beginning. 

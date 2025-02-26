@@ -1,0 +1,26 @@
+0:00 Let's take a moment and talk about a core concept called lambdas. 
+0:03 In Python, functions and methods are first class citizens. 
+0:08 That means they have their own type, they can be passed as arguments, 
+0:11 and they can be treated as like a class or other elements in the language, 
+0:17 and so that makes it very natural to write a method like the one we have here, 
+0:21 find the significant numbers, to find_sig_num, so if it's on the slide, 
+0:24 you pass it set of numbers, and then some kind of method 
+0:28 and you can use this method to test is this number in this set or is it out of the set. 
+0:33 So this is an example of using functions as a first class citizen 
+0:36 and it turns out often when you write code like this the little bit of test, 
+0:42 the predicate you need to write and pass along 
+0:46 is really specific to this one purpose where you are using it,
+0:48 it's usually very simple and it often does not make sense 
+0:52 to make its own dedicated method, 
+0:54 you just want to kind of say here is the little test, 
+0:57 and it's lambdas that let us do this, 
+0:59 so you can see on the second to last line we write lamda x: x % 2 ==1
+1:04 so the test we are passing off to this find significant numbers, 
+1:07 in this one example is find me all the odd numbers. 
+1:11 So you can see we have the Fibonacci sequence, the first bit of them, 
+1:13 we are passing it off to this fine significant numbers 
+1:15 and we are only looking at the odd Fibonacci numbers, 
+1:18 and that's exactly what comes back,
+1:20 you'll find lambdas to be a key part of the language, 
+1:22 and the more you dig into Python, the more you see that they are up here 
+1:26 and they are helpful all over the place.

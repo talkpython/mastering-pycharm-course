@@ -1,0 +1,56 @@
+0:00 Let's make our journal module just a little nicer to work with. 
+0:03 So if I come over here and I look at this journal and I hit F1, 
+0:06 you'll see that PyCharm can kind of guess 
+0:09 hey I think this is returning a list but it's all that we really get. 
+0:14 Now, if I look at some built in like print it will give me decent documentation 
+0:19 like hey here is all the values, here is how you typically use it, 
+0:23 here is a link to the documentation and so on. 
+0:26 We would like our journal code to look like that 
+0:28 and it turns out it's super easy. 
+0:30 So if we come over here and we enter a string, 
+0:35 on its own line right by itself here, 
+0:38 that will actually be the documentation 
+0:41 and there is a format that lets you describe the return values 
+0:44 and the parameters and expectations and everything. 
+0:47 So, one way that we can create the string, 
+0:50 let's just take a break for a minute, 
+0:52 call it S is we saw we could put single quotes like this, 
+0:56 or we could put double quotes like this, 
+1:01 but the third way is to extend that to be sort of a string literal across multiple lines
+1:05 I could say S = ' ' ' and hit enter, right, 
+1:08 this is multi line and close it off like that,
+1:16 and that's actually a string with one, two new lines 
+1:19 and then this and then a new line, 
+1:22 so you can have this sort of richer strings in that way 
+1:25 and that is the style we are going to use, to document this here. 
+1:28 So we are going to come over here and say ' ' ' and when I hit enter, 
+1:32 PyCharm is actually going to help me out. 
+1:34 Notice it says, ok it looks like you are trying to add a docstring, 
+1:37 so we are going to have a parameter called name 
+1:41 and we'll give you a chance to describe that 
+1:43 so this will be the base name of the journal, to load, 
+1:47 and it can talk about the return value 
+1:52 a new journal data structure populated with the file data, 
+1:58 something like this and then at the top
+2:00 we have the general method summary 
+2:02 and so this method loads and say creates and loads a new journal.
+2:10 So let's go over to our program and do that little trick again we had, 
+2:14 so I can come over here and I can look at this, 
+2:17 and hit F1 and now it pulls it up and says 
+2:20 this method creates and loads journal and guess what
+2:22 the name parameter, this is the base name of the journal
+2:24 and the return value that's a new journal, Woho!!. 
+2:27 So now you have proper documentation. 
+2:30 Now if we come here to Python console and we say import journal, 
+2:34 I can write things like help (journal.load) and when I hit enter
+2:39 you can see just like we got into UI there
+2:42 we also get the text version so if you are working in the console or the terminal 
+2:45 the sort of standard help also uses the same docstrings. 
+2:49 Now I did notice that PyCharm was suggesting that we should use 3 double quotes, 
+2:55 so let's go and make it happy, and do that here like so, perfect. 
+3:00 Now, of course in the real app we go right this for save 
+3:02 and all the other pieces, we can even do this for the module itself 
+3:06 say this is the journal module, 
+3:10 and now if I were to come down here and do that import again 
+3:13 or come over here to the top and look at the journal, 
+3:17 I can ask for help and it actually gives me module level documentation as well. 

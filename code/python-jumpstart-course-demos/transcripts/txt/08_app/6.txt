@@ -1,0 +1,28 @@
+0:01 Here is a mathematical computation that is defined iteratively 
+0:04 and that makes it very natural to define it as a recursive function, 
+0:08 the factorial of number n is just n times the factorial of the smaller number 
+0:13 until you get down to a pre defined number that has a factorial known 
+0:18 and where the factorial of 1 is defined to be 1. 
+0:21 We are taking this function factorial and we are calling it again 
+0:24 within itself with slightly different parameters 
+0:28 and we need to make sure that there is somewhere along the way 
+0:31 some kind of test where we no longer call the function recursively 
+0:35 so that is kind of like our if we are if we are remodeling this as a  loop 
+0:38 this is how we would like break out out of the loop, 
+0:41 but in recursion, we just return from the function without doing more of recursion, 
+0:45 let's look at this visually. 
+0:47 Here we are going to take factorial of 3, 
+0:49 that's going to return 3 times whatever the factorial of 2 is,
+0:53 and when we call factorial of 2 we actually are back in the same function 
+0:57 but now entirely different data 
+0:58 so now we are going to say well factorial of 2 is going to be defined 
+1:01 to be 2 times factorial of 1 when I pass one down but remember, 
+1:05 the factorial of 1 is just 1 and as we work our way back 
+1:08 we pass 1 up we do 2 * 1 and that's 2 and we pass the 2 back 
+1:13 and we say 3 * 2 and that is 6 which gives us our answer. 
+1:16 This is one of the core concepts of computer science and computer programming, 
+1:20 it's not used super often but when it is used it so perfectly aligns 
+1:26 with the types of problems you are solving, 
+1:28 if you are dealing with hierarchical data structures 
+1:30  or you are dealing with these iteratively defined algorithms, 
+1:33 recursion may be what you need. 

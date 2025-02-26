@@ -1,0 +1,14 @@
+0:00 That brings us to our final core concept, 
+0:03 this __name__ variable, 
+0:07 or sometimes referred to as __name__.
+0:10 So we saw this __name__ variable is available in all modules and Python scripts,
+0:15 and the convention is it's set to the name of the file,
+0:19 if the file is being imported, 
+0:22 otherwise it's set to __main__.
+0:25 __main__, right?
+0:27 And we use this trick or this convention to determine 
+0:31 how our should execute. 
+0:33 In our example we decided do we run the main method in the event loop
+0:37 or do we just define the functions and actually skip running the main
+0:40 because we are not the program
+0:42 we are just being used by another program.

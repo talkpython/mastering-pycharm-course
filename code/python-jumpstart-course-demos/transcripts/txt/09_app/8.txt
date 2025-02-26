@@ -1,0 +1,107 @@
+0:00 Ok so we've gotten our data out of the comma separated value file, 
+0:03 converted it into our purchase class 
+0:06 and we've got it a list of those and we are passing it to the query data method,
+0:11 now in this method we are supposed to answer 4 basic questions,
+0:14 what is the most expensive house, 
+0:16 what is the least expensive house, 
+0:18 what is the average price of a house 
+0:21 and what is the average price of a two bedroom house. 
+0:23 So some of these are really easy to answer, 
+0:26 some of them take a little bit more work. 
+0:28 So if we say data '.' 
+0:30 PyCharm knows it's been able to detect 
+0:33 that we are sending a list and it's retracted back from the load data 
+0:37 back to the main method and down into here 
+0:39 and says I know I know that you are sending a list
+0:41 but it's not quite sure what type is on the inside, 
+0:45 notice when I go and pull it out I get nothing, 
+0:48 we can actually give PyCharm a type hint, 
+0:51 if we want and it doesn't affect the way it runs 
+0:55 but will give us some help 
+0:58 and we can say this is a list of purchase objects, 
+1:00 now if I say data '.' again we get our list stuff 
+1:05 but if I go to individual item you can see we have our baths, beds and so on. 
+1:08 So that might make things a little bit easier, ok, 
+1:10 so the question is what is the most expensive house, 
+1:14 what is the least expensive house, 
+1:15 now if I could tell you that data 
+1:19 so we can say if data was sorted by price, 
+1:23 it would be really easy to get the most expensive 
+1:26 and least expensive purchase 
+1:27 so we could say high_purchase = and this is a list,
+1:32 remember, if it was sorted form low to high,
+1:35 high purchase would be the last one, 
+1:37 so we can just say minus 1, 
+1:39 this is a beautiful thing about Python, 
+1:41 and let me move this over like so, 
+1:44 and the low purchase would just be data zero. 
+1:47 Again, we are assuming there is some data this would crash if data is empty, 
+1:51 but how do we sort it, well, that's super easy, 
+1:55 we could go over here and we could say data 
+1:57 there is two ways we can do this,
+2:00 we can do one which will modify the data list 
+2:03 and one which would return a copy that is sorted but it doesn't affect data itself.
+2:08 Let's assume we just want to sort this one in place 
+2:11 so then we can say sort notice, we can specify a key, 
+2:15 so we can say this, we can say the key I want you to sort by is something, 
+2:21 now let me write something that might seem a little weird here to you, 
+2:24 say def get_price(). 
+2:27 And we'll give it a purchase, 
+2:28 so if we are given a purchase we could say return p.price. 
+2:32 So if I go down here and say get_price
+2:35 and I don't call it but I just say the method name, 
+2:38 when it's time to sort, when it's time to get the key to sort on, 
+2:42 the list here will actually call this function on each element, 
+2:45 that function will return the price of whatever the list passes to it 
+2:50 and then it will do a sort on that new subset of data that projection of data.
+2:54 So let's see if this is going to work,
+2:56 let's just do a print of high price.price,
+3:00 and down here we'll do a print, we'll do a better print in a moment,
+3:03 but say low price.price. 
+3:06 Remember, this should be like 800,000ish, this should be 1,500. 
+3:09 Let's find out. 
+3:11 Well, it looks like my cool little trick to get the type hints here isn't working so well,
+3:17 let's take that away again. 
+3:19 Excellent so you can see we've got the high priced house, 
+3:22 and the low priced house and all we had to do is sort our list. 
+3:27 However, this is not the coolest thing to write this function here 
+3:30 so that we can pass it off to the key method, 
+3:33 wouldn't it be better if we could just put a little bit of code here 
+3:37 that talks about how to get the price from a purchase, 
+3:41 well, luckily, Python can do that, we can go over here and say key, 
+3:45 instead of giving an existing method that we have written
+3:48 either a class method or just a regular method, 
+3:51 we can just say I am going to create something called a lambda 
+3:54 and a lambda is like a little inline method, 
+3:56 and so we'll say given a purchase I would like to return the price, that's it, 
+4:01 and we go over here and we can comment this out, 
+4:03 we don't need that anymore, 
+4:05 and let's try to run it and see if we still get the same information. 
+4:08 Perfect, so anytime you have to pass a function around 
+4:11 and by the way how cool is that you can pass functions around, 
+4:14 anytime you have to pass a function around, 
+4:17 if the function is sufficiently small we can just say
+4:19 here is our little small function an inline function, lambda, 
+4:22 this is the argument, there can be mini arguments like p, u, x, whatever, right,
+4:28 given this argument which is a purchase 
+4:31 that's because the data list contains purchases 
+4:34 given this we are going to go and return some value 
+4:37 that will then be used to sort, so we are going to return a price, 
+4:40 and there is kind of an implicit return here, right, 
+4:42 you don't say return, you just say there is kind of an expression, 
+4:45 this piece of data goes to that value. 
+4:47 So let's just like make this output a little bit nicer here, 
+4:50 we'll say print the most expensive house is 
+4:57 so here we've cleaned it up, 
+4:59 the most expensive house is 884,000 dollars 
+5:02 and the least expensive house is 1,551 
+5:06 maybe we want to say little more information about it, 
+5:09 like with some number of bedrooms and some number of baths, 
+5:14 because we are using our class this is super easy we just say beds baths, 
+5:21 4 beds, 3 baths, we can do something very similar, for the least expensive. 
+5:29 What do you guys think, is that a good deal, 
+5:31 1,500 dollars for a 3 bedroom 3 bath house, 
+5:34 I have no idea what happened there, 
+5:36 let's take a moment and look at this core concept of lambda expressions 
+5:39 and then we'll go on to answer the more interesting question 
+5:42 that involve little bit more math.

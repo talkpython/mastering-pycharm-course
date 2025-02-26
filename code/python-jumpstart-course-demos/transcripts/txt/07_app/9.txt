@@ -1,0 +1,32 @@
+ 0:00 Inheritance is a core concept 
+0:02 of all object oriented programming 
+0:04 and it's exactly the tool that we need, 
+0:06 to help us build these special types of creatures in our game, 
+0:10 dragons, small animals and so on. 
+0:13 The way it works is you declare what is called a base type, 
+0:16 in our case this is the creature and it has all the common functionality. 
+0:20 But we can add specialization to it, 
+0:22 we can add some other type that is like a creature 
+0:26 but has additional pieces of information, or behaviors, 
+0:29 so here we have a dragon and the way we declare its base type,
+0:32 the thing that it gets its common behaviors from 
+0:35 is we say "(" and the class name, ")". 
+0:39 So dragon is a creature but dragons also have special behaviors and data 
+0:44 so this dragon can bread fire, you can see there is breed fire method, 
+0:48 creatures can do that, it's adding that to its specialization, 
+0:51 and it also has a different set of data, 
+0:53 it has a scale thickness in addition to the name and level. 
+0:57 Now, notice this call to super, we say super.init, 
+1:00 that's the initializer for the creature class, 
+1:02 and we have to pass the name and the level onto this base class, 
+1:05 we technically could ignore this step 
+1:08 and then just store the name and level as well, 
+1:11 but you often find you would be duplicating code 
+1:14 and introducing various bugs by omission and so on, if you do that. 
+1:20 Here we are actually letting the creature class 
+1:22 deal with storing and processing the name and level 
+1:25 and whatever that means and however that evolves over time, 
+1:27 and we are only doing the extra stuff in the dragon, 
+1:29 like storing the scale thickness and so on, 
+1:31 so let's go back and apply this concept of inheritance 
+1:34 to our wizard game.

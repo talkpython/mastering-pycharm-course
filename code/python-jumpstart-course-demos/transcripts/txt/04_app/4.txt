@@ -1,0 +1,24 @@
+0:00 We just saw the for-in loop in action.
+0:03 And this is one of our core concepts from this application, 
+0:07 let's take a moment and dig into it more deeply. 
+0:09 Now for-in loops are the easiest and the safest way to process any collection. 
+0:14 It doesn't have to be just lists, 
+0:16 anything that is a collection can be used in one of these for-in loops. 
+0:20 So here we have an items list 
+0:22 it has three strings in it, 'cat', 'hat' and 'mat', 
+0:25 and we can go through those and print them out in order
+0:28 just saying for item in items: 
+0:31 we can call item that variable anything we want 
+0:34 as long as it doesn't conflict with the existing other variables 
+0:37 and we just make that up on the spot as part of the loop 
+0:39 and then we could use it within the loop 
+0:42 so we say for item in items print() and then we just work with the item. 
+0:45 Now, that is what you will write most of the time, 
+0:48 but sometimes you want a number, an index,
+0:50 a position associated with that item. 
+0:53 And when that is the case,
+0:55 you wrap your collection in a call to enumerate 
+0:57 and you get back both an index, and an item, and you can work with those.
+1:01 You can either grab it as a tuple or as I am doing in this particular example
+1:05 I am projecting or unpacking that tuple,
+1:09 into the two variables idx for index and item for the actual item. 

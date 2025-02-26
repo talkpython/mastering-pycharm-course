@@ -1,0 +1,88 @@
+0:01 So let's just take a moment and sketch out the flow of this application 
+0:04 just to build a skeleton as we always do. 
+0:06 So, we have a main() method, and we'll do something here 
+0:09 and of course we'll use the live template from main() to call it down here, like so, 
+0:13 from PyCharm, and then, the next thing we want to do 
+0:16 of course we are going to say define print header, 
+0:18 what we need to do is ask the user 
+0:20 hey what directories subtree you want to search 
+0:23 and what do you want to search for, 
+0:25 so those are the next two things we are going to need, 
+0:26 we'll say get_folder_from_user(), 
+0:29 and similarly we'll say get_search_text_from_user(). 
+0:34 then let's just define a search_file() method here, 
+0:37 and we'll figure out the parameters in a minute, ok, 
+0:40 we'll reformat so we are all good, via pep 8 and let's start writing, 
+0:44 so print_header(), you guys know this, this is old hat by now, 
+0:48 so we'll just fly through it, 
+0:57 next we are going to get a folder from the user, 
+0:59 we'll say get_folder_form_user() and let's just do
+1:01 a quick little test like if they enter nothing we would rather not have our app crash 
+1:06 we'll just say hey search that, moreover, 
+1:10 if they enter folder that doesn't exist, 
+1:14 we'd also want to build the deal with this so just do a test, 
+1:16 and we'l leverage the truthiness of strings 
+1:18 so we'll say if not folder, print something like sorry we can't search that location, 
+1:25 now notice here is a little single quote, 
+1:28 this is one of those times where double quote strings are nice and handy 
+1:30 and then we'll just exit out of here.
+1:33 Next thing is we'll get text we'll say get the text from the user 
+1:36 and basically exactly the same deal here boom, I can't search for nothing, 
+1:42 notice PyCharm has these grayed out
+1:44 and that's because it knows there is no return value from that method 
+1:47 and yet we are trying to store in a variable, it will not crush,
+1:50 it will give us the implicit return none but that is going to be highly unuseful for us, 
+1:55 that is kind of what the warning is, 
+1:57 now finally we want something like search file and over here 
+2:00 we'll say we want to search the folder and the text. 
+2:03 Now, I don't really like this name so much, 
+2:05 I'd rather say search files or search folders, 
+2:08 something like that so we can hit control t and rename this 
+2:11 and go I want to search folders, like that, and do the refactoring, 
+2:16 and down here and if there was 100 files all potentially leveraging this 
+2:20 and docstrings leveraging and so on, 
+2:22 all of that would have been fixed, 
+2:25 now we need our folders and text of course, excellent, 
+2:28 so these should be pretty easy to write,
+2:29 let's just come here and pull this out, 
+2:32 now we are going to do a little more than just get the text that is the folder, 
+2:36 we are actually going to verify it. 
+2:38 So ask the user what folder do you want to search, 
+2:40 then we'll say if not folder: so for some reason it came back empty 
+2:43 I don't think it can ever come back as none 
+2:45 but let's just verify it, let's little safe and we'll say or if possibly the folder is just white space, right, 
+2:53 so in either case we'll just return none so we have nothing, 
+2:56 there is no folder and that will trigger remember up here 
+3:01 that will trigger this and say no, it doesn't work. 
+3:04 Next, let's verify that this directory exists and that we have access to it. 
+3:09 Again, back to our OS.path.exists,
+3:14 now we can be little better, we can say isdir in case they put a file 
+3:17 and we are trying to search through subdirectories, or something like this,
+3:20 maybe we'd write our app to behave differently 
+3:23 if you give it a file versus a folder, but we are not doing that right now, 
+3:25 so we are just going to say if it's not a directory 
+3:30 we'll just return none and then finally, 
+3:32 let's clean this up a little bit and say we'll return OS.path.absolutepath() 
+3:37 so we have a nice absolute path for a folder instead of something relative, 
+3:41 as you will see having an absolute path is helpful for later on. 
+3:45 Next, let's just get some search text here, 
+3:48 we'll say text = some sort of input again, 
+3:50 we'll ask what are you searching for and then we'll give 
+3:54 a little warning that says single phrases only, 
+3:57 because we are not going to do like words that mean and breaking into parts 
+4:01 we are just going to do basic substring searches,
+4:04 that's an interesting app to write but it's not the focus 
+4:07 that we are really trying to get here. 
+4:07 So we'll just return text. 
+4:10 All right, it looks like things are going pretty well here, 
+4:13 now let's just finally do this and just do a little print statement 
+4:15 just to show everything is hanging together, 
+4:17 print would search this place for that. 
+4:23 So let's run ti really quick, let's just search the current directory, 
+4:26 it looks like I made a mistake, let's see here, not folder, 
+4:30 that should be or not strip, ok, perfect, ok let's try again, 
+4:37 I want to search the current location, and I am searching for the word cats, 
+4:40 so we would search/users/screencaster/desktop_08_file seracher for cats. 
+4:46 Perfect, so we have kind of all this parts of like user input 
+4:49 and everything completely done, and now
+4:51 it's just a matter of implementing the search method.

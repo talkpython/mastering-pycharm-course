@@ -1,0 +1,29 @@
+0:00 Let's quickly talk about this cool concept of generator expressions. 
+0:03 Generator expressions are sort of the next evolution from list comprehensions, 
+0:09 and list comprehensions of course take the idea 
+0:12 of writing procedural code, declaring a list, 
+0:15 and writing some kind of loop within that loop doing a filter 
+0:20 maybe somehow transforming the data and putting into the list. 
+0:23 Generator expressions do the exact same thing 
+0:27 but instead of computing the entire thing into a list in memory 
+0:31 it works just like the coroutines that you get when you use the yield keyword, 
+0:35 you don't actually do the computation, 
+0:37 you don't pull the item back from the get active customers in this example, 
+0:41 you don't do the test until you start to pull items out of it, 
+0:44 so if you say for n in paying usernames, 
+0:49 and you only pull three of those out, 
+0:51 maybe within the first five of a million active customers 
+0:54 there are three ones who are active today 
+0:57 well you are only going to process five customers instead of a million. 
+1:00 That can have a lot of really powerful 
+1:03 positive effects for your application performance. 
+1:06 Now to be fair, there are certain situations where this doesn't work as well, 
+1:11 you can't index into generators for example, 
+1:14 or you can for a list comprehension, 
+1:16 every time you loop over paying usernames,
+1:19 you recompute this information, 
+1:21 so if you are going to use the item over and over and over, 
+1:23 maybe it makes sense to use a list comprehension, 
+1:25 often though with these little expressions you create them, 
+1:28 you blast over them and you are done, in that case, 
+1:31 generator expressions probably are the way to go.

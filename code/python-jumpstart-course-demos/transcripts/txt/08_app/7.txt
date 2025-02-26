@@ -1,0 +1,53 @@
+0:01 Ok, let's see how recursion will us search 
+0:03 not just the current directory that we give it 
+0:05 but the entire directory tree starting at the directory we provided as the root. 
+0:11 Here we have search folders, this is going to be our recursive function, 
+0:14 and we are going to come here, we are going to list all the items here, 
+0:17 we want to for each item build up the full path to that item. 
+0:20 Remember these little bits are just relative, 
+0:23 they are sort of the name but not including the path. 
+0:26 Before we said we don't know what to do with directories 
+0:28 let's just get out of here and then we said if it is a file 
+0:31 we will go get all the matching lines and information 
+0:34 about that in extend to all matches, 
+0:36 well now we can use recursion to solve this problem 
+0:39 so let's try this like else really quick, 
+0:41 so we sort of put these in these two cases 
+0:44 so if it's a directory we do one thing otherwise, 
+0:46 if it's a file we go search it. so what are we going to do, 
+0:50 we are just going to say if it's a directory, 
+0:56 let's also search that directory and what method do we have that can search folders, 
+0:58 well, the one that we are in. 
+1:00 But we are going to search a different folder, 
+1:02 a subfolder, and the name of the subfolder is full item 
+1:04 and we still want to search for the same text, 
+1:06 now this will come back with matches as well, 
+1:08 different sets of matches probably more, you never know, right, 
+1:11 but it's all the stuff within that subfolder not just an individual file, 
+1:15 and then we'll say all matches.extent those matches as well. 
+1:19 Look how perfectly recursion solves this problem 
+1:22 like it was really one or two lines of code, 
+1:26 we removed the continue we just said search but a smaller subset of this tree 
+1:32 we want to go search and we are just going to recursively do that 
+1:34 until there is no more directories we are just down to the end, 
+1:37 the end of that hierarchy if you will. 
+1:39 So let's run this and see if it's working. 
+1:41 So again, we are going to search our books, 
+1:43 now remember there is that classics folder that has Sherlock Holmes in it 
+1:45 previously we did not have results for Sherlock Holmes
+1:49 so hopefully we are going to search the books folder and within there 
+1:52 we are also going to search the classics subfolder, let's give it a shot. 
+1:56 Again, we are going to search for Holmes, and here we go, 
+1:59 wow, now we have a lot more results and we've got the Ulysses book 
+2:03 but we also have classics, The Adventures of Sherlock Holmes 
+2:07 you can see on line 11587 the table had not been cleared yet, Sherlock Holmes had been... 
+2:13 beautiful, and you saw that recursion was the key
+2:17 to making this work in the most dramatically simple way possible.
+2:21 So in some sense our app is done, 
+2:24 if what we want to give our app is 10 books that are just all text 
+2:30 and maybe that's a couple of megabytes
+2:32 you can see that we can actually search that quite quickly and there is no problem,
+2:36 but if the number of files and the quantity of files gets to be gigabytes of text 
+2:41 you'll see there is a severe performance problem especially around memory 
+2:45 and we can do much better using some very cool features 
+2:49 called generator methods that's what we are going to do next.

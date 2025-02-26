@@ -1,0 +1,32 @@
+0:00 Hello and welcome to the first app you are going to build.
+0:03 It's a Hello World app.
+0:05 And we are naming it Hello (You Pythonic) World.
+0:08 So, what exactly are we going to build?
+0:10 Well, it's going to look like this.
+0:13 We are going to have a little Hello World app
+0:15 and it's going to have a header that says "Hello App"
+0:17 and it's going to ask a question "What is your name?"
+0:20 And then, the user will enter something like "Michael".
+0:23 And you can see here, 
+0:24 this is a convention we use throughout the course 
+0:27 that the yellow indicates user input
+0:29 and the white indicates application output.
+0:32 So the user enters "Michael", and the app will echo back,
+0:35 "Nice to meet you, Michel"
+0:37 Now, you may not think that there is
+0:38 a whole lot to learn from such a simple application,
+0:41 but in fact, there is really quite a bit going on here.
+0:44 We are going to use the Hello World app
+0:45 not just to show the minimum number of characters
+0:47 you have to enter into an editor
+0:49 to get Python to generate an application,
+0:51 but in fact, to verify our Python environment,
+0:54 and to get started with our editors,
+0:57 as well as we are extending it to do 
+0:58 a little bit more than standard Hello World
+1:01 which is maybe console out,
+1:02 but we are talking about basic syntax, strings,
+1:05 accepting input from the users, variables,
+1:07 that kind of stuff.
+1:08 So you can actually learn quite a bit,
+1:10 even from this very simple Hello World application.

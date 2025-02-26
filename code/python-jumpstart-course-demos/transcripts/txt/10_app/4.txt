@@ -1,0 +1,69 @@
+00:01 Let's return to how we're parsing these movies here.
+00:04 What we're doing is we're creating this movie list
+00:06 we're looping over all the results, we're allocating one of these,
+00:09 and then we're adding it here, let's address this part first.
+00:13 So it turns out that this keyword value keyword value thing that we're doing
+00:18 actually has a shortcut, a simplified version,
+00:21 when you're working with dictionaries as the source,
+00:24 and this md is a dictionary, we'll be able to condense this down
+00:28 assuming that the keywords here and the keys in the dictionary
+00:33 that it's coming from actually line up exactly,
+00:36 if that's the case, you can do what I’m bout to show you.
+00:39 So let me save this, let me make a copy of this and we'll try another one,
+00:42 so quick diversion so you guys understand what's going on here,
+00:46 suppose I have a method or function and it has
+00:49 some positional parameters, so like x y and z, right,
+00:53 if I'm going to call this method, I would say seven, one
+00:58 and I could even say z = 2, right
+01:01 so I could either call it positionally like x and y
+01:04 or I could call this function using the keyword named parameter thing.
+01:08 Some methods are extensible, so I could say format = true, age = seven
+01:16 but you can see, PyCharm is saying no, no, this is not going to work;
+01:19 so in order to make this sort of extensible,
+01:22 to say look you can pass other stuff and maybe we can work with it
+01:25 we're going to use this concept that's often called
+01:28 in the variable kwargs, keyword arguments.
+01:31 Now this name here is just a convention,
+01:34 it could be jerry it could be anything, it doesn't matter,
+01:37 the symbol that we use is this ** here,
+01:41 so if I print out kwargs, like that, if I run this, let's see what we get;
+01:48 you can see kwargs its format is true and age as seven
+01:53 like this extra step that we passed here, under **kwargs,
+01:57 becomes, you can see the curly braces- a dictionary.
+02:00 So, with that in mind, there's a way to reverse this,
+02:04 so what we're doing here is we're taking keyword arguments
+02:07 and we're turning them into a dictionary,
+02:10 but we can use in a reversed direction we can use this **
+02:13 to go from a dictionary to keyword arguments,
+02:16 so what we can do down here is we can replace all of this
+02:19 with just going to the dictionary that has the data md
+02:23 and we can say ** md, and what that means basically is
+02:28 exactly what we had written besides little zeros,
+02:31 besides this little part right here where I was saying alternate default values
+02:35 but this is what it means, it means go here and get all the values out
+02:39 and apply them as keyword arguments.
+02:42 So if I run this, it should run exactly the same,
+02:45 if I search for 'runner' we should see things like Blade Runner and so on.
+02:49 So this is pretty cool, again I said it's only going to work
+02:53 if the keyword arguments or the arguments expected
+02:56 exactly match up with the keys, if there is
+02:59 one is capital title one is lower case title this isn't going to work.
+03:03 This is really, really nice. Now, let's do one more thing.
+03:07 We can improve it one more time,
+03:10 we can come down here and whenever you want to
+03:13 create a list and then loop over something,
+03:15 and then put some sort of transformed or computed element into the list like this,
+03:20 we can do this with a list comprehension.
+03:24 So, we saw that before, we can come down here and just say this
+03:27 maybe write like this for md in movie list, and what are we going to put in,
+03:36 we want to put in this movie result thing,
+03:39 so taking the md and converting it to that, there.
+03:42 Now, this should run more or less identical, the results should be identical,
+03:46 so if we go down here for runner again, we get exactly the same results.
+03:52 So look at how amazing this is, look how short and clean and concise,
+03:56 we want to go to the movie list and convert it into a list of movie results
+04:01 by assigning all the values that are in the dictionary,
+04:05 compare that to this big puppy, this one is more flexible
+04:09 and maybe you need to use this form like I said
+04:12 if the keys don't match up or things like that,
+04:14 but I think this is really beautiful and we'll use that in this particular app.

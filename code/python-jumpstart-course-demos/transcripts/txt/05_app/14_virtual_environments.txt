@@ -1,0 +1,107 @@
+00:0.24 Now we're going to use one of these libraries from PyPi, one of these external
+00:3.69 libraries, and we're going to use pip to install it,
+00:6.39 but that means we need to address one more concept.
+00:10.44 If we install this library into our global operating system environment,
+00:15.04 we could be setting ourselves up for big trouble.
+00:17.81 What would that be? Well, imagine
+00:19.84 application one depends on an older version of a library.
+00:23.54 Over time, Somehow that's changed in a way that's incompatible to the program,
+00:27.77 but you want to use a new application, build a new application, that uses the new version
+00:32.85 of that library. So one app needs the old version of the API,
+00:37.42 the newer app must have the new version of
+00:40.69 the API. How could those both exist at the same time?
+00:43.83 Well, if you just pip install your library,
+00:46.72 it's not going to be possible.
+00:48.11 You could install one and then uninstall it,
+00:49.79 and so the other, and that's not how we should do things.
+00:52.1 So let's open the terminal here,
+00:54.24 and we're gonna go over and go to my desktop,
+00:57.14 make a directory just called "test".
+00:59.34 Now, remember if I "pip install requests",
+01:2.22 whatever version it gets that's gonna be controlling what application libraries are available for every app.
+01:8.44 We don't want that. So what we can instead do is we can create
+01:11.99 what's called a virtual environment. So the way we do that
+01:15.0 is we say "python -m venv".
+01:18.05 So have Python run the module library within itself,
+01:21.94 called "venv" for virtual environment,
+01:24.64 and I'm gonna put it into a directory called "venv". Those air a
+01:27.79 little bit weird, confusing, but it's a convention that's used all over the place,
+01:31.55 so I don't wanna stray from it.
+01:33.64 Now, we want to run Python 3.
+01:36.54 There we go. So now if we look in here,
+01:39.93 you can see that there's a bin folder and in the bin folder there's an activate
+01:43.5 script. So right now if I ask which python, on Windows you would ask "where python",
+01:47.93 it's the System one, okay?
+01:50.53 But if I say "dot", this dot means apply to the current shell rather than run in
+01:56.39 a new shell, I must say ". venv/bin/activate".
+02:1.54 Now notice my prompt changes and I say "which python",
+02:6.84 now it's this one, okay.
+02:8.86 It's this current one. If I say "pip list" and ask what things are installed
+02:13.72 for this python, nothing. If I run Python and I try to import requests,
+02:17.55 it'll say "Nope, we only have Pip and setup tools as our external libraries,
+02:23.12 nothing else". So if we get out of here, now
+02:25.85 we can "pip install requests", installs locally along with its dependencies,
+02:35.04 and here we have those and we can now run Python, import requests, and
+02:39.93 we could even do things like "requests dot
+02:42.06 get" to Google or wherever.
+02:46.36 And if we could print out,
+02:47.98 you could say the response is equal to that last thing that came out.
+02:51.24 Here's the text that apparently is Google.
+02:53.09 You can see at the bottom has got some Googley JavaScript, looks like quite
+02:56.92 a mess, but nonetheless, we went and got that off the Internet by installing it.
+02:59.95 So here's the deal, this application now has this isolated local virtual environment,
+03:6.18 and when we upgrade or downgrade or install things,
+03:10.23 it's just this list. So,
+03:12.17 for example, I can type "deactivate" to get out of this virtual environment,
+03:15.6 and if I type "pip list" now,
+03:16.88 it just shows me all the random stuff in my global python.
+03:21.24 We can use these virtual environments which we create by saying python, or
+03:26.72 python3, depending how you run your python, -m venv
+03:30.06 venv and it creates it and off we go.
+03:33.25 So we want to do the same thing for this application.
+03:36.16 So right now you can actually see what version of python we're on, 3.9 down here,
+03:40.61 and if you click "interpreter settings",
+03:42.59 it will show you that it's the global one.
+03:45.25 This is, you know, user local,
+03:46.66 this is global one. We don't want that.
+03:49.04 So what we can do is either through over here we can click,
+03:52.39 "add" or that's what you were actually after you would just go over here,
+03:55.77 say "add interpreter" and then what we can do is we can pick a location.
+03:59.38 So here we've got the base thing,
+04:1.57 the thing we're going to run with the python
+04:4.38 -m venv, and then we want to go to
+04:7.06 our project directory. Convention is to go to the folder at the top level of your project
+04:12.92 and there create a folder, the virtual environment, called "venv".
+04:18.64 Now, PyCharm doesn't help us much this time,
+04:21.23 but we just type the
+04:23.06 "venv" on the end,
+04:24.33 we hit ok, it's gonna create the virtual environment for us.
+04:28.14 Then we come down to the terminal and notice once we open a fresh copy of it,
+04:31.84 it has this venv
+04:33.32 and if we ask "which python" on Windows you have to ask "where", notice it's the right
+04:37.32 one. It's out of our virtual environment.
+04:38.9 And if we ask, "what's installed", shows us that nothing is installed. Again,
+04:43.14 we could come over here, we click this "interpreter settings" that would show us again
+04:46.31 nothing is installed. We could actually install requests over here like this,
+04:51.96 and we could just click "install package",
+04:53.94 but I'll show you an even simpler and shorter way. If we go over here and
+04:57.17 just try to use "import requests",
+05:3.04 PyCharm is going to say there's a problem,
+05:4.84 this is not going to run. And if we try to run it,
+05:6.68 you can see "no module named requests".
+05:8.49 But check this out. If we put the cursor on the squiggly bits and hit
+05:11.33 "alt + Enter" it says "Do you want to install this package?"
+05:15.23 Why, sure! Please do! notice at the bottom?
+05:17.98 It just installed requests. And now,
+05:20.98 if we run it again, hey,
+05:22.98 look at that. It works! And we go back to our interpreter settings,
+05:26.04 now requests is installed right there.
+05:28.38 Cool. So that's how we can manage virtue environments from within PyCharm,
+05:31.67 but you already saw that you could just use the terminal or the command prompt to
+05:36.05 do them directly. What I found was in the early days,
+05:39.07 I would do most of my stuff in PyCharm because it helped a lot, but as
+05:42.51 I got better and better, I didn't.
+05:43.84 There was just little things like I wish it worked slightly different,
+05:46.36 so I'm gonna use my own way of doing that.
+05:48.94 So now I don't use PyCharm very often to create the virtual environment,
+05:51.85 but I did find it super helpful when I was getting started.

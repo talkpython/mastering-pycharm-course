@@ -1,0 +1,67 @@
+00:00 Let's begin this section, this app by talking about
+00:03 where we're going to get our movie data from.
+00:06 We're going to use a movie service at movieservice.talkpython.fm.
+00:10 Now this is just a simple service with a subset of the movies,
+00:15 there's only a couple of thousand movies here,
+00:17 but these are the movies that you can go and search,
+00:20 and you'll see that there's a couple of things we can do with this basic api,
+00:24 we can search for movies by keywords,
+00:27 so if I click on this, it will run a little example,
+00:29 in Firefox, it happens to parse and give this pretty view
+00:34 but if we hit raw, you can see what comes back
+00:36 from the server is actually this json
+00:38 we get a couple of things, we get the keyword sent back just to say
+00:42 what the server thought we searched for
+00:44 and the hits, the movies that matched.
+00:47 So here we can see we've got Blade Runner when we searched for run,
+00:51 we've got Running With Scissors and a couple others,
+00:55 we've got Kite Runner, things like that.
+00:58 So we can go and search for anything, put the keyword up here,
+01:01 we could search for particle,
+01:03 it comes back with this movie called Particle Fever
+01:07 this is an absolutely awesome movie
+01:09 about Large Hadron Collider and search for the Higgs Boson,
+01:12 one that I really like is one called Capital C,
+01:17 this is about crowd funding and kickstarters and stuff
+01:20 and this is really cool and interesting movie;
+01:23 so let's see what we can find out about that,
+01:26 so if we come over here and we search for capital,
+01:29 you'll see that we get a couple of things,
+01:31 we get Super Capitalists, we get Capital C, that's the one
+01:35 I was talking about, Capitalism a Love Story, okay,
+01:39 we have things like their IMDB code,
+01:42 so we can pull them up on imdb.com and things like that if we wanted.
+01:45 We have keywords, genres, the year, rating and so on.
+01:49 Okay, so we're going to use this movie service
+01:54 to go search for movies by keyword
+01:56 we could also search by directory, or we could just pull them up by IMDB,
+01:59 so if I click here, you can see if this is searching by Cameron,
+02:03 so James Cameron or Cameron Crowe, anyone who matches that,
+02:06 here's James Cameron, The Abyss, Terminator, Judgment Day, Titanic,
+02:10 somewhere in there is Avatar, things like that.
+02:13 So we can search by director or just by IMDB number
+02:15 so for example this one pulls up the Abyss by James Cameron
+02:19 where the IMDB code is right there.
+02:22 Okay, so this works pretty well, I wouldn't use this for a real app
+02:27 and just because there's not that much data behind it,
+02:30 it's just built for this course, for this specific purpose.
+02:34 But there's enough there that you can do some interesting queries;
+02:38 if you are looking for a real API that's very similar to this
+02:42 it will work in a similar way to what we are doing,
+02:44 is you can check out the OMDB API, the Open Movie Database.
+02:48 So, this actually used to be free,
+02:51 and you would be able to just go and use their API,
+02:54 the API is very similar, you could come down
+02:57 and you could click on say Capital
+03:00 and it will do a request in a really similar way,
+03:03 and it will give you things like if we put Capital C
+03:07 we could probably get that exact movie back from it, yeah, there you go.
+03:11 So, we could do a similar search here but you have to pay for this,
+03:13 the minimum is like a dollar a month or something,
+03:17 it's not crazy but it turned out that this free thing
+03:19 was kind of a victim of its own success,
+03:22 it did 44 terabytes of traffic in just one month
+03:28 and that turns out to be super expensive.
+03:30 I ended up making this one just
+03:33 so you have a nice stable simple service to work with,
+03:35 but if you want to build a real app, I'd recommend checking out OMDB API.

@@ -1,0 +1,49 @@
+0:00 Hello and welcome to app number 2
+0:02 this time we are going to build a game,
+0:04 a guess what number I am thinking of game,
+0:06 and it's going to look like this.
+0:09 The program will start up
+0:10 and it will randomly choose a number between 0 and 100
+0:13 and then it will interact with the user
+0:15 going back and forth until they figure out what that number is.
+0:18 It will ask them to enter a number and it will say,
+0:20 no, that's too low, no that's too high,
+0:22 and then finally you can see the user was able to figure out,
+0:25 hey, 71 was the number the program selected.
+0:28 So, this is a pretty straight forward app,
+0:31 but you are going to learn a lot while we build it.
+0:33 So what specifically?
+0:35 Well, we are going to focus on boolean statements
+0:38 and switching between code blocks.
+0:41 So we are going to start up by talking about boolean expressions,
+0:45 things like x > y, y is not nothing,
+0:49 the users entered some valid text those kinds of things.
+0:52 And we'll use that in two basic places,
+0:54 one is going to be an if, else if categories
+0:57 so if the number is greater than the one you guessed
+1:00 you want to print one thing
+1:01 otherwise you might want to print something else
+1:03 like the number is too high
+1:04 no in other case print the number is too low
+1:06 but also in while loops
+1:07 because we want our app to go around and around
+1:09 until the person, the user has selected the right number
+1:13 they've guessed the right number. 
+1:15 We are going to use a conditional test
+1:16 to keep going until the numbers match.
+1:19 Closely related to this boolean concept
+1:22 is something I'm calling truthiness.
+1:24 You'll see that objects within Python are embued 
+1:26 with a truth or falseness
+1:29 we'll leverage that as a key building block in our boolean expressions.
+1:32 We'll also learn about type conversion
+1:34 users will enter text but we need to actually work with numbers.
+1:37 Previously we composed strings
+1:40 by using the plus symbol
+1:42 but Python has an extremely rich formatting API
+1:45 and we'll start looking at it here
+1:47 we are going to just get into the very basics of function
+1:50 as a way to compose our app into more
+1:52 understandable and maintainable building blocks
+1:55 and part of that is going to be understanding code blocks
+1:57 which are a little, let's say unique in Python.

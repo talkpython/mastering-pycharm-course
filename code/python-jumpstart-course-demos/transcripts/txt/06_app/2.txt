@@ -1,0 +1,117 @@
+ 0:00 All right, back in PyCharm, it's time to build that Cat Factory. 
+0:04 So, like always, we will add a new Python file
+0:08 to get started and in our convention, we'll call that program.py. 
+0:13 Let's go ahead and define our main method
+0:16 as you guys should be familiar with by now
+0:18 so we'll create our main(), and down here let's do a few things
+0:21 I'll just sketch this out in comments
+0:23 so let's start by saying print the header, as usual, 
+0:26 next we are going to get or create output folder
+0:32 and then we'll download cats
+0:34 and then finally, let's go and actually display cats. 
+0:38 Now just so that we can sort of see things running
+0:41 I'll just say hello from main, just for a moment, 
+0:44 so we can get everything executing just fine
+0:46 and remember, we have the live template in PyCharm 
+0:49 that gives us the correct pattern for launching our main method
+0:53 only if it's being called as the program itself
+0:55 so here we'll just say main(), nothing too fancy there, 
+0:59 and let's go and run it once to setup the run configuration boom, 
+1:03 all right, so everything is working, 
+1:05 the first thing we've got to do is print the header, 
+1:08 that is pretty straightforward, so we'll just say def print_header(), 
+1:11 and you guys are really familiar with this by now 
+1:14 so let's say print() and it's this sort of thing, do a little duplication, 
+1:19 and we'll call it Cat Factory. 
+1:21 Something like that, how about with capital O, Ha?. 
+1:25 So we can go over here, let's get rid of this useless print, 
+1:27 and let's go up here, we'll call print_header(). 
+1:30 So the next thing we are going to do is we are going to work with our output folder, 
+1:33 so let's try the method down here, 
+1:38 called get_or_create_output_folder(). 
+1:43 All right, so now we are going to use our OS module and the path class
+1:48 so we are going to come up here and we can have PyCharm do this 
+1:51 or we can say import OS and down here we have to pick what our folder is called. 
+1:55 So we'll say folder equals, and let's just call it cat pictures, 
+1:58 something like that to make it really obvious, 
+2:00 and then we'd like to create this folder 
+2:03 first we'd like to figure out what the full  path is 
+2:05 and then we are going to either create it or just return it if it already exists. 
+2:09 So let's say full_path = os.path.join() 
+2:14 and we could start by joining just this in the folder, 
+2:18 and let's just for a moment print that out, 
+2:21 you guys have already seen let's make sure we call it 
+2:23 so that something actually happens 
+2:26 and if we run this you can see we have ./cat_factories 
+2:30 and before we were actually able to come up with the full path 
+2:33 and that was actually working out pretty well, 
+2:37 we were saying os.path.absolute path, 
+2:43 and we got our full path to where this folder that doesn't yet exists was. 
+2:48 However, the fact that we say . really is a comment on the working folder, 
+2:54 not relative to this particular Python script, 
+2:58 so I would like to have this folder called cat pictures, 
+3:01 right next to my program.py file here,
+3:03 we could do something different, 
+3:05 let me just do a print statement here, 
+3:08 you saw that there is __name__ that is a special string that is defined right, 
+3:12 we are using that right here, and it's __main__,
+3:15 it's literally what it is the way we are running it now
+3:18 or it's going to programmed. 
+3:20 But there is another one that we could work with called file 
+3:24 and you can see that here is the file that we are currently in, 
+3:28 the module that we are currently running in regardless of what the working folder is, 
+3:32 so we can actually get the base folder, we can get it like this, 
+3:36 we can say os.path and just call dirname() 
+3:40 and give it this file here like so 
+3:45 and instead of using this absolute path 
+3:47 and all this stuff we can just go back and say 
+3:51 we are going to combine base folder with our little local folder, 
+3:55 and you should see we have the same output 
+3:58 but this time it's sort of independent of the working folder. 
+4:01 So we now have our folder, 
+4:03 the next thing to do is create this folder but only if it doesn't exist yet, 
+4:06 so we'll say if not os.path.exists give it the full path
+4:13 this is the folder that we are going to work with but maybe this is a file, 
+4:16 maybe somebody has created a file called cat pictures here, 
+4:19 we'd like a folder as well so we could say or and come down here 
+4:23 and say isdir() and let's put a not here,
+4:29 Ok so now we want to create this directory, 
+4:31 add full path and if this had many levels in it 
+4:34 that didn't already exist you would have to kind of do this recursively, 
+4:37 but we'll just say os.mkdir(), 
+4:39 remember it's not on the path it's actually on the OS model directly 
+4:42 and we'll give it the full path, and we would kind of like to know 
+4:45 did the thing find the path before or did it actually create it, 
+4:49 so let's do something like this, we'll say print creating new directory at 
+4:54 and we'll put the little location here, 
+4:57 so only when we are creating the directory shall we see this print statement, 
+5:01 but either way we should return the full path, 
+5:04 now let me leave this out just for a second to show you some PyCharm goodness
+5:08 so if I come over here and I create this variable 
+5:11 I want to say this could be the folder, like this, 
+5:14 right away PyCharm says no no no this is a bad idea, 
+5:17 it looks like you are trying to store the return value a function into this variable folder, 
+5:22 yes we are, but if you look carefully it will say 
+5:24 this get or create output folder method does not return anything, 
+5:28 in some languages this would crash or not compile or something, 
+5:31 but in Python there is an implicit return value for all functions, 
+5:35 every function returns a thing, but if you just omit their return statement, 
+5:39 it's only going to return none, so it's not super useful. 
+5:41 That's kind of a warning that oh, woops 
+5:44 we forgot to return full path, regardless of whether we created it. 
+5:48 Now let's just do a print really quick, 
+5:54 we'll print so found or created folder and we'll just put a little folder, ok, 
+5:59 now let's run it, if you look over here there is no cat pictures directory, 
+6:04 but if I run it it says creating new directory here and then it says
+6:08 found or create a folder there yes, 
+6:10 and now you can see PyCharm's automatically refreshed and found hey, 
+6:13 there is cat pictures here, if I run it again, 
+6:15 we should only see the second found or created 
+6:17 but not the actually creating line. 
+6:20 Perfect, so now we don't recreate it and actually 
+6:23 that would have crushed had we tried. 
+6:25 That's the first half of our os part we've created this folder, 
+6:28 we are ready to put our binary data into it, 
+6:30 the next thing we have to do is go download some cat data. 
+6:34 Before we do that, let's just hit a little command alt+L 
+6:36 to do some cleanup and have our code look nice and fresh.

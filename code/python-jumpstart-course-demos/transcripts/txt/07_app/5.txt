@@ -1,0 +1,230 @@
+ 0:00 It's time to add some behavior to our objects, 
+0:03 now let's work with attack first. 
+0:05 We'll just implement these 3 behaviors, attack run away and look. 
+0:09 So attack I think is the most interesting, we'll start there. 
+0:12 Now, the first thing we are going to need, remember, 
+0:15 is the game said a creature of such and such type appears, 
+0:18 or has come out of the forest and what do you want to do to it, 
+0:22 so that part is not here yet, we do have our creatures 
+0:26 they are up here but I need to get one and randomly selecting one 
+0:30 seems like the ideal thing to do, 
+0:32 so we can come down here and say something like active creature is something. 
+0:38 Now, in many languages you can get random numbers, 
+0:42 random integers and so on, and you know that if I had a random integer, 
+0:45 I could come over here and say if I had randomly selected an index 
+0:50 I can come over here and say creatures some index and pull that out, 
+0:52 but in true Python fashion, Python has a better way to do that. 
+0:57 It still involves a random module, so we'll start there. 
+1:00 Add that at top and then we'll say choice, 
+1:05 so we can go over here and say I have a set of items, 
+1:08 I would like to randomly get one so we'll say 
+1:12 I would like to just randomly select a creature 
+1:14 so let's do a little print statement to just say what that creature is. 
+1:18 We'll say a { } so you know, and then the name of the creature or something, 
+1:22 has appeared from a dark and foggy forest, something like that.
+1:31 Now, I want to add the levels so we'll say of level 
+1:36 that's very important to know whether we should attack it, 
+1:39 so then we can say .format active creature.name and active creature.level, 
+1:47 let's just add a little extra space here, 
+1:50 so let's go and run it to make sure this randomly 
+1:52 choosing a creature is working for us, yes,
+1:56 so this part up here we could probably get rid of that all right,
+1:59 here is our game, oh a bat of level 3 has appeared from a dark and foggy forest
+2:04 do you want to attack, run away or look around. 
+2:08 And it didn't really matter what we press, it's just going to go around and around. 
+2:11 You can see each time through it's randomly selecting an item 
+2:15 so the sort of activating the random creature for a particular round is working, 
+2:19 now next thing to do is work on 
+2:22 what we do when we actually attack it, how we do this,
+2:26 there is a couple of ways depending 
+2:28 on how you want the features at this game to evolve, 
+2:31 there is maybe one way of doing it that's better than another. 
+2:34 But I think the simplest and straightforward one is to assume 
+2:37 that only wizards can attack creatures and maybe other wizards 
+2:42 but creatures don't initiate the attack they don't have 
+2:45 this concept of being an attacking creature they can just have, 
+2:48 they can be in a battle but they are not the one who initiates it. 
+2:51 And if that's the case, which I am going to say 
+2:54 for this little game since I am writing it, that's the case. 
+2:56 Putting some kind of attack behavior on the wizard 
+2:59 so the wizard knows how to attack creatures is the way to go, 
+3:02 so we'll come over here and we want to say something like hero. and then
+3:07 you can see we have our level and our name that we created in the init method
+3:10 and we want to add not just data but behavior.
+3:14 so let's go over here to our actors
+3:17 where we have our wizard and we'll define
+3:19 just like any other method we are going to define a method called attack, 
+3:23 these instance methods they always take the self parameter, 
+3:27 when you invoke them from the outside 
+3:29 you don't specify the self or anything like that not explicitly anyway, 
+3:33 but when you define them they do, 
+3:35 that's just how python classes work, 
+3:38 and then you can pass the actual arguments that appear to the color 
+3:39 so the thing we want to pass is some kind of creature 
+3:42 and we'll just print something like 
+3:45 and we want to refer to the name of the wizard 
+3:48 that is the particular instance the object that was generated from this class
+3:53 that would be the self parameter, right, 
+3:55 so we'll say self.name and then the creature also has a name 
+3:58 and a level so we'll go like that. 
+4:01 So let's go over here now and say .attack, 
+4:03 now we have our data and our behavior. 
+4:06 And we'll come down here attack the creature, 
+4:10 so that will be active creature, 
+4:12 now we still have a lot of work to do to determine whether they win, 
+4:14 to figure out even what the algorithm is for winning or losing or fighting, 
+4:18 but we should be able to at least test this out. 
+4:20 Ok a bat of level 3 has appeared form the dark and foggy forest, 
+4:24 let's attack it, why not, so the wizard Gandolf attacks bat, 
+4:29 so let's go finish our attack method. 
+4:31 Now, PyCharm has some really cool ways to navigate around,
+4:33 I can come over here and if I hit command B 
+4:36 it will actually take me over to that method wherever it happens to be defined, right, 
+4:39 there is only two files it's pretty straightforward to find it 
+4:42 but in real projects you might have 50 files and where did this beast come form, 
+4:48 that can be really tricky so that is a super helpful feature, 
+4:50 you can also hold down command 
+4:52 and then all of these things basically become hyper links, 
+4:54 so I'll click over here and it will take us straight to attack. 
+4:57 So, this print part, this is going well, 
+4:59 now what we want to do is decide on the algorithm 
+5:01 and my simple algorithm I am going to use for this game 
+5:05 is the level of the creature and the level of the wizard 
+5:08 are going to be factored into this 
+5:10 and we are going to have what would be more geeky in dungeon and dragon 
+5:14 then a 12 sided dice, so you are going to roll 12 sided dice, 
+5:16 multiply it by your level and then whoever rolls
+5:19 the higher number is going to win that battle, 
+5:21 so that will go something like this, 
+5:24 I'm just calling my roll = now I want a random number between 0 and 12 
+5:29 so we'll say random and just like before we'll import this, 
+5:33 and we'll say rand int and we are going to give it 1 to 12 
+5:37 and then I am going to multiply that by the wizard
+5:39 because this is the wizard's throw by the level. 
+5:42 Similarly, we are going to have creature roll, 
+5:46 and it's going to be the creature's level. 
+5:50 And then we are just going to compare 
+5:53 but first before we do so you get some visibility 
+5:55 into what's happening let's do a print statement, you roll some number, my roll
+6:01 and then we'll say the creature like bat or toad or whatever rolls, 
+6:05 then finally we are going to do a test to see who rolled the higher number, 
+6:12 and I am going to assume if the creature and the wizard tie 
+6:16 because the wizard has the element of surprise, he is going to win. 
+6:18 So that would look something like this, 
+6:21 if my roll is greater than or equal to creature roll, 
+6:26 then let's return true to say that we won, 
+6:30 on the other hand we could return false here, 
+6:34 now we also want to give a little visibility 
+6:37 like print the wizard had handily defeated whatever it was, right, 
+6:43 so we'll say .format creature.name 
+6:47 so down here we can say the wizard has been defeated, 
+6:52 let's change it so we don't need to use the same words, 
+6:55 they triumphed over, ok. 
+6:58 There is a couple of things going on here that are not fantastic.
+7:02 One of them is that this attack method really should be performing the attack, 
+7:09 it should be doing this algorithm here 
+7:13 and it should be doing sort of this decision here 
+7:16 determining whether or not you won or the creature has won. 
+7:19 But it's also doing this kind of UI management stuff, 
+7:23 now this is simple game we are just going to leave it here
+7:26 but in a real application you want to somehow 
+7:29 separate if possible the UI piece from the core logic of our game 
+7:35 so we are kind of violating that rule here 
+7:37 but just because we are just getting started with classes 
+7:40 let's just keep it simple and roll with this. 
+7:43 All right, let's test our attack method, ok, 
+7:48 a tiger of level 12 has appeared out of the forest, 
+7:50 let's go ahead and attack since well, that's the only thing we've done, 
+7:54 and it looks like I forgot something in my print string, 
+7:57 so notice here there is one, two place holders but only one value provided, 
+8:02 let's go fix that really quick. 
+8:08 Ok, now let's try it again. 
+8:10 All right, this time, that same tiger has appeared, let's attack it.
+8:13 Ok the wizard Gandolf attacks tiger and you roll 375, the tiger 24. 
+8:20 So the wizard has handily defeated the tiger. 
+8:22 Now, something more serious has happened, 
+8:25 a dragon of level 50 let's give that thing a shot, OH NO!!!,
+8:29 now we only got 75 the dragon did 100 and we have been defeated. 
+8:33 Now there is really no consequence for us to be defeated 
+8:37 and if we look around we haven't implemented that part yet, but if we did,
+8:41 you would see that all the creatures are still there 
+8:43 even though they have been defeated.
+8:45 Let's do a little work on the consequences of being defeated. 
+8:48 So over here we'll say if when the hero attack the creature they win, 
+8:52 what we should probably do is remove that creature from the game. 
+8:55 This creatures list holds all the living creatures, 
+8:59 so we can do something really simple like this creatures.remove 
+9:01 and just give it the creature, active creature. 
+9:06 On the other hand if the hero loses, there is two possibilities here, 
+9:12 one could be that's it, the game is over you are done, 
+9:15 the other one is maybe the hero wasn't killed all the way, 
+9:19 they are just defeated so they have to go rest and recover. 
+9:22 It's pretty straightforward to say print game over break without the semicolon, 
+9:28 break so let's look at what we might do if we want to make it pause. 
+9:33 So to make it sort of appear to pause, 
+9:36 we'll come over here and we'll say time 
+9:39 and I imported just the import time above, 
+9:44 and I say time.sleep and that's a number of seconds it takes 
+9:47 a floating point number so I could do like 0.001 for milliseconds, 
+9:51 something like that and let's say you are going to sleep for 5 seconds, 
+9:54 and we'll say something like this print, like this 
+10:00 and then we can print, the wizard returns revitalized 
+10:04 and let's just add a new line down here at the end of all this 
+10:08 so there is some space so here is the consequence 
+10:11 of either winning or losing this attack round, 
+10:14 so when the hero attacks 
+10:16 the creature is removed from the game when the hero loses, 
+10:19 we have decided that actually the game is not over, 
+10:22 but that the hero has to go rest for a while, so let's try that, 
+10:26 ok again a tiger of level 12 we have seen 
+10:28 we have a good chance against that let's go, all right, 
+10:31 so we have beaten the tiger, now but you can't really tell, 
+10:36 like us we haven't verified it yet, is we haven't implemented look around, 
+10:39 so let's do that really quick, just so we can see that our creatures are going away. 
+10:43 So what we are going to do is just say something like 
+10:46 wizard so and so takes in the surroundings and sees 
+10:54 then I want to loop over each of the creatures 
+10:56 so I'll just say remember our for in loop, 
+10:58 so we'll say for c in creatures we'll print out 
+11:02 maybe a little sort of place holder thing like this 
+11:04 and we'll say a name of level such and such
+11:08 and again a format would be nice here so we'll say c.name c.level
+11:13 and maybe that fits on one line, ok.
+11:16 Ok, let's try this again,
+11:17 now we can see if our remove is working 
+11:19 ok so the tiger again, every single time it's the tiger,
+11:22 all right tiger attack oh we definitely defeated him,
+11:27 oh oh, a dragon of level 50, it's not so good,
+11:30 so we'll look around and apparently we are going to need to put something there
+11:33 a toad of level 1, a bat of level 3, a dragon and an evil wizard. 
+11:38 Well, the dragon is away, the toad is out, we can attack it and beat it of course,
+11:42 we look around again,
+11:45 now the toad and the tiger gone, let's attack the bat- again, we defeated it, 
+11:49 now it's just the dragon and the evil wizard, 
+11:51 it's kind of getting a little bit harder for us here, 
+11:54 I still got to fix this but let's go and do this attack, 
+11:56 what are we going to attack- the dragon, maybe we can beat that. 
+12:00 Oh, we have won, ok now it's just down to the evil wizard, 
+12:03 there is almost no chance we are going to win here but let's give it a shot. 
+12:06 Oh no the wizard has been defeated, 
+12:09 he runs and hides, taking time recovering. 
+12:11 Now notice, it took actually stopped for that five seconds and then it went on, 
+12:15 let's do it again I am sure we'll lose, 1, 2, 3 , 4, 5, counting up and there we go. 
+12:21 So that's our time.sleep. 
+12:23 Excellent, let's just get out of here for now. 
+12:27 You can see we forgot our format here, hero.name 
+12:31 well the very last thing to implement is just run away 
+12:34 and that is super easy to do 
+12:37 let's just say print the wizard has become unsure of his power and flees.
+12:45 All right so let's look around, oops, focus focus focus- look around, 
+12:50 so the wizard is looking around he sees all this things, 
+12:53 oh my gosh this toad is frightening, run away, 
+12:55 all right so the wizard has become unsure of his power and flees, 
+12:58 and now a tiger appears, oh let's attack it, excellent, we defeated it, 
+13:02 now if we look the tiger is gone, I think our game is very nearly done, 
+13:07 there are a couple of things we are going to come back 
+13:10 and look at because the way we have written it here 
+13:12 while it works in this simple scenario 
+13:14 is not maybe the best way to model things 
+13:16 so we are going to do one more pass on this 
+13:19 and make sure we have everything just right.

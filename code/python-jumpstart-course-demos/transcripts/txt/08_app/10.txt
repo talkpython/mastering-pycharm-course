@@ -1,0 +1,31 @@
+0:00 Let's look at this core concept of generator methods. 
+0:03 Here we have a Fibonacci method and we are passing the limit to it, 
+0:08 to say how many numbers do we want, 
+0:10 in traditional type of methods you could have a list and we could go through 
+0:14 and compute all the items adding them to the list and then 
+0:17 when all the answers are done, the entire lists are generated, 
+0:20 we could then return that list. 
+0:23 Generator methods provide us a different mechanism, 
+0:26 a different way to do that, it dramatically different performance characteristics. 
+0:30 Here what we do is we come to this method and we work our way down
+0:34 just like any regular method until we get to the yield keyword, 
+0:37 and the yield keyword says here is an item in our collection, 
+0:39 and immediately this method is sort of suspended, 
+0:43 the item is returned to whoever called this function as the next item in the sequence, 
+0:48 they can process it and either decide to continue pulling on the sequence from 
+0:52 like a foreign loop or something or they can stop and that's it,
+0:56 you've only computed one item. 
+0:57 But if they come back and they ask for the next one 
+0:59 then execution will resume right here, and it just goes around, gives the item back, 
+1:04 the caller looks at it and it gives you this kind of lazy evaluation of items 
+1:09 that ultimately turn into sequences where the sequences don't have to be stored 
+1:14 in memory all at once before you get to work with them, 
+1:17 so these generator methods and this yield keyword are really powerful 
+1:21 when you are processing large sets of data in series 
+1:24 or you are even building pipelines where one step pulls on some large data source 
+1:28 and then another step takes that process transformed, 
+1:31 filtered a bit and does more work on it and then you keep doing that 
+1:34 and passing along until finally some sort of pipeline spits out 
+1:38 a smaller transformed set of items, 
+1:40 the composition of generator methods is amazing there. 
+1:43 And that's what we are going to build in our file searcher app, when we get back to it.

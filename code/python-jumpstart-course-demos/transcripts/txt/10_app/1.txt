@@ -1,0 +1,39 @@
+0:00 Application number 10, let's build a movie search app. 
+0:03 Now it turns out we are going to put this movie search app 
+0:06 into a particularly unreliable environment, 
+0:10 so we are going to have to do a lot of work 
+0:12 to make sure our movie search app is durable 
+0:15 and it doesn't crash or behave too weirdly. 
+0:18 Let's see how that's going to go. 
+0:20 We are going to build an app that looks like this, standard header. 
+0:22 We are going to enter some text and this text is going to be the title of a movie. 
+0:27 So, here we might say Top Gun,
+0:30 and we'll try to go out to the internet and find information 
+0:33 about movies with Top Gun in their title, 
+0:35 but you can see in this case it said oh sorry, 
+0:37 the network happens to be down so no searching right now. 
+0:41 But our app doesn't crash or give weird errors it just says hey, the network is down, 
+0:45 check your wi-fi or something like this. 
+0:47 Then later we try again, search for Top Gun and boom, 
+0:49 we get real live movie search results off the internet. 
+0:53 So it might sound like this is about searching movies, 
+0:56 but really what we are going to focus on is error handling, 
+0:59 writing durable reliable applications. 
+1:02 So we are going to focus on error handling,
+1:05 the primary way to do this in Python is with exceptions, and try/except blocks, 
+1:10 you'll see that we can have 
+1:12 multiple sort of error handling clauses in any particular situations, 
+1:17 so there might be a host of reasons that our movie app doesn't work, 
+1:21 maybe the DNS server is down, maybe we entered a bad title, 
+1:26 maybe the wi-fi is down, maybe the other server actually gave a 500, 
+1:30 maybe malformed data came back, 
+1:32 so we can actually catch different errors and give different messages back. 
+1:37 We might want to tell the users something different 
+1:39 if the data that came back was malformed, 
+1:42 rather than if the network was not connected. 
+1:45 Right, so we'll use multiple what are called except blocks to do this
+1:48 and that will allow us to differentiate errors based on the type of the error, 
+1:52 and ultimately, we are going to talk about writing reliable code 
+1:56 and you also see how to raise errors and exceptions 
+1:59 not just catch them because we are going to throw some 
+2:02 to sort of make our app particularly unreliable.

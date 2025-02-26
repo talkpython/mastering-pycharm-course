@@ -1,0 +1,90 @@
+0:00 Let's put our app aside for just a minute and talk about dictionaries
+0:03 We can create dictionaries in a variety of ways 
+0:06 and depending on how you want to store data, 
+0:08 one way makes more sense than the other. 
+0:11 The idea of a dictionary, it's kind of like a list that you can put items into it 
+0:16 and then get them back by looking them up, 
+0:18 but instead of using numbers like list of 7 you actually use something called a key, 
+0:24 now those keys can be strings, 
+0:26 they can be numbers or they can be a variety of objects,
+0:30 whatever the natural thing that you use to identify something with 
+0:33 you can use that as the index if you will, instead of a number. 
+0:37 So let's create a dictionary, and there is several ways to do it, 
+0:41 we could say lookup= {} this if you have open close curly braces that's a dictionary, 
+0:47 you could write the identical code say look up= dictionary, like this, 
+0:53 or you could even initialize it, like this lookup = {'age': 42, 'loc': Italy}, right, 
+1:03 and we could use this there is actually a variety of ways to do this 
+1:07 we could say basically the same thing dictionary,
+1:09 but instead of using strings, we can use named parameters, 
+1:12 keyword values like so, almost, like so. 
+1:18 So I could print look up here, you can see the sort of Python print out style is this, 
+1:23 if we have a dictionary though we can get the values back, 
+1:27 if I wanted to know the location I could say give me lookup of location, 
+1:31 and instead of using numbers, I say give me the second thing, 
+1:35 it doesn't matter where or what order this is in, 
+1:37 in fact these are unordered collections, 
+1:40 but using the extremely fast algorithm to find this value, 
+1:44 so here you can see the location is Italy. 
+1:47 If we try to get something out of the lookup that doesn't exist, 
+1:50 if I try to ask for the category, it's not super happy,
+1:55 if you are going to do this you have to do a somewhat non obvious but kind of cool syntax,
+2:00 you have to say if cat is in lookup, if the key is in there, then you can print out cat. 
+2:06 So if I run it right now, there is no cat in here, so there is no output, 
+2:10 but I can add cat dynamically later after I create
+2:13 I can say cat and I just set a value is fun code demos and now when I run it, 
+2:19 hey cat is in there and its value is this. 
+2:23 Sometimes you use dictionaries to store data like this, right, 
+2:27 sometimes you store heterogeneous data
+2:32 I want to take an individual piece of information
+2:34 and say the age is this, the location is that, 
+2:37 in fact whenever we create a custom class, if we have a class like this, 
+2:41 remember the wizard, and we defined the dunder init, 
+2:45 and we said it's going to take a name and a level, 
+2:49 and we said something like this,
+2:52 this actually creates dictionary entry when the dictionary key values level 
+2:58 and then the value is the name of it, 
+3:01 so dictionaries are actually super central to object oriented programming, 
+3:04 let's create a wizard really quick, now if I print out Gandolf 
+3:11 you will see there is not much going on right here is Gandolf right here, main wizard, 
+3:16 but there is an implicit dictionary that actually stores this data 
+3:20 and you can see the level and the name, right, 
+3:23 so understanding dictionaries is ultra important in Python
+3:26 because it's not just about an interesting data structure, you use sometime, 
+3:29 in fact all objects are built on the concept of dictionaries 
+3:33 so you really have to understand them well. 
+3:35 One use case of this is sort of storing in an individual item disparate data like so 
+3:41 like level name or age and location. 
+3:44 Another one might be you have a bunch of similar data 
+3:46 like what if I got a 100,000 users back from a database query or from a web service, 
+3:51 and I'd like to be able to quickly pull them back by ID, almost like a database, 
+3:56 like in memory I'd like say give me user 2,711, bam, 
+4:01 and I want that back instantly, not seeking over an index, 
+4:05 not seeking over a list and doing 2,000 comparisons and then finally going 
+4:08 oh here is the one you were looking for, but instantly finding it basically. 
+4:11 So I have a little bit of code I stash here, look at that, 
+4:14 so here we have our users 
+4:15 and this is, imagine we have many, many more of them
+4:19 and we would like to be able to pull them back by their id, 
+4:23 so we can also use dictionaries for this, 
+4:25 let's say lookup = new dictionary again, 
+4:28 and we can just say for each u in users we can say it to look up 
+4:33 and I would like to when I am going to look up a user
+4:35 maybe I want to look them up by id, so I can just say this, 
+4:39 any time I want if I have a million users if I have their id I can get them back ultra fast 
+4:44 so I want to know what the user with id 3 looks like, we'll let's run it, bam, 
+4:49 that's user 3 with email user3@talkpython.fm. we could use a different index, 
+4:54 we could use email, now if I run this it's going to crash, 
+4:58 I say I want the user with the key of that email address boom, 
+5:01 there is that user right there. 
+5:04 So we can look them up by whatever we want, 
+5:07 if we can say we would like to have a bunch of users and be able 
+5:10 to ultra fast pull out the one by you name it, 
+5:13 we could do user name, we could do email, 
+5:15 we could do id, you can only do one but this lets us store 
+5:18 homogeneous sets of data but then find them by key or as up here, 
+5:22 dictionaries were using more for storing disparate data, not different instances of it, 
+5:27 but actually different but related data like both age and location are somehow tied together,
+5:32 we can access the part. 
+5:35 It's more this top style that we are going to use for our csv file, 
+5:38 so let's take a moment, look at this core concept, 
+5:40 and then we'll go back to working on our real estate data mining app.

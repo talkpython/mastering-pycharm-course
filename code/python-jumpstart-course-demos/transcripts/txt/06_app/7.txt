@@ -1,0 +1,54 @@
+ 0:00 Finally, let's make sure the cat  factory runs on Windows, 
+0:04 and this is going to give me a chance to show you 
+0:06 one more cool little feature of PyCharm, 
+0:08 because this is not going to work. 
+0:10 So I tried to run my app, is that huh, no module named requests. 
+0:15 Of course, that should be a clue to you guys 
+0:18 that hey maybe this system doesn't have requests installed, 
+0:21 so we need to go out to the shell, or out to the console 
+0:24 and say pip install requests that sort of thing, 
+0:27 now you've seen when we were using request 
+0:29 but we didn't import at the top 
+0:31 PyCharm would say hey we will write the import statement for you at the top, 
+0:35 but this is cool too, it says hey you are trying to use requests 
+0:38 we know that this is a module form PyPi form the Python package index 
+0:41 and you don't have it installed in your currently selected interpreter, 
+0:46 but guess what, we'd be happy to do that for you 
+0:49 so you can see down here installing packages request, hold on, done,
+0:53 so if we try to run this on Windows, 
+0:56 you'll see that there is a small problem, 
+0:59 it's pretty easily fixed but it's not entirely obvious why.
+1:05 So it says it cannot find the specified file, that's weird, 
+1:09 and it's talking about start actually, 
+1:11 we have two ways to fix this, we could say shell=true 
+1:14 because apparently the start is just a shell command 
+1:17 or we could be just more explicit about what we want to start 
+1:21 and we could say we'd like to start explorer, 
+1:24 let's just go with that to be consistent. 
+1:29 Beautiful, here are lol cats the ones that you guys are now familiar with, 
+1:33 and love so we've been able to use the platform.system 
+1:37 to figure out the right command for each operating system
+1:41 and we have used xdg open for Linux, 
+1:45 Explorer for Windows and open for OS X 
+1:48 it's not the cleanest way to work in the world 
+1:51 but when you are doing this cross platform stuff you know, 
+1:54 sometimes you just got to put an if statement somewhere 
+1:57 but it does list right app that run everywhere and that's pretty cool.
+2:01 Let's do a quick review before we move on. 
+2:04 So we started out printing the header, 
+2:06 this you guys have it downcold, and then we worked with OS path 
+2:09 to create check for and create our output folder 
+2:12 and then we downloaded the cats. 
+2:16 If we go down here remember we did a forin loop over the range of 128 
+2:20 so that let us create our 8 cats 
+2:22 and then we just called into our cat service.get_cat() module 
+2:26 which we wrote over here, we can check that out, 
+2:29 and we just went and downloaded the data using requests 
+2:32 made sure to set string=true return the raw response 
+2:34 and then use the shell util copy file object 
+2:37 right from one stream, to the other stream. 
+2:42 Then finally, we displayed the cats using the sub-process module 
+2:46 and various operating system dependent apps 
+2:49 that know how to somewhat display pictures to the user.
+2:53 Now we have our very own working lol cat factory. 
+

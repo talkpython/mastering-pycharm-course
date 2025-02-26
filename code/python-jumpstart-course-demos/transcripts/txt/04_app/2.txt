@@ -1,0 +1,139 @@
+0:00 So let's jump into PyCharm and build that journal app. 
+0:03 I want to start as always by adding our program.py,
+0:08 and we are going to add other Python files and start using them
+0:11 but let's first start here and focus on a few concepts before we move on.
+0:15 Now, as you guys know, I am kind of fond to sketching out
+0:17 the overall flow of the app in one method
+0:20 and then breaking the pieces into smaller ones.
+0:23 So I want to define again a main method here. 
+0:25 And the first thing we want to do is sort of print the header 
+0:28 remember that is basically the little dashes across the top we are always doing, 
+0:32 and then we are going to go around and around
+0:35 in kind of an event loop asking the user what operation do you want to perform
+0:39 I'll do the operation and we'll query for user input again. 
+0:42 So I'll just call that run_event_loop(). 
+0:45 So we are going to need these two methods defined somewhere 
+0:48 and let's define them first up here, 
+0:50 we'll say def print_header(), and we'll just say pass and we'll say run_event_loop()... pass. 
+0:58 Now, let's one final time sort of do this what I would call the wrong way
+1:03 but we are just going to invoke the main() method
+1:04 as you know if we don't do that nothing happens. 
+1:08 Let's do print() here just I'm going to our header piece. 
+1:13 So that we can see that main() is actually having some kind of effect,
+1:17 no run configurations, so we can generate one by saying right click run 
+1:21 and here is our little journal app piece. 
+1:24 Now, to me the order of defining these methods is really wrong.
+1:28 I like to see the high level bits, like what is happening overall 
+1:32 and then the little individual pieces. 
+1:34 So let's take this and naively move this of the top here, there we go, 
+1:39 and now our main() we can sort of, as soon as we open the file 
+1:41 we see what the major operations are happening in our program here 
+1:45 and then down we have the details. 
+1:48 So if I run this though, things are not going to be very happy.
+1:51 'print_header' is not defined. 
+1:53 So let's just take a really quick moment to think about 
+1:56 how Python defines methods and classes and these sort of structures.
+2:01 In languages like C and C++ there is a compile step and
+2:04 it actually goes to the code and it compiles in it 
+2:07 and writes out the machine instructions and the definitions for these methods. 
+2:10 But in Python there is not really this compile step. 
+2:13 There is kind of a tokenizing step but let's ignore that for a moment. 
+2:17 Basically there is not really a compile step 
+2:19 so when you execute this block, when you execute line 2 to 4, 
+2:24 what you are actually doing is you are defining a method main(). 
+2:27 And when you execute line 9 to 12 you are defining the method print_header(). 
+2:32 The problem is we are executing main() 
+2:34 which depends on print_header() before we have effectively defined it by running this.
+2:39 So we can solve this problem by just putting main() at the very bottom. 
+2:42 Again, there is going to be another better way to do this 
+2:45 that we are going to come back to at the end of this example, alright. 
+2:48 Let's run it one more time, 
+2:51 ok, everything is looking good, we got our high level code up here, 
+2:54 we are working on the details down here. 
+2:56 So let's work on that event loop part. 
+2:58 Remember, we basically have a couple of operations the user can choose, 
+3:02 they can list their journal entries, 
+3:04 they can add a journal entry or they can hit X to exit. 
+3:08 So let's sketch out that sort of input conditional logic 
+3:11 and then we'll write the details of it. 
+3:14 So first thing we are going to do is 
+3:15 let's just do a little print() statement to let the user know 
+3:17 hey your journal app is running. 
+3:19 I'll say something like... What do you want to do with your journal?
+3:24 And then I want to capture the user input and we'll call that command 
+3:27 we are using the input() function like we have been, like so.
+3:32 And now we can compare this against various options,
+3:34 so the 3 things they could type according to our menu option here is 
+3:39 they could type L, A or X. 
+3:41 So we'll say if command == L then let's just print() the L for a moment, 
+3:48 and then else if, or elif command == A we'll print A...
+3:56 now of course, this is just going to run one time 
+3:59 but let's just test this really quick. 
+4:01 So we are going to run it says... What do you want to do with your journal?, 
+4:04 let's suppose we want to list it, so if we say L it says 
+4:08 great, it echos out the L here
+4:10 if we run it again and this time we say A, it's going to echo out the A, 
+4:13 that we put in our print statement. 
+4:16 Of course, we want this to go around and around, 
+4:17 so let's write some code here,
+4:19 let's say while the command != X, we want to do this, 
+4:26 now of course if we try to run it's going to freak out, 
+4:28 because command is not defined, 
+4:31 you can see local variable command reference before assignment, 
+4:34 so let's just initialize it to nothing to start 
+4:37 which obviously is not going to be X 
+4:39 after it goes into our loop the first time we should have real input,
+4:43 so let's try this, let's say L, L, A, X, perfect, 
+4:50 maybe we could add a little goodbye a bit here at the end,
+4:53 just to let everybody know we are done with our app. 
+4:56 So we pretty much have the structure working,
+4:58 let's write one more bit here, so if I hit L I get the L again, 
+5:01 but if I hit something like boo, it just sort of ignores it, it doesn't do anything, 
+5:07 let's maybe give him a warning that we don't understand that,
+5:10 so we'll come down here and say 
+5:12 elif command != to X or any of the other options, 
+5:16 because we are already made this far, 
+5:18 I'll say print("Sorry we don't understand...
+5:23 now notice, we have our opening quote here 
+5:26 and the code that is naturally in the string 
+5:28 so we are going to do this 
+5:30 I told you there were time when you would want to use double quotes for your strings
+5:33 because it makes your life easier, this is one of them, 
+5:35 we'll say we don't understand, 
+5:37 and whatever the command was, 
+5:38 we can put that in little single quotes, 
+5:40 like this and we'll say format, ok, great.
+5:44 So let's run this one more time, we'll say L, A and if I say boo,
+5:49 great!, but there is a few things that are not quite yet right with our loop 
+5:54 so if I say lower case l, they will say sorry, we don't understand 'l' 
+5:58 because we were checking against upper case L, and things like that, 
+6:01 so let's stop this and fix that. 
+6:05 So we can come down here and we can say 
+6:07 lower on the string and we want to put that on all these 
+6:09 put that here and make sure wherever we are comparing 
+6:13 we are now comparing against lower case, 
+6:15 now if I can say 'L', 'l', it seems to understand
+6:20 'a', 'A', but if I put like a space and L 
+6:24 all of the sudden it doesn't understand that anymore, 
+6:26 so we can do one more thing to sort of make our input as nice as possible, 
+6:30 and we can do a strip here, right, 
+6:34 so now this should be really robust, 
+6:35 we can say like L space space l, A, X, done goodbye.
+6:41 So I think we have that working well 
+6:44 of course, if you care about performance 
+6:46 or even code repetition we are doing this 3 times,
+6:48 it might be nicer to do something like this 
+6:51 do it once and then centralize that 
+6:54 so we'll say lower().strip() and then we can just work with it 
+7:00 assuming it's got no white space and it's always lower case. 
+7:05 All right, let's finish sketching out the methods we are going to write 
+7:08 and then we'll move on to work with data. 
+7:09 So we basically need two more methods, 
+7:11 one is going to be list entries, and I'll just print() Listing..., for now 
+7:18 just so we can see that this is working, 
+7:20 and we need to define add entry and I'll do a print() Adding..., darara... like that 
+7:25 and let's go over here and replace these pieces, 
+7:28 we'll say list entries and down here this will be add entry, 
+7:31 one more time, make sure it runs, 
+7:33 list, add, exit, everything looks great.
+

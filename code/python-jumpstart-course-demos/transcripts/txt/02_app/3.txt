@@ -1,0 +1,61 @@
+0:00 One of the fundamental components of any programming language
+0:03 is the ability to make decisions,
+0:05 decide to go down one path or the other
+0:07 based on some tests you can run.
+0:09 And in Python, this is the if, elif, else block,
+0:12 so let's look at this co de sample we have here.
+0:15 We have some command we are trying to get from the user,
+0:17 imagine this is a command line app you can enter commands
+0:20 to run or execute at this point in our application.
+0:23 So we are going to ask the user to enter
+0:25 either L or X but of course they can enter anything, right,
+0:29 that's just open text they are going to type in,
+0:31 so we also account for that.
+0:33 We have these two commands we are going to work with,
+0:34 let me say if the command is equal to L the string L,
+0:38 the way you do equality in Python is double equal
+0:40 so command == L 
+0:42 then we are going to indent and run some code
+0:45 we are going to list the items
+0:46 if it's not that case that it's L, then we want to do another test,
+0:50 we'll say well maybe if it wasn't L,
+0:52 else if, which is abbreviated in Python to elif,
+0:55 the command == X so maybe the command is X,
+0:58 in that case we're going to call exit
+1:00 and if it's neither of these two things we expect, 
+1:03 well we can just print some message like
+1:05 sorry I don't know what you meant by whatever it was you typed in
+1:08 this is not a valid command. 
+1:10 So these conditional statements always start with if,
+1:12 and then they optionally have an else if 
+1:15 and they optionally have an else. 
+1:17 And of course, this is a key building block 
+1:19 for our game to decide if the number is too high or too low. 
+1:23 So, we've seen that you can do equality test, ==, 
+1:26 we can also do less than "<", greater than ">", 
+1:29 these types of comparisons that are pretty conceptually straightforward. 
+1:33 But in Python, you can test any object, 
+1:36 anything that is a variable you can put into an if statement 
+1:39 and it will either evaluate the true or false, 
+1:41 and there is a simple set of rules around 
+1:43 when a thing is going to be true and false
+1:46 a lot of code in Python leverages this concept 
+1:49 for conciseness which I am calling truthiness. 
+1:52 So the rules are like this, 
+1:53 there is a set of defined things that are false, 
+1:55 obviously the word False capital F is itself false, 
+1:59 but also collections, lists, sets, dictionaries, 
+2:04 and so on that are empty, 
+2:06 by the fact that they are empty,
+2:08 that considers them to be false. 
+2:10 Strings, treat the same way, for all sorts of numbers,
+2:14 if the number is 0 then it is false, otherwise it is true. 
+2:17 And of course any object can point to an actual thing
+2:21 or it can be pointed at nothing, 
+2:22 in Python we call this None, 
+2:24 other languages call it null or nil, in this case, 
+2:27 when you have a variable that points in nothing, that is also false. 
+2:30 So, if you are not in this short clear set of things that are defined to be false,
+2:34 then it evaluates to true. 
+2:36 So we'll see a lot of code leveraging this concept
+2:38 around loops, around conditionals, and so on.

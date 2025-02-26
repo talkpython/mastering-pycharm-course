@@ -1,0 +1,71 @@
+00:0.14 We saw that our API returns JSON,
+00:2.83 and this is not by coincidence,
+00:4.86 this is the most popular data exchange format on the Internet,
+00:9.09 period, when one application talks to another,
+00:12.43 not just in Python, but across all the languages.
+00:14.77 So let's just go play with this idea really quickly so that we know how to
+00:18.57 work with it. So let's create a new thing, we'll call it "example_dict" for dictionary.
+00:22.01 We'll see where that goes
+00:23.58 in a minute. I'm gonna use my fmain magic to find the program.
+00:27.7 It's gonna run here. So what we want to do is we want to talk
+00:30.82 about this data structure called a dictionary, and a dictionary
+00:33.74 looks like this: it has curly braces,
+00:36.29 it has a key, so maybe this is gonna be city,
+00:39.74 and then it has the value,
+00:41.3 the current value of the city.
+00:42.75 So this is like a variable type of thing,
+00:45.04 and then the value might be Portland, and then the state,
+00:49.0 maybe the state is going to be Maine.
+00:53.14 And then, we could also have other,
+00:55.08 more interesting things in here. Like we could have a
+00:58.44 details and the details could actually be a
+01:1.42 list of cold, snowy, winter, I don't know.
+01:7.41 Maybe it's wintertime right there when we're doing this.
+01:9.74 So these are the things that we could have in there. In order to work with
+01:12.62 this, first of all, if I just print this out, and run this,
+01:17.81 p, d, there we go, if we print it out, look how this looks.
+01:20.41 See that right there? If we go back over to our API
+01:22.98 here and we click on our example,
+01:24.98 we look the raw data, those are basically identical. The only difference that you'll find is
+01:30.97 Python's representation have single quotes if you print it,
+01:34.18 JSON has double quotes. Other than that,
+01:37.23 they're basically the same. Yeah,
+01:38.51 there's other technical small details like,
+01:40.75 for example, datetimes can't be represented in JSON documents where they can in python
+01:45.72 dictionaries. But, think of this JSON stuff as like a subset of these Python dictionary
+01:51.03 data structures. If I want to get something from it,
+01:53.3 I can come over here and say
+01:54.52 like the city, we could print out just the city, notice Portland comes out.
+01:58.12 If I asked for something that's not there, like country is not here,
+02:1.24 and I use the square brackets to access it,
+02:3.32 I get a KeyError. There's nothing called country in here.
+02:6.44 So, oftentimes a better way to do this is come here and say "get",
+02:10.34 so just do the brackets, if you say "get",
+02:11.99 you'll get either, you'll get the thing that you are asking for or none.
+02:15.55 You can even pass a default.
+02:17.47 So if they don't ask, they don't provide a country,
+02:20.07 let's default it to the USA, and that way we'll get the default value here if
+02:24.4 this does not exist, but if a country were to exist, like country is Germany,
+02:28.69 say now, Germany would come back, in Deutschland,
+02:32.55 okay? And then also we can modify these things.
+02:35.0 We come over here and set the country to, set it to Australia,
+02:39.22 and then we could ask for it again.
+02:41.27 Notice, now it's been set, and actually if we just print the whole thing out again,
+02:44.21 we get, over here our country is Australia.
+02:47.82 Cool, right? What we can do is we can actually just take this,
+02:50.89 and it's better to take the pretty printed version just for your own well being,
+02:54.79 and we can go over here and say,
+02:56.1 "the weather is, paste", you just indent it.
+02:59.07 But Python already understands that. So, if we want to get,
+03:1.9 say, the weather, let's say the forecast and the temp.
+03:5.83 So first we've got to get the forecast and then we get this little baby internal
+03:9.69 sub-dictionary back, which we can then ask for the temperature which will give us
+03:13.03 that. So we could do a print,
+03:15.8 go to our weather and say "get the forecast",
+03:19.68 then we're gonna say "get the temp" and that should just print out 64.08 degrees
+03:26.24 Fahrenheit, and it does. Okay,
+03:27.84 so this data structure is what we'll be exchanging with the
+03:31.84 API, we're gonna be passing these JSON strings back and forth,
+03:36.04 but you'll see that Python has it, because they're basically subsets, sub-types,
+03:41.65 the functionality of Python dictionaries, It's incredibly easy to convert that response over to a Python
+03:47.1 dictionary, as we've explored right here, and then just directly worked with that.

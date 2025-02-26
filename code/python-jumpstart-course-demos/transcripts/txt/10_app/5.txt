@@ -1,0 +1,57 @@
+00:00 Now, it's fun to play around and sort of explore the api,
+00:03 but let's build something that's a little bit more formal,
+00:05 a little bit more of a proper app,
+00:08 and instead of having you watch me type it all out,
+00:10 I kind of put it together and we'll just go over the skeleton bit of it,
+00:12 and then we'll actually make it work here next.
+00:15 So, we have this main method, and it's going to do two things
+00:18 it's going to print out the header and you can imagine
+00:21 that just prints out movie search app, nothing major there,
+00:24 and then it runs this search event loop here,
+00:26 and we're using our dunder main convention;
+00:28 so down here it's just going to say go through this while loop,
+00:32 and long as you don't press x, it's going to let you keep searching,
+00:36 so press x to exit, but if you don't press that, it's going to go do a search, right,
+00:40 we'll go down here, and we're going to run this little search,
+00:43 so we'll go to this thing that I've created called a movie service,
+00:45 and we will call the find movies function,
+00:48 and then this is exactly the same thing we did before,
+00:51 just printing out the year and title, and if you do hit x
+00:53 it gives you this little message like see you.
+00:56 Let's look at the movie search,
+00:58 really I just moved the stuff that was in a play around function
+01:00 over here and put it into a function we can call,
+01:02 so we've got our movie, result, name tuple, exactly like before,
+01:06 we've got our url, now we're passing in the search text,
+01:09 and we're calling requests, checking for the errors
+01:14 to make sure everything's ok to carry on, converting to json,
+01:16 getting the movie list, doing our cool list comprehension here,
+01:18 with our dictionary unpacking thing there, and then we're returning them.
+01:23 I guess one more thing that might be fun,
+01:26 let's run this real quick just to see that it basically works the same,
+01:29 except for now it goes in a loop, so we could search for let's say 'cats',
+01:32 we get a bunch of cats, we could search for 'runner' we get runner, and so on
+01:36 but notice, the years are just kind of random,
+01:39 whatever order it comes back from the service,
+01:42 suppose that we would like instead to see the newest movies first,
+01:47 so let's go ahead and upgrade this, we'll same movies.sort
+01:50 and here we're going to sort, we're going to say key = lambda
+01:54 given a movie say m, how are we going to sort it,
+01:59 we could say sort by m.year, and that would show oldest to newest
+02:03 let's try that, 'runner', see Logan's Run for 76, then Blade Runner,
+02:09 now it's sorted, that's great, but not what we were hoping.
+02:12 We can sort for numerical values, which this is a number luckily,
+02:15 we can sort from numerical values and reverse this by reversing the key,
+02:19 so put a negative there, now if I search 'runner'
+02:22 then we get 2014, 2013, and so on,
+02:27 I installed little programs, every time we restart it,
+02:30 PyCharm is creating another one,
+02:32 let's get rid of these, and we can fix that real quick.
+02:35 We'll go up here, it's just single instance only, now it's going to restart it,
+02:39 so if I run it again, it will say I'm going to restart this, it's fine.
+02:42 Great, so it looks like this is working,
+02:46 we have our skeleton of our app going,
+02:50 and now we've moved this finding movies capability over here
+02:52 to this movie service and our program is just using it here.
+02:56 So it looks like everything's great, but it turns out
+03:00 things on the internet can break, so let's go explore that next.

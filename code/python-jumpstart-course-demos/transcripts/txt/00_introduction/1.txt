@@ -1,0 +1,131 @@
+0:00 Hello and welcome to my course Python Jumpstart By Building Ten Applications.
+0:04 Whether you are entirely new to Python, 
+0:06 or you have had some experience with it, 
+0:08 but you would like to understand the language better, 
+0:08 I think you'll have a lot of fun building these ten applications with me 
+0:14 and learning the core language concepts along the way. 
+0:17 I've carefully chosen these ten applications 
+0:23 to make them small enough that you can focus on the essential language constructs
+0:25 while you are building the application,
+0:27  and there won't be too much extra stuff to distract you, 
+0:30 but hopefully they are big enough 
+0:32 and complex enough that they are interesting to you, 
+0:35 and you'll see we start out quite simple, 
+0:37 but as we build up they get more and more complex,
+0:39 more and more realistic, I would say. 
+0:41 Welcome to the course, we are going to have a lot of fun! 
+0:43 Let's talk about what we are going to build. 
+0:45 We are going to start at "Hello World", 
+0:48 and this in not just to test that you can write "print('Hello world!')", 
+0:51 that would be kind of silly, 
+0:52 we actually do just a little more than that, 
+0:55 but we are also going to make the focus of this app 
+0:57 to make sure that your setup is right, 
+0:59 that you've got Python installed, 
+1:00 that you are using the right version, 
+1:01 it's in your path, all the various things 
+1:03 you need to make sure your environment is working, 
+1:05 your editor configured correctly, 
+1:07 all those kind of things.
+1:08 Then, we are going to get to our first what you might think of as real app. 
+1:11 Guess that number game, and the computer is going to randomly choose a number
+1:16 and it's going to ask the user, 
+1:18 "hey, what number do you think I guessed" 
+1:20 and it will sort of say, "too high/ too low," you may know this game. 
+1:22 So that will let us work with things like user input, 
+1:25 converting strings to numbers, conditional statements, booleans, 
+1:30 all those foundational language constructs. 
+1:32 Then, the next one we are going to focus on is a birthday countdown application, 
+1:36 and this will let us really explore dates, time, 
+1:38 differences between dates, the various things like that. 
+1:41 Once you have finished with this app 
+1:42 you will be very comfortable working with dates in the Python language,
+1:46 and the idea here is the user is going to enter their birthday, 
+1:49 we'll then use that information to figure out how many days 
+1:52 their birthday is in the future of that year, 
+1:54 or how many days it's already been since it's gone by. 
+1:57 The fourth app we are going to build is a personal journal or diary. 
+2:01 This app is fairly complex, we are going to look at a lot of 
+2:04 really useful and central features to the language. 
+2:08 We are going to focus mostly on file I/O, 
+2:11 but also partitioning our app into many different files
+2:14 and reusing those files to build up a more complex application. 
+2:18 We are going to dig into functions, and a lot more. 
+2:22 So, these first four apps will just run on our computer, and that's great, 
+2:25 but we live in a connected world, 
+2:27 so this fifth application is going to be a weather client. 
+2:31 We are going to actually go out to the Internet 
+2:33 and get the weather wherever you happen to be located. 
+2:36 You will enter your zip code and out will pop a weather report, 
+2:39 a real, live weather report that is up to date to the minute. 
+2:42 Now we are going to use a lot of cool language features and packages 
+2:46 to build this one, so we are going to focus specifically
+2:49 on how you go to the Python package index often referred to as PyPi, 
+2:53 and grab these packages, install them locally and use them 
+2:56 to construct something that will let us get our weather report. 
+3:00 We are going to do some HTTP request, 
+3:02 we are going to do some screen scraping, HTML parsing, things like that. 
+3:07 At this point, we are going to need a little laugh. 
+3:09 We've built these five apps and we've worked with the Internet, 
+3:12 but we've only gotten text back, 
+3:15 so this LOL Cat Factory is going to let us dig into the concept of binary files, 
+3:19 so we'll combine the fact that we are going to go to the Internet, 
+3:22 grab some binary data, in this case very important LOL Cat pictures, 
+3:27 save those to binary files on the disk, 
+3:29 and then explore them with Python.
+3:32 Have you ever played DnD or some of these types of games? 
+3:35 Well, it's time for a wizard battle, so we are going to make a game
+3:39 where we have things like wizards, and dragons and so on, 
+3:42 and this is kind of a text roll playing game, 
+3:45 we'll create a wizard and the wizard will be part of this ecosystem 
+3:49 where he battles different creatures and so on. 
+3:51 Now, for this, we are going to really dig into the concept of classes, 
+3:55 object oriented programming, inheritance, doc typing, 
+3:59 all of the OO type building blocks that really make Python a powerful language. 
+4:04 Number eight, we are going to build this file searcher so you can enter some text,
+4:09 and it will go through your system, your hard drive, 
+4:11 look at all the different files, 
+4:13 pull out the various pieces of text and give you little report on it. 
+4:17 Number nine, we are going to build a real estate investor application. 
+4:21 We are going to start with CSV file full of real estate transactions data, 
+4:27 historical data for particular location, 
+4:29 and then we are going to write an application
+4:32 that will let you answer questions about it,
+4:34 what is the average price of a house that has two bedrooms sold in this location,
+4:39 what is the most valuable house ever sold that had one bathroom and one bedroom.
+4:43 Those types of things. 
+4:45 So we are going to work with this file format CSV 
+4:47 which most of you should be very familiar with, 
+4:50 but the idea will be easily translatable to other formats as well of course, 
+4:54 and we are going to really focus on two Pythonic concepts here, 
+4:59 two language features in the Python language
+5:01 that are fairly unique to Python,
+5:04 that is generator expressions and list comprehensions.
+5:08 Either way is to do almost database like query work in your procedural code, 
+5:14 so it's super powerful, super interesting 
+5:16 for answering the types of questions this app might ask. 
+5:19 Last but not least, we are going to have a movie lookup app. 
+5:23 So, in this application, it's going to go out to the Internet again, 
+5:26 and give you information about movies, 
+5:29 but the thing we are actually going to focus on 
+5:31 is not so much the Internet part, 
+5:33 we did that in five and six already, 
+5:35 we are going to focus on errors, exceptions, 
+5:38 error handling, things like that. 
+5:40 What if you can't get to the Internet, 
+5:42 what if the site is down, what if it returns data you don't expect,
+5:44 how do you write an application that fails gracefully 
+5:47 or maybe it doesn't fail at all? 
+5:49 So, that's what we are going to focus on, 
+5:50 these are our ten applications. 
+5:53 If you are brand new to Python
+5:54 I recommend you go in order.
+5:56 If you kind of know what you are doing, 
+5:59 if you look at the second one and go, "I know all these things," 
+6:02 feel free to skip around. 
+6:04 But, I would encourage you to go 
+6:06 and look through the list of the core concepts, 
+6:08 each chapter, each application has a set of core concepts that are list out, 
+6:13 and if you don't know those, be sure to go back and look at that first, 
+6:16 because they kind of build on each other, 
+6:18 even though they are somewhat independent. 

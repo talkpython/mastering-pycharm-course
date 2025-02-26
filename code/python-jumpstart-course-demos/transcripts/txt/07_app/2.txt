@@ -1,0 +1,44 @@
+ 0:00 Over here in PyCharm, let's knock out the first pass on our initial game loop. 
+0:04 Now, it's probably not going to end this way, 
+0:07 or probably refine it and add some enhancements, 
+0:09 but let's just get started in kind of the same way we have with other apps. 
+0:14 So, again, we are going to add our program.py file 
+0:18 and we are going to have our main() method, we'll have our print_header(), as always
+0:26 and in this one we are going to have what we are going to call a game_loop(). 
+0:30 And then in our main let's just go and say print_header() 
+0:32 and then we'll just run the game_loop(). 
+0:35 And finally, let's use our PyCharm live template to call the main()
+0:41 only if it's actually being executed rather than imported. 
+0:45 So header is pretty standard as always so let's just do this, 
+0:55 ok, standard header now let's focus in on this game_loop() we have here. 
+1:00 So the concept of our game_loop() is we just want to go around and around 
+1:03 getting input from the user until the game ends
+1:07 so let's just start really simple with the concept of going around and around, 
+1:11 and so we'll just say while true and we are going to do some work here. 
+1:15 First thing we are going to do is get some input from the user, 
+1:18 so we'll call this cmd for command 
+1:22 and this is pretty standard we'll say you attack, run away or look around. 
+1:28 Like so, and let's give the users hints on which they can do 
+1:31 so we'll say attack, run away or look. 
+1:36 And then we have four basic outcomes here, 
+1:38 one could be they actually said they want to attack 
+1:41 and let's just print out some things we can kind of test a little loop here, 
+1:45 then we'll rewrite the behaviors. 
+1:47 So if they say a we'll say attack, elif if it's run away we'll just print('run away'),
+1:59 if they are going to look around we are going to print('look around'), and finally, 
+2:04 if they hit something else and we don't know what it is we'll just say
+2:07 all right, you must want to exit the game, 
+2:09 like if we just hit enter with no command that means you are gone, 
+2:12 so we'll just say something like this, ok, exiting game. Bye. 
+2:17 So, let's go ahead and run our app just to make sure everything is hanging together. 
+2:22 Now, no run configuration, so we kow how to get that going.
+2:26 All right, so down here we can attack, we can look around, 
+2:30 we can run away, or we can say enter and we should exit. 
+2:33 Now, oops, we didn't really exit we just printed exit, right, 
+2:36 that doesn't mean anything to Python just that we printed exit. 
+2:40 So we can exit out of this infinite loop by just saying break 
+2:43 and then we'll come down here and basically 
+2:46 run the next line which is empty and we're done. 
+2:47 So look around, enter, exit, perfect. 
+2:51 So our little loop is running, it's time to build up the data structures
+2:55 with classes and objects it's going to be great.
