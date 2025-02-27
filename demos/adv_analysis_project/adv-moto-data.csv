@@ -1,0 +1,50 @@
+Manufacturer,Model,Engine (cc),Category
+BMW,R1150GS,1130,Heavyweight
+BMW,R1200GS,1170,Heavyweight
+BMW,R1250GS,1254,Heavyweight
+BMW,F650GS/G650GS,652,Middleweight
+BMW,F800GS,798,Middleweight
+BMW,F850GS,853,Middleweight
+BMW,G310GS,313,Lightweight
+Kawasaki,KLR650,652,Lightweight
+Kawasaki,Versys 650,649,Middleweight
+Kawasaki,Versys 1000,1043,Heavyweight
+Kawasaki,Versys-X 300,296,Lightweight
+Suzuki,V-Strom 1000,996,Heavyweight
+Suzuki,V-Strom 650,645,Middleweight
+Suzuki,V-Strom 800DE,776,Middleweight
+Honda,XR650L,644,Lightweight
+Honda,Africa Twin 1000 (CRF1000L),998,Heavyweight
+Honda,Africa Twin 1100 (CRF1100L),1084,Heavyweight
+Honda,CB500X,471,Lightweight
+Honda,NC700X,670,Middleweight
+Honda,XL750 Transalp,755,Middleweight
+Honda,CRF300L Rally,286,Lightweight
+Yamaha,Super Tenere 1200,1199,Heavyweight
+Yamaha,Tenere,689,Middleweight
+Triumph,Tiger 955i,955,Heavyweight
+Triumph,Tiger 1050,1050,Heavyweight
+Triumph,Tiger 800,799,Middleweight
+Triumph,Tiger 900,888,Middleweight
+Triumph,Tiger 1200,1215,Heavyweight
+Ducati,Multistrada 1100,1078,Heavyweight
+Ducati,Multistrada 1260,1262,Heavyweight
+Ducati,Multistrada V4,1158,Heavyweight
+Ducati,Multistrada 950/V2,937,Middleweight
+Ducati,DesertX,937,Middleweight
+KTM,640 Adventure,625,Lightweight
+KTM,950 Adventure,942,Heavyweight
+KTM,990 Adventure,999,Heavyweight
+KTM,1190 Adventure,1195,Heavyweight
+KTM,1290 Super Adventure,1301,Heavyweight
+KTM,790 Adventure,799,Middleweight
+KTM,890 Adventure,889,Middleweight
+KTM,390 Adventure,373,Lightweight
+Aprilia,Caponord 1000,998,Heavyweight
+Aprilia,Caponord 1200,1197,Heavyweight
+Aprilia,Tuareg 660,659,Middleweight
+Moto Guzzi,Stelvio 1200,1151,Heavyweight
+Moto Guzzi,V85 TT,853,Middleweight
+Buell/Harley,Buell Ulysses XB12X,1203,Heavyweight
+Harley-Davidson,Pan America 1250,1252,Heavyweight
+Zero,DSR/X (electric),0,Heavyweight
