@@ -12,5 +12,9 @@ def index():
 def about():
     return flask.render_template('about.html')
 
+@app.route('/api/podcasts')
+def api_podcasts():
+    return database.podcasts
+
 if __name__ == '__main__':
     app.run()
