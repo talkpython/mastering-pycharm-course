@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Flask App{% endblock %}</title>
+    <!-- Add more shared meta, styles, or scripts here -->
+    <link rel="stylesheet" href="/static/css/bulma/bulma.min.css"/>
+</head>
+<body>
+
+<nav class="navbar mb-3" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-centered has-text-text-bold" href="https://bulma.io">
+            Podcast Collector
+        </a>
+
+
+        <div class="navbar-item">
+            <a class="navbar-item" href="/about">
+                About
+            </a>
+        </div>
+
+    </div>
+
+</nav>
+
+<main class="p-4">
+    <!-- Main content will be injected here -->
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="p-4">
+    <!-- Shared footer -->
+    <p>&copy; 2025 Talk Python Training</p>
+</footer>
+</body>
+</html>
