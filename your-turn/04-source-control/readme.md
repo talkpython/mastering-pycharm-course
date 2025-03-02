@@ -10,16 +10,11 @@
 
 We are going to create a very simple game and store it in source control.
 
-In this chapter, you will need to have [git](https://github.com/git-guides/#what-is-git) installed. 
-Our friends over at GitHub have created a nice 
-[Installing git on any OS guide](https://github.com/git-guides/install-git). If you don't have git or are
-unsure whether you do, please check out the steps for your OS [over there](https://github.com/git-guides/install-git).
+In this chapter, you will need to have [git](https://github.com/git-guides/#what-is-git) installed. Our friends over at GitHub have created a nice [Installing git on any OS guide](https://github.com/git-guides/install-git). If you don't have git or are unsure whether you do, please check out the steps for your OS [over there](https://github.com/git-guides/install-git).
 
 ## Keeping it simple
 
-While most work like this will be done with a cloud source control services such as 
-[GitHub](https://github.com), [BitBucket](https://bitbucket.org/), or [GitLab](https://about.gitlab.com/),
-we won't go to that trouble here. We will just create a local **git** repository using these steps:
+While most work like this will be done with a cloud source control services such as [GitHub](https://github.com), [BitBucket](https://bitbucket.org/), or [GitLab](https://about.gitlab.com/), we won't go to that trouble here. We will just create a local **git** repository using these steps:
 
 1. Simply create directory called `hilo` in the terminal / command prompt
 2. CD into `hilo`
@@ -29,16 +24,16 @@ This `hilo` directory is now a local **git** repo (it has a hidden `.git` folder
 
 Time to **write some code**:
 
-* Open this directory in PyCharm (it's empty but will constitute a new project)
+* Open this directory in PyCharm (it's empty but will constitute a new project). A virtual environment is not needed this time.
 * If PyCharm creates a default `main.py`, just delete it
-* Confirm that PyCharm has detected the **git** / vcs root (see the default branch name in the lower right status bar fork icon)
+* Confirm that PyCharm has detected the **git** / vcs root (see the default branch name in upper-left branch dropdown menu)
 * Create a file named `game.py`. 
 * Tell PyCharm it may add `game.py` and all subsequent files to **git** if asked (i.e. "don't ask again").
 * Write a quick game that will generate the output below. You'll need a `while` loop, `random.randint()`, and some `if` and `print` statements.  
 * While writing this game, save often (cmd/ctrl-s). This is important for [step 2](#local-history).
 
  **Sample game output**
- 
+
 ```
     Welcome to the HI - LO game
     Guess a number between 1 & 100: 50
