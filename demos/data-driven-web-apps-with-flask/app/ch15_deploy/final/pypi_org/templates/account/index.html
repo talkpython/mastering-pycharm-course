@@ -1,0 +1,16 @@
+{% extends "shared/_layout.html" %}
+{% block title %}About PyPI Demo{% endblock %}
+
+{% block main_content %}
+    <div class="page-core">
+        <h1>Your PyPI Account</h1>
+
+        <div>
+            Welcome to your account {{ user.name }}!
+        </div>
+    </div>
+{% endblock %}
+
+{% block additional_css %}
+    <!-- this would be css from about.html -->
+{% endblock %}

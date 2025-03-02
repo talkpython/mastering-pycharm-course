@@ -1,0 +1,32 @@
+server {
+    listen 80;
+    server_name fake_pypi.com fakepypi.talkpython.com;
+    server_tokens off;
+    charset utf-8;
+    client_max_body_size 150M;
+
+    location /static {
+        gzip            on;
+        gzip_buffers    8 256k;
+        uwsgi_buffers   8 256k;
+
+        alias /apps/app_repo/app/ch15_deploy/final/pypi_org/static;
+        expires 365d;
+    }
+    location / {
+        try_files $uri @yourapplication;
+    }
+    location @yourapplication {
+        include uwsgi_params;
+
+        gzip            on;
+        gzip_buffers    8 256k;
+        uwsgi_buffers   8 256k;
+        uwsgi_read_timeout 300;
+
+        proxy_pass http://127.0.0.1:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Protocol $scheme;
+    }
+}
