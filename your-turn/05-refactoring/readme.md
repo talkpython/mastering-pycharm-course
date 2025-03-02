@@ -80,7 +80,7 @@ Let's move the data container and type first. Highlight these two lines and "mov
 	Episode = namedtuple('Episode', 'title link pubdate show_id')
 	episode_data = {}  
 
-**Note**: If you have **not** opened just the `smelly_podcast` folder as the project root, you will need to market the folder `smelly_podcast` as a **sources root** for that to work. It should be **blue** like this:
+**Note**: If you have **not** opened just the `smelly_podcast` folder as the project root, you may need to mark the folder `smelly_podcast` as a **sources root** for that to work. It should be **blue** like this:
 
 ![](./sources-root.png)
 
@@ -125,7 +125,7 @@ def main():
 
 ## Variable absence *smell*
 
-**Variable absence** is a smell I created. There doesn't seem to be an agreed upon smell for it, but I'm sure you've seen it. Here's the deal. What does this mean:
+**Variable absence** is a smell category that I created. There doesn't seem to be an agreed upon term for it, but I'm sure you've seen it. Here's the deal. What does this mean:
 
 `result = 7 * max(inputs) * (match / count)`
 
