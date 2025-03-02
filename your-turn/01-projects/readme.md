@@ -12,7 +12,7 @@ To create a new project, use PyCharm's new project wizard.
 Steps:
 
 1. Create a folder to hold your project and virtual environment. Create a folder called `first_project` wherever you would like to keep your PyCharm projects.
-2. Install **uv** (from [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)). **uv** is an important somewhat new tool for managing Python versions and virtual environments. Listen to [my interview with Charle Marsh](https://talkpython.fm/episodes/show/476/unified-python-packaging-with-uv) if you want to dive deep into that. We'll be using this to install Python and create a virtual environment.
+2. Install **uv** (from [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)). **uv** is an important recent addition to the packaging workflow for managing Python versions and virtual environments. Listen to [my interview with Charle Marsh](https://talkpython.fm/episodes/show/476/unified-python-packaging-with-uv) if you want to dive deep into that. We'll be using this to install Python and create a virtual environment.
 3. Open a terminal (using Windows Terminal if you happen to be on Windows) in the `first_project` folder.
 4. Run the command to both install Python and create the virtual environment  here:
    `uv venv --python 3.13.2 --python-preference only-managed` (update this to use the latest version of Python, for me it's 3.13.2 as of this writing).
@@ -37,7 +37,7 @@ git clone https://github.com/talkpython/python-jumpstart-course-demos
 
 If you don't _git_, that's OK. Just download and unzip it (click the `Code` button then download as zip).
 
-Open a terminal again, and cd into `python-jumpstart-course-demos`. Create another virtual environment (same command as before):
+Open a terminal again, and cd into `python-jumpstart-course-demos`. Create another virtual environment (same command as before, update Python version as needed):
 
 ```bash
 uv venv --python 3.13.2 --python-preference only-managed
