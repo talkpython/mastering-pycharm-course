@@ -1,173 +1,62 @@
-# Your turn: Web
+# Your turn: HTTP Endpoint Testing
 
 ## Version warning
 
-This chapter requires PyCharm Professional to complete as indicated. Please see the [chart for version breakdown](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide#editions) in the public course page.
+This chapter requires PyCharm Professional to complete as indicated. Please see the [version breakdown](https://www.jetbrains.com/pycharm/editions/) at JetBrains.
 
 ## Objectives
 
-1. Create a basic Flask web app
-2. Implement a view method
-3. Render data from view in the template
-4. Change the global site look and feel
+1. Test an existing web page using HTTP Client
+2. Call an API using HTTP Client
+3. Submit data to a password-protected API endpoint using JSON
 
-## Creating a new Flask web app
+## Create an HTTP client file
 
-We are going to use PyCharm's tools to create a Flask web app.
+To get started, you're welcome to use an existing project or create a brand new one. A Virtual environment is not required this time.
 
-We'll let PyCharm create most of this for us at the start.
+Create a new HTTP Request file named `blog.http`. You'll see the *hello world* style placeholder from PyCharm. Go ahead and run it to see it's all hanging together. Then feel free to delete that section.
 
-1. Open PyCharm
-2. Choose "Create new project"
-3. Pick Flask
-4. Expand the "Project interpreter"
-5. Verify you're using Python 3.8 or higher in a virtual environment.
-4. Expand the "More settings" section.
-5. Make sure the template language is `Jinja2`
-6. Name your project and create it
+## Requesting a web page (with redirect)
 
-Now that you have the project created, PyCharm will have already installed Flask and its dependencies in the virtual environment it created for you.  Moreover, it has configured Flask to run with the flask CLI commands rather than Python's native style (e.g. `flask run` rather than `python3 app.py`).
+We'll start by checking out what's at [talkpython.com](https://talkpython.com). If you load it in your browser, you'd see it does work. But we get more info if we use the HTTP Client. Put a GET request to pull `https://talkpython.com`. You'll get quite a bit of content back when you run it. 
 
-![Flask is ready to run](./resources/ready-to-run.png)
+Got to the top of the request output and see if you can find a 301 redirect response.
 
-And you'll have the typical "hello world" Flask app:
+Notice there is a *disable* link / button near that request in the output. If you click it, it will modify the response to avoid following redirects for further exploration. Try that out as well. Expand the headers and check out the `location` value.
 
-```python
-from flask import Flask
-app = Flask(__name__)
+## Requesting all the blog entries
 
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+For our API, we are going to be working with [consumerservicesapi.talkpython.fm](https://consumerservicesapi.talkpython.fm). Give it a quick look to see what's there. 
 
-if __name__ == '__main__':
-    app.run()
+First, we just want to see all the blog posts at the API. Add a request for `https://consumerservicesapi.talkpython.fm/api/blog`. Run this and see the output. Also, inspect the saved JSON file.
+
+## Create a new blog post
+
+Now we can use the **POST: /api/blog/** endpoint to create a new blog post. We'll need to submit data as JSON matching the following format:
+
+```json
+{
+  "published": "2025-04-01",
+  "view_count": 1234,
+  "content": "BODY CONTENT",
+  "title": "TITLE"
+}
 ```
 
-Go ahead and run the app by pressing the green arrow in the screenshot above. You should see something like this:
+It's time to submit something pithy using HTTP Client. 
 
-![First run](./resources/first-run.png)
+After you do, rerun get blog entries or use the **GET: /api/blog/{id}** endpoint to pull back that created entry to see that it was created successfully.
 
-## Implement a data-driven view method
+## Removing domain from endpoint spec
 
-Let's add a little structure. Create a top-level folder called `data`. In the `data` folder, create called `fake_data.py`. Copy this method into that file:
+We can create a new run environment to avoid specifying the full domain `consumerservicesapi.talkpython.fm` from each request. This can be helpful in development and QA when building and testing the service at the same time.
 
-```python
-def get_orders():
-    return [
-        {'name': 'Cereal', 'price': 4.99},
-        {'name': 'Cheese', 'price': 2.15},
-        {'name': 'Milk', 'price': 6.99},
-        {'name': 'Oranges', 'price': 2.54},
-        {'name': 'Apples', 'price': 1.99},
-        {'name': 'Bread', 'price': 2.99},
-    ]
-```
-
-Now let's use it in the website.
-
-We're going to *replace* the `hello_world()` view method with one called `index()`. Traditionally, website's default file served has been `index.html` for urls such as `https://the_server.com/` where no file was specified. So we'll mirror that in the Flask style by naming our view method `index()`.
-
-Additionally, let's get the data from our simulated database (`fake_data.py`) into the view method. Import `fake_data` and use it to store the orders in a local variable.
-
-The final view method should look like this:
-
-```python
-@app.route('/')
-def index():
-    orders = fake_data.get_orders()
-    return 'Hello World!'
-```
-
-Go ahead and run the app again and request the home page just to make sure things are still hanging together.
-
-
-## Render data in an HTML template
-
-Now you have the data ready to send along to the HTML side of things, let's create the Jinja template and render the orders there.
-
-Create a new HTML file: `templates/index.html` (this should use PyCharm's HTML template with a little structure). Now it's time to use Jinja's syntax to render the orders. The Jinja code section for the orders should look something like this:
-
-```html
-<!-- ... -->
-<h1>Flask Orders</h1>
-
-{% for o in orders %}
-    <div>
-        <span style="font-weight: bold;">{{ o.name }}</span>
-        <span>{{ o.price }}</span>
-    </div>
-{% endfor %}
-<!-- ... -->
-```
-
-Do not copy / paste this. Type it in to see how PyCharm helps you with autocomplete and more.
-
-Finally, we'll jump back to our `index()` view method and render the template with the order data using Flask's `flask.render_template()` method:
-
-```python
-@app.route('/')
-def index():
-    orders = fake_data.get_orders()
-    return flask.render_template('index.html', orders=orders)
-```
-
-With this code in place, you should now have a nav icon to jump between the view method and template:
-
-![Nav icon](./resources/nav-icon.png)
-
-## Global look and feel with a shared template
-
-Finally, let's see how we go about having a common look-and-feel across the site. 
-
-Create a new HTML file that will hold the outer "shell" of our site with a common set of imports, styles, navigation, footers, and so on. Create `templates/_layout.html`. I like the `_` prefix to indicate it's not a public page but a shared item.
-
-Add HTML like below in there. Note the `block` keyword to allow us to use this across other pages. Also, we threw in some styles just to make the effect of the template more obvious. In real apps, you'd put that in a style sheet, but we want to keep this simpler if possible for this walk-through.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Flask Orders</title>
-</head>
-<body style="margin: 0px; background-color: #222; ">
-
-<div style="padding: 20px; background-color: white;">
-    {% block main_content %}{% endblock %}
-</div>
-
-<footer style="color: #888; margin-top: 50px; text-align: center;">
-    <div class="copyright">
-        This is a demo site built during a course.<br>
-        Copyright <em>me</em>!
-    </div>
-</footer>
-
-</body>
-</html>
-```
-
-Finally, update the `index.html` file to use this template. Note that this is the entire page contents:
-
-```html
-{% extends "_layout.html" %}
-{% block main_content %}
-
-<h1>Flask Orders</h1>
-
-{% for o in orders %}
-    <div>
-        <span style="font-weight: bold;">{{ o.name }}</span>
-        <span>{{ o.price }}</span>
-    </div>
-{% endfor %}
-
-{% endblock %}
-```
-
-Be sure to run and inspect your new site! It should look somewhat like this.
-
-![Finished version of the site](./resources/done.png)
+1. Click the "Run with: ..." dropdown at the top of the UI
+2. Choose "Add environment to private file"
+3. Leave "dev" in place but add a variable `base_url` and set it to `https://consumerservicesapi.talkpython.fm`.
+4. Exclude this file from git (or imagine that you would... :) )
+5. Switch back to **blog.http** and select the new environment
+6. Replace the url base with `{{base_url}}`
+7. Ensure things still run.
 
 *See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*

@@ -1,0 +1,18 @@
+### GET Talk Python home page
+# @no-redirect
+GET https://talkpython.com
+
+
+### GET all blog posts
+GET {{base_url}}/api/blog
+
+### POST Create a new blog entry
+POST {{base_url}}/api/blog
+Content-Type: application/json
+
+{
+  "published": "2025-04-01",
+  "view_count": 50000,
+  "content": "This is my first popular post with over 50,000 views!",
+  "title": "Popular post"
+}
