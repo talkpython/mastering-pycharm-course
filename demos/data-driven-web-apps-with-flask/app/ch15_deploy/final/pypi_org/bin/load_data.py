@@ -141,7 +141,7 @@ def do_import_packages(file_data: List[dict], user_lookup: Dict[str, User]):
                 load_package(p, user_lookup)
                 bar.update(idx)
             except Exception as x:
-                errored_packages.append((p, ' *** Errored out for package {}, {}'.format(p.get('package_name'), x)))
+                errored_packages.append((p, f' *** Errored out for package {p.get("package_name")}, {x}'))
                 raise
     sys.stderr.flush()
     sys.stdout.flush()
