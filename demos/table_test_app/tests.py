@@ -9,7 +9,14 @@ def test_there_are_available_tables():
 
 
 def test_table_can_be_booked():
-    ... # Get a table, book it, verify it is booked and is the same as booked.
+    table = core.all_tables()[0]
+
+    booked_table = core.book_table(table.table_id)
+    #  verify it is booked and is the same as booked.
+
+    assert table.is_booked
+    assert table.table_id == booked_table.table_id
+
 
 
 def test_cannot_book_nonexistant_table():
@@ -18,4 +25,8 @@ def test_cannot_book_nonexistant_table():
 
 
 def test_cannot_book_booked_table():
-    ... # Get a table for 2, book it, book it again. :)
+    table = core.find_available(2)[0]
+    core.book_table(table.table_id)
+
+    with pytest.raises(core.TableUnavailableError):
+        core.book_table(table.table_id)
