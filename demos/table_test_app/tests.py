@@ -29,4 +29,5 @@ def test_cannot_book_booked_table():
     core.book_table(table.table_id)
 
     with pytest.raises(core.TableUnavailableError):
+        print("Pushing our luck!")
         core.book_table(table.table_id)
