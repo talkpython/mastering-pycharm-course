@@ -15,7 +15,7 @@ def download_info():
 
     dom = ElementTree.fromstring(resp.text)
 
-    items = dom.findall('channel/item')
+    items = dom.findall('channel/items')
     episode_count = len(items)
 
     for idx, item in enumerate(items):
@@ -23,7 +23,7 @@ def download_info():
             item.find('title').text,
             item.find('link').text,
             item.find('pubDate').text,
-            episode_count - idx
+            episode_count - idx - 1
         )
         episode_data[episode.show_id] = episode
 
