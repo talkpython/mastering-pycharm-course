@@ -4,10 +4,10 @@ import services
 
 
 def main():
-    once = False
+    # once = False
     for _ in range(1, 10):
         go()
-        input("Time to get a snapshot! ENTER AFTER")
+        # input("Time to get a snapshot! ENTER AFTER")
 
 
 def go():
