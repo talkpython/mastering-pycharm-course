@@ -15,7 +15,8 @@ def download_info():
 
     dom = ElementTree.fromstring(resp.text)
 
-    items = dom.findall('channel/items')
+    items = dom.findall('channel/item')
+    # Probably right here, smell, smell
     episode_count = len(items)
 
     for idx, item in enumerate(items):
