@@ -16,10 +16,6 @@ def show_header():
 
 
 def display_results():
-    # This is updated since the video recording.
-    # We had to trim back the episode list, so I changed
-    # this code to use the moving numbers from the RSS feed
-    # as they change over time.
     start = service.get_min_show_id()
     end = service.get_latest_show_id()
 

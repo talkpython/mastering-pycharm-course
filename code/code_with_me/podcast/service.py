@@ -8,7 +8,7 @@ episode_data = {}
 
 
 def download_info():
-    url = 'https://pythonbytes.fm/episodes/rss'
+    url = 'https://talkpython.fm/episodes/rss'
 
     resp = requests.get(url)
     resp.raise_for_status()
