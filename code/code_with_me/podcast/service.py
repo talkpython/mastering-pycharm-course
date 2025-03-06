@@ -20,10 +20,7 @@ def download_info():
 
     for idx, item in enumerate(items):
         episode = Episode(
-            item.find('title').text,
-            item.find('link').text,
-            item.find('pubDate').text,
-            episode_count - idx - 1
+            item.find('title').text, item.find('link').text, item.find('pubDate').text, episode_count - idx - 1
         )
         episode_data[episode.show_id] = episode
 
