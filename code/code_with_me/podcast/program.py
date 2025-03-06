@@ -16,8 +16,8 @@ def show_header():
 
 
 def display_results():
-    start = service.get_min_show_id()
     end = service.get_latest_show_id()
+    start = max(1, end - 20)
 
     for show_id in range(start, end):
         info = service.get_episode(show_id)
