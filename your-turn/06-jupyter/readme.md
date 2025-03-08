@@ -1,135 +1,109 @@
 # Your turn: Data science
 
+In this *your turn*, we will be using [NASA's Meteorite Landings data set](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh/about_data) to understand and visualize when and where meteors have landed aroudn the world.
+
 ## Version warning
 
-This chapter requires PyCharm Professional to complete as indicated. Please see the [chart for version breakdown](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide#editions) in the public course page.
+This chapter requires PyCharm Professional to complete as indicated. Please see the [version breakdown](https://www.jetbrains.com/pycharm/editions/) at JetBrains.
 
 ## Objectives
 
-1. Use PyCharm's data science mode
-2. Draw pretty graphs over data
-3. Use Jupyter notebooks
+1. Create a Jupyter Notebook in PyCharm
+2. Load some public data sources.
+3. Draw pretty graphs with that data
 
-## Use PyCharm's data science mode
+## Create a Jupyter Notebook in PyCharm
 
-Create a new project with a dedicated virtual environment. We are going to first use data science mode for standard python and focus on Juypter notebooks at the end.
+We are going to create a Jupyter Notebook inside PyCharm to work with this data. Create a folder with a virtual environment and copy the `meteorite-landings.csv` file into that folder. Then open the folder as a project in PyCharm.
 
-Create a new file python and run it to make a run configuration for it. So far, standard PyCharm.
+`Choose File > New > Jupyter Notebook`
 
-Now we want to draw this graph. We'll use `numpy` and `matplotlib` to do so.
+And give it a name.
 
-![](./resources/1-graph.png)
-
-We are going to import a few libraries in this file. Put this at the top of the file. Have PyCharm install matplotlib via a code intention.
+You'll need a few libraries for this project, so add these to the first cell.
 
 ```python
-import matplotlib.pyplot as plt
-```
-
-Next, **TYPE** this.
-
-```python
-import numpy as np
-```
-
-Notice the science mode has appear as a recommendation, use it:
-
-![](./resources/2-science-mode.png)
-
-Add the remaining imports:
-
-```python
-from matplotlib import cm
-from mpl_toolkits.mplot3d import Axes3D
-```
-
-## Draw pretty graphs over data
-
-Time to make a 3D parabolic surface. We'll use NumPy's cool array types to make this easy and *loopless*.
-
-```python
-fig = plt.figure(figsize=(6, 3))
-ax = Axes3D(fig)
-
-X = np.arange(-5, 5, 0.25)
-Y = np.arange(-5, 5, 0.25)
-X, Y = np.meshgrid(X, Y)
-Z = -(X ** 2 + Y ** 2)
-```
-
-You may get a warning about `np.arange`, ignore it. It's fine.
-
-Click onto various methods and see the documentation roll in.
-
-Finally, plotting this.
-
-```python
-surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm,
-                       linewidth=0, antialiased=True)
-
-fig.show()
-```
-
-Run this code and you should see it graphed on the right.
-
-![](./resources/3-graph.png)
-
-## Use Jupyter notebooks
-
-Let's try that again in Juypter notebooks. Add a new notebook.
-
-![](./resources/4-new-notebook.png)
-
-Now everything seems Ok, but some work needs to be done to get this ready. We'll just try to plow through and PyCharm will jump in where needed.
-
-In the first cell, put this code (basically the same other than the matplotlib command).
-
-```python
-%matplotlib inline
+import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib import cm
-from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.colors import LinearSegmentedColormap
 ```
 
-Press the Juypter play button in the middle. It probably won't work. Hit cancel at the dialog and you'll see:
+You will also need to install these libraries along with jupyter itself. Open the terminal and run this command (with the virtual environtment active):
 
-![](./resources/5-cantrun.png)
+```bash
+pip install pandas matplotlib jupyter
+```
 
-Click "run juypter notebook". Now the dialog pops up, but with a problem (see "fix" at the bottom - click it). It will take awhile.
+If you are using uv, you will need to use the command `uv pip install ...` instead.
 
-![](./resources/6-fix-run.png)
+Now run the import cell to make sure everything is working correctly.
 
-Once it's done, click Run.
+## Loading our data
 
-![](./resources/7-running.png)
-
-Now, back to the play button in the middle. Click it and now it should work.
-
-In the next cell that appears, enter 
+Now we can load our data using pandas. Create a cell with the command:
 
 ```python
-X = np.arange(-5, 5, 0.25)
-Y = np.arange(-5, 5, 0.25)
-X, Y = np.meshgrid(X, Y)
-Z = -(X ** 2 + Y ** 2)
+df = pd.read_csv('meteorite-landings.csv')
+df
 ```
 
-Run that. Now plot it in the next cell:
+The first loads it, the second tells PyCharm to display the table / visualizer. Play around with the table and visualizer and get to know the data.
+
+## Visualize the data
+
+ Now we are ready to visualize the data. We'll create a geo plot with the color and size of the points. If you are skilled in data visualizations, feel free to play around with these. If not, go ahead and enter this as the next cell.
 
 ```python
-fig = plt.figure(figsize=(12, 5))
-ax = Axes3D(fig)
+# Assuming the data has the following columns:
+# - 'mass (g)' for the mass of the meteorite in grams,
+# - 'reclat' for the latitude, and
+# - 'reclong' for the longitude.
+# Adjust these column names if needed.
 
-# Plot the surface.
-surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm,
-                       linewidth=0, antialiased=True)
+# Filter out rows with non-positive mass and missing lat/long values.
+df = df[(df['mass (g)'] > 0) & df['reclat'].notnull() & df['reclong'].notnull()]
+
+# Apply a logarithmic transformation to handle the wide range in mass.
+# Using np.log10 because masses can span multiple orders of magnitude.
+log_mass = np.log10(df['mass (g)'])
+
+# Shift the log_mass values so that the smallest value becomes 1 (instead of 0 or negative).
+adjusted_log_mass = log_mass - log_mass.min() + 1
+
+# Scale the adjusted log mass for marker sizes.
+scaled_sizes = adjusted_log_mass * 10  # Adjust this multiplier to change the size variation.
+
+# Create a custom colormap with a spectrum:
+# From gray (small mass) to green, blue, yellow, light red, and red (largest mass).
+cmap = LinearSegmentedColormap.from_list("Spectrum",
+                                         ["gray", "green", "blue", "yellow", "lightcoral", "red"])
+
+# Create the scatter plot using longitude and latitude.
+plt.figure(figsize=(12, 8))
+sc = plt.scatter(df['reclong'], df['reclat'],
+                 s=scaled_sizes,       # Marker size based on adjusted log mass
+                 c=log_mass,           # Color based on the original log-transformed mass
+                 cmap=cmap,
+                 alpha=0.6,
+                 edgecolor='k')
+
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.title('Meteorite Landings: Location and Mass (Size and Color Scaled Logarithmically)')
+plt.grid(True)
+plt.colorbar(sc, label='Log10(Mass in grams)')
+plt.show()
 ```
 
-Note that we don't need show() this time.
+You should see this graph which maps the location and size to the place on the world map:
 
-Now you have a fancy Juypter notebook with a graph!
+![](./meteor-map.png)
 
-![](./resources/8-notebook.png)
+Pretty amazing, eh? Keep playing with the data and see what you can discover!
+
+
+
+----------------
 
 *See a mistake in these instructions? Please [submit a new issue](https://github.com/talkpython/mastering-pycharm-course/issues) or fix it and [submit a PR](https://github.com/talkpython/mastering-pycharm-course/pulls).*
