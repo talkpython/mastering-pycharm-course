@@ -1,4 +1,4 @@
-# Your turn: Data science
+# Your turn: Jupyter Notebooks
 
 In this *your turn*, we will be using [NASA's Meteorite Landings data set](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh/about_data) to understand and visualize when and where meteors have landed aroudn the world.
 
