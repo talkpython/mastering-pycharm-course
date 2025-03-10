@@ -129,7 +129,7 @@ Now let's install the package. Open a terminal / shell. Activate the virtual env
 .venv/scripts/activate
 ```
 
-Now run `pip install -e .` **from the same directory** as it is in as follows. The easiest way to do this is with Python's builtin terminal (make sure the env is activated). If you have used uv, then you'll need `uv pip install -e .` (yes, the dot is part of the command, it means the current working directory)
+Now run `pip install -e .` **from the same directory** as it is in as follows. The easiest way to do this is with PyCharm's builtin terminal (make sure the env is activated). If you have used uv, then you'll need `uv pip install -e .` (yes, the dot is part of the command, it means the current working directory)
 
 Now, in the terminal, change out of that folder to somewhere else. Run Python and try to import and use it:
 
