@@ -21,7 +21,7 @@ We'll let PyCharm create most of this for us at the start.
 2. Choose "Create new project"
 3. Pick Flask
 4. Expand the "Project interpreter"
-5. Verify you're using Python 3.8 or higher in a virtual environment.
+5. Verify you're using Python 3.9 or higher in a virtual environment.
 4. Expand the "More settings" section.
 5. Make sure the template language is `Jinja2`
 6. Name your project and create it
@@ -30,10 +30,13 @@ Now that you have the project created, PyCharm will have already installed Flask
 
 ![Flask is ready to run](./resources/ready-to-run.png)
 
-And you'll have the typical "hello world" Flask app:
+1. Unfortunately, at the time of writing, PyCharm "forgets" to add `FLASK DEBUG` to the run configuration. Edit the configuration (**WebYourTurn** in this screenshot), click on **Modify options**, and check `Flask Debug` then close the window. This allows for the reloading of the web templates and web app as you edit them making it easier iterate while developing.
+
+At this point, you'll have the typical "hello world" Flask app:
 
 ```python
 from flask import Flask
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -73,13 +76,15 @@ Additionally, let's get the data from our simulated database (`fake_data.py`) in
 The final view method should look like this:
 
 ```python
-@app.route('/')
+@app.get('/')
 def index():
     orders = fake_data.get_orders()
     return 'Hello World!'
 ```
 
-Go ahead and run the app again and request the home page just to make sure things are still hanging together.
+Go ahead and run the app again and request the home page just to make sure things are still hanging together. If it was already running, you can expand the run console in the lower section and you will see it already restarted the app. So you wouldn't even need to restart it, just refresh your browser. 
+
+You might also consider checking out my [server-hot-reload](https://github.com/mikeckennedy/server-hot-reload) project to automate that further.
 
 
 ## Render data in an HTML template
@@ -133,13 +138,13 @@ Add HTML like below in there. Note the `block` keyword to allow us to use this a
 </head>
 <body style="margin: 0px; background-color: #222; ">
 
-<div style="padding: 20px; background-color: white;">
+<div style="padding: 20px; background-color: white; line-height: 1.5em;">
     {% block main_content %}{% endblock %}
 </div>
 
 <footer style="color: #888; margin-top: 50px; text-align: center;">
     <div class="copyright">
-        This is a demo site built during a course.<br>
+        This is a demo site built during a Talk Python course.<br>
         Copyright <em>me</em>!
     </div>
 </footer>
