@@ -44,7 +44,7 @@ Notice it created the empty `__init__.py` for you and the folder icon is slightl
 
 ## Add a feature
 
-We'll add a couple of simple math methods to our calculator. Create another Python file in the folder called `math.py` and add an `add(x, y)` and `subtract(x, y)` pair of methods to `math.py`.
+We'll add a couple of simple math methods to our calculator. **Create another Python file** in the folder called `math.py` and add an `add(x, y)` and `subtract(x, y)` pair of methods to `math.py`.
 
 To make importing it easier, add this line to `__init__.py`:
 
@@ -52,13 +52,13 @@ To make importing it easier, add this line to `__init__.py`:
 from . import math
 ```
 
-That means you can consume it by typing `import calcy` then calling `calcy.math.add(7, 11)`.
+That means you can consume it by typing `import calcy` then calling `calcy.math.add(7, 11)`. If you omit this, you'll have to type `import calcy.math` to use the library like this even if you have already typed `impot calcy`.
 
 Use the Python Console in PyCharm to test this (it adds the necessary path adjustments to run the package). For example, when I run the Python console, I see this output prior to the `>>>` prompt.
 
 ```python
 import sys; print('Python %s on %s' % (sys.version, sys.platform))
-sys.path.extend(['/Users/mkennedy/Desktop/calcy_package'])
+sys.path.extend(['/Users/michaelkennedy/code/calcy_package'])
 ```
 
 This is PyCharm automatically extending the Python path. You do **not** need to do anything to make this happen. It's just PyCharm making life easy on us.
@@ -67,13 +67,12 @@ Now, in the console, here's one way to test it:
 
 ```python
 import calcy
-calcy.math.add(7, 5)
-12
+calcy.math.add(7, 5) # <-- outputs 12
 ```
 
 In this special environment, it should work.
 
-## Include a setup
+## Include a pyproject.toml
 
 It's great you can run your code locally. But for real packages, you'll need to be able to install it for consumers. To do this, we need a `setup.py`. 
 
