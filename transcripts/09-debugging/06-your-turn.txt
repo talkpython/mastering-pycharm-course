@@ -1,7 +1,0 @@
-00:0.04 Once again, it is your turn time to go play around with PyCharm.
-00:4.07 Play with the debugger. You're going to play with that math program that has the
-00:8.13 fibonacci numbers again, so you're going to create some breakpoints.
-00:11.44 Use the debugger to understand the flow of these co routines and these generators and
-00:16.35 then even alter the flow with the
-00:18.07 debugger by doing things like setting values that would otherwise not naturally occur.
-00:22.96 So just follow along the your turn steps here and enjoy.

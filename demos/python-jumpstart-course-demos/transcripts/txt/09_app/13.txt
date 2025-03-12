@@ -1,0 +1,94 @@
+0:00 All right, I said there is a better way than using these 
+0:02 procedural loops to answer these questions. 
+0:05 Now, check this out, let's change this here, 
+0:08 let's write some code that maybe is a little surprising to you
+0:12 unless you have seen it, 
+0:14 so we'll say again prices, and what we want to generate is a list of numbers, 
+0:17 we wrote this code which generated a new list, 
+0:20 it's equivalent to saying list, like so
+0:23 and then we iteratively looped over, 
+0:26 and down here you can see we even added a test in our loop 
+0:29 now there is a concept that lets us write a more declarative style of code 
+0:33 where the implementation actually handles the looping and all that for us, 
+0:36 so we can come down here and write what looks like brackets, 
+0:40 we are going to define a list, but we are going to put something different in there
+0:43  we are put in an expression, 
+0:44 first line is always going to be the projection or items to create,
+0:49 something like this, 
+0:51 so what do we want, we want the purchase.price, here, 
+0:53 now it's a little bit backwards because you have to imagine, all right, 
+0:56 there is a variable p, that I am about to talk about, 
+0:59 and it's going to be a purchase so I want the price 
+1:02 and then the next thing down here is going to be the set to process,
+1:07 for lack of a better word, so here we'll say for p in data:, 
+1:11 so what we want is we want to go through all the data, 
+1:17 grab out every one of those we are going to call it this p 
+1:20 and we are going to pull out the price, now we could pull things like a tuple, 
+1:22 I could say p.beds like that, and even like p.state, 
+1:28 no that's not going to be interesting, it's all the same state, 
+1:30 let's say city, maybe we'll get something there and I could just print prices,
+1:36  I think in this case I need some parenthesis, yes, 
+1:40 one of the rare cases where tuples need parenthesis, 
+1:43 and let's just say return so it doesn't actually crash. 
+1:46 And notice, we looped through here and here is the price,
+1:49 here is the number of beds, here is the city, price, beds, 
+1:54 price, beds city, 
+1:56 so this is like a projection, kind of like if you are 
+1:58 familiar with SQL, queries and those kinds of things, 
+2:00 that's what this is but we just want one item, which is just the prices. 
+2:05 So here you can see all the prices. 
+2:07 If you want to know what type that is it's just a list, class list, that's its values. 
+2:14 So think about this for a minute, before what we did we had to allocate the price, 
+2:18 loop over each item, and then do some processing, 
+2:21 granted this processing is very simple, it's just added to the list, 
+2:24 so it's a little harder to see the value here 
+2:27 but here we can just declare expression that will build the list, 
+2:31 and it uses the same mechanism as the list here, 
+2:34 let's take the same idea and apply it the more interesting scenario here, 
+2:38 this, so here we have the same thing, 
+2:43 and the last part that I hadn't shown you before is the test or condition, 
+2:47 if you are familiar with data bases this would be like the where clause, 
+2:50 so we could say if p.beds, so now if I run this, 
+2:56 we should get the same answer below, 
+2:58 and we do exactly as we had before, but we don't need these tests, 
+3:03 what we are really after is not just the average price of a two bedroom home, 
+3:07 we also want to know the average number of bathrooms 
+3:10 and maybe the average square footage,
+3:12  so this can get a little more interest in here,
+3:16  so we'll say the average price of a two bedroom home
+3:19  let me tighten this a little bit, 
+3:21 so we'll say the average two bedroom home is 
+3:24 some price with a certain number of baths and a certain square footage, 
+3:26 now I put the 0 here so just this will run, 
+3:29 here you can see we are still getting the same answers. 
+3:31 Now, suppose I want to know this, well, 
+3:33 previously with this looping mechanism,
+3:35  I would have to come up with another list of let's say baths=something like this,
+3:42  and down here I would have to also say bath.append pur.baths, and so on.
+3:48 With the conciseness of these lists here, 
+3:52 we could do something like this, we could just say two bed homes like this, 
+3:57 and let's get back here like so, 
+4:01 and so what we'll get is a list of two bedroom homes 
+4:04 and then down here we can say the average price is going to be the mean, 
+4:07 now if we try to give it two bedroom homes, remember, this was crashing, 
+4:10 so as I don't know what to do with, purchases, 
+4:13 but we can go into this set and we can just write in line here 
+4:17 and say what I would like is p.price for p in this. 
+4:22 And now we are back to our average, so I said look, 
+4:26 write in this little bit of code here, 
+4:28 we are just going to do this little projection, 
+4:30 now, let's get the average baths. 
+4:33 So here I can say baths, and the average square feet. 
+4:37 All right, now let's see what their answer is, 
+4:41 maybe we could round this off here, 
+4:44 so we'll just use the round function here, 
+4:47 so the average two bedroom home in Sacramento that was for sale 
+4:53 were actually sold in 2008 was sold for 165,000 dollars,
+4:57  it had 1.4 baths and the square footage of 957.2 square feet. 
+5:03 How cool is that? 
+5:05 All right, so this concept here is called a list comprehension,
+5:11 and it's really cool, it has some performance benefits, 
+5:16 and some performance drawbacks. 
+5:17 You will see that there is something extremely similar to it, 
+5:20 called a generator expression, 
+5:22 but first let's look at the concept of list comprehensions.

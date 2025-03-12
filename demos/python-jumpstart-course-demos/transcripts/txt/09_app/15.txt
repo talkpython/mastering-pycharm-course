@@ -1,0 +1,88 @@
+0:01 So let's look at the code again that we are using our list comprehension, 
+0:05 and you can see I've changed it a little bit. 
+0:07 Down here on line 107 I've written a method called announce, 
+0:12 and now what it does is if you pass an item to announce, 
+0:16 it simply returns that item back but along the way 
+0:20 it does a print statement to let you know 
+0:22 hey I am processing this particular item,
+0:24 and you can give it like kind of a little descriptor, 
+0:28 so over here when we are going to the two bedroom homes, 
+0:31 each time to the test we are going to go through 
+0:33 all the homes that's going to say hey, 
+0:35 tell me what home you are processing, and continue with the regular test, yeah? 
+0:39 And then later on, I decide hey,
+0:42  I only want to process the first five two bedroom homes, 
+0:46 now the way this processing works is almost identical 
+0:50 to the challenges that we ran into in application number 8,
+0:53 when we were doing text searches across gigabytes of text files. 
+0:57 Remember, for small quantities of data this mechanism 
+1:02 where we had functions that recursively searched directories 
+1:06 and files and each time it hit a file it would create a list put all the matches in there 
+1:09 and return it up and build that up into an entire set of search results 
+1:14 for the whole directory structure, and then at the end, 
+1:17 pass that list back with all the matches. 
+1:20 They work fine for megabytes of text files, 
+1:23 for gigabytes of text files, the memory went crazy, 
+1:26 it took forever, there were all kinds of problems 
+1:29 and you'll see that this is identical in it sort of processing characteristics, 
+1:33 and that should be no surprise, 
+1:35 because this list comprehension is very much like create a list, 
+1:39 loop over it, fill it all the way up and then here is the answer, 
+1:42 remember, our solution was to use generator methods, 
+1:45 the yield keyword and it would sort of on demand as the client would pull, 
+1:48 doing loop, a forin loop or some kind of processing of the end result, 
+1:53 it would one by one pull those results back. 
+1:56 So we can use this thing called a generator expression 
+1:59 to move from the list colon wait style
+2:02 to this yield return co-routine style 
+2:05 but in the list comprehension 
+2:07 and what we call a generator expression style processing 
+2:10 where it's just not a method with the yield keyword 
+2:13 but it's just an expression on a line. 
+2:15 Now the way we do this is remarkably easy but before I do it 
+2:18 let me show you how the processing works here, so if I run this, 
+2:21 you'll see even though we are only processing 5 homes, 
+2:24 we are going through look at this, 
+2:27 every single home we basically process the entire data stream and then, 
+2:31 we go back and oh, actually only of the first five two bedroom homes,
+2:36 what would be much better is to just stop
+2:38 after we get to the first five two bedroom homes,
+2:41 so what do we have to do to change this? 
+2:44 Well, for list you use square brackets, 
+2:48 for what we call generator expressions 
+2:50 that have this yield behavior, this co-routine behavior, 
+2:53 we just use parenthesis, that's it, we do nothing else. 
+2:57 Now, this you cannot index into those things any more, 
+3:01 or slice them which basically uses indexing 
+3:04 so I am going to need to create a little list 
+3:06 so it's not a perfect analogy how we can flow these strings through, 
+3:09 but we are going to use this as sort of the step to say 
+3:11 hey we are going to stop after we get just five of these, 
+3:14 and we don't really need this anymore, do we, 
+3:16 because that's actually doing the same thing, 
+3:19 so remember, previously, this part right here went through the entire data structure, 
+3:24 let's try again. 
+3:26 Ok, so we are still pointing in the five items down here, 
+3:29 but as we go through, we can see there is a lot fewer, 
+3:32 we just go until we have enough two bedroom homes to run through here, 
+3:37 and then we stop, we don't have to process the whole data set, 
+3:40 and down here we can get the average and stuff, 
+3:43 the averages of course are different because we are not averaging 
+3:46 across all two bedroom homes just the first five, 
+3:49 really the way we have things structured 
+3:51 this is the cheapest five two bedroom homes. 
+3:53 In fact, there is a few more places 
+3:56 where we can use generator expressions in our app. 
+4:00 So we were using the generator expression up here, 
+4:03 but now we are creating a list, filling it all the way up 
+4:05 and then passing that to the mean. 
+4:07 We have no reason to do that, we can use parenthesis instead of square brackets, 
+4:11 and we'll only have one of these little projection pieces in memory at a time for each step,
+4:16 make our mean calculation a little more efficient. 
+4:20 Try again, you see we get exactly the same answer, 
+4:24 different performance characteristics. 
+4:27 So you see how we can use list comprehensions 
+4:29 and later generator expressions to replace procedural operations 
+4:33 with more declarative ones, 
+4:35 and get the performance benefits of generator methods 
+4:39 without actually writing methods at all.

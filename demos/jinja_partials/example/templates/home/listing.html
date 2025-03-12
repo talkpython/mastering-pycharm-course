@@ -1,0 +1,23 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+
+    <h1>All video listing</h1>
+
+
+    <div class="container">
+
+
+        <div class="container videos listing">
+
+            {% for v in videos %}
+
+                <span class="video">
+                    {{ render_partial('shared/partials/video_square.html', video=v) }}
+                </span>
+
+            {% endfor %}
+
+
+        </div>
+
+{% endblock %}

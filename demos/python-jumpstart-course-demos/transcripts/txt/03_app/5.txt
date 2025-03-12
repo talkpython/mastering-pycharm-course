@@ -1,0 +1,87 @@
+0:00 So I hope you have a much better understanding 
+0:03 of how to work with dates, 
+0:04 and even how to work with other modules 
+0:06 that are built into Python by importing them 
+0:09 and using their name spaces and that sort of thing. 
+0:12 Let me show you one more feature about PyCharm 
+0:15 that I am sure you will find helpful 
+0:17 as you get into more complicated and complex applications.
+0:21 And we can kind of use that to review what we built. 
+0:23 So PyCharm has a great built in debugger 
+0:27 and we can set a little break point right here
+0:29 just by clicking on this section and if I run the app,
+0:32 it won't  hit the break point, 
+0:33 but if I hit the debug button, it will, so let's do that. 
+0:38 Now you can see our debug window down here,
+0:40 you can see that we've got sort of watch window, 
+0:43 local variables, call stack, things like that, 
+0:46 we also have the console which is what we have 
+0:49 when we are doing the regular execution as well. 
+0:52 We can step over the current line using F8 
+0:56 or we can step into the function using F7, 
+0:59 or back out using shift+F8. 
+1:02 So let's do F7 step in here, 
+1:05 here is our print header, and for the moment
+1:07 let's switch over the console,
+1:09 using and see as we step through, printing out, 
+1:11 very cool, step over, 
+1:13 now F7 to step into this get the birthday from the user
+1:16 F8 to do some more steps 
+1:18 and down here we've got to enter our date, 
+1:20 so let's, we were using 1974, 
+1:22 if we go back to our debugger 
+1:24 you will see that we actually have this local year of 1974, 
+1:29 that is pretty cool, ok,
+1:31 so let's take another step, go back to our console, 
+1:34 let's it just know we need some input
+1:36 and we'll do one more step
+1:38 print the date let's say 14th. 
+1:41 Over here in the debugger again, 
+1:43 you can see we've got these new values, 
+1:44 for some reason if we want to change this value, 
+1:47 come over here, we can actually set the value, 
+1:48 let's say the date was the 30th, something like that, 
+1:52 so we can actually go and change it, 
+1:54 you can see in the UI here, we can highlight it 
+1:56 because it's not code but you can see where these variables are defined, 
+2:00 what their actual values are, right, 
+2:02 these are the green ones from their natural value 
+2:05 and here is the one I've modified. 
+2:07 So, let's take one more step, 
+2:09 here you can see we've got our birthday, 
+2:11 now the birthday came back as a proper datetime, 
+2:13 we parse this so we went and we told the user 
+2:16 hey, enter your birthday
+2:18 and we  took the input, converted the integers, 
+2:20 so we used the class creation method, 
+2:22 use this method on the datetime module 
+2:24 that created instance of the datetime class
+2:26 here you can actually see in the debugger
+2:28 it's a datetime.datetime class, that's the type, 
+2:32 which is very cool, we are going to return this back, 
+2:33 so we'll step down, now our variables change, 
+2:36 now our birthday is this, 
+2:38 and now is this time, excellent, 
+2:42 so we'll step in here, one more time, 
+2:45 so we command the compute the days between dates, 
+2:47 and we got original date, 
+2:49 and now you can see the values up here 
+2:51 we are going to use the date 1 as right now, 
+2:55 and create another date,
+2:57 using this constructor method again, 
+3:00 for the same year as this year 
+3:01 but the month and the day of the actual birth year. 
+3:04 And then what we saw when we do a subtraction here, 
+3:07 we actually get a time delta you can see there, 
+3:10 the curly braces little time delta 
+3:12 and we do that quick computation 
+3:14 we saw it's negative 59 days come back here, 
+3:17 and compute that and see the debugger 
+3:19 showing on the right of our code, all the various values
+3:22 and last thing is to just print out those pieces and off it goes. 
+3:28 So excellent, what have we done,
+3:29 we worked with the datetime module, 
+3:32 broke our code into reasonable small functions, 
+3:34 anyone of these little functions is super easy to understand, 
+3:37 and it's also easy to put together down here a main method. 
+3:41 I hope you learned a lot from building this birthday app.

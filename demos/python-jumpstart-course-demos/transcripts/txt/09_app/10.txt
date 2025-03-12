@@ -1,0 +1,57 @@
+0:00 All right, now you've seen all about lambdas, 
+0:03 and you've seen how easy the are to write to sort these data, 
+0:07 and that allowed us to solve two problems really easily, 
+0:10 if we had a sorted set of purchases, sorted form low to high by price, 
+0:15 we can say well the most expensive one is the last one, 
+0:18 and the least expensive one is the first one. 
+0:20 But let's ask some more interesting questions, 
+0:23 what is the average house price, it turns out that there is a statistics module here, 
+0:30 and on there we have a mean method 
+0:30 so we'd like to use this but we need to import that at the top, thank you PyCharm, 
+0:35 and we have to give it- well what does it say- data, that's kind of cool,
+0:39 it even has the same name so of course we should give it data,
+0:43 let's see how that works. 
+0:46 Hm, can't convert type purchase to numerator denominator. 
+0:49 Hm, ok so it looks like we need to give it an iterable set of numbers, 
+0:53 not an iterable set of purchases which we just made up, 
+0:57 so how do we get that, let's just go like this, here we'll say prices, 
+1:02 and we'll create that to be a list 
+1:05 and we'll say for purchase, let's say pur in data: prices this is really painful, right,
+1:12 so we are going to go prices and we'll say append and what do we want to append, 
+1:16 we want to append the purchase.price. 
+1:18 And then we can get the average of prices so we'll say ave_price = this and let's just print, 
+1:24 the average home price is this is in USD and let's put a comma separator, 
+1:30 and a format, ave_price, let's try that. 
+1:35 Awesome, the average price is some number around 234,000 
+1:39 and let's go and round that off, there we go, 
+1:42 234,144 and actually that is probably truncating, but close enough for what we are after here, 
+1:48 this is ok but this is not so nice, right, 
+1:53 we created a list and we did a loop to grab the data and maybe we only want to, 
+1:58 maybe there is certain times we want to do a test, 
+2:01 so it turns out that there is actually a better way to do this, 
+2:05 let's go and answer other questions while using this looping construct 
+2:08 and then we can do something better Ha!, 
+2:11 it looks like I left a pass here, no harm no fell, 
+2:13 so it's going to look very similar to this, 
+2:18 so here we are going to say give me the prices,
+2:21 and I want to go to there and grab each purchase and append the price, 
+2:25 but in this case, we want only the case where it's a purchase of a two bedroom home 
+2:28 so we'll say if pur.beds==2: then we'll do this, 
+2:33 and this will be the average price of 2 bedroom, there we go, 
+2:38 so let's run this again, awesome, 
+2:40 so the average price of all homes is 234,000 dollars 
+2:43 but the average price of a 2 bedroom home is a 165,000 dollars. 
+2:48 Maybe we also want to answer the questions like well,
+2:50 how many baths does it have on average, and things like that, hm, 
+2:54 so this is going to be a little bit harder. 
+2:57 Well, it turns out this is like programming for all the programming languages
+3:01 almost all of them anyway, C, C++, Java, 
+3:07 it does loop around here, write this procedural code, 
+3:08 we can actually improve upon this in 2 ways, 
+3:12 we can improve by using what are called list comprehensions, 
+3:15 which let us write this much more concisely, 
+3:17 and then we can actually improve upon them 
+3:20 using something called generator expressions,
+3:23 we are going to get to both of those, 
+3:25 first, let's look at the challenge looking around and trying to run this code 
+3:28 on both Python 3 and Python 2.

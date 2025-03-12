@@ -1,0 +1,44 @@
+00:0.04 What are we gonna learn in this chapter?
+00:1.67 Well, a ton of amazing things.
+00:4.94 The primary focus, the thing that we're going to get the most out of with
+00:8.73 this chapter, is working with external packages or libraries.
+00:12.25 There's a place called PyPi, or Python Package Index,
+00:15.86 and we're going to use this tool called "pip" to
+00:18.22 access all the libraries there, and we can just plug those right into our application,
+00:22.18 and there's literally hundreds of thousands of libraries out there that we can use, from
+00:28.35 computer vision to machine learning to working with stuff on the Internet and calling
+00:32.35 API's and so on.
+00:33.49 So that's what we're really going to focus on, using these external libraries to make
+00:37.99 working with this weather data on remote servers
+00:40.97 super easy and straightforward. Python is often referred to as having batteries included.
+00:46.13 That means it has so much contained within it.
+00:48.43 Rather than writing a bunch of functionality,
+00:50.97 you could just grab little pieces and put it together.
+00:53.31 A lot of times that means working with something from the standard library.
+00:57.44 But even more than that, this PyPi place with hundreds of thousands of libraries
+01:1.82 are also right at your fingertips.
+01:4.2 So if you need to build almost anything,
+01:6.78 there's probably a library that either does that, or it will help you much more easily build that
+01:12.09 thing. When we talk to our weather service,
+01:14.74 we're gonna create an http client, that's basically a major part of our application, to go
+01:19.18 out there and do a web request.
+01:21.0 We're gonna use API endpoint. That API is gonna return a certain type
+01:25.05 of data called JSON, which is very,
+01:27.35 very popular in API's.
+01:28.91 So we're gonna work with JSON and Python. In order to install our external packages correctly
+01:34.21 and isolate them on a per application or per project basis,
+01:37.65 we're gonna work with these things called "virtual environments".
+01:40.23 The actual library that we want to use
+01:42.58 to call our API,
+01:43.89 to build the HTTP client is something called "requests".
+01:46.66 It's one of the most popular packages in the world, in the Python space.
+01:51.18 I believe it's downloaded about seven million times a month,
+01:54.29 so yeah, no joke. It's very popular.
+01:56.34 And finally, we're gonna be passing multiple pieces of data from one function to another
+02:0.74 and we'll see that there's this concept of tuples,
+02:3.99 these data structures that hold more than one thing.
+02:6.75 We'll be able to pass multiple things around using these tuples.
+02:10.02 However, they're a little bit clumsy,
+02:11.65 so we can use this more improved version that comes from the Python standard library called
+02:16.79 "named tuples". You're going to get a ton out of this chapter,
+02:21.01 and it's gonna be a lot of fun to see how all these pieces fit together.

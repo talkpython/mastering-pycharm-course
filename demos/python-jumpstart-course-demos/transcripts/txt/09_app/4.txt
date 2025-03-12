@@ -1,0 +1,58 @@
+0:00 Ok, so that was kind of  a cool start, but let's just save this here 
+0:04 and call this load_file() basic or something like that, 
+0:07 I'll leave it commented you can have that if you like, 
+0:10 but now what we are really going to do is something a little bit better, 
+0:14 we are going to go over here and use a module called csv, 
+0:18 so there is a couple of formats that have built in support in Python, 
+0:21 one of them is comma separated values, another one is Json, 
+0:25 Json is actually my favorite text based format, and we also have xml. 
+0:30 So we can actually import this module up here at the top, 
+0:34 I just wrote import csv at the top as you know, 
+0:37 and then I can come over here and there is a reader, 
+0:39 the most natural thing would be to say create me a reader, 
+0:42 and what do we need to do, we need to pass an iterable, 
+0:45 well, what is that iterable, here is one, fin, 
+0:49 so we want to get the header out, like so, 
+0:54 and we'll capture the reader, 
+0:57 like so and then we can say for row in reader: I can just print row, 
+1:02 let's see what happens here. 
+1:05 Perfect, look at that, 
+1:07 it's already done the parsing and the reader has a lot of support 
+1:10 for things like the delimiter and we could say like the delimiter is this 
+1:14 and we could say what the escape character is the quote character to escape 
+1:19 and things that might have a comma in them, like names and so on,
+1:23 so now you can see if we use this delimiter nothing gets separated, 
+1:26 but if we use commas, boom, now it's separated again, right, 
+1:30 these are lists of individual bits of data, split on that,
+1:33 just kind of like we did in our own code.
+1:36 However, what we get back if I just print out the type here, 
+1:38 with the comma how about that, is a list and that still means
+1:45 if I want to work with the bed I have to say something like row of 4 
+1:51 and I need to know that the fourth item is the fourth column is beds, 
+1:57 or whatever right, 0, 1, 2, 3, 4, but if somebody changes this over time 
+2:02 and they add another column like country or something up front, all those indexes break, 
+2:07 our code is super fragile and we have to know like oh yeah, 
+2:11 what if 4 means beds, of course it does, right, 
+2:14 that means nothing to humans, 
+2:16 so we can come over here and actually do better than this, 
+2:18 we can come over and say reader=csv.DictReader(). 
+2:26 Now, DictReader doesn't return rows it returns a dictionary for each row, 
+2:31 so instead of using numbers to find the data, we use the names, 
+2:35 what names- the column names, 
+2:37 so we come over here and give it the same iterable 
+2:40 and then let's loop over these again, 
+2:46 now notice we have a dictionary and the type is residential, the zip is this, 
+2:49 the latitude is that, this is so much easier, let me show you how to use it really quick, 
+2:54 then we'll take a moment and look at the concept of dictionaries in more depth. 
+2:58 So instead of using numbers, we can use names 
+3:00 so if I just wanted to print out bed count,
+3:03 that would be super easy now and I don't care about the order or how many rows 
+3:07 or how it revolves over time, I just say row of beds, 
+3:13 bed count 3, bed count 4, beautiful, 
+3:16 and you can see over here in our data there are those. 
+3:19 So this dict reader is really the way 
+3:20 I recommend you work with comma separated value files. 
+3:23 It gives you a lot more durability you don't have to know that like 
+3:26 the fifth element is actually the bed count and if that changes it's fragile, 
+3:31 all that sort of stuff, it just detects it and then builds up these dictionaries for you.
+3:35 So what are dictionaries, let's take a moment and look at this core concept.

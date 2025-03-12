@@ -1,0 +1,46 @@
+0:00 So back in PyCharm
+0:01 we need to grab hold of that value that is returned from input.
+0:05 Let's be really explicit and call this user_text or something like this... ok.
+0:12 So in Python, when you have complex words
+0:14 or variables and functions made up of multiple words, if you will,
+0:18 you typically separate them with underscores.
+0:21 Other programming languages might write "userText" like this,
+0:25 where they use camel-casing,
+0:27 in Python it's all about the underscore.
+0:29 So, we are going to call it this,
+0:32 so that gives us the user text and we could actually just print this out
+0:35 just to see what they entered,
+0:36 so let's run this really quick 
+0:38 say "I entered this", if I hit enter
+0:41 it just says "I entered this", excellent.
+0:43 So we have got that value and print it back out.
+0:45 That's not exactly what we want to do though.
+0:48 We want to actually store some kind of saying that we want to say
+0:52 and I believe it was "Nice to meet you",
+0:54 whatever they entered for their name.
+0:56 So we'll say greeting = "Nice to meet you "
+1:04 and we want to sort of somehow incorporate this string here
+1:08 so in Python, they make it really easy
+1:10 to combine strings just using the "+" sign.
+1:15 So we'll say, nice to meet you "+" user text
+1:18 and we can just print out that greeting,
+1:20 give a little space so it's easier to read,
+1:22 so let's just run that, and see what we get.
+1:23 So down here, we can enter our name which will be Michael,
+1:27 hit enter, and it says "Nice to meet you Michael". Perfect!!.
+1:32 So now, we've completed our first app,
+1:34 you can see we've worked with the print function,
+1:36 we're calling it with parenthesis, passing a string literal,
+1:39 it's what you call it when you create them just in place like this,
+1:42 passing these string literals as arguments,
+1:44 sometimes were not, calling the input function,
+1:47 again passing strings, catching the response,
+1:51 the input into a variable called user text,
+1:53 we are concatenating to another string,
+1:56 a literal string plus a variable,
+1:57 storing the greeting and we are printing it out.
+2:00 All right, pretty simple this application
+2:02 but it really gets us off to a good start to start building
+2:05 more interesting complex applications
+2:08 that build on things like file i/o and web services
+2:11 and all sorts of cool stuff like that.

@@ -1,0 +1,95 @@
+0:00 Before we get to the actual apps that we are going to build,
+0:03 let's talk a little bit about the tools we are going to use, 
+0:05 how you use them up, and even just a little bit of history.  
+0:08 The first question that you get a lot of times
+0:11 when you start talking about Python, Python apps, Python course,
+0:14 is... what version of Python is it going to run on? 
+0:18 It turns out this is kind of a big question,
+0:19 so let's talk about that first. 
+0:22 To appreciate this, let's look at the history of Python. 
+0:25 In the beginning, it came into existence as a concept in 1989, 
+0:30 it was released in 1991, had a couple of major releases,
+0:35 version 2 came out in 2003, today it's 2016.
+0:40 So, development started, version 1 was released, version 2 was released, 
+0:45 and then version 3 actually was a major breaking change to the Python code. 
+0:51 The developers look back over the 17 years of experience
+0:55 and said, what was good about Python
+0:57 and what things kind of gave people trouble,
+0:59 what would be a nice way to clean up the language,
+1:02 so that it's solid going forward,
+1:04 and they made these breaking changes to Python 3
+1:07 and expected people to move along pretty quickly.
+1:10 Well, it's today, sometime in 2016 when this was recorded,
+1:16 and there is still a debate, should people be using Python 2
+1:19 or should they be using Python 3,
+1:20 there is a lot of large code bases still running on Python 2,
+1:23 the majority of large commercial applications are probably using Python 2,
+1:28 even though it's been 8 years Python 3 has been out.
+1:30 However, there is something on horizon
+1:32 coming in 2020, they are going to make this a much simpler choice
+1:37 between the two languages.
+1:38 First of all, the changes between Python 3 and Python 2 are not that major,
+1:44 if you write code in Python 3 chances are,
+1:46 unless it's one of the advanced features "asyncio" or something like this,
+1:50 chances are it's going to work fine in Python 2,
+1:52 but there are older ways in Python 2 that are not forward compatible,
+1:57 and I think that's actually the bigger problem.
+1:59 So, if you learn Python 3 I feel like you have more well rounded
+2:02 ability to jump into either type of project,
+2:05 but that said, in 2020, just 4 short years from now,
+2:10 Python 2 is going to be end of life.
+2:13 No more bug fixes, not sure about security fixes,
+2:16 but definitely no more support, and to drive that point home,
+2:19 at PyCon, Guido Van Rossum, the guy who invented Python,
+2:24 started out his keynote with this saying... "there will not be an extension to this policy",
+2:30 this is it, only 4 years away before this being an absolutely clear choice,
+2:34 Python 3 is the future,
+2:36 and that's why this course is designed with Python 3 in mind.
+2:40 So, in order to do this course, you are going to need to install Python 3.
+2:45 And, we are going to talk about how to do that for each of the various operating systems.
+2:50 One question, is maybe you already have Python 3,
+2:52 maybe there is nothing to do,
+2:53 so just knowing where Python is available,
+2:55 that's kind of good background knowledge.  
+2:57 Before we get into details to set it up each on these operating systems,
+3:00 let's answer the question-
+3:02 If I have Windows, do I have Python?
+3:04 No, you have no version of Python,
+3:06 Windows does not ship with Python.
+3:08 Unfortunately, it just doesn't.
+3:10 So, if you have Windows, you have users who are using Windows,
+3:14 you need to get them Python somehow, right?
+3:17 On Linux, chances are at least on Ubuntu, you have both versions of Python,
+3:22 that's pretty awesome, maybe it's not the absolute latest,
+3:24 maybe it's 3.4 and 3.5, but still, pretty darn good.
+3:29 OS X is somewhere in the middle,
+3:31 typically you have Python 2, but you don't have Python 3.
+3:35 A little like the choice between Python 2 and Python 3
+3:38 is somewhat contentious in the Python community, 
+3:40 so as the editor you choose. 
+3:42 On one end of the spectrum you have people that use VI and Vim and Emacs,
+3:47 and these very light weight sort of shell friendly, ssh friendly editors,
+3:52 and that's actually a very large percentage
+3:54 of the professional programmer's population for Python devs,
+3:58 and on the other end, 
+4:00 you have IDEs rich, full featured, large applications
+4:03 that bring all of your development tools together. 
+4:07 Sort of the premiere one of those, is the one I have here,
+4:09 and the one I am recommending for the course is PyCharm,
+4:12 but we'll see a few other options as well.
+4:14 So, in editors like PyCharm you can edit of course and run your code,
+4:18 you can run unit tests, code coverage,
+4:21 look, you have a graphical visualizations of your git history and commit changes,
+4:27 there is all sorts of stuff you can do here.
+4:29 So I recommend to use PyCharm,
+4:31 when we get to the particular operating systems we'll talk more about that.
+4:34 But if for some reason you don't want to use PyCharm,
+4:36 there are other options.
+4:38 PyCharm has a free option for the community edition, but if you are on Windows,
+4:43 you can also use Visual Studio and then plug in the Python tools for Visual Studio,
+4:48 that's a nice free option, Microsoft has the community edition of Visual Studio
+4:53 and then the Python tools are open source and free,
+4:55 so that's a really good choice actually,
+4:57 just a bare notch under PyCharm, but really good, if you are into the IDEs,
+5:03 if you are not into the IDEs, 
+5:05 choose something like Sublime text or Atom by GitHub. 

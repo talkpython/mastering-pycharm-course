@@ -1,0 +1,6 @@
+pytest
+pytest-clarity
+flask
+fastapi
+hatchling>=1.21.0
+hatch-vcs>=0.3.0

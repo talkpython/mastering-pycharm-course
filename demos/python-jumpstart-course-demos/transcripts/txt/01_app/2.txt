@@ -1,0 +1,90 @@
+0:00 So let's switch over to my Mac and get started.
+0:02 So to use PyCharm, it's pretty simple,
+0:04 you open it up, and you just say create a new project.
+0:07 You can see there is a lot of different kinds of projects we can create,
+0:10 we are just going to do a pure Python app for our beginning one,
+0:13 but you could create a Django, Flask, or Pyramid web app,
+0:16 even a Google App Engine app,
+0:18 and there is also a lot of HTML, Javascript options
+0:21 because PyCharm is a full featured Javascript, CSS, HTML editor,
+0:26 in addition to being a great Python editor.
+0:29 So I actually already have a project I created just by basically saying ok,
+0:33 on the next screen. And when you create a new Python app,
+0:36 a pure Python app, you end up with basically a blank folder.
+0:41 So, we are going to come over here and add a new Python file,
+0:43 so right click and say new Python file,
+0:46 and throughout this class,
+0:48 the main program that you'll run,
+0:50 that indicates sort of the entry point into this set of scripts,
+0:53 or Python files that we are building,
+0:55 is going to be named program.py,
+0:58 so I am going to create something called program.py,
+1:00 I am using Git to store all the files and demos
+1:03 that I create for you during this class
+1:05 which I will make publicly available for you to look at
+1:08 and see how they have evolved over time
+1:10 and you can see that PyCharm is actually suggesting
+1:12 that we add this to our Git repository
+1:14 I was going to tell it to please don't ask again.
+1:17 Now, remember, the first thing that our little sample app had
+1:20 was it had a little header with some dashes
+1:22 and it said "Hello App",
+1:24 and it sort of was bracketed by kind of a dashed line above and below.
+1:27 So let's go back creating that.
+1:29 So we are going to use something called the print function.
+1:32 And this is typically the way that you output things to the console.
+1:36 We can say print, and then here we can put s a string.
+1:39 And in Python, you can create string with double quotes, like this " " 
+1:43 or you can create strings with single quotes, like that ' '
+1:46 and I actually prefer the single quotes, it's just a little less typing,
+1:49 you'll see there is some times you might want to use double quotes,
+1:52 you might want to use single quotes, we'll talk about that later.
+1:56 So, we are going to come over here
+1:57 and we are just going to have our dashes like so,
+2:00 and then we also want to output that little "Hello App" part,
+2:04 so we are going to come here and say print,
+2:07 go over and say hello app,
+2:10 I think pretty much like that
+2:12 and we are going to say print, I am just going to do this one more time.
+2:16 Let's go and run this and make sure there is some reasonable output,
+2:19 first thing to do is save this.
+2:21 Now I could go to the console, to the terminal and just run that,
+2:24 I can easily do that by saying copy path,
+2:28 we go down here and I can type Python 3
+2:30 and I can just give it a path, add hit go,
+2:33 and then out comes our output, hello app, perfect.
+2:36 But, PyCharm let us run this, and debug it, and do
+2:39 all sorts of cool runtime analyses of our app,
+2:44 right from within PyCharm.
+2:45 And you see there is a little debug icon here
+2:47 and a little play icon here, but they are both grayed out,
+2:50 and that's because there is no run configuration setup.
+2:53 So instead of going over here,
+2:54 we are just going to right click and say run the program
+2:57 and it will create a run configuration and save that
+3:00 for us going forward.
+3:02 So just like before in the terminal,
+3:03 we have hello app, very very nice.
+3:05 We also maybe want a little space between here,
+3:08 we can actually just call print with no arguments,
+3:11 and I will just do a new line.
+3:13 Now, the next thing that we did in our app was
+3:15 we actually asked the user what their name was.
+3:18 So we could actually get down to the system input output streams
+3:24 and directly work with those,
+3:25 but in Python there is a simpler way.
+3:27 We can just say input, now this also takes a string,
+3:30 and we can say something like "what is your name?" 
+3:35 put a space and then, 
+3:36 in the console the cursor is just going to stop right there
+3:39 and wait for the user to put some inputs,
+3:41 so let's just going to run that, I can click this, or this
+3:46 or I can say control r "^R", in Windows, I believe that's F5,
+3:51 and on the Mac it's control R "^R",
+3:53 and down here you can see it's asking what my name is,
+3:55 I'll say my name is Michael.
+3:57 Then, it waits and when I hit enter, it accepts the input and moves on.
+4:01 Now, that's not super helpful because we are not actually getting the name,
+4:05 we are just asking the question.
+4:07 So, let's take a moment and look at a couple of core concepts
+4:10 that we are working with here.

@@ -1,9 +1,0 @@
-00:0.04 You want to get the back story and learn more about the history and the internals
-00:4.06 of PyCharm? Well, I interviewed Dmitry Trofimov Way,
-00:8.63 way back in 2015. He's one of the lead developers on PyCharm.
-00:14.11 And we had about an hour long conversation about where PyCharm came from how
-00:19.3 they're thinking about features and all kinds of stuff.
-00:21.47 So if you want a little bit of an extra story and you want to just
-00:24.12 listen to something for an hour,
-00:25.51 grab talk python episode 36 but I'm playing the background and you get a little bit
-00:31.54 of the back story, the inside view as well.

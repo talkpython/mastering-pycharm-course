@@ -1,0 +1,6 @@
+alembic
+flask
+passlib
+progressbar2
+python-dateutil
+sqlalchemy

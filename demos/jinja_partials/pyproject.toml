@@ -1,0 +1,71 @@
+[project]
+name = "jinja_partials"
+description = "Simple reuse of partial HTML page templates in the Jinja template language for Python web frameworks."
+readme = "./README.md"
+license = "MIT"
+requires-python = ">=3.8"
+keywords = [
+    "web",
+    "html",
+    "templates",
+]
+authors = [
+    { name = "Michael Kennedy", email = "michael@talkpython.fm" },
+]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+]
+dependencies = [
+    "jinja2",
+]
+version = "0.2.1"
+
+
+[project.urls]
+Homepage = "https://github.com/mikeckennedy/jinja_partials"
+Tracker = "https://github.com/mikeckennedy/jinja_partials/issues"
+Source = "https://github.com/mikeckennedy/jinja_partials"
+
+[build-system]
+requires = ["hatchling>=1.21.0", "hatch-vcs>=0.3.0"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.github",
+    "/tests",
+    "/example",
+    "requirements-dev.txt",
+    "tox.ini",
+    "ruff.toml",
+    ".gitignore",
+    "/example_client",
+    "/build",
+    "/dist",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["jinja_partials"]
+exclude = [
+
+    "/.github",
+    "/tests",
+    "/example",
+    "requirements-dev.txt",
+    "tox.ini",
+    "ruff.toml",
+    ".gitignore",
+    "/example_client",
+    "/build",
+    "/dist",
+    "setup.py",
+]

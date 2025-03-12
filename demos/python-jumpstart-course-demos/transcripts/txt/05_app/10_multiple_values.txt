@@ -1,0 +1,50 @@
+00:0.14 Well, here we are. We've got our city,
+00:1.93 state, and country, but our function over here,
+00:4.83 it just returns one thing: a
+00:7.04 string. Or something else, a number or whatever. Functions just return
+00:11.14 one thing, actually, sorry,
+00:12.4 this one, but same idea: returns one thing.
+00:16.04 How can we take all that data that we've gathered, the city,
+00:18.73 state, and country and return them back?
+00:20.34 Well, what we can do is we can create something called a tuple.
+00:23.62 So a tuple, we'll call this "loc" for a minute,
+00:27.04 the way we create this in Python,
+00:28.67 we would just say "separate things by commas",
+00:32.34 and then we could actually return that one thing like this.
+00:35.85 Let's see what we get if we do this.
+00:37.28 We say Portland, Oregon, USA.
+00:40.88 Look what the location is. It looks a little bit like a list,
+00:43.54 but it has parentheses instead of square brackets,
+00:45.49 which means you can.. it means it's a tuple.
+00:48.24 but the limitations are you can read the values of it,
+00:51.24 but you can't add to it and stuff.
+00:52.76 But other than that, you can kind of think of it as like a list
+00:55.06 a little bit. So this is cool.
+00:57.22 And then up here, we have to say we get our one location,
+01:1.0 but what we really want is the city,
+01:3.38 state and country. So on the other hand,
+01:6.05 on the reverse side, once I have a tuple,
+01:8.54 I have this really cool thing
+01:9.51 that I can do in Python, It's called tuple unpacking. So I can say
+01:12.73 "city, state, country equals location".
+01:16.79 And then let's just print out these things here,
+01:19.14 see what we got. If We come over here in Portland,
+01:24.14 Oregon, USA, look what we get when
+01:26.2 we print this out right there.
+01:27.33 That's those three things just with a space between them,
+01:30.55 that's how print works if you just put multiple things into it.
+01:33.12 But they all came back into city,
+01:35.53 state and country. We could even put a break point right here, at the debug,
+01:40.24 and notice city is Portland, state is Oregon,
+01:42.96 Country is USA, perfect. Now, We don't need these intermediate steps,
+01:46.97 Actually. I just wrote them
+01:48.68 so it's really clear what was going on.
+01:50.45 So what I want to do is I just want to say for the moment,
+01:53.31 city, state, country equals that, and the tuple unpacking will just happen automatically,
+01:58.54 and then down here we created the location and we returned it.
+02:1.63 We can also just do you like that.
+02:4.96 We don't need this anymore, okay?
+02:6.43 So one more time. Here we go.
+02:10.13 We got them back exactly as we had hoped.
+02:12.71 So how do we return multiple values from here?
+02:15.57 We just return a tuple.

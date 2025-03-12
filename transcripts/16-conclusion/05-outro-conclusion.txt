@@ -1,8 +1,0 @@
-00:0.04 Finally, thank you. Thank you for taking my course.
-00:3.24 It really had a great time creating it for you and I hope you learned 
-00:6.8 a ton. You want to follow me on twitter and stay in touch.
-00:10.11 I'm @mkennedy over there.
-00:11.81 Be sure to check out the various podcast.
-00:14.13 Talk python to Me over at 'talkpython.fm' and python bytes at 'pythonbites.fm'
-00:18.7 So I will see you online.
-00:21.88 Or if we're lucky, maybe even at a conference somewhere. Thanks again, Goodbye.

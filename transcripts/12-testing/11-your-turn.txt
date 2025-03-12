@@ -1,7 +1,0 @@
-00:0.0 You've seen me play with the tests.
-00:1.47 It is your turn. It is time to set up some pytest,
-00:5.22 write some tests, then use code coverage to see if you've tested everything and
-00:9.73 maybe even write a few more tests after that,
-00:12.54 we're gonna start with some existing code very similar to what I did go into the
-00:16.58 your table section here. Did this all set up?
-00:19.93 write some tests test it with pytest. Have a good time.

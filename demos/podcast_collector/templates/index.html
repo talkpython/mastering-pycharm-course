@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home - Podcast Collector
+{% endblock %}
+
+{% block content %}
+    <h2 class="is-size-4 mb-3">Welcome to Podcast Collector!</h2>
+
+    <div class="outer">
+        {% for p in podcasts %}
+
+            <div class="mb-3 has-text-centered is-inline-block m-5">
+                <img style="max-width: 128px;border: 1px solid #ddd;"
+                     class="has-radius-normal"
+                     src="{{ p.image }}" alt=""><br>
+
+                <a target="_blank" href="{{ p.url }}">{{ p.title }}</a>
+            </div>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}

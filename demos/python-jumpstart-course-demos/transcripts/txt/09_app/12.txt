@@ -1,0 +1,40 @@
+0:00 Let's take a moment and look at this core concept 
+0:02 of one mechanism for supporting both Python 2 and Python 3. 
+0:06 You saw in our previous example that we wanted to use
+0:09 the statistics module to compute the mean, 
+0:12 now I realize there are many ways to compute the mean,
+0:14 we don't need to fall back on this, it's a pretty simple mechanism 
+0:17 but the idea is there is some module or some feature
+0:20 in a later version of Python that wasn't supported in a prior one. 
+0:25 So this is not even about Python 2 versus Python 3, 
+0:28 this is like Python 3.4 versus previous versions, ok,
+0:33 so the statistics module is imported in Python 3.4.3 
+0:37 if we run this code on anything earlier than that,
+0:40  it's going to fail, it's going to say there is no module statistics, right, 
+0:44 if we have it it's a super easy way to compute 
+0:47 the mean of a set of numbers, you can see below,
+0:48 we've got a bunch of numbers, static.mean numbers boom,
+0:52 out comes the average. 
+0:54 But it fails on a lot of the versions of Python. 
+0:56 So what do we do? 
+0:58 One way we can solve this problem is we can use a try and just an empty except, 
+1:02 there are possible problems you can expose yourself to here, 
+1:04 but in this simple case it definitely works well. 
+1:07 So, we can say it look, let's try to import the statistics module, 
+1:10 if it doesn't work it's going to throw an exception 
+1:14 and we could actually catch the right type of exception, 
+1:16 we'll get into exceptions later in the next app, 
+1:18 but it's easy enough for us to go and write the statistics to stand_in.py 
+1:24 and we define a mean method and it takes the same parameters 
+1:27 as the real one and the implementation you saw in the previous example write it, 
+1:31 it was quite easy. 
+1:33 So the way we solve our problem 
+1:35 and we get sort of code that runs on all the versions of Python is 
+1:38 we try to import the statistics on new versions that just works 
+1:41 and uses the best new module for that if it doesn't work 
+1:44 it's going to fail fall into the except block and we are going to use 
+1:48 this specific type of import say we are going to import statistics to stand_in 
+1:53 and we are going to actually give it the name statistics
+1:56  for this particular file and since it's a mean method, 
+1:58 the statistics.mean it works exactly as we would expect. 
+2:02 Boom, now our code works on all the versions of Python, just like that.

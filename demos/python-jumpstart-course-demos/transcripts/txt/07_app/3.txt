@@ -1,0 +1,80 @@
+ 0:00 So we have the basic structure of our game built 
+0:02 and now it's time to start working with the actors and the payers in the game, 
+0:06 the wizards and the creatures and defining them and their relationships, 
+0:11 and that's where this is going to get really interesting. 
+0:13 We are going to move this stuff around in the end, 
+0:15 but let's put it here for now, 
+0:16 we are going to have a set of creatures 
+0:18 let's just take this a list in the beginning 
+0:20 and we'll figure out what goes into this list it'll be empty for the moment 
+0:24 but we'll come up with some creatures to put in there 
+0:26 and we are also going to have a wizard and let's call it our hero, 
+0:28 and we somehow want the thing to represent the wizard.
+0:31 This hero is going to have to have actions and it's to battle the creatures, 
+0:35 and it's going to have to have data like the remaining hit points 
+0:39 or the level or something like that. 
+0:40 So let me just write none for a second 
+0:42 so say this points add nothing until we get the chance to define 
+0:47 how we are going to represent the wizards. 
+0:49 So I could come over here and I could write the code,
+0:52 just in this space, right here.
+0:54 I can create a class that represents the behaviors 
+0:58 and the data associated with our hero wizard. 
+1:00 But I don't want to do that, let's try to organize this a little bit better, 
+1:04 when I have a lot of pieces involving the creatures and the wizards and so on 
+1:09 so let's come over here and make a new Python file 
+1:11 and we'll call it actors, we'll call it creatures or players or whatever. 
+1:15 One of the real powerful ways we can model both behavior and data in Python 
+1:20 and in many programming languages 
+1:22 is with this object oriented programming concept, 
+1:25 and we start by creating a blueprint 
+1:27 from which we will build out instances, of these classes,
+1:32 we'll build out a particular type of wizard, 
+1:34 maybe we will have a hero wizard and an evil wizard or something to this effect. 
+1:39 So the blueprint is called a class, when we define it it's just class, 
+1:44 remember, we used def for methods,
+1:46 for classes, we just say class and then we just give it a name, 
+1:50 notice, in Python most things have lower case names, 
+1:53 game loop, creatures variable, hero, keywords and so on, 
+1:57 but for classes, they are typically cap words style, 
+2:01 so like Wizard or earlier we worked with Beautiful Soup, 
+2:04 where the B and the S were capitalized, right? 
+2:06 So we are going to define a Wizard, and we'll name it like that
+2:11 and we can just say pass to say we don't want to define 
+2:14 any data or any behaviors in the beginning. 
+2:17 Let's do the same thing for creatures, 
+2:18 we'll create a class called creature 
+2:21 and we'll just say pass for the moment 
+2:23 so let's go back here and we'll use those, 
+2:26 instead of saying none, that wasn't so amazing,
+2:29 I'd like to say Wizard, well, that's not working so well,
+2:33 PyCharm says I have no idea what this means wizard,
+2:36 just like any function or variable defined it in another module
+2:39 we have to import it, so let's go at the top and import our wizard. 
+2:43 Typically, I prefer the type of import that retains the name space 
+2:47 so it's very clear where something came from, 
+2:49 so I can say actors and then down here I could say this 
+2:52 I could go over here and say actors. 
+2:54 and then you could see my creature and wizard 
+2:56 and the way we create an instance of a class
+2:59 is we call the initializer just like this. 
+3:03 Now wizards and creatures are so fundamental to the behavior of this game, 
+3:07 that I am going to use a different import, 
+3:09 I am going to come over here and say from actors import 
+3:14 and then we get a list, what do you want to import, 
+3:17 wizards and let's go and import the creature while we are at it, 
+3:19 so if we write it like this then we don't have to use the name space, 
+3:22 we can just come down here and say wizard,
+3:25 in fact we are not even allowed to use the name space. 
+3:27 In here let's put some creatures, so we'll create a new creature, 
+3:30 what we want to do is initialize this 
+3:32 with the various specific details of this creatures, 
+3:36 so remember we had a toad, he was pretty weak, we had a tiger, 
+3:39 we had a dragon, we had an evil wizard,
+3:41 we haven't set that part yet so let's just put a bunch of creatures into our list here. 
+3:45 So now we have a list with five creatures here 
+3:48 and we have one particular hero. 
+3:51 Now if you wonder why these are gray and have squiggles 
+3:53 that's just because we are not doing anything with them, yet. 
+3:55 Let's go and run this and make sure things are hanging together. 
+3:58 All right, if we get to this far, things must be going great.

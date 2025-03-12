@@ -1,0 +1,101 @@
+0:00 Over here in PyCharm, 
+0:01 let's start working on our birthday app. 
+0:03 So as usual, we are going to come over here 
+0:05 and pick a new Python file, and call it program. 
+0:09 Now we are going to start out by having a header,
+0:12 then the next thing we are going to do is 
+0:13 we are going to ask the user for their birthday information, 
+0:17 and then we are going to compute the days
+0:20 between now and that birthday they entered, 
+0:22 and then finally we'll tell them whether their birthday is coming up
+0:26 how many days, that sort of thing. 
+0:28 So we could just write this out in one giant series of events, 
+0:31 but I find it much easier to think about this in small little steps, 
+0:36 kind of like I just described, 
+0:38 so we can do that with functions. 
+0:40 So we are going to start by actually defining a function
+0:43 and the purpose of this function is to get the input from the user
+0:47 and return it any time that we need it. 
+0:49 So let's say get_birthday_from_user(). 
+0:54 So remember, to define a function
+0:55 it always starts with a keyword def,
+0:57 and then the function name, any parameters
+1:00 if it takes none, you just have open close parenthesis and a colon. 
+1:03 And then you indent to define the code block that is the function body. 
+1:07 Notice when I hit enter, 
+1:08 PyCharm automatically took care of that for me. 
+1:10 Now, one thing we can do is we can just kind of sketch this out 
+1:13 and if I want to define the function 
+1:15 but not really implement it or write the details of it here, 
+1:18 I can just say pass, right? 
+1:20 So the other thing that we are going to do
+1:22 is we are going to compute the days between two dates 
+1:26 so we'll say compute_days_between_dates(), 
+1:30 all right, and all right pass again 
+1:33 just so we can go on and sketch out the rest of the app.
+1:35 Now notice, PyCharm has put a little squiggly into here 
+1:38 and there is a warning that says this is a pep 8 violation,
+1:42 now pep 8 is the standard for how code should be written in Python, 
+1:47 you don't have to follow it 
+1:48 but pretty much everybody does for the most part, 
+1:52 and, one of the rules in pep 8 is that 
+1:54 when you have two functions that are stand alone functions, 
+1:58 there is supposed to have two lines between them. 
+2:00 PyCharm actually knows how to fix many of these 
+2:02 and I can hit command+alt+L
+2:04 and it will do whatever it needs to fix it. 
+2:07 Now the next thing we are going to do
+2:08 first we are going to get the information from the user, 
+2:11 we are going to compute the days 
+2:13 and then we are going to say def print_birthday_information(), 
+2:15 something like that. 
+2:17 And again I am going to pass... and there is one part 
+2:20 I kind of omitted because I don't really think of it as an operation, 
+2:22 but it is something we are going to do, 
+2:25 is we are going to print the header, 
+2:28 and let's just put pass really quick. 
+2:29 So that is kind of the steps of our app 
+2:32 there we are going to print out the hello, 
+2:33 welcome, get the information from the user about their birthday, 
+2:37 compute whether that is in the past or the future, 
+2:39 how many days and then we are going to use that
+2:41 to print out the information. 
+2:43 The last thing to do is actually just orchestrate this into a main method, 
+2:47 so we'll define a main method, 
+2:49 here some programming languages like C++, C# and so on, 
+2:54 they require you to actually define a main method called main, 
+2:58 there is nothing like that in Python, 
+2:59 this is just a convention. 
+3:01 So, over here, we are going to first start 
+3:03 by printing the header and then we are going to get 
+3:08 the birthday information from the user, 
+3:10 we are going to store this in a variable 
+3:11 but just hold on for a minute there, 
+3:13 we are going to compute the days between the dates, 
+3:16 and then finally, we are going to print the birthday information. 
+3:20 And then we'll be done. 
+3:22 Final thing is we are going to be returning some information from this, 
+3:25 we are actually going to return a date object 
+3:27 that represents the real birthday, 
+3:29 so we'll call this b-day here, 
+3:32 and this birthday we are going to need 
+3:33 to pass off to this function, 
+3:35 so we have the birthday, and we are also
+3:39 going to need to know what time it is right now
+3:42 and I am just going to put none
+3:44 because I don't really want to talk about that 
+3:45 what that is just this moment, 
+3:48 but we are going to get to that right away, 
+3:50 so we are going to call get birthday from user, 
+3:52 get their birthday, we'll compute what the time is now, 
+3:55 we are going to compare the times between these 
+3:57 and this is going to actually give us number of days, like so, 
+4:03 and then we are going to pass this on here 
+4:06 and we will print this out. 
+4:07 So you can see that PyCharm is actually showing us that hey, 
+4:10 you are trying to use the return value of this function, 
+4:14 and over here you can see we just say 
+4:16 pass they are not actually returning the value. 
+4:18 So our next job is to go and implement 
+4:20 each one of these functions, 
+4:22 so this flow works as we expect.

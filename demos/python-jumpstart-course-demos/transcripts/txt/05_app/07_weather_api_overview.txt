@@ -1,0 +1,46 @@
+00:0.04 Let's have a quick look at this real time
+00:2.48 weather API that we're going to be using.
+00:4.4 So, there's a lot of weather API endpoints out on the Internet.
+00:8.09 In fact, one that I think is really cool is "openweathermap.org".
+00:11.0 So if you're going to really try to create a live weather application,
+00:14.99 go use theirs. This one is just for educational purposes,
+00:18.25 has limited data and so on,
+00:19.37 but it will give us the answers generally that we're looking for here.
+00:23.47 So this is a HTTP RESTful
+00:26.51 API. And what that means is we just make HTTP requests, like standard
+00:30.15 web browsers do, and what we get back typically, not always,
+00:33.47 but typically is some kind of formatted data called JSON.
+00:37.39 So, what we can do is we can go over here and say "weather.talk
+00:40.92 python.fm/api/weather"
+00:45.01 and it requires that we pass some things.
+00:46.86 So if we don't pass a city,
+00:48.22 it says "missing field: City" so we could put "Boston", Sorry,
+00:53.31 we could put "city = Boston" like this,
+00:56.37 there we go. And apparently, the weather is mist.
+00:59.6 Some kind of mist rain, I don't know.
+01:1.61 It should be category: rain, description:
+01:3.53 mist. Who knows? Here you can see,
+01:4.95 we're getting the weather. It's right now 13 degrees Celsius because down here somewhere we
+01:11.27 have our units are metric. If we wanted this to be in more US style
+01:15.29 we could say
+01:16.49 "units = imperial". Now all of a sudden
+01:19.68 it's 55°F instead of whatever it was Celsius.
+01:23.94 Okay, So what we do is we make a regular request and we get data
+01:27.01 that looks like this back from it.
+01:29.67 So this is called JSON, and we'll see how to play with it in Python
+01:33.27 really soon. But it's a nice,
+01:34.84 simple format That's very, very natural for us to work with over API.
+01:38.71 And if we come back here,
+01:40.2 you can see that we have a city,
+01:41.85 right? This should have a question mark.
+01:43.3 actually. It says that we have a city equals whatever we want,
+01:46.64 but we can optionally pass a state,
+01:49.23 if you want to disambiguate
+01:50.47 say Portland, Maine, from Portland,
+01:52.09 Oregon. We can pass a country we wanna disambiguate
+01:55.58 Portland, Australia, from Portland,
+01:57.66 USA. If you don't specify a country,
+01:59.15 it defaults to the US, Just that way. I could type in short city names and
+02:2.47 it's still gonna work. Then also you saw we can pass in units as metric,
+02:5.88 imperial or standard, and it defaults to metric.
+02:9.84 So this is the weather API that we're going to be working with.

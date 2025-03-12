@@ -1,0 +1,37 @@
+0:00 Let's come back to our event loop for a moment. 
+0:02 So when I run this app, I can list the items, 
+0:05 and I can an add an entry and hit exit, 
+0:08 but if I hit like enter, you can see I get kind of this weird 
+0:11 like hey we don't understand nothing, 
+0:14 maybe I'd like an empty entry that just mean 
+0:16 hey let's just exit, save and exit, 
+0:18 so we can change our code really quickly here, 
+0:21 first of all, let me change this to be something 
+0:23 other than a non-existent empty pointer, Ok?
+0:28 We want to come up here and we want to have 
+0:30 a complex conditional that says 
+0:32 when the command is not the x and it's not empty
+0:36 so in many languages, you use symbols like the && 
+0:42 or double pipe to say and and or, 
+0:44 Python we just say and or or, 
+0:48 ok, so if we want to say the command is not equal to x, 
+0:52 and the command has some value in it, 
+0:56 I could say like it's not equal to none, 
+0:59 or the length is greater than 0, or something like this, 
+1:02 but in Python remember the truthiness of collections and strings are collections
+1:08 are if they are not empty then they are true, 
+1:10 and if they are empty then they are false. 
+1:12 Maybe that's a bad choice of words of being empty like this. 
+1:15 Ok, so this will almost work if we run this, 
+1:19 and when I say list then enter, 
+1:21 it says we don't understand that and then boom, it exits.
+1:24 So we need to add another bit down here, 
+1:26 say if the command is not X, 
+1:30 and there is some sort of command entered here, right, 
+1:34 which is not empty, then save this error. 
+1:37 If we wanted to say it's not X and there's nothing in here 
+1:39 we would say and not command. 
+1:41 Right, so there is ways to combine this with parenthesis, 
+1:45 and all the boolean logic you can do in regular programming. 
+1:49 All right, so here let's list the entries, 
+1:50 and hit enter boom, goodbye.

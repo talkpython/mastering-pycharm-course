@@ -1,0 +1,10 @@
+### GET home page
+GET {{base_url}}/
+
+### GET about page
+GET {{base_url}}/about
+
+### GET podcasts api
+GET {{base_url}}/api/podcasts
+
+

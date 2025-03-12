@@ -1,0 +1,101 @@
+00:00 Now we have our error handling in place, our app can fail a search
+00:04 either because the network is down or for other reasons,
+00:06 and we do catch it, but we have no information about it here,
+00:10 it just says hey, that didn't work, sorry, something like that,
+00:14 so we can add a little bit of extra information here to carry that error over,
+00:20 and we can work with it, so we could say except exception as
+00:25 and then we name a variable, the format is a little bit like context manager,
+00:28 so except exception as x, and so this x is going to have all the details,
+00:33 let's just say it like this, so now we can print this out
+00:36 and we can see what the details are, so if we come over here
+00:39 and turn off the wi-fi, I'll search for network— boom, that didn't work
+00:44 http connection pool, let's see we got some kind of error
+00:49 we'll figure out what that is in a second,
+00:51 but how do you think users are going to feel about this error,
+00:54 they are going to love it, they think this is a great error message
+00:57 that really tells them what's going on—
+00:59 no, they're going to hate it, so we need to do something a little more specific,
+01:03 the first thing I want to look at is just what is the type really quick of that error,
+01:07 the actual type, so the type is a request.exception.connection_error
+01:14 so let's put this back for a second, and go up here to the top and import that;
+01:22 ok, so now we'll be able to over here and we can have multiple except blocks
+01:26 so watch this, we come up here and we create another one
+01:29 we can say request.exception.connection_error
+01:32 as this should be named differently, say ce, something like that
+01:37 so for this one, we could change this and we could say
+01:40 something to the effect of error, your network is down,
+01:44 or host unreachable or something like that.
+01:47 Now, we could put in details here,
+01:50 but really I feel like that message already carries over enough of the information,
+01:54 so let's just try this again with the network off,
+01:56 I search for J — error, your network is down;
+02:00 notice it didn't run this 'Yikes, that didn't work',
+02:03 the way it works is we do the try block and if there is an error
+02:06 Python will start looking from top to bottom to say
+02:10 the thing that is the error is it one of these types,
+02:13 the very first one that matches it's going to go with that.
+02:17 So the ce thing, this is also an exception
+02:20 because this is a base type in terms of inheritance,
+02:23 it does match this one, so the first one it finds it stops and it uses that
+02:27 so this means that you need the most specific ones first
+02:31 and these more general ones have to go at the end
+02:34 because it's just going to go top to bottom and stop as soon as it finds one.
+02:36 Now notice here we're using the x and we're putting the details here
+02:39 but in this one, we're not, like we're not actually using the ce
+02:43 and PyCharm has it grayed, so we can omit this like so.
+02:46 Now there's another problem, let me put that back just for a second
+02:49 so I can show you the details, ok let's run this,
+02:52 now when the wi-fi was off, we had a particular problem,
+02:55 like if I do this it crashes, but let's turn the wi-fi on.
+02:59 Now if I search for 'runner', it should work,
+03:01 but if I search for nothing, if I just hit enter, it crashes, Yikes, that didn't work
+03:05 client 404, this was not found, what is going on here?
+03:09 So if you go look at this, notice the url structure has to have an api search
+03:15 and then the keyword, if the keyword's not there,
+03:18 you just get 404 because hey, I don't know what to do with that.
+03:21 All right, so that is a problem, we need to somehow take that error
+03:25 which was not a connection error, it was a different type, it was,
+03:29 I think some sort of raise for status thing, yeah http error, more general one.
+03:38 What we want to do is we want to actually go over to this movie service here
+03:42 and say not even let them try to call this, like why are we doing this,
+03:45 if this data is invalid we should check that,
+03:48 so we can come over here and we can do this,
+03:50 we can say if not search text, so if it's completely like if it's equal to none,
+03:55 we want to test this or, not search text.strip
+04:00 so if they just put like space or new line or something like that;
+04:03 if that's the case, we want to communicate an error back to them as well,
+04:06 we don't even want to let this code run, we just want to say no that failed.
+04:10 Now we could return false, but that's very tricky to check,
+04:14 how do you indicate empty result versus false, and things like that,
+04:17 so what we should use here, just like request
+04:20 some things like that are, we should use exceptions.
+04:23 In this case, we want to create an exception, not catch one,
+04:27 so we'll say raise, and probably the best thing to say is
+04:30 value error, something like search text is required, something to that effect, okay.
+04:35 Now if we run our code, we have our network on,
+04:38 and if we search for 'cats', we get results,
+04:42 if we search for nothing we get Yikes that didn't work value error,
+04:46 so let's go back and add another specific error message for value error,
+04:51 so we go over here, say value error
+04:55 and here we'll say something to the effect of search text is required
+05:00 let's clean this up a little bit, like this.
+05:04 Excellent, so if there is a value error, we give them this message,
+05:09 if there's a network error, we give them this message,
+05:12 otherwise we'll just say unexpected error, details like that
+05:18 and let's not put the type, there we go,
+05:21 so I feel like this is pretty good, let's give it a try—
+05:25 network is on, we search for 'runner', do we get something, yes,
+05:29 we search for nothing— error, search text is required,
+05:32 network turned off, what do we get— error, your network is down;
+05:37 search for nothing— error, search text is required,
+05:40 turn the network back on, last time—
+05:44 and we're back in business, how about that?
+05:47 We're able to use the type of error to actually catch it,
+05:51 and handle different cases differently,
+05:54 and we're also able to raise these errors
+05:57 and indicate some kind of problem
+05:59 before it cascades into something non obvious
+06:02 like the http error, like why does that mean that the search text is empty,
+06:05 let's be more proactive and make that really obvious
+06:08 in a way that we can deal with it specifically.
+06:11 Alright, so that's error handling in Python.

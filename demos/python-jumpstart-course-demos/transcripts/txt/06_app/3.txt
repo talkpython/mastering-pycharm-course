@@ -1,0 +1,131 @@
+ 0:01 The next thing to do is to download the cats. 
+0:03 So let's write a method called download_cats(). 
+0:07 And we are going to need to pass this folder that we created. 
+0:12 So down here I'll make some room for the method, 
+0:18 so just for a moment let me write pass so we can talk about it
+0:21 now one possibility is I could write the logic 
+0:25 here entirely in this method and I could maybe write 
+0:29 a few other methods within this program.py file, 
+0:32 and that would solve the problem. 
+0:34 Downloading the cats from the internet
+0:36 and saving them to our folder
+0:39 but that would make it not very easy for other people
+0:41 other programs that maybe also wanted to download cats 
+0:44 so as we have seen in other apps 
+0:46 let's go and actually put this into a separate module
+0:50 so we'll come over here and add another Python file, I'll call it cat_service
+0:54 and in the cat service we are going to have a method, 
+0:57 we can call it whatever we want, let's just say something like 
+0:59 get_cat(), and it's going to take a folder to save the cat too,
+1:03 and it's going to take a name for the cat, 
+1:05 for now let's just say hold on, 
+1:08 we are not going to write the code here but use it back in this area, 
+1:11 so back in the program file, 
+1:13 we'd like to call that get cat method form our cat_service
+1:16 so we would say something like cat_service, 
+1:19 and of course, just like any module we have to import it, 
+1:21 now we could go to the top and write import cat_service, 
+1:25 or as you've seen PyCharm will do that for us, 
+1:27 watch the line numbers change when I hit enter, there you go, 
+1:30 at the top it's imported,
+1:32 cat service just like any other module 
+1:34 and so now we can say get cat and pass the folder 
+1:37 and we are going to need to pass a name 
+1:39 and I am just going to leave that empty for a second. 
+1:41 Now before we go and implement this cat_service, 
+1:43 let's talk about how we are going to get these cats, what we're going to do with them, 
+1:46 so we are going to get eight cats and let's make this configurable 
+1:50 so I'll create a variable called cat count and let's set that to eight, 
+1:54 we could make this a parameter we passed to this method 
+1:56 but we'll just sort of put it here locally, 
+1:58 now I'd like to loop over something and for each one of those
+2:03 I'd like to go and get a cat, 
+2:06 well, what do I look over, I say for i in... what?
+2:09 so Python has a couple of cool methods 
+2:12 that will build what are called iterable sets 
+2:15 that can be used in for in loops and more Pythonic structures 
+2:19 such as list comprehensions and so on, 
+2:21 out of just parameters, so we don't have a collection 
+2:24 but we can go over here and say for i in range from 1 to cat count. 
+2:30 Now before we get into this part, 
+2:31 let's just do a little print and see what we get back 
+2:35 so this is going to return an integer, I want to call it i, 
+2:38 and one of the things we might ask is is this going to go 
+2:43 from 1 to 8, maybe the end point is inclusive, 
+2:48 maybe it's sort of upper bound but not included, 
+2:50 let's just do a little print i to find out and while we are at it, 
+2:54 let me show you another cool little trick here, 
+2:56 so we'll run this and you can see it's 1 to 7 
+3:01 so 1 to 7, actually that's not what we wanted, 
+3:03 we wanted 1 to 8 so let's put a +1 for a cat count here, 
+3:06 excellent now it goes 1 to 8 but notice, 
+3:09 when I run this it's kind of like all up and down 
+3:12 like every print is a new line 
+3:14 so there is something you can do on the print statements 
+3:17 where you can figure the endings, 
+3:19 so I can come down here I can say end =
+3:22 normally the end is like a \n anew line character, 
+3:25 but I can say the end is just going to be a comma with a space, 
+3:28 and now when I run it we actually just print this out on one line, 
+3:31 separated by a comma and a space, 
+3:34 ok, so it looks like we got the right number of cats working, 
+3:37 now the next thing to do is to come up with the name 
+3:39 so that should be pretty easy we won't be too creative here, 
+3:41 we'll just call this lolcat_ and here we'll just put the number like, 
+3:45 lolcat_1, lolcat_2 and so on 
+3:49 so we'll do a format and we'll do i 
+3:51 so let's pass this name along here,
+3:53 right so that should be everything we need to do 
+3:55 to download the lol cat from the program file,
+3:58 now we just have to implement the details of cat_service.get_cat(). 
+4:02 Now, before we move on to writing cat_service.get_cat() 
+4:05 notice there is some squiggles here 
+4:08 and PyCharm is actually telling us lolcat is a misspelled word 
+4:11 so PyCharm will actually find spelling errors in variables,
+4:16 in methods, in strings and so on, so let me just put a string here 
+4:20 it says I went to the house and misspell house here, 
+4:24 so I can go over here in PyCharm and hit alt+enter 
+4:27 and it will say you know what, that word is a misspelled 
+4:30 maybe you should use house 
+4:32 and it will do similar stuff for parameters for methods and so on, 
+4:36 and that's really cool, sometimes, 
+4:38 there is a word that is actually the correct word but you know, 
+4:40 PyCharm doesn't believe in lolcats so we need to tell it 
+4:44 hey this is a properly spelled word, 
+4:46 so I can come over here and say save lolcat to my dictionary 
+4:49 which is just a local file associated with your PyCharm project 
+4:53 and now it won't give me a little squiggly and say there is something wrong. 
+4:57 So this spelling correction stuff is really nice
+5:00 I actually find it super helpful for when I have misspelled the method 
+5:03 especially if it's like in public API or something. 
+5:07 All right, let's write the first part of this get_cat() method, 
+5:09 so the first thing we are going to have to do is get the cat from the internet 
+5:13 and we are going to return it as some kind of data 
+5:16 a binary stream or a byte array or something like this 
+5:19 so we'll write a method called get_data_from_url() 
+5:23 and this method could be used like a binary data 
+5:26 for many url it doesn't have to be just cats 
+5:29 come over the url parameter here 
+5:31 and so we'll say the url is and I happen to know a url that we can use 
+5:35 that will return a random lolcat. 
+5:38 So here we have this web service and we are going to call it 
+5:42 and it will return a small set of random lolcats,
+5:45 let's go and pass this here, 
+5:47 now obviously, this method doesn't exist so let's go write it, 
+5:54 so let's do what we've done before and use the requests package 
+5:57 from PyPi to download the data from this url, 
+6:01 so we'll say response = requests, now again,
+6:05 request is an external package we have already installed it with pip 
+6:08 but we still need to import it at the top of this file 
+6:12 that's easy enough to do, 
+6:13 then we can do a get() and we'll pass the url. 
+6:16 On the response object we have a raw, 
+6:19 and the raw item is just the binary stream of data that we want to work with, 
+6:23 so we can return this to the caller 
+6:26 and then they can go save it or work with it memory, 
+6:29 whatever they want to do with that data. 
+6:31 Now it turns out this is almost right, 
+6:33 there is actually a problem with this even though 
+6:36 it might be the most straight forward way of thinking about doing it 
+6:38 and we are going to come back and fix that 
+6:41 but first let's move on and talk about saving this binary data to a file.

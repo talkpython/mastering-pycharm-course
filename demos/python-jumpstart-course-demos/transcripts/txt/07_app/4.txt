@@ -1,0 +1,145 @@
+ 0:00 We have this concept of defining a creature as a thing in memory 
+0:04 and wizard as a thing in memory 
+0:07 but they don't really do anything or have any behaviors or data, 
+0:10 so let's go over here and look at this, 
+0:12 let's look at the creature first. 
+0:14 So what might the creature have, well, 
+0:16 maybe the creature is going to have to have a level, 
+0:19 and let's have it have a name, 
+0:21 so we can say something like toad of level 7, something like this. 
+0:26 So there is actually several ways to add those features as data to this class. 
+0:31 And the way that I am going to show you will generate 
+0:34 what are called instance attributes or instance variables,
+0:37 and these are only going to be tied specifically to a particular version 
+0:42 or particular create instance of the creature, 
+0:44 so the data related to this creature will not at all be shared with this creature, 
+0:49 there is way to have sort of what you think of a static shared data 
+0:52 but we are going to use what is called a magic method. 
+0:55 Now, to add methods, magic or otherwise to classes 
+0:58 just like normal methods you say def 
+1:00 but you have them indented into the class body. 
+1:03 Now, I could have a method that is called run away, 
+1:06 like this and then that would be a standard method there, 
+1:09 but we are going to use what I said a magic method, 
+1:12 so magic methods start with double underscores often called dunder, 
+1:16 and you can see there are a lot of them, 
+1:19 so here you can see length, 
+1:23 if we had some kind of collection and we wanted to talk 
+1:26 about how many items were in it, 
+1:28 we could implement __len__() and when somebody says len (our object) 
+1:33 it would implicitly call this method. 
+1:35 If we wanted to change how our creature appeared when you just said print creature, 
+1:40 it was no special formatting we could implement __str__() 
+1:43 and then we would get some kind of special string representation. 
+1:47 But the one we are looking for is __init__(). 
+1:50 So here there is something a little bit unusual in this method, 
+1:53 notice when I hit enter there, PyCharm put this self and this self has a color, 
+1:58 while other variables in here, parameters, 
+2:01 they wouldn't have this purple color, 
+2:04 remember, the class is the blueprint and then there are the object instances
+2:07 and each one of them has their own special copy of data 
+2:10 and that's what this self represents, this is the pointer to the one 
+2:14 that has been used to call this method, 
+2:16 so in this case it's the pointer to the object that is actually being created in init. 
+2:20 so we want to have a couple of things, 
+2:22 we want to have a name and a level, 
+2:24 remember this is kind of like dungeon and dragons type thing, 
+2:27 so we have a name and a level that you have to pass in, 
+2:30 these are not optional parameters on the initializer for creatures,
+2:34 you will see in just a minute, 
+2:35 and then the way we define instance variables is 
+2:37 we use this self parameter and we just say something like 
+2:40 self.name=name, and self.level=level. 
+2:46 Now, these don't have to match, 
+2:48 let's just change this to like the level to make it really obvious 
+2:51 that there is no real name relationship between them, 
+2:54 but self. this is actually the creation, 
+2:56 the definition of name attribute or field in the creature class. 
+3:00 It's highly discouraged to do this outside of the init method.
+3:04 Now, while we are at it, let me show you a cool PyCharm trick 
+3:07 so if I had another thing here like let's say experience or whatever, 
+3:11 notice that it's not assigned to any member variable or used in any way, 
+3:17 so I can come over here in PyCharm, 
+3:19 I can hit enter and say add this field to the class. 
+3:22 And bam, it'll go here and automatically do what you just saw me do, 
+3:25 so we are not actually going to have this experience 
+3:28 but you can use PyCharm to kind of automate this, it's very nice.
+3:30 Now, it turns out that the wizard is going to be very similar 
+3:34 so let me copy this over here 
+3:36 and I'll just change this form the level to level, like so, 
+3:41 so now we should be able to create our wizard 
+3:44 and create our creature and they should have data associated with them, 
+3:47 the next we are going to give it behaviors 
+3:49 like maybe it has an attack method here 
+3:51 and it can attack other creature, or just a creature, 
+3:55 and down here we'll put something that has to do with attacking a creature. 
+3:59 So I told you that these are required,
+4:02 if I try to run this app again, it's going to crush, 
+4:05 and it crashes right here and says, wow, 
+4:07 we are missing two required positional arguments, name and the level,
+4:12 I can do things like give it default value like 
+4:14 so I could say by default the level is 10 
+4:17 unless they specify it then it will be something else. 
+4:19 So then you'll see, only one required parameter is missing, 
+4:23 because if you don't specify the level, hey it's 10 so all good. 
+4:25 That didn't actually make a lot of sense in our particular game here, 
+4:30 so I'll take that back away. 
+4:32 All right, so let's go figure out what's wrong and fix this, 
+4:35 so I can just click right here and navigate right to where the error was 
+4:38 and you see PyCharm has this kind of lit up 
+4:41 and color here saying not such a good idea, 
+4:43 all right so what do we have here, we have the name, 
+4:46 remember, let's see we have a toad and the level of toad was quite low, 
+4:50 and we had a tiger and the level of tiger was modernly high, 
+4:54 I think we had the bat, the level of the bat was not particularly high it was 3, 
+4:58 we had a dragon and the level of the dragon was pretty high 
+5:01 and we had the evil wizard, so now our list of creatures will actually contain 
+5:08 particular copies of the creature object, five of them, 
+5:12 and each one of them will have a separate name 
+5:15 and a separate level tied together. 
+5:17 one thing that is a little bit off here is using this creature class
+5:21 for a wizard when we also have a wizard class, 
+5:24 so let's leave it like this for a minute and we'll get back to it, 
+5:27 so now here we have the same problem, 
+5:29 we have exactly the same requirements to create this,
+5:32 so let's say this is Gandolf, and his level is 75. 
+5:35 Ok, let's run this and see if we can get down pass line 27.
+5:39 It looks great, let's actually run it in the debugger 
+5:42 and we'll have a look at these in memory. 
+5:45 So here we are at the break point, we've got our local variables 
+5:47 and we have a hero and you can see we can open this up, 
+5:50 we have this hero has a level 75 and his name is Gandolf, 
+5:53 and we actually have a list of creatures, 
+5:56 and you see there is various creature objects, 
+5:58 these are manifestations or things created from the blueprint of creature, 
+6:01 there are different memory addresses, 
+6:03 everything in Python points to somewhere in memory 
+6:05 and so the elements of this list all point to different places 
+6:09 and the debugger happens to show you that if you really care about it. 
+6:13 We can open this up and see there is our bat,
+6:16 there is our tiger, there is our toad and so on. 
+6:19 So we spoke a little bit about magic methods,
+6:22 and you can see that this is not the most amazing experience 
+6:25 for looking at what is in this list of creatures 
+6:28 and that's not the only place it showed up,
+6:30 if I were to come here and just say print the creatures, and I run this, 
+6:35 you can see basically I have the same output here, 
+6:37 there is some kind of actor.creature at these various addresses. 
+6:42 And we can use the magic methods to change how this works. 
+6:45 so my creature, I can down here and I can say 
+6:48 define __repr__(), for representation, 
+6:51 and then I could just say return some kind of string 
+6:54 so let's say creature of the name of level- 
+6:58 something there we'll do a little format like so 
+7:01 and so when you say self when you refer to the variables
+7:04 of the particular instance of the type of class like so 
+7:08 the particular creature here, I'd say self.name, and self.level. 
+7:13 Of course maybe format instead of forma, have a little better chance there. 
+7:17 So we are going to return a string that could be used in various places, 
+7:20 so now if I run this you can see we have a creature toad of level 1, 
+7:24 maybe like so or something.
+7:29 Creature, toed of level 1, creature tiger of level 12 and so on, 
+7:35 so we are only getting started with our classes and modelling the actors in our game, 
+7:40 but you can see we are already after a good start we have a list of creature objects, 
+7:46 they have their particular data associated with them, 
+7:49 and we have our hero which is a wizard named Gandolf of level 75.

@@ -1,0 +1,80 @@
+0:00 So we have our app working
+0:02 but the user feedback could be a little better
+0:04 let's go down here and try to improve
+0:06 this message we sent to the user
+0:08 instead of just too low, let's say
+0:09 something like your guess of... and we can put in this number
+0:14 this guess they had here
+0:16 we saw that we could do this by combining strings by saying guess
+0:19 so maybe you'll think well this is a way I can do this here
+0:22 and this will just combine it
+0:23 that does work in certain languages
+0:25 say your guess of let's say 70 was too low, something like that.
+0:30 Now, PyCharm is kind of giving away the surprise here,
+0:35 but this is not really love that says
+0:38 the string int conversion with plus is not going to work out so well for you
+0:42 So let's just run it and find out.
+0:44 So if I enter something that is going to be for sure too low like 0,
+0:47 let's see what happens, you get this exception,
+0:49 you cannot convert int object to string, implicitly.
+0:52 Well we technically could explicitly convert it
+0:54 but it turns out that there is a much better way in Python.
+0:58 What we want to do is we kind of want to put something into this space,
+1:01 now the way we can do this nice way
+1:04 is we can use these little curly braces inside the string
+1:07 and then call a function on the string called format
+1:10 and pass whatever we want to go in there.
+1:12 And so, into this location we can say we'd like
+1:15 to take the guess and explicitly convert it to a string,
+1:18 whatever that means,
+1:19 this time it's a number,
+1:21 so that is pretty straightforward,
+1:22 and then we are going to put the result of it right there.
+1:25 We can actually pass many parameters here,
+1:27 we could have something like name,
+1:29 like let's change this really quick
+1:30 name=input player what is your name
+1:35 and these little numbers that go in here
+1:37 talk about the order in which there is specified in the format method.
+1:41 So guess is first, everything is zero based,
+1:44 so it gets a zero, name is second, so it's {1},
+1:47 so we could say sorry {1} your guess of {0} was too low.
+1:53 Now let's go and run this,
+1:55 see if everything is working,
+1:56 enter your name, my name is Michael,
+1:58 enter a guess, I am going to put 0,
+2:00 sorry Michael your guess of 0 was too low.
+2:03 Now, we are just scratching the surface of the power of this format method.
+2:08 We can if we wanted to switch the order here,
+2:12 if we specify the place holders in the string
+2:16 in the same order as they are specified as arguments there
+2:18 we can actually omit the number
+2:21 now this will say sorry name
+2:23 your guess of... whatever the number was, was too low.
+2:26 We can put in format specifiers here to say
+2:28 I'd like to separate this with commas or convert it to currency,
+2:33 or all sorts of sort of format specifiers
+2:36 we can take dictionaries and name these things
+2:39 and pull items out of the dictionary by name
+2:40 and then put their values in here, it's very rich,
+2:43 but let's just go with this for now.
+2:45 So we'll do the too high case here,
+2:47 so your guess was too high, and finally,
+2:49 we'll just say something nice about winning
+2:53 excellent work so and so, you won
+2:57 it was something like this, right?
+2:59 so excellent work, whatever the name is and you won
+3:01 it was whatever the guess was.
+3:03 So, let's play the game again,
+3:05 all right, what's your name, now I've got to enter my name,
+3:07 it's Michael,
+3:08 I am going to guess 50- wow 50 was too high,
+3:11 25- too low,
+3:12 35, 40,
+3:14 45
+3:16 47,
+3:17 what do you think,
+3:19 46, chances are likely, 
+3:21 YES! excellent work Michael, you won, it was 46.
+3:24 See how we can use string format to really simplify and clarify
+3:28 how we convert values into strings.

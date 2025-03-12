@@ -1,0 +1,24 @@
+00:0.04 If this is the first time you're taking this course,
+00:1.66 you could basically disregard the next two screens here.
+00:4.14 But if you've already taken this course and gone through this chapter,
+00:7.36 you should know that we've completely redone it.
+00:10.29 We've re-created it from scratch.
+00:12.68 Why? Well, we use this awesome place "wunderground.com"
+00:16.8 and we would go there and we'd get the weather from "wunderground.com".
+00:19.74 However, it's been a couple of years,
+00:21.7 and Wunderground has dramatically changed their website.
+00:25.1 So the presentation that we were giving was not really something you could re-create.
+00:29.99 So, what have we done? Well,
+00:31.6 I've built a new weather service,
+00:34.5 and I'm hosting it over at Talk Python.
+00:36.76 So, "weather.talkpython.fm"
+00:39.14 we're going to use this weather API to get real live weather data for
+00:44.16 our application, Okay? So if you've seen this course before and you've already gone
+00:48.04 through it and you're wondering "hey, why did all these videos change?"
+00:50.78 this is why. It's just to refresh and keeping things modern.
+00:54.24 If you want to get back to the old code,
+00:56.12 go to the GitHub repository for the course handouts,
+00:59.41 the course demos, and just switch branches to "Old Weather APP chapter" and you'll see that
+01:3.55 code. Otherwise, you're also going to see the latest code on the GitHub
+01:7.61 repository. With that out of the way,
+01:9.83 let's go build our awesome weather app against our brand new shiny weather API.

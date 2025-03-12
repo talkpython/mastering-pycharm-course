@@ -1,0 +1,120 @@
+00:00 Now we know where our data is coming from
+00:02 let's write some code and get started on this app.
+00:04 We're going to do it in two steps, so let's take this url here
+00:07 this movie service.talkpython.fm/api/search/ the name there
+00:13 and let's go over here and we're just going to write
+00:16 some sort of play around code in the beginning
+00:19 and then we'll structure this into a proper program or proper app in a minute.
+00:22 So we're going to go and make a request against this
+00:25 and let's make it really clear that there is a search term happening here
+00:29 so we'll say format search, search equals this, I'll search for a capital
+00:34 and we're going to need to make a request against this service,
+00:38 well, we've already seen one of the best ways to do that
+00:41 is to use the request package, so import request;
+00:45 now I don't have request installed in the virtual environment here
+00:49 so we'll go ahead and install that,
+00:54 you might be using it your system wide Python
+00:56 and have it left over from other examples
+00:58 or maybe using the same virtual environment
+01:00 but here I'm an going to install it separately;
+01:02 we're also going to be using named tuples,
+01:04 so I'm going to import collections while we're at it,
+01:07 so let's start by going and doing a request against this,
+01:10 so we'll say the response is request.get url,
+01:13 and then let's just print out the status code
+01:16 and go ahead and run this, see what we get.
+01:19 Status code 200, that's good, so we could
+01:23 actually print out the text that we got back
+01:26 that looks like the javascripty json text that we're looking for,
+01:30 we could use the json module and parse that,
+01:33 but it turns out that if we have let's say I have a variable here
+01:39 it turns out that request is very commonly used to talk to these javascript apis
+01:43 and it can automatically turn this into the python dictionaries
+01:46 that we're going to work with, so now I could print out this
+01:50 let's say the type of movie data and maybe data, we'll see what we get back
+01:56 so if we run this, we get a dictionary, not the strings, but an actual dictionary
+02:00 which we can use to start working with this data.
+02:04 So notice we have our keyword capital in our hits
+02:07 which is an array of these movies,
+02:10 so we're already on a good path here,
+02:13 we probably should do some kind of check to make sure everything is ok
+02:18 and we could say something like if response.status code is not 200,
+02:23 do something, but request has a nice little thing here
+02:27 we can say response.raise for status
+02:30 so this is going to cause an error an exception
+02:33 if something went wrong basically if it's not a successful status code, all right
+02:38 and we'll talk about how to handle these types of situations in a little bit
+02:42 but for now, let's just keep playing around with this.
+02:45 So we've got our movie data, and we actually care about our movies
+02:49 and that's going to be going to the movie data
+02:52 and we want to get out the hits,
+02:54 so let's print out our movies here and see what we get.
+02:59 Now this time it shouldn't come back as a dictionary,
+03:02 notice the square bracket, this should come back as an array, a list;
+03:05 so here's a list, and then these are all of the movies,
+03:08 now the next thing we want to do is convert them just from these flat dictionaries
+03:14 into something that's more useful for application,
+03:18 we've already seen that named tuples are really powerful
+03:21 and let us work with data better,
+03:23 we could go and create classes like we did in the wizard app,
+03:26 but I think probably named tuples are good enough
+03:29 for what we're trying to do here, so let's go and set that up.
+03:32 Let's call this a movie result and we're going to set that to be a collection.named tuple,
+03:39 and we need the name right here to be exactly the same so movie results,
+03:43 and then the next thing that goes in here is actually
+03:47 a list of all of the fields, and you can see we have rating
+03:50 we have duration, we have title, we have imdb code
+03:53 and it needs to match up, well, it should match up exactly to this,
+03:57 to make it as easy as possible, we could of course transform it
+04:00 and if we don't want imdb code we just want to say
+04:03 imdb or just code or something like that,
+04:05 we could change it but we have to account for that later;
+04:08 so our plan is to just use the same field names or attribute names here,
+04:12 so I've already copied those over, so you don't have to watch me type them in,
+04:16 so we have this movie result and let's go instead of printing these out,
+04:21 let's actually go and loop over all of this data that we got back
+04:26 and build up a list of these movie results,
+04:28 so let's rename this to movie list or something like that
+04:32 and then we'll define our movies, this is the thing we really are after
+04:35 we really want to work with, we're going to add a bunch of these movie results
+04:39 converted from the data we got from the web service.
+04:42 So we'll say for md in a movie list, all right
+04:48 and then we want to come down here
+04:50 and we're going to create one of the movie results
+04:53 and I'm going to do this in three different ways,
+04:56 I'm going to start out in the most sort of verbose least Pythonic way
+05:00 and we're going to improve it in the next video in a couple of different ways.
+05:04 So we're going to say m is a movie result,
+05:08 then we need to set a bunch of stuff,
+05:10 we need to set the imdb code is equal to md.get,
+05:14 imdb code we're going to come over here
+05:18 and we're going to set the title to be the title
+05:21 and I'm just going to knock the rest of these out.
+05:27 There we go, that was a lot of typing
+05:29 so we've got all of these here and some of these are numbers
+05:32 so we might want to be a little careful we could say things like the score
+05:37 if you don't have it in here in this dictionary get
+05:40 instead of giving us none you could give us zero,
+05:43 same maybe for the year or the rating, things like that
+05:46 but this is not entirely necessary I believe all of them have a year and rating.
+05:50 Okay, so now we're just going to say movies.append,
+05:54 and give it this m, so now we could do things like this
+05:58 we could just print out something about the movies,
+06:04 so we can print them out and something like this
+06:06 we could say, we could just put the year and the title
+06:09 we could also save print found some number of movies for search something like this
+06:14 the length of the movies and the search string that we sent in, okay,
+06:20 so let's run this one more time
+06:22 and we should go find a couple movies for capital
+06:25 and then print them out here. Look at that, searching for capital,
+06:28 we get Supercapitalist, Capital C and Capitalism A Love Story,
+06:31 let's go and search for a runner, oh look at that,
+06:35 we found Blade Runner, Kite Runner, Logan's Run,
+06:38 let's make it feel a little more real, I had let the user input something here,
+06:42 so let it come down here, alright,
+06:45 so now we could do blade for Blade Runner or something like that,
+06:48 we got Sling Blade, Dragon Blade, Blade Runner,
+06:52 we come down here and look for a runner, get these again beautiful
+06:56 all right so it looks like this is working,
+06:59 we'll see that we can actually improve upon this in a couple of ways,
+07:02 make this much more concise and pythonic.

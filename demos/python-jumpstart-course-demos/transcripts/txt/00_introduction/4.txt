@@ -1,0 +1,90 @@
+0:00 All right, let's talk about how to install
+0:02 the various tools in Python on your operating system.
+0:04 Now, there are going to be three of these videos,
+0:07 there is going to be one for OS X,
+0:09 one for Windows and one for Linux.
+0:10 You probably only need to look at one.
+0:13 Just choose the operating system that you are currently working on,
+0:16 and watch that video,
+0:18 you don't need to watch the Linux one if you are on Windows for example,
+0:20 unless you just want to sort of see what the experiences are like
+0:24 across the different platforms.
+0:25 So, with that said, here is the OS X one, and the others will follow. 
+0:30 So, there is only two tools, two resources
+0:33 you need to take this class outside the source code on the GitHub repository,
+0:38 one is you are going to need Python 3,
+0:41 remember, Python 3 does not come on OS X, Python 2.7 does,
+0:45 but Python 3 does not so you've got to install that.
+0:47 As well as PyCharm.
+0:49 So let's go look at these.
+0:49 I pulled up the websites that we are going to be working with,
+0:53 python.org, this is where we get Python 3,
+0:57 PyCharm over here on jetbrains.com, we are going to download PyCharm here
+1:02 and I also pulled up the other three options,
+1:04 Sublime Text if you are interested in that,
+1:06 Atom, you've got to watch this video it's very funny,
+1:09 a great little light weight editor.
+1:12 We'll come over here, download this, quick,
+1:14 just it defaults you the latest of both Python 2 and Python 3 for your operating system,
+1:19 so you pick this, download, save, I've already done that.
+1:23 So let's go over here and see,
+1:25 if I type python you will get something, 
+1:29 but you'll see that Python 2.7.10 comes up,
+1:31 if I type Python 3, there is no Python 3,
+1:35 so let's install Python 3 and make sure everything setup good there.
+1:40 So, this is what I got of python.org,
+1:43 just click through, agree to, whatever it's going to make you agree to...
+1:50 ok, so Python is installed. Let's just try a little trick again,
+1:54 we can even do a --version on the end, 
+1:56 excellent, so we have Python 3 installed
+1:58 and it's the latest version.
+2:00 So, that's a good start.  
+2:02 Next, PytCharm... when you just click download,
+2:04 it gives us a choice between what version do you want,
+2:07 the professional or the community edition,
+2:10 this is up to you, I love this tool,
+2:12 I paid money for it, I am getting the professional,
+2:14 the community is free,
+2:16 if you are wondering what the differences are,
+2:18 just come back here to the main PyCharm page and you can see,
+2:21 it will show you that actually the Python features themselves,
+2:24 there is not too much of a difference,
+2:25 but the web development, and Python web frameworks,
+2:28 and data base stuff, that is only in the professional edition.
+2:32 But, lucky for you, none of that is actually happening in this class
+2:35 so you can pick either of these that you wish.
+2:37 Once you have it downloaded, you will have "dmg"...
+2:40 disk image here, I love their little installer,
+2:43 here is the app, just drag it over here,
+2:45 wait a moment, and you should have PyCharm installed.
+2:49 Now, that's finished installing, let's check that, and we can just run PyCharm.
+2:55 First time it will warn you this came of the Internet, 
+2:57 beware, yeah, we did that on purpose.
+3:00 Make sure you get it from right place. 
+3:02 And, here is PyCharm, I've already run it before,
+3:05 but the first time you run it, it'll ask you for the settings,
+3:07 I like mine in this dark theme, so everywhere it ask you about colors, there is two places,
+3:12 you can say Dracula if you want the same theme as me, 
+3:14 or pick another one. 
+3:16 The other two editors are just Atom,
+3:19 here is Atom, nice and clean, 
+3:20 and Sublime text, again, super small, super clean.
+3:24 Let me show you a technique that will be helpful
+3:26 for opening these projects in basically working with Python projects, in general. 
+3:30 So, here I have Request Masters,
+3:32 I got this off of GitHub, this is the Request package 
+3:36 and this is actually the source code, so here you can see,
+3:38 here is all the Python files, just like the project base,
+3:41 if I want to open this in PyCharm, I just drop it on here,
+3:44 this is OS X only feature, but if I drop it like this
+3:46 it will open the whole project, and see here is all the code that we need.
+3:52 You do a similar thing for Sublime text and you can do a similar thing for Atom.
+3:57 So, here is all the packages, same thing.
+4:00 So, that's a really helpful tip, if you are jumping from project to project
+4:02 and you want to just open up this project,
+4:05 open up that after project, open up before project, and so on,
+4:08 I am sure you will find that useful throughout the class.
+4:10 All right, that's it, this OS X system is ready to roll,
+4:14 ready to work on this class.
+4:15 Hope you are ready to go build app number 1.
+

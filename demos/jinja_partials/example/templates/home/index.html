@@ -1,0 +1,32 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+
+<h1>Demo app: jinja_partials</h1>
+
+
+<div class="container">
+
+
+    <div class="container videos category">
+        {% for row in rows %}
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <link type="text/css" rel="stylesheet" href="/static/css/site.css"/>
+
+            {% for v in row %}
+
+            <div class="col-md-3 video">
+                {{ render_partial('shared/partials/video_square.html', video=v) }}
+            </div>
+
+            {% endfor %}
+
+        </div>
+        {% endfor %}
+    </div>
+
+
+</div>
+
+{% endblock %}

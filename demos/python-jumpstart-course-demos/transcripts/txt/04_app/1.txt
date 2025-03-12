@@ -1,0 +1,34 @@
+0:00 It's time for app number 4
+0:01 and this time we are going to build a daily journal, or a diary. 
+0:04 So let's look at what we are going to build, what it's going to look like.
+0:07 Here is the output we are going to expect from our app
+0:10 you can see as always there's a header
+0:12 notice there is a few diagnostics messages there 
+0:14 saying we are loading our data from a file 
+0:17 and at the end you can see saving to a file. 
+0:20 So one of the primary focuses of this app is on File I/O
+0:24 and you can see the main part of the app gives you this menu
+0:26 and says what do you want to do
+0:27 list your journal entries, add a new one or exit. 
+0:30 And if we hit "L" you can see we are listing out a few items
+0:33 if we add one it gets appended 
+0:35 and we persist this across running instances of the app, in our file.
+0:40 While that may sound pretty straightforward
+0:42 we are actually going to cover a ton of topics. 
+0:44 We are going to break our application into multiple Python files 
+0:47 and use them between each other.
+0:49 We are going to talk about this thing called live templates in PyCharm, 
+0:52 as I already said we are going to focus on File I/O.
+0:55 We are going to work with the most common type of loop in Python
+0:58 called the for-in loop. 
+0:59 We are going to talk about documenting our code with these things called docstrings.
+1:03 We are going along with File I/O and talk about how we manage
+1:06 file paths and combine file paths segments in a platform independent way.
+1:11 We are also going to talk about how we define methods
+1:14 and how we can structure our code so that we can sort of
+1:17 define them in what order makes sense
+1:19 and then use them in any order we'd like. 
+1:21 And last but not least,
+1:23 we are going to talk about complex conditional expressions
+1:25 we've been working with very basic conditionals before,
+1:29 but we'll get a little more involved in this one as well.

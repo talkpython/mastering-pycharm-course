@@ -8,7 +8,7 @@ episode_data = {}
 
 
 def download_info():
-    url = 'https://pythonbytes.fm/episodes/rss'
+    url = 'https://talkpython.fm/episodes/rss'
 
     resp = requests.get(url)
     resp.raise_for_status()
@@ -16,6 +16,7 @@ def download_info():
     dom = ElementTree.fromstring(resp.text)
 
     items = dom.findall('channel/item')
+    # Probably right here, smell, smell
     episode_count = len(items)
 
     for idx, item in enumerate(items):
@@ -23,7 +24,7 @@ def download_info():
             item.find('title').text,
             item.find('link').text,
             item.find('pubDate').text,
-            episode_count - idx
+            episode_count - idx + 1
         )
         episode_data[episode.show_id] = episode
 

@@ -1,0 +1,33 @@
+00:0.14 Let's talk about the two group together paired concepts of accessing these external libraries.
+00:6.57 The first is, Where are they?
+00:8.06 The second is How do we get them installed?
+00:10.05 So PyPi, pypi.org, or the Python Package index, is where these
+00:15.93 packages live; these extra libraries live.
+00:18.24 And at the time of recording,
+00:19.74 there's 267,000 projects. That's 267,000 other libraries that you could choose to install into
+00:28.88 your program and start working with them.
+00:30.39 Whether you've got to create a little GUI app,
+00:32.87 gotta build a web application based on some web framework like Django,
+00:36.86 all of those things live here,
+00:38.9 and the one that we want is we want to be able to go and make
+00:41.93 a web request to an API.
+00:44.74 So the other side of the coin is how do we access PyPi and get
+00:48.35 the stuff installed and manage them for our application?
+00:50.73 Well, that's what this command line tool called "pip".
+00:54.34 So we're gonna work with a library called "requests" that lets us do the, well,
+00:58.5 HTTP request over to the server to get that JSON document then convert it to
+01:2.8 a dictionary to give the weather report, and in order to use it,
+01:6.26 it doesn't exist in Python. It's a separate thing.
+01:8.59 It works with python, but it's not part of python.
+01:11.16 So in order to work with it,
+01:12.2 we have to install it into our current environment,
+01:15.63 alright? And the way we do that, we would just say "pip install requests",
+01:19.07 sometimes you might want to throw in a "--upgrade" in case it's already there,
+01:23.54 go ahead and give me the latest version.
+01:24.75 But you'll see it when it downloads
+01:26.1 it. Actually it already downloaded that version,
+01:28.06 so it didn't need to get it,
+01:29.02 but you would see a progress bar go across as it downloads if it needs to
+01:32.9 then it installs that package and all of its dependencies that it needs, maybe the dependencies
+01:38.16 of the dependencies. So everything is ready to run for you,
+01:40.47 and it gives you a message like "whatever package you asked for, the current version is installed".

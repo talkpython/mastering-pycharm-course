@@ -1,0 +1,76 @@
+0:00 Now, before we move on to our next application
+0:03 let's take a quick tour of PyCharm. 
+0:05 So, PyCharm has so many features,
+0:08 it's very hard to just sit down and show them to you.
+0:10 But let's just take a moment and hit the highlights.
+0:12 So on the left over here we have our project, folder, 
+0:15 and this can be quite complex,
+0:17 in real apps you might find many subdirectories,
+0:20 multiple files, all sorts of stuff, we'll get to that later.
+0:23 But here we just have our directory and our program.py, 
+0:27 and it actually shows the external libraries that are set up
+0:30 into the particular Python environment that we are working with.
+0:33 So you can see that we have things like Pygments,
+0:36 and Chameleon which is a web templating framework
+0:39 and mailchimp for managing subscribers, things like that.
+0:43 Not super important for us now,
+0:44 but this sort of lets you get at your active Python environment.
+0:48 We can also go over to the structure,
+0:50 and the structure for this app is frankly boring,
+0:53 because it just has a few variables and that's it,
+0:56 but if we had functions which were using classes
+1:00 and these classes were defined with more functions
+1:03 and fields and attributes and properties, all this kinds of things,
+1:07 you would see this would actually be quite interesting,
+1:09 you can use all these little pieces up here to slice and dice them.
+1:12 Down at the bottom, we have our run configuration,
+1:15 or a place where we would run our app
+1:17 you can see there is actually two of them running,
+1:19 that's kind of a problem, we'll talk about how to fix that.
+1:24 So we can come over here, we can run it,
+1:25 we can stop the running one, you can see this one as a green dot
+1:28 because it's running, so we can stop this... it's all good.
+1:31 We can also have TODO's so we could come over and put a comment;
+1:35 comments in Python start with "#" hash so I could say,
+1:37 # TODO "this needs cleaned up",
+1:41 something like that and I could say something like TODO.
+1:45 All right, so now if you look down here
+1:47 you can see it actually shows us our TODO's
+1:49 PyCharm highlights them very nicely up here.
+1:51 Take those back out but that's what this section is for.
+1:54 Here is just a Python console you can...
+1:57 as if you typed Python in the terminal or the command prompt,
+2:00 here is literally a terminal,
+2:03 and here is the version control that we talked about.
+2:06 There is support for all different kinds of version control,
+2:09 you can see we are actually working on the master branch in GitHub.
+2:12 Over here, on the right
+2:14 we have a database section,
+2:15 some really excellent database management
+2:18 and design and querying tools built in the PyCharm.
+2:21 We don't have a database that we are working with right now,
+2:24 but if we did, we would connect it here
+2:26 and like it do all sorts of cool stuff.
+2:28 Finally we have sort of run, debug and manage
+2:31 version control shortcuts up here.
+2:34 We come up here, we can look at the configuration
+2:36 you can see we can actually pass parameters like
+2:40 if I want to just hard code a name and pass it like this,
+2:43 this would be passed to our program when it runs,
+2:46 we are not going to do that but we could
+2:47 you could pick which version of Python you want to run
+2:50 pass additional options to the interpreter itself
+2:53 there is all kinds of things that we can do here.
+2:56 Remember we had two instances of that app running
+2:59 that was kind of weird so we can check off this single instance only
+3:02 and that actually fixes that problem,
+3:04 so you only ever have one running at a time.
+3:07 Now when I run it, if it's running and I try to run it again
+3:09 it will say we are going to restart it for you,
+3:12 so I often say don't bother me with that just run it again whenever I ask, ok?
+3:17 So like I said, there are many things you can do with PyCharm,
+3:21 stuff with version control,
+3:23 stuff with managing virtual machines,
+3:26 all kinds of stuff that we just don't need to get into right now
+3:29 but what you saw should give you a really good jumpstart
+3:32 so you can be effective with PyCharm right away.

@@ -1,7 +1,0 @@
-00:0.14 There's a whole bunch of cool little aspects to these tool windows and there's honestly other
-00:4.54 tool windows that we haven't dived into yet.
-00:7.34 Here's your chance to go and explore the little tool windows.
-00:11.15 Be sure to open up a python project something from the course or something that you're
-00:15.26 working on and then go play with the 'todo's,
-00:17.99 the run window, the python console,
-00:19.86 the terminal and so on. Have fun exploring all these extra little supporting windows in your IDE.

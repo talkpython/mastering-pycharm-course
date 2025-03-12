@@ -1,0 +1,10 @@
+0:00 Docstrings are a core concept of this application, 
+0:02 let's look at it in detail. 
+0:04 So here we have some method, 
+0:05 and we saw that if you just put a string at the beginning of a method 
+0:09 on its own line without assigning it to a variable, 
+0:12 that becomes the docstring.
+0:14 The recommendation is to use three double quotes
+0:16 and separate this so it's nice and readable onto new lines 
+0:20 we saw that there is actually a format to talk about 
+0:23 the various parameters as well as the return value. 

@@ -1,0 +1,55 @@
+0:00 All right, let's write the first part of our real estate data mining application. 
+0:04 And we'll follow my standard convention of having a main method, at the top here, 
+0:09 and then using the main live template in PyCharm, 
+0:13 just sort of use the proper import safe way of invoking it, 
+0:17 now we are going to do a couple of things,
+0:19 we are going to as always define a print_header() 
+0:21 and we'll just print out some basic stuff as usual, 
+0:25 so here is a standard header which we'll call from up here, 
+0:28 the next thing we need to do is get the data file,
+0:32 so let's write a method not the actual data but just the file name for the data, 
+0:37 so notice down here, 
+0:39 let's talk about where are we getting our data from, 
+0:41 we have a data subfolder next to our program, 
+0:43 and we have the Sacramento real estate transactions for 2008, 
+0:47 so this turns out to be all of the real estate transactions 
+0:50 that I could find for Sacramento in 2008. 
+0:55 Personal individuals, no business stuff. 
+0:57 So we want access to this file, 
+0:59 now we want to use again our OS 
+1:01 so we'll import OS and a lot of times we've been saying .path, .join 
+1:05 and we would give it something like '.' for the current directory 
+1:08 and then we would say data and then we would say the name of this, 
+1:11 in PyChrm you can hit ctrl+t and it gives you a rename 
+1:14 which is probably the easiest way to just copy the name there, 
+1:20 but this '.' assumes that we are always using the working directory 
+1:24 just above the data folder,
+1:25 we always want to look right next to this program for its data
+1:28 no matter where it's running so let's get the base folder in different way. 
+1:33 We'll say base_folders os.path.dirname() and remember, 
+1:38 there is an __file__, a __file__, 
+1:42 implicit variable for every module that's going to say here is the full path, 
+1:46 so we get the base folder and then we can just put base folder here, right, 
+1:50 so now it doesn't matter where we are running our code, 
+1:53 we'll always get back to this, and then we'll just return that, 
+1:57 let's do a little format really quick, and let's get the file it's called filename
+2:01  say get data file and then just let's print this out really quick. 
+2:07 All right, that looks correct, I have it on my desktop 
+2:09 and then here is our 09 real estate data and so on. 
+2:13 Perfect, so that should work for getting us the file 
+2:15 now the next thing to do instead of this is to actually load the data
+2:19 so I'll just say data like this and we'll come back to what that means, 
+2:23 I'll just say load file, so we are going to do this in a couple of ways,
+2:28 we'll start out with like really basic way 
+2:30 and then we'll come back and do a little bit more. 
+2:38 Ok, so we got our data sketched out, 
+2:40 and the very last thing that we are going to do, after we loaded up, 
+2:42 maybe we'll print it out for a minute but I guess we can go and write query data 
+2:47 and that will just spit out the report and so on so feed it data, like so, 
+2:52 and that's the last method we'll write, and then, move on. 
+2:56 So there we have the basic structure for our app 
+3:00 and I don't know if I have shown you this for a while in PyCharm 
+3:02 but over here you can actually see the structure 
+3:04 and jump around if you like that's kind of handy,
+3:07 even better when you have classes and hierarchies and these sorts of things, 
+3:10 so next we are going to work on load data and actually parsing our csv file.

@@ -1,0 +1,120 @@
+0:01 Let's explore generator methods and we'll use the Fibonacci numbers, 
+0:05 an infinite series of numbers to do this. 
+0:08 Here we have this Fibonacci numbers that are defined to be 1 and 1
+0:12 and apparently I left one out, 
+0:13 and then the next one is the sum of the previous two,
+0:15 so 1+1 is 2, 1+2 is 3, 2+3 is 5, 3+5 is 8 and so on. 
+0:22 Now this is an infinite series of numbers, so let's write a function, 
+0:26 a traditional function like you've seen us write with lists and building up the data 
+0:31 and then passing them back to generate this. 
+0:33 So we are going to define a Fibonacci function, 
+0:36 initially I am going to give it a limit, if there is no limit,
+0:39 you'll see we'll just flat out run out of memory and crush our application, 
+0:42 so we are going to have something like a list that holds the numbers,
+0:46 and then we'll have the way you compute this is you have a current number 
+0:50 and you have a next number, then I'll say while current is less than a limit, 
+0:57 and the implementation in Python is actually really fantastic so what you do is
+1:02 you can use tuple projection and avoid having a temporary variable, 
+1:07 a lot of times you will sort of see 3 steps to do this we can do it in like one, it's cool, 
+1:11 so we'll say current,next and we'll do- that's the variable so we want to do 
+1:16 a tuple unpacking into them so current is going to be signed next 
+1:20 and next is going to be next + current. 
+1:23 And then, we want to add to our numbers current, 
+1:28 and then we'll just going to return the numbers,
+1:31 so let's print Fibonacci 
+1:33 and let's say we want all the Fibonacci numbers that are less than 100. 
+1:37 Now we still have the factorial stuff above but don't worry about it, 
+1:40 just pay attention to the last line. 
+1:42  So here are our Fibonacci numbers computed 
+1:44 up to a sort of including the last number there, 
+1:49 so let's actually print this out in a slightly different way 
+1:51 where we have a little more control to go through, 
+1:53 so let's say for n in Fibonacci like so, 
+1:57 and we'll just print(n) and we'll do that end = just a little comma thing 
+2:01 so we can have on the same line, let's run that, perfect, 
+2:04 it looks basically the same but here is the key thing, 
+2:07 let's put a break point here and actually step through, 
+2:11 we'll actually step through this function call, 
+2:14 now there is nothing fancy here, 
+2:16 there is nothing that should be surprising to you here, 
+2:19 we are just going to step into this code and step through it. 
+2:22 So I want to come down here and say while this is not the case 
+2:25 we are just going to step along, you can see on the right the numbers are changing, 
+2:28 3 next should be 5, then next should be 8 and so on, 
+2:32 and we are building up this list of numbers 
+2:34 here you can see the list is highlighted but here you can see this list is building up, 
+2:39 and all of the computation is happening in this method, 
+2:44 and then, in the very end, we decide we've had enough, 
+2:48 few more and we'll be there, 
+2:50 then we return it and then we loop over like so. 
+2:54 Ok, that is how traditional methods work, 
+2:58 but what I am about to show you is not a traditional method, 
+3:02 it's something called the co-routine and it's extremely powerful. 
+3:06 So let's take the same method and let's define a second variation of it. 
+3:10 So let's call this Fibonacci co and down here we'll call Fibonacci co. 
+3:18 Now we are going to take two steps to go through this and understand it,
+3:22 first we are going to just change this to work exactly the same 
+3:27 and then we can see we could even do better. 
+3:30 So instead of letting all the work happen in the Fibonacci method 
+3:33 and then processing the results what would be better
+3:36 when we have these large sort of pipelines of data processing
+3:41 would be to pull one back and then inspect it, 
+3:43 do a little work with it then throw it away. 
+3:46 And then pull the next one, inspect it, do some work with it, throw it away. 
+3:50 That way, even if we are processing a billion items, 
+3:53 we only pull one into memory to work with at a time. 
+3:56 And you can see that we'll do the same thing here, 
+3:58 so instead of putting this into a list we can use this keyword called yield 
+4:05 so I come over and I can just simply say yield current, 
+4:07 and the way this works is when I start using the yield keyword 
+4:10 this becomes a co routine,
+4:13 and when I say yield some item I am basically declaring to the Python interpreter 
+4:17 what I want you to do is create a sequence that can be one item at a time computed. 
+4:23 And, here is one of the items, every time I say yield something, 
+4:27 I say here is one of the items, I never have to return all the items at the end
+4:31 I just say here is an item, here is an item, 
+4:34 and when I stop saying here is more items than that's the end of the sequence. 
+4:37 Let me just use some quick formatting here so that things appear correctly, 
+4:40 so we'll say via list and via yield, now it's running. 
+4:43 We can see via list we get those numbers and via yield look at that, 
+4:47 we get exactly the same thing, but have we really gained anything, 
+4:51 ok we have this cool yield keyword, we don't have to have the list,
+4:54  that got a little shorter, but what you'll see is 
+4:56 we've actually gained something tremendous, 
+4:58 so let me put a break point here and debug it again. 
+5:01 So we'll step in, now this should look kind of similar, 
+5:04 we'll step along here, and we are computing the first round, 
+5:08 and before we are adding it to our list, 
+5:10 watch what happens now if I step into this, well, 
+5:13 unpack here I only computed a single item right, 
+5:16 notice that n is 1 and now if I go around again and I step in again watch, 
+5:24 we should go straight to line 49 or maybe 47. 
+5:28 Straight back to 47, we are not rerunning this method, 
+5:31 we are resuming this method, right here and if I step, 
+5:36 step let me step down here now n is 1 again because that happens twice, 
+5:40 then if I step in again here we are n is 3 and so on, 
+5:45 so as we get them back we get the first item 
+5:47 and we've only had to do enough work to compute the first item, moreover,
+5:51 we don't have to put this into a list to gather up all the results so then return them, 
+5:57 you know we are never holding on to all the results 
+6:00 at once we are just giving an item at a time. 
+6:04 So to make that point kind of extreme, 
+6:06 let's suppose we want it all the Fibonacci numbers, 
+6:09 the infinite sequence of numbers. 
+6:12 We could remove this limit and we could just say I want to do this forever, 
+6:16 now obviously doing this forever is going to sort of be a problem, it won't crash,
+6:22 it will just keep going and getting slower and slower, and so on, 
+6:24 but it does let us down here as a consumer decide when we've had enough 
+6:29 so we could say if n > 1000 then break, 
+6:34 but we have access to the entire infinite series. 
+6:38 Now, if I did this with the list, this would just run for a long time, 
+6:41 run out of memory and then crash, but that's not what happens here, 
+6:45 we just get one compute the next, compute the next 
+6:47 and any step along that path is super cheap, 
+6:50 basically a couple of additions and a return value, so let's run this again. 
+6:55 Boom, look at that, with yield we got the infinite series of numbers 
+7:00 and it only took microseconds to compute it. 
+7:03 All right, and you can take these generator methods and combine them
+7:09 with other generator methods and create a pipeline of processing 
+7:12 and that's exactly what we are going to go do in our file searcher app. 
+

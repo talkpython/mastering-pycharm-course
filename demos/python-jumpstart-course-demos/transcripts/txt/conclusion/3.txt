@@ -1,0 +1,26 @@
+0:00 If this class has made a difference for you 
+0:02 if you feel like you've learned Python like you haven't before,
+0:04 if you had fun while you were doing it, 
+0:07 I would really appreciate if you could send out a little bit of love on social media, 
+0:10 maybe a message on Twitter or a post on Facebook, 
+0:14 even better, tell your co-workers about it, 
+0:17 I have special pricing for teams and I'd really like to help groups of people 
+0:21 become better at Python. 
+0:23 So, if you think your co-workers could benefit form this course, tell them.
+0:28 And, if you are really inspired write a blog post about it, that would be awesome. 
+0:31 Thank you for taking my course 
+0:33 and I wish you the best of luck on whatever it is you are building next, 
+0:37 enjoy Python it's a great ecosystem and you can build amazing things with it. 
+0:41 If you are wondering what to do next, you can always dig deeper into these concepts 
+0:45 by subscribing and listening to the Talk Python To Me podcast. 
+0:49 That's a podcast I created and I host weekly, 
+0:52 it's the most popular Python podcast at the time of this recording,
+0:56 so I really encourage you to subscribe even if you don't understand everything, 
+0:59 all the experts that come on the show talk about, 
+1:02 being exposed to the ideas will make a huge difference and accelerate your Python learning. 
+1:06 So, head on over to the talkpython.fm and check that out. 
+1:09 I am also building more advanced courses, 
+1:11 keep an eye on what is coming next at training.talkpython.fm. 
+1:15 Thank you so much, it's been great to share this time with you 
+1:18 and I hope you've learned Python in a fun and engaging way. 
+1:21 Thanks and goodbye.

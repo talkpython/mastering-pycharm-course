@@ -1,0 +1,37 @@
+00:0.14 Well, let's create our application,
+00:1.95 our project, to build our weather client here. We're gonna say "new project",
+00:6.17 and we're gonna create it in the "weather_client" folder on my desktop,
+00:9.14 then I'll move it into the GitHub Repository. It's gonna be using the Python 3.9
+00:12.81 interpreter, just the system one for now,
+00:14.63 we'll talk about what that means in a minute,
+00:16.29 and I'm not gonna use this main script, welcome script,
+00:20.32 that PyCharm just added to its functionality for new projects.
+00:23.75 Over here we have our empty project and I'm gonna add,
+00:27.06 as we do for all of these, a new Python file and we'll call it "program".
+00:29.91 Then just to get the little button lit up here,
+00:33.91 let's go ahead and, once it's done
+00:36.25 indexing, right click and say
+00:37.61 Run. Run it, and of course it does nothing,
+00:40.56 but you can see it's now ready to run with the hotkeys or with that little button
+00:44.34 there. So what are we going to do in our program?
+00:46.55 Let's just write these out as steps.
+00:48.91 Well, we're going to show the header and we're gonna get the location requests, or
+00:54.73 the city, where do you want to get the weather for. We're gonna convert what they type
+00:59.5 in into more useful data. What they're going to type is something like, they're gonna
+01:4.53 enter, you know, maybe Portland,
+01:6.21 Oregon as a whole single string here.
+01:8.99 And what we want to know is both
+01:10.16 Portland is the city, and Oregon is the state,
+01:12.77 and the default is that the country is the United States or something like that.
+01:17.14 So we're gonna convert plain text over to data we can use. Once we have that data
+01:24.02 for the city and the country and state and all those sorts of things, we can
+01:28.26 get the report from the API, the actual weather API that we're
+01:32.66 going to use, and then the last thing, we're gonna report the weather. What we're
+01:36.49 gonna get back from the API
+01:37.72 is structured data, and we want to take pieces of that data and turn it
+01:41.36 into something that's friendly to humans.
+01:43.32 Like "the weather is gonna be 57 degrees and sunny",
+01:46.42 Not "here is some
+01:48.3 data structure that the API returned".
+01:49.92 So that's what this last thing here is going to be about.
+01:53.54 So these are the steps that we're gonna have to take to build this simple application.

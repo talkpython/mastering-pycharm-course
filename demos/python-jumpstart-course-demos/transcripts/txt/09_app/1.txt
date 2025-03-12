@@ -1,0 +1,48 @@
+0:00 It's time for application number 9. 
+0:03 This one I am calling the real estate data miner app. 
+0:06 So what we are going to do we are going to take 
+0:08 a whole bunch of historical real estate data
+0:11 feed it to this application, and be able to answer pretty interesting questions 
+0:14 like what was the average price of a two bedroom house
+0:18 sold in this region during this time, things like that, 
+0:21 so what it's going to look like- well, 
+0:24 you'll see something like this, standard header, 
+0:27 and it's going to load up a comma separate value, 
+0:29 a csv file of historical real estate data 
+0:32 and it will detect the header so we'll use this, 
+0:36 basically define the columns that we'll use to answer our questions later, 
+0:40 it can be somewhat dynamic with this, 
+0:42 and then we can answer questions like what was the most expensive house sold period,
+0:46 well that's some kind of 4 bedroom, 3 bath house for almost million dollars in Wilton 
+0:50 And the least expensive house was oh my gosh, 
+0:54 like a house for a 1500 dollars, 3 bedroom 3 bath in Lincoln. 
+0:58 Something is going on there, who knows the history of that one. 
+1:01 But the average price was 234,000 dollars 
+1:03 for 2.9 on average bedroom, 1.8 bath on average, right. 
+1:09 And if we restrict ourselves to say well let's just talk about only 2 bedroom houses 
+1:13 and give me some stats on that, 
+1:15 well the average price was 165,000 dollars 
+1:18 obviously two bedrooms in 2 bedroom house and 1.4 baths. 
+1:23 So what are we going to focus on when we build this app.
+1:26 The primary thing we are going to look at is something called
+1:28 list comprehensions and something very closely related to them 
+1:32 called generator expression.
+1:34 These two pythonic concepts allow you to take 
+1:37 what would otherwise be loops and condense them down into much shorter, 
+1:40 more concise types of set based operations, 
+1:43 in some sense it will move from procedural programming to declarative programming.
+1:47 We also get to look again at the string and representation magic methods, 
+1:50 string parsing, we'll specifically look at the csv file format 
+1:55 but this concept could be applied to many different types of formats really, 
+1:59 somewhat like we saw in app number 8, 
+2:02 we'll be able to use these generator expressions and data pipelines 
+2:05 similar to the way we did for generator methods. 
+2:08 You can think of generator expressions as 
+2:11 simplified inline generator methods if you will.
+2:15 Finally, we will get a chance to look at a challenge 
+2:17 of writing code that has to run on both, 
+2:20 on Python 2 and Python 3, as you saw, 
+2:23 we are talking about averages and there is a nice statistics module 
+2:25 that was introduced in Python 3.4, it is not available in Python 2, 
+2:29 so what will we do there? Well, you'll see that we can write the same basic code 
+2:32 and just adjust our imports and make it work.

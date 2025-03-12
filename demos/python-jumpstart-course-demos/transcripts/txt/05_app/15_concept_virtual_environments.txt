@@ -1,0 +1,76 @@
+00:0.04 Let's talk about virtual environments one more time,
+00:1.96 and I specifically want to cover how the Windows version is different,
+00:6.39 specifically different than doing things on Mac and Linux.
+00:9.71 They're both great. They both have the same concept in the same functionality,
+00:13.19 but because of the way the shells work, mostly, and the way that Python gets installed,
+00:17.46 partly, you gotta issue slightly different commands.
+00:20.94 They're very easy once you get used to them,
+00:22.45 but at first it can be a stumbling block.
+00:24.63 Okay, so let's review the Linux and Mac OS version.
+00:28.45 So what we're gonna do is we want to create a virtual environment in our top
+00:31.89 level project, the top directory,
+00:34.39 the root level directory of our projects.
+00:35.88 Sp we say "python3 -m venv",
+00:38.68 so the "-m venv" means run the command within Python 3, and then the
+00:42.27 orange "venv" is the directory name.
+00:44.33 So those happen to be the same by convention
+00:46.62 most of the time, they don't have to be.
+00:48.64 Once that happens, it's created,
+00:50.42 but you don't actually have access to it yet.
+00:52.81 You have to activate it. So you have to say "dot", meaning apply to this shell,
+00:56.99 or source, and then "venv/bin/activate".
+01:0.04 That's going to change things about
+01:2.74 Python, it's going to change the path,
+01:5.36 it's going to change the prompt,
+01:6.79 and when you run things like "pip List",
+01:8.39 you'll see you no longer have the entire system,
+01:11.36 whatever is installed for the Python there.
+01:13.18 You just have a fresh, empty Python,
+01:15.75 and the only packages it has are the tools that you need in order to install
+01:20.04 more packages. Pip and setuptools.
+01:22.15 And then we can ask "which python" and it says
+01:24.64 "It's the one here in this project".
+01:26.95 So it's header's a project directory called "weather_app",
+01:29.64 You'd see it's the one in "venv/bin/python" and then off you go
+01:33.77 to install various things. One thing you might consider, didn't happen this time because Python
+01:38.82 3.9 was just released, but often what happens is pip itself is out of date
+01:42.92 and any time you try to use pip,
+01:44.84 it'll complain to you that it's out of date.
+01:46.55 This is like 80 - 90 percent of the time you're pip is out of date.
+01:51.08 It's not worth going into why that is,
+01:52.31 but when you create a virtual environment,
+01:53.82 just get in the habit of always upgrading your base level tools,
+01:58.04 pip and setuptools, so you're working with the latest one as you install other
+02:1.54 things. So here's what you do on Mac OS and Linux.
+02:4.74 This two parts right there are mostly, it's basically where it varies
+02:8.85 for Linux versus Windows. Sometimes the python 3 versus python varies,
+02:14.84 but that depends on how you set up your Windows machine.
+02:16.95 Speaking of windows, over here, same thing.
+02:19.3 Probably you just run "python -m", depends.
+02:22.79 Then, once we create our virtual environment,
+02:25.08 we don't activate it with the dot, We omit the dot and instead of the
+02:28.88 bin folder, there's a scripts folder.
+02:31.08 So you say "venv\scripts\activate" why there's a difference there,
+02:34.71 they haven't unified those things, I have no idea because it seems trivial to do
+02:38.99 so, but they haven't done it for years and years,
+02:41.43 So this is how you do it in
+02:42.23 Windows. Just remember, not bin, scripts,
+02:44.52 pip list, exactly the same.
+02:46.63 Once you've activated it, your prompt changes,
+02:48.52 it has the venv
+02:49.44 in there again. Now you can't ask which on Windows,
+02:52.39 That's not a command, but a command that does work on command prompt is "where".
+02:56.56 So here you get the same basic answer.
+02:59.34 It's the version of python in the virtual environment Windows style.
+03:2.19 So scripts folder, python.exe,
+03:4.21 you'll also see other pythons. But when you type python,
+03:7.01 it's going to show, the where command shows
+03:8.56 you all of them in the path, you're going to run the first one that's
+03:11.75 found in the path, which is the blue one from the virtual environment.
+03:14.97 Again, you want to upgrade pip and setuptools for exactly the same reason.
+03:18.43 So the big difference, these two. Remember,
+03:20.91 it's no dot, scripts not bin,
+03:23.5 and then "where" instead of "which" Python. That's it,
+03:26.64 they might seem like a bit of a stumbling block it first,
+03:28.62 but trust me, once you get used to them,
+03:30.44 you just do it the way that you do it on any OS and off you go.

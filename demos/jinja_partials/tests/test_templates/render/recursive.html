@@ -1,0 +1,11 @@
+<div>
+    This is an outer partial. The main message is:
+
+    <div>{{ message }}</div>
+
+    <div>
+        Here is some more content:
+        {{ render_partial('render/recursive_inner.html', nested_value=inner) }}
+    </div>
+
+</div>

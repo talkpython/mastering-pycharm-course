@@ -1,0 +1,10 @@
+[project]
+name = "podcast-collector"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.9"
+dependencies = [
+    "flask>=3.1.0",
+    "httpx>=0.28.1",
+    "jinja2>=3.1.5",
+]

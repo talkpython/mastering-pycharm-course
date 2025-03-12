@@ -1,0 +1,88 @@
+ 0:00 So we basically have a working game here, 
+0:03 I guess one final thing to consider is what happens 
+0:05 if there are no more creatures, 
+0:07 so we can come down here and add one more part after this section here 
+0:10 and say if not creatures 
+0:14 and we'll leverage the implicit truthiness of collections, 
+0:18 this is a list of creatures, if it's empty, it'll be false. 
+0:21 So then we'll say print, something like you defeated all the creatures, 
+0:25 and then we'll just exit, like so, let's just test that super quick, 
+0:31 I'm not sure we'll be able to defeat the evil wizard of 1000 
+0:35 so let's just there is a theoretical chance but- it's not so high, 
+0:40 so let's go over here and just comment out the wizard for just a minute, 
+0:44 so here we can attack all the creatures, 
+0:47 how many are left- oh, it looks like we defeated all the creatures, 
+0:50 well done, game over, perfect. 
+0:52 So our game is working, but it's kind of blunt and basically 
+0:58 the only factor we have to consider here in the entire game play is that number, 
+1:03 what is the level of our creature 
+1:06 and what is the level of our wizard and then its randomness. 
+1:10 Do you feel like a fighting a toad should be equivalent of fighting the dragon 
+1:13 or fighting evil wizard should be the same as fighting a standard like bat, 
+1:18 probably not, not only do they have different ways to fight 
+1:22 but the properties that you would take into consideration 
+1:25 around how they would fight would be different, 
+1:29 maybe a toad's worthiness would have some sort of factor there 
+1:33 and if a dragon had scales maybe you would consider 
+1:36 like how thick his scales were 
+1:38 or if he was a fire breathing dragon or something like this. 
+1:41 But if we just use our creature class let's go over to that
+1:45 if we just use our creature class here,
+1:47 it doesn't model scales or worthiness or whether it breaths fire, 
+1:52 it simply is the most common denominator thing that models all creatures, right, 
+1:58 they have names and levels. 
+2:00 And that's exactly what we want we want to have this sort of commonality 
+2:03 so regardless the type of creature we are fighting, we can just use that, ok. 
+2:09 So let's add 1 more feature that will give us a little flexibility
+2:12 to this creature class and then we are going to look at 
+2:15 how we create other classes based off of creature 
+2:17 and use inheritance and polymorphism in that kind of thing. 
+2:22 Let's add a method say def and we'll say get_defensive_roll() or something like that. 
+2:32 Now up here we just had the creature do the roll directly here 
+2:37 but rather than do this let's comment this out, 
+2:41 and let's say we'll go to the creature and we'll say get_defensive_roll(),
+2:45 and it's up to the creature to take all of its attributes into account, 
+2:49 if it's a dragon, let's think about its scaliness,
+2:51 if it's a toad, it's worthiness or whatever, right, 
+2:55 we can make our game behave exactly the same 
+2:58 if we just use sort of the same algorithm, we randomly compute our 1 to 12 number, 
+3:04 that's throwing a 12 sided dice and then we are going to multiply that by the level, 
+3:08 and that's what the base creature does, 
+3:11 but maybe we'll do something different for a dragon, 
+3:13 if we can invent this idea of a dragon and so on. 
+3:16 So let's just make sure we can still play the game, 
+3:19 so we are going to look around and we see a level 1 toad so let's attack it, excellent, 
+3:24 toad rolls 2 let's look around again, 
+3:30 now we see the evil wizard let's attack it just to see that it's throwing something high, 
+3:33 oh we've been defeated, it rolled 5000, 
+3:37 of course we've been defeated. 
+3:40 So now let's go back and think about our creatures here. 
+3:43 We want to categorize these different things,
+3:47 these different fighters into more specialized versions of creatures, 
+3:52 so maybe a toad and a bat maybe we would actually want 
+3:56 to call these like small animals here, 
+3:59 so let me just sort of sketch this out, 
+4:01 so maybe these would be something like small animals, and small animals let's see,
+4:06 small animals would have the same properties as the creatures 
+4:09 but maybe they would have some diminished sort of throw to save or as the tiger, 
+4:15 maybe this is a predator, dragon maybe this would be a dragon 
+4:20 and maybe to the dragon we could say scaliness = 20 or whatever 
+4:26 a scaliness factor is right 
+4:29 and that might be considered when the dragon is fighting, 
+4:31 if it has more scales it's even harder to beat 
+4:34 and then similarly maybe the wizard maybe it has some type of magic
+4:37 and it somehow takes that into account as well, right, 
+4:40 so maybe we put a wizard here, this isn't going to turn out really well for us, so far, 
+4:46 first of all we don't have small animals, right, 
+4:51 these are not a thing we are modelling, and we don't have a dragon, 
+4:55 let me just comment those out for a minute, we do have a wizard, 
+4:59 now if I try to run this it's probably not going to work so well, a wizard has appeared, 
+5:03 let's attack it; oh bam, the wizard doesn't have this concept of a defensive roll, Hum?
+5:11 all the creatures in our game are supposed 
+5:14 to sort of have this commonality of everything that is a creature
+5:18 and then some specialization in them. 
+5:20 So let's take a moment and look at this core concept 
+5:22 called inheritance that allows us 
+5:25 to sort of layer on this specialization and share attributes and behavior 
+5:29 across these different types of creatures in our game 
+5:32 and then we'll come back and add it to our classes.

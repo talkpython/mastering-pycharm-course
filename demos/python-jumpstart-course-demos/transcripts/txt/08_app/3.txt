@@ -1,0 +1,118 @@
+0:01 Ok, let's implement the actual search. 
+0:03 The first thing that we need to do is actually go to this folder and find all the files. 
+0:08 So again, our friend OS will help. 
+0:10 We can say OS.listdir() and give it a folder, 
+0:14 and here this is going to return all of the items in here so let's say items, 
+0:18 notice I am not calling them files because 
+0:21 sometimes they are folders, sometimes they are files. 
+0:24 So, we are going to do our loop, 
+0:27 we are going to say for item in items: and we want to check, 
+0:29 well if this is a folder we don't want to do this so we'll say if os.path.isdir(item ):
+0:36 we are going to not process this item but we want to keep going to the loop 
+0:40 and the perfect keyword for that is continue, 
+0:43 so basically go back to the top of the loop, 
+0:46 pull another item and keep going. 
+0:48 If it's not a directory, it has to be a file, 
+0:50 so then let's write a method that will just search the file, 
+0:53 so what we need to do is store the results, the matches somewhere 
+0:56 so we'll just say matches = search single file 
+0:59 and we'll give it the file and the text to search. 
+1:03 Now, one thing that we are going to want to be careful with 
+1:06 is when we say listdir this only gives us the file name,
+1:09 not the full path name so either way whether it's a directory or a file, 
+1:13 we need to do something like this, 
+1:15 we'll go full item = os.path.join() and remember, 
+1:21 we made sure that this is an absolute path 
+1:24 and then we want to join up the subitem, perfect, 
+1:26 so here we got the check full item 
+1:29 and down here we are going to pass full item, 
+1:32 somehow we are going to- we'll get the search method in a minute,
+1:34 somehow we got to do something with these and that's going to be 
+1:36 like a collection of some sorts, so let's say all matches,
+1:41 initially it's an empty list and I'm going to put some stuff into it 
+1:45 in the end we will return all matches,
+1:46 so here we are going to say something like this,
+1:48 if this was one item we would say append, 
+1:51 but if it's a collection we want to add the items from that collection individually here
+1:55 which is what we want, we'll say extend matches. 
+1:58 Cool, so last bit to make this work for round one is to implement this file, 
+2:05 so now we know this is a full path to a file name 
+2:08 so we'll just go with that 
+2:10 and here let's be a little more clear we'll call this search text. 
+2:13 The first thing to do is open the file so we'll just use our little context manager
+2:17 to make sure we close it under all circumstances 
+2:19 we'll say file name read only and let's treat this as text, 
+2:22 you'll see there are potential problems when we get into things like binary file, 
+2:26 so if I give it a folder and it just starts go through all of the subfolders, 
+2:29 what if there is like images in there or something,
+2:31 then we want to just go through each line in the file 
+2:33 and check it to see if the search text appears in it, 
+2:38 so it turns out that these file streams are iterable 
+2:41 so I could say for line in fin: and in a really nice way 
+2:45 just sort of smoothly stream over them without loading the whole file of them 
+2:50 in the memory as like an array of strings or something like this, 
+2:52 this is also going to be really key way to use these generator methods later on 
+2:56 but we are not there yet. 
+2:58 So the first question is we want to search to see 
+3:00 if this substring is in the line and we probably don't care about case sensitivity,
+3:05 or things like that, 
+3:06 so let's say if line.find- there is two ways to look for substirng, 
+3:11 I could say index or I could say find, 
+3:14 if I ask for the index and it doesn't exist it will actually throw an exception, but find, 
+3:19 we'll just turn negative one if it's not found, 
+3:22 so I'll search for search text and before we do 
+3:25 we want to create a lower case version of that string, 
+3:27 we'll say if the return value is greater or equal to zero 
+3:31 so they actually found find found the substring. 
+3:35 The other thing we got to do is make sure that this is lower case, 
+3:38 we could do that once above here instead of every time we had a file, 
+3:44 so let's do something like return text.lower(). 
+3:47 Cool, so if this is the case let's for now just somehow collect up this line of text, 
+3:53 we are going to see that this is not the ideal way to do this
+3:55 and we'll fix it just in a moment, 
+3:57 but let's come over here and create a little submatches, 
+3:59 matches just for this file, and that's the case we'll say append and we'll just, 
+4:05 for now this is not the final answer, 
+4:07 we'll just append the line of text that we are going to match. 
+4:11 And in the end we'll return matches. 
+4:14 So a very limited version of our search is I think working,
+4:19 let's give it a test so we want to come to create a list to store all of our matches,
+4:22 we are going to get all of the directories and files in the current folder, 
+4:28 we'll go to them, we'll build up the full path which is to join the full path
+4:33 with just the names of the subitems, 
+4:35 then we'll see if it's a directory for now we are going to skip it, 
+4:37 if it's a file we'll search it and if there is a match, 
+4:40 we'll add those in there if it's empty then it will just have no effect. 
+4:43 Awesome, let's go and try to run this. 
+4:45 So on my desktop I actually have some files here that we are going to go search, 
+4:49 and let's see, if we go to some classics like you can see we have Dracula, 
+4:53 The Adventures of Sherlock Holmes, things like that, 
+4:56 now this is the full text of the Sherlock Holmes book 
+4:59 and I got this from Project Gutenberg and there is a bunch of other ones, 
+5:03 we'll go through in a little bit, but these are actually the full files 
+5:06 so you'll see this is 160Kb that's 777 Kb of text that is a beast of a book, 
+5:14 Ulysses is 1.5 Mb, so we are going to go through all of these files here, 
+5:20 notice we are not going to get into the classics yet, 
+5:23 because we are just looking at the files. 
+5:26 We are skipping a case where it's a directory, 
+5:29 so let's go and search here, right, 
+5:31 so we are going to search that books folder which is full of those text books 
+5:36 and the phrase we want to search for is let's say "friends", 
+5:42 we'll that's pretty fantastic, 
+5:43 except for we forgot to print out the results, let's do that really quick. 
+5:53 Ok, so we'll capture the matches and for each one int here we'll just print this out. 
+5:56 Try again. 
+5:57 Search for friends and you can see we found some results, look at that. 
+6:02 So we went through all the various text files and we have printed them out, 
+6:05 now this is not a very helpful answer, 
+6:07 but at least you can see that it's working. 
+6:11 Let's just do a little bit of a sanity check, 
+6:16 "And Harry of the six wives' daughters and the lady friends from-"
+6:17 "Your friends are inside,"
+6:19 remember, we are just doing substrings, so friends, 
+6:21 if we had searched for friend it would also find friends, 
+6:23 we are not doing anything fancy it's just substring, 
+6:26 but it does look like it's working, 
+6:28 now what line in what book did that appear in? 
+6:31 I have no idea, so our next job is to fix that so we actually return 
+6:35 more information about our search.
