@@ -1,0 +1,70 @@
+0:01 So let's jump over here to Windows 10 for a minute, 
+0:04 and continue working on our app, 
+0:06 and the reason I want to come over to Windows is 
+0:08 I want to explore this performance problem 
+0:10 and the tooling on Windows is super good 
+0:13 for understanding the performance characteristics of individual applications 
+0:18 rather than system wide. 
+0:20 So, we are going to change the problem space a little bit, 
+0:22 we have been previously searching this books folder, 
+0:25 and if you go look at the properties you will see that's about 5MB of text, 
+0:30 that's a serious quantity of text 
+0:32 and it's blasting through ti so that's already impressive, 
+0:35 but let's look and differ them out. 
+0:36 Here we have some more books but now we have 2.27 GB of txt files, 
+0:42 that is a ridiculous amount of text files. 
+0:46 You'll see that if we try to search that content, 
+0:48 well the app actually does surprisingly well, 
+0:52 it really does go through and it finally has results and so on, 
+0:54 but if we leverage this concept of generator methods and related things 
+0:58 that will build on other applications further down the line, we can actually do amazingly better, ok, 
+1:04 so just to make sure everything is working on Windows, 
+1:08 let me just search the same stuff here, 
+1:12 ok so we want to search c/users/mkennedy/desktop/books 
+1:16 and let's search for "incredible". 
+1:20 Excellent, so it looks like we've found some inverness to from incredible age... 
+1:25 right, Ulysses, A Dolls' House, not too many results there, 
+1:30 but you can see it's working. Fantastic, 
+1:32 now I happen to know from trying this earlier that we need to change this output here 
+1:38 and in fact if we print out all of this it's going to be so much output 
+1:44 when we go through the 2 GB of files that it actually causes the problems,
+1:48 the significant part of the performance is literally that print right there, 
+1:53 so instead of doing this we are just going to go and do a count, 
+1:57 so we'll say match count, now right now this is a list 
+2:03 and I could just do len of list and just print that out 
+2:07 but it's going to turn out when that this becomes a generator, 
+2:12 len of generator doesn't mean the same thing, 
+2:15 so let me just independently keep track of the count, 
+2:17 and we'll just say something like this, and let's put a little comma separator 
+2:22 and we'll do .format and match count. 
+2:24 So let's run this one more time, ok, 
+2:27 same place let's search for "funny" and apparently we've found 
+2:33 33 matches of the word "funny" and the 5 MB of text 
+2:38 that was really quick, that's awesome, right. 
+2:40 But they just sort of push a little bit harder in the performance perspective,
+2:43 let's search the 2.27 GB of text and we are going to search for something, 
+2:48 maybe question mark. 
+2:51 So let me introduce you to process explorer, 
+2:54 so process explorer is kind of like task manager, activity monitor,
+2:57 from OS X but it gets a ton of information both visually 
+3:03 as well as so things like performance counters on windows 
+3:06 to tell you what is going on with the apps, and it lets us, 
+3:10 here is our Python app that is waiting for us to hit go, all right, 
+3:13 here we go, our app goes, here is our sort of operating memory down here
+3:17 and it's dropping into the distance 
+3:19 so it turns out that searching for question marks in this file 
+3:24 there are ton of them so we are building them up into our list
+3:27 as we are recursively going through these files on disk. 
+3:31 You can see it's pretty computational heavy, 
+3:34 pretty IO intense but really the memory is just growing and growing, 
+3:39 you'll see that when we get to the talking about generators 
+3:41 that maybe this is not the way this app has to behave, right,
+3:45 we can actually incorporate very minor changes into our app 
+3:49 and get dramatically better performance at least from a memory perspective.
+3:59 All right, our process has finished 
+4:00 and we found 2.7 million question marks in those files, 
+4:06 and look at the memory, 
+4:08 this is not the most amazing outcome that we could have had. 
+4:11 It turns out it took almost 400 MB the way we implemented our algorithm, 
+4:17 and depending on the how we hold the data or the size of the data,
+4:20 it could be even worse.

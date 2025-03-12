@@ -1,0 +1,24 @@
+0:00 Here you are at the end of the class, you've made it through all ten applications, 
+0:04 I hope you really enjoyed your time learning Python 
+0:07 and found this to be a really productive and engaging way to learn. 
+0:12 I want you to congratulate yourself, 
+0:15 stop for a moment and just think about all the stuff that you have learned 
+0:18 because if you have built all these ten apps
+0:21 you've come a long way, there are many things that you've learned 
+0:24 and we are going to go back and review them in this short final session. 
+0:27 If you just put it all on the screen at once, 
+0:30 and look at what you've learned it's a ton, 
+0:32 every single point here is pretty big topic so one of these is file I/O 
+0:38 another one is classes, and inheritance, and screen scraping and generators 
+0:43 and just all of this stuff you guys have seen in action and hopefully, 
+0:47 became at least familiar and comfortable with if not have mastered it yet, 
+0:52 but you have a really good foundation to go and become a Python web developer
+0:57 or data scientist using the Python tools 
+1:00 or whatever it is that inspires you and you need to go build. 
+1:03 Now before you go, make sure that you've grabbed the source code 
+1:07 I am sure that you probably have already got this from going through the course, 
+1:11 but go to github.com/mikeckennedy/python-jumpstart-course-demos 
+1:16 with dashes separating it, and you know, 
+1:18 start the repository or bookmark it, something like that, 
+1:21 I want this to be a resource you can come back to 
+1:24 as you learn more throughout your Python career.

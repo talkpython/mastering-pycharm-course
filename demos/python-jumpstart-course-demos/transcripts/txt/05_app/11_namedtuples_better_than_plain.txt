@@ -1,0 +1,52 @@
+00:0.14 Now, there's a problem with these tuples that we're returning here and let's go back
+00:4.32 and actually put this into a variable for a minute
+00:6.63 as we saw say this t tuple is this.
+00:9.35 Now when we go to it,
+00:11.12 notice it knows it's a tuple because you can count how many things are in
+00:14.18 it and so on. And the way you access it is kind of like a
+00:16.57 list or something. So you could say,
+00:17.9 "Give me the country would be that, the state would be this, and the city would
+00:22.33 be that". Well, that's not at all obvious that it's city, state,
+00:26.11 country. What if it was city,
+00:27.94 country, state? Because state is optional.
+00:30.24 There's no communication here about helping us with this,
+00:33.37 Okay? So this is a real big drawback of these tuples and passing them
+00:36.69 back like so. They don't know what goes where.
+00:39.54 So Python has a couple of mechanisms, or a couple of data structures, that make this
+00:43.36 way, way better. We could use classes which require a lot of stuff for
+00:47.9 us to talk about. But if you're looking for just a short,
+00:50.17 sweet little thing like this, what we can do over here, is we go over here and
+00:53.6 say "import collections" and then we can define a special tuple that gives it extra
+01:0.36 properties. So I can say a "location = collections.namedtuple()"
+01:5.57 and notice the first thing we put us the type name,
+01:8.01 which should be the same as a variable name,
+01:10.45 right? So this is what we program against,
+01:12.52 and this is what it thinks its own name is,
+01:14.16 so they should be the same.
+01:16.14 And then here we just put what we think it has:
+01:18.27 city, state, country, and the order here is the order
+01:22.17 you specify them. So watch this.
+01:24.23 We can go over here and use this type down here. Instead of passing back a
+01:28.93 regular tuple, we would say do the same thing,
+01:32.0 but notice the location is gonna take a city, state, country, so we could do like
+01:36.46 this. There's the location, and I wanna leave this here for you
+01:40.5 so you have it. But let's say, we're going to return a
+01:44.36 location like that, and advantage just to tie it back to this example up here,
+01:49.22 now we say "t2.", look, country, state, city.
+01:53.24 It knows the things that it has,
+01:55.24 doesn't matter what order they're specified in the tuple, you address them by name,
+01:59.04 not by order, which is way,
+02:0.82 way better. So I'll just put "t2.city" and comment those out
+02:5.52 so you have it left in code there.
+02:7.54 Alright, so when this comes back,
+02:8.79 we could still do this trick of unpacking it,
+02:11.78 but let's just go down here and say location again,
+02:16.0 and now we can print out location,
+02:18.76 which is gonna be looking nicer as well.
+02:22.54 See, it's location, the city is
+02:23.91 Portland, state is Oregon, country is USA.
+02:26.39 So these named tuples make it much easier for us to come back here and program
+02:30.1 against. We know it has a city, country, and state.
+02:32.29 It doesn't matter the order and so on.
+02:33.82 So, really, if you need to pass multiple things back from a function,
+02:37.84 tuples and tuple unpacking is cool, but named tuples are probably what you actually want to work with. 

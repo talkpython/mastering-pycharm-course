@@ -1,0 +1,131 @@
+00:0.14 The final step here is to report the weather,
+00:1.98 but in a nice way that users went to see that they expect. So instead of just printing
+00:7.17 out this random data structure, we're gonna go and do a print statement.
+00:11.16 So I'm gonna say print, little
+00:12.79 f-string, the weather and just put little curly braces there for some for a bit because
+00:19.22 we don't have it done yet, in some location,
+00:21.41 like Portland, is so many degrees,
+00:24.47 whatever the scale, Celsius, Fahrenheit and the condition is cloudy or something along those
+00:30.21 lines. Take that away just for a minute
+00:32.17 so it doesn't crash. So what we need is to get stuff like the location.
+00:36.46 So it would be easy to think we could just put like the location there,
+00:42.07 but remember, the location is this data structure,
+00:44.32 and it'll look weird. And it will say that the state is None some
+00:48.44 of the time. So what we need to do is get some location
+00:50.75 text. Let's say location_name,
+00:55.04 so get location name and we'll pass the location.
+00:59.68 Let's write this little bit here.
+01:4.04 And really, it all comes down to whether or not we have the name of
+01:7.66 a state or no state. So we'll say,
+01:9.12 "if not location.state"
+01:11.86 So there is no state specified then we just want to return a string that
+01:15.93 says "location dot city comma location dot country".
+01:22.05 Now there's a small problem here,
+01:23.77 It's gonna be lower case city and lower case country because we converted it that way,
+01:27.61 remember? We did all that lower stuff to canonicalize
+01:30.48 it to make sure we always sent the lower case thing to the server?
+01:33.87 Well, we wanna undo that.
+01:35.24 So now we can say "capitalize" here on this one.
+01:39.39 And then the country, remembers it was a two digit code which probably just wanna make that upper
+01:43.95 case. Now, if it's not the case that there is no state,
+01:48.02 so there is a state, we just want to add it in there,
+01:50.53 and it's gonna look like this because the state is an abbreviation as well,
+01:54.8 so we'll just put state there,
+01:56.84 and that's it. So let's just print out, comment that out for just a minute, on
+02:1.64 the way, location name.
+02:3.84 If I say, let's say Seattle,
+02:7.12 Washington, US, The weather in, look at that,
+02:10.6 Seattle, Washington, US. fantastic.
+02:14.06 Alright, So what else?
+02:15.15 What else do we got to do to make this work?
+02:16.69 Over here We have It's the temperature.
+02:20.24 So we're going to say the temp is easy.
+02:23.26 That's just "weather.temp" and the scale,
+02:26.43 let's just put it for a minute "f",
+02:28.13 we'll fix it in a second,
+02:29.84 let's say temp, scale, and then the condition as
+02:33.45 well, gonna be "whether.condition".
+02:38.23 Now, some of these we could actually just in line them like We don't need
+02:40.89 a separate thing for this, I guess,
+02:43.17 probably for the temp, either.
+02:44.98 But for the scale, we're gonna need some help.
+02:47.47 Let's go ahead and run this. See what we get.
+02:48.9 Make sure it's working. Boston, the weather in Boston,
+02:52.07 United States, is 53°F, clouds and overcast clouds.
+02:57.46 And I think in this condition where we created that,
+03:2.24 we'd already put a period. I didn't want the period there
+03:4.69 I don't think like there. Try one more time.
+03:7.76 Boston. Look at that. Perfect.
+03:10.35 The weather is 53.29°F.
+03:14.14 The last thing that actually make this legit is to determine whether that's an F or
+03:18.67 a C. And that's actually one of the easiest things we've done.
+03:21.11 So let's go over here and we'll just say "if whether.units equal imperial else
+03:35.53 the scale is C". So let's change where we're calling that just to make sure if
+03:42.21 we put metric over here, we should get the right answer.
+03:46.82 Boston and you spell it right,
+03:50.14 Boston, here we go. But are we, we are not getting right here,
+03:55.2 are we? Let's see. And I think that's because when we called this,
+04:2.0 I hard coded that into two places,
+04:3.81 which is never a good idea.
+04:5.64 But down here, we just wrote
+04:7.79 this right. So I think we wanna put units in here and pass it over.
+04:12.14 We don't have to pass it.
+04:16.96 It's with the data. So here we just do "data
+04:20.43 dot get units". Alright,
+04:23.1 try again. Boston. Look at that! See, now if we go and just change this to Imperial
+04:32.18 and Boston again, perfect. There it is.
+04:35.44 Our little scale is being shown. We can do one more thing on the scale to make
+04:39.13 it nicer. It would be better,
+04:42.06 I think, if this happened on its own place.
+04:44.78 So we can come over here and make a method called "get scale",
+04:50.14 something like that. This writes
+04:51.83 this little function so we don't have to worry about in-lining that, makes our
+04:55.69 code up here much simpler. Okay,
+04:57.54 so we're pretty much there. We can trim up some of those comments.
+05:0.24 Like, do we need to say show the header? show the header.
+05:2.89 No, those basically say the same thing.
+05:5.48 Convert Plain text, says the same thing. Call the weather
+05:9.0 API. Report the weather. This could even be a function that we create if
+05:12.92 we want called "report weather" that might be cool.
+05:17.44 Create a method called "report weather".
+05:20.84 Here we go. And now how much,
+05:24.84 how many comments do we need? We've got show header,
+05:26.93 what do you want to do, convert to plain text, call the API,
+05:29.71 report it. Super, super clean way to have our program working here.
+05:34.74 There's one final piece that we want to take care of to
+05:38.59 really put a nice cherry on the top.
+05:40.77 Now check this out. If I type Boston and miss the T, Boston,
+05:44.71 something crashed. This came back as "None"
+05:48.35 and we tried to get the units which made it crash right there in the get
+05:51.52 scale. What we need to do is there's a couple places like if they don't
+05:57.12 pass the, we were not able to create the location,
+06:0.12 right? They passed in nothing or something, we want to print
+06:3.54 "Could not find anything about
+06:8.24 the location" location, text
+06:11.36 let's say. Like that, and then return.
+06:15.04 Right. So now if we come in here and we just hit enter, couldn't
+06:18.4 find anything about that. There's also the same things happening right here.
+06:21.8 So if not whether, if it comes back
+06:23.59 as none, we'll say "could not get the weather for this place from the
+06:31.67 API". Now, if I put "bos", somewhere
+06:35.05 we're still printing that out, right?
+06:36.21 But it says could not get the weather for bos from the API,
+06:38.59 but if I do "Boston", perfect,
+06:42.64 that works. We got one stray print in here before we call it, totally good,
+06:49.84 maybe we want to keep it there,
+06:51.2 maybe we don't, right probably belong in some kind of logging or,
+06:55.23 I don't know, we could get the status code and try to make sense of
+06:58.17 that and so on. But I'm just gonna put it like this and call it
+07:0.5 done. So even though it sounds like quite a big deal,
+07:3.7 what we've done is pretty straightforward,
+07:7.14 right? We just do a little bit of string work to get the data in
+07:10.04 the right format, we call the weather
+07:12.16 API using requests which we've installed into our virtual environment using pip,
+07:16.24 and then we just take that dictionary data that came back and put it over and
+07:20.39 here, we just call request.get, make sure it was successful,
+07:23.96 JSON, and we're done. Beautiful.
+07:26.64 This is a really, really cool app,
+07:28.28 and I would consider it a real app.
+07:30.36 It has really error handling, it has real behaviors, super cool.
+07:35.11 Working with live data off of a
+07:37.31 live API, gotta love it.

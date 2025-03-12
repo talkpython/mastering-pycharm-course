@@ -1,0 +1,7 @@
+alembic
+flask
+mongoengine
+passlib
+progressbar2
+python-dateutil
+sqlalchemy

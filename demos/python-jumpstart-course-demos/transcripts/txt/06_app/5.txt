@@ -1,0 +1,60 @@
+ 0:00 So our cat app is basically working, 
+0:03 the last thing we need to do is display the cats to the users. 
+0:06 Now we were looking to them over here in PyCharm 
+0:09 but obviously the users won't be running this in pyCharm 
+0:12 and we do kind of say hey we downloaded your cats 
+0:14 but let's show them to them. Now we have to keep in mind
+0:17 we are working in a terminal app 
+0:19 so we kind of can't really show it like on a cool web page or in some kind of window,
+0:24 the best I think we can hope for is maybe showing 
+0:27 the finder window or the explorer window 
+0:30 and letting them browse with the operating system file browser. 
+0:32 So the last thing we are going to do is write this display cats method, let's do that. 
+0:37 And the only thing we are going to need to know is 
+0:39 what folder do we have so let's go write this at the bottom, 
+0:43 and we'll define this method we'll say pass just for a second, 
+0:46 now let's think how do we open the finder window 
+0:49 so it turns out that you can just type open and give it a folder name 
+0:54 so you could like type open. in the terminal, 
+0:57 in OS X that would launch the finder window in whatever window you are at. 
+1:01 Now on Windows, that doesn't work, you have to say start. 
+1:04 and that would then launch the Windows Explorer 
+1:08 to that location as well and in Ubuntu
+1:12 neither of these work you actually do xdg-open 
+1:15 and then the folder so something like . to open the current one. 
+1:19 We can run these three programs 
+1:22 and let's go ahead and write it just for OS X first 
+1:24 since that's what I am on, 
+1:26 and then I'll show you how to actually determine 
+1:29 what platform we are on and choose the right commander run based on that. 
+1:32 So the command we are going to use is open folder, 
+1:35 something like this, we want to call this open process, 
+1:39 we want to launch another process from our application 
+1:42 and we do that with the sub process module, 
+1:45 now like all of these modules we have to import them, 
+1:47 PyCharm will do that for us thank you very much, 
+1:49 and then it has a call() method, 
+1:51 and call takes you can see there is a few options here, 
+1:55 call takes an array strings, 
+1:56 the first string is going to be the name of the program,
+2:00 the second one is going to be the argument 
+2:02 that we are going to pass to open 
+2:03 so we just say open, folder and that should do it, 
+2:06 let's test it out and maybe put a little print statement here
+2:09 just to say displaying cats in OS window 
+2:14 so let me come out of full screen 
+2:16 so this doesn't look weird when it launches, 
+2:20 boom, there are some cats check that out, 
+2:22 let me make them a little bigger for you, oh yeah, 
+2:25 those are good cats there has been a failure on the internet, 
+2:27 of course there has right, so we can sort of flip through our cats like this, 
+2:31 I kind of like the dune cat, he is a good one. 
+2:34 So we've successfully displayed our cats to the user, 
+2:37 granted we have pretty simple mechanism for that 
+2:40 because we have a simple terminal app, but nonetheless, pretty cool, 
+2:43 it shows you how to work with sub-processes, in an incredibly easy way. 
+2:47 Now the last thing to do is to say well, if I run this on Windows, 
+2:50 or I run this on Linux, 
+2:53 this is not going to work so well, 
+2:55 let's actually take it and run it on Linux and watch it crash 
+2:58 and then we'll fix it over there.

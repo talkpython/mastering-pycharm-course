@@ -1,0 +1,53 @@
+00:0.14 Before we get into writing the code that goes behind each one of these steps,
+00:3.7 let's do just a little bit of organization.
+00:5.61 Remember, I always like to structure my program with a main method that has the
+00:9.27 high level steps of what it's going to do right the top.
+00:12.11 So let's write that, and we'll put these steps here. Now, notice there's a little error
+00:17.35 right there, if I make it go up
+00:18.94 it'll probably move to the bottom.
+00:20.2 No, it still stays there. The error is that the main method doesn't actually do anything yet,
+00:24.88 so let's just make it do something.
+00:29.84 "Hello from weather main". Okay,
+00:31.39 so now there's a meaningful main implementation here so that the structure of the Python code
+00:36.65 actually works. However, remember,
+00:38.82 if we run it, there's no output.
+00:40.65 What happened to our "hello weather main"? So that's because we're not actually calling it, right.
+00:45.22 That's just defining a function that if it were to be called,
+00:48.2 it would say "hello from weather main".
+00:49.72 So if we call it like this,
+00:50.87 that's great. However, this will not allow us to reuse the functionality of this
+00:57.06 script or this application. So,
+00:59.01 like get a report from the API?
+01:0.74 Nope. We will not be able to use that function because if we import this,
+01:3.3 it's going to actually, as part of the import statement,
+01:6.55 processing, is going to run this.
+01:8.19 So, recall there's this convention, "if __name__ == '__main__'"
+01:14.51 that means it's being run explicitly,
+01:16.56 not imported, so we should do the same thing.
+01:19.34 But if somewhere else we import it,
+01:20.77 it'll just define the functions and not try to run the program.
+01:23.78 This actually is so common, this convention right there,
+01:27.84 in most real Python programs, that PyCharm actually has what's called a "live template"
+01:33.94 for it. So if I type the word "main"
+01:36.49 you can see there's this thing that's a function,
+01:38.5 that's just what I wrote above,
+01:39.53 but there's another one down there with a little hint that's like "if name equals main"
+01:43.47 hmm, maybe that's interesting. So if we hit Tab here it's going to expand that,
+01:48.47 that live template will expand that, and then we can call the actual function we're
+01:53.13 looking for, Okay? And it doesn't matter what this is called. This could be called
+01:58.34 something like "entry point" or whatever,
+02:1.34 right? It just means if we're being run as a program, run the thing that
+02:6.39 we're thinking of as the top level.
+02:8.34 Here we go. Okay, So let's look over here.
+02:13.04 And if we look actually in the editor,
+02:16.34 you can see there's a whole section of these live templates for all the different languages.
+02:19.6 If you're doing SQL or you're working on Flask or you're doing Javascript but
+02:24.58 most relevant to us right now
+02:25.89 is Python. And down here you can actually see "main".
+02:30.74 So this is the template that we were expanding, and I actually went
+02:33.33 and created my own that will create the main method and write that. So I
+02:36.69 can just start from an empty file and type "F-main" so you can create new
+02:40.51 ones as you see fit. So,
+02:42.97 for example, the one I created would do this part right here.
+02:46.06 Saves me a little bit less thinking about it, just get started and go. So these live
+02:50.54 templates are super helpful, and now our program is ready to be run as an application. 

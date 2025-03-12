@@ -1,0 +1,51 @@
+0:00 So let's take a step back from application for a moment 
+0:03 and just open this empty file called play for play around, 
+0:06 where we can just play around with some ideas. 
+0:08 We'll do this for recursion but we also do this for our generator methods later. 
+0:12 Let's take a really simple case something like creating the factorial of a number. 
+0:16 Now remember, factorials are sort of iterative processes.
+0:21 The factorial written with like a number and an exclamation point right 
+0:25 so like let's say 5! = 120
+0:29 and the way that you get that is you take 5*4*3*2*1 
+0:37 and each step if I start here the thing I need to multiply is 
+0:42 the number minus 1 times the rest of the factorial 
+0:46 and then form here I need to multiply it by that smaller number minus 1 
+0:51 times the rest of the factorial 
+0:52 and I keep doing that until I get down to 1 and then I stop. 
+0:55 So this turns out to be really easily modeled with this concept called recursion. 
+1:00 So let's look at this in code 
+1:02 and then we'll look at this conceptually
+1:04 and we'll go back and apply this to our searching app. 
+1:07 So here we have this factorial function, empty, 
+1:10 but it's going to return the number which is the factorial 
+1:13 so here I have pre loaded the few, we'll compute 5, 3 and 11 factorial 
+1:18 and these numbers grow tremendously large in a hurry. 
+1:22 So remember the way you take the factorial, 
+1:24 is you want to take the number in this case we are going to have n 
+1:29 and we want to multiply it by the factorial of the smaller piece of the stuff to the right, 
+1:35 and we kind of keep building that up and it turns out that 
+1:38 we can say we want those factorial to be n times 
+1:42 and we can call the same method within itself with different parameters,
+1:46 so for this step from here is just going to be whatever that is times 5, 
+1:51 so n*factorial (n-1) now if we do it like this 
+1:54 we are going to end up in a stack overflow situation, 
+1:57 it's going to keep calling this function over and over and over 
+2:00 until it just runs out of space. 
+2:04 So once we get down to one we are going to stop 
+2:06 and we just say 1! is defined to be  1, 
+2:09 so we'll say something like if n is 1 return 1 
+2:15 otherwise we are going to come down here and do this we'll just say 
+2:19 return n*factorial (n-1) so let's run this, 
+2:25 now this one this should be 120,
+2:30 this one I know should be 6, this one should be huge, 
+2:35 I don't know what factorial of 11 is 
+2:37 but I know it is much larger than you expect, 
+2:40 so let's run this and see how it works. 
+2:42 Awesome, 5! is 120, 3! is 6 and 11! is some big number, 
+2:46 now we don't like to look at numbers like this, right, 
+2:49 we like separators,
+2:51 so we can actually do that by putting colon comma on all of these, 
+2:56 will make a difference on the small ones but on the larger one 
+2:59 you can see we now have separated those with digit grouping. 
+3:03 So this is a recursive algorithm, let's take a moment 
+3:06 and look at this as it's one of our core concepts.

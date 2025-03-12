@@ -1,0 +1,87 @@
+0:00 Hello my Windows friends!
+0:01 Let's get you all setup and ready to work on this class and build those ten applications. 
+0:06 And I have good news for you, until very recently,
+0:08 using Python on Windows has been actually fairly painful
+0:12 to get it setup and everything configured right,
+0:14 but with Python 3.5 the installer and the setup process is way better.
+0:18 So let's get to it.
+0:20 To get started you are going to need two resources on Windows,
+0:23 you are going to need to install Python 3,
+0:25 which you can get at python.org,
+0:26 and you are going to need to install PyCharm at jetbrains.com/pycharm. 
+0:32 Let's go over to Windows 10.
+0:33 Here is a brand new, completely fresh install of Windows 10 I just got form Microsoft,
+0:39 and I've opened up the various web pages we are going to be working with.
+0:42 First thing we have to do is install Python,
+0:43 and as I told you, there is no Python on Windows,
+0:47 if I open this up and I type Python, there is no Python.
+0:50 So, we have to download Python,
+0:52 and we want 3.5 1 or whatever the latest version of 3 is
+0:56 and I've already actually downloaded it
+0:58 so I won't click here, but you just click that, that's super easy.
+1:01 The other thing we need to download is PyCharm,
+1:03 so here is PyCharm, it actually comes in two editions,
+1:06 the professional edition, or the community edition.
+1:09 You can pick either for this class,
+1:11 the community edition is totally fine,
+1:13 the things you'll be missing are... you'll basically be missing on
+1:15 web development and database management features from the professional edition,
+1:20 and the community for straight pure Python has the same features as professional.
+1:25 If for some reason you don't want to use PyCharm,
+1:27 you want something more light weight,
+1:28 you can use Atom, at atom.io,
+1:30 Atom is from GitHub it's pretty cool, I really like this editor,
+1:34 you can see there is a little video here,
+1:36 I recommend you watch it, it's pretty hilarious.
+1:38 Sublime Text is also a super popular light weight editor,
+1:41 and I told you about Visual Studio,
+1:44 so you can get Visual Studio community edition this is now a free,
+1:47 full-fledged version of Visual Studio,
+1:49 and you can get Python tools for Visual Studio, plug this together,
+1:52 and you are doing pretty good.
+1:54 But, we are going to be using PyCharm in the class
+1:56 so that's what I will setup here.
+1:57 Let's start by installing Python.
+2:01 So I've got it downloaded, and I'm going to run it,
+2:04 now it has a couple of options in the installer,
+2:06 let's say if you are going to try to just type Python from the command line
+2:11 or other tools like "pip" for installing packages,
+2:15 you will probably want to add this to your path. 
+2:17 And let's customize installation just to see what we get, 
+2:20 we get documentation, "pip" which manages packages,
+2:22 we'll talk about that in our apps,
+2:24 and we have the test suite and "py launcher" is really nice
+2:27 and we don't need to install it for all the users.
+2:30 Let's go ahead and precompile standard library
+2:33 this will give us a little better perf, 
+2:33 I really don't like this big long folder here
+2:37 so this app data folder is hidden in Windows
+2:39 so it's kind of hard to discover where these are
+2:41 so I am just going to put a Python folder directly in my user profile
+2:45 and then, in case you want to have 64 bit or 32 bit version of Python
+2:50 or maybe different types 2.7, 3.5 you probably want to leave this specifier here.
+2:54 That seems like a good setup, let's go.
+3:02  All right, Python was set up successfully,
+3:03 let's close this and let's just find out,
+3:05 if I type Python --version which we should see 3.5 1 and... SURVERY SAYS? SUCCESS!!!
+3:11 Ok, Python is working, last thing to set up is just PyCharm.
+3:19 So the installer is just a standard Windows installer,
+3:21 just sort of yes your way through,
+3:23 it's up to you whether you associate py files with it,
+3:26 typically, I don't do that, but it's your call.
+3:29 Ok, it looks like we successfully installed PyCharm,
+3:32 that was easy, let's go and run it.
+3:34 Brand new, nothing to import, now,
+3:36 normally I would log in with my JetBrains account,
+3:38 but for this purpose I'll just evaluate it, say ok, that's great.
+3:43 The first time you launch PyCharm
+3:44 it will ask you what theme and keyboard scheme you want to use,
+3:47 I'll say Visual Studio keyboard theme,
+3:50 and I like my code dark,
+3:53 I have the editors dark and the code text to be light,
+3:55 so I am going to pick the Dracula theme,
+3:58 pick which ever you like, 
+4:02 and there you have it, PyCharm is up and ready to roll!
+4:04 this brand new version of Windows 10 is ready to build our 10 apps
+4:09 So without further ado... let's move on!
+

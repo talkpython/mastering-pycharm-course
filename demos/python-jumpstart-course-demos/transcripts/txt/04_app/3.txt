@@ -1,0 +1,108 @@
+0:00 Now that we have the structure of our app in place,
+0:02 let's start creating our journal. 
+0:05 So there are many different types of data structures 
+0:08 from various simple ones all the way up to rich hierarchy of classes 
+0:13 that we could use in Python to represent this, 
+0:16 so let's start simple here and as we get into more complex applications 
+0:19 we'll do something more new ones.
+0:22 So for our particular journal here 
+0:25 we are going to use just a data structure called a list.
+0:28 A lists just hold on to a bunch of pieces of data in particular order 
+0:31 you can access them in order it automatically grows, 
+0:34 so in Python we create lists like this. 
+0:39 Usually you will see it written like that, open close brackets, 
+0:42 that will create a new empty list, 
+0:44 you may also see it by calling the class name initializer like so,
+0:48 that mean exactly the same thing. 
+0:53 So here we have our empty journal, 
+0:55 and we are going to need to work with the data here 
+0:57 and we are going to work with the data there so let's pass this along, 
+1:02 I'll just go down here and make sure we can pass that data, like so. 
+1:07 Now for listing entries I'll just cheat for a moment 
+1:10 and we'll make this nicer but we'll just print it out like so 
+1:13 and for adding entries let's do a little bit of input 
+1:16 so we'll say something like this text = input(”type your entry”) 
+1:26 So we'll get this user input and we are going to put it into our data, 
+1:30 and the way we add a new item is we say append text 
+1:34 now we probably want to check this input to make sure that something is there 
+1:36 but let's just do this for a moment, want to list or add entry,
+1:40 let's list and see what it looks like, there is our empty list, 
+1:44 and let's add in new items say this is my first entry, 
+1:49 and now let's list it and see if it's there, excellent,
+1:51 there is my first entry, let's add another,
+1:54 say this doesn't look hard at all, woho!!
+2:00 Now we can list them again,
+2:01 so here is my first entry and this doesn't look hard at all 
+2:04 and Python even uses the same trick in the case 
+2:06 where we have quotes to put double quotes 
+2:08 to make it easier for us to understand, excellent. 
+2:11 You can see we are gathering our data, 
+2:13 obviously it won't persist across runs yet, that's coming up 
+2:16 but the other thing that is not nice is this is not how our user wants to see it,
+2:20 maybe a programmer but definitely not a user. 
+2:23 So, let's do something nicer on this part. 
+2:26 And that brings us to working with loops. 
+2:28 Now we could write a while loop and use a counter or something like that 
+2:32 that would be wrong, it would be what is called non Pythonic code.
+2:36 In Python we have a really nice way
+2:38 to work with collections and loops and those are called for-in loops 
+2:41 so we'll say for and then you name the particular 
+2:44 instance of the piece of data you are taking from the collections 
+2:47 so I'll call it entry in data and write it like this, 
+2:51 so for item in collection like so, 
+2:54 and now you just work with it, 
+2:56 so let's say we'll just print it out for a moment, 
+2:58 so we'll just say print(entry) and let's make it kind of obvious what is going on, 
+3:02 so we'll say something like your journal entries, and let's run it again. 
+3:07 Start by listing them, your journal entries, 
+3:09 there are none, great, let's add, say entry 1, add another entry 2, 
+3:15 and now let's list them, ok, your journal entries, entry 1, entry 2, very cool ha.
+3:20 Now, there is a couple of things we might want to do, 
+3:22 we might want to change the order so we see the newest ones first, 
+3:26 that's not the way paper journals work 
+3:29 but that's the way a lot of digital ones would work, 
+3:31 so let's come over here and we can change the order, 
+3:34 there is a really easy way to do that, in Python. 
+3:38 So let's call or little reversed collection entries and you can just say reversed() 
+3:43 and you give it a collection and you get the list back in a different order. 
+3:47 So now, we should if we run it, 
+3:51 so we get items back in that order
+3:52 so I'll say thing 1, thing 2, 
+3:56 when I list it we should get thing 2 and then thing 1. Perfect. 
+3:58 Now maybe I'd like to number these like your first entry is this,
+4:02 your second entry is that, your third entry is such and such. 
+4:06 So let's go back to our list entries here.
+4:08 Now in many languages they use a index space loop 
+4:12 what is often called the for loop and it starts with numbers 
+4:14 and you kind of increment those numbers and that makes it harder to access, 
+4:18 harder and more error prone to access the actual entry 
+4:22 but it does make it easy to number things, 
+4:25 you might think but we have to fall back to the some kind of while loop,
+4:28 with the counter, not true, 
+4:30 Python has a really nice way to work with the index and the item at the same time, 
+4:34 so we can go to a collection, and we come over here and say enumerate, 
+4:39 and what this will do is it will modify the collection that is returned, 
+4:42 not just return the items, but to pair them with the actual indexes. 
+4:46 So let's just print this out and see what we get, 
+4:48 it's not going to be the same as it was before. 
+4:51 Just to say that three things here, 
+4:55 now when we list them out,  you'll see we get this sort of parenthesis 
+4:59 and the index and the item, 
+5:01 now in Python these are called tuples, 
+5:02 so let's go back and modify our loop to work with those tuples. 
+5:06 So we can actually define two local variables here, 
+5:09 and the index and the entry and Python will take those two items from the tuple 
+5:14 and assign them to these two variables 
+5:16 so we can also go over here and change this print statement,
+5:25 so this time we shall have the slightly nicer print out,
+5:28 let's say thing 1, thing 2, thing 3, now if I list them, 
+5:34 you'll see the 0 to item is thing 3, because we reversed it, 
+5:38 the first item is thing 2 and the second item is thing 1. 
+5:42 Now typically people don't use zero based indexes 
+5:45 but that's the way Python works, 
+5:47 let's fix it up one more time here, let's add one to our index. 
+5:51 All right so it's more friendly for humans.
+5:59 Your journal entries, number 1, thing 3,
+6:02 number 2, thing 2, number 3, thing 1. 
+6:04 All reversed, excellent. 
+

@@ -1,0 +1,41 @@
+0:01 The first concept is around this idea of calling functions,
+0:04 print is a function, input is a function
+0:06 these are reusable pieces of functionality in our application.
+0:11 Here we are calling a function called main,
+0:12 and you can see that you call it with the parenthesis on the end
+0:16 some languages have semicolons to indicate the end of a line,
+0:20 thankfully, Python does not have that,
+0:22 and this takes no arguments and it returns no value
+0:25 so you just call like this.
+0:27 Now, the input on the other hand,
+0:29 we can call it and we pass it a string, kind of like print,
+0:32 but then it returns whatever the user inputted.
+0:35 So we are to create a variable called saying, 
+0:38 we are storing the return value from the input function
+0:42 which is what the user typed in the saying variable
+0:45 we can work with that later.
+0:47 So that brings us to variables.
+0:49 And variables in Python are very very simple,
+0:51 they are sort of no-nonsense,
+0:53 so you just say the name, or the word you want to use for the variable
+0:56 and then you assign to it and... SHAZAM!! the variable exists.
+0:59 Some languages you have to specify types and initialization and so on,
+1:03 Python is sort of as simple as it can be around variables.
+1:07 So here we have a variable called name,
+1:10 and we are assigning the value of Michael,
+1:12 we have a variable called age and we are assigning 42,
+1:14 and we can even increment this value of the age,
+1:18 we are doing a "+=" operations,
+1:20 so we are taking the age, adding 1 to it,
+1:22 now the age is 43, so happy birthday to me.
+1:25 We have more complex variables of course,
+1:27 here we are creating what is called the list
+1:29 and we are populating the list with 3 strings,
+1:33 so biking, motocross and programming,
+1:34 and then we are storing that list holding those objects in the hobbies.
+1:38 So, all of these are directly created upon assignment,
+1:42 we can also create variables and store return values from functions,
+1:45 so here we have home address and we call in a function
+1:47 and we are storing the result of that function into home address.
+1:50 So let's go back and use these ideas
+1:53 to finish up our "Hello World" app. 

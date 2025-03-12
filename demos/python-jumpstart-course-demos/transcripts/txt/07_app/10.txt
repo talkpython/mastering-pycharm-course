@@ -1,0 +1,213 @@
+ 0:00 So let's go over here and first address this problem 
+0:02 we kind of would like to use the wizard specialization, 
+0:06 the wizard class as any other fighter in our game. 
+0:10 And the commonality that we need for any kind of fighter
+0:13 is of course that it is a creature, right?.
+0:18 And we just saw that we can use inheritance up here like so 
+0:22 and say this wizard is a creature. 
+0:25 Now, this is little annoying, 
+0:26 it says we don't really know what creature is 
+0:29 and the problem is creature is defined after the wizard class, 
+0:34 so there is two possible fixes here, 
+0:37 one fix could do this and just change the order, put the base class first, 
+0:43 the other fix could be to possibly put the creature in its own module, 
+0:46 a wizard in certain module 
+0:48 and then they could just import them int he order they need. 
+0:50 Now notice down here, there is some extreme duplication in the init 
+0:53 for the creature we have a name and a level, 
+0:55 and we are storing those, in the wizard we have a name and a level 
+0:58 and we are storing those as well. 
+1:00 This is not good first of all but there is two ways we can fix it, 
+1:03 one way we could just say we are going to have this init method here 
+1:08 and we could say super and this will give us access to 
+1:11 the direct methods on creature, 
+1:14 we could say __init__() and we can say name and level, 
+1:18 and now the warning will go away, right, 
+1:20 and we are actually passing this off, 
+1:22 so when you call this method, by creating a wizard 
+1:25 you really just setting up the wizards properties by delegating 
+1:29 or pushing this onward to this method. That's really good. 
+1:32 If we were doing additional stuff like more wizard stuff here, 
+1:39 with the proper spelling, that would be cool, we would totally do this. 
+1:42 But, if all we are going to do is delegate up the inheritance hierarchy there. 
+1:47 There is no reason to even have this method. 
+1:49 So we don't even have to write an init method 
+1:51 and we can just inherit this one if you will. 
+1:56 so now let's try to run our game and see if it will work.
+1:59 Ok, a tiger of level 12 appears, let's just look around until we see the wizard again. 
+2:05 Ok, wow there is a lot of tigers in a row. 
+2:08 So the evil wizard appears and we are going to try to attack it, 
+2:10 remember, when we tried to get its defensive roll before it didn't have one, 
+2:14 boom, now it rolled 4000 in its defensive roll, we were defeated, 
+2:19 but by making the wizard class derived from the creature class 
+2:25 we now can treat the wizard as any other player in the game, not just the hero. 
+2:30 In fact, we can go over here and fix this up again 
+2:33 so here we say creature get defensive roll, 
+2:36 and now because the wizard itself is a creature 
+2:39 we can say self.get defensive roll as well,
+2:42 and the game should play exactly the same. 
+2:44 Perfect, so our wizards can now be creatures, let's work on small animal. 
+2:50 So let's define another class, over here, in the actors, 
+2:54 and again, make some space for a minute, 
+2:57 so we'll say class in memory just to define a class 
+3:00 by saying class, class name, cap words 
+3:02 and hen again we want this small animal to be 
+3:05 a special type of creature and we could just say pass, 
+3:08 and if that is all we do this stuff will start working. 
+3:11 Ok, we have a toad and a bat, of course, one minor problem, 
+3:15 remember the top the way we imported, the actors, 
+3:18 we now also need to import the small animal, from here. 
+3:22 Ok, now we should be able to treat these let's run away from that, a toad of level 1, 
+3:27 this is a small animal, and perfect, it behaves just like a creature 
+3:31 but there is not a lot going on, with this small animal yet, right, 
+3:35 there is nothing special about it, it literally just does everything a creature does 
+3:39 other than it does have its own type 
+3:42 and so when we say what type of object is this in memory, 
+3:46 we know that is a small animal, 
+3:49 you could actually ask is this a type that is derived from a small animal 
+3:52 or is it just a plain creature. 
+3:54 We could use that for something, but we don't really in this game. 
+3:57 I guess the thing we can do to make this small animals special is 
+4:00 maybe it's a little extra weak, so down here we can change this get defensive roll, 
+4:06 in the creature class, it has a get_defensive_roll() and it just does this, 
+4:10 let me copy the whole thing, and we can actually change how this works ok,
+4:16 so we can come over here and say the small animal has 
+4:19 all the behaviors and everything from the creature 
+4:21 except it's going to have its own version of get _defensive_roll(). 
+4:24 Now, some programming languages when you are doing inheritance 
+4:28 you have to have special words like override or virtual or these sorts of things, 
+4:31 Python doesn't have that, we just have one method 
+4:35 it's called get_defensive_roll(), 
+4:36 if we just say it in the other classes something replaces it. 
+4:39 If we leave it this way, things should just still work again
+4:42 other than the wizard is not what we are looking for, but the bat is, perfect.
+4:47 But let's say we want to change this, 
+4:50 let's say we are going to come over here and say I'll call this base roll, 
+4:56 and then we want to return base roll maybe divided by 2,
+5:01 ok so it's a really small creature it's really weak, 
+5:04 so we could do this, let's find something, 
+5:07 ok, there is a bat and the bat rolls 3.0. 
+5:12 Ok, so it probably really rolled 2 but it's level 3 
+5:14 so I got 6 so then we cut that down to 3.0. 
+5:17 So now we specialize our small creature to be 
+5:20 a little easier to defeat than the others, well quite a bit really. 
+5:23 However, this part of code, is literally this base get_defensive_roll(). 
+5:32 Ok, so we can actually change this, we can say you know what, 
+5:36 it could be the super, go to the creature class and we can call it it ge_ defensive_roll(), 
+5:40 and that way as this evolves over time 
+5:43 maybe we decide to switch to a 15 sided dice or something like that 
+5:48 we don't have to maintain the small animal, 
+5:50 it just does whatever the base one does, and it divides it by 2. 
+5:53 So let's run this one more time, make sure it's still working, 
+5:55 ok wizard, wizard, tiger, wizard, can I get a bat please, ok, 
+6:02 there is a bat, perfect, look bat rolls 3.0, 
+6:05 let's do it one more time, there is a toad we just missed it, 
+6:12 ok, toad of level 1, the toad rolled like an 8 and we cut it in half. 
+6:15 So notice how we are using the super to grab the base behavior
+6:21 but then we are replacing it with our own method 
+6:23 so that small creatures have a different style, different algorithm, 
+6:27 for their defensive rolls. 
+6:29 Last thing is let's create a dragon, 
+6:32 because I know you've been waiting to create a dragon they are so awesome. 
+6:34 I want a black one, right so we'll create a dragon and again, 
+6:37 this is going to be a creature now in the small animal and the wizard case, 
+6:41 we have said there is no reason to have a specialized init method, 
+6:46 basically the setup in the data that the wizard and the small animal use
+6:52 is the same as the creature, but the dragon, I am going to change this,
+6:54 I want the dragon to have a scaliness and an indicator whether it breaths fire or not. 
+7:00 So what we are going to do is we are going to define a __init__()
+7:03 and it's going to have to take all the data 
+7:06 or at least somehow supply the data that the creature is going to need, 
+7:10 so name and level, and then I am going to have a scaliness and a breaths_fire, 
+7:16 this will be a boolean to say it does or does not breath fire. 
+7:19 and then the first thing that we should do is 
+7:21 we should set up the creature feature so we'll say super.__init__(), 
+7:27 name and level, and then we need to assign to the dragon 
+7:32 whether or not his scaliness and whether or not it breaths fire. 
+7:35 So we can just say add this parameter here 
+7:37 and let PyCharm rock it out for us, thank you PyCharm. 
+7:40 So now our dragon has different data, different features, 
+7:44 and it's probably going to have a different defensive roll, 
+7:47 that's going to take those into account, 
+7:49 so here we can say we have the base roll 
+7:50 but our dragon it's going to have a multiplier, 
+7:54 so let me take this chance to show you a slightly different way 
+7:57 of doing if statements or conditional test here, 
+8:00 so we'll have a fire modifier, now if they do not breath fire
+8:07 we are just going to have 1.0, we are going to multiply this by the base roll, 
+8:10 so if the dragon does not breath fire we are going to say 1 but if it does, 
+8:15 maybe we'll have a factor of 5 or something, 
+8:18 I mean that's a pretty serious defensive measure that it literally can breath fire. 
+8:22 I could write this, let me say none and I'll say 
+8:26 if self.breaths_fire, the fire_modifier = 5 maybe this could just be 1 
+8:36 but let me put it this way just an else statement, 
+8:38 so it's a little more clear, so else fire_modifier = 1, 
+8:43 now this bit right here, we are using all these lines of code to do this,
+8:46 we could actually write this in a much nicer way, 
+8:49 we'll say fire_modifier = and I can put this 
+8:53 all in one line in this condensed if statement the Python supports, 
+8:56 let me just sketch out the placeholder 
+8:59 so value if true say if some test else value if false, right, 
+9:08 so if we use this the value if- let's do the test first, 
+9:11 so the test is going to be if breaths_fire, self breaths_fire, 
+9:18 so if it does breath fire, I would like the modifier to be 5, 
+9:21 but if it does not breath_fire, I would like the modifier to be 1,
+9:25 ok, so let me put this like so,
+9:27 so now this will actually let us in one nice little condensed line, 
+9:31 specify the fire modifier, the other thing is the scaliness factor, 
+9:36 let's say this i s a number between 1 and 100, 
+9:40 and it has like a 10% effect on here, so we'll have something like this, 
+9:44 scale_modifier = scaliness self.scaliness, divided by 10, right, 
+9:55 so if it's a 100 it multiply it by 10, if it 1 it actually takes it down a little bit, 
+9:59 so then we are going to return base_roll times fire_modifier times scale_modifier. 
+10:07 Ok, now let's go back to our program here 
+10:10 and let me just put this back for a minute, 
+10:13 that's how it was before we started to talk about these dragons, 
+10:16 so if I try to run it, it's not going to turn out so well, 
+10:19 first of all it says dragon is not defined right there, 
+10:21 that's because I again forgot to import it, 
+10:24 it's kind of why I like the name spaces you don't have to keep doing this, 
+10:26 but it's all good. 
+10:29 So now we have our dragon, but notice PyCharm is already telling us hummm? not so good, 
+10:32 but it won't run it will say you are missing
+10:34 this parameter of scaliness and breaths_fire right there, 
+10:37 so let's say that this dragon has a scaliness of 50, no let's say 75, 
+10:45 that's a pretty serious scaliness and it does breath_fire, 
+10:49 so this dragon is now a much harder thing to fight, all right,
+10:52 so let's look around, so we see- let's run away
+10:58 until we see something that is a dragon. 
+11:01 Toads, dragon, ok dragon at level 50 and what is our level, 75, 
+11:06 so we should have a pretty good chance to beat it on the previous algorithm, 
+11:10 but this is a very scaly fire breathing level 50 dragon chances are not good,
+11:15 let's see what happens, let's fight it. 
+11:17 Ok, we rolled a 150 it rolled 11250, I would say we've been defeated, 
+11:23 the thing is even worse than evil wizard now. 
+11:27 So let's go back and see how inheritance has helped here, 
+11:31 so we have a small animal which is a toad 
+11:34 and the fact that it's a small animal it behaves like a creature 
+11:37 but it actually is easier to defeat 
+11:39 because it has a different wimpier get saving or defensive roll method. 
+11:44 Creature this is just a standard creature, the dragon, 
+11:47 actually is much harder to defeat it has additional data 
+11:51 that it uses to define how it defends when it's attacked 
+11:55 and now it has a scaliness protective layer and it breaths fire 
+11:59 it takes all that into account during this battle 
+12:02 but the wizard doesn't have to know it's a dragon, it can still treat it like a creature. 
+12:07 And yet it behaves differently, finally the wizard can also behave 
+12:11 like just another creature in the game because it derives from creature. 
+12:15 We do this derivation by just defining the creature class 
+12:18 and then we say the wizard is a creature, here we have an additional method 
+12:23 that's not in the creature class called attack, 
+12:26 PyCharm we can collapse those, and then the small animal 
+12:29 it has this simpler wimpier defensive roll and notice
+12:32 that PyCharm is showing you this overwrites a method in creature 
+12:35 so just be aware of that, that's actually pretty awesome. 
+12:38 The dragon has its own initialization method 
+12:42 because it has to take additional data and do additional setup 
+12:44 but it delegates to the base class for the sort of base class setup 
+12:49 and it has a different defensive roll that not just has a different algorithm 
+12:52 but takes into account the fact that it has different data 
+12:55 like the scale modifier which apparently I misspelled. 
+13:00 So this just gives you a little taste of object oriented programming 
+13:03 but the types of applications that you can build are seriously powerful 
+13:06 and it's a lot of fun to think about solving problems this way.

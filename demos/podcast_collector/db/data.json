@@ -1,0 +1,19 @@
+{
+  "podcasts": [
+    {
+      "title": "Talk Python To Me",
+      "url": "https://talkpython.fm/",
+      "image": "https://cdn-podcast.talkpython.fm/static/img/podcast-theme-img_1400_v3.jpg"
+    },
+    {
+      "title": "Python Bytes",
+      "url": "https://pythonbytes.fm/",
+      "image": "https://cdn.pythonbytes.fm/static/img/podcast-theme-img_1400.jpg"
+    },
+    {
+      "title": "Real Python Podcast",
+      "url": "https://realpython.com/podcasts/rpp/",
+      "image": "https://files.realpython.com/media/real-python-logo-square.28474fda9228.png"
+    }
+  ]
+}

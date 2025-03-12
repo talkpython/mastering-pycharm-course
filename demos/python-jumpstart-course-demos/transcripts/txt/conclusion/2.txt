@@ -1,0 +1,138 @@
+0:00 Let's review what you've learned in each one of these apps. 
+0:03 When I first introduced the apps I told you what you are going to learn 
+0:06 but you had never seen it so you know, 
+0:08 it probably didn't really resonate the way it will now. 
+0:11 So let's go through and just kind of review really quickly 
+0:13 and if you had to reinforce one of these concepts, 
+0:15 just jump back to either the concept video from that app or the code, 
+0:19 or play around with it some more. 
+0:21 So in app 1, this was our simplest app, it was the Hello World app, 
+0:25 remember, the goal was really to test your Python environment get your editor set up, 
+0:30 things like that, not really to prove that you can write print hello world, that's silly, right. 
+0:34 So, we sort of introduced PyCharm here,
+0:37 we talked about variables, strings, and accepting user input 
+0:41 and this was really sort of getting our feet wet, getting started. 
+0:44 Next app was, what I kind of considered our first real app,
+0:47 that's Guess That Number Game, and remember, 
+0:50 the computer randomly select a number between 0 and 100 
+0:53 and then it would tell the user hey, you are too high, too low, as it took in the guesses. 
+0:56 So in order to do that, we had to understand boolean conditions, 
+1:00 we had if, else, elif statement, while loops 
+1:03 and when we start talking about these concepts like if else statements and while loops 
+1:09 we have to talk about the shape of a Python program 
+1:11 and here we learned about the white space and indentation 
+1:14 and how the smart editors help with that, 
+1:16 we also talked about string formatting with the curly braces 
+1:19 to sort of generate strings in a much nicer and more flexible way, 
+1:22 and we got the very basics of functions go in there as well. 
+1:26 App 3, When Is My Birthday this one was all about dates, times and time spans, 
+1:30 now these can be tricky in Python so I made this special app
+1:34 just to help you become comfortable with those 
+1:36 and sort of reinforce what we learned in the first two apps. 
+1:39 App number 4 was our Journal or a daily diary and this was pretty big, 
+1:44 we covered a lot of stuff, this was our first sort of major app I would say. 
+1:48 And, because it was a bigger app we actually broke our code into multiple files, 
+1:53 we had our journal, module, and we had our main program.py 
+1:56 and we had those work together, we did a lot of file I/O and to facilitate that 
+2:00 we did path management and in OS independent way using you know, 
+2:05 not surprising the OS.path; we used for in loops and iterators, 
+2:08 obviously playing a key role in the for in loops, 
+2:11 because we had these different files, 
+2:13 we might want to reuse the methods and features of one of those modules, 
+2:17 and if we have been just calling main, 
+2:21 or just writing our code directly, like write in line there, 
+2:24 we wouldn't be able to import those, 
+2:26 so we talked about the dunder name convention, 
+2:28 to differentiate between when your program itself is being run 
+2:32 and when your script is being reused. 
+2:35 Also we talked about documenting your own code with docstrings.
+2:38 App number 5, this was our weather forecast app 
+2:41 and we went out to weather underground 
+2:43 and we grabbed the html and we did that using a technique called screen scraping 
+2:47 by making an http request, using the request package pulling that down, 
+2:51 taking the html, send it off to the BeautifulSoup package 
+2:54 and then writing css selectors against that in memory 
+2:58 to actually pull out the data we want. 
+3:00 In order to get Requests and BeautifulSoup, which are external packages, 
+3:04 we used pip and we could further isolate our particular environment in our application 
+3:11 using virtual environments. 
+3:13 Along the way I also got to introduce you to a very Pythonic concept called slicing.
+3:16 App 6, I hope this one made you laugh, this was the Lol Cat Factory, 
+3:21 And this was all about consuming services and working with binary data, 
+3:25 so recall, we went out to our lol cat service, 
+3:27 we downloaded a bunch of binary images, and we saved them to the file system 
+3:32 and then we used Python to subprocess capability 
+3:34 to launch the finder or folder browser explorer depending on your os, 
+3:40 we'd launch that up to actually show the UI 
+3:43 since we are not diving into things like PyQt and so on. 
+3:47 App number 7 was our Dungeon and Dragons Style Wizard Game,
+3:50 this was one of my favorites and this one is about 
+3:52 a very core concept in modern programming 
+3:55 and Python classes, inheritance, things like that. 
+3:59 So we talked about how you create classes, 
+4:01 and model your data structures with classes, 
+4:04 and inheritance allows us to sort of separate that into layers, 
+4:06 so it's more reusable, more manageable Python has magic methods, 
+4:10 sometimes are referred to as dunder methods, like __init__(), __str__(), 
+4:15 for overwriting behaviors of our classes, 
+4:18 our objects for example we can write the __init__()
+4:21 to take control over the creation and initialization of our objects, 
+4:24 and speaking of initialization, we saw when we are doing inheritance 
+4:28 that you need to be careful about chaining these together in the correct order 
+4:33 so the whole hierarchy get setup correctly. 
+4:35 Typically, this is where you define your fields and these __init__() methods 
+4:39 and when we are using our objects you don't have static typing in Python, 
+4:44 instead we use something called duck typing to achieve polymorphism. 
+4:47 In application 8, we built a file searcher app and we got to feed a ton of data to it, 
+4:53 remember we had our 2.27GB of text what we were searching with this thing, 
+4:58 so in order to make that much more performant and efficient 
+5:02 we used generator methods using the yield and yield return keywords, 
+5:07 and because we were trying to process a hierarchy, a tree of data, the file structure, 
+5:13 we used recursion which models that scenario very well. 
+5:17 In app 9, we got hold of that comma separated value data 
+5:23 on the Sacramento real estate market in 2008 I believe it was. 
+5:27 And we loaded that up, we did all sorts of interesting processing on it, 
+5:31 we saw that at the heart of Python are dictionaries, 
+5:34 and dictionaries of course played a key role in our comma separated value processing as well; 
+5:39 we wanted to sort the data that we got back out of that file 
+5:41 and we did that by passing a method 
+5:44 we saw that methods were first class objects in Python, 
+5:48 and when you want to write really small concise ones, it's much better to use 
+5:52 a lambda method or lambda expression rather than creating a method somewhere else 
+5:56 and just so that you can pass the name in where you are. 
+5:59 We talked about the csv file format and how Python has built in support for processing that,
+6:03 we also saw that we can run into a situation 
+6:06 where Python 2 and Python 3 behave differently, 
+6:09 remember we had the statistics module that's in Python 3.3 and above 
+6:13 but not in Python 2 so we wrote special code 
+6:15 to sort of do a polyfil or fill in that missing piece for Python 2 
+6:20 and the consumers further down in our app didn't have to worry 
+6:24 about whether there was the statistics module 
+6:27 we introduced a less efficient but sufficient one for them to use. 
+6:30 we also saw that many of those situations that are solved with loops and lists,
+6:34 so looping over a bunch of data, doing some tests, things like that, 
+6:40 can be solved much more concisely with list comprehensions. 
+6:43 And while solving problems with lists is great, 
+6:46 in app 8 we saw the performance implications 
+6:48 that you can run into if you are processing a lot of data in a pipeline. 
+6:52 So, in app 8 we used generator methods, 
+6:55 there is a similar concept in this comprehension style called generator expressions 
+7:00 so we use those generator expressions to create efficient data pipelines. 
+7:04 The last app we built was app number 10, The Movie Search App. 
+7:09 This went out to the open movie database api and it pulled back data.
+7:13 And that was interesting, we were processing json and things like that, 
+7:16 but the key focus of this app was to build reliable code. 
+7:22 When you have a network based code 
+7:24 chances that the network is down are pretty good, 
+7:27 especially if you are running on a client machine 
+7:29 like a laptop where it could be out of wi-fi range or whatever. 
+7:32 So we need to be able to handle those errors 
+7:34 we introduced the try except block to do that,we also saw that you can use multiple except blocks
+7:39 to handle errors by type, remember, put them both specific one first the most general one last, 
+7:44 we also talked about validating arguments by raising errors;
+7:48 we had some kind of argument pass doing init method for a class 
+7:52 the init method doesn't have a return value 
+7:55 that you can pass back and say false or none or something like this,
+7:58 but we still want to validate the arguments coming in 
+8:01 and so we saw that we could raise an exception when invalid data was passed 
+8:05 and then the object would never even be created unless it started out in a valid state.

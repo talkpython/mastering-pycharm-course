@@ -1,0 +1,72 @@
+0:00 What fun would it be to build these applications
+0:02 if you don't build them yourself? 
+0:04 So, it's really important that you guys try to build these apps yourself.
+0:07 There are two ways you can do it, 
+0:09 you can either, go to each chapter and see the description of the app, 
+0:13 and then try to build it, then watch the lesson, 
+0:15 that is maybe an advanced scenario, 
+0:18 more likely you watch me do it, we talk about it and then, 
+0:21 you put the video aside, you go and you start working on yourself.
+0:25 Either way, you are going to need a Git hold of the source code. 
+0:28 So the source code is in a public Git repository,
+0:31 it's github.com/mikeckennedy/python-jumpstart-course-demos.
+0:37 So let's go over there and have a look. 
+0:40 Here is the repository, you can just simply download it as a zip, 
+0:43 or if you are into Git like me, feel free to clone it, 
+0:47 you can install GitHub desktop and clone it that way, 
+0:49 you can clone it from the command line copying this here. 
+0:52 So the most important part you'll find are the apps.
+0:55 So if you go into the apps you will see there is 0, 1, 2, 3 
+0:59 and in the setup one, we just have some links, stuff to help you get setup, 
+1:03 those will be in the next video, 
+1:05 but for each of the other ones, let's say... let's jump down here to journal.  
+1:08 You can see for each particular app, there is a... you_try and a final. 
+1:13 The final is exactly what I created in the video,
+1:16 so in the video, I actually created these three files 
+1:20 and here is the exact code that I wrote for this particular application, ok?
+1:25 Not surprisingly, when it's time for you to try to build the app, 
+1:29 you go to you_try. 
+1:30 Now, for almost all the apps there is nothing to really get started with, 
+1:34 you can just create a file, a new Python file, and get started,
+1:38 it doesn't matter where you put it,
+1:39 but I put the instructions in here for a few of the apps 
+1:42 there will be resources you need to get started,
+1:45 for example that real estate app,
+1:47 the data files you need are going to be there to get started with. 
+1:50 But, most of the time, I have something like this, 
+1:53 and it will give you a picture of what we are going to build, 
+1:55 so here is our birthday app... we are going to write an app that has this output, 
+1:59 and you can see it asks three questions to construct the date, 
+2:02 what year, day and month were you born, 
+2:04 and then it does its work and it answers the question... 
+2:07 well it looks like you were born on this day, 
+2:09 and it looks like your birthday is in so many days from now.
+2:11 Hope you are looking forward to it.  
+2:13 Down below, you can see that there is always
+2:16 the key concepts that you need to know,
+2:19 so for example, in this one, 
+2:21 we talk about functions, 
+2:22 so here is kind of the basics of functions, 
+2:23 and we talk about "datetimes", 
+2:26 so it shows you the various pieces of "datetimes" that you might need to use.
+2:30 If we look at another one, 
+2:30 like, let's look at number 2...
+2:37 you can see this one talked about string formatting, 
+2:39 conditionals, loops, importing modules, 
+2:40 and there is just a little example here, 
+2:42 this is not instructions that you follow, 
+2:44 but these are sort of the key concepts that you need to know, 
+2:47 so if you want to try it before we talk about it, 
+2:50 you have at least a chance, right?, 
+2:52 but for the most part I expect you to have watched the video 
+2:54 and then you try it yourself. 
+2:57 So that's the story the source code, the apps, 
+2:59 the instructions, how you follow along. 
+3:01 So, LET GET STARTED!!!!! 
+3:04 It doesn't matter what you want to build, 
+3:06 I am sure you are going to build something amazing with Python, 
+3:08 and the time to get stated on it, and learning, and building, is right now. 
+3:13 Let's move on to the next set of videos 
+3:15 where you will learn about setting up your environment 
+3:17 and then it will be on to the applications.  
+3:19 Once again, welcome to the class, have a great time. 

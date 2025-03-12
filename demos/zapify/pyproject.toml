@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zapify"
+version = "0.0.2"
+description = "A Python package error linting"
+readme = "readme.md"
+license = "MIT"
+authors = [
+    { name = "MK", email = "michael@talkpython.fm" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+keywords = ["zapify", "errors", "lining"]
+dependencies = [
+    "flake8"
+]
+
+[project.urls]
+Homepage = "https://github.com/mikeckennedy/zapify"
+
+[tool.hatch.version]
+path = "zapify/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["zapify/", "readme.md"]
+
+[tool.hatch.build.targets.wheel]
+include = ["zapify/"]

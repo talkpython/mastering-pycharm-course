@@ -1,0 +1,43 @@
+ 0:00 Let's look at the final core concept 
+0:02 in this object oriented wizard game called polymorphism. 
+0:06 Now you can see that we have a list of diverse creatures,
+0:09 we have small animals, creatures, dragons, wizards and so on, 
+0:13 and as you saw on a previous examples 
+0:15 and you can see in the note on the left here, 
+0:17 all of these objects all of these classes, small animal, dragon and wizard, 
+0:20 all derive from creature. 
+0:23 Below we have a wizard named Gandolf. 
+0:26 and if he is going to go on some kind of a rampage 
+0:29 and just start attacking all the creatures 
+0:30 he would say for c in creatures wizard.attack c, 
+0:33 now when we write that attack method, we don't care or usually want to know, 
+0:38 it's usually a negative thing to actually know whether it's a dragon 
+0:41 a small animal or just a creature 
+0:44 because we can leverage the fact that all of these derived from creature 
+0:48 we can just work with the common functionality, 
+0:51 the fields and the methods on the creature class and it doesn't matter 
+0:55 what type of derived object we pass, it's a small animal, a dragon, 
+1:01 we can still fight it just the same, we don't have to rewrite our code, 
+1:03 and that's fantastic, that lets us as we evolve our application 
+1:07 create more specialization other types of objects, 
+1:10 later in the game we want to add some kind of like water monster
+1:13 to attack the wizard when he is out in the ocean or something 
+1:17 as long as that thing derives from creature, 
+1:20 we potentially don't have to rewrite the code 
+1:22 that handles wizard's battling water monsters
+1:25 it's just using this base class. 
+1:27 So that's a really powerful feature. 
+1:29 One other concept closely related to this is something called duck typing, 
+1:32 in statically typed compiled languages like C#, Java, C++ and so on, 
+1:38 you absolutely must have these objects derived from creature 
+1:43 or trying to pass them to the attack method 
+1:46 which assumes it takes a creature or literally not compile, your code won't run ever. 
+1:49 In Python it's not like that, Python uses something called duck typing 
+1:55 and as long as the shape of the pieces of the creature class
+1:59 that the attack method assumes are there, get defensive roll, name,
+2:04 as long as the types you pass match that, 
+2:07 you technically can use it here, and that is called duck typing, 
+2:09 it's like if it acts like a creature, if it looks like a creature, it is a creature, 
+2:13 but I still encourage you to create these object hierarchies 
+2:16 as it helps reduce code duplication, it helps with maintenance 
+2:18 and it's generally just the right thing to do.

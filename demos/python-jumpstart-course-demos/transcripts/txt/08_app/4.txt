@@ -1,0 +1,63 @@
+0:00 So it's time to improve the results that come out of here, 
+0:03 remember, we are just passing the actual lines of a bunch of files,
+0:06 we don't really even know which ones those are, 
+0:09 we just start with the folder that have some kind of match, 
+0:11 so we want to bundle some information together about these matches, 
+0:14 now we could use classes and those are very powerful, 
+0:17 but really we just need things like what's the line number, 
+0:20 what's the text, what's the file name and so on. 
+0:23 So it turns out named tuples are perfect, so again, 
+0:27 we'll just use our collections of a SearchResult =
+0:31 we want to use our collections.namedtuple()
+0:34 and then the first thing is the type name 
+0:38 the second argument are basically the fields 
+0:42 so it will be file, file line and text, 
+0:45 let's say those are the three things that we are going to return there. 
+0:50 Now let's change this, so not just append a line but actually make results, 
+0:54 so we'll say m for match it's going to be a SearchResults() 
+0:59 and in here what are we going to add, 
+1:01 we want to say line = line I think I called it and file = filename 
+1:07 and the text = ... actually, text = line, that's the line of text 
+1:14 and I need the line number here, 
+1:18 so we have to compute this ourselves so way we are doing it but that's ok, 
+1:24 ok, so now we are going to append that and let's just run it again, 
+1:27 remember, these named tuples have decent output, ok, 
+1:31 we are going to search our books again, 
+1:33 and we are going to search for the word friends, 
+1:36 and here are a bunch of matches that have way more information, 
+1:39 so you can see we have the file is the Ulysses book 
+1:43 and these are the lines and we also have Tales of Two Cities and The Doll House, 
+1:46 they all talk about friends. 
+1:49 Ok, that works, but let's do a little bit nicer output so we can read it here, 
+1:52 let's go at the top where we are doing this print and for a little bit let's go ok, stop this,
+1:58 what we are going to do is we are going to say print() 
+2:00 and we'll do something like this, there is a match 
+2:04 ok so we'll say match then we'll print out the file, the line and the actual match text, 
+2:09 let's run it again. 
+2:11 Same folder, this time let's search for happiness. 
+2:16 All right, so we have some matches, 
+2:18 it turns out in Ulysses on line 20899 rule of happiness of the better land- yes,
+2:24 this is a much nicer output. 
+2:27 Now, something is funny like there is two lines here, 
+2:30 and yet we are only doing like one print on this 
+2:35 which is kind of unusual what is going on,
+2:37 remember, when we read an individual line from the files 
+2:40 they actually have the new line on there so that new line is appearing here 
+2:44 and I'd rather take more control over the text rather than assume that 
+2:47 that's always going to be there so let's just say strip(), 
+2:50 now it could do an rstrip() just to get the stuff off the end or maybe
+2:54  if there is white space you want to pull it to the font, anyway so let's do it this way. 
+3:00 Great, it looks like our searching is working perfectly. 
+3:07 Now remember, we are giving it this folder 
+3:09 and it turns out we are searching these files 
+3:11 but we are not searching Dracula or Adventure of Sherlock Holmes, 
+3:17 or anything like that, let's just prove that, 
+3:19 we come over here and say I want to search for Holmes, 
+3:23 well, Ulysses apparently has some place that talks about Sherlock Holmes 
+3:28 but we are not getting into that subdirectory. 
+3:31 And this is to be expected because we said if it's a directory ignore it, 
+3:35 there is a variety of ways in which we could solve this problem 
+3:38 but it turns out the most natural way to solve these hierarchical problems are 
+3:43 to use something called recursion,
+3:45 so let's take a moment and go look at this concept 
+3:47 and then we'll come back and apply ti to our application.

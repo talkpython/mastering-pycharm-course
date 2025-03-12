@@ -1,0 +1,60 @@
+00:0.14 It might seem like we're a long way from being done with this application.
+00:3.18 We've talked a lot about some honestly slightly complicated topics with virtual environments and dependencies and
+00:9.05 manage them and all that kind of stuff.
+00:10.81 But we're actually extremely close to being done,
+00:13.5 as you will see. So let's go over here to the "call_weather_api".
+00:15.66 I've have already written "import requests" at the top, so we can jump down here.
+00:19.84 Remember, we've already got the location as a named tuple,
+00:23.44 and we're using it to put together the URL.
+00:26.14 So here we just said, we would call the URL.
+00:28.47 Well, let's not say we would, let's do call it.
+00:31.39 So we're gonna get a response from the server.
+00:33.38 The way it works is you go to request you say,
+00:35.06 "get the URL", done. We've now downloaded the data from the Internet.
+00:39.4 How insane is that? So let's just print out what we got.
+00:42.74 If I say Portland like that, response 200. 200 in the Web is okay,
+00:50.64 success. So that's good. There's all kinds of things here.
+00:53.46 One of them is the text.
+00:55.06 So if we print out the text from Portland, what do we see?
+00:59.19 Oh oh oh.. broken clouds. How about that?
+01:2.43 Super cool. Now we could use the libraries that understand strings and convert them to
+01:8.75 Python dictionaries by parsing the JSON document,
+01:12.48 but requests already knows how to do that.
+01:14.95 It has a function called JSON.
+01:17.94 So if we write that and we type "Portland",
+01:20.44 it looks the same, Right?
+01:21.57 But remember, Pythons representation of dictionaries has single quotes.
+01:24.85 Our Web server's returning double quotes.
+01:26.78 So what actually came back is just data and it just when you print it out
+01:29.99 it looks basically the same.
+01:31.41 So check this out. We'll say "data equals response
+01:34.38 dot JSON". Now, Before we go through that step,
+01:37.05 we got to make sure that we actually got the right values.
+01:39.81 So what we need to do is say if for some reason we got something other than
+01:44.74 a 200 ok request and JSON response,
+01:47.56 we just want to say "sorry we couldn't get you any weather".
+01:49.89 So the easiest way for us to do that is to ask if the "response dot
+01:54.64 status code", that's that number, is in a set of things. We could do a
+02:0.06 bunch of if statements or we could just say,
+02:1.83 "Is it in 400?" which would mean bad request, 404
+02:5.86 like if you asked for a city that doesn't exist,
+02:7.94 500, the server crashed. We could return "None".
+02:12.74 In fact, we could say,
+02:14.57 basically, it's not 200, return an error,
+02:17.19 right? So here we'll print out "error",
+02:19.58 and then let's just put the "response dot text".
+02:23.21 A lot of times when there's an error,
+02:24.8 you actually get an additional message in the text,
+02:27.16 so this might help us debug what's going on.
+02:29.7 Like, for example, if we go and ask for the city such and such,
+02:33.01 it says "error, what we got back is 404, city not found".
+02:37.48 Okay, so once we make it this far,
+02:40.39 we think we're in good shape,
+02:41.81 and this might, I'll leave it like this,
+02:43.68 but you might just say "not equal to 200".
+02:45.45 So the last thing I want to do is I actually want to convert this response
+02:50.24 into something that's easier for us to work with.
+02:53.1 But we're already off to a pretty good start.
+02:56.98 What about Boston? Whoo hoo! Boston! Alright,
+03:1.11 we returned it. We haven't printed out anything yet,
+03:2.74 but our final step is going to be to convert that into something meaningful we can show to the users.

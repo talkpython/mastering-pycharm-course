@@ -1,0 +1,16 @@
+0:00 So that brings us to our next core concept, file I/O. 
+0:03 And here you can see we have a list of three text items
+0:06 and imagine we want to just write these to a file. 
+0:09 So, if we’re going to use that file stream, briefly 
+0:12 and then when we exit this little segment we are going to close it, 
+0:15 we'll use this context manager so we'll start out with, 
+0:18 create the item as variable name. 
+0:22 So, in this case with open and we pass file name and w for write text format, 
+0:27 and we want to say as fout,
+0:30 for that's the variable I am calling it output file stream.
+0:32 And then we just do whatever we want to do to write to the file, 
+0:35 so in this case we want to write these three items on three lines 
+0:38 and this text file so we just for-in loop over them 
+0:41 and we say fout.write() the text and as you saw, 
+0:44 that does not put a new line on there as it should not,
+0:47 so we have to add it with this \n.

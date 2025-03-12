@@ -1,0 +1,37 @@
+00:0.04 Well, let's get started writing the pieces
+00:2.21 we got to write to build our applications.
+00:3.97 So the first one is, we'll just have a
+00:5.65 print or show header, I guess we'll call it "show Header" and we'll come down
+00:10.48 here and write it like "def show_header()", super easy.
+00:14.32 And remember, all the headers they look like, we'll add a couple of sections, and we'll
+00:18.25 say, whether client or weather app or something like that,
+00:22.74 we'll roughly try to center it and then maybe just a new line at the
+00:25.92 end. Let's get rid of that part. Now
+00:28.81 if we run it, you can see our little headers coming out the bottom.
+00:31.5 Great. The next thing we need to do is get the actual location.
+00:35.77 We'll call it "location_text".
+00:37.29 Remember, this is not the location data yet.
+00:39.75 This is like human friendly plain text,
+00:43.08 right? Stuttgart, Germany or Portland,
+00:45.59 Oregon, U.S.A., something like that.
+00:47.32 So we're gonna just get that from the user. We can just do a simple input
+00:51.03 here. So we can say "where do you want the weather report" and put a
+00:55.24 little message, and then we'll put this space here so they're not typing directly on that
+00:59.94 text, and let's just print out "you selected",
+01:3.74 Now we could go like this, "location text",
+01:6.23 but if that came back as none,
+01:7.85 for some reason that would crash.
+01:9.29 And we could also do ".format
+01:12.0 (location_text)" and put that there.
+01:14.77 But now that we're using Python 3.9 we can actually use what's called f-strings.
+01:18.33 We put an f here, notice the color of the curly braces change and we
+01:21.94 can just put the thing we wanna format like that.
+01:25.24 So here's a little cleaner, simpler thing what we might do. Okay,
+01:28.72 let's just see that this works.
+01:29.78 Okay. Where do you want?
+01:30.66 I'm thinking Boston, U.S., You selected Boston,
+01:36.18 or I'm thinking maybe Boston, Massachusetts, USA, you selected Boston,
+01:43.3 Massachusetts USA. Alright, well our getting this information from the user works.
+01:49.14 Next thing to do is convert it over to plain text,
+01:52.24 hand that over to the API and then convert the API response
+01:55.68 over to some kind of human readable thing like "the weather is whatever it happens to be".

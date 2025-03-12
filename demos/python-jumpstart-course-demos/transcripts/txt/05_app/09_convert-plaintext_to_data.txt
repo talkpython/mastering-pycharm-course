@@ -1,0 +1,114 @@
+00:0.14 Recall now that you've seen the API,
+00:1.67 what we have to do is we have to pass over to the URL:
+00:4.88 city equals city value, country equals country value.
+00:9.91 But that's not what we're getting here.
+00:11.84 We're just getting plain text that looks like "Portland, USA"
+00:14.74 we can't say the city or the country is "Portland, USA",
+00:18.96 It's got to be broken into pieces and understood,
+00:21.65 right? So that's what we're gonna do now.
+00:22.99 We're going to convert this plain text over to data.
+00:26.15 So, let's just put for now,
+00:28.63 location, I'll write that here in a second, and for a second and then we'll improve upon
+00:33.03 it. We're gonna go over here and say
+00:33.99 "convert_plaintext_location()" and this will be the location text.
+00:38.62 So we gotta go write this function and it's gonna be some cool string manipulation.
+00:42.96 And let's just print out as an F-string
+00:44.86 "the location equals the location", what we got back.
+00:51.74 Alright now, First of all,
+00:52.82 if for some reason we get no location at all,
+00:55.65 we don't want to try to process it.
+00:57.18 We're just going to return nothing.
+00:59.59 So if there's no location specified or it's empty or something like that,
+01:6.44 then we just want to say
+01:7.31 "you know what? There's no location contained in empty text".
+01:11.36 This is false if its both either none or just the string quote like this.
+01:16.8 But it could just be like a space or a tab or a return character
+01:21.48 sometimes it also doesn't mean much, so this strip will take that away.
+01:26.04 And we'll say "If there's not anything here,
+01:27.92 we're gonna, either it's truly nothing or it's effectively nothing,
+01:31.61 we can't process that, so there's no location".
+01:33.58 So now we're in a good place to say things like location text equals first;
+01:38.53 maybe you wanna get the lower case version of this and we also don't want any
+01:43.03 extra spaces there. So we could be very restrictive about what we allow people to
+01:48.26 type up here. We could say "you must type city comma state comma country".
+01:54.21 That gets a little tricky because not every country has a state concept
+01:58.4 That's easy to type that goes over to our API.
+02:1.07 So you could say, Well,
+02:2.35 you just type city and country,
+02:5.04 but then lots of countries have duplicates. Like there's at least three Portland's;
+02:8.83 there's a Portland, Oregon,
+02:9.74 Portland, Tennessee, and Portland,
+02:10.9 Maine. So we're gonna need a little bit of flexibility here.
+02:13.55 We have basically three cases: is it just the city? is it the city
+02:17.17 and the country? or the city,
+02:18.5 state, and country? Now, regardless of which of those we have,
+02:22.02 let's just print out "location_text" and run that real quick here,
+02:25.97 and we'll just return a "location_text"
+02:28.25 back for the moment. If we run this and I put Portland,
+02:33.03 USA, notice we're getting "Portland lower case usa" because we did the lower and
+02:38.18 strip and if there were spaces,
+02:39.39 it would take those way away as well.
+02:41.25 But what we need to do is we need to somehow get Portland and USA,
+02:45.02 and Python has really cool mechanisms to take a string and break it apart.
+02:49.94 So let's say parts is going to be "location_text.split()" split means split into
+02:56.52 parts, and then you give it a character on which you want to split.
+02:59.6 So we'll say comma, and now let's just print out parts here,
+03:3.41 see what we get back. So if I say Portland,
+03:6.91 Oregon, USA like that, look
+03:8.97 now we have a list of three strings:
+03:11.22 Portland, Oregon, and
+03:13.74 USA. And there's comments in here,
+03:14.89 but these commas are not in the string.
+03:16.49 These are just the list saying I have things that are in it,
+03:19.59 right? The list represents itself with those separators.
+03:22.36 There is a space right there and a space right there that we need to deal
+03:25.78 with. But other than that,
+03:27.36 we have the three parts. So here's the deal is, do we have just the
+03:31.4 city, the city and the country,
+03:33.44 or the city, state and country?
+03:34.98 And the way that we're going to figure that out is how many parts do we
+03:38.07 have? So if the length, how many parts are there, equals one,
+03:43.23 well, then it's just the city.
+03:45.27 So we're gonna say "city equals nothing,
+03:48.04 state equals nothing, country equals nothing".
+03:51.68 And then, in this case,
+03:52.6 we're gonna say "city equals parts of zero",
+03:57.45 right? That's how we get the element out of the list,
+03:59.28 we say the first one, zero based.
+04:1.22 And then we say "strip()", because we want to actually remove those spaces.
+04:5.58 Remember, Oregon had a space on the front
+04:7.82 if they typed it and things like that.
+04:9.94 And then we want to say "country equals US",
+04:13.19 two letter abbreviation, and actually,
+04:15.33 we can just put that as a default up there,
+04:17.74 Alright? On the other hand,
+04:19.82 if the length of the parts two, then they've said the city and the country, what
+04:24.74 we have assumed here, so this is gonna be the same,
+04:27.1 but the country is going to be the next one in the list.
+04:30.93 Parts one, if they specified it all the way out
+04:34.24 and it's three, then it's city, state, country is the format that we're expecting.
+04:39.94 And if it's not one, two or three,
+04:41.78 it must be some kind of error,
+04:43.37 so we're going to return "None" again.
+04:45.71 Alright, Now, instead of returning this location text,
+04:49.32 we're gonna deal with that in a second.
+04:50.53 Let me just print this out here and now we can show things like "city equals
+04:56.01 city, country equals country". And this is exactly, I guess I'll put state in
+05:2.74 here, this is exactly the style of format of data that we're going to need
+05:7.14 to pass it over to the API.
+05:10.64 Alright, now let's run it.
+05:11.64 Let's just say Portland, city is Portland, State is empty, country is
+05:15.63 US, perfect. If we say Portland, USA,
+05:21.84 We have, city is not what we're looking for but country is good.
+05:25.4 What did we do wrong here?
+05:27.24 Oh, it's because I didn't I didn't put a comma,
+05:29.66 I just wrote it wrong. Here we go.
+05:33.78 City is Portland, country is USA, and then let's do the full thing:
+05:37.71 Portland, Tennessee, USA let's say. Now we've got city is
+05:42.49 Portland, State is Tennessee, and country is USA, perfect. So we're breaking this apart correctly,
+05:47.72 but now we have this challenge.
+05:50.94 Like you could see we can return one thing, we have to return more than one
+05:54.18 thing. How do we get all this stuff back?
+05:55.49 So we're gonna address that in just a minute.
+05:57.46 But just breaking the data apart
+05:59.39 is already done, we just gotta figure out how to pass it around in our program.

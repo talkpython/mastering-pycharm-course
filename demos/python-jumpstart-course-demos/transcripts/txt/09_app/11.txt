@@ -1,0 +1,77 @@
+0:00 This code is working perfectly in Python 3, as we saw. 
+0:05 Let's see how it works in Python 2. 
+0:07 Now, there is a minor problem we are going to run into with our file IO 
+0:11 here so we'll solve that really quickly,
+0:13 but let's go add it the configuration and say 
+0:15 hey, let's try to run this under Python 2.7.10. 
+0:18 No module named statistics. 
+0:23 Well, we need that, right?, we are using statistics.mean it turns out, 
+0:28 statistics was introduced later on in Python, 
+0:31 I think it was 3.4 but somewhere around that time frame, and it's definitely not in 2.7, 
+0:36 so what do we do, do we just say well, 
+0:38 we've got to take the mean so forget it, you can't write this code, 
+0:40 or another possibility would just be to say well, 
+0:43 we can't use the statistics module 
+0:45 we are going to have to just write our entire own statistics mechanism. 
+0:49 I suppose there is some answer out on PyPi but as a way of demonstration, 
+0:53 let me show you how we can fix this. 
+0:56 so that's the line where this is crashing, 
+0:58 and if you don't know for sure, you click here it says line 3 click 
+1:01 and it will navigate you right there, yeah, it looks like that's the line that's crashing, 
+1:04 and that's because there is no statistics module. 
+1:07 So what we can do, we are going to dig into this error handling later, 
+1:10 just roll with it here ok, what we are going to do is 
+1:15 we are going to say we are going to try to run this code,
+1:17 and if it fails to import the statistics module, 
+1:20 we are going to fall back to something else, so let's say try, this is one of the, 
+1:25 this is basically the key concept of the next application, 
+1:28 so don't worry too much about the details, 
+1:30 what we'll say is we are going to try to run this code 
+1:33 and if there is some kind of error I'd rather run error code instead. 
+1:36 So either we are going to successfully import this 
+1:38 or we are going to have to do something else. 
+1:42 So let's add another file here, I'll call this statistics stand in for Python 2, ok, 
+1:49 name it whatever you want, it doesn't matter, 
+1:51 let me just capture the name really quick here, 
+1:53 we are going to come over here, we are going to say if there is an error, 
+1:56 we are going to instead import that now this is not going to work so well, 
+2:01 because we are going to still try to use this name below 
+2:03 and it's this is going to be here, right,
+2:07 so what we can do is we can say as this, 
+2:09 so basically here is the real module name but forget it rename it to that 
+2:13 and as long as it has a mean method, that takes data, 
+2:19 and let's just say return 0 for a minute, things will run. 
+2:23 So remember, we were running on Python 2.7 first of all, 
+2:28 let's go run it back on Python 3, works, right, 
+2:34 here is our mean method, now this is going to return 0, 
+2:36 we are going to put real numbers there in a minute, 
+2:37 but let's just see that it doesn't crash in the same place, 
+2:40 there is going to be another crash we'll deal with hold on. 
+2:44 Look, no errors, there is this problem with encoding 
+2:46 and it turns out that this do like so, turns out that that didn't work in Python 2.7 
+2:53 exactly in that manner, so we'll drop it, but now watch this, 
+2:58 it used our method when it wasn't available from the system, 
+3:03 and that is in the case that it happens to be 2.7, 
+3:05 it could actually be Python 3 but Python 3.1
+3:09 which preceded the sort of creation of that module. 
+3:13 So I guess it's up to us to go write some kind of a mean method, 
+3:17 so we'll have total=0 we'll have count=0, now we could do len of data 
+3:26 but if it's a generator it's better if we just do it this way,
+3:29 for x in data:, count +=1, total+=x 
+3:37 and now we want to return total divided by count, 
+3:40 unless that's 0 then that's king of be a problem so then we could say 
+3:43 max of 1 and count so that way a count of 0 we won't get it 
+3:50 divided by 0 error but otherwise we'll use max.
+3:53 Let's run it and see if we get some decent numbers here, 
+3:55 look at that, in Python 2 we have exactly the same answers, right, 
+4:05 that's Python 2, go back to Python 3, 
+4:08 notice 234, 165, 234, 165, same numbers, 
+4:15 so how do we do that, besides ignoring the encoding, we said look, 
+4:22 we'll try to use statistics if for whatever reason it's not available,
+4:24 then we are going to fall back and use our own probably less performant, 
+4:28 maybe bug written implementation, 
+4:31 but at least we have something to fall back to and we named it this, 
+4:35 but we for the purposes of this file, 
+4:37 we sort of replaced the same name here as statistics. 
+4:41 There is a lot to know about writing code that runs on Python 3 and Python 2, 
+4:46 here is just one example hopefully you'll find this useful.

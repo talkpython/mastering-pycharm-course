@@ -1,0 +1,100 @@
+0:00 We've seen this concept of generator methods 
+0:03 let's go apply it to everything we have going on here 
+0:05 and I'll even show you another keyword we haven't had a chance to talk about yet. 
+0:08 So let's start at the bottom. 
+0:09 Here is a method that is a traditional method it puts all the stuff 
+0:12 into the list and then once that computation is done 
+0:15 everything is computed it returns that whole list and then
+0:18 we just have another list above that we had even more to 
+0:21 and keep extending as we have more and more files. 
+0:24 We can do better. 
+0:26 So, instead of doing matches here, let's get rid of this, 
+0:29 and instead of doing append m we will say yield m 
+0:32 and we won't have to return the matches 
+0:35 maybe I'll even comment it out for you, like so, 
+0:40 so no more lists, we are just doing yield, now this would already work, 
+0:44 what we are doing is calling up here search file and here we get our generator, 
+0:50 but we can take any collection generators or iterable collections and extend this list, 
+0:55 but we can actually do better still 
+1:00 so this is a generator method, this is a regular one,
+1:03 but we can also apply the exactly same idea here and the same idea here, 
+1:07 now this gets a little tricky because I have to say for m in matches: yield m, 
+1:14 now, that's not the most fun thing to write, 
+1:16 it would work but I'll show you something better, 
+1:17 same thing down here for all the matches there we want to do that, 
+1:21 and then we no longer have our return
+1:23 so here is the generator method and this is going to come through 
+1:26 and each time that we sort go pull something out of this collection, 
+1:30 it's going to go until it hits one of these, 
+1:33 which the generator and it's going to hand one back 
+1:36 so if we only wanted the first 4 matches 
+1:39 we could compute that extremely quickly.
+1:40 However, this line 65, 66 this is not the coolest thing, 
+1:44 it turns out that python 3.3 added basically a keyword that will do the same thing
+1:51 like take a whole set and sort of hand them back one at a time, 
+1:54 and so we can simplify this and just say yield from matches, 
+1:57 and if we really wanted to simplify this we could actually come down here 
+2:00 and just write it as one line, we could just say yield from that, 
+2:05 never even store matches here, similarly yield from that; 
+2:10 so down below, we have search files, 
+2:12 that individual searching of a single file is a generator
+2:15 and we only ever have a single line in memory at a time. 
+2:20 Now up here, as we work through all the files in our directory 
+2:23 or even recurse into a tree of directories and their files, 
+2:27 we are only pulling back one item from either here or here at a given time, 
+2:33 and that means we only have 1 line in memory at a time, 
+2:37 really one search result and then we can go up here and we are printing out 
+2:41 now, let me just show you that this is still working, 
+2:44 let's bring this back and then let me search the simple files again, 
+2:50 just to show that we are actually still searching just like before. 
+2:53 So let's search the small set of books for Holmes, there you go, 
+2:57 you can see 468 matches, and we are searching the Ulysses 
+3:02 or searching The Adventures of Sherlock Holmes, perfect, 
+3:06 it works exactly the same but from a performance perspective it's not the same, 
+3:12 let's run it again, and this time we are going to search the large set of files, 
+3:17 and again, we are going to search for how many question marks are there, 
+3:22 there were something like 2.78 million question marks and remember, 
+3:25 we had to use like almost 400 MB of memory to answer that question, 
+3:28 remember, 400 MB, what's it going to do this time, can we do better? 
+3:35 Oh, here, hold on, let me stop this really quick, 
+3:37 remember, we didn't do the output, it was too much going really, 
+3:41 we just did a little count, so let's rerun it this way. 
+3:45 Ok, here we go again, 
+3:47 it's going, 3.8 MB remember, it should have jumped up to 300 MB, a gigabyte,
+3:52 what is going on, this is so absolutely amazing, 
+3:57 look at this you guys, we are processing gigabytes and gigabytes of code 
+4:00 with almost identical algorithms 
+4:03 and yet the memory usage is the same 
+4:05 as if we are processing like a single line in memory, 
+4:08 because that's all we are ever holding, 
+4:10 is a single line in memory, ok, 
+4:13 great we do have the file stream open to some huge file at some point, 
+4:16 but we are seeking over, we are streaming across it. 
+4:20 Let's just let it run and see where it goes.
+4:28 It's done, look at that, 
+4:29 look at the memory usage, look at the CPU, 
+4:34 look at the performance, it is so much better than it was before, 
+4:39 in fact, I kept the previous one around, 
+4:42 let's have a look at it, it's not really fair to put them side by side, 
+4:46 because the scale of the graph is not the same, 
+4:49 but I think we'll get the sense anyway. 
+4:52 So on the left is the old bad sort of standard procedural code style
+4:56 and now look at the memory,
+4:58 it goes from 3 MB when I was starting out to 394 MB;
+5:05 ours went from 3 MB to 4 MB. 
+5:09 And that was it.
+5:11 If you look at the size of the CPU graph or sort of the length of any of these graphs, 
+5:15 you'll see they are basically identical in computational time, 
+5:18 it looks actually lower on CPU usage, 
+5:22 presumably it's doing less garbage collection less allocation, 
+5:26 doubling of lists and copying them and things like this, 
+5:29 and all we have done to change that algorithm is use the yield 
+5:33 and yield from keyword instead of making lists appending and extending them. 
+5:37 The code we wrote actually got a couple of lines shorter, 
+5:40 so this is the power of generator methods 
+5:43 and any time you are processing like a pipeline of lots of data 
+5:47 you saw that you can chain them together 
+5:49 to create these pipelines basically effortlessly, 
+5:52 we'll see that there is even a simpler way to create
+5:55 this type of structure something called a generator expression, 
+5:58 right, but we'll save that for the next app.

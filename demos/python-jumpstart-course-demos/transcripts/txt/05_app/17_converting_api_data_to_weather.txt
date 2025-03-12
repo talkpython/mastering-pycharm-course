@@ -1,0 +1,85 @@
+00:0.04 Recall what we got back from here with our data.
+00:3.26 Let's just print out Portland. We got all of this stuff, like our weather with our
+00:7.34 details and our categories and whatnot, what I want to do is get more structured,
+00:11.93 simple data that we could work with.
+00:14.07 We did that up here with locations,
+00:15.92 and let's just actually do the same thing for weather.
+00:18.02 So we'll say whether or weather report or something like that is gonna be another named
+00:21.77 tuple and it's just gonna have city,
+00:26.07 let's actually, you know, we could have city,
+00:27.85 state, country, or we could pass over just a location object.
+00:30.78 So let's say it just has a location and then it has units.
+00:34.62 Is it metric or is it imperial or whatever?
+00:37.39 And then the temperature and the condition. So if it has
+00:40.16 those things, we'll be able to
+00:42.04 create it down here. So all we gotta do is come down and, it's not, we
+00:46.04 can print it for a minute.
+00:47.64 I'm gonna go over here and what we need to pass is the location which is already
+00:51.82 passed in, so that's easy.
+00:53.44 The units, well, the units we're passing over are right there, so you could pass it
+00:59.6 however you want. And then we need the temp and the condition.
+01:4.24 I'm gonna do a short little version here,
+01:6.19 and then we'll do an improvement in a minute,
+01:8.49 but let's return the weather. So we'll say the temp is data,
+01:13.65 now remember, how do we get this out?
+01:15.38 It actually is kind of all over the place.
+01:17.68 We want to run. Remember,
+01:19.9 there's weather, which has, like,
+01:22.64 the description here, so that's gonna be interesting,
+01:24.97 I'll put that up here for us. The other part that we care about is what's called
+01:33.49 the forecast right here, it's wrapping around oddly but like this.
+01:40.44 So what we actually need to do is we need to get, go to the weather
+01:43.54 and we're going to get some stuff here and then go to the forecast and then
+01:46.78 get the temperature, so the temperature is gonna be go here.
+01:49.87 I'm going to get the forecast and from the forecast,
+01:53.66 we're going to get the temp, and then the condition,
+01:59.64 same type of thing. Get the weather, then we want to get like we could
+02:5.96 get the description right. But I want to say, "category : description",
+02:10.38 So what we could actually do is come over here, like thi, and say we're gonna
+02:13.57 put this into a little variable, and I could just say, create an f-string, say
+02:19.01 it's gonna be "w dot get category"
+02:23.44 and then outside the curly braces "colon w dot get description". now,
+02:29.21 the description I wanted to be a capital first letter.
+02:32.08 So a cool way to do that is to say,
+02:34.02 "capitalize", makes it like a sort of like a proper sentence.
+02:38.34 And then here put a period on the end.
+02:41.74 So let's just print out the weather before we go any farther here,
+02:45.56 see what happens. If I say "Boston" got a bunch of stuff printed there.
+02:50.98 But this part, this is the interesting part.
+02:53.06 Look how cool that is! So we got the location
+02:55.89 is Boston, bo state specified, US.
+02:59.1 Units are imperial, temperature is
+03:0.56 53 degrees, and the condition is clouds,
+03:3.55 overcast clouds. Super, super cool.
+03:6.67 So the final, final thing we've got to do is just show that to the user
+03:10.81 in some meaningful way. But this is starting to look complicated,
+03:13.91 and it shouldn't be complicated. There's not much going on here.
+03:16.44 All we need to do really is we wanna actually,
+03:19.67 maybe even do a little bit more like so when it said that the temperature was
+03:22.67 59, we're not using the units either,
+03:25.73 are we? So what I want to do for the unit is we're gonna need
+03:29.84 to get the, whether or not it's imperial or metric.
+03:32.82 But you don't say the degrees or imperial,
+03:34.66 you say they're Celsius or Fahrenheit,
+03:36.84 so we're gonna have to do a little conversion there.
+03:38.39 And what I want to do is I wanna make this something that we can put
+03:41.29 away and make it simpler. So let's say, we're going to convert this data over
+03:46.58 to a weather report so we could go and
+03:48.35 write a function, I could come down here and type "def convert
+03:52.61 API to weather object"
+03:57.17 right? Or PyCharm actually has our back here,
+04:0.1 which is pretty cool. We can go and
+04:1.6 highlight that, right click, refactor, extract method, and you give it a name, hit
+04:8.32 enter, and check that out. It wrote that right there for us.
+04:12.21 So that's cool. It's, uh,
+04:13.64 if I deselect it here, you can see that it's helping us out here a lot
+04:17.36 by cleaning things up. We don't need to print the weather.
+04:21.64 We could, in fact, just return this directly.
+04:25.54 Now, if we go back to our calling the weather API,
+04:27.9 it looks simple again, and that is because it's simple.
+04:29.97 It was just getting a little bit complicated there.
+04:32.84 So now, call this "weather" maybe, up at the top,
+04:36.17 and, print it out one more time,
+04:38.48 It's not quite the end, but you can see nice print out of everything.
+04:44.38 All we gotta do is convert that into something we'd like to show the users,
+04:47.42 maybe get rid of that, and we'll be set with our weather example.

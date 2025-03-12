@@ -1,0 +1,29 @@
+0:00 Let's look at this core concept of dictionaries.
+0:02 Dictionaries are kind of like lists and they will store 
+0:05 a bunch of different types of data for you,
+0:08 but lists are very limited in the way you can get that data back,
+0:11 you can only get that back by index. 
+0:14 So I can get the third item, or the hundredth item or the minus one item 
+0:18 even to go and get the last out of the list but that's problematic in a lot of ways,
+0:21 a much better way to store data if we are going to randomly access it 
+0:26 is by some name that makes sense to people not just an index, 
+0:29 so here we have an information thing, 
+0:32 maybe it talks about a person's age and the location,
+0:35 so here we have a dictionary 
+0:38 and we are setting the age to be 42 and the location to be Italy, 
+0:41 so that first part we can kind of dynamically build it up, 
+0:44 but we can also use the two steps below right here 
+0:48 where we can allocate and populate the dictionary all at once,
+0:52 so those next two lines those are two ways to do the identical same bit of code 
+0:56 to create a dictionary that has an age of 42 and a location of Italy. 
+1:01 When we want data out of the dictionary, instead of using a number, 
+1:05 we just use a key in this case we would like that location information back 
+1:09 so we just say quote location, here we are using a string, it could be a number, 
+1:12 it could be something much more complicated even 
+1:14 and that will actually give us the location back, that value is Italy. 
+1:17 If you are not sure if a key is in the dictionary, 
+1:20 and you try to access it you will get a key error exception. 
+1:24 So if we want to get the age value out of info and it's not guaranteed 
+1:29 that age is actually in there, you ask this somewhat non obvious 
+1:33 but pretty cool way of saying if age in info and that will return true
+1:37 only if there is some value for age inside of info.

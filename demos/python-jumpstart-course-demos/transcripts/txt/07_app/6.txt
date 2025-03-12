@@ -1,0 +1,40 @@
+ 0:01 Now that we've had a chance to work with classes in our wizard game, 
+0:03 let's take a moment and look at the most common features
+0:06 that appear and are used with classes. 
+0:09 As you saw, we define all classes with the class keyword, 
+0:13 so here we are defining a creature class so we can say class creature, 
+0:18 and like all code suits or blocks in Python 
+0:21 we define the rest of the class by saying colon and then indenting four spaces, 
+0:26 everything that is indented, is part of the class, 
+0:29 so here you can see that we have two methods, 
+0:31 one method called walk is a standard instance method if you will, 
+0:36 and when you call it on an object 
+0:39 and instance of a creature you say creature.walk 
+0:41 and it takes whatever the name of that creature is and it says, 
+0:46 you know, let's say it's toad, so toad walks around. 
+0:48 See this yellow keyword self, this is a convention, 
+0:52 it could be called anything, 
+0:53 in other languages it's called this and like C# or C++ 
+0:57 but here we are calling self and its pass to all instance methods 
+1:01 and that's how we access the field, 
+1:04 here we are saying self.name this is just a standard instance method, 
+1:08 the one above it is the initialzier, and you can tell 
+1:11 that is a magic method because it has double underscores on both sides, 
+1:15 so typically this is referred to as "dunder" 
+1:18 so here we would say __init__(), 
+1:20 and this is actually not often directly called 
+1:24 but it is actually part of the initialization creation process of the creature, 
+1:28 so when we create a new creature 
+1:30 we are going to actually pass this name and level 
+1:33 and then we somewhat dynamically create the fields 
+1:35 the name and the level on the self pointer. 
+1:39 Classes bundle together behavior and data, 
+1:42 here the data is the name and the level of the creature 
+1:44 and the behavior is its ability to walk around. 
+1:47 And these features of a class are the most common, 
+1:50 but in fact classes are very rich in Python as we'll see 
+1:53 you can have inheritance, you can have what are called properties, 
+1:57 you can have static methods, you can have class methods, 
+2:00 you can have static variables or fields on the class 
+2:04 so we are just using sort of the most common stuff here in our game, 
+2:08 but you can go really deep with classes and actually do a ton.

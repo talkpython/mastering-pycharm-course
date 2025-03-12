@@ -1,0 +1,181 @@
+0:00 So it's time to add persistence across running sessions 
+0:03 by saving and loading our journal from files. 
+0:07 Let's start by first saving our journal to a file. 
+0:11 So I want to come down here and any time that you work with file I/O, 
+0:15 you always start with this built in called open. 
+0:18 So here we can pass the file name by default you see the mode is R
+0:22 that's read only text but we are going to change that to W for write, 
+0:26 and we are not really going to worry about the other options. 
+0:29 So we need a file name that goes here and we want to have 
+0:33 the mode to be write, because we are going to create or replace a file, 
+0:36 we are not going to just read one, 
+0:38 and we'll catch this and I call it fout, from file output stream, 
+0:43 you can call it whatever you like, it's just a variable. 
+0:45 The first thing we really have to do to make this work
+0:47 is actually get this file name here, so I could say, 
+0:51 let's actually have a little folder, 
+0:52 that we are going to save our files into... a directory, 
+0:56 so let's call this journals, let's suppose we want to put them in there, 
+1:00 and I could say something like this, 
+1:02 I could say filename = './journals/'
+1:06 and then there is this name 
+1:08 remember we are passing in this journal name here, 
+1:10 so let's say name, and let's suppose on the end 
+1:12 when I have a 'jrl' file extension to indicate our custom journal format or whatever,
+1:18 it's hard it's going to be worthy of that but here we go. 
+1:20 Now technically, this would work on OS X and Linux,
+1:23 it may not work on Windows, right, remember, 
+1:27 Windows uses backslashes to separate directories, not for slashes, 
+1:31 but more important than that, if I am combining multiple directories, 
+1:36 say if I am giving a like a base directory equals something like this 
+1:41 '~/', and I am giving a relative directory = data/temp.
+1:50 If I am given these two and I want to build up the full path, 
+1:53 I would say full_file = base_dir + and I need to use a little separator here
+1:59 because you can see on this part there is no separator up there
+2:03 and then we'll say + relative directory, like so 
+2:06 and if this is passed me well do I know whether there is this little slash on the end
+2:12 do I need to put it here, do I check, all those little nuance details
+2:16 in Python we don't actually need to deal with any of that
+2:19 and we get OS independent path operations,
+2:23 all I am using is this module called OS. 
+2:26 So I want to come up here, I want to import OS, and down here,
+2:30 I can say instead of doing this thing, 
+2:32 I would like this file to be os.path. and we can just say join, 
+2:37 and put a whole bunch of little paths to segments together, 
+2:40 so we can say ./journals, the name, like so. 
+2:45 Now, it won't really join the extension, right, 
+2:47 it will think that's a separate file, 
+2:49 so it's up to us to add the extension but other than that, 
+2:51 it will take an arbitrary number of segments and put them together here
+2:54 and let's just print would load form this here, 
+3:00 ok, so when I run this, and we exit, 
+3:03 you would see what load I suppose that should be saved to, 
+3:06 but here we have our ./journals, 
+3:08 and we can even go one step farther make this very explicit, right,
+3:11 if I am going to write that to a log file I need to know 
+3:14 what the working folder was, at the time, right, 
+3:17 so I could say path.absolutepath, 
+3:22 now if I run it, exit out of here, 
+3:24 you can see user screen caster source python jumpstart... darara number 4, 
+3:28 right this is the full path and this works perfectly well in all of the major platforms. Ok?. 
+3:35 So this is going to let us work with that folder right there, 
+3:39 and let's go and say just this, saving to here, 
+3:44 and put a little indicator that that's not 
+3:48 proper app output at the terminal there, all right, 
+3:51 so now we have our file name, we can go and open it, 
+3:55 and we can go through our journal, 
+3:57 remember our journal is this list of drinks,
+3:59 say for entry in journal data, and say fout.write
+4:05 and I can write this out and say entry, 
+4:07 now, if I say this way it's not quite going to work the way we hope, 
+4:12 and let's go ahead and leave it for a moment, 
+4:15 say fout last thing we want to close this 
+4:18 you always want to close the file handles as soon as you are done with them, 
+4:21 so let's run this and I'll show you better way to deal with this close scenario. 
+4:25 So if I run this and let's add an entry, 
+4:28 say thing 1 and an entry thing 2, and we exit, 
+4:33 you'll see that this was saved and if we go up here 
+4:36 there is now this file and if we open it up,
+4:38 these are actually all in one line, probably not the best. 
+4:42 Now, we probably should talk about the format just a bit anyway, 
+4:44 we want to keep this super simple, 
+4:47 we are going to get to more interesting file formats later, for our journal, 
+4:50 we are just going to write one entry per line. 
+4:53 But notice these are all in the same line 
+4:55 so we need to actually add a new line character 
+4:57 so backslash end and then when we rerun this 
+5:00 say let's add a few entries here, and exit, 
+5:09 now if we go back to our journal, 
+5:11 you'll see perfectly misspelled thing 1 and thing 2, excellent. 
+5:15 Ok, so it looks like our file I/O is working, 
+5:18 now we want to make sure we call close
+5:22 if there is some kind of exception or error or early return 
+5:25 in this obviously a very small bit of code, 
+5:28 but even it could have an error, however, 
+5:31 the more complicated the code gets 
+5:33 the more helpful this what I am about to show is going to be
+5:36 if we return without doing this, well that's kind of a problem, right, 
+5:39 so what we want to do is in Python
+5:42 there is actually this thing called a context manager, 
+5:45 that will say for this block or suite of code, 
+5:48 I would like this object to exist, 
+5:50 and regardless of how you leave it through an exception, 
+5:53 early return, falling to the bottom,
+5:55 I want you to cleanup, and it's up to the item being used 
+5:59 to determine what cleanup means, 
+6:01 and you can imagine for files that's like close and flesh the buffer. 
+6:05 So the way we do that is a little different than this,
+6:07 we'll say with, it's kind of reversed, 
+6:10 we'll say with open file name and same parameters, as fout, 
+6:15 and then we do a block like so. 
+6:18 And we won't need this anymore, 
+6:20 because as soon as we leave this block right here, 
+6:24 it's defined by the indented section it's going to automatically call close.
+6:29 Ok, so let me clean this up a little bit.
+6:38 Here is our final save, we are going to use os.path.absolutepath
+6:42 to get a full path from our relative path we built up with join, 
+6:46 and in OS we do have these for slashes in here, 
+6:49 so maybe it would make more sense to write it like so, there we go, 
+6:53 that way it doesn't depend on for slash being a particular separator, 
+6:57 so here now we have a proper OS independent style.
+7:00 We use our context manager, our open method to get the file stream, 
+7:05 and then we just call write, and we write out the text, 
+7:08 if we want the binary version, we would say WB for write binary, 
+7:11 and that's that, we are going to do something very similar for loading it. 
+7:17 In fact, so much so that we are going to use exactly the same line of code, 
+7:22 I kind of feel like that should be like a method or something, 
+7:25 so let's go over here and I could write a method
+7:28 in this file or I could go to PyCharm and hit control T 
+7:32 and say I'd like to create a method let's call it get full path name something like that,
+7:39 and you see down here it's returning this, 
+7:41 and we're calling this file name here, let's just do that same thing up there. 
+7:45 So, this one is different there, 
+7:47 usually it will be a file but not always, right, not the first time, 
+7:50 so we can say something like this, 
+7:52 if os.path.exists file name then we want to load it, 
+7:57 otherwise we are going to return this thing. 
+7:59 Now, we are going to need to initialize that 
+8:03 and maybe fill the data maybe return the empty version, 
+8:06 but let's do this here, so now just like before, 
+8:09 we are going to use our with, but we are going to not use the w,
+8:12 we are not trying to write it we are just going to read it, 
+8:14 and I'm going to call it fin for file input, 
+8:17 and then we can just say for entry and fin.readlines(), 
+8:23 and that will just read in the lines and let me just print,
+8:27 would load and put a little print here entry.
+8:30 Now this is not going to work out quite as good as we would like, but let me run it, 
+8:35 so it would load thing 1 new line, thing 2, new line, 
+8:39 it turns out that in Python, when you do the read lines 
+8:43 the new line character is still stuck on the end, 
+8:46 right that back slash end that we out here, 
+8:49 or just naturally the file, is on here, it's not removed, 
+8:53 so we can come over here and say strip(), 
+8:55 maybe we want to be careful and just say rstrip() off the end, 
+8:59 now if I run it, I would say would load thing 1, thing 2, 
+9:03 those are exactly the entries we were hoping for. 
+9:06 Ok, so instead of doing this, 
+9:08 over here we say data.apend(entry). 
+9:11 Now if I could just load it up and I say list, 
+9:14 of yeah, I forgot the rstrip(), so let's say rstrip() 
+9:19 to remove the white space off the right hand side,
+9:21 now have a look, perfect, still misspelled, 
+9:24 thing 2, thing 1 exactly the right order because remember, we are reversing it. 
+9:28 So let's go and actually add a few more, 
+9:30 we'll say add this is fun with files, and add one more, today I saved this. 
+9:39 If we exit out you'll see saving to this location 
+9:42 and if we would rerun it, and just do a list, boom, 
+9:45 there are things we wrote, back in our file, 
+9:48 you can see right, there is the chronological order
+9:52 we created which is of course reversed of what we are showing. 
+9:55 Beautiful, let's go back and just review what we did for load,
+9:57 it's even easier than save, wasn't it, ok, 
+9:59 over here in journal we can remove our TODO, 
+10:03 so we create an empty journal bit of data and then we get the file name
+10:07 using our full path function right, ospath. absolute path and join 
+10:11 and then, we ask if it does exists let's load it, 
+10:14 using our super simple format of one entry per line,
+10:18 and then we are going to return either the populated or empty data set 
+10:21 and on the way out the door
+10:23 we create a writable file and we just write out the format that we were expecting.
+10:27 Perfect.
+

@@ -1,0 +1,137 @@
+0:00 Now we have the basic structure
+0:02 the basic shape and building blocks of our application
+0:05 let's fill them out.
+0:05 Let's start at the beginning which is a super easy
+0:08 we are just going to put our standard print statements.
+0:13 There you go, nothing new there. 
+0:16 Now the next thing is get the birthday from the user. 
+0:19 And what we need to return from this method
+0:22 is an actual datetime, 
+0:24 not just some text or something like that
+0:26 but we'll start by receiving text
+0:28 we'll ask the user a question 
+0:29 we'll get some text and then we'll turn that into a date
+0:31 there is actually a bunch of ways to do that
+0:33 we'll do the most straightforward way for now. 
+0:40 So we are going to ask the user when were they born 
+0:42 and then we are going to use our input 
+0:44 to get the year, the month and the day. 
+0:48 So we'll say year, like this, and we'll give it a little...
+0:53 now the next thing I want to do
+0:54 is kind of the same thing but for the month 
+0:56 and I could copy and paste this, I could retype it, 
+0:58 or in PyCharm I hit command+D 
+1:00 and it will just duplicate whatever you have selected,
+1:02 that is super handy, 
+1:04 then I'll say month, I'll change this to be appropriate here, 
+1:07 I'll say month and mm, and same thing for the day. 
+1:17 So I call this year, month and day, 
+1:19 and it turns out we are not quite done
+1:21 with the section but let's just see what goes wrong 
+1:22 and then we'll come back and fix it.
+1:24 So the next thing I need to do is work with dates,
+1:27 and dates are contained in module called datetime,
+1:29 and we actually like before with our random 
+1:34 we have to import datetime, 
+1:35 so we can come over and say import datetime, 
+1:39 and then we can come down here 
+1:41 and now we can work with it, 
+1:42 we'll say let's call some birthday, 
+1:46 and we are going to come here and we'll say datetime, 
+1:49 that's just the module we've imported, 
+1:50 now the next thing is just a little confusing when you first see it, 
+1:53 there is datetime.datetime, 
+1:56 ok, so what is going on here? 
+1:58 This is the module that we imported, 
+2:00 and within there, there is several things that represent dates and times
+2:04 there is datetime, which represents 
+2:06 a day on the calendar and a specific time on that day, 
+2:10 there is day, which is just a day in the calendar
+2:13 without the time component,
+2:14 there is time, it's just a time part 
+2:16 and there is time delta which is the difference between two datetimes. 
+2:21 So, maybe it's a little unfortunate, maybe not,
+2:24 but we say datetime.datetime and this is a class 
+2:28 so we can allocate a new instance of it. 
+2:31 So we have the year, the month, 
+2:33 the day, the hour, minute, second, 
+2:35 we can omit everything but the year if we'd like, 
+2:37 so we are going to put in a year, month, day, 
+2:41 and the last thing to do is we need to get our birthday 
+2:44 that we are creating here, 
+2:45 we need to return this out of this function, 
+2:47 we need to give it back, 
+2:48 so that we can capture in this variable down here, 
+2:50 pass it along and that is super straightforward, 
+2:52 we just say return birthday, 
+2:55 and that is going to return it form the function, 
+2:56 you can see the little warning about not returning the value down here,
+2:58  it's gone, so everything looks good,
+3:01 it's not good but it looks good, 
+3:03 there is actually two things that are not going to work great, 
+3:06 let me just show a quick reformat 
+3:07 so we only see errors not just pep 8 warnings.
+3:11 So when I try to run this it's going to be underwhelming,
+3:14 notice there is no run configuration,
+3:16 so I'll go over here and I'll say right click and then run, 
+3:18 now when it runs, you probably thought 
+3:21 that it was going to ask us questions like hey, 
+3:24 what year, what month were you born and so on. 
+3:27 But, remember, I told you there is no convention 
+3:30 around executing like a main method or anything like that, 
+3:33 and this is just for me to organize my thoughts, right
+3:37 to sort of group this into smaller building blocks 
+3:40 one way we can trigger this to work
+3:42 is we can just call the main method at the end of the script.
+3:44 That's not technically the best way of doing it,
+3:47 but let's just do this now and we'll come back
+3:50 and we'll improve upon it.
+3:52 So now if I run it, you can see it says
+3:54 tell us when you were born. Let's say 1974. 
+3:58 And it asks for the month. Ok, April. 
+4:02 And the day was let's say 1st.
+4:04 If I enter, you can tell it's obviously not happy. 
+4:09 Why is it not happy,
+4:09 well it's a type error and it says 
+4:11 an integer is required but we've got a string. 
+4:14 Where is that? So it turns out that 
+4:16 these have to be numbers, 
+4:18 and they are not numbers, 
+4:19 they are things that have come back 
+4:21 from input which are always strings 
+4:23 so we need to convert them... right? 
+4:25 So that is the one thing that was missing here, 
+4:27 and we can do this in several steps 
+4:29 or we can just sort of combine it like this, 
+4:33 say int, recall that we convert from a string to an integer 
+4:37 by just passing the string to the initializer of the int class, 
+4:43 so now, these should be integers, 
+4:45 but if you put in something that is not an integer, it's going to crash. 
+4:48 And the real app we should check for this, 
+4:50 when we get to there handling section of the course, 
+4:53 we'll talk a lot about this, 
+4:54 right now let's assume that they are giving us valid numbers.
+4:57 So now if we run it, 
+4:58 we should get it to work much better. 
+5:02 Now it is still not going to work, 
+5:03 in the end I think it may crash,
+5:06 it may make it to the end, let's see. 
+5:08 Yeah. So we made it farther,
+5:12 just down here we haven't quite finished this, 
+5:15 so we made it down this far,
+5:17 let me turn on line numbers really quick for you, 
+5:20 so I come over here and search into settings, 
+5:23 under general here you can see 
+5:25 I can just turn on show line numbers, all right, 
+5:28 so now I can tell you, 
+5:29 when we make it down the line 31, 
+5:30 everything is working fine 
+5:31 and these are the parts not so much yet, 
+5:34 so let's just comment those out really quick,
+5:36 I like to just maybe do a print statement, 
+5:38 as I go along, just to kind of see as it builds up,
+5:42 right, if it's a simple app, 
+5:44 so let's go over here and just put in some numbers, 
+5:48 and you can see we've actually generated 
+5:50 a datetime object and we've returned it here 
+5:53 and it's... ok, so it looks like this step is totally working.

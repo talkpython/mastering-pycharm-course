@@ -1,0 +1,90 @@
+0:00 So let's write the test for our code
+0:02 to see if the guess that the user entered is correct.
+0:05 So what we want to do is want to say if, and then write a conditional comparison statement, 
+0:10 a boolean statement, 
+0:12 so we can say if the guess, not the text remember,
+0:15 the actual number is less than the number,
+0:18 then we want to print something out 
+0:20 and for defining these if statements 
+0:22 and all sort of code blocks into Python
+0:24 we use a colon to indicate we are about to define a block of code
+0:29 that is going to run in some situation
+0:31 maybe it's a function, maybe it's a loop,
+0:32 in this case, it's a block in our if statement.
+0:35 So when it's true the guess is less than a number, 
+0:38 we are going to print out something like too low,
+0:41 the guess is too low, the guess is lower 
+0:43 than the number the computer came up with. 
+0:45 So that is one part, 
+0:47 next, we are going to ask else if it's the case so we'll say elif again,
+0:52 if the guess is too high, if it's higher than a number we'll print too high, like so,
+0:58 and notice, when I hit enter,
+1:00 when I type this block, I will just go back for a second,
+1:02 if I type x and hit enter, or complex or whatever,
+1:06 PyCharm wants to correct it for us
+1:08 and I say test and I hit enter, it goes back to the same line here, 
+1:12 but because PyCharm knows about the structure with colons, 
+1:14 if I go and I type something like if x: enter,
+1:19 it automatically indents for me, 
+1:20 so you will see these Python intelligent editors like PyCharm 
+1:24 make it really easy to write code correctly. 
+1:26 So we have if, indent, print too low, 
+1:29 else if "elif" guess is too high, print too high, 
+1:33 and the last thing I want to do is say else: and we'll print you win. 
+1:38 So there is a few more things we are going to need to do 
+1:41 to make this work just the way we'd like 
+1:42 but let's go and run it and see how it's working. 
+1:45 Ahh what's a good guess?, 54 it must be 54, too high, 
+1:49 oh, well the way game is supposed to work 
+1:51 it's supposed to say too high, 
+1:53 now you've got another chance. 
+1:55 So what we actually need to do is go around and around, 
+1:58 and that means we need to find something called a loop,
+2:00 and the type of loop that work really well for this situation, 
+2:04 in Python is something called a while loop.
+2:06 So you say while, and then some sort of condition 
+2:08 goes here that you want to test, 
+2:10 and as long as that is true, 
+2:11 you are going to go around and around and around, 
+2:13 so we want to say long is the guess is not a winning guess, 
+2:16 we want to keep going around 
+2:17 so we'll say guess, you say equals like this, remember, 
+2:21 and if you say not equals you say exclamation equals !=
+2:24 So now we'll say colon, 
+2:26 we need this whole if statement/else if part to run, 
+2:30 while this loop is going, and the way that we do that in Python
+2:35 is we indent it so I can highlight in PyCharm and hit tab 
+2:38 and it is going to indent everything four spaces for us. 
+2:41 And then when we are no longer indented, 
+2:43 if I print something down here, done like so, 
+2:46 you can see this is actually out of the loop. 
+2:49 Now, if I run this something really bad is going to happen, 
+2:52 we are going to end up in what is called an infinite loop, 
+2:55 because, we get one piece of input here from the person
+2:59 we convert it to a guess let's say it's 52, who knows, whatever,
+3:03 and when we go in here
+3:04 and unless you guess the winning number, 
+3:06 it is going to go around and around and around
+3:08 either say too low, too low, too low, or too high too high, too high, 
+3:11 and it's never going to give the user another chance to enter this text. 
+3:14 So what we need to do is make sure that we ask this question,
+3:17 and do the conversion within the loop. 
+3:20 Ok, so remember intend, so it's part of the loop, 
+3:22 we'll talk more about that in a moment, 
+3:24 so when it get the number, and then we are going to convert it and so on.
+3:27 Now, you can see PyCharm has this sort of highlighted
+3:30 as an error and it says guess cannot be defined after it's used. 
+3:35 So basically we need to give some kind of value 
+3:37 for the initial test so we get into this loop at least once
+3:41 so we can pick something like negative one
+3:43 or something that will never be a winning guess,
+3:46 that will make sure that we at least run to this scenario one time,
+3:49 now let's try it. 54- too high, 
+3:52 40- too low, 
+3:54 45- too high, 
+3:56 43- do I feel lucky- YES!!!, I was lucky, awesome. 
+4:00 So, that is how the game works, 
+4:02 we can do a little bit nicer stuff 
+4:04 but let's take a moment and pause and look at this concept
+4:06 of this indentation and defining code blocks that run by using indentation. 
+4:11 This is one of our core concepts that we are introducing as part of this app.

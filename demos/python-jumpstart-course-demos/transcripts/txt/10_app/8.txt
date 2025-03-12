@@ -1,0 +1,26 @@
+0:01 Let's close out application ten by looking at this concept of try except blocks.
+0:05 Here you can see we have a couple of methods that we are going to call,
+0:08 method one, two and three, and they may call other methods,
+0:10 and those methods call other methods, down deep into the Python standard library 
+0:13 and maybe in one of them way down there there is a possibility 
+0:17 that one throws a connection error. 
+0:19 Kind of like we saw with our request method calls, when the network was down.
+0:22 Now, it doesn't matter how deep down the chain you are or anything like that,
+0:25 if there is an exception and it is not handled, 
+0:28 then it's going to be raised and it will fly up here, 
+0:31 it will immediately start making its way, if let's say method two has the exception,
+0:36 so it will start run method one, successfully, 
+0:38 method two will run until it hits the exception- done, 
+0:40 it will skip method three it goes straight to here.
+0:42 Now test, is the error a connection error, 
+0:45 does it derive from or is it exactly this class,
+0:47 if that is true then we'll be int his exception block. 
+0:50 If that's not true, it will keep going down the list. 
+0:52 Now the order here matters a lot if you say exception at top 
+0:56 and then connection error at the bottom 
+0:58 because it just stops and the first one it hits their matches,
+1:00 it said you are done for it, it will actually never ever process the connection error 
+1:05 if you have a more base error or a more generic 
+1:07 general error handling block at the top,
+1:10 super important to go from most specific 
+1:12 to least specific as you go through this.

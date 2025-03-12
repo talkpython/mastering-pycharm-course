@@ -1,0 +1,50 @@
+0:00 For our final concept in this app, let's look at building data pipelines out of generators. 
+0:05 Now, these generators could be created from generator methods
+0:09 or generator expressions. 
+0:12 So let's see how we might use this to answer 
+0:14 some questions about the housing market.
+0:16 Our first task is let's find all the houses that match my requirements,
+0:20 and let's say personally I am looking for at least three bedrooms, 
+0:23 New York city, any city will do for a first pass and so on. 
+0:27 Next, maybe we want to find all the houses 
+0:30 that are for sale that I might in theory buy, 
+0:33 so that houses that come out on the first set, 
+0:37 maybe those are some are for sale some aren't. 
+0:39 Here we want the ones that are for sale, 
+0:41 and then, I'd like to take the ones that are for sale and then look around me. 
+0:45 Ok, so I am going to start out with this the results of task one 
+0:49 and filter them further down and process them more in task two, 
+0:53 and then maybe I'll process them still further in task three, 
+0:56 so how do we do that?  
+0:58 Here we can get all the real estate transactions 
+1:00 and use this data to start answering these questions, 
+1:03 so I've got this is interesting method 
+1:05 and that was kind of like check for three bedrooms at least and so on, 
+1:08 so  some sort of criteria that I am looking for. 
+1:10 Now there is no guarantee that these transactions represent houses nearby, 
+1:14 or that they are even for sale. 
+1:16 But then I can take the results of this generator, interesting tx, 
+1:20 and pass them to another generator, 
+1:23 in this generator we look for the houses that are for sale, 
+1:26 we don't care about all the houses that are for sale, 
+1:28 only the ones that I would be interested in. 
+1:30 And because they are both generators, 
+1:32 they do this in a progressive as you consume the data they pull the data,
+1:37 they don't process it all at once, they don't load it in memory all at once,
+1:40 all those sorts of things so we saw in application eight. 
+1:43 Now, we can ask further questions, 
+1:45 we can say I would like the ones that are potentially saleable, 
+1:48 which when I pull from that set it of course does its test
+1:52 but to get those items it pulls back from all the transactions 
+1:54 so there is kind of this pipeline or chain 
+1:57 depending on what which direction you think of it from, 
+1:59 and we'll loop through that using yet another generator 
+2:02 and we'll say for all the ones that are for sale that are interesting to me,
+2:06 I would like to reduce that to ones just nearby, 
+2:09 maybe I don't want to move cities I just want to look at 
+2:12 hey let's find all the houses I'd be interested in Portland Oregon, or wherever. 
+2:16 So, we can use these generators to build pipelines, 
+2:19 you can take one generator and pass it to the next 
+2:22 and then take that generator and pass it to the next and it creates 
+2:25 this really cool pipeline of processing that's extremely efficient 
+2:29 and it doesn't even require us to write methods.

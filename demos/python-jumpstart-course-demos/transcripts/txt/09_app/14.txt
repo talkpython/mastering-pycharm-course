@@ -1,0 +1,46 @@
+0:00 One really powerful language construct in Python
+0:03 is this thing called a list comprehension 
+0:05 that lets us take procedural code and condense it down to declarative code. 
+0:10 Here we have a bunch of customers, 
+0:12 and we'd like to know just the customers who purchased today. 
+0:15 And we don't want all the information about the customers,
+0:18 we just want a list of strings that are their names. 
+0:22 So paying_usernames is going to be the set of users 
+0:25 who have purchased something today.
+0:28 Now, this code works fine,
+0:31 and this is how you do this in many languages,
+0:33 we create lists, we loop over all the items, within out loop we do a test, 
+0:37 and if you pass the test, did you purchase today, yeah, ok, cool, 
+0:40 then we are going to take your name, we are going to stick in this list,
+0:42 there is a couple of drawbacks, 
+0:45 one is this is basically impossible to condense down 
+0:48 to something you can pass as an argument or simply assign a variable to, 
+0:52 the other one is it's just kind of verbose and you have to say all the steps, 
+0:57 telling the runtime, the implementation exactly what to do. 
+1:01 We can use something called a list comprehension to simplify this 
+1:04 and condense it down to what is equivalent to a single line of Python, 
+1:08 so then we can more easily assign it to variables, 
+1:12 pass it to functions, things like that. 
+1:14 So we can write the exact same code like this, 
+1:17 we can say paying_username= [ ] just like we are going to define a list, 
+1:21 what goes in there is not static data, in fact we put this expression it has three parts, 
+1:25 the first part is the projection, remember, 
+1:27 we are given a set of users and we want just the names, 
+1:30 we kind of got to think ahead a little bit, 
+1:32 this is a little bit annoying about it but you have to imagine 
+1:35 well if I am going to name the customers what variable will I use 
+1:38 to name each and everyone of them as if this were a loop, 
+1:41 we could say if that was going to be you then I would like to name, 
+1:44 so u.name goes into projection. 
+1:46 Then you write the source, and it always goes like for something in some set, 
+1:51 so here we have for u in get_active_customers(). 
+1:54 And then finally the test or filter, so we say if and then we just put our test here 
+1:58 our test was if the last purchase was today, 
+2:01 so we say if you.last_purchase==today, done. 
+2:05 And the way I've written it it's not that much shorter on the screen 
+2:10 but because it's a single expression you can do things like 
+2:14 pass it the functions as single arguments, 
+2:17 or sort of combine them and just have a lot more flexibility. 
+2:19 You also see as we move onto the next evolution of this concept, 
+2:24 the generator expressions, then you actually get even more benefit,
+2:28 there is actually performance benefits or consequences depending how you use it.

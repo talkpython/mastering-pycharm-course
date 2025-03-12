@@ -1,0 +1,35 @@
+0:00 Hello and welcome to app number 8. 
+0:02 This is a file searching app, and it's going to be able to search for text 
+0:06 within files across a massive quantity and number of files. 
+0:11 So, let's see exactly how this is going to work. 
+0:14 What are we going to build- well, it's going to look like this, 
+0:17 header, as always, and then it's going to ask the user 
+0:20 what directory do you want to start searching in 
+0:23 and we'll search recursively through that entire tree that subdirectory sort of thing,
+0:27 and what text, what string you want to look for. 
+0:29 Here we are looking in our previous app for the word dragon, 
+0:33 and here you can see we've found two matches, 
+0:35 in the players.py file on line 7 you can see we are defining 
+0:39 a class called dragon that is derived from creature, 
+0:42 so there the word dragon appeared. 
+0:44 And then, in the program.py on line 24, 
+0:46 we found where we were using the name space from the other module 
+0:49 to actually allocate or initialize a dragon and this is what a dragon with level 50- 
+0:54 Now we just say that's it, total number matches was two, we are done. 
+0:59 You might think that this app is largely about files. 
+1:02 But it's not, we've spent a lot of time on working with directories and files and so on, 
+1:06 we will have to do that, yes, but that's not the primary focus, 
+1:09 what we are going to look at is actually how do we use this concept 
+1:13 of a generator method which is implemented with the yield and yield from keywords, 
+1:18 along with recursion to put together a pipeline of processing, 
+1:22 a chain of what are called generator methods that are extremely efficient 
+1:26 at processing large quantities of data 
+1:29 so you'll see that we are using this app 
+1:31 to actually search through like 2.5 gigs of text files,
+1:36 the memory usage is almost 0 above just standard, 
+1:40 hey what's your name sort of input type of app 
+1:43 and the key to making this work is the yield keyword and the generator methods. 
+1:48 We are going to talk about path operations 
+1:50 and very basic string searching 
+1:52 but we are going to focus on this concept of a processing pipeline 
+1:55 and we just happen to use files directories and text as our input.

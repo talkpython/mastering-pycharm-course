@@ -1,0 +1,98 @@
+0:00 Ok, we saw that the csv dict reader was really the way to go
+0:04 from the text file into memory for comma separated data. 
+0:09 Now, there are still some things that are not quite perfect, 
+0:13 like imagine I was given this data, I would somehow want to go through it,
+0:18 if you asked me what is the average number of beds, well,
+0:21 I still have to know every single time to say quote beds, 
+0:24 and if I say bed instead of beds, crash, that's not great. 
+0:29 It's not discoverable what all the rows are, 
+0:33 and the rows all come back as text even though beds represent a number, 
+0:38 it's just a string that came out of the text file so if I look at the type here, 
+0:45 I'm going to say type of that, it should come back as str, 
+0:51 guess what, type is str because it's a string, 
+0:54 we need to convert it to its either an integer
+0:57 or for things like longitude, latitude to floats, 
+1:01 so let's bundle up that sort of implicit knowledge of the format here, 
+1:06 and we can put that into a separate class, 
+1:11 so I'll create a file and I'll call this just data types,  
+1:16 probably a better descriptive name would be great there 
+1:18 but let's define a class and we'll call this, let's just call it a purchase, right, 
+1:21 I was going to call it real estate purchase 
+1:24 but within the context of our real estate app 
+1:26 hopefully the real estate component is clear. 
+1:28 Now, I am going to show you something that you've not seen in this class about classes,
+1:32 what we have done so far is we have defined a __init__() 
+1:36 and we are going to do that again here, 
+1:39 let me just really quickly sketch out the pieces that are going to go in here, 
+1:41 you don't need to see me type this, ok, 
+1:46 so now I've sketched out a fairly complicated initialization method but you know, 
+1:52 it's just a matter of what pieces of data you want to store in here and where do we go. 
+1:56 Now, we could go back to program and make it this method, 
+2:00 this load files job to allocate a bunch of those purchase objects 
+2:04 do the conversion type here and stash the data in here 
+2:09 by passing them to the initializer. 
+2:11 But, this class already knows the structure and it knows the pieces that it expects, 
+2:16 so let's make this class responsible for creating other ones, ok.
+2:21 So we can come over here and define the method, 
+2:24 let's just call this create_from_dict(), something like this, 
+2:29 and we'll call this a lookup, or something like that, ok, 
+2:34 we will come down here we will say something this, 
+2:36 return purchase and we are going to allocate one of these things, 
+2:40 the first thing that goes in here is going to be the street 
+2:43 so we would say lookup of street like so, 
+2:46 again just let me type this out and I'll skip ahead,
+3:00 ok, so I wrote this method, now there is a few more things to do here, 
+3:04 we want to convert the number of beds into an integer, so we need to parse this, 
+3:07 similarly we want to convert the number of baths the square footage, 
+3:11 I believe that is an integer and a price, let's make that a float, just to be safe.
+3:18 I suppose we could do that here as well. 
+3:21 Ok, so this will create these purchase objects and from then on, 
+3:25 I can say things like . (dot) and here is all my list of items, 
+3:28 and the price is always going to be a float, 
+3:30 and that will be a strong structure that we can work with in our app. 
+3:33 But, let's try to use this method this is not going to be so cool,
+3:39 so come over here to our program, let's go ahead and make a purchases list here, 
+3:45 so we are just going to store all the purchases basically one for each row, 
+3:48 let's say purchases.append() purchase, 
+3:52 let's just say p, keep it short to fit on the screen, 
+3:54 so we'll say p=purchase, we need to import this, 
+3:59 if I try this, it's- let's give it the row here, 
+4:04 row is a dictionary, if we try to run this,
+4:06 it's not going to go so well, it says missing one position lookup, 
+4:10 the other thing that it wanted here is self, 
+4:13 we have to order these this way, I have to do this weird thing,
+4:17 I have to say p=purchase and I got it created and then I have to say p. well,
+4:23 that almost works, notice this line little error went away, 
+4:25 the line above now says oh, you are missing these 12 parameters, yayks. 
+4:30 So, let's go back through this. 
+4:32 This method has nothing to do with the individual objects, it deals with the class, right, 
+4:38 this just is associated with this class 
+4:41 but it doesn't have anything to do with the self parameter, 
+4:43 it could be a static method, it could be one that we can just call right on the type 
+4:48 and it maybe will allocate instances, of the purchase. 
+4:51 Now PyCharm is actually telling us to head as well like see the little squiggles there 
+4:54 it says you know what, you can make this method static 
+4:57 and the way we do that is we add what is called a decorator, 
+5:00 a decorator starts with the @ symbol, 
+5:01 and they have a cool color in PyCharm, 
+5:04 so we can say @staticmethod there is other things you can say, 
+5:07 you can say @property, and define the method that would be a property 
+5:12 instead of a method and so on, 
+5:14 what we are going to use is static method 
+5:16 and that lets us go back here and instead of requiring an instance we say like this,
+5:23 purchase.create_from_lookup and it only takes the dictionary here,
+5:28 so let's go and append these, and let's top the print out here, I'll just delete those, 
+5:33 when we are done, I'll just print let's just print the first entry, 
+5:37 our first class, all right, run this- oops, 
+5:41 I mean purchases, so we go this first one now that's not super helpful, 
+5:46 let's use this internal dictionary just to see what the data is like really quick, 
+5:51 here we go, sale date, such and such, state number of baths, perfect, 
+5:58 and notice, the type, residential has a quote but the number of baths is an actual number, 
+6:02 it's the 1, not quote '1', 
+6:04 which means we can do math on it similarly for things like the longitude, latitude, 
+6:08 number of bedrooms and so on. 
+6:12 So this is great, now we are just going to return our purchases,
+6:15 what will be in this list, this will be our specifically typed purchase class that has to do,
+6:21 that knows specifically about the data containing here 
+6:23 and we can leverage that to help us do math like ask
+6:27 what is the average number of bathrooms and so on.

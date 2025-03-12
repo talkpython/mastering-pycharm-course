@@ -1,0 +1,99 @@
+0:00 Finally let's briefly turn our attention to this line 51 here, main(). 
+0:05 So I told you calling main like this is not ideal, 
+0:08 but I've been pushing off talking about why that is 
+0:12 and it really has to do with when your code is 
+0:14 used as an external module to other code, right? 
+0:19 Either code you write or if you are writing a package, 
+0:22 people who consume your package and let's see what the problem is. 
+0:25 Let me just create a program 2.
+0:33 Now over here in this program 2 suppose we would like to do 
+0:37 this print header thing up here at the top. 
+0:39 This print header method, it's unlikely you would import that whole thing 
+0:44 just to get this but go with the idea. 
+0:46 Imagine I want to use this print header method up here 
+0:48 so I would like to do something like let's just say import program great, 
+0:54 and I could say program.print_header(). 
+0:58 Now let's make this super obvious what is happening
+1:00 in terms of the program flow, so I'll do a print, 
+1:02 and say about to import program, 
+1:08 let's call it step 1 down here we'll do a step 2 program imported, 
+1:16 and then maybe a step 3 printing header 
+1:23 and we'll add a step 4 down at the very end here, done... done with program. 
+1:30 Now, if you think how we want this to work 
+1:32 it should print about to import program,
+1:36 it should perform that silently, then it should print program imported, 
+1:41 then it should print printing the header and we have the little header part, 
+1:45 remember it's going to say --- journal app--- and then it should say done. 
+1:50 And it should just run without the user input, 
+1:52 conceptually the way we are trying to run it. 
+1:54 However, that is not what is going to happen, 
+1:57 so let me run this really quick, now it says about to import program
+2:00 and we see the header, ok, that is a little early, 
+2:02 but let's see what else is going on, 
+2:04 now it says what do you want to do with your journal, 
+2:06 and I can apparently interact with it- weird, 
+2:13 ok, that was pretty unexpected, 
+2:15 if I hit exit it exits and then it says ok now the program is imported 
+2:20 so all of this from here to there, that is literally line 2 of our program, 
+2:26 program2.py what the heck is going on? 
+2:29 Well, remember the way Python defines classes, functions, variables and so on
+2:35 is it literally executes this file, top to bottom.
+2:40 It says ok we are going to execute importing the journal,
+2:43 all the stuff that that means we are going to execute defining main, 
+2:45 we are going to execute defining print header and so on, 
+2:48 so it's all looking fine until we get to here, 
+2:50 this actually has side effects,
+2:53 this actually starts that event loop that we saw 
+2:55 going around and around so in order to use this,
+2:58 I kind of need to not call it when we are importing 
+3:02 so here it worked fine, now that I commented that out, 
+3:05 it worked the way we expected. 
+3:07 So, in Python there is a convention that allows us to say 
+3:11 if you are trying to run this program do some extra code 
+3:14 but if you are trying to be a library,
+3:16 just define the features the variables functions, 
+3:20 classes and so on during import. 
+3:23 It all has to do with this special implicit variable called _name_ 
+3:29 there is several implicit values that we can get out of this module, 
+3:33 one is the actual full path to the file that is executing, 
+3:36 that can be really handy when you are trying to find something 
+3:39 relative to the current module, and this name, 
+3:42 this one actually is the convention we are going to use, 
+3:45 so let me just run this, remember we are running program 2, 
+3:49 we are going to import this, you'll see that this should be program 
+3:53 and this should actually be the full path to program. 
+3:58 Here you can see that's the __file__, 
+3:58 and here you can see that is __name__, 
+4:01 let's make this super explicit. 
+4:10 So I'll put __file__, __name__, then I will run it and you will see 
+4:13 the files that program is that could use a space, but you get the idea. 
+4:18 Ok, now let's go over here, let me add those spaces, 
+4:23 and let's go over here and change the app that we are running, 
+4:25 we are going to run program itself, 
+4:27 so when I run program, the file did not change but check out 
+4:30 what happened to the name, it became __main__ 
+4:34 so the convention in Python is when you are running a script
+4:38 if it's the thing the target of execution, its __name__ is set to __main__. 
+4:45 If on the other hand it's being imported, 
+4:47 it's just the name of the Python file typically without the extensions. 
+4:52 Ok, so how does that help us? 
+4:55 Well, down here in main, we can do this, 
+4:59 we can say if, __name__ is this main then in that case, 
+5:04 that means we are trying to run this program, 
+5:06 right now so let's kick off the main().
+5:09 On the other hand, if it's being imported, 
+5:11 if this is program rather than main(), 
+5:14 just don't execute our code, just let it define the functions and variables. 
+5:17 So if I run program, that's this file right now, 
+5:20 it should be main, so it should act like our original app. 
+5:23 Right, it lets us list entries and exits. 
+5:26 On the other hand, if I am trying to import it, 
+5:29 whereas I am running this program, 
+5:32 it's not going to be called __main__, it's going to be called program, 
+5:36 so let's run that, now notice file is of course what it is, 
+5:41 name is program we did not call main() 
+5:43 so it worked exactly like we wanted, 
+5:45 1 about to import program, boom- done importing, printing the header, 
+5:50 so if we did not have this little print bit here,
+5:54 it would act exactly like you would have initially 
+5:58 expected program 2 to run. 

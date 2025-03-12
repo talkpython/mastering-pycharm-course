@@ -1,0 +1,60 @@
+ 0:00 It's time for app number 7, 
+0:03 and this time we are going to build a really fun wizard game
+0:05 it's kind of a role playing dungeons and dragons sort of thing. 
+0:09 So what is that going to look like? 
+0:12 Well, it's going to be a text based game 
+0:14 and here you can see a standard ground of game play. 
+0:16 Of course, like all of our apps we start with a little header that says what the app is, 
+0:19 and then right off bat we have our hero in the game, the wizard Gandolf. 
+0:23 And he sees an Evil Wizard.
+0:25 It turn out that one is super strong 
+0:27 and so he is like... I am not going to battle this, he could attack it, 
+0:30 he could look around, but he is just going to run away as quick as he can. 
+0:33 So he does, and then next he finds a Bat, and decides 
+0:37 hey, I can probably attack and kill this Bat, so he does, 
+0:40 but just barely he roles a 22, the bat roles at 22 
+0:44 and I guess because the element of surprise 
+0:46 the wizard was triumphant over the Bat. 
+0:48 After that, the wizard Gandolf decides to have a look around 
+0:52 and he sees that there is a wimpy toad, a tiger, a dragon 
+0:55 and that very strong evil wizard hanging around. 
+0:58 The game goes around and around like this, 
+1:00 until either all the creatures are defeated or the wizard is gone. 
+1:04 While building this game we are going to learn 
+1:06 one of the most important concepts in all of computer programming 
+1:10 and that is the concept of object oriented programming. 
+1:14 This starts with defining classes 
+1:16 and classes defined how data and behavior 
+1:18 are bundled into one concept in programming 
+1:21 maybe this is a wizard or a dragon 
+1:24 or the general concept of a creature
+1:26 or even the concept of a game itself. 
+1:29 When we create these classes, these are called objects, 
+1:31 we want to initialize them, 
+1:32 have them come into existence immediately with the data they need, 
+1:35 we'll do that through initializers 
+1:37 and when we are talking about inheritance 
+1:39 we have to chain those initializers through the inheritance tree, 
+1:41 so we are going to talk about initializer chaining. 
+1:44 Speaking of inheritance, that lets us model our concepts
+1:47 in our program with different levels of specialization. 
+1:51 So we can model all of the actors, the dragon, the toad, the wizard 
+1:55 as something maybe we'll call the creature in the game 
+1:58 and then we have a specialized version of the creature 
+2:00 that has other data and other features called the wizard 
+2:03 and it knows how to battle creatures 
+2:05 and then we can also have different types of creatures 
+2:07 that may themselves have special features 
+2:09 like a dragon that has a special attack or something like that.
+2:12 So this is called inheritance and it's a very powerful feature, when use judiciously. 
+2:16 When we talk about inheritance, 
+2:18 we are also going to talk about polymorphism and duck typing. 
+2:21 Some languages have very strict rules 
+2:23 about how you can use the more general what you call a base class 
+2:26 or the specialized derived class, 
+2:29 like how you can use a creature versus how to use a wizard, 
+2:32 the compiler checks all these things and so on, 
+2:34 Python doesn't have compiling or this concept of strong typing
+2:37 instead we are going to use something called duck typing
+2:40 we'll talk about that near the end of our app.
+2:43 Let's get onto build a super fun dungeons and dragon style wizard game.
