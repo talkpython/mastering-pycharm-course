@@ -15,7 +15,7 @@ Open the project called `bad_wizard` (same folder as this file).  Remember to cr
 PyCharm indicates "No interpreter selected" using PyCharm's `Add interpreter...` feature or with uv as we did in the `01-projects` section.
 
 There is a lot wrong with `bad_wizard`, but don't mess with the warnings yet. 
-Instead, on line 41 in the file `program.py`, type 
+Instead, on line 45 in the file `program.py`, type 
 
 ```python
     hero.
