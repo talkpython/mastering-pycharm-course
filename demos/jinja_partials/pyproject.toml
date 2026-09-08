@@ -3,7 +3,7 @@ name = "jinja_partials"
 description = "Simple reuse of partial HTML page templates in the Jinja template language for Python web frameworks."
 readme = "./README.md"
 license = "MIT"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 keywords = [
     "web",
     "html",
@@ -14,14 +14,13 @@ authors = [
 ]
 classifiers = [
     'Development Status :: 5 - Production/Stable',
-    'License :: OSI Approved :: MIT License',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
     'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: 3.14',
 ]
 dependencies = [
     "jinja2",
@@ -67,5 +66,4 @@ exclude = [
     "/example_client",
     "/build",
     "/dist",
-    "setup.py",
 ]
