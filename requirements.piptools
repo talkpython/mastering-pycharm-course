@@ -1,0 +1,26 @@
+# This file contains all the required packages for the course
+# You don't need to install it, but it's here as a convenience.
+# Many sample projects have their own requirements.txt files
+# and sometimes instructions suggest you use pip to install a library
+# But if you want to avoid those steps and you use a single virtual
+# environment for the course, just install this via:
+# pip install -r requirements.txt
+# In your terminal with the environment activated.
+
+alembic
+flask
+jupyter
+jupyterlab
+matplotlib
+numpy
+pandas
+passlib
+progressbar2
+pytest
+pytest-clarity
+pytest-cov
+python-dateutil
+requests
+sqlalchemy
+webtest
+werkzeug

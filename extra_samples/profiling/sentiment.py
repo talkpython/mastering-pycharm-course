@@ -14,15 +14,17 @@ import urllib
 
 import requests
 
-BASE = 'https://raw.githubusercontent.com/jeffreybreen/' \
-       'twitter-sentiment-analysis-tutorial-201107/master/' \
-       'data/opinion-lexicon-English/'
+BASE = (
+    'https://raw.githubusercontent.com/jeffreybreen/'
+    'twitter-sentiment-analysis-tutorial-201107/master/'
+    'data/opinion-lexicon-English/'
+)
 NEG_URL = f'{BASE}negative-words.txt'
 POS_URL = f'{BASE}positive-words.txt'
 
-STOPWORDS_URL = 'https://raw.githubusercontent.com/' \
-                'stanfordnlp/CoreNLP/master/data/edu/stanford/nlp/' \
-                'patterns/surface/stopwords.txt'
+STOPWORDS_URL = (
+    'https://raw.githubusercontent.com/stanfordnlp/CoreNLP/master/data/edu/stanford/nlp/patterns/surface/stopwords.txt'
+)
 
 
 def main():
@@ -33,7 +35,7 @@ def main():
 
     for post in posts:
         words = get_line_words([post['description']])
-        print(f"{post['title'][:20]:20} Score: {get_score(words):6.3f}")
+        print(f'{post["title"][:20]:20} Score: {get_score(words):6.3f}')
 
 
 def get_url(url, filename):
@@ -73,7 +75,7 @@ def get_posts(query):
 
 
 def get_score(words):
-    print("Processing {} words".format(len(words)))
+    print('Processing {} words'.format(len(words)))
     if not len(words):
         return 0.0
 
@@ -98,10 +100,10 @@ def get_score(words):
 
 
 if __name__ == '__main__':
-    print("Calculating sentiment on episodes...", flush=True)
+    print('Calculating sentiment on episodes...', flush=True)
 
     start = time.time()
 
     main()
 
-    print(f"\ntook {time.time() - start:.3} seconds")
+    print(f'\ntook {time.time() - start:.3} seconds')

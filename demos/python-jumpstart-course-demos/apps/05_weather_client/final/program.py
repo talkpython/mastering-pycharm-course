@@ -7,15 +7,15 @@ Weather = collections.namedtuple('Weather', 'location units temp condition')
 
 def main():
     show_header()
-    location_text = input("Where do you want the weather report (e.g. Portland, US)? ")
+    location_text = input('Where do you want the weather report (e.g. Portland, US)? ')
     loc = convert_plaintext_location(location_text)
     if not loc:
-        print(f"Could not find anything about {location_text}.")
+        print(f'Could not find anything about {location_text}.')
         return
 
     weather = call_weather_api(loc)
     if not weather:
-        print(f"Could not get weather for {location_text} from the API.")
+        print(f'Could not get weather for {location_text} from the API.')
         return
 
     report_weather(loc, weather)
@@ -29,9 +29,9 @@ def report_weather(loc, weather):
 
 def get_scale(weather):
     if weather.units == 'imperial':
-        scale = "F"
+        scale = 'F'
     else:
-        scale = "C"
+        scale = 'C'
     return scale
 
 
@@ -46,7 +46,7 @@ def call_weather_api(loc):
     # &state=OR
     url = f'https://weather.talkpython.fm/api/weather?city={loc.city}&country={loc.country}&units=imperial'
     if loc.state:
-        url += f"&state={loc.state}"
+        url += f'&state={loc.state}'
 
     # print(f"Would call {url}")
     resp = requests.get(url)
@@ -65,7 +65,7 @@ def convert_api_to_weather(data, loc):
 
     temp = data.get('forecast').get('temp')
     w = data.get('weather')
-    condition = f"{w.get('category')}: {w.get('description').capitalize()}"
+    condition = f'{w.get("category")}: {w.get("description").capitalize()}'
     weather = Weather(loc, data.get('units'), temp, condition)
 
     return weather
@@ -78,8 +78,8 @@ def convert_plaintext_location(location_text):
     location_text = location_text.lower().strip()
     parts = location_text.split(',')
 
-    city = ""
-    state = ""
+    city = ''
+    state = ''
     country = 'us'
     if len(parts) == 1:
         city = parts[0].strip()

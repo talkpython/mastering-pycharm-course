@@ -20,15 +20,15 @@ fileConfig(config.config_file_name)
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 
-import sys
+import sys  # noqa: E402
 
 folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, folder)
 
-from pypi_org.data.modelbase import SqlAlchemyBase
+from pypi_org.data.modelbase import SqlAlchemyBase  # noqa: E402
 
 # noinspection PyUnresolvedReferences
-import pypi_org.data.__all_models
+import pypi_org.data.__all_models  # noqa: E402, F401
 
 target_metadata = SqlAlchemyBase.metadata
 

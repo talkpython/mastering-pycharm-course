@@ -26,8 +26,7 @@ def print_header():
 
 def get_data_file():
     base_folder = os.path.dirname(__file__)
-    return os.path.join(base_folder, 'data',
-                        'SacramentoRealEstateTransactions2008.csv')
+    return os.path.join(base_folder, 'data', 'SacramentoRealEstateTransactions2008.csv')
 
 
 def load_file(filename):
@@ -60,18 +59,25 @@ def load_file(filename):
 # def get_price(p):
 #     return p.price
 
+
 def query_data(data):  # list[Purchase]):
 
     # data.sort(key=get_price)
     data.sort(key=lambda p: p.price)
 
     high_purchase = data[-1]
-    print("The most expensive house is ${:,} with {} beds and {} baths".format(
-        high_purchase.price, high_purchase.beds, high_purchase.baths))
+    print(
+        'The most expensive house is ${:,} with {} beds and {} baths'.format(
+            high_purchase.price, high_purchase.beds, high_purchase.baths
+        )
+    )
 
     low_purchase = data[0]
-    print("The least expensive house is ${:,} with {} beds and {} baths".format(
-        low_purchase.price, low_purchase.beds, low_purchase.baths))
+    print(
+        'The least expensive house is ${:,} with {} beds and {} baths'.format(
+            low_purchase.price, low_purchase.beds, low_purchase.baths
+        )
+    )
 
     # average price house?
     # prices = list()  # []
@@ -84,7 +90,7 @@ def query_data(data):  # list[Purchase]):
     )
 
     ave_price = statistics.mean(prices)
-    print("The average home price is ${:,}".format(int(ave_price)))
+    print('The average home price is ${:,}'.format(int(ave_price)))
 
     # average price of 2 bedroom houses
     # prices = []
@@ -108,12 +114,15 @@ def query_data(data):  # list[Purchase]):
     ave_price = statistics.mean((announce(p.price, 'price') for p in homes))
     ave_baths = statistics.mean((p.baths for p in homes))
     ave_sqft = statistics.mean((p.sq__ft for p in homes))
-    print("Average 2-bedroom home is ${:,}, baths={}, sq ft={:,}"
-          .format(int(ave_price), round(ave_baths, 1), round(ave_sqft, 1)))
+    print(
+        'Average 2-bedroom home is ${:,}, baths={}, sq ft={:,}'.format(
+            int(ave_price), round(ave_baths, 1), round(ave_sqft, 1)
+        )
+    )
 
 
 def announce(item, msg):
-    print("Pulling item {} for {}".format(item, msg))
+    print('Pulling item {} for {}'.format(item, msg))
     return item
 
 

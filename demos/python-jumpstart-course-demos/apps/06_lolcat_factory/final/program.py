@@ -39,7 +39,7 @@ def download_cats(folder):
         print('Downloading cat ' + name)
         cat_service.get_cat(folder, name)
 
-    print("done.")
+    print('done.')
 
 
 def display_cats(folder):

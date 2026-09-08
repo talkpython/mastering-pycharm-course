@@ -1,4 +1,3 @@
-import functools
 from typing import List
 import urllib.parse
 import requests
@@ -30,7 +29,4 @@ def perform_search(url):
 
 def convert_results(response):
     data = response.json()
-    return [
-        d.get('description')
-        for d in data.get('results')
-    ]
+    return [d.get('description') for d in data.get('results')]

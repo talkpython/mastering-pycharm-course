@@ -9,7 +9,7 @@ episode_data = {}
 
 def main():
     # SHOW THE HEADER
-    print("Welcome to the talk python info downloader.")
+    print('Welcome to the talk python info downloader.')
     print()
 
     # DOWNLOAD THE EPISODE DATA
@@ -24,10 +24,7 @@ def main():
 
     for idx, item in enumerate(dom.findall('channel/item')):
         episode = Episode(
-            item.find('title').text,
-            item.find('link').text,
-            item.find('pubDate').text,
-            episode_count - idx - 1
+            item.find('title').text, item.find('link').text, item.find('pubDate').text, episode_count - idx - 1
         )
         episode_data[episode.show_id] = episode
 
@@ -35,7 +32,7 @@ def main():
     latest_show_id = max(episode_data.keys())
     oldest_show_id = min(episode_data.keys())
 
-    print("Working with total of {} episodes".format(latest_show_id))
+    print('Working with total of {} episodes'.format(latest_show_id))
 
     # DISPLAY RESULTS
     start = oldest_show_id
@@ -44,7 +41,7 @@ def main():
     for show_id in range(start, end):
         # GET EPISODE
         info = episode_data.get(show_id)
-        print("{}. {}".format(info.show_id, info.title))
+        print('{}. {}'.format(info.show_id, info.title))
 
 
 if __name__ == '__main__':

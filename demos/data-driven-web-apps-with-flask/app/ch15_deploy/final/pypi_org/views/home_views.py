@@ -17,19 +17,6 @@ def index():
 @blueprint.route('/about')
 @response(template_file='home/about.html')
 def about():
-    query = "SELECT summary, author_email FROM packages WHERE author_email = 'me@kennethreitz.org'"
+    query = "SELECT summary, author_email FROM packages WHERE author_email = 'me@kennethreitz.org'"  # noqa: F841
     vm = ViewModelBase()
     return vm.to_dict()
-
-
-
-
-
-
-
-
-
-
-
-
-

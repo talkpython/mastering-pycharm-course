@@ -3,11 +3,11 @@ import core
 
 
 def test_there_are_tables_available():
-    assert False, "Use core to find_available by choice, make sure there is at least one"
+    assert False, 'Use core to find_available by choice, make sure there is at least one'
 
 
 def test_table_can_be_booked():
-    assert False, "Get a table (all tables), book it by ID, verify it is booked"
+    assert False, 'Get a table (all tables), book it by ID, verify it is booked'
 
 
 def test_cannot_book_a_nonexistant_table():

@@ -9,7 +9,7 @@ def get_records(text):
 
 # TODO: Make this faster by caching / reusing the connection
 def create_connection():
-    time.sleep(.250)
+    time.sleep(0.250)
     conn = {'connected': True}
     return conn
 
@@ -27,8 +27,8 @@ def run_query(conn, text):
 
 
 def read_row(conn):
-    time.sleep(.001)  # TODO: Improved index, i.e. shorting this!
+    time.sleep(0.001)  # TODO: Improved index, i.e. shorting this!
     if conn.get('connected'):
         return {'col1': 'val1', 'col2': 'val2'}
 
-    raise Exception("No connection")
+    raise Exception('No connection')

@@ -26,7 +26,7 @@ def global_init(db_file: str):
     __factory = orm.sessionmaker(bind=engine)
 
     # noinspection PyUnresolvedReferences
-    import pypi_org.data.__all_models
+    import pypi_org.data.__all_models  # noqa: F401
 
     SqlAlchemyBase.metadata.create_all(engine)
 

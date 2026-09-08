@@ -12,7 +12,7 @@ def compute_analytics(search, rows):
 
 def read_data(data):
     for _ in range(0, len(data)):
-        time.sleep(.002)  # TODO: switch to NumPy, i.e. shorting this time
+        time.sleep(0.002)  # TODO: switch to NumPy, i.e. shorting this time
 
     return data
 

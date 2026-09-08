@@ -1,8 +1,5 @@
 class Purchase:
-    def __init__(
-            self, city, zipcode, state, beds,
-            baths, sq__ft, home_type, sale_date, price,
-            latitude, longitude):
+    def __init__(self, city, zipcode, state, beds, baths, sq__ft, home_type, sale_date, price, latitude, longitude):
         self.longitude = longitude
         self.latitude = latitude
         self.price = price
@@ -28,4 +25,5 @@ class Purchase:
             lookup['sale_date'],
             float(lookup['price']),
             float(lookup['latitude']),
-            float(lookup['longitude']))
+            float(lookup['longitude']),
+        )

@@ -9,8 +9,6 @@ blueprint = flask.Blueprint('home', __name__, template_folder='templates')
 def index():
     row1 = video_service.top_videos()
 
-
-
     rows = [row1]
     return flask.render_template('home/index.html', rows=rows)
 

@@ -3,8 +3,8 @@ line-length = 120
 format.quote-style = "single"
 
 # Enable Pyflakes `E` and `F` codes by default.
-select = ["E", "F"]
-ignore = []
+lint.select = ["E", "F"]
+lint.ignore = []
 
 # Exclude a variety of commonly ignored directories.
 exclude = [
@@ -29,7 +29,7 @@ exclude = [
     ".venv",
     "venv",
 ]
-per-file-ignores = {}
+lint.per-file-ignores."setup.py" = ["E722"]
 
 # Allow unused variables when underscore-prefixed.
 # dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
@@ -39,4 +39,4 @@ target-version = "py311"
 
 #[tool.ruff.mccabe]
 ## Unlike Flake8, default to a complexity level of 10.
-mccabe.max-complexity = 10
+lint.mccabe.max-complexity = 10

@@ -1,8 +1,7 @@
 import os
 import collections
 
-SearchResult = collections.namedtuple('SearchResult',
-                                      'file, line, text')
+SearchResult = collections.namedtuple('SearchResult', 'file, line, text')
 
 
 def main():
@@ -28,7 +27,7 @@ def main():
         # print('match: ' + m.text.strip())
         # print()
 
-    print("Found {:,} matches.".format(match_count))
+    print('Found {:,} matches.'.format(match_count))
 
 
 def print_header():
@@ -83,10 +82,8 @@ def search_file(filename, search_text):
     # into errors where this is passed a binary file and crashes.
     # This try/except block catches the error and returns no matches.
     try:
-
         # matches = []
         with open(filename, 'r', encoding='utf-8') as fin:
-
             line_num = 0
             for line in fin:
                 line_num += 1
@@ -97,7 +94,7 @@ def search_file(filename, search_text):
 
             # return matches
     except UnicodeDecodeError:
-        print("NOTICE: Binary file {} skipped.".format(filename))
+        print('NOTICE: Binary file {} skipped.'.format(filename))
 
 
 if __name__ == '__main__':

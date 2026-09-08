@@ -1,4 +1,3 @@
-import functools
 import time
 
 
@@ -9,7 +8,7 @@ def get_records(text):
 
 
 def create_connection():
-    time.sleep(.250)
+    time.sleep(0.250)
     return {'connected': True}
 
 
@@ -26,8 +25,8 @@ def run_query(conn, text):
 
 
 def read_row(conn):
-    time.sleep(.0001) # todo: improve index!
+    time.sleep(0.0001)  # todo: improve index!
     if conn.get('connected'):
         return {'col1': 'val1', 'col2': 'val2'}
 
-    raise Exception("No connection")
+    raise Exception('No connection')

@@ -7,8 +7,8 @@ import os
 container_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, container_folder)
 
-import pypi_org.app
-from pypi_org.app import app as flask_app
+import pypi_org.app  # noqa: E402
+from pypi_org.app import app as flask_app  # noqa: E402
 
 
 @pytest.fixture
@@ -19,7 +19,7 @@ def client():
     # noinspection PyBroadException,PyUnusedLocal
     try:
         pypi_org.app.register_blueprints()
-    except Exception as x:
+    except Exception as x:  # noqa: F841
         # print(x)
         pass
 

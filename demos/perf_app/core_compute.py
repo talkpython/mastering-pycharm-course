@@ -2,7 +2,6 @@ import time
 import math
 
 
-
 def compute_analytics(search, rows):
     search_data = read_data(search)
     db_data = read_data(rows)
@@ -18,7 +17,7 @@ def compute_analytics(search, rows):
 
 def read_data(data):
     for _ in range(0, len(data)):
-        time.sleep(.002)  # convert to numpy
+        time.sleep(0.002)  # convert to numpy
 
     return data
 
@@ -28,7 +27,7 @@ def list_momento(wrapped_list_func):
     cache = {}
 
     def wrapper(*lists):
-        key = ""
+        key = ''
         for l in lists:
             key += str(l)
 

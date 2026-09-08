@@ -1,4 +1,4 @@
-from pypi_org.services import user_service, package_service
+from pypi_org.services import package_service
 from pypi_org.viewmodels.shared.viewmodelbase import ViewModelBase
 
 

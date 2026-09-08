@@ -21,10 +21,7 @@ def load_data():
     with open(file, 'r') as fin:
         data = json.load(fin)
 
-    categories = [
-        Category(**category)
-        for category in data
-    ]
+    categories = [Category(**category) for category in data]
 
     for c in categories:
         __categories[c.category.lower().strip()] = c
@@ -37,11 +34,7 @@ def load_data():
 def rebuild_flat_file_list():
     global __all_videos_list
 
-    flat_set = {
-        v.id: v
-        for cat_name, cat in __categories.items()
-        for v in cat.videos
-    }
+    flat_set = {v.id: v for cat_name, cat in __categories.items() for v in cat.videos}
     __all_videos_list = list(flat_set.values())
     __all_videos_list.sort(key=lambda vid: vid.views, reverse=True)
 

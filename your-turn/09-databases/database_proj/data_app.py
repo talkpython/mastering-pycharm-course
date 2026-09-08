@@ -1,5 +1,6 @@
 # noinspection PyPackageRequirements
 from models.album import Album
+
 # noinspection PyPackageRequirements
 from models.dbsession import DbSessionFactory
 
@@ -15,9 +16,9 @@ def list_albums():
     query = session.query(Album).order_by(Album.name.desc())
     albums = list(query)
 
-    print("There are {} albums".format(len(albums)))
+    print('There are {} albums'.format(len(albums)))
     for a in albums:
-        print("* {} - {} tracks".format(a.name, len(a.tracks)))
+        print('* {} - {} tracks'.format(a.name, len(a.tracks)))
 
 
 if __name__ == '__main__':

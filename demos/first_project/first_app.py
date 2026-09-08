@@ -16,15 +16,15 @@ def main():
 
     print(f'The title for episode {Fore.GREEN}{num} is {Fore.YELLOW}{title}')
 
-    numbers = [1,2,5]
+    numbers = [1, 2, 5]
     for i, number in enumerate(numbers):
-        print(f"The {i}th number is {number} and title is {get_title(number)}")
+        print(f'The {i}th number is {number} and title is {get_title(number)}')
 
     print(f'This is fun! {title}')
 
 
 def get_number() -> int:
-    return int(input("Enter the number of the episode: "))
+    return int(input('Enter the number of the episode: '))
 
 
 def get_title(episode_number: int) -> str:
@@ -54,6 +54,7 @@ def get_title(episode_number: int) -> str:
     resp.raise_for_status()
 
     return resp.text.strip()
+
 
 if __name__ == '__main__':
     main()

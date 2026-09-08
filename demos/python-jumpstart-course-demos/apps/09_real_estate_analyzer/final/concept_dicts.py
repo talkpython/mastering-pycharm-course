@@ -10,7 +10,7 @@ class Wizard:
         self.name = name
 
 
-gandolf = Wizard("Gladolf", 42)
+gandolf = Wizard('Gladolf', 42)
 print(gandolf.__dict__)
 
 print(lookup)
@@ -23,7 +23,7 @@ if 'cat' in lookup:
 
 # Suppose these came from a data source, e.g. database, web service, etc
 # And we want to randomly access them
-import collections
+import collections  # noqa: E402
 
 User = collections.namedtuple('User', 'id, name, email')
 users = [

@@ -23,19 +23,17 @@ def test_render_with_data(registered_extension):
 
 
 def test_render_with_layout(registered_extension):
-    value_text = "The message is clear"
+    value_text = 'The message is clear'
     html: Markup = jinja_partials.render_partial('render/with_layout.html', message=value_text)
     assert '<title>Jinja Partials Test Template</title>' in html
     assert value_text in html
 
 
 def test_render_recursive(registered_extension):
-    value_text = "The message is clear"
-    inner_text = "The message is recursive"
+    value_text = 'The message is clear'
+    inner_text = 'The message is recursive'
 
-    html: Markup = jinja_partials.render_partial('render/recursive.html',
-                                                 message=value_text,
-                                                 inner=inner_text)
+    html: Markup = jinja_partials.render_partial('render/recursive.html', message=value_text, inner=inner_text)
     assert value_text in html
     assert inner_text in html
 
@@ -51,8 +49,8 @@ def test_not_registered():
 
 
 def test_starlette_render_recursive(starlette_render_partial: Callable[..., Markup]):
-    value_text = "The message is clear"
-    inner_text = "The message is recursive"
+    value_text = 'The message is clear'
+    inner_text = 'The message is recursive'
 
     html = starlette_render_partial(
         'render/recursive.html',
@@ -64,8 +62,8 @@ def test_starlette_render_recursive(starlette_render_partial: Callable[..., Mark
 
 
 def test_register_environment(environment_render_partial: Callable[..., Markup]):
-    value_text = "The message is clear"
-    inner_text = "The message is recursive"
+    value_text = 'The message is clear'
+    inner_text = 'The message is recursive'
 
     html = environment_render_partial(
         'render/recursive.html',
@@ -80,9 +78,10 @@ def test_register_extensions_raises_if_flask_is_not_installed():
     sys.modules['flask'] = None
     del sys.modules['jinja_partials']
     import jinja_partials
+
     with pytest.raises(
-            jinja_partials.PartialsException,
-            match='Install Flask to use `register_extensions`',
+        jinja_partials.PartialsException,
+        match='Install Flask to use `register_extensions`',
     ):
         jinja_partials.register_extensions(SimpleNamespace())
     del sys.modules['flask']
@@ -92,9 +91,10 @@ def test_register_extensions_raises_if_starlette_is_not_installed():
     sys.modules['starlette'] = None
     del sys.modules['jinja_partials']
     import jinja_partials
+
     with pytest.raises(
-            jinja_partials.PartialsException,
-            match='Install Starlette to use `register_starlette_extensions`',
+        jinja_partials.PartialsException,
+        match='Install Starlette to use `register_starlette_extensions`',
     ):
         jinja_partials.register_starlette_extensions(SimpleNamespace())
     del sys.modules['starlette']

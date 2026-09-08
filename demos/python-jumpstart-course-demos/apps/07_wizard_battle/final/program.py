@@ -14,7 +14,7 @@ def print_header():
     # but I thought you'd get a kick out if it. ;)
     print()
     print('-----------------------------------------------------------------------')
-    print(r'''
+    print(r"""
    (  )   /\   _                 (
     \ |  (  \ ( \.(               )                      _____
   \  \ \  `  `   ) \             (  ___                 / _   \\
@@ -28,7 +28,7 @@ def print_header():
  , x / ( '  . / .  /                                      |           \   /
     /  /  _/ /    +                                      /              \/
    '  (__/                                             /                  \\
-    ''')
+    """)
     print()
     print('-----------------------------------------------------------------------')
     print()
@@ -42,10 +42,12 @@ def game_loop():
     hero = Wizard('Gandolf', 75)
 
     while True:
-
         active_creature = random.choice(creatures)
-        print('A {} of level {} has appeared from a dark and foggy forest...'
-              .format(active_creature.name, active_creature.level))
+        print(
+            'A {} of level {} has appeared from a dark and foggy forest...'.format(
+                active_creature.name, active_creature.level
+            )
+        )
         print()
 
         cmd = input('Do you [a]ttack, [r]unaway, or [l]ook around? ')
@@ -72,12 +74,12 @@ def create_creates():
         Creature('Tiger', 12),
         SmallAnimal('Bat', 3),
         Dragon('Dragon', 50, 75, True),
-        Wizard('Evil Wizard', 1000)
+        Wizard('Evil Wizard', 1000),
     ]
 
 
 def do_goodbye():
-    print("OK, exiting game... bye!")
+    print('OK, exiting game... bye!')
 
 
 def do_look_around(creatures, hero, emotions=('happy', 'apprehensive')):
@@ -97,9 +99,9 @@ def do_attack(active_creature, creatures, hero):
     if hero.attack(active_creature):
         creatures.remove(active_creature)
     else:
-        print("The wizard runs and hides taking time to recover...")
+        print('The wizard runs and hides taking time to recover...')
         time.sleep(5)
-        print("The wizard returns revitalized!")
+        print('The wizard returns revitalized!')
 
 
 if __name__ == '__main__':

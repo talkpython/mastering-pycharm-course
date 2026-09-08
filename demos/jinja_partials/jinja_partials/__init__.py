@@ -39,10 +39,10 @@ class PartialsException(Exception):
 
 
 def render_partial(
-        template_name: str,
-        renderer: Optional[Callable[..., Any]] = None,
-        markup: bool = True,
-        **data: Any,
+    template_name: str,
+    renderer: Optional[Callable[..., Any]] = None,
+    markup: bool = True,
+    **data: Any,
 ) -> Union[Markup, str]:
     if renderer is None:
         if flask is None:

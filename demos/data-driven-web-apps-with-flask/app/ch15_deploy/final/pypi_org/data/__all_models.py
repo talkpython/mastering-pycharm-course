@@ -25,4 +25,4 @@ import pypi_org.data.package
 import pypi_org.data.releases
 
 # noinspection PyUnresolvedReferences
-import pypi_org.data.users
+import pypi_org.data.users  # noqa: F401

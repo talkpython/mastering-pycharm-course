@@ -15,7 +15,7 @@ def go():
     records = data_access.get_records(text)
     print('db: {}'.format(len(records)))
     total = core_compute.compute_analytics(results, records)
-    print("The total is: {:,}".format(total))
+    print('The total is: {:,}'.format(total))
 
 
 if __name__ == '__main__':

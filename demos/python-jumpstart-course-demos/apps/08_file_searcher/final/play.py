@@ -10,15 +10,18 @@ def factorial(n):
     return n * factorial(n - 1)
 
 
-print("5!={:,}, 3!={:,}, 11!={:,}".format(
-    factorial(5),  # 120
-    factorial(3),  # 6
-    factorial(11)  # HUGE
-))
+print(
+    '5!={:,}, 3!={:,}, 11!={:,}'.format(
+        factorial(5),  # 120
+        factorial(3),  # 6
+        factorial(11),  # HUGE
+    )
+)
 
 
 # Fibonacci numbers:
 # 1, 1, 2, 3, 5, 8, 13, 21, ...
+
 
 def fibonacci(limit):
     nums = []
@@ -55,17 +58,3 @@ for n in fibonacci_co():
         break
 
     print(n, end=', ')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
