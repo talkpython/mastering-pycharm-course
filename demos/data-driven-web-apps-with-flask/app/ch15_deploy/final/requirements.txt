@@ -39,5 +39,5 @@ typing-extensions==4.16.0
     #   alembic
     #   python-utils
     #   sqlalchemy
-werkzeug==3.1.8
+werkzeug==3.1.9
     # via flask
