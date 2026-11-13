@@ -24,7 +24,7 @@ idna==3.19
     # via
     #   anyio
     #   httpx
-soupsieve==2.9.2
+soupsieve==4.0
     # via beautifulsoup4
 typing-extensions==4.16.0
     # via beautifulsoup4
